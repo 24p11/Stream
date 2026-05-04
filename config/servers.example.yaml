@@ -8,6 +8,7 @@ pipelines:
     data:
       input: "data/aphp/"     # Répertoire contenant les CSV/Parquet PMSI (source ATIH)
       output: "reports/aphp/" # Répertoire de sortie des CRH générés
+      referentials: "data/aphp/referentials/" # Répertoire contenant les référentiels 
 
 # Configuration des serveurs LLM
 servers:
