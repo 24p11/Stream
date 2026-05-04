@@ -5,6 +5,7 @@ def generate_aphp_report(
     row: dict,
     client: Any,
     model: str,
+    system_prompt: str = "",
 ) -> dict:
     """
     Génération spécifique pour AP-HP.
@@ -20,14 +21,19 @@ def generate_aphp_report(
         Nom du modèle à utiliser.
     system_prompt : str
         Prompt système spécifique au pipeline AP-HP.
+        On utilise en priorité le system_prompt porté par la ligne,
+        car chaque scénario peut avoir un template différent.
+        Si absent, on utilise le system_prompt global passé par le pipeline.
 
     Returns
     -------
     dict
         La réponse du client LLM avec le texte généré.
     """
+    row_system_prompt = row.get("system_prompt") or system_prompt
+
     messages = [
-        {"role": "system", "content": row["system_prompt"]},
+        {"role": "system", "content": row_system_prompt},
         {"role": "user", "content": row["scenario"]},
     ]
     return client.chat(model=model, messages=messages)
