@@ -30,6 +30,9 @@ from .loader import TEMPLATES_DIR
 
 def _interpret_sexe(sexe: int | str | None) -> str:
     """Return ``"Masculin"`` / ``"Féminin"`` from the PMSI gender code."""
+    if sexe is None:
+        return ""
+    sexe = int(sexe)
     return "Masculin" if sexe == 1 else "Féminin"
 
 
