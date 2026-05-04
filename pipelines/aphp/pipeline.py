@@ -8,6 +8,7 @@ as needed.
 
 from __future__ import annotations
 
+from datetime import datetime
 from pathlib import Path
 from typing import Any, override
 
@@ -146,15 +147,41 @@ class APHPPipeline(BasePipeline):
         data = self.load_data()
         sc_ctx = sc.build_context(data)
 
-        return format_scenarios(
+        df = format_scenarios(
             df,
             scenario_fn=format_aphp_scenario,
             cancer_codes=sc_ctx.cancer_codes,
             atih_rules=atih_rules,
         )
 
+        df = df.with_columns(
+            pl.col("scenario").alias("user_prompt")
+        )
+        self._save_generated_scenarios(df)
+
+        return df
+    
     # ------------------------------------------------------------------
-    # 5 — get_report (override: per-row system prompt)
+    # 5 — _save_generated_scenarios 
+    # ------------------------------------------------------------------
+    
+    def _save_generated_scenarios(self, df: pl.DataFrame) -> None:
+        """Save complete AP-HP generated scenarios before LLM generation."""
+        output_dir = Path(self.config["data"]["output"])
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        output_path = output_dir / f"generated_scenarios_{df.height}_{timestamp}.parquet"
+
+        df.write_parquet(output_path)
+
+        self.logger.info(
+            "Scénarios AP-HP complets sauvegardés dans %s",
+            output_path,
+        )
+
+    # ------------------------------------------------------------------
+    # 6 — get_report (override: per-row system prompt)
     # ------------------------------------------------------------------
 
     @override
@@ -180,3 +207,5 @@ class APHPPipeline(BasePipeline):
             generate_fn=generate_aphp_report,
             system_prompt="",  # just for signature since system from is in the df in the function generate_aphp_report
         )
+    
+    
