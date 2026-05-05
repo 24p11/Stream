@@ -14,7 +14,7 @@ from typing import Any, override
 
 import polars as pl
 
-from pipelines.aphp import loader, managment, prompt
+from pipelines.aphp import loader, managment
 from pipelines.aphp import scenario as sc
 from pipelines.aphp.fictive import generate_aphp_fictive
 from pipelines.fictive import generate_fictive_stays
@@ -23,6 +23,25 @@ from pipelines.report import generate_reports
 from pipelines.scenario import format_scenarios
 from pipelines.aphp.scenario import format_aphp_scenario
 from pipelines.aphp.report import generate_aphp_report
+
+_PREFIX_NON_CANCER = """Le compte rendu suivant respecte les élements suivants :
+        - les diagnostics ont une formulation moins formelle que la définition du code
+        - le plan du CRH est conforme aux recommandations.
+        """
+
+_PREFIX_CANCER = """Le compte rendu suivant respecte les élements suivants :
+        - les diagnostics ont une formulation moins formelle que la définition du code
+        - le type histologique et la valeur des biomarqueurs si recherchés
+        - le plan du CRH est conforme aux recommandations.
+        """
+
+
+def _build_prefix(row: dict[str, Any], cancer_codes: set[str]) -> str:
+    """Build assistant prefix"""
+    icd_primary_code = row.get("icd_primary_code")
+    if icd_primary_code in cancer_codes:
+        return _PREFIX_CANCER
+    return _PREFIX_NON_CANCER
 
 
 class APHPPipeline(BasePipeline):
@@ -154,15 +173,52 @@ class APHPPipeline(BasePipeline):
             atih_rules=atih_rules,
         )
 
-        df = df.with_columns(
-            pl.col("scenario").alias("user_prompt")
+        df_to_save = self._with_comparison_columns(
+            df,
+            cancer_codes=sc_ctx.cancer_codes,
+            atih_rules=atih_rules,
         )
-        self._save_generated_scenarios(df)
+    
+        self._save_generated_scenarios(df_to_save)
 
         return df
     
     # ------------------------------------------------------------------
-    # 5 — _save_generated_scenarios 
+    # 5 — _with_comparison_columns 
+    # ------------------------------------------------------------------
+
+    def _with_comparison_columns(
+        self,
+        df: pl.DataFrame,
+        *,
+        cancer_codes: set[str],
+        atih_rules: dict[str, dict],
+    ) -> pl.DataFrame:
+        """Return a copy of AP-HP scenarios enriched for notebook comparison."""
+
+        rows: list[dict[str, Any]] = []
+
+        for row in df.iter_rows(named=True):
+            coding_rule = row.get("coding_rule") or ""
+
+            case_management_description = ""
+            if coding_rule in atih_rules:
+                case_management_description = atih_rules[coding_rule].get("texte", "")
+
+            prefix = _build_prefix(row, cancer_codes)
+
+            row["user_prompt"] = row.get("scenario", "")
+            row["case_management_type_text"] = row.get("situa", "")
+            row["case_management_description"] = case_management_description
+            row["prefix"] = prefix
+            row["prefix_len"] = len(prefix)
+
+            rows.append(row)
+
+        return pl.DataFrame(rows)
+    
+    # ------------------------------------------------------------------
+    # 6 — _save_generated_scenarios 
     # ------------------------------------------------------------------
     
     def _save_generated_scenarios(self, df: pl.DataFrame) -> None:
@@ -181,7 +237,7 @@ class APHPPipeline(BasePipeline):
         )
 
     # ------------------------------------------------------------------
-    # 6 — get_report (override: per-row system prompt)
+    # 7 — get_report (override: per-row system prompt)
     # ------------------------------------------------------------------
 
     @override
