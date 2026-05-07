@@ -42,17 +42,6 @@ def run(
         servers=config["servers"],
     )
 
-    # pipeline.check_data()
-    # data = pipeline.load_data()
-
-    # df = pipeline.get_fictive(
-    #     data,
-    #     n_sejours=n_sejours,
-    #     n_ccam=n_ccam,
-    #     n_das=n_das,
-    #     ghm5_pattern=ghm5_pattern,
-    # )
-    # df = pipeline.get_scenario(df)
     df = generate(
         pipeline_name=pipeline_name,
         n_sejours=n_sejours,
