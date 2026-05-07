@@ -2,8 +2,10 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from core.config import load_config
+from fictomed import generate
+
 from core.clients import get_client
+from core.config import load_config
 from pipelines.aphp.pipeline import APHPPipeline
 from pipelines.brest.pipeline import BrestPipeline
 
@@ -40,17 +42,24 @@ def run(
         servers=config["servers"],
     )
 
-    pipeline.check_data()
-    data = pipeline.load_data()
+    # pipeline.check_data()
+    # data = pipeline.load_data()
 
-    df = pipeline.get_fictive(
-        data,
+    # df = pipeline.get_fictive(
+    #     data,
+    #     n_sejours=n_sejours,
+    #     n_ccam=n_ccam,
+    #     n_das=n_das,
+    #     ghm5_pattern=ghm5_pattern,
+    # )
+    # df = pipeline.get_scenario(df)
+    df = generate(
+        pipeline_name=pipeline_name,
         n_sejours=n_sejours,
         n_ccam=n_ccam,
         n_das=n_das,
         ghm5_pattern=ghm5_pattern,
+        config_file=(CONFIG_DIR / "servers.yaml"),
     )
-    df = pipeline.get_scenario(df)
-
     client, model = get_client(pipeline.servers, client_type)
     pipeline.get_report(df, client, model, batch_size=batch_size)
