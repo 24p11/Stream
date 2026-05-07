@@ -1,5 +1,8 @@
 # Stream
 
+![Python](https://img.shields.io/badge/python-3.13+-blue)
+[![CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-green.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
 Génération de comptes rendus d'hospitalisation (CRH) synthétiques à partir de statistiques PMSI nationales et de modèles de langage (LLM).
 
 Stream unifie plusieurs méthodes de génération au sein d'une architecture commune, chacune étant implémentée sous forme de pipeline :
@@ -476,3 +479,17 @@ mindmap
 4. **Documentation** (Août 2024)
    - ADR (Architecture Decision Records)
    - Mise à jour diagrammes
+
+
+## Licence
+ 
+Ce projet est sous licence [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](LICENSE.md).
+ 
+ 
+Vous êtes libre de :
+- **Partager** — copier et redistribuer le projet
+- **Adapter** — remixer et transformer le projet
+Sous les conditions suivantes :
+- **Attribution** — Vous devez citer le projet original
+- **Non Commercial** — Usage commercial interdit sans accord explicite
+- **Partage dans les mêmes conditions** — Toute modification doit être publiée sous la même licence
