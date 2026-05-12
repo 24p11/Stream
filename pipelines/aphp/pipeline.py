@@ -173,18 +173,48 @@ class APHPPipeline(BasePipeline):
             atih_rules=atih_rules,
         )
 
+        df = self._with_llm_columns(
+            df,
+            cancer_codes=sc_ctx.cancer_codes,
+        )
+
         df_to_save = self._with_comparison_columns(
             df,
             cancer_codes=sc_ctx.cancer_codes,
             atih_rules=atih_rules,
         )
-    
+
         self._save_generated_scenarios(df_to_save)
 
         return df
     
     # ------------------------------------------------------------------
-    # 5 — _with_comparison_columns 
+    # 5 — _with_llm_columns 
+    # ------------------------------------------------------------------
+
+
+    def _with_llm_columns(
+        self,
+        df: pl.DataFrame,
+        *,
+        cancer_codes: set[str],
+    ) -> pl.DataFrame:
+        """Add columns needed by AP-HP LLM generation."""
+        rows: list[dict[str, Any]] = []
+
+        for row in df.iter_rows(named=True):
+            prefix = _build_prefix(row, cancer_codes)
+
+            row["user_prompt"] = row.get("scenario", "")
+            row["prefix"] = prefix
+            row["prefix_len"] = len(prefix)
+
+            rows.append(row)
+
+        return pl.DataFrame(rows)
+        
+    # ------------------------------------------------------------------
+    # 6 — _with_comparison_columns 
     # ------------------------------------------------------------------
 
     def _with_comparison_columns(
@@ -218,7 +248,7 @@ class APHPPipeline(BasePipeline):
         return pl.DataFrame(rows)
     
     # ------------------------------------------------------------------
-    # 6 — _save_generated_scenarios 
+    # 7 — _save_generated_scenarios 
     # ------------------------------------------------------------------
     
     def _save_generated_scenarios(self, df: pl.DataFrame) -> None:
