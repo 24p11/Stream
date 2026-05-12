@@ -22,7 +22,12 @@ from pipelines.pipeline import BasePipeline
 from pipelines.report import generate_reports
 from pipelines.scenario import format_scenarios
 from pipelines.aphp.scenario import format_aphp_scenario
-from pipelines.aphp.report import generate_aphp_report
+
+from core.clients import MistralClient
+from pipelines.aphp.report import (
+    generate_aphp_report,
+    generate_aphp_reports_mistral_batch,
+)
 
 _PREFIX_NON_CANCER = """Le compte rendu suivant respecte les élements suivants :
         - les diagnostics ont une formulation moins formelle que la définition du code
@@ -278,12 +283,30 @@ class APHPPipeline(BasePipeline):
         model: str,
         batch_size: int = 1000,
     ) -> pl.DataFrame:
-        """Generate one CRH per scenario using the row's own system prompt.
-
-        Overrides :meth:`~pipelines.pipeline.BasePipeline.get_report` to read
-        ``df_row["system_prompt"]`` instead of a single global system prompt.
+        """Generate AP-HP reports.
+        Default mode stays generic and works with Ollama, Claude and Mistral.
+        Specific Mistral batch mode can be choose.
         """
         output_dir = Path(self.config["data"]["output"])
+
+        generation_cfg = self.config.get("generation", {})
+        mode = generation_cfg.get("mode", "direct")
+
+        if mode == "mistral_batch":
+            if not isinstance(client, MistralClient):
+                raise TypeError(
+                    "generation.mode='mistral_batch' requires client_type='mistral'."
+                )
+
+            return generate_aphp_reports_mistral_batch(
+                df,
+                client,
+                model,
+                output_dir=output_dir,
+                max_tokens=generation_cfg.get("max_tokens", 128_000),
+                poll_interval_seconds=generation_cfg.get("poll_interval_seconds", 1),
+            )
+
         return generate_reports(
             df,
             client,
@@ -291,7 +314,7 @@ class APHPPipeline(BasePipeline):
             batch_size=batch_size,
             output_dir=output_dir,
             generate_fn=generate_aphp_report,
-            system_prompt="",  # just for signature since system from is in the df in the function generate_aphp_report
+            system_prompt="",
         )
-    
-    
+        
+        
