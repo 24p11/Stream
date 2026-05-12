@@ -85,6 +85,16 @@ pipelines:
     data:
       input: "data/brest/"       # CSV PMSI extraits via SAS
       output: "reports/brest/"   # CRH générés
+  aphp:
+    data:
+      input: "data/aphp/"                    # Fichiers PMSI AP-HP
+      output: "reports/aphp/"                # CRH générés
+      referentials: "data/aphp/referentials" # Référentiels AP-HP
+
+    generation:
+      mode: "direct"           # direct ou mistral_batch
+      max_tokens: 4096         # Nombre maximum de tokens par requête
+      poll_interval_seconds: 1 # Intervalle de polling en secondes
 
 servers:
   ollama:
@@ -97,6 +107,17 @@ servers:
     api_key: "..."
     model: "mistral-large-latest"
 ```
+Pour reproduire la méthode historique AP-HP avec Mistral, le pipeline AP-HP peut être lancé en mode batch Mistral :
+
+```yaml
+pipelines:
+  aphp:
+    generation:
+      mode: "mistral_batch"
+      max_tokens: 128000
+      poll_interval_seconds: 1
+```
+Ce mode est spécifique au client mistral. Le mode direct reste le mode par défaut et fonctionne avec Ollama, Claude et Mistral.
 
 ### Données d'entrée (pipeline Brest)
 
@@ -139,6 +160,18 @@ python cli.py brest --client claude --n-sejours 1000 --ghm5 06C
 python cli.py brest --client mistral --n-ccam 3 --n-das 4
 ```
 
+
+```bash
+# Générer 2 CRH AP-HP avec le mode direct par défaut
+python cli.py aphp --n-sejours 2
+
+# Générer des CRH AP-HP avec Claude
+python cli.py aphp --client claude --n-sejours 10
+
+# Générer des CRH AP-HP avec Mistral en mode direct
+python cli.py aphp --client mistral --n-sejours 10
+```
+
 ### Options
 
 | Option | Défaut | Description |
@@ -153,13 +186,30 @@ python cli.py brest --client mistral --n-ccam 3 --n-das 4
 
 ## Sortie
 
-Les CRH sont écrits en fichiers Parquet horodatés dans le répertoire `data.output` :
 
-```
+Les sorties sont écrites en fichiers Parquet horodatés dans le répertoire `data.output`.
+
+Pour les générations classiques :
+
+```text
 reports/brest/medical_reports_1000_20260405_143022.parquet
+reports/aphp/medical_reports_10_20260512_113644.parquet
 ```
 
-Schéma : `generation_id`, `scenario`, `report`, `model`, `timestamp`.
+Pour le pipeline AP-HP, les scénarios complets sont également sauvegardés avant l’appel au LLM :
+
+```text
+reports/aphp/generated_scenarios_10_20260512_113402.parquet
+```
+Ces fichiers contiennent notamment les diagnostics, DAS, actes, règle de codage, template, scenario, user_prompt, system_prompt, prefix et prefix_len.
+
+En mode Mistral batch AP-HP, les sorties sont sauvegardées séparément :
+```text
+reports/aphp/aphp_mistral_batch_reports_10_20260512_115347.parquet
+```
+Schéma minimal des sorties CRH : generation_id, scenario, report, model, timestamp.
+
+Les sorties AP-HP peuvent contenir des colonnes supplémentaires utiles au debug et à la comparaison avec la méthode historique AP-HP.
 
 ## Tests
 
