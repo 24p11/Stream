@@ -7,7 +7,6 @@ from io import BytesIO
 
 import httpx
 from anthropic import Anthropic
-from mistralai import File
 from mistralai.client import Mistral
 from ollama import Client
 
@@ -144,7 +143,10 @@ class MistralClient(BaseClient):
             buffer.write(b"\n")
 
         input_file = self._client.files.upload(
-            file=File(file_name="stream_aphp_batch.jsonl", content=buffer.getvalue()),
+            file={
+                "file_name": "stream_aphp_batch.jsonl",
+                "content": BytesIO(buffer.getvalue()),
+            },
             purpose="batch",
         )
 
