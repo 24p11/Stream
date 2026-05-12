@@ -145,7 +145,7 @@ class MistralClient(BaseClient):
         input_file = self._client.files.upload(
             file={
                 "file_name": "stream_aphp_batch.jsonl",
-                "content": BytesIO(buffer.getvalue()),
+                "content": buffer.getvalue(),
             },
             purpose="batch",
         )
