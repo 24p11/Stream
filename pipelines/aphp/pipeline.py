@@ -8,12 +8,13 @@ as needed.
 
 from __future__ import annotations
 
+from datetime import datetime
 from pathlib import Path
 from typing import Any, override
 
 import polars as pl
 
-from pipelines.aphp import loader, managment, prompt
+from pipelines.aphp import loader, managment
 from pipelines.aphp import scenario as sc
 from pipelines.aphp.fictive import generate_aphp_fictive
 from pipelines.fictive import generate_fictive_stays
@@ -21,7 +22,31 @@ from pipelines.pipeline import BasePipeline
 from pipelines.report import generate_reports
 from pipelines.scenario import format_scenarios
 from pipelines.aphp.scenario import format_aphp_scenario
-from pipelines.aphp.report import generate_aphp_report
+
+from core.clients import MistralClient
+from pipelines.aphp.report import (
+    generate_aphp_report,
+    generate_aphp_reports_mistral_batch,
+)
+
+_PREFIX_NON_CANCER = """Le compte rendu suivant respecte les élements suivants :
+        - les diagnostics ont une formulation moins formelle que la définition du code
+        - le plan du CRH est conforme aux recommandations.
+        """
+
+_PREFIX_CANCER = """Le compte rendu suivant respecte les élements suivants :
+        - les diagnostics ont une formulation moins formelle que la définition du code
+        - le type histologique et la valeur des biomarqueurs si recherchés
+        - le plan du CRH est conforme aux recommandations.
+        """
+
+
+def _build_prefix(row: dict[str, Any], cancer_codes: set[str]) -> str:
+    """Build assistant prefix"""
+    icd_primary_code = row.get("icd_primary_code")
+    if icd_primary_code in cancer_codes:
+        return _PREFIX_CANCER
+    return _PREFIX_NON_CANCER
 
 
 class APHPPipeline(BasePipeline):
@@ -146,15 +171,108 @@ class APHPPipeline(BasePipeline):
         data = self.load_data()
         sc_ctx = sc.build_context(data)
 
-        return format_scenarios(
+        df = format_scenarios(
             df,
             scenario_fn=format_aphp_scenario,
             cancer_codes=sc_ctx.cancer_codes,
             atih_rules=atih_rules,
         )
 
+        df = self._with_llm_columns(
+            df,
+            cancer_codes=sc_ctx.cancer_codes,
+        )
+
+        df_to_save = self._with_comparison_columns(
+            df,
+            cancer_codes=sc_ctx.cancer_codes,
+            atih_rules=atih_rules,
+        )
+
+        self._save_generated_scenarios(df_to_save)
+
+        return df
+    
     # ------------------------------------------------------------------
-    # 5 — get_report (override: per-row system prompt)
+    # 5 — _with_llm_columns 
+    # ------------------------------------------------------------------
+
+
+    def _with_llm_columns(
+        self,
+        df: pl.DataFrame,
+        *,
+        cancer_codes: set[str],
+    ) -> pl.DataFrame:
+        """Add columns needed by AP-HP LLM generation."""
+        rows: list[dict[str, Any]] = []
+
+        for row in df.iter_rows(named=True):
+            prefix = _build_prefix(row, cancer_codes)
+
+            row["user_prompt"] = row.get("scenario", "")
+            row["prefix"] = prefix
+            row["prefix_len"] = len(prefix)
+
+            rows.append(row)
+
+        return pl.DataFrame(rows)
+        
+    # ------------------------------------------------------------------
+    # 6 — _with_comparison_columns 
+    # ------------------------------------------------------------------
+
+    def _with_comparison_columns(
+        self,
+        df: pl.DataFrame,
+        *,
+        cancer_codes: set[str],
+        atih_rules: dict[str, dict],
+    ) -> pl.DataFrame:
+        """Return a copy of AP-HP scenarios enriched for notebook comparison."""
+
+        rows: list[dict[str, Any]] = []
+
+        for row in df.iter_rows(named=True):
+            coding_rule = row.get("coding_rule") or ""
+
+            case_management_description = ""
+            if coding_rule in atih_rules:
+                case_management_description = atih_rules[coding_rule].get("texte", "")
+
+            prefix = _build_prefix(row, cancer_codes)
+
+            row["user_prompt"] = row.get("scenario", "")
+            row["case_management_type_text"] = row.get("situa", "")
+            row["case_management_description"] = case_management_description
+            row["prefix"] = prefix
+            row["prefix_len"] = len(prefix)
+
+            rows.append(row)
+
+        return pl.DataFrame(rows)
+    
+    # ------------------------------------------------------------------
+    # 7 — _save_generated_scenarios 
+    # ------------------------------------------------------------------
+    
+    def _save_generated_scenarios(self, df: pl.DataFrame) -> None:
+        """Save complete AP-HP generated scenarios before LLM generation."""
+        output_dir = Path(self.config["data"]["output"])
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        output_path = output_dir / f"generated_scenarios_{df.height}_{timestamp}.parquet"
+
+        df.write_parquet(output_path)
+
+        self.logger.info(
+            "Scénarios AP-HP complets sauvegardés dans %s",
+            output_path,
+        )
+
+    # ------------------------------------------------------------------
+    # 7 — get_report (override: per-row system prompt)
     # ------------------------------------------------------------------
 
     @override
@@ -165,12 +283,30 @@ class APHPPipeline(BasePipeline):
         model: str,
         batch_size: int = 1000,
     ) -> pl.DataFrame:
-        """Generate one CRH per scenario using the row's own system prompt.
-
-        Overrides :meth:`~pipelines.pipeline.BasePipeline.get_report` to read
-        ``df_row["system_prompt"]`` instead of a single global system prompt.
+        """Generate AP-HP reports.
+        Default mode stays generic and works with Ollama, Claude and Mistral.
+        Specific Mistral batch mode can be choose.
         """
         output_dir = Path(self.config["data"]["output"])
+
+        generation_cfg = self.config.get("generation", {})
+        mode = generation_cfg.get("mode", "direct")
+
+        if mode == "mistral_batch":
+            if not isinstance(client, MistralClient):
+                raise TypeError(
+                    "generation.mode='mistral_batch' requires client_type='mistral'."
+                )
+
+            return generate_aphp_reports_mistral_batch(
+                df,
+                client,
+                model,
+                output_dir=output_dir,
+                max_tokens=generation_cfg.get("max_tokens", 128_000),
+                poll_interval_seconds=generation_cfg.get("poll_interval_seconds", 1),
+            )
+
         return generate_reports(
             df,
             client,
@@ -178,5 +314,7 @@ class APHPPipeline(BasePipeline):
             batch_size=batch_size,
             output_dir=output_dir,
             generate_fn=generate_aphp_report,
-            system_prompt="",  # just for signature since system from is in the df in the function generate_aphp_report
+            system_prompt="",
         )
+        
+        

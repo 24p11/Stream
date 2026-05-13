@@ -1,6 +1,10 @@
 from abc import ABC, abstractmethod
 from typing import override
 
+import json
+import time
+from io import BytesIO
+
 import httpx
 from anthropic import Anthropic
 from mistralai.client import Mistral
@@ -96,6 +100,122 @@ class MistralClient(BaseClient):
                 "content": response.choices[0].message.content,
             }
         }
+    
+    def batch_chat(
+        self,
+        model: str,
+        requests: list[dict],
+        *,
+        max_tokens: int = 128_000,
+        poll_interval_seconds: int = 1,
+    ) -> list[dict]:
+        """Run a Mistral batch job with this batch format:
+        system prompt + user prompt + assistant prefix.
+        """
+        buffer = BytesIO()
+
+        for idx, item in enumerate(requests):
+            custom_id = str(item.get("custom_id", idx))
+
+            request = {
+                "custom_id": custom_id,
+                "body": {
+                    "max_tokens": max_tokens,
+                    "messages": [
+                        {
+                            "role": "system",
+                            "content": item["system_prompt"],
+                        },
+                        {
+                            "role": "user",
+                            "content": item["user_prompt"],
+                        },
+                        {
+                            "role": "assistant",
+                            "content": item["prefix"],
+                            "prefix": True,
+                        },
+                    ],
+                },
+            }
+
+            buffer.write(json.dumps(request, ensure_ascii=False).encode("utf-8"))
+            buffer.write(b"\n")
+
+        input_file = self._client.files.upload(
+            file={
+                "file_name": "stream_aphp_batch.jsonl",
+                "content": buffer.getvalue(),
+            },
+            purpose="batch",
+        )
+
+        batch_job = self._client.batch.jobs.create(
+            input_files=[input_file.id],
+            model=model,
+            endpoint="/v1/chat/completions",
+            metadata={"job_type": "stream_aphp"},
+        )
+
+        while batch_job.status in ["QUEUED", "RUNNING"]:
+            time.sleep(poll_interval_seconds)
+            batch_job = self._client.batch.jobs.get(job_id=batch_job.id)
+
+        if batch_job.status not in {"SUCCESS", "SUCCEEDED"}:
+            raise RuntimeError(
+                f"Mistral batch job {batch_job.id} ended with status {batch_job.status}"
+            )
+
+        output_file_id = getattr(batch_job, "output_file", None) or getattr(
+            batch_job, "output_file_id", None
+        )
+
+        if output_file_id is None:
+            raise RuntimeError(
+                f"Mistral batch job {batch_job.id} has no output file."
+            )
+
+        output_file = self._client.files.download(file_id=output_file_id)
+
+        raw_bytes = b""
+        for chunk in output_file.stream:
+            raw_bytes += chunk
+
+        responses: list[dict] = []
+
+        for line in raw_bytes.decode("utf-8").splitlines():
+            if not line.strip():
+                continue
+
+            response_item = json.loads(line)
+            custom_id = str(response_item.get("custom_id"))
+
+            error = response_item.get("error")
+            if error:
+                responses.append(
+                    {
+                        "custom_id": custom_id,
+                        "content": "",
+                        "error": error,
+                        "raw": response_item,
+                    }
+                )
+                continue
+
+            content = response_item["response"]["body"]["choices"][0]["message"][
+                "content"
+            ]
+
+            responses.append(
+                {
+                    "custom_id": custom_id,
+                    "content": content,
+                    "error": None,
+                    "raw": response_item,
+                }
+            )
+
+        return sorted(responses, key=lambda x: int(x["custom_id"]))
 
 
 class OllamaClient(BaseClient):

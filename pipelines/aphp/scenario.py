@@ -290,12 +290,24 @@ def _append_sampled_secondaries(
         scenario["text_secondary_icd_official"] += _format_secondary_line(code, desc)
     scenario["icd_secondary_code"].extend(sampled["icd_secondary_code"].to_list())
 
+def _parse_secondary_codes(value: Any) -> list[str]:
+    if value in (None, "", []):
+        return []
+
+    if isinstance(value, list):
+        return [str(code).strip() for code in value if str(code).strip()]
+
+    if isinstance(value, str):
+        return [code.strip() for code in value.replace(";", " ").split() if code.strip()]
+
+    return [str(value).strip()]
+
 
 def build_scenario(
     ctx: ScenarioContext,
     profile: dict[str, Any],
     *,
-    add_secondary: bool = True,
+    add_secondary: bool = False,
     rng: _random.Random | None = None,
     np_rng: np.random.Generator | None = None,
 ) -> dict[str, Any]:
@@ -385,16 +397,21 @@ def build_scenario(
     )
 
     # --- Secondary diagnoses already in profile
-    if has_secondary_in_profile and isinstance(profile["icd_secondary_code"], list):
-        scenario["icd_secondary_code"] = list(profile["icd_secondary_code"])
-        for code in scenario["icd_secondary_code"]:
+    secondary_codes = _parse_secondary_codes(profile.get("icd_secondary_code"))
+
+    if secondary_codes:
+        scenario["icd_secondary_code"] = secondary_codes
+        for code in secondary_codes:
             scenario["text_secondary_icd_official"] += _format_secondary_line(
                 code, lookup_icd_description(ctx, code)
             )
 
     if add_secondary:
+        profile_for_secondary_sampling = {
+            k: v for k, v in profile.items() if k != "icd_secondary_code"
+        }
         _add_secondary_diagnoses(
-            scenario, ctx, profile, is_cancer, rng=rng, np_rng=np_rng
+            scenario, ctx, profile_for_secondary_sampling, is_cancer, rng=rng, np_rng=np_rng
         )
 
     # --- Procedure

@@ -145,7 +145,6 @@ def pick_name(names: pl.DataFrame, gender: int, rng: _random.Random | None = Non
     """
     rng = rng or _random
     seed = rng.randint(0, 2**31 - 1)
-
     first_pool = names.filter(
         (pl.col("sexe") == gender) & (pl.col("prenom").str.len_chars() > 3)
     )
@@ -180,6 +179,36 @@ def _profile_filter(profile: dict[str, Any], columns: list[str]) -> pl.Expr | No
     for c in conds[1:]:
         expr = expr & c
     return expr
+
+def _weighted_sample(
+    df: pl.DataFrame,
+    n: int,
+    weight_col: str,
+    np_rng: np.random.Generator,
+) -> pl.DataFrame:
+    """Sample rows without replacement using ``weight_col`` as probabilities."""
+    if df.is_empty() or n <= 0:
+        return df.head(0)
+
+    if weight_col not in df.columns:
+        weights = np.ones(df.height, dtype=float)
+    else:
+        weights = df[weight_col].cast(pl.Float64).to_numpy()
+        weights = np.nan_to_num(weights, nan=0.0)
+
+    if weights.sum() <= 0:
+        weights = np.ones(df.height, dtype=float)
+
+    probs = weights / weights.sum()
+
+    idx = np_rng.choice(
+        df.height,
+        size=min(n, df.height),
+        replace=False,
+        p=probs,
+    )
+
+    return df[idx.tolist()]
 
 
 def sample_conditional(
@@ -229,12 +258,10 @@ def sample_conditional(
 
     if distinct_chapter and chapter_col in df_sel.columns:
         return _sample_distinct_chapters(
-            df_sel, n_final, weight_col, chapter_col, rng
+            df_sel, n_final, weight_col, chapter_col, rng, np_rng
         )
 
-    return df_sel.sample(
-        n=n_final, with_replacement=False, seed=rng.randint(0, 2**31 - 1)
-    )
+    return _weighted_sample(df_sel, n_final, weight_col, np_rng)
 
 
 def _sample_distinct_chapters(
@@ -243,6 +270,7 @@ def _sample_distinct_chapters(
     weight_col: str,
     chapter_col: str,
     rng: _random.Random,
+    np_rng: np.random.Generator,
 ) -> pl.DataFrame:
     """Iteratively draw rows whose ICD chapter (first char) is unseen so far."""
     pool = df_sel
@@ -252,11 +280,7 @@ def _sample_distinct_chapters(
     for _ in range(n_final):
         if pool.is_empty():
             break
-        pick = pool.sample(
-            n=1,
-            with_replacement=False,
-            seed=rng.randint(0, 2**31 - 1),
-        )
+        pick = _weighted_sample(pool, 1, weight_col, np_rng)
         picks.append(pick)
         chapters.add(pick.item(0, chapter_col)[:1])
         pool = pool.filter(~pl.col(chapter_col).str.slice(0, 1).is_in(chapters))
