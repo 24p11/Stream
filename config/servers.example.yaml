@@ -7,7 +7,12 @@ pipelines:
   aphp:
     data:
       input: "data/aphp/"     # Répertoire contenant les CSV/Parquet PMSI (source ATIH)
+      referentials: "data/aphp/referentials"      # Référentiels AP-HP
       output: "reports/aphp/" # Répertoire de sortie des CRH générés
+    generation:
+      mode: "direct"          # direct ou mistral_batch
+      max_tokens: 4096
+      poll_interval_seconds: 1
 
 # Configuration des serveurs LLM
 servers:
