@@ -73,25 +73,24 @@ class TestAPHPPipeline:
         pipeline = APHPPipeline(config=config, prompt=prompt, servers=servers)
         assert pipeline.name == "aphp"
 
-    def test_check_data_without_files(self):
-        """Test that check_data raises an error if data files are missing."""
+    def test_check_data_creates_output_dir(self):
+        """Test that AP-HP check_data prepares the output directory."""
         with tempfile.TemporaryDirectory() as tmpdir:
+            output_dir = Path(tmpdir) / "reports" / "aphp"
             config = {
                 "data": {
-                    "input": tmpdir,
-                    "output": tmpdir,
-                    "referentials": f"{tmpdir}/referentials"
+                    "input": str(Path(tmpdir) / "data" / "aphp"),
+                    "output": str(output_dir),
+                    "referentials": str(Path(tmpdir) / "data" / "aphp" / "referentials"),
                 }
             }
             prompt = {"generate": {"system_prompt": "Test prompt"}}
             servers = {"ollama": {"host": "http://localhost:11434", "model": "mistral"}}
 
             pipeline = APHPPipeline(config=config, prompt=prompt, servers=servers)
-            # Since no data files are present, check_data should raise FileNotFoundError
-            # We need to create the referentials directory to avoid FileNotFoundError
-            Path(config["data"]["referentials"]).mkdir(parents=True, exist_ok=True)
-            with pytest.raises(FileNotFoundError):
-                pipeline.check_data()
+            pipeline.check_data()
+
+            assert output_dir.exists()
 
 
 class TestPipelineIntegration:

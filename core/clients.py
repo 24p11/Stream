@@ -1,14 +1,14 @@
 from abc import ABC, abstractmethod
 from typing import override
 
-import json
-import time
-from io import BytesIO
-
 import httpx
 from anthropic import Anthropic
 from mistralai.client import Mistral
 from ollama import Client
+
+import json
+import time
+from io import BytesIO
 
 
 class BaseClient(ABC):
@@ -100,7 +100,7 @@ class MistralClient(BaseClient):
                 "content": response.choices[0].message.content,
             }
         }
-    
+
     def batch_chat(
         self,
         model: str,
@@ -109,7 +109,9 @@ class MistralClient(BaseClient):
         max_tokens: int = 128_000,
         poll_interval_seconds: int = 1,
     ) -> list[dict]:
-        """Run a Mistral batch job with this batch format:
+        """Run a Mistral batch job.
+
+        This reproduces the historical AP-HP Mistral batch format:
         system prompt + user prompt + assistant prefix.
         """
         buffer = BytesIO()
@@ -171,9 +173,7 @@ class MistralClient(BaseClient):
         )
 
         if output_file_id is None:
-            raise RuntimeError(
-                f"Mistral batch job {batch_job.id} has no output file."
-            )
+            raise RuntimeError(f"Mistral batch job {batch_job.id} has no output file.")
 
         output_file = self._client.files.download(file_id=output_file_id)
 
