@@ -48,7 +48,7 @@ def run(
         n_ccam=n_ccam,
         n_das=n_das,
         ghm5_pattern=ghm5_pattern,
-        config_file=(CONFIG_DIR / "servers.yaml"),
+        config_file=str(CONFIG_DIR / "servers.yaml"),
     )
     client, model = get_client(pipeline.servers, client_type)
     pipeline.get_report(df, client, model, batch_size=batch_size)
