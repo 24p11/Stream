@@ -15,7 +15,6 @@ from dotenv import load_dotenv
 
 NOTION_API_BASE = "https://api.notion.com/v1"
 NOTION_PAGE_API_VERSION = "2022-06-28"
-NOTION_VIEW_API_VERSION = "2026-03-11"
 
 
 # ---------------------------------------------------------------------
@@ -453,13 +452,6 @@ def build_crh_page_children(row: dict[str, Any]) -> list[dict[str, Any]]:
 
     codes = get_gold_codes(row)
 
-    blocks: list[dict[str, Any]] = [
-        heading_2("Compte rendu généré"),
-    ]
-
-    for chunk in split_text(report):
-        blocks.append(paragraph(chunk))
-
     blocks.extend(
         [
             divider(),
@@ -481,16 +473,14 @@ def build_crh_page_children(row: dict[str, Any]) -> list[dict[str, Any]]:
         for chunk in split_text(scenario):
             blocks.append(paragraph(chunk))
 
-    blocks.extend(
-        [
-            divider(),
-            heading_2("Évaluation"),
-            paragraph(
-                "Remplir la ligne d’évaluation associée à ce CRH. "
-                "Si plusieurs évaluateurs participent, chacun remplit sa propre ligne."
-            ),
-        ]
-    )
+
+    blocks: list[dict[str, Any]] = [
+        heading_2("Compte rendu généré"),
+    ]
+
+    for chunk in split_text(report):
+        blocks.append(paragraph(chunk))
+
 
     return blocks
 
@@ -586,80 +576,6 @@ def create_eval_page(
     return result["id"]
 
 
-# ---------------------------------------------------------------------
-# Optional linked view creation
-# ---------------------------------------------------------------------
-
-
-def get_database_data_source_id(database_id: str) -> str:
-    result = notion_request(
-        "GET",
-        f"/databases/{database_id}",
-        version=NOTION_VIEW_API_VERSION,
-    )
-
-    data_sources = result.get("data_sources") or []
-    if not data_sources:
-        raise RuntimeError("Aucun data_source trouvé pour cette base Notion.")
-
-    return data_sources[0]["id"]
-
-def get_eval_view_properties_order() -> list[str]:
-    raw = os.getenv("NOTION_EVAL_VIEW_PROPERTIES", "")
-    return [x.strip() for x in raw.split(",") if x.strip()]
-
-
-def create_linked_evaluation_view(
-    *,
-    target_page_id: str,
-    eval_database_id: str,
-    relation_prop: str,
-) -> None:
-    data_source_id = get_database_data_source_id(eval_database_id)
-
-    visible_properties = get_eval_view_properties_order()
-
-    payload = {
-        "create_database": {
-            "parent": {
-                "type": "page_id",
-                "page_id": target_page_id,
-            }
-        },
-        "data_source_id": data_source_id,
-        "name": "Évaluations",
-        "type": "table",
-        "filter": {
-            "property": relation_prop,
-            "relation": {
-                "contains": target_page_id,
-            },
-        },
-    }
-
-    if visible_properties:
-        payload["configuration"] = {
-            "type": "table",
-            "table": {
-                "properties": [
-                    {
-                        "property": prop,
-                        "visible": True,
-                    }
-                    for prop in visible_properties
-                ]
-            },
-        }
-
-    notion_request(
-        "POST",
-        "/views",
-        version=NOTION_VIEW_API_VERSION,
-        payload=payload,
-    )
-
-
-
 
 # ---------------------------------------------------------------------
 # IO
@@ -705,7 +621,6 @@ def main() -> None:
     )
 
     evaluator_prop = os.getenv("NOTION_EVALUATOR_PROP", "Évaluateur")
-    create_views = os.getenv("NOTION_CREATE_LINKED_VIEWS", "0") == "1"
 
     input_path = Path(args.input) if args.input else latest_parquet(args.folder)
     df = pl.read_parquet(input_path)
@@ -762,17 +677,6 @@ def main() -> None:
                 evaluator_prop=evaluator_prop,
             )
             print(f"      Ligne évaluation créée : {evaluator or 'à compléter'}")
-
-        if create_views:
-            try:
-                create_linked_evaluation_view(
-                    target_page_id=crh_page_id,
-                    eval_database_id=eval_database_id,
-                    relation_prop=eval_relation_prop,
-                )
-                print("      Vue liée Évaluations créée")
-            except Exception as exc:
-                print(f"      Vue liée non créée : {exc}")
 
         time.sleep(0.35)
 
