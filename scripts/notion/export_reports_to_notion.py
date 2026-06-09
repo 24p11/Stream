@@ -445,22 +445,17 @@ def build_crh_page_properties(
 
     return properties
 
-
 def build_crh_page_children(row: dict[str, Any]) -> list[dict[str, Any]]:
     report = get_report_text(row)
     scenario = str(row.get("scenario") or "")
-
     codes = get_gold_codes(row)
 
-    blocks.extend(
-        [
-            divider(),
-            heading_2("Codes gold"),
-            paragraph(f"DP : {codes['dp']}"),
-            paragraph(f"DR / MDP : {codes['dr']}"),
-            paragraph(f"DAS : {codes['das']}"),
-        ]
-    )
+    blocks: list[dict[str, Any]] = [
+        heading_2("Codes gold"),
+        paragraph(f"DP : {codes['dp']}"),
+        paragraph(f"DR : {codes['dr']}"),
+        paragraph(f"DAS : {codes['das']}"),
+    ]
 
     if scenario:
         blocks.extend(
@@ -473,14 +468,15 @@ def build_crh_page_children(row: dict[str, Any]) -> list[dict[str, Any]]:
         for chunk in split_text(scenario):
             blocks.append(paragraph(chunk))
 
-
-    blocks: list[dict[str, Any]] = [
-        heading_2("Compte rendu généré"),
-    ]
+    blocks.extend(
+        [
+            divider(),
+            heading_2("Compte rendu généré"),
+        ]
+    )
 
     for chunk in split_text(report):
         blocks.append(paragraph(chunk))
-
 
     return blocks
 
