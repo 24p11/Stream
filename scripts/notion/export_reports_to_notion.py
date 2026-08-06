@@ -1,10 +1,12 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import re
 import time
+from datetime import datetime
 from pathlib import Path
 from typing import Any
 
@@ -15,6 +17,250 @@ from dotenv import load_dotenv
 
 NOTION_API_BASE = "https://api.notion.com/v1"
 NOTION_PAGE_API_VERSION = "2022-06-28"
+
+DEFAULT_V1_PATH = Path("reports/aphp/eval_scenarios_v1_14_20260612_165043.parquet")
+DEFAULT_V2_PATH = Path("reports/aphp/eval_scenarios_v2_14_20260612_165043.parquet")
+
+
+EVALUATOR_ASSIGNMENTS: dict[str, list[str]] = {
+    "S1_1": ["Remi", "Basile"],
+    "S1_2": ["Stephane", "Francesco"],
+
+    "S2_1": ["Remi", "Stephane"],
+    "S2_2": ["Basile", "Francesco"],
+
+    "S3_1": ["Remi", "Francesco"],
+    "S3_2": ["Basile", "Stephane"],
+
+    "S4_1": ["Remi", "Basile"],
+    "S4_2": ["Stephane", "Francesco"],
+
+    "S5_1": ["Remi", "Stephane"],
+    "S5_2": ["Basile", "Francesco"],
+
+    "S6_1": ["Remi", "Francesco"],
+    "S6_2": ["Basile", "Stephane"],
+
+    "S7_1": ["Remi", "Basile"],
+    "S7_2": ["Stephane", "Francesco"],
+}
+
+# ---------------------------------------------------------------------
+# Merge / blinding helpers
+# ---------------------------------------------------------------------
+
+
+def anonymous_crh_id(eval_scenario: str, prompt_variant: str, salt: str) -> str:
+    """Create a stable anonymised CRH id.
+
+    The id does not expose eval_scenario or prompt_variant.
+    """
+    raw = f"{salt}|{eval_scenario}|{prompt_variant}".encode("utf-8")
+    digest = hashlib.blake2s(raw, digest_size=5).hexdigest().upper()
+    return f"CRH-{digest}"
+
+
+def slugify(value: str) -> str:
+    value = value.lower()
+    value = re.sub(r"[^a-z0-9]+", "_", value)
+    value = value.strip("_")
+    return value or "unknown"
+
+
+def parse_assigned_evaluators(value: Any) -> list[str]:
+    if value is None:
+        return []
+
+    if isinstance(value, list):
+        return [str(v).strip() for v in value if str(v).strip()]
+
+    return [
+        part.strip()
+        for part in str(value).split(";")
+        if part.strip()
+    ]
+
+
+def infer_eval_scenario_from_generation_id(value: Any) -> str:
+    """Recover S1_1 from generation_id like S1_1_v1 or S1_1_v2."""
+    text = "" if value is None else str(value)
+
+    match = re.match(r"^(S\d+_\d+)_v[12]$", text)
+    if match:
+        return match.group(1)
+
+    match = re.match(r"^(S\d+_\d+)", text)
+    if match:
+        return match.group(1)
+
+    return ""
+
+
+def infer_eval_scenario_type(eval_scenario: Any) -> str:
+    """Recover S1 from S1_1."""
+    text = "" if eval_scenario is None else str(eval_scenario)
+    match = re.match(r"^(S\d+)_\d+$", text)
+    if match:
+        return match.group(1)
+    return ""
+
+
+def ensure_eval_scenario(df: pl.DataFrame, path: Path) -> pl.DataFrame:
+    if "eval_scenario" in df.columns:
+        if "eval_scenario_type" not in df.columns:
+            df = df.with_columns(
+                pl.col("eval_scenario")
+                .map_elements(infer_eval_scenario_type, return_dtype=pl.Utf8)
+                .alias("eval_scenario_type")
+            )
+        return df
+
+    if "eval_pair_id" in df.columns:
+        df = df.with_columns(pl.col("eval_pair_id").alias("eval_scenario"))
+        if "eval_scenario_type" not in df.columns:
+            df = df.with_columns(
+                pl.col("eval_scenario")
+                .map_elements(infer_eval_scenario_type, return_dtype=pl.Utf8)
+                .alias("eval_scenario_type")
+            )
+        return df
+
+    if "generation_id" in df.columns:
+        df = df.with_columns(
+            pl.col("generation_id")
+            .map_elements(infer_eval_scenario_from_generation_id, return_dtype=pl.Utf8)
+            .alias("eval_scenario")
+        )
+
+        missing = df.filter(pl.col("eval_scenario") == "")
+        if missing.height > 0:
+            raise ValueError(
+                f"Impossible de reconstruire eval_scenario depuis generation_id dans {path}."
+            )
+
+        df = df.with_columns(
+            pl.col("eval_scenario")
+            .map_elements(infer_eval_scenario_type, return_dtype=pl.Utf8)
+            .alias("eval_scenario_type")
+        )
+
+        return df
+
+    raise ValueError(
+        f"Le fichier {path} ne contient ni eval_scenario, ni eval_pair_id, ni generation_id."
+    )
+
+
+def prepare_variant_df(
+    path: Path,
+    *,
+    prompt_variant: str,
+    salt: str,
+) -> pl.DataFrame:
+    df = pl.read_parquet(path)
+    df = ensure_eval_scenario(df, path)
+
+    if "generation_id" in df.columns:
+        df = df.rename({"generation_id": "private_generation_id"})
+
+    df = df.with_columns(
+        pl.lit(prompt_variant).alias("prompt_variant"),
+        pl.col("eval_scenario").alias("eval_pair_id"),
+    )
+
+    ids = [
+        anonymous_crh_id(row["eval_scenario"], prompt_variant, salt)
+        for row in df.select("eval_scenario").iter_rows(named=True)
+    ]
+
+    df = df.with_columns(pl.Series("id_crh", ids))
+
+    # Public Notion deduplication id.
+    df = df.with_columns(pl.col("id_crh").alias("generation_id"))
+
+    assigned_evaluators = []
+    for row in df.select("eval_scenario").iter_rows(named=True):
+        evaluators = EVALUATOR_ASSIGNMENTS.get(row["eval_scenario"], [])
+        assigned_evaluators.append(";".join(evaluators))
+
+    df = df.with_columns(pl.Series("assigned_evaluators", assigned_evaluators))
+
+    return df
+
+
+def merge_eval_reports(
+    *,
+    v1_path: Path,
+    v2_path: Path,
+    output_dir: Path,
+    salt: str,
+) -> tuple[Path, Path, Path, Path, pl.DataFrame]:
+    df_v1 = prepare_variant_df(v1_path, prompt_variant="v1", salt=salt)
+    df_v2 = prepare_variant_df(v2_path, prompt_variant="v2", salt=salt)
+
+    merged = pl.concat([df_v1, df_v2], how="diagonal_relaxed")
+
+    first_cols = [
+        "id_crh",
+        "generation_id",
+        "eval_pair_id",
+        "eval_scenario",
+        "eval_scenario_type",
+        "prompt_variant",
+        "assigned_evaluators",
+        "private_generation_id",
+        "eval_source_row_nr",
+        "eval_dp_true",
+        "eval_libelle_dp_true",
+        "eval_reason",
+        "eval_das_count",
+        "report",
+        "model",
+        "timestamp",
+        "prompt_tokens",
+        "completion_tokens",
+        "total_tokens",
+    ]
+
+    first_cols = [c for c in first_cols if c in merged.columns]
+    other_cols = [c for c in merged.columns if c not in first_cols]
+    merged = merged.select(first_cols + other_cols)
+
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    merged_parquet = output_dir / f"eval_reports_merged_28_{timestamp}.parquet"
+    merged_csv = output_dir / f"eval_reports_merged_28_{timestamp}.csv"
+    assignment_parquet = output_dir / f"eval_assignments_56_{timestamp}.parquet"
+    assignment_csv = output_dir / f"eval_assignments_56_{timestamp}.csv"
+
+    merged.write_parquet(merged_parquet)
+    merged.write_csv(merged_csv, separator=";")
+
+    assignment_rows: list[dict[str, Any]] = []
+
+    for row in merged.iter_rows(named=True):
+        evaluators = parse_assigned_evaluators(row.get("assigned_evaluators", ""))
+        for evaluator in evaluators:
+            assignment_rows.append(
+                {
+                    "id_evaluation": f"{row['id_crh']}_{slugify(evaluator)}",
+                    "id_crh": row["id_crh"],
+                    "evaluator": evaluator,
+                    # Private local key. Do not export as Notion visible property.
+                    "eval_scenario": row.get("eval_scenario", ""),
+                    "eval_pair_id": row.get("eval_pair_id", ""),
+                    "eval_scenario_type": row.get("eval_scenario_type", ""),
+                    "prompt_variant": row.get("prompt_variant", ""),
+                    "private_generation_id": row.get("private_generation_id", ""),
+                }
+            )
+
+    assignments = pl.DataFrame(assignment_rows)
+    assignments.write_parquet(assignment_parquet)
+    assignments.write_csv(assignment_csv, separator=";")
+
+    return merged_parquet, merged_csv, assignment_parquet, assignment_csv, merged
 
 
 # ---------------------------------------------------------------------
@@ -140,7 +386,6 @@ def property_value_for_schema(
     prop_name: str,
     value: Any,
 ) -> dict[str, Any] | None:
-    """Build a Notion property value matching the existing property type."""
     if prop_name not in schema:
         return None
 
@@ -183,6 +428,28 @@ def add_property_if_exists(
         properties[prop_name] = prop_value
 
 
+def equal_filter_for_property(
+    schema: dict[str, dict[str, Any]],
+    prop_name: str,
+    value: str,
+) -> dict[str, Any] | None:
+    if prop_name not in schema:
+        return None
+
+    prop_type = schema[prop_name].get("type")
+
+    if prop_type == "title":
+        return {"property": prop_name, "title": {"equals": value}}
+
+    if prop_type == "rich_text":
+        return {"property": prop_name, "rich_text": {"equals": value}}
+
+    if prop_type == "select":
+        return {"property": prop_name, "select": {"equals": value}}
+
+    return None
+
+
 # ---------------------------------------------------------------------
 # Notion block builders
 # ---------------------------------------------------------------------
@@ -203,6 +470,84 @@ def heading_2(text: str) -> dict[str, Any]:
     }
 
 
+def heading_3(text: str) -> dict[str, Any]:
+    return {
+        "object": "block",
+        "type": "heading_3",
+        "heading_3": {
+            "rich_text": [
+                {
+                    "type": "text",
+                    "text": {"content": text},
+                }
+            ]
+        },
+    }
+
+
+def strip_inline_markdown(text: str) -> str:
+    text = re.sub(r"\*\*(.*?)\*\*", r"\1", text)
+    return text.strip()
+
+
+def rich_text_from_markdown(text: str) -> list[dict[str, Any]]:
+    """Convert minimal markdown **bold** into Notion rich_text."""
+    text = text or ""
+    parts: list[dict[str, Any]] = []
+    pos = 0
+
+    for match in re.finditer(r"\*\*(.+?)\*\*", text):
+        before = text[pos : match.start()]
+        bold_text = match.group(1)
+
+        if before:
+            parts.append(
+                {
+                    "type": "text",
+                    "text": {"content": before},
+                }
+            )
+
+        if bold_text:
+            parts.append(
+                {
+                    "type": "text",
+                    "text": {"content": bold_text},
+                    "annotations": {"bold": True},
+                }
+            )
+
+        pos = match.end()
+
+    after = text[pos:]
+    if after:
+        parts.append(
+            {
+                "type": "text",
+                "text": {"content": after},
+            }
+        )
+
+    return parts
+
+
+def paragraph_markdown(text: str) -> dict[str, Any]:
+    return {
+        "object": "block",
+        "type": "paragraph",
+        "paragraph": {"rich_text": rich_text_from_markdown(text)},
+    }
+
+
+def bulleted_item_markdown(text: str) -> dict[str, Any]:
+    return {
+        "object": "block",
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {"rich_text": rich_text_from_markdown(text)},
+    }
+
+
+
 def paragraph(text: str) -> dict[str, Any]:
     if not text:
         rich_text_content: list[dict[str, Any]] = []
@@ -218,6 +563,21 @@ def paragraph(text: str) -> dict[str, Any]:
         "object": "block",
         "type": "paragraph",
         "paragraph": {"rich_text": rich_text_content},
+    }
+
+
+def bulleted_item(text: str) -> dict[str, Any]:
+    return {
+        "object": "block",
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+            "rich_text": [
+                {
+                    "type": "text",
+                    "text": {"content": text},
+                }
+            ]
+        },
     }
 
 
@@ -237,7 +597,6 @@ def split_text(text: str, chunk_size: int = 1800) -> list[str]:
 
 
 def append_children(block_id: str, children: list[dict[str, Any]]) -> None:
-    """Append blocks to a Notion page/block in batches."""
     if not children:
         return
 
@@ -285,32 +644,60 @@ def get_first_existing(row: dict[str, Any], names: list[str], default: str = "")
     return default
 
 
-def extract_cr_from_report(report: Any) -> str:
-    """Extract the CR field from a JSON-like model response.
+def clean_cr_text(text: str) -> str:
+    text = text.strip()
 
-    Falls back to raw report text when parsing fails.
-    """
+    if text.startswith("`") and text.endswith("`"):
+        text = text[1:-1].strip()
+
+    text = text.replace("\\n", "\n")
+    text = re.sub(r"\n{3,}", "\n\n", text)
+
+    return text.strip()
+
+
+def extract_cr_from_report(report: Any) -> str:
     if report is None:
         return ""
 
     text = str(report).strip()
 
-    fenced = re.search(r"```json(.*?)```", text, flags=re.DOTALL)
+    fenced = re.search(r"```(?:json)?(.*?)```", text, flags=re.DOTALL)
     if fenced:
         text = fenced.group(1).strip()
 
     try:
         data = json.loads(text)
         if isinstance(data, dict) and isinstance(data.get("CR"), str):
-            return data["CR"]
+            return clean_cr_text(data["CR"])
     except json.JSONDecodeError:
         pass
 
-    return str(report)
+    match = re.search(
+        r'"CR"\s*:\s*`(.*?)`\s*,\s*"formulations"',
+        text,
+        flags=re.DOTALL,
+    )
+    if match:
+        return clean_cr_text(match.group(1))
+
+    cr_pos = text.find('"CR"')
+    if cr_pos != -1:
+        colon_pos = text.find(":", cr_pos)
+        if colon_pos != -1:
+            after_colon = text[colon_pos + 1 :].lstrip()
+            if after_colon.startswith('"'):
+                try:
+                    value, _ = json.JSONDecoder().raw_decode(after_colon)
+                    if isinstance(value, str):
+                        return clean_cr_text(value)
+                except json.JSONDecodeError:
+                    pass
+
+    return clean_cr_text(text)
 
 
 def get_report_text(row: dict[str, Any]) -> str:
-    """Return only the generated CR text, not the full JSON response."""
     if "CR" in row and row["CR"] is not None:
         return str(row["CR"])
 
@@ -329,22 +716,32 @@ def get_report_text(row: dict[str, Any]) -> str:
 
 
 def extract_codes_from_scenario(scenario: Any) -> dict[str, str]:
-    """Extract DP and DAS from the scenario text when columns are absent."""
     text = "" if scenario is None else str(scenario)
 
-    dp_match = re.search(
-        r"Diagnostic principal\s*:\s*.*?\(([A-Z][A-Z0-9+\.-]*)\)",
+    dp = ""
+    dp_line_match = re.search(
+        r"Diagnostic principal\s*:\s*([^\n\r]*)",
         text,
-        flags=re.DOTALL,
+        flags=re.IGNORECASE,
     )
-    dp = dp_match.group(1).replace(".", "") if dp_match else ""
 
-    das: list[str] = []
+    if dp_line_match:
+        dp_line = dp_line_match.group(1)
+        codes = re.findall(r"\(([A-Z][A-Z0-9+\.-]*)\)", dp_line)
+        codes = [
+            code.replace(".", "")
+            for code in codes
+            if "-" not in code
+        ]
 
+        if codes:
+            dp = codes[-1]
+
+    das = []
     das_section_match = re.search(
-        r"Diagnostic associés\s*:\s*(.*?)(?:\n\s*\* Acte CCAM|\n- Nom du médecin|\n- Service|\Z)",
+        r"Diagnostic associés\s*:\s*(.*?)(?:\n\s*\* Acte CCAM|\n- Nom du médecin|\n- Service|\n- Hôpital|\Z)",
         text,
-        flags=re.DOTALL,
+        flags=re.DOTALL | re.IGNORECASE,
     )
 
     if das_section_match:
@@ -355,6 +752,7 @@ def extract_codes_from_scenario(scenario: Any) -> dict[str, str]:
         code.replace(".", "")
         for code in das
         if code.upper() not in {"NA", "NAN"}
+        and "-" not in code
     ]
 
     return {
@@ -365,7 +763,6 @@ def extract_codes_from_scenario(scenario: Any) -> dict[str, str]:
 
 
 def get_gold_codes(row: dict[str, Any]) -> dict[str, str]:
-    """Return gold DP/DR/DAS from columns, or extract them from scenario."""
     dp = get_first_existing(
         row,
         [
@@ -375,6 +772,7 @@ def get_gold_codes(row: dict[str, Any]) -> dict[str, str]:
             "dp",
             "icd_primary_code",
             "diag2",
+            "eval_dp_true",
         ],
     )
 
@@ -416,24 +814,96 @@ def get_gold_codes(row: dict[str, Any]) -> dict[str, str]:
 # ---------------------------------------------------------------------
 
 
+def cr_text_to_blocks(text: str) -> list[dict[str, Any]]:
+    """Convert generated CR markdown into clean Notion blocks."""
+    text = clean_cr_text(text)
+    blocks: list[dict[str, Any]] = []
+    paragraph_buffer: list[str] = []
+
+    def flush_paragraph() -> None:
+        nonlocal paragraph_buffer
+
+        if not paragraph_buffer:
+            return
+
+        para = " ".join(line.strip() for line in paragraph_buffer).strip()
+        paragraph_buffer = []
+
+        if not para:
+            return
+
+        for chunk in split_text(para):
+            blocks.append(paragraph_markdown(chunk))
+
+    for raw_line in text.splitlines():
+        line = raw_line.strip()
+
+        if not line:
+            flush_paragraph()
+            continue
+
+        # Markdown headings: #, ##, ###
+        heading_match = re.match(r"^(#{1,3})\s+(.+)$", line)
+        if heading_match:
+            flush_paragraph()
+
+            level = len(heading_match.group(1))
+            title = strip_inline_markdown(heading_match.group(2))
+
+            if level <= 2:
+                blocks.append(heading_2(title))
+            else:
+                blocks.append(heading_3(title))
+
+            continue
+
+        # Standalone bold heading: **Antécédents**
+        bold_heading_match = re.match(r"^\*\*(.+?)\*\*\s*:?\s*$", line)
+        if bold_heading_match:
+            flush_paragraph()
+            blocks.append(heading_3(strip_inline_markdown(bold_heading_match.group(1))))
+            continue
+
+        # Bold heading with text on same line:
+        # **Antécédents** : texte...
+        bold_heading_with_rest = re.match(r"^\*\*(.+?)\*\*\s*:?\s+(.+)$", line)
+        if bold_heading_with_rest:
+            flush_paragraph()
+            blocks.append(heading_3(strip_inline_markdown(bold_heading_with_rest.group(1))))
+            rest = bold_heading_with_rest.group(2).strip()
+            if rest:
+                for chunk in split_text(rest):
+                    blocks.append(paragraph_markdown(chunk))
+            continue
+
+        # Bullets, with inline bold support.
+        if line.startswith("- "):
+            flush_paragraph()
+            blocks.append(bulleted_item_markdown(line[2:].strip()))
+            continue
+
+        paragraph_buffer.append(line)
+
+    flush_paragraph()
+
+    return blocks
+
+
 def build_crh_page_properties(
     row: dict[str, Any],
     *,
     schema: dict[str, dict[str, Any]],
     title_prop: str,
 ) -> dict[str, Any]:
-    generation_id = str(row.get("generation_id", ""))
+    id_crh = str(row.get("id_crh") or row.get("generation_id", ""))
     codes = get_gold_codes(row)
-
-    title = f"CRH - {generation_id[:8]}"
-    if codes["dp"]:
-        title += f" - {codes['dp']}"
 
     properties: dict[str, Any] = {}
 
-    properties[title_prop] = title_text(title)
+    properties[title_prop] = title_text(id_crh)
 
-    add_property_if_exists(properties, schema, "generation_id", generation_id)
+    add_property_if_exists(properties, schema, "id_crh", id_crh)
+    add_property_if_exists(properties, schema, "generation_id", id_crh)
     add_property_if_exists(properties, schema, "pipeline", row.get("pipeline", "aphp"))
     add_property_if_exists(properties, schema, "model", row.get("model", ""))
     add_property_if_exists(properties, schema, "template_name", row.get("template_name", ""))
@@ -445,6 +915,7 @@ def build_crh_page_properties(
 
     return properties
 
+
 def build_crh_page_children(row: dict[str, Any]) -> list[dict[str, Any]]:
     report = get_report_text(row)
     scenario = str(row.get("scenario") or "")
@@ -453,7 +924,7 @@ def build_crh_page_children(row: dict[str, Any]) -> list[dict[str, Any]]:
     blocks: list[dict[str, Any]] = [
         heading_2("Codes gold"),
         paragraph(f"DP : {codes['dp']}"),
-        paragraph(f"DR : {codes['dr']}"),
+        paragraph(f"DR / MDP : {codes['dr']}"),
         paragraph(f"DAS : {codes['das']}"),
     ]
 
@@ -475,8 +946,7 @@ def build_crh_page_children(row: dict[str, Any]) -> list[dict[str, Any]]:
         ]
     )
 
-    for chunk in split_text(report):
-        blocks.append(paragraph(chunk))
+    blocks.extend(cr_text_to_blocks(report))
 
     return blocks
 
@@ -486,33 +956,41 @@ def build_crh_page_children(row: dict[str, Any]) -> list[dict[str, Any]]:
 # ---------------------------------------------------------------------
 
 
-def find_existing_crh_page(
-    crh_database_id: str,
-    generation_id: str,
+def find_existing_page_by_value(
+    database_id: str,
+    value: str,
     *,
     schema: dict[str, dict[str, Any]],
+    title_prop: str,
+    candidate_props: list[str],
 ) -> str | None:
-    if "generation_id" not in schema:
-        return None
+    for prop_name in candidate_props:
+        filter_payload = equal_filter_for_property(schema, prop_name, value)
+        if filter_payload is None:
+            continue
 
-    payload = {
-        "filter": {
-            "property": "generation_id",
-            "rich_text": {"equals": generation_id},
-        }
-    }
+        result = notion_request(
+            "POST",
+            f"/databases/{database_id}/query",
+            payload={"filter": filter_payload},
+        )
 
-    result = notion_request(
-        "POST",
-        f"/databases/{crh_database_id}/query",
-        payload=payload,
-    )
+        results = result.get("results", [])
+        if results:
+            return results[0]["id"]
 
-    results = result.get("results", [])
-    if not results:
-        return None
+    filter_payload = equal_filter_for_property(schema, title_prop, value)
+    if filter_payload is not None:
+        result = notion_request(
+            "POST",
+            f"/databases/{database_id}/query",
+            payload={"filter": filter_payload},
+        )
+        results = result.get("results", [])
+        if results:
+            return results[0]["id"]
 
-    return results[0]["id"]
+    return None
 
 
 def create_crh_page(
@@ -545,20 +1023,34 @@ def create_eval_page(
     *,
     eval_schema: dict[str, dict[str, Any]],
     crh_page_id: str,
-    generation_id: str,
+    id_crh: str,
     evaluator: str,
     title_prop: str,
     relation_prop: str,
     evaluator_prop: str,
-) -> str:
-    title = f"Éval - {generation_id[:8]}"
-    if evaluator:
-        title += f" - {evaluator}"
+    skip_existing: bool,
+) -> str | None:
+    id_evaluation = f"{id_crh}_{slugify(evaluator)}"
+    title = f"Éval - {id_crh} - {evaluator}"
+
+    if skip_existing:
+        existing = find_existing_page_by_value(
+            eval_database_id,
+            title,
+            schema=eval_schema,
+            title_prop=title_prop,
+            candidate_props=[],
+        )
+        if existing:
+            return None
 
     properties: dict[str, Any] = {
         title_prop: title_text(title),
         relation_prop: relation_value(crh_page_id),
     }
+
+    add_property_if_exists(properties, eval_schema, "id_evaluation", id_evaluation)
+    add_property_if_exists(properties, eval_schema, "id_crh", id_crh)
 
     if evaluator and evaluator_prop in eval_schema:
         add_property_if_exists(properties, eval_schema, evaluator_prop, evaluator)
@@ -572,30 +1064,68 @@ def create_eval_page(
     return result["id"]
 
 
-
 # ---------------------------------------------------------------------
-# IO
+# Main
 # ---------------------------------------------------------------------
-
-
-def latest_parquet(folder: str) -> Path:
-    files = sorted(Path(folder).glob("*.parquet"), key=lambda p: p.stat().st_mtime)
-    if not files:
-        raise FileNotFoundError(f"Aucun fichier parquet trouvé dans {folder}")
-
-    return files[-1]
 
 
 def main() -> None:
     load_dotenv(Path(".env"))
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input", type=str, default=None)
+    parser.add_argument("--v1", type=str, default=str(DEFAULT_V1_PATH))
+    parser.add_argument("--v2", type=str, default=str(DEFAULT_V2_PATH))
     parser.add_argument("--folder", type=str, default="reports/aphp")
     parser.add_argument("--limit", type=int, default=None)
-    parser.add_argument("--evaluators", nargs="*", default=[])
     parser.add_argument("--skip-existing", action="store_true")
+    parser.add_argument(
+        "--prepare-only",
+        action="store_true",
+        help="Merge les fichiers et écrit les parquets/csv sans envoyer vers Notion.",
+    )
+    parser.add_argument(
+        "--id-salt",
+        type=str,
+        default="eval_prompt_20260612",
+        help="Sel utilisé pour générer des id_crh anonymisés stables.",
+    )
     args = parser.parse_args()
+
+    output_dir = Path(args.folder)
+
+    (
+        merged_parquet,
+        merged_csv,
+        assignment_parquet,
+        assignment_csv,
+        df,
+    ) = merge_eval_reports(
+        v1_path=Path(args.v1),
+        v2_path=Path(args.v2),
+        output_dir=output_dir,
+        salt=args.id_salt,
+    )
+
+    print("Fichier merged parquet :", merged_parquet)
+    print("Fichier merged csv     :", merged_csv)
+    print("Fichier assignments pq :", assignment_parquet)
+    print("Fichier assignments csv:", assignment_csv)
+
+    print(
+        df.select(
+            [
+                "id_crh",
+                "eval_scenario",
+                "eval_scenario_type",
+                "prompt_variant",
+                "assigned_evaluators",
+            ]
+        ).sort(["eval_scenario", "prompt_variant"])
+    )
+
+    if args.prepare_only:
+        print("\nprepare-only activé : aucun envoi vers Notion.")
+        return
 
     crh_database_id = os.environ["NOTION_CRH_DATABASE_ID"]
     eval_database_id = os.environ["NOTION_EVAL_DATABASE_ID"]
@@ -618,38 +1148,34 @@ def main() -> None:
 
     evaluator_prop = os.getenv("NOTION_EVALUATOR_PROP", "Évaluateur")
 
-    input_path = Path(args.input) if args.input else latest_parquet(args.folder)
-    df = pl.read_parquet(input_path)
-
     if args.limit is not None:
         df = df.head(args.limit)
 
-    print(f"Fichier lu : {input_path}")
     print(f"Nombre de CRH à exporter : {df.height}")
     print(f"Propriété titre CRH : {crh_title_prop}")
     print(f"Propriété titre évaluation : {eval_title_prop}")
     print(f"Propriété relation évaluation → CRH : {eval_relation_prop}")
 
     for idx, row in enumerate(df.iter_rows(named=True), start=1):
-        generation_id = str(row.get("generation_id", ""))
-
-        if not generation_id:
-            print(f"[{idx}] Ligne ignorée : generation_id manquant")
+        id_crh = str(row.get("id_crh", ""))
+        if not id_crh:
+            print(f"[{idx}] Ligne ignorée : id_crh manquant")
             continue
 
-        existing_page_id = find_existing_crh_page(
+        existing_page_id = find_existing_page_by_value(
             crh_database_id,
-            generation_id,
+            id_crh,
             schema=crh_schema,
+            title_prop=crh_title_prop,
+            candidate_props=["id_crh", "generation_id"],
         )
 
         if existing_page_id and args.skip_existing:
-            print(f"[{idx}] Déjà présent, ignoré : {generation_id}")
-            continue
-
-        if existing_page_id:
             crh_page_id = existing_page_id
-            print(f"[{idx}] Page CRH déjà existante : {generation_id}")
+            print(f"[{idx}] Page CRH déjà présente : {id_crh}")
+        elif existing_page_id:
+            crh_page_id = existing_page_id
+            print(f"[{idx}] Page CRH déjà existante : {id_crh}")
         else:
             crh_page_id = create_crh_page(
                 crh_database_id,
@@ -657,22 +1183,31 @@ def main() -> None:
                 schema=crh_schema,
                 title_prop=crh_title_prop,
             )
-            print(f"[{idx}] Page CRH créée : {generation_id}")
+            print(f"[{idx}] Page CRH créée : {id_crh}")
 
-        evaluators = args.evaluators or [""]
+        evaluators = parse_assigned_evaluators(row.get("assigned_evaluators", ""))
+
+        if not evaluators:
+            print(f"      Aucun évaluateur assigné pour {id_crh}")
+            continue
 
         for evaluator in evaluators:
-            create_eval_page(
+            created = create_eval_page(
                 eval_database_id,
                 eval_schema=eval_schema,
                 crh_page_id=crh_page_id,
-                generation_id=generation_id,
+                id_crh=id_crh,
                 evaluator=evaluator,
                 title_prop=eval_title_prop,
                 relation_prop=eval_relation_prop,
                 evaluator_prop=evaluator_prop,
+                skip_existing=args.skip_existing,
             )
-            print(f"      Ligne évaluation créée : {evaluator or 'à compléter'}")
+
+            if created is None:
+                print(f"      Évaluation déjà présente : {evaluator}")
+            else:
+                print(f"      Ligne évaluation créée : {evaluator}")
 
         time.sleep(0.35)
 

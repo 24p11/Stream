@@ -85,12 +85,14 @@ def generate_aphp_reports_mistral_batch(
             "report": content,
             "model": model,
             "timestamp": timestamp,
+            "prompt_tokens": response.get("prompt_tokens"),
+            "completion_tokens": response.get("completion_tokens"),
+            "total_tokens": response.get("total_tokens"),
             "mistral_batch_error": (
                 json.dumps(error, ensure_ascii=False) if error else ""
             ),
             "mistral_batch_raw": (json.dumps(raw, ensure_ascii=False) if raw else ""),
         }
-
         output_rows.append(out)
 
     out_df = pl.DataFrame(output_rows)

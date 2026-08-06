@@ -198,13 +198,20 @@ class MistralClient(BaseClient):
                         "content": "",
                         "error": error,
                         "raw": response_item,
+                        "prompt_tokens": None,
+                        "completion_tokens": None,
+                        "total_tokens": None,
                     }
                 )
                 continue
 
-            content = response_item["response"]["body"]["choices"][0]["message"][
-                "content"
-            ]
+            body = response_item.get("response", {}).get("body", {})
+            choices = body.get("choices") or []
+            usage = body.get("usage") or {}
+
+            content = ""
+            if choices:
+                content = choices[0].get("message", {}).get("content", "")
 
             responses.append(
                 {
@@ -212,6 +219,9 @@ class MistralClient(BaseClient):
                     "content": content,
                     "error": None,
                     "raw": response_item,
+                    "prompt_tokens": usage.get("prompt_tokens"),
+                    "completion_tokens": usage.get("completion_tokens"),
+                    "total_tokens": usage.get("total_tokens"),
                 }
             )
 
