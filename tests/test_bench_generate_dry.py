@@ -119,11 +119,6 @@ class TestDryRun:
         assert not (test_dir / "batches").exists()
         assert (test_dir / "test.json").read_text(encoding="utf-8") == test_json_before
 
-    def test_non_dry_run_leve_not_implemented(self, tmp_path: Path):
-        test_dir = make_test_dir(tmp_path)
-        with pytest.raises(NotImplementedError, match="lot 3"):
-            run_dry(test_dir, dry_run=False)
-
 
 class TestCompletude:
     """§10.6 — fichier manquant → BenchError nommant fichier et scénario."""

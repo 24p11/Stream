@@ -1,12 +1,13 @@
 """Banc d'essai de génération AP-HP.
 
-Spécification : docs/spec_testrun_run_stage.md (v3.4). Lots 1 et 2 :
-amorçage, figement des prompts, `generate` en dry-run ; le batch Mistral,
-`load_reports` et `summarize_costs` arrivent aux lots suivants.
+Spécification : docs/spec_testrun_run_stage.md (v3.4). Lots 1 à 3 :
+amorçage, figement des prompts, cycle `generate` complet (dry-run et batch
+Mistral), reprise `load_reports`, coûts `summarize_costs`.
 """
 
+from bench.costs import Pricing, Usage, summarize_costs
 from bench.errors import BenchError
-from bench.generate import GenResult, Pricing, Usage, generate
+from bench.generate import GenResult, generate, load_reports
 from bench.seeding import (
     copy_system_prompts,
     scenario_dirs,
@@ -22,8 +23,10 @@ __all__ = [
     "Usage",
     "copy_system_prompts",
     "generate",
+    "load_reports",
     "scenario_dirs",
     "seed_user_prompts",
+    "summarize_costs",
     "user_from_column",
     "write_prompts",
 ]
