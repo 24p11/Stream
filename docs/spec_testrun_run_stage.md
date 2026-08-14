@@ -1,6 +1,14 @@
 # Spécification — Banc d'essai de génération AP-HP (`bench`)
 
-Branche cible : `dev_rf` · Statut : **v3.5** — les jeux de templates vivent dans les tests
+Branche cible : `dev_rf` · Statut : **v3.6** — positions nommées par topologie (`one_gen`)
+
+v3.5 → v3.6 (demande Rémi) : **renommage des positions** — `first` évoquait
+la génération en deux étapes ; la génération directe (seule en service)
+s'appelle désormais `one_gen` (`system/one_gen/`, figé
+`prompt_system_one_gen.txt`). Si le 2-gen renaît, ses positions seront
+`first_gen`/`second_gen`. Transition : le test 01 (archive) a été monté sous
+`first` ; la bascule se fait au montage du test 02 (`copytree`
+01/system/first → 02/system/one_gen).
 
 Changements v3.2 → v3.3 : le test contient son **jeu de templates système**
 dans `system/<position>/` (copié des sources, édité là — unité d'édition par
@@ -18,7 +26,7 @@ tests, pas à la racine** — ils sont l'objet testé. Le jeu du test N+1 est mo
 par copie du jeu du test N puis édité ; la chaîne des tests est la chaîne des
 versions des jeux (01 = v1, 02 = évolution, 03 = figement, ...). Les dossiers
 `work_prompts/template_*` disparaissent : l'amorçage du premier test se fait
-directement depuis `work_modif_prompts/template_*` (import unique). Le
+directement depuis `work_modif_prompts/template_*` (import unique).
 **Tout `work_prompts/` est versionné et partagé** (décision Rémi) : jeux,
 scénarios, prompts figés, CRH — les tests complets sont l'objet de la
 collaboration. « Figer » un jeu = commiter son test.
@@ -58,17 +66,18 @@ Le workflow d'un test :
    Étapes conditionnées = plusieurs appels, le `reports` de l'un nourrissant
    le `context` du suivant. Aucun paramètre `generation_mode`.
 
-Positions **relatives au test** : la première génération d'un test s'appelle
-`first` quel que soit le jeu qui la nourrit. Amorçage depuis l'ancien monde
-(premier test de chaque topologie uniquement — ensuite, la chaîne) :
+Positions : chaînes libres, nommées d'après la topologie pour lever toute
+ambiguïté. Amorçage depuis l'ancien monde (premier test de chaque topologie
+uniquement — ensuite, la chaîne) :
 
-- Test « génération directe » : `system/first/` ← `template_one_gen`
-- Test « deux temps » : `system/first/` ← `template_first_gen`,
-  `system/second/` ← `template_second_gen`
-- `third` et suivants : gratuits, les positions sont des chaînes libres.
+- Génération directe (seule en service) : `system/one_gen/` ←
+  `template_one_gen`
+- Deux temps (non utilisé actuellement) : `system/first_gen/` ←
+  `template_first_gen`, `system/second_gen/` ← `template_second_gen`
+- Autres topologies : positions libres (`verif`, ...).
 
 Itération : éditer `system/<position>/` puis re-figer sous un autre nom
-(`dest="prompt_system_first_v2.txt"` → `out="crh_v2.txt"`, les variantes
+(`dest="prompt_system_one_gen_v2.txt"` → `out="crh_v2.txt"`, les variantes
 coexistent) ; ou copier un dossier scénario (il emporte tous ses prompts).
 Jamais de nettoyage de prompts existants (`clean_existing_prompts` disparaît) :
 pour repartir, créer `tests/02`.
@@ -86,18 +95,19 @@ Hors périmètre : la réunification de la couche batch dans `MistralClient`
 work_modif_prompts/                        # ANCIEN MONDE — non modifié
 └── ... (ancien notebook, utils, runs, template_*)
 
+scripts/
+└── check_crh.py                           # vérificateur mécanique des CRH
+
 work_prompts/                              # NOUVEAU MONDE
 ├── notebook_generation_bench.ipynb        # le notebook
-├── check_crh.py                           # vérificateur mécanique
 └── tests/                                 # versionné intégralement (cf. §9)
-    └── 02/                                # ex. un test « deux temps »
+    └── 02/                                # ex. un test « génération directe »
         ├── system/                        # JEU DU TEST (objet testé) : copié
-        │   ├── first/                     # du jeu du test précédent, édité
-        │   │                              # ICI (un .txt par famille)
-        │   │   ├── medical_outpatient.txt
-        │   │   └── surgery_inpatient.txt
-        │   └── second/
-        │       └── ...
+        │   └── one_gen/                   # du jeu du test précédent, édité
+        │       │                          # ICI (un .txt par famille,
+        │       │                          # + regles_atih.yml, hors périmètre)
+        │       ├── medical_outpatient.txt
+        │       └── surgery_inpatient.txt
         ├── prompt_local.py                # optionnel : user_fn locale (§3.7)
         ├── test.json                      # provenance (facultatif, §2.2)
         ├── usage.json                     # journal des coûts (§7)
@@ -105,15 +115,14 @@ work_prompts/                              # NOUVEAU MONDE
         │                                  # la chaîne amont (ignoré, caché)
         ├── 0000/                          # un dossier AUTONOME par scénario
         │   ├── template.txt               # famille (stem), seeding, éditable
-        │   ├── prompt_system_first.txt    # FIGÉ par copy_system_prompts
-        │   ├── prompt_system_second.txt
+        │   ├── prompt_system_one_gen.txt  # FIGÉ par copy_system_prompts
         │   ├── prompt_system_verif.txt    # via write_prompts (texte partagé)
         │   ├── user_generation.txt        # matérialisé depuis la graine
         │   ├── prefix.txt                 # prefill (si graine en a un)
-        │   ├── crh_resume.txt             # écrits par generate()
-        │   └── crh_final.txt
+        │   ├── crh_generation.txt         # écrits par generate()
+        │   └── verdict.txt
         ├── 0001/                          # autre famille : son
-        │   └── ...                        # prompt_system_first.txt diffère
+        │   └── ...                        # prompt_system_one_gen.txt diffère
         ├── 0001_bis/                      # copie manuelle — légitime
         └── batches/                       # JSONL Mistral (technique), un
             └── crh_final/                 # sous-dossier par fichier de sortie
@@ -127,9 +136,9 @@ Conventions :
 - **Découverte disque** : sous-dossiers directs de `test_dir`, hors
   `system/`, `batches/` et dossiers cachés, triés alphabétiquement. Les
   fichiers à la racine (`prompt_local.py`, `test.json`, ...) sont ignorés.
-- **Nommage** : `prompt_system_first.txt` (toujours présent),
-  `prompt_system_second.txt`, ... — convention documentée, valeurs par défaut
-  des fonctions ; les noms restent des arguments libres. **Un seul fichier
+- **Nommage** : `prompt_system_<position>.txt` (défaut de
+  `copy_system_prompts`) — donc `prompt_system_one_gen.txt` pour la
+  génération directe ; les noms restent des arguments libres. **Un seul fichier
   user** par dossier et par contenu distinct (vérifié : l'ancien système
   dupliquait le même texte en trois exemplaires).
 - Les fonctions de création de prompts n'écrasent **jamais** un fichier
@@ -205,7 +214,7 @@ def user_from_column(column: str = "user_prompt") -> Callable[[dict], str]
 ```python
 def copy_system_prompts(
     test_dir: Path,
-    position: str,                          # "first", "second", ...
+    position: str,                          # "one_gen", "verif", ...
     *,
     dest: str | None = None,                # défaut : f"prompt_system_{position}.txt"
 ) -> list[str]                              # scénarios servis
@@ -220,7 +229,7 @@ absent, `template.txt` absent, fichier de famille absent du jeu, `dest` déjà
 présent dans un dossier (atomique : liste des dossiers, rien n'est écrit).
 
 Le montage du jeu (`system/<position>/` ← source) est un geste notebook :
-`shutil.copytree(SRC, TD / "system" / "first")` — refuse nativement si la
+`shutil.copytree(SRC, TD / "system" / "one_gen")` — refuse nativement si la
 destination existe.
 
 ### 3.4 `write_prompts` — texte constant dans chaque dossier
@@ -374,33 +383,36 @@ intra-prompt serait une évolution de spec (placeholder explicite
 
 ```python
 # ---------- Test 1 : génération directe (amorçage depuis l'ancien monde) ----------
+# (historique : le test 01 utilisait la position "first" ; convention
+#  actuelle : "one_gen")
 TD = Path("work_prompts/tests/01")
 seed_user_prompts(TD, seed_df, seed_path=SEED_PATH)
-shutil.copytree("work_modif_prompts/template_one_gen", TD / "system" / "first")
-# [édition manuelle de TD/system/first/*.txt]
-copy_system_prompts(TD, "first")
-cr = generate(TD, system="prompt_system_first.txt", user="user_generation.txt",
+shutil.copytree("work_modif_prompts/template_one_gen", TD / "system" / "one_gen")
+# [édition manuelle de TD/system/one_gen/*.txt]
+copy_system_prompts(TD, "one_gen")
+cr = generate(TD, system="prompt_system_one_gen.txt", user="user_generation.txt",
               out="crh_generation.txt", prefix_file="prefix.txt", ...)
 
 # ---------- Test suivant : évolution du jeu (chaîne de versions) ----------
 TD = Path("work_prompts/tests/02")
 seed_user_prompts(TD, seed_df, seed_path=SEED_PATH)
-shutil.copytree("work_prompts/tests/01/system/first", TD / "system" / "first")
+shutil.copytree("work_prompts/tests/01/system/first",   # 01 : ancienne position
+                TD / "system" / "one_gen")              # 02+ : convention one_gen
 # [édition du jeu de 02 — c'est LA modification testée]
 
-# ---------- Test deux générations (amorçage first/second depuis l'ancien monde) ----------
-# shutil.copytree("work_modif_prompts/template_first_gen",  TD / "system" / "first")
-# shutil.copytree("work_modif_prompts/template_second_gen", TD / "system" / "second")
-copy_system_prompts(TD, "first")
-copy_system_prompts(TD, "second")
-res = generate(TD, system="prompt_system_first.txt", user="user_generation.txt",
+# ---------- Test deux générations (non utilisé — amorçage le jour venu) ----------
+# shutil.copytree("work_modif_prompts/template_first_gen",  TD / "system" / "first_gen")
+# shutil.copytree("work_modif_prompts/template_second_gen", TD / "system" / "second_gen")
+copy_system_prompts(TD, "one_gen")
+copy_system_prompts(TD, "second_gen")  # si 2-gen
+res = generate(TD, system="prompt_system_one_gen.txt", user="user_generation.txt",
                out="crh_resume.txt", prefix_text=FIRST_GEN_PREFIX, ...)
-cr = generate(TD, system="prompt_system_second.txt", user="user_generation.txt",
+cr = generate(TD, system="prompt_system_second_gen.txt", user="user_generation.txt",
               out="crh_final.txt", context=res.reports,
               context_header=SUMMARY_HEADER, context_footer=SUMMARY_FOOTER, ...)
 
 # ---------- Test 3 : génération + vérificateur ----------
-cr = generate(TD, system="prompt_system_first.txt", user="user_generation.txt",
+cr = generate(TD, system="prompt_system_one_gen.txt", user="user_generation.txt",
               out="crh_generation.txt", prefix_file="prefix.txt", ...)
 write_prompts(TD, "prompt_system_verif.txt", VERIF_SYSTEM)   # une fois
 write_prompts(TD, "user_verification.txt", VERIF_USER)       # une fois
@@ -409,9 +421,9 @@ verdicts = generate(TD, system="prompt_system_verif.txt",
                     context=cr.reports, context_header=VERIF_HEADER, ...)
 
 # ---------- Itération sur un jeu système ----------
-# [éditer TD/system/first/*.txt]
-copy_system_prompts(TD, "first", dest="prompt_system_first_v2.txt")
-cr_v2 = generate(TD, system="prompt_system_first_v2.txt",
+# [éditer TD/system/one_gen/*.txt]
+copy_system_prompts(TD, "first", dest="prompt_system_one_gen_v2.txt")
+cr_v2 = generate(TD, system="prompt_system_one_gen_v2.txt",
                  user="user_generation.txt", out="crh_v2.txt", ...)
 
 # ---------- Reprise de session ----------
