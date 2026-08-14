@@ -1,0 +1,139 @@
+Le compte rendu suivant respecte les élements suivants :
+        - les diagnostics ont une formulation moins formelle que la définition du code
+        - le plan du CRH est conforme aux recommandations. Les sections sont rédigées dans un style clinique informel et réaliste.
+        - Les dates sont cohérentes avec le scénario.
+        - Les informations obligatoires sont présentes dans l'entête et l'encadré patient.
+        - Les informations sont intégrées de façon naturelle dans le texte.
+        - Les dictionnaires de formulations sont fournis à la fin.
+
+```json
+{
+  "CR": "## Compte rendu opératoire
+
+Hôpital Édouard Herriot - Hospices Civils de Lyon
+Service de Chirurgie Viscérale
+
+### Intervention
+Colectomie transverse par laparotomie.
+
+### Date de l'intervention
+20 mars 2025.
+
+### Diagnostic
+Syndrome occlusif intestinal sans cause précise identifiée en préopératoire.
+
+### Technique utilisée
+Installation de la patiente en décubitus dorsal sous anesthésie générale. Asepsie et champs opératoires stériles. Laparotomie médiane sus- et sous-ombilicale. Exploration de la cavité abdominale mettant en évidence une distension majeure des anses grêles en amont d'une zone de sténose serrée située au niveau du côlon transverse. Absence de lésion tumorale macroscopiquement visible ou de bride évidente. Réalisation d'une colectomie transverse emportant la zone sténosée avec marges de sécurité. Anastomose iléo-colique latéro-latérale manuelle en deux plans au fil résorbable 3/0. Hémostase soigneuse vérifiée. Lavage abondant de la cavité péritonéale au sérum physiologique tiède. Drainage aspiratif type Redon en fosse iliaque droite. Fermeture pariétale plan par plan au fil non résorbable. Pansement sec.
+
+### Constatations per-opératoires
+Distension importante des anses grêles en amont d'une sténose serrée du côlon transverse, sans cause évidente (pas de bride, pas de tumeur visible, pas de diverticule compliqué). Zone sténosée mesurant environ 3 cm de long, avec paroi épaissie et inflammatoire. Absence d'ascite ou de nodules péritonéaux suspects. Appendice et autres segments coliques d'aspect macroscopiquement normal.
+
+### Matériels utilisés
+- Fils de suture : Vicryl 3/0 et Prolène 2/0.
+- Drain de Redon CH16.
+- Matériel de laparotomie standard.
+
+### Chirurgien
+Dr Justino Kouzoungou.
+
+-----
+
+## Compte rendu d’hospitalisation
+
+Hôpital Édouard Herriot - Hospices Civils de Lyon
+Service de Chirurgie Viscérale
+
+**Patient :**
+Nom : Vlasic
+Prénom : Janine
+Date de naissance : 13/11/1981
+Âge : 43 ans
+Sexe : Féminin
+
+### Motif d’hospitalisation
+Admission aux urgences le 16 mars 2025 pour tableau d'occlusion intestinale évoluant depuis 48 heures, associant douleurs abdominales diffuses, arrêt des matières et des gaz, et vomissements alimentaires. La patiente présentait un météorisme abdominal important avec silence auscultatoire digestif.
+
+### Antécédents
+- **Médicaux :** Hypothyroïdie substituée (Lévothyrox 75 µg/jour). Pas d'antécédent de diabète ou d'hypertension artérielle.
+- **Chirurgicaux :** Appendicectomie dans l'enfance. Pas d'autre antécédent chirurgical abdominal.
+- **Familiaux :** Mère décédée d'un cancer du sein à 68 ans. Père en bonne santé.
+- **Allergies :** Aucune allergie médicamenteuse connue.
+- **Toxicomanie :** Tabagisme actif évalué à 10 paquets-année. Pas de consommation d'alcool ou de drogues illicites.
+
+### Mode de vie
+Patiente célibataire, sans enfant. Employée administrative dans une entreprise de logistique. Activité physique limitée (marche occasionnelle). Pas de régime alimentaire particulier.
+
+### Histoire de la maladie
+La symptomatologie a débuté brutalement deux jours avant l'admission par des douleurs abdominales diffuses, rapidement suivies d'un arrêt des matières et des gaz. Les vomissements sont apparus secondairement, de nature alimentaire puis bilieux. La patiente a consulté aux urgences devant l'aggravation des symptômes. À l'arrivée, elle présentait un abdomen distendu, tympanique, avec silence auscultatoire digestif. Le toucher rectal était normal, sans fécalome ni masse palpable. Une sonde nasogastrique a été mise en place en urgence, ramenant 800 ml de liquide bilieux.
+
+### Examen clinique
+- **Constantes à l'entrée :** TA 110/70 mmHg, FC 95 bpm, SpO2 98 % en air ambiant, température 37,2°C.
+- **Poids :** 68 kg (poids habituel selon la patiente).
+- **Examen abdominal :** Abdomen distendu, tympanique, avec défense diffuse. Cicatrice d'appendicectomie ancienne. Pas de masse palpable. Silence auscultatoire digestif.
+- **Examen général :** Patiente apyrétique, légèrement déshydratée (pli cutané persistant). Pas de signe de choc. Reste de l'examen sans particularité.
+
+### Examens complémentaires
+- **Biologie :**
+  - NFS : Hb 13,2 g/dL, leucocytes 12 500/mm³ (PNN 85 %), plaquettes 320 000/mm³.
+  - Ionogramme sanguin : Na+ 138 mmol/L, K+ 3,5 mmol/L, créatinine 78 µmol/L, urée 6,2 mmol/L.
+  - CRP : 45 mg/L.
+  - Bilan hépatique : normal.
+  - Lactates : 1,8 mmol/L.
+- **Imagerie :**
+  - **ASP debout :** Niveaux hydro-aériques grêliques multiples, sans pneumopéritoine visible.
+  - **Scanner abdominal injecté (16/03/2025) :** Distension majeure des anses grêles en amont d'une zone de sténose serrée du côlon transverse, sans cause évidente (pas de bride visible, pas de masse tumorale individualisable). Pas d'épanchement intra-péritonéal significatif. Absence de signe de souffrance digestive.
+
+### Évolution pendant l'hospitalisation
+- **Phase préopératoire :** Mise en place d'une sonde nasogastrique en aspiration douce, réhydratation intraveineuse (sérum physiologique + électrolytes). Surveillance clinique et biologique rapprochée. La patiente a été maintenue à jeun strict. Une antibiothérapie probabiliste par Augmentin 1g x 3/jour a été instaurée en prévision de la chirurgie.
+- **Intervention (20/03/2025) :** Colectomie transverse par laparotomie (cf. compte rendu opératoire). Les suites opératoires immédiates ont été simples, avec reprise du transit au 3ème jour postopératoire (23/03/2025). La sonde nasogastrique a été retirée à J2 postopératoire. Le drain de Redon a été enlevé à J4 (24/03/2025) devant un débit nul.
+- **Phase postopératoire :** Surveillance quotidienne des constantes, de la cicatrice opératoire et du transit. La patiente a été réalimentée progressivement à partir de J3, sans incident. Les douleurs postopératoires ont été bien contrôlées par antalgiques de palier I (paracétamol) et II (tramadol). Pas de complication infectieuse ou thromboembolique. La sortie a été autorisée le 31 mars 2025 après vérification de la bonne tolérance alimentaire et de l'absence de complication cicatricielle. Un rendez-vous de contrôle a été programmé à 1 mois avec le chirurgien, ainsi qu'une consultation avec l'anatomopathologiste pour les résultats définitifs de la pièce opératoire.
+
+### Conclusion
+Hospitalisation pour prise en charge chirurgicale d'un syndrome occlusif intestinal sur sténose serrée du côlon transverse, sans cause évidente en préopératoire. L'intervention a consisté en une colectomie transverse avec anastomose iléo-colique. Les suites opératoires ont été simples, permettant un retour à domicile au 11ème jour postopératoire. Surveillance clinique et anatomopathologique recommandée.",
+
+  "formulations": {
+    "diagnostics": {
+      "K56.6 — Occlusions intestinales, autres et sans précision": [
+        "syndrome occlusif intestinal sans cause précise identifiée en préopératoire",
+        "occlusion intestinale évoluant depuis 48 heures",
+        "tableau d'occlusion intestinale",
+        "syndrome occlusif intestinal",
+        "sténose serrée du côlon transverse",
+        "zone de sténose serrée du côlon transverse",
+        "occlusion intestinale"
+      ]
+    },
+    "informations": {
+      "Date entrée": ["16 mars 2025"],
+      "Date de sortie": ["31 mars 2025"],
+      "Service d'hospitalisation": ["Service de Chirurgie Viscérale"],
+      "Intervention": ["Colectomie transverse par laparotomie"],
+      "Date de l'intervention": ["20 mars 2025"],
+      "Nom/Prénom du chirurgien": ["Dr Justino Kouzoungou"],
+      "Nom/Prénom du patient": ["Vlasic Janine"],
+      "Âge": ["43 ans"],
+      "Sexe": ["Féminin"],
+      "État général": [
+        "Patiente apyrétique, légèrement déshydratée (pli cutané persistant). Pas de signe de choc.",
+        "Les suites opératoires immédiates ont été simples",
+        "La patiente a été réalimentée progressivement à partir de J3, sans incident."
+      ],
+      "Poids": ["68 kg"],
+      "Statut gestationnel": [],
+      "Gestité": [],
+      "Comorbidités": ["Hypothyroïdie substituée (Lévothyrox 75 µg/jour)"],
+      "Médicaments": [
+        "Lévothyrox 75 µg/jour",
+        "Augmentin 1g x 3/jour",
+        "paracétamol",
+        "tramadol"
+      ],
+      "NFS": [
+        "Hb 13,2 g/dL, leucocytes 12 500/mm³ (PNN 85 %), plaquettes 320 000/mm³"
+      ],
+      "Créatinine": ["créatinine 78 µmol/L"],
+      "Bilan hépatique": ["normal"]
+    }
+  }
+}
+```

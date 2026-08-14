@@ -1,0 +1,61 @@
+Le compte rendu suivant respecte les élements suivants :
+        - les diagnostics ont une formulation moins formelle que la définition du code
+        - le plan du CRH est conforme aux recommandations. Les sections sont détaillées et réalistes.
+        - les dates sont cohérentes avec le scénario.
+        - les informations obligatoires sont présentes.
+
+```json
+{
+  "CR": "### Service d'hospitalisation\n**Nouvel Hôpital Civil - Hôpitaux Universitaires de Strasbourg**\n**Service d'obstétrique**\n\n**Compte rendu d'hospitalisation**\n\n**Patient :**\n- Nom : Renard\n- Prénom : Nicolas\n- Date de naissance : 12/01/2024\n- Âge : 22 jours\n- Sexe : Masculin\n\n---\n\n### Motif d'hospitalisation\nNouveau-né adressé pour surveillance post-natale en raison de complications survenues lors de l'accouchement. Présence de signes évocateurs d'une souffrance fœtale per-partum, avec anomalies du cordon ombilical et recours à une extraction instrumentale par forceps. Nécessité d'un bilan complet et d'un dépistage auditif.\n\n---\n\n### Antécédents\n**Antécédents familiaux :**\n- Non contributifs pour ce nouveau-né.\n- Pas d'antécédents connus de malformations congénitales ou de pathologies héréditaires dans la famille.\n\n**Antécédents personnels :**\n- Enfant unique, né à terme le 12/01/2024 au Nouvel Hôpital Civil.\n- Grossesse suivie sans particularité jusqu'au terme.\n- Pas d'exposition connue à des toxiques ou agents infectieux pendant la grossesse.\n\n---\n\n### Mode de vie\n**Mère :**\n- Profession : employée administrative.\n- Pas de tabagisme, d'alcoolisme ou de toxicomanie déclarés pendant la grossesse.\n- Activité physique modérée.\n- Pas d'allergies connues.\n\n---\n\n### Histoire de la maladie\nNicolas Renard est né le 12/01/2024 à 39 semaines d'aménorrhée (SA) par voie basse, après un travail prolongé et compliqué. La mère a bénéficié d'une analgésie péridurale. En cours de travail, une souffrance fœtale aiguë a été suspectée devant des anomalies du rythme cardiaque fœtal (ralentissements variables) et la présence de méconium dans le liquide amniotique. Une extraction instrumentale par forceps a été réalisée en urgence en raison d'une procidence du cordon ombilical. À la naissance, le score d'Apgar était de 5 à 1 minute, 7 à 5 minutes et 9 à 10 minutes. Le nouveau-né a nécessité une aspiration des voies aériennes supérieures et une oxygénothérapie transitoire.\n\n---\n\n### Examen clinique\n**À l'entrée (03/01/2025) :**\n- Poids : 3 200 g (stable depuis la naissance).\n- Température : 36,8°C.\n- Fréquence cardiaque : 140 battements/min.\n- Fréquence respiratoire : 45 cycles/min.\n- Saturation en oxygène : 98 % en air ambiant.\n- Tension artérielle : 65/40 mmHg.\n\n**Examen physique :**\n- Nouveau-né eutrophique, réactif.\n- Peau rosée, sans ictère visible.\n- Fontanelle antérieure normotendue.\n- Auscultation cardio-pulmonaire normale.\n- Abdomen souple, sans hépatosplénomégalie.\n- Cordon ombilical cicatrisé, sans signe d'infection.\n- Examen neurologique : tonus axial et périphérique satisfaisant, réflexes archaïques présents.\n- Pas de signe de traumatisme lié à l'extraction instrumentale (pas d'hématome du scalp, pas de paralysie faciale).\n\n---\n\n### Examens complémentaires\n**Bilan biologique (03/01/2025) :**\n- NFS : Hb 16,5 g/dL, leucocytes 12 000/mm³, plaquettes 250 000/mm³.\n- CRP : 5 mg/L.\n- Bilan hépatique : normal.\n- Créatinine : 35 µmol/L.\n- Gaz du sang (capillaire) : pH 7,35, pCO₂ 40 mmHg, HCO₃⁻ 22 mmol/L, lactates 1,8 mmol/L.\n\n**Imagerie :**\n- Échographie transfontanellaire (04/01/2025) : normale, sans signe d'hémorragie intraventriculaire.\n- Radiographie de thorax (04/01/2025) : normale.\n\n**Dépistage auditif (05/01/2025) :**\n- Potentiels évoqués auditifs automatisés (PEAA) : normaux des deux côtés.\n\n---\n\n### Évolution pendant l'hospitalisation\nNicolas a été admis en unité de néonatologie pour surveillance rapprochée. L'évolution a été favorable, avec une normalisation rapide des paramètres vitaux. Le nouveau-né a été alimenté par lait maternel dès le premier jour, avec une bonne tolérance digestive. Aucun épisode d'hypoglycémie ou d'hypothermie n'a été observé.\n\n**Démarche diagnostique :**\n- La souffrance fœtale per-partum a été confirmée par les anomalies du rythme cardiaque fœtal et la présence de méconium dans le liquide amniotique. L'extraction par forceps a été justifiée par la procidence du cordon ombilical, responsable d'une hypoxie transitoire.\n- Le bilan infectieux est resté négatif, écartant une cause septique à la détresse fœtale.\n- Le dépistage auditif a permis de confirmer l'absence de surdité congénitale.\n\n**Traitements :**\n- Surveillance continue des paramètres vitaux pendant les 48 premières heures.\n- Oxygénothérapie nasale transitoire (2 L/min) pendant 6 heures après la naissance.\n- Alimentation par lait maternel à la demande, avec complément par préparation pour nourrissons si nécessaire.\n- Soins de cordon ombilical quotidiens.\n- Pas de traitement médicamenteux spécifique.\n\n---\n\n### Conclusion\nNicolas Renard, nouveau-né de 22 jours, a présenté une souffrance fœtale aiguë per-partum en rapport avec une procidence du cordon ombilical, ayant nécessité une extraction instrumentale par forceps. L'évolution post-natale a été favorable, sans complication notable. Le bilan auditif est normal. La sortie est autorisée ce jour, avec un suivi en consultation de pédiatrie dans une semaine pour contrôle clinique et vérification de la prise de poids.\n\n**Sortie prévue le 08/01/2025.**\n\n**Médecin signataire :**\nDr Denise Berthe\nService d'obstétrique\nNouvel Hôpital Civil - Hôpitaux Universitaires de Strasbourg",
+
+  "formulations": {
+    "diagnostics": {
+      "Enfant unique, né à l'hôpital (Z380)": [
+        "Enfant unique, né à terme le 12/01/2024 au Nouvel Hôpital Civil",
+        "Né à l'hôpital"
+      ],
+      "Fœtus et nouveau-né affectés par des affections du cordon ombilical, autres et sans précision (P026)": [
+        "procidence du cordon ombilical",
+        "anomalies du cordon ombilical"
+      ],
+      "Fœtus et nouveau-né affectés par un accouchement par forceps (P032)": [
+        "extraction instrumentale par forceps",
+        "accouchement compliqué nécessitant un forceps"
+      ],
+      "Fœtus et nouveau-né affectés par une anesthésie et par une analgésie de la mère, au cours de la grossesse, du travail et de l'accouchement (P040)": [
+        "analgésie péridurale",
+        "anesthésie maternelle pendant le travail"
+      ],
+      "Hypoxie intra-utérine constatée pour la première fois pendant le travail et l'accouchement (P201)": [
+        "souffrance fœtale aiguë per-partum",
+        "souffrance fœtale per-partum",
+        "anomalies du rythme cardiaque fœtal",
+        "présence de méconium dans le liquide amniotique"
+      ],
+      "Examen spécial de dépistage des affections des oreilles (Z1351)": [
+        "dépistage auditif",
+        "Potentiels évoqués auditifs automatisés (PEAA)"
+      ]
+    },
+    "informations": {
+      "Date entrée": ["03/01/2025"],
+      "Date de sortie": ["08/01/2025"],
+      "Service d'hospitalisation": ["Service d'obstétrique"],
+      "Nom/Prénom du patient": ["Renard Nicolas"],
+      "Nom/Prénom du médecin": ["Denise Berthe"],
+      "Âge": ["22 jours"],
+      "Sexe": ["Masculin"],
+      "Poids": ["3 200 g"],
+      "NFS": ["Hb 16,5 g/dL, leucocytes 12 000/mm³, plaquettes 250 000/mm³"],
+      "Créatinine": ["35 µmol/L"],
+      "Bilan hépatique": ["normal"],
+      "Traitements": [
+        "Surveillance continue des paramètres vitaux pendant les 48 premières heures",
+        "Oxygénothérapie nasale transitoire (2 L/min) pendant 6 heures après la naissance",
+        "Alimentation par lait maternel à la demande, avec complément par préparation pour nourrissons si nécessaire",
+        "Soins de cordon ombilical quotidiens"
+      ]
+    }
+  }
+}
+```

@@ -1,0 +1,141 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 12 ans
+- Sexe du patient : Masculin
+- Date d'entrée : 30/10/2024
+- Date de sortie : 06/11/2024
+- Date de naissance : 05/02/2012
+- Nom du patient : Villemond
+- Prénom du patient : Sauveur
+- Mode d'entrée' : URGENCES
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
+- Codage CIM10 :
+   * Diagnostic principal : Convulsions, autres et non précisées (R568)
+   * Diagnostics associés :
+      - Syncope et collapsus (sauf choc) (R55)
+- Nom du médecin / signataire : Annette Pouget
+- Service : PEDIATRIE NEUROLOGIE
+- Hôpital : Hôpital Saint-Louis - Assistance Publique Hôpitaux de Paris
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="R56.8">
+
+# R56.8 — Convulsions, autres et non précisées
+
+## Position dans la classification
+- Chapitre XVIII : Symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs
+- Bloc R50-R69 : Symptômes et signes généraux
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- crise (convulsive) SAI
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVIII) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+résultats anormaux constatés au cours de l'examen prénatal systématique de la mère (O28.-)
+
+Affections relevant d'autres codes (hérité de la catégorie R56) :
+
+convulsions et crises convulsives (au cours de) (du) :
+ - dissociatives (F44.5) 
+ - épilepsie (G40-G41) 
+ - nouveau-né (P90)
+
+Formes spécifiées de la catégorie R56 :
+- Convulsions fébriles [→ R56.0]
+
+## Formulations cliniques alternatives
+- antécédent convulsif
+- Attaque (de) (voir aussi apoplexie), convulsive (voir aussi convulsions)
+- coma post-convulsif
+- convulsif
+- convulsion
+- Convulsions (idiopathiques) (de)
+- Convulsions (idiopathiques) (de), dues à, éther
+- Convulsions (idiopathiques) (de), dues à, éther, anesthésique
+- Convulsions (idiopathiques) (de), généralisées
+- Convulsions (idiopathiques) (de), infantiles
+- Convulsions (idiopathiques) (de), spasmodiques
+- Convulsions SAI
+- convulsions subintrantes
+- Crise(s) (de), convulsive (voir aussi convulsions)
+- équivalents convulsifs
+- Etat (de), convulsif (voir aussi convulsions)
+- état mal convulsif réfractaire
+- malaise convulsif
+- Pseudotétanos (voir aussi convulsions)
+- syndrome épileptiforme
+- troubles convulsifs
+
+</fiche_code>
+
+<fiche_code code="R55">
+
+# R55 — Syncope et collapsus
+
+## Position dans la classification
+- Chapitre XVIII : Symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs
+- Bloc R50-R69 : Symptômes et signes généraux
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- évanouissement
+- perte de connaissance
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVIII) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+résultats anormaux constatés au cours de l'examen prénatal systématique de la mère (O28.-)
+
+Affections relevant d'autres codes :
+
+asthénie neurocirculatoire (F45.3)
+choc :
+ - SAI (R57.9) 
+ - cardiogénique (R57.0) 
+ - compliquant ou consécutif à :
+  - avortement, grossesse extra-utérine ou molaire (O00-O07)  (O08.3) 
+  - travail et accouchement (O75.1) 
+ - postopératoire (T81.1) 
+crise de Stokes–Adams (I45.9) 
+- hypotension orthostatique (I95.1)  - neurogène (G23.8) 
+perte de conscience SAI (R40.2) 
+- syncope :
+ - due à la chaleur (T67.1) 
+ - psychogène (F48.8) 
+syndrome du sinus carotidien (G90.0)
+
+## Formulations cliniques alternatives
+- Collapsus (de), au sens de, syncope
+- Crise(s) (de), vagale
+- Crise(s) (de), vasomotrice
+- Défaillance (de) (voir aussi insuffisance)
+- effondrement
+- malaise cardiaque
+- Malaise (état de) (non pris dans le sens d'étourdissement), au sens d'évanouissement
+- malaise inaugural
+- malaise prolongé
+- malaise volant poids lourd
+- malaise volant voiture
+- Perte(s) (de), connaissance (évanouissement)
+- pertes connaissance itératives
+- Phénomène (de), vasomoteur
+- Réaction (à) (de), vaso-vagale
+- Syncope
+- syncope aigüe
+- syncope blanche
+- syncope effort
+- Syncope, par, vasoconstriction
+
+</fiche_code>

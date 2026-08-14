@@ -1,0 +1,277 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 0 ans
+- Sexe du patient : Masculin
+- Date d'entrée : 03/01/2025
+- Date de sortie : 08/01/2025
+- Date de naissance : 12/01/2024
+- Nom du patient : Renard
+- Prénom du patient : Nicolas
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
+- Codage CIM10 :
+   * Diagnostic principal : Enfant unique, né à l'hôpital (Z380)
+   * Diagnostics associés :
+      - Foetus et nouveau-né affectés par des affections du cordon ombilical, autres et sans précision (P026)
+      - Foetus et nouveau-né affectés par un accouchement par forceps (P032)
+      - Foetus et nouveau-né affectés par une anesthésie et par une analgésie de la mère, au cours de la grossesse, du travail et de l'accouchement (P040)
+      - Hypoxie intra-utérine constatée pour la première fois pendant le travail et l'accouchement (P201)
+      - Examen spécial de dépistage des affections des oreilles (Z1351)
+- Nom du médecin / signataire : Denise Berthe
+- Service : OBSTETRIQUE
+- Hôpital : Nouvel Hôpital Civil - Hôpitaux Universitaires de Strasbourg
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="Z38.0">
+
+# Z38.0 — Enfant unique, né à l'hôpital
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+
+## Formulations cliniques alternatives
+- Enfant - voir aussi nom de l'état pathologique, né, vivant, en bonne santé, naissance, unique, né à l'hôpital
+
+</fiche_code>
+
+<fiche_code code="P02.6">
+
+# P02.6 — Fœtus et nouveau-né affectés par des affections du cordon ombilical, autres et sans précision
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P00-P04 : Fœtus et nouveau-né affectés par des troubles maternels et par des complications de la grossesse, du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+Inclusions héritées du bloc P00-P04 :
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du foetus ou du nouveau-né
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du fœtus ou du nouveau-né
+
+Au niveau du code :
+- cordon court
+- procidence des vaisseaux du cordon
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes :
+
+artère ombilicale unique (Q27.0)
+
+## Formulations cliniques alternatives
+- affection cordon ombilical
+- Anomalie (congénitale) (type non précisé) (de), cordon, ombilical nca
+- arrachement cordon ombilical
+- Brièveté (anormale) (congénitale) (de) - voir aussi raccourcissement, cordon ombilical (compliquant le travail et l'accouchement), affectant foetus ou nouveau-né
+- brièveté cordon ombilical
+- cause funiculaire
+- Cordon ombilical - voir aussi nom de l'état pathologique, serré autour du cou, affectant foetus ou nouveau-né
+- désinsertion cordon ombilical
+- Etranglement (de), foetus par cordon ombilical
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, cordon (ombilical) (avec), court
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, cordon (ombilical) (avec), procidence, des vaisseaux
+- insertion vélamenteuse cordon
+- Lésion (de) (voir aussi maladie), vasculaire, cordon, affectant foetus ou nouveau-né
+- Nécrose (ischémique) (de) (voir aussi gangrène), cordon ombilical affectant foetus ou nouveau-né
+- pathologie cordon
+- rupture vaisseau cordon ombilical
+- rupture veine ombilicale per-partum
+- thombose cordon
+- Thrombose (multiple) (progressive) (septique) (vasculaire) (veineuse) (de), cordon, ombilical (vaisseaux) (compliquant l'accouchement), affectant foetus ou nouveau-né
+- Vasa praevia (compliquant l'accouchement), affectant foetus ou nouveau-né
+
+</fiche_code>
+
+<fiche_code code="P03.2">
+
+# P03.2 — Fœtus et nouveau-né affectés par un accouchement par forceps
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P00-P04 : Fœtus et nouveau-né affectés par des troubles maternels et par des complications de la grossesse, du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+Inclusions héritées du bloc P00-P04 :
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du foetus ou du nouveau-né
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du fœtus ou du nouveau-né
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+## Formulations cliniques alternatives
+- accouchement forceps
+- échec spatules
+- Extraction, foetale (avec), forceps (voir aussi accouchement, par, forceps), affectant foetus ou nouveau-né
+- extraction forceps
+- extraction instrumentale
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, accouchement, par, forceps
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, forceps
+- forceps
+- Forceps, accouchement par (voir aussi accouchement, par, forceps), affectant foetus ou nouveau-né
+- naissance par spatules
+
+</fiche_code>
+
+<fiche_code code="P04.0">
+
+# P04.0 — Fœtus et nouveau-né affectés par une anesthésie et par une analgésie de la mère, au cours de la grossesse, du travail et de l'accouchement
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P00-P04 : Fœtus et nouveau-né affectés par des troubles maternels et par des complications de la grossesse, du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+Inclusions héritées du bloc P00-P04 :
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du foetus ou du nouveau-né
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du fœtus ou du nouveau-né
+
+Inclusions héritées de la catégorie P04 :
+- effets non tératogènes de substances transmises par voie placentaire
+
+Au niveau du code :
+- réactions et intoxications dues à des opiacés et tranquillisants administrés à la mère pendant le travail et l'accouchement
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie P04) :
+
+ictère du nouveau-né dû à des médicaments ou des toxines transmis par la mère (P58.4)
+malformations congénitales (Q00-Q99)
+
+## Formulations cliniques alternatives
+- Absorption de, analgésique ou anesthésique obstétrical à travers le placenta, affectant le foetus
+- Absorption de, substance, toxique, pendant la grossesse et les suites de couches à travers le, placenta, affectant foetus ou nouveau-né, due à, analgésie maternelle
+- Absorption de, substance, toxique, pendant la grossesse et les suites de couches à travers le, placenta, affectant foetus ou nouveau-né, due à, anesthésie maternelle
+- césarienne sous AG
+- choc anaphylactique
+- Effets (adverses) (indésirables) (nocifs) (de), anesthésie (au cours de) nca, grossesse, affectant foetus ou nouveau-né
+- Effets (adverses) (indésirables) (nocifs) (de), anesthésie (au cours de) nca, travail ou accouchement, affectant foetus ou nouveau-né
+- Effets (adverses) (indésirables) (nocifs) (de), foetus, analgésie ou anesthésie de la mère
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, anesthésie ou analgésie de la mère (au cours de la grossesse, du travail et de l'accouchement)
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, opiacé administré à la mère pendant la grossesse, le travail et l'accouchement
+- Intoxication (aiguë) (par) - voir aussi empoisonnement, narcotique (aiguë) nca, à travers le, lait maternel affectant l'enfant, due à, analgésie ou anesthésie maternelle
+- Intoxication (aiguë) (par) - voir aussi empoisonnement, tranquillisants (aiguë), administrés à la mère pendant l'accouchement affectant foetus ou nouveau-né
+- sédation maternelle
+
+</fiche_code>
+
+<fiche_code code="P20.1">
+
+# P20.1 — Hypoxie intra-utérine constatée pour la première fois pendant le travail et l'accouchement
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P20-P29 : Affections respiratoires et cardiovasculaires spécifiques de la période périnatale
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+Inclusions héritées de la catégorie P20 :
+- acidose foetale ou intra-utérine
+- acidose  fœtale ou intra-utérine
+anoxie  fœtale ou intra-utérine
+asphyxie  fœtale ou intra-utérine
+détresse  fœtale ou intra-utérine
+hypoxie  fœtale ou intra-utérine
+anomalie du rythme cardiaque fœtal
+émission de méconium
+présence de méconium dans le liquide amniotique
+- anomalie du rythme cardiaque foetal
+- anoxie foetale ou intra-utérine
+- asphyxie foetale ou intra-utérine
+- détresse foetale ou intra-utérine
+- émission de méconium
+- hypoxie foetale ou intra-utérine
+- présence de méconium dans le liquide amniotique
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie P20) :
+
+hémorragie intracrânienne due à une anoxie ou une hypoxie (P52.-)
+
+## Formulations cliniques alternatives
+- Anoxémie, anoxie (de), foetale, pendant le travail et l'accouchement
+- anoxie foetale
+- Asphyxie (due à), foetale, intra-utérine, pendant le travail et l'accouchement
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, avec, hypoxie intra-utérine, pendant le travail et l'accouchement
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, avec, souffrance foetale, pendant le travail et l'accouchement
+- Méconium, dans le liquide amniotique, remarqué pendant le travail et l'accouchement
+- Mort (voir aussi décès), foetale (de cause non précisée), par, asphyxie ou anoxie intra-utérine, pendant le travail et l'accouchement
+- SFA per natale
+- souffrance foetale aigüe extraction
+- Souffrance foetale, pendant le travail et l'accouchement
+- souffrance foetale pendant travail
+- souffrance foetale per partum
+- souffrance foetale subaigüe perpartum
+
+</fiche_code>
+
+<fiche_code code="Z13.51">
+
+# Z13.51 — Examen spécial de dépistage des affections des oreilles
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z00-Z13 : Sujets en contact avec les services de santé pour des examens divers
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du bloc Z00-Z13) :
+
+examens relatifs à la grossesse et à la reproduction (Z30-Z36)  (Z39.-)
+
+</fiche_code>

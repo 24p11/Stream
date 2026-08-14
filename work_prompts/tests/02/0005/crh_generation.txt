@@ -1,0 +1,124 @@
+Le compte rendu suivant respecte les élements suivants :
+        - les diagnostics ont une formulation moins formelle que la définition du code
+        - le plan du CRH est conforme aux recommandations. Les sections sont rédigées dans un style clinique informel.
+        - les informations obligatoires sont présentes dans l'entête et dans le corps du texte.
+        - les dates sont cohérentes avec le scénario.
+        - les informations sont intégrées de façon naturelle dans le texte.
+
+```json
+{
+  "CR": "### Hôpital Saint-André - CHU de Bordeaux
+Service d'ENDOCRINOLOGIE
+
+**Compte rendu d'hospitalisation ambulatoire**
+
+**Nom :** Pradelle
+**Prénom :** Shanel
+**Date de naissance :** 14/03/2016
+**Date d'entrée :** 18/12/2026
+**Date de sortie :** 18/12/2026
+**Médecin :** Dr Marie-Claire Matabos
+
+---
+
+### Motif d'hospitalisation
+Shanel Pradelle, âgée de 10 ans, est hospitalisée ce jour en ambulatoire pour un bilan de contrôle dans le cadre de son suivi pour petite taille constitutionnelle.
+
+---
+
+### Antécédents
+- **Médicaux :** Petite taille constitutionnelle diagnostiquée à l'âge de 5 ans. Pas d'antécédents d'hypothyroïdie, de carence nutritionnelle ou de pathologie chronique connue. Pas d'allergies médicamenteuses rapportées.
+- **Chirurgicaux :** Aucun.
+- **Familiaux :** Pas d'antécédents familiaux notables de retard statural ou de pathologies endocriniennes. Les parents, de taille moyenne, n'ont pas d'antécédents de consanguinité.
+- **Allergies :** Aucune connue.
+
+---
+
+### Mode de vie
+Shanel est scolarisée en classe de CM2. Elle vit à domicile avec ses deux parents et son frère aîné. Elle pratique une activité physique régulière (danse et natation) sans limitation particulière. Pas de tabagisme passif rapporté. Alimentation équilibrée, sans carence apparente. Pas de notion de prise de toxiques.
+
+---
+
+### Histoire de la maladie
+Shanel présente un retard statural identifié à l'âge de 5 ans lors d'une consultation de routine chez son pédiatre. Une évaluation endocrinienne initiale avait alors écarté une cause hormonale (dosages de GH, IGF-1, TSH et cortisol normaux) ou une pathologie chronique sous-jacente. Le diagnostic de petite taille constitutionnelle avait été retenu. Depuis, elle est suivie régulièrement en consultation d'endocrinologie pédiatrique. Aujourd'hui, elle est adressée pour un bilan de contrôle annuel, incluant une mesure de la tension artérielle et des conseils adaptés à sa croissance.
+
+---
+
+### Examen clinique
+- **Constantes :** Poids : 25 kg (-1,5 DS pour l'âge), taille : 128 cm (-2 DS pour l'âge), IMC : 15,3 kg/m² (dans les normes pour l'âge). TA : 105/65 mmHg (normale pour l'âge), FC : 80 bpm, SatO₂ : 99 % en air ambiant, température : 36,8°C.
+- **État général :** Bon état général, enfant éveillée et coopérante. Pas de signe de détresse respiratoire ou de pâleur cutanéo-muqueuse.
+- **Examen physique :**
+  - **Tête et cou :** Pas de dysmorphie faciale. Thyroïde non palpable.
+  - **Thorax :** Auscultation cardio-pulmonaire normale.
+  - **Abdomen :** Souple, indolore, pas d'hépatosplénomégalie.
+  - **Membres :** Pas de déformation osseuse. Mobilité normale.
+  - **Peau :** Pas de lésion cutanée ni de signe d'hyperpigmentation.
+
+---
+
+### Examens complémentaires
+- **Bilan sanguin :**
+  - NFS : Hb 12,5 g/dL, leucocytes 6 800/mm³, plaquettes 320 000/mm³ (normales).
+  - Ionogramme sanguin : Na⁺ 138 mmol/L, K⁺ 4,2 mmol/L, créatinine 45 µmol/L (normale pour l'âge).
+  - Bilan hépatique : ASAT 25 UI/L, ALAT 22 UI/L, GGT 18 UI/L (normales).
+  - Bilan phosphocalcique : Ca²⁺ 2,4 mmol/L, phosphore 1,3 mmol/L (normaux).
+  - IGF-1 : 180 ng/mL (dans les normes pour l'âge).
+- **Mesure de la tension artérielle :** Réalisée en position assise, valeurs normales pour l'âge (cf. examen clinique).
+- **Radiographie de la main gauche :** Âge osseux estimé à 9 ans (légèrement retardé par rapport à l'âge chronologique, cohérent avec le diagnostic de petite taille constitutionnelle).
+
+---
+
+### Conclusion
+Shanel Pradelle, 10 ans, est suivie pour une petite taille constitutionnelle sans étiologie hormonale ou organique sous-jacente. Le bilan de contrôle réalisé ce jour est rassurant :
+- Croissance staturo-pondérale stable, bien que toujours en dessous des normes pour l'âge.
+- Bilan biologique normal, sans carence ni anomalie métabolique.
+- Tension artérielle normale pour l'âge.
+- Âge osseux légèrement retardé, cohérent avec le diagnostic.
+
+Un suivi régulier en consultation d'endocrinologie pédiatrique est maintenu. Des conseils adaptés à sa croissance et à son alimentation ont été réitérés auprès de la famille. Pas de modification thérapeutique à ce stade. La sortie est autorisée ce jour avec un rendez-vous de contrôle prévu dans 6 mois.
+
+---
+
+Dr Marie-Claire Matabos
+Service d'Endocrinologie
+Hôpital Saint-André - CHU de Bordeaux",
+
+  "formulations": {
+    "diagnostics": {
+      "Insuffisance staturale, non classée ailleurs (E34.3)": [
+        "petite taille constitutionnelle",
+        "retard statural",
+        "croissance staturo-pondérale stable, bien que toujours en dessous des normes pour l'âge"
+      ],
+      "Mesure de la tension artérielle (Z01.3)": [
+        "mesure de la tension artérielle",
+        "TA : 105/65 mmHg (normale pour l'âge)"
+      ],
+      "Autres conseils précisés (Z71.8)": [
+        "conseils adaptés à sa croissance et à son alimentation",
+        "Des conseils adaptés à sa croissance [...] ont été réitérés auprès de la famille"
+      ]
+    },
+    "informations": {
+      "Date entrée": ["18/12/2026"],
+      "Date de sortie": ["18/12/2026"],
+      "Service d'hospitalisation": ["Service d'ENDOCRINOLOGIE"],
+      "Nom/Prénom du médecin": ["Dr Marie-Claire Matabos"],
+      "Nom/Prénom du patient": ["Pradelle Shanel"],
+      "Poids": ["25 kg"],
+      "Âge": ["10 ans"],
+      "Sexe": ["Féminin"],
+      "État général": [
+        "Bon état général, enfant éveillée et coopérante",
+        "Pas de signe de détresse respiratoire ou de pâleur cutanéo-muqueuse"
+      ],
+      "NFS": [
+        "Hb 12,5 g/dL, leucocytes 6 800/mm³, plaquettes 320 000/mm³ (normales)"
+      ],
+      "Créatinine": ["créatinine 45 µmol/L (normale pour l'âge)"],
+      "Bilan hépatique": ["ASAT 25 UI/L, ALAT 22 UI/L, GGT 18 UI/L (normales)"],
+      "Traitements": ["Pas de modification thérapeutique à ce stade"]
+    }
+  }
+}
+```

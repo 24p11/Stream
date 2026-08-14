@@ -1,0 +1,167 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 62 ans
+- Sexe du patient : Féminin
+- Date d'entrée : 16/01/2024
+- Date de sortie : 31/01/2024
+- Date de naissance : 29/10/1961
+- Nom du patient : De jesus machado
+- Prénom du patient : Marie
+- Mode d'entrée' : URGENCES
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
+- Codage CIM10 :
+   * Diagnostic principal : Épisode dépressif sévère sans symptômes psychotiques (F322)
+   * Diagnostics associés :
+      - Éruption volcanique, domicile (X350)
+- Nom du médecin / signataire : Thierry Boudot
+- Service : ADDICTO MCO
+- Hôpital : Centre Hospitalier Lyon Sud - Hospices Civils de Lyon
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_category code="F32">
+
+# F32 — Épisodes dépressifs
+
+## Position dans la classification
+- Chapitre V : Troubles mentaux et du comportement
+- Bloc F30-F39 : Troubles de l'humeur [affectifs]
+
+## Codes enfants directs
+- F32.0 — Épisode dépressif léger
+- F32.1 — Épisode dépressif moyen
+- F32.2 — Épisode dépressif sévère sans symptômes psychotiques
+- F32.3 — Épisode dépressif sévère avec symptômes psychotiques
+- F32.8 — Autres épisodes dépressifs
+- F32.9 — Épisode dépressif, sans précision
+
+## Périmètre clinique
+
+Inclusions héritées du chapitre V :
+- troubles du développement psychologique
+
+Inclusions héritées de la catégorie F32 :
+- Épisodes isolés de :
+ - dépression :
+  - majeure [caractérisée] avec symptômes psychotiques
+  - psychotique
+ - psychose dépressive :
+  - psychogène
+  - réactionnelle
+- épisodes isolés de dépression psychogène
+- épisodes isolés de :
+ - dépression :
+  - psychogène
+  - réactionnelle
+ - réaction dépressive
+- épisodes isolés de dépression réactionnelle
+- épisodes isolés de réaction dépressive
+
+Au niveau des codes :
+- dépression agitée épisode isolé sans symptômes psychotiques (F32.2)
+-  Dépression agitée épisode isolé sans symptômes psychotiques 
+ Dépression - caractérisée épisode isolé sans symptômes psychotiques 
+ Dépression - majeure épisode isolé sans symptômes psychotiques 
+ Dépression - vitale épisode isolé sans symptômes psychotiques 
+ (F32.2)
+- dépression atypique (F32.8)
+- Dépression atypique
+Épisodes isolés d'une dépression « masquée » SAI
+ (F32.8)
+- dépression majeure épisode isolé sans symptômes psychotiques (F32.2)
+- dépression SAI (F32.9)
+- Dépression SAI
+Trouble dépressif SAI
+ (F32.9)
+- dépression vitale épisode isolé sans symptômes psychotiques (F32.2)
+- épisodes isolés d'une dépression "masquée" SAI (F32.8)
+- trouble dépressif SAI (F32.9)
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre V) :
+
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité de la catégorie F32) :
+
+associés à un trouble des conduites en F91.- (F92.0)
+trouble (de) :
+ - adaptation (F43.2) 
+ - dépressif récurrent (F33.-)
+
+Affections relevant d'autres codes :
+
+- associés à un trouble des conduites en F91.- (F92.0)
+trouble (de) :
+ - adaptation (F43.2) 
+ - dépressif récurrent (F33.-)
+
+## Formulations cliniques alternatives
+- accès dépressif aigu réactionnel (F32.9)
+- bouffées dépressives (F32.2)
+- composante dépressive (F32.9)
+- dépressif profond (F32.9)
+- dépression (F32.9)
+- dépression abandonnique (F32.9)
+- Dépression (épisode isolé) (de) (voir aussi episode, dépressif), atypique (F32.8)
+- Dépression (épisode isolé) (de) (voir aussi episode, dépressif), masquée (F32.8)
+- dépression grave (F32.2)
+- dépression mélancoliforme (F32.2)
+- dépression mélancolique chronique (F32.2)
+- dépression profonde (F32.2)
+- dépression réactionnelle chronique (F32.9)
+- dépression réactionnelle profonde (F32.9)
+- déprime (F32.9)
+- désir mot (F32.9)
+- état dépressif (F32.9)
+- état dépressif majeur (F32.2)
+- état dépressif mélancoliforme (F32.2)
+- état dépressif mélancolique (F32.2)
+- état mélancolique chronique (F32.2)
+- état psycho-dépressif (F32.9)
+- état réactionnel dépressif (F32.9)
+- involution dépressive (F32.9)
+- maladie dépressive (F32.9)
+- mélancolie chronique (F32.2)
+- mélancolique (F32.2)
+- neuro-dépression (F32.9)
+- pathologie dépressive majeure (F32.9)
+- personnalité dépressive (F32.9)
+- perte désir vivre (F32.9)
+- problème moral (F32.9)
+- psychose dépressive ancienne (F32.9)
+- réaction dépressive (F32.9)
+- réaction dépressive sévère (F32.9)
+- refus lutter (F32.9)
+- souffrance morale (F32.2)
+- sujet déprimé (F32.9)
+- syndrome dépressif (F32.9)
+- syndrome dépressif grave (F32.2)
+- syndrome dépressif mélancoliforme (F32.2)
+- syndrome dépressif mélancolique (F32.9)
+- syndrome dépressif profond (F32.9)
+- syndrome dépressif réactionnel chronique (F32.9)
+- syndrome dépressif sévère (F32.2)
+- syndrome mélancoliforme (F32.8)
+- tendance dépressive (F32.9)
+- terrain dépressif (F32.9)
+- Trouble(s) (de) - voir aussi maladie, dépressif (voir aussi episode, dépressif) (F32.9)
+- troubles dépressifs réactionnels (F32.9)
+
+</fiche_category>
+
+<fiche_category code="X35">
+
+# X35 — Victime d'éruption volcanique
+
+## Position dans la classification
+- Chapitre XX : Causes externes de morbidité et de mortalité
+- Bloc V01-X59 : Accidents
+- Bloc W00-X59 : Autres causes externes de lésion traumatique accidentelle
+- Bloc X30-X39 : Exposition aux forces de la nature
+
+</fiche_category>

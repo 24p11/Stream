@@ -1,0 +1,105 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 67 ans
+- Sexe du patient : Masculin
+- Date d'entrée : 28/03/2024
+- Date de sortie : 31/03/2024
+- Date de naissance : 22/02/1957
+- Nom du patient : Di fabrizio
+- Prénom du patient : Norbert
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
+- Codage CIM10 :
+   * Diagnostic principal : Fibrillation auriculaire paroxystique (I480)
+   * Diagnostics associés :
+      - Autres myocardiopathies hypertrophiques (I422)
+- Acte CCAM : destruction d'un foyer arythmogène atrial avec courant de radiofréquence, par voie veineuse transcutanée et voie transseptale (DENF014)
+- Nom du médecin / signataire : Marie Paciocco
+- Service : CARDIOLOGIE
+- Hôpital : Hôpital de la Croix-Rousse - Hospices Civils de Lyon
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="I48.0">
+
+# I48.0 — Fibrillation auriculaire paroxystique
+
+## Position dans la classification
+- Chapitre IX : Maladies de l'appareil circulatoire
+- Bloc I30-I52 : Autres formes de cardiopathies
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IX) :
+
+accidents ischémiques cérébraux transitoires et syndromes apparentés (G45.-)
+affections disséminées du tissu conjonctif (M30-M36)
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+## Formulations cliniques alternatives
+- ACFA paroxystique
+- ACFA répétition
+- antécédent FA paroxystique
+- arythmie fibrillation auriculaire paroxystique
+- FA novo
+- FA paroxystique
+- FA récidivante
+- fibrillation auriculaire paroxystique
+- flutter auriculaire paroxystique
+- TACFA paroxystique
+
+</fiche_code>
+
+<fiche_code code="I42.2">
+
+# I42.2 — Autres myocardiopathies hypertrophiques
+
+## Position dans la classification
+- Chapitre IX : Maladies de l'appareil circulatoire
+- Bloc I30-I52 : Autres formes de cardiopathies
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- myocardiopathie hypertrophique non obstructive
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IX) :
+
+accidents ischémiques cérébraux transitoires et syndromes apparentés (G45.-)
+affections disséminées du tissu conjonctif (M30-M36)
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie I42) :
+
+myocardiopathie :
+ - compliquant :
+  - grossesse (O99.4) 
+  - puerpéralité (O90.3) 
+ - ischémique (I25.5)
+
+## Formulations cliniques alternatives
+- cardiomyopathie hypertrophique non obstructive
+- Cardiomyopathie (primitive) (secondaire) (due à), hypertrophique (non obstructive)
+- Hypertrophie (de), myocarde (voir aussi hypertrophie, coeur), idiopathique
+- Myocardiopathie (voir aussi cardiomyopathie), hypertrophique (non obstructive)
+
+</fiche_code>

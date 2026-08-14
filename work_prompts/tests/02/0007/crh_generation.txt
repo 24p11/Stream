@@ -1,0 +1,53 @@
+Le compte rendu suivant respecte les élements suivants :
+        - les diagnostics ont une formulation moins formelle que la définition du code
+        - le plan du CRH est conforme aux recommandations. Les sections sont bien détaillées et cohérentes entre elles.
+        - les dates sont plausibles et cohérentes
+        - les informations obligatoires sont présentes
+        - les informations sur le cancer sont détaillées (ici non applicable)
+        - les informations sur l'état général, le poids, le statut gestationnel (non applicable ici) sont intégrées naturellement
+        - les résultats des examens complémentaires sont détaillés
+        - les traitements sont détaillés
+
+```json
+{
+  "CR": "### Hôpital de la Croix-Rousse - Hospices Civils de Lyon\nService de Cardiologie\n\n**Compte rendu d'hospitalisation**\n\n**Patient :**\n- Nom : Di Fabrizio\n- Prénom : Norbert\n- Date de naissance : 22/02/1957\n- Âge : 67 ans\n- Sexe : Masculin\n\n### Motif d'hospitalisation\n\nM. Di Fabrizio a été admis le 28/03/2024 pour prise en charge diagnostique et thérapeutique d'épisodes récurrents de fibrillation auriculaire paroxystique (ACFA paroxystique). Le patient rapporte des palpitations intermittentes associées à une sensation d'essoufflement, survenues à plusieurs reprises au cours des dernières semaines.\n\n### Antécédents\n\n**Médicaux :**\n- Cardiomyopathie hypertrophique non obstructive, diagnostiquée il y a 5 ans.\n- Dyslipidémie traitée par statines.\n- Hypertension artérielle modérée, équilibrée sous traitement.\n\n**Chirurgicaux :**\n- Appendicectomie dans l'enfance.\n\n**Familiaux :**\n- Père décédé d'un infarctus du myocarde à l'âge de 72 ans.\n- Pas d'antécédent connu de cardiomyopathie hypertrophique dans la famille.\n\n**Allergies :**\n- Aucune allergie médicamenteuse connue.\n\n### Mode de vie\n\n- Tabagisme : Non-fumeur.\n- Alcool : Consommation occasionnelle, environ 2 verres de vin par semaine.\n- Activité physique : Marche quotidienne de 30 minutes.\n- Profession : Retraité (ancien employé de bureau).\n- Situation sociale : Vit seul à domicile, autonome.\n\n### Histoire de la maladie\n\nM. Di Fabrizio présente depuis environ 3 mois des épisodes de palpitations rapides et irrégulières, associés à une dyspnée d'effort. Ces épisodes, initialement brefs et spontanément résolutifs, se sont intensifiés en fréquence et en durée au cours des dernières semaines. Le patient décrit également une fatigue inhabituelle et une légère baisse de tolérance à l'effort. Une consultation en cardiologie a été programmée, conduisant à son hospitalisation pour exploration et prise en charge.\n\n### Examen clinique\n\n**À l'entrée (28/03/2024) :**\n- Poids : 82 kg, taille : 1,75 m (IMC : 26,8 kg/m²).\n- Constantes : TA 135/80 mmHg, FC 88 bpm (rythme irrégulier), SpO₂ 97 % en air ambiant, température 36,8°C.\n- État général : Bon état général, ECOG 0.\n- Examen cardiovasculaire : Bruits du cœur irréguliers, sans souffle audible. Pas de signe d'insuffisance cardiaque (pas d'œdème des membres inférieurs, pas de turgescence jugulaire).\n- Examen pulmonaire : Murmure vésiculaire symétrique, pas de râles crépitants.\n- Examen abdominal : Souple, indolore, pas d'hépatomégalie.\n- Examen neurologique : Normal.\n\n### Examens complémentaires\n\n**Biologie :**\n- NFS : Hémoglobine 14,2 g/dL, leucocytes 7 800/mm³, plaquettes 250 000/mm³.\n- Ionogramme sanguin : Sodium 139 mmol/L, potassium 4,1 mmol/L, créatinine 85 µmol/L (DFG estimé à 78 mL/min/1,73 m²).\n- Bilan hépatique : Normal (ASAT 22 UI/L, ALAT 25 UI/L, bilirubine totale 12 µmol/L).\n- Troponine ultrasensible : 12 ng/L (normale < 14 ng/L).\n- BNP : 150 pg/mL (normale < 100 pg/mL).\n- TSH : 2,1 mUI/L (normale).\n\n**Électrocardiogramme (28/03/2024) :**\n- Rythme sinusal à 88 bpm, axe normal, pas de trouble de la repolarisation. Pas de signe d'hypertrophie ventriculaire gauche.\n\n**Holter ECG des 24 heures (28-29/03/2024) :**\n- Plusieurs épisodes de fibrillation auriculaire paroxystique, d'une durée variant de 5 minutes à 2 heures, associés à des symptômes de palpitations. Fréquence ventriculaire moyenne à 110 bpm pendant les épisodes.\n\n**Échocardiographie transthoracique (29/03/2024) :**\n- Hypertrophie ventriculaire gauche concentrique (SIV 15 mm, paroi postérieure 14 mm), sans obstruction dynamique de la chambre de chasse du VG.\n- Fraction d'éjection ventriculaire gauche (FEVG) estimée à 60 %.\n- Oreillette gauche modérément dilatée (volume indexé à 38 mL/m²).\n- Pas d'anomalie valvulaire significative.\n- Pression artérielle pulmonaire systolique estimée à 30 mmHg.\n\n**IRM cardiaque (30/03/2024) :**\n- Confirmation de la cardiomyopathie hypertrophique non obstructive, avec hypertrophie prédominant au niveau du septum interventriculaire.\n- Absence de rehaussement tardif après injection de gadolinium, suggérant l'absence de fibrose myocardique significative.\n\n### Évolution pendant l'hospitalisation\n\n**Démarche diagnostique :**\nLe bilan réalisé a confirmé le diagnostic de fibrillation auriculaire paroxystique sur cardiomyopathie hypertrophique non obstructive. L'échocardiographie et l'IRM cardiaque ont permis d'évaluer précisément l'anatomie et la fonction ventriculaire gauche, excluant une obstruction dynamique. Le Holter ECG a objectivé plusieurs épisodes d'ACFA paroxystique, corrélés aux symptômes du patient.\n\n**Traitements :**\n- **Traitement antiarythmique :** Introduction d'un bêta-bloquant (bisoprolol 2,5 mg/jour) pour le contrôle de la fréquence cardiaque et la prévention des récidives d'ACFA.\n- **Traitement anticoagulant :** Initiation d'un anticoagulant oral direct (apixaban 5 mg x 2/jour) en prévention du risque thromboembolique, compte tenu du score CHA₂DS₂-VASc à 2 (âge ≥ 65 ans et hypertension artérielle).\n- **Ablation par radiofréquence :** Réalisation le 30/03/2024 d'une ablation par radiofréquence d'un foyer arythmogène atrial, par voie veineuse transcutanée et voie transseptale (acte CCAM DENF014). La procédure s'est déroulée sans complication, sous anesthésie locale et sédation légère. Le patient a été surveillé en unité de soins intensifs cardiologiques pendant 24 heures post-procédure.\n- **Surveillance :** Monitorage télémétrique continu pendant 48 heures post-ablation, sans récidive d'arythmie.\n\n### Conclusion\n\nM. Di Fabrizio a été hospitalisé pour prise en charge d'une fibrillation auriculaire paroxystique sur cardiomyopathie hypertrophique non obstructive. Le bilan étiologique a confirmé le diagnostic et permis d'exclure une obstruction dynamique. Une ablation par radiofréquence a été réalisée avec succès, et un traitement médical associant bêta-bloquant et anticoagulant a été instauré. Le patient est asymptomatique à la sortie, avec un état général conservé. Une consultation de suivi en cardiologie est programmée dans un mois, avec réalisation d'un nouvel Holter ECG pour évaluer l'efficacité du traitement.\n\nLe patient quitte l'hôpital ce jour, 31/03/2024, avec les consignes suivantes :\n- Poursuite du traitement par bisoprolol et apixaban.\n- Surveillance des signes d'insuffisance cardiaque ou de récidive d'arythmie.\n- Consultation en urgence en cas de palpitations prolongées, dyspnée ou douleur thoracique.\n\n**Médecin signataire :**\nDr Marie Paciocco\nService de Cardiologie\nHôpital de la Croix-Rousse - Hospices Civils de Lyon",
+
+  "formulations": {
+    "diagnostics": {
+      "Fibrillation auriculaire paroxystique (I48.0)": [
+        "épisodes récurrents de fibrillation auriculaire paroxystique",
+        "ACFA paroxystique",
+        "fibrillation auriculaire paroxystique",
+        "plusieurs épisodes de fibrillation auriculaire paroxystique",
+        "récidive d'arythmie"
+      ],
+      "Autres myocardiopathies hypertrophiques (I42.2)": [
+        "cardiomyopathie hypertrophique non obstructive",
+        "hypertrophie ventriculaire gauche concentrique",
+        "cardiomyopathie hypertrophique"
+      ]
+    },
+    "informations": {
+      "Date entrée": ["28/03/2024"],
+      "Date de sortie": ["31/03/2024"],
+      "Service d'hospitalisation": ["Service de Cardiologie", "Hôpital de la Croix-Rousse - Hospices Civils de Lyon"],
+      "Nom/Prénom du patient": ["Di Fabrizio Norbert"],
+      "Nom/Prénom du médecin": ["Marie Paciocco"],
+      "Âge": ["67 ans"],
+      "Sexe": ["Masculin"],
+      "État général": ["Bon état général, ECOG 0"],
+      "Poids": ["82 kg"],
+      "NFS": [
+        "Hémoglobine 14,2 g/dL, leucocytes 7 800/mm³, plaquettes 250 000/mm³"
+      ],
+      "Créatinine": ["créatinine 85 µmol/L (DFG estimé à 78 mL/min/1,73 m²)"],
+      "Bilan hépatique": ["Normal (ASAT 22 UI/L, ALAT 25 UI/L, bilirubine totale 12 µmol/L)"],
+      "Traitements": [
+        "bisoprolol 2,5 mg/jour",
+        "apixaban 5 mg x 2/jour",
+        "ablation par radiofréquence d'un foyer arythmogène atrial"
+      ]
+    }
+  }
+}
+```

@@ -1,0 +1,153 @@
+[0000]
+    AVERT  sortie non-JSON pure : texte hors objet détecté (préambule/prefix déclaratif), JSON extrait
+    ECHEC  gras interdit (29 occurrence(s)) : **Compte rendu d'hospitalisation**, **Patient :**, **Médicaux :**, **Chirurgicaux :**
+    ECHEC  formulation fantôme [diagnostics/Travail prématuré sans accouchement (O600)] : « début (spontané) du travail avant 37 semaines révolues de ge »
+    ECHEC  formulation fantôme [diagnostics/Staphylococcus aureus, cause de maladies classées dans d'autres chapitres (B956)] : « infection à staphylocoque doré »
+    ECHEC  formulation fantôme [diagnostics/Surveillance d'autres grossesses à haut risque (Z358)] : « suivi rapproché en raison de la prématurité, du surpoids et  »
+    ECHEC  formulation fantôme [diagnostics/Surpoids de l'adulte ou de l'enfant, sans précision (E6693)] : « surpoids depuis l'adolescence »
+    ECHEC  formulation fantôme [diagnostics/Infection non précisée de l'appareil urinaire au cours de la grossesse (O234)] : « infection urinaire au cours de la grossesse »
+    ECHEC  formulation fantôme [diagnostics/Infection non précisée de l'appareil urinaire au cours de la grossesse (O234)] : « bactériurie asymptomatique traitée par amoxicilline »
+    ECHEC  formulation fantôme [diagnostics/Infection non précisée de l'appareil urinaire au cours de la grossesse (O234)] : « leucocyturie avec nitrites positifs »
+    ECHEC  formulation fantôme [informations/Nom/Prénom du patient] : « Pollet Bernadette »
+    ECHEC  formulation fantôme [informations/Sexe] : « Féminin »
+    ECHEC  formulation fantôme [informations/Traitements] : « Bétaméthasone (12 mg IM à 24 heures d'intervalle) »
+    ECHEC  formulation fantôme [informations/Traitements] : « Céphalexine per os (500 mg toutes les 6 heures) pour une dur »
+    ECHEC  mention IPP absente de l'en-tête
+    AVERT  score standardisé présent : ECOG
+[0001]
+    AVERT  sortie non-JSON pure : texte hors objet détecté (préambule/prefix déclaratif), JSON extrait
+    ECHEC  gras interdit (13 occurrence(s)) : **Compte rendu d'hospitalisation ambulat, **Patient :**, **Dates d'hospitalisation :**, **Médecin signataire :**
+    ECHEC  formulation fantôme [diagnostics/Surveillance de gastrostomie (Z43.1)] : « surveillance de sa gastrostomie »
+    ECHEC  formulation fantôme [diagnostics/Maladies du neurone moteur (G12.2)] : « maladie du neurone moteur diagnostiquée il y a 3 ans »
+    ECHEC  formulation fantôme [diagnostics/Maladies du neurone moteur (G12.2)] : « affection motoneuronale »
+    ECHEC  formulation fantôme [informations/Nom/Prénom du patient] : « Cauet Evren »
+    ECHEC  mention IPP absente de l'en-tête
+    AVERT  maladie chronique mentionnée : dyslipidémie (à confronter au scénario)
+    AVERT  maladie chronique mentionnée : hypertension (à confronter au scénario)
+[0001_sla]
+    AVERT  JSON réparé : 1 accolade(s) fermante(s) manquante(s) en fin de fichier
+    ECHEC  gras interdit (7 occurrence(s)) : **Hôpital Larrey - Centre hospitalier un, **Service de Chirurgie Viscérale**, **Patient :**, **Médicaux :**
+    ECHEC  formulation fantôme [diagnostics/Surveillance de gastrostomie (Z431)] : « soins de la stomie »
+    ECHEC  formulation fantôme [informations/Nom/Prénom du patient] : « Cauet Evren »
+    ECHEC  formulation fantôme [informations/Sexe] : « Masculin »
+    AVERT  clés absentes du dictionnaire : NFS, Créatinine, Bilan hépatique
+    ECHEC  mention IPP absente de l'en-tête
+[0002]
+    AVERT  sortie non-JSON pure : texte hors objet détecté (préambule/prefix déclaratif), JSON extrait
+    ECHEC  gras interdit (21 occurrence(s)) : **Service de Chirurgie Maxillo-Faciale I, **Patient :**, **Date de naissance :**, **Service de Chirurgie Maxillo-Faciale I
+    ECHEC  formulation fantôme [diagnostics/Q37.4 — Fente de la voûte et du voile du palais avec fente labiale bilatérale] : « Fente labiale bilatérale complète, s’étendant jusqu’aux nari »
+    ECHEC  formulation fantôme [diagnostics/Q37.4 — Fente de la voûte et du voile du palais avec fente labiale bilatérale] : « Fente labiale bilatérale avec fente du voile et de la voûte  »
+    ECHEC  formulation fantôme [diagnostics/Q37.4 — Fente de la voûte et du voile du palais avec fente labiale bilatérale] : « Fente labiale bilatérale avec déformation nasale marquée et  »
+    ECHEC  formulation fantôme [informations/Créatinine] : « Non mentionnée (bilan préopératoire normal) »
+    ECHEC  formulation fantôme [informations/Bilan hépatique] : « Non mentionné (bilan préopératoire normal) »
+    AVERT  clés absentes du dictionnaire : Nom/Prénom du médecin, Traitements
+    ECHEC  mention IPP absente de l'en-tête
+    ECHEC  mention « Nom » absente de l'en-tête
+    ECHEC  mention « Prénom » absente de l'en-tête
+[0003]
+    AVERT  sortie non-JSON pure : texte hors objet détecté (préambule/prefix déclaratif), JSON extrait
+    ECHEC  gras interdit (15 occurrence(s)) : **Compte rendu d'hospitalisation**, **Informations patient**, **Antécédents maternels**, **Antécédents familiaux**
+    ECHEC  formulation fantôme [diagnostics/Alimentation lente du nouveau-né (P92.2)] : « alimentation lente »
+    ECHEC  formulation fantôme [diagnostics/Alimentation lente du nouveau-né (P92.2)] : « difficultés de succion-déglutition »
+    ECHEC  formulation fantôme [informations/Âge] : « 11 jours à l'entrée »
+    ECHEC  formulation fantôme [informations/Poids] : « 1 680 g à l'entrée »
+    ECHEC  formulation fantôme [informations/Poids] : « 1 650 grammes à la naissance »
+    ECHEC  formulation fantôme [informations/Bilan hépatique] : « bilirubine totale 85 µmol/L, conjuguée 12 µmol/L (normal) »
+    AVERT  clés absentes du dictionnaire : État général
+    ECHEC  mention IPP absente de l'en-tête
+    AVERT  maladie chronique mentionnée : diabète (à confronter au scénario)
+    AVERT  maladie chronique mentionnée : hypertension (à confronter au scénario)
+[0004]
+    AVERT  sortie non-JSON pure : texte hors objet détecté (préambule/prefix déclaratif), JSON extrait
+    ECHEC  gras interdit (25 occurrence(s)) : **Hôpital de Hautepierre - Hôpitaux Univ, **Service de Chirurgie Viscérale**, **Hôpital de Hautepierre - Hôpitaux Univ, **Service de Chirurgie Viscérale**
+    ECHEC  formulation fantôme [diagnostics/E66.06 — Obésité due à un excès calorique de l'adulte avec indice de masse corporelle [IMC] égal ou supérieur à 40 kg/m² et inférieur à 50 kg/m²] : « obésité sévère avec IMC à 45 kg/m² »
+    ECHEC  formulation fantôme [diagnostics/E66.06 — Obésité due à un excès calorique de l'adulte avec indice de masse corporelle [IMC] égal ou supérieur à 40 kg/m² et inférieur à 50 kg/m²] : « obésité morbide avec IMC à 45,2 kg/m² »
+    ECHEC  formulation fantôme [diagnostics/G47.3 — Apnée du sommeil] : « apnée du sommeil sous pression positive continue (CPAP) »
+    ECHEC  formulation fantôme [diagnostics/G47.3 — Apnée du sommeil] : « apnée du sommeil »
+    ECHEC  formulation fantôme [informations/Nom/Prénom du patient] : « Simone Nouaux »
+    ECHEC  formulation fantôme [informations/Sexe] : « Féminin »
+    ECHEC  formulation fantôme [informations/État général] : « Patiente en bon état général, autonomie conservée »
+    AVERT  clés absentes du dictionnaire : Nom/Prénom du médecin, Traitements
+    ECHEC  mention IPP absente de l'en-tête
+[0005]
+    AVERT  sortie non-JSON pure : texte hors objet détecté (préambule/prefix déclaratif), JSON extrait
+    ECHEC  gras interdit (31 occurrence(s)) : **Hôpital de la Timone - Assistance Publ, **Service d'obstétrique**, **Patient :**, **Médicaux :**
+    ECHEC  formulation fantôme [diagnostics/Dystocie due à une rotation incomplète de la tête du fœtus (O64.0)] : « présentation défavorable en occipito-postérieure »
+    ECHEC  formulation fantôme [diagnostics/Dystocie due à une rotation incomplète de la tête du fœtus (O64.0)] : « stagnation de la dilatation et persistance de la présentatio »
+    ECHEC  formulation fantôme [diagnostics/Accouchement (unique) par extraction pneumatique (O81.4)] : « accouchement par ventouse »
+    ECHEC  formulation fantôme [diagnostics/Naissance unique, enfant vivant (Z37.0)] : « enfant de sexe féminin, en bonne santé »
+    ECHEC  formulation fantôme [informations/Statut gestationnel] : « 38 semaines d'aménorrhée »
+    AVERT  clés absentes du dictionnaire : Nom/Prénom du médecin, Traitements
+    ECHEC  mention IPP absente de l'en-tête
+    AVERT  maladie chronique mentionnée : asthme (à confronter au scénario)
+    AVERT  maladie chronique mentionnée : diabète (à confronter au scénario)
+    AVERT  maladie chronique mentionnée : hypertension (à confronter au scénario)
+[0006]
+    AVERT  sortie non-JSON pure : texte hors objet détecté (préambule/prefix déclaratif), JSON extrait
+    ECHEC  gras interdit (28 occurrence(s)) : **Compte rendu d'hospitalisation**, **Nom du patient :**, **Date de naissance :**, **Âge :**
+    ECHEC  formulation fantôme [diagnostics/Gastroentérites et colites d’origine infectieuse, autres et non précisées (A09.0)] : « diarrhée aiguë hémorragique »
+    ECHEC  formulation fantôme [diagnostics/Gastroentérites et colites d’origine infectieuse, autres et non précisées (A09.0)] : « diarrhée sanglante »
+    ECHEC  formulation fantôme [diagnostics/Gastroentérites et colites d’origine infectieuse, autres et non précisées (A09.0)] : « syndrome infectieux digestif »
+    ECHEC  formulation fantôme [diagnostics/Gastroentérites et colites d’origine infectieuse, autres et non précisées (A09.0)] : « gastro-entérite aiguë d’origine probablement virale »
+    ECHEC  formulation fantôme [diagnostics/Isolement (prophylactique) (Z29.0)] : « isolement mis en place »
+    ECHEC  formulation fantôme [diagnostics/Isolement (prophylactique) (Z29.0)] : « mesure d’isolement prophylactique »
+    ECHEC  mention IPP absente de l'en-tête
+    ECHEC  mention « Prénom » absente de l'en-tête
+[0007]
+    AVERT  sortie non-JSON pure : texte hors objet détecté (préambule/prefix déclaratif), JSON extrait
+    ECHEC  gras interdit (15 occurrence(s)) : **Service d'obstétrique – Nouvel Hôpital, **Informations patient**, **Antécédents maternels (relevés dans le, **Antécédents personnels**
+    ECHEC  formulation fantôme [diagnostics/Fœtus et nouveau-né affectés par un accouchement par extracteur pneumatique [ventouse] (P03.3)] : « bosse séro-sanguine pariétale droite liée à l’extraction ins »
+    ECHEC  formulation fantôme [diagnostics/Fœtus et nouveau-né affectés par un accouchement par extracteur pneumatique [ventouse] (P03.3)] : « complication de l’extraction par ventouse »
+    ECHEC  formulation fantôme [diagnostics/Examen spécial de dépistage des affections des oreilles (Z13.51)] : « examen de dépistage des affections des oreilles »
+    ECHEC  formulation fantôme [informations/Nom/Prénom du patient] : « Guermeur Chaina »
+    ECHEC  formulation fantôme [informations/Âge] : « 0 an »
+    ECHEC  formulation fantôme [informations/État général] : « allaitement maternel bien installé »
+    ECHEC  formulation fantôme [informations/Poids] : « 3 420 g à l’admission »
+    ECHEC  formulation fantôme [informations/Poids] : « 3 450 g à la naissance »
+    ECHEC  formulation fantôme [informations/Poids] : « 3 450 g au 5ème jour de vie »
+    ECHEC  formulation fantôme [informations/Créatinine] : « Non dosée (non pertinent chez le nouveau-né dans ce contexte »
+    ECHEC  formulation fantôme [informations/Bilan hépatique] : « Bilirubine totale : 85 µmol/L, conjuguée : 5 µmol/L »
+    ECHEC  formulation fantôme [informations/Traitements] : « Alimentation au sein à la demande, avec biberons complémenta »
+    ECHEC  mention IPP absente de l'en-tête
+    AVERT  maladie chronique mentionnée : diabète (à confronter au scénario)
+[0008]
+    AVERT  sortie non-JSON pure : texte hors objet détecté (préambule/prefix déclaratif), JSON extrait
+    ECHEC  gras interdit (9 occurrence(s)) : **Informations patient**, **Médicaux**, **Chirurgicaux**, **Familiaux**
+    ECHEC  formulation fantôme [diagnostics/Infarctus sous-endocardique aigu du myocarde - Prise en charge initiale, infarctus de 24 heures ou moins (I21400)] : « infarctus de moins de 24 heures »
+    ECHEC  formulation fantôme [diagnostics/Infarctus sous-endocardique aigu du myocarde - Prise en charge initiale, infarctus de 24 heures ou moins (I21400)] : « NSTEMI »
+    ECHEC  formulation fantôme [diagnostics/Infarctus sous-endocardique aigu du myocarde - Prise en charge initiale, infarctus de 24 heures ou moins (I21400)] : « infarctus sans sus-décalage du ST »
+    ECHEC  formulation fantôme [diagnostics/Hypertension essentielle (primitive) (I10)] : « hypertension artérielle essentielle »
+    ECHEC  formulation fantôme [diagnostics/Hypertension essentielle (primitive) (I10)] : « HTA mal équilibrée »
+    ECHEC  formulation fantôme [diagnostics/Hypertension essentielle (primitive) (I10)] : « poussée hypertensive »
+    ECHEC  formulation fantôme [diagnostics/Myocardiopathie ischémique (I255)] : « cardiopathie ischémique dilatée hypokinétique »
+    ECHEC  formulation fantôme [diagnostics/Hypokaliémies, autres et sans précision (E8768)] : « hypokaliémie modérée »
+    ECHEC  formulation fantôme [diagnostics/Hypokaliémies, autres et sans précision (E8768)] : « déficit en potassium »
+    ECHEC  formulation fantôme [diagnostics/Troubles mentaux et du comportement liés à l'utilisation de tabac : syndrome de dépendance (F172)] : « tabagisme actif important »
+    ECHEC  formulation fantôme [diagnostics/Troubles mentaux et du comportement liés à l'utilisation de tabac : syndrome de dépendance (F172)] : « dépendance au tabac »
+    ECHEC  formulation fantôme [diagnostics/Syndrome de dépendance au tabac, utilisation continue (F1725)] : « tabagisme non sevré »
+    ECHEC  formulation fantôme [diagnostics/Syndrome de dépendance au tabac, utilisation continue (F1725)] : « consommation continue de tabac »
+    ECHEC  formulation fantôme [diagnostics/Insuffisance non rhumatismale (de la valvule) tricuspide (I361)] : « reflux tricuspidien non rhumatismal »
+    ECHEC  formulation fantôme [diagnostics/Antécédents personnels d'utilisation (actuelle) à long terme d'autres médicaments (Z922)] : « prise d’antiagrégants plaquettaires »
+    ECHEC  formulation fantôme [diagnostics/Dépendance envers d'autres machines et appareils auxiliaires (Z998)] : « nécessité d’une revascularisation percutanée avec pose de st »
+    ECHEC  formulation fantôme [informations/Nom/Prénom du patient] : « Desesquelles Alain »
+    ECHEC  formulation fantôme [informations/Sexe] : « masculin »
+    ECHEC  formulation fantôme [informations/État général] : « état général conservé »
+    ECHEC  formulation fantôme [informations/Traitements] : « double antiagrégation plaquettaire (aspirine + clopidogrel) »
+    ECHEC  formulation fantôme [informations/Traitements] : « anticoagulation par héparine non fractionnée puis héparine d »
+    ECHEC  formulation fantôme [informations/Traitements] : « perfusion de KCl pour correction de l’hypokaliémie »
+    ECHEC  mention IPP absente de l'en-tête
+    AVERT  score standardisé présent : ECOG
+    AVERT  maladie chronique mentionnée : hypertension (à confronter au scénario)
+[0009]
+    AVERT  sortie non-JSON pure : texte hors objet détecté (préambule/prefix déclaratif), JSON extrait
+    ECHEC  formulation fantôme [diagnostics/Interruption médicale de grossesse [IMG] [ITG] pour cause embryonnaire ou foetale, complet ou sans précision, sans complication (O0491)] : « IMG pour cause fœtale »
+    ECHEC  formulation fantôme [diagnostics/Résultats échographiques anormaux au cours de l'examen prénatal systématique de la mère (O283)] : « résultats échographiques anormaux lors du suivi prénatal »
+    ECHEC  formulation fantôme [diagnostics/Résultats échographiques anormaux au cours de l'examen prénatal systématique de la mère (O283)] : « anomalies détectées à l’échographie prénatale »
+    ECHEC  formulation fantôme [diagnostics/Soins maternels pour d'autres anomalies et lésions foetales (présumées) (O358)] : « anomalies fœtales suspectées »
+    ECHEC  formulation fantôme [informations/Nom/Prénom du patient] : « Ross Janne »
+    ECHEC  formulation fantôme [informations/Sexe] : « Féminin »
+    ECHEC  formulation fantôme [informations/État général] : « Patiente installée en position gynécologique sous anesthésie »
+    AVERT  clés absentes du dictionnaire : Date entrée, Date de sortie, Service d'hospitalisation, Nom/Prénom du médecin, Poids, NFS, Créatinine, Bilan hépatique
+    ECHEC  mention IPP absente de l'en-tête
+
+Bilan : 112 échec(s), 28 avertissement(s) sur 11 scénario(s)

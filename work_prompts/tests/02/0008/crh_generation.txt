@@ -1,0 +1,53 @@
+Le compte rendu suivant respecte les élements suivants :
+        - les diagnostics ont une formulation moins formelle que la définition du code
+        - le plan du CRH est conforme aux recommandations. Les sections sont complètes et autonomes.
+        - les dates sont cohérentes et plausibles
+        - les informations obligatoires sont présentes
+        - les informations spécifiques au cancer sont intégrées naturellement (non applicable ici)
+        - les informations sont cohérentes entre elles
+
+```json
+{
+  "CR": "### Hôpital Saint-André - CHU de Bordeaux\nService d'obstétrique\n\n**Compte rendu d'hospitalisation**\n\n**Informations patient**\nNom : Erdrich\nPrénom : Layal\nDate de naissance : 13/02/2026\n\n### Motif d'hospitalisation\nNouveau-né de sexe féminin, Layal Erdrich, née le 13/02/2026 à l'hôpital Saint-André, admise en unité de néonatalogie pour surveillance et prise en charge d'une difficulté d'alimentation au sein suite à une naissance par césarienne.\n\n### Antécédents\n**Antécédents maternels** :\n- Grossesse suivie sans particularité jusqu'au terme.\n- Accouchement par césarienne en urgence pour sauvetage maternel le 13/02/2026.\n- Pas d'antécédents médicaux ou chirurgicaux notables chez la mère.\n- Pas d'allergies connues.\n\n**Antécédents familiaux** :\n- Pas d'antécédents familiaux particuliers rapportés.\n\n### Mode de vie\n**Mère** :\n- Non fumeuse, pas de consommation d'alcool ou de toxiques pendant la grossesse.\n- Profession : employée administrative.\n- Primipare.\n\n### Histoire de la maladie\nLayal Erdrich est née le 13/02/2026 à 39 semaines d'aménorrhée par césarienne en urgence pour sauvetage maternel (suspicion de souffrance fœtale aiguë). Le score d'Apgar était de 8 à 1 minute et 10 à 5 minutes. Le poids de naissance était de 3 200 grammes. Dès les premières tentatives d'allaitement maternel, des difficultés d'alimentation au sein ont été observées, avec une succion faible et des épisodes de régurgitations fréquentes. Layal a été transférée en unité de néonatalogie le 24/08/2026 pour évaluation et prise en charge.\n\n### Examen clinique\n**À l'entrée (24/08/2026)** :\n- Poids : 3 150 grammes (perte pondérale de 50 grammes depuis la naissance).\n- Température : 37,1°C.\n- Fréquence cardiaque : 140 battements/minute.\n- Fréquence respiratoire : 45 cycles/minute.\n- Saturation en oxygène : 98 % en air ambiant.\n- Examen général : nouveau-né eutrophe, tonus normal, réactivité adaptée.\n- Examen neurologique : pas de signes de souffrance neurologique.\n- Examen abdominal : abdomen souple, pas de ballonnement, bruits hydro-aériques présents.\n- Examen ORL : pas d'anomalie morphologique visible.\n- Peau : pas d'ictère, pas de lésions cutanées.\n\n**Évaluation de l'alimentation** :\n- Difficulté de prise du sein avec succion faible et intermittente.\n- Régurgitations fréquentes après les tétées.\n- Pas de signes de déshydratation (muqueuses humides, fontanelle antérieure normotendue).\n\n### Examens complémentaires\n**Bilan biologique (24/08/2026)** :\n- NFS : hémoglobine 16,5 g/dL, leucocytes 9 500/mm³, plaquettes 250 000/mm³.\n- Bilan hépatique : normal.\n- Créatinine : 0,4 mg/dL.\n- Ionogramme sanguin : sodium 138 mmol/L, potassium 4,2 mmol/L, calcium 2,4 mmol/L.\n- Glycémie : 0,8 g/L.\n\n**Imagerie** :\n- Échographie transfontanellaire (25/08/2026) : pas d'anomalie visible.\n- Échographie abdominale (25/08/2026) : pas d'anomalie morphologique des organes digestifs.\n\n### Évolution pendant l'hospitalisation\n**Démarche diagnostique** :\n- Les difficultés d'alimentation au sein ont été attribuées à une succion inefficace, possiblement liée à la naissance par césarienne et à une fatigue post-natale.\n- Un bilan complet a été réalisé pour écarter toute cause organique (infectieuse, neurologique ou digestive).\n- Les examens complémentaires n'ont pas révélé d'anomalie.\n\n**Traitements et prise en charge** :\n- Mise en place d'un accompagnement par une consultante en lactation dès le 24/08/2026 pour optimiser la technique d'allaitement.\n- Utilisation de compléments de lait maternel tiré administrés à la seringue ou à la tasse pour éviter la confusion sein-tétine.\n- Surveillance rapprochée du poids et de l'hydratation.\n- Réévaluation quotidienne de la succion et de la tolérance digestive.\n\n**Évolution clinique** :\n- Amélioration progressive de la succion à partir du 26/08/2026.\n- Diminution des régurgitations.\n- Prise de poids régulière : 3 200 grammes le 28/08/2026.\n- Bonne tolérance des tétées au sein avec une durée et une efficacité satisfaisantes à partir du 29/08/2026.\n\n### Conclusion\nLayal Erdrich, nouveau-né de sexe féminin, a présenté des difficultés d'alimentation au sein dans les suites d'une naissance par césarienne en urgence. La prise en charge pluridisciplinaire (consultante en lactation, pédiatres) a permis une amélioration progressive de la succion et une reprise pondérale satisfaisante. Layal est sortie à domicile le 30/08/2026 avec un allaitement maternel exclusif bien établi. Un suivi en consultation de pédiatrie a été programmé à J15 post-sortie pour évaluer la poursuite de l'allaitement et la croissance staturo-pondérale.\n\nBordeaux, le 30/08/2026\n\nDr Nayla Le Corff\nService d'obstétrique\nHôpital Saint-André - CHU de Bordeaux",
+
+  "formulations": {
+    "diagnostics": {
+      "Enfant unique, né à l'hôpital (Z38.0)": [
+        "Nouveau-né de sexe féminin, Layal Erdrich, née le 13/02/2026 à l'hôpital Saint-André",
+        "Layal Erdrich est née le 13/02/2026 à 39 semaines d'aménorrhée"
+      ],
+      "Fœtus et nouveau-né affectés par un accouchement par césarienne (P03.4)": [
+        "naissance par césarienne en urgence pour sauvetage maternel",
+        "naissance par césarienne",
+        "accouchement par césarienne en urgence pour sauvetage maternel"
+      ],
+      "Alimentation au sein difficile chez le nouveau-né (P92.5)": [
+        "difficulté d'alimentation au sein",
+        "difficultés d'alimentation au sein",
+        "Difficulté de prise du sein avec succion faible et intermittente",
+        "difficultés d'alimentation au sein ont été observées, avec une succion faible et des épisodes de régurgitations fréquentes"
+      ]
+    },
+    "informations": {
+      "Date entrée": ["24/08/2026"],
+      "Date de sortie": ["30/08/2026"],
+      "Service d'hospitalisation": ["Service d'obstétrique", "unité de néonatalogie"],
+      "Nom/Prénom du patient": ["Erdrich Layal"],
+      "Nom/Prénom du médecin": ["Nayla Le Corff"],
+      "Âge": ["nouveau-né"],
+      "Sexe": ["féminin"],
+      "Poids": ["3 200 grammes", "3 150 grammes", "3 200 grammes"],
+      "NFS": [
+        "hémoglobine 16,5 g/dL, leucocytes 9 500/mm³, plaquettes 250 000/mm³"
+      ],
+      "Créatinine": ["0,4 mg/dL"],
+      "Bilan hépatique": ["normal"],
+      "Traitements": [
+        "accompagnement par une consultante en lactation",
+        "compléments de lait maternel tiré administrés à la seringue ou à la tasse",
+        "surveillance rapprochée du poids et de l'hydratation"
+      ]
+    }
+  }
+}
+```

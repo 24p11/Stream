@@ -1,0 +1,110 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 0 ans
+- Sexe du patient : Féminin
+- Date d'entrée : 24/08/2026
+- Date de sortie : 30/08/2026
+- Date de naissance : 13/02/2026
+- Nom du patient : Erdrich
+- Prénom du patient : Layal
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
+- Codage CIM10 :
+   * Diagnostic principal : Enfant unique, né à l'hôpital (Z380)
+   * Diagnostics associés :
+      - Foetus et nouveau-né affectés par un accouchement par césarienne (P034)
+      - Alimentation au sein difficile chez le nouveau-né (P925)
+- Nom du médecin / signataire : Nayla Le corff
+- Service : OBSTETRIQUE
+- Hôpital : Hôpital Saint-André - CHU de Bordeaux
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="Z38.0">
+
+# Z38.0 — Enfant unique, né à l'hôpital
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+
+## Formulations cliniques alternatives
+- Enfant - voir aussi nom de l'état pathologique, né, vivant, en bonne santé, naissance, unique, né à l'hôpital
+
+</fiche_code>
+
+<fiche_code code="P03.4">
+
+# P03.4 — Fœtus et nouveau-né affectés par un accouchement par césarienne
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P00-P04 : Fœtus et nouveau-né affectés par des troubles maternels et par des complications de la grossesse, du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+Inclusions héritées du bloc P00-P04 :
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du foetus ou du nouveau-né
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du fœtus ou du nouveau-né
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+## Formulations cliniques alternatives
+- Accouchement(s), par, opération césarienne (sans mention d'indication), affectant foetus ou nouveau-né
+- césarienne
+- césarienne sauvetage maternel
+- césarienne transplacentaire
+- césarienne urgence sauvetage maternel
+- cicatrice césarienne
+- cicatrice césarienne antérieure
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, accouchement, par, opération césarienne
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, intervention, césarienne
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, opération, césarienne
+- Intervention, césarienne - voir accouchement, par, opération césarienne, affectant foetus ou nouveau-né
+
+</fiche_code>
+
+<fiche_code code="P92.5">
+
+# P92.5 — Alimentation au sein difficile chez le nouveau-né
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P90-P96 : Autres affections dont l'origine se situe dans la période périnatale
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+## Formulations cliniques alternatives
+- Alimentation, au sein difficile chez le nouveau-né
+- Trouble(s) (de) - voir aussi maladie, alimentation (psychogène), nouveau-né, difficile au sein
+
+</fiche_code>

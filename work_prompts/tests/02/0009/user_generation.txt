@@ -1,0 +1,156 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 0 ans
+- Sexe du patient : Masculin
+- Date d'entrée : 22/03/2024
+- Date de sortie : 27/03/2024
+- Date de naissance : 01/07/2023
+- Nom du patient : Plenecassagne
+- Prénom du patient : Francois
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
+- Codage CIM10 :
+   * Diagnostic principal : Enfant unique, né à l'hôpital (Z380)
+   * Diagnostics associés :
+      - Foetus et nouveau-né affectés par d'autres maladies circulatoires et respiratoires de la mère (P003)
+      - Syndrome de l'enfant dont la mère a un diabète de la grossesse (P700)
+      - Examen spécial de dépistage des affections des oreilles (Z1351)
+- Nom du médecin / signataire : Cheb Djordjevic
+- Service : OBSTETRIQUE
+- Hôpital : Hôpital Bichat-Claude Bernard - Assistance Publique Hôpitaux de Paris
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="Z38.0">
+
+# Z38.0 — Enfant unique, né à l'hôpital
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+
+## Formulations cliniques alternatives
+- Enfant - voir aussi nom de l'état pathologique, né, vivant, en bonne santé, naissance, unique, né à l'hôpital
+
+</fiche_code>
+
+<fiche_code code="P00.3">
+
+# P00.3 — Fœtus et nouveau-né affectés par d'autres maladies circulatoires et respiratoires de la mère
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P00-P04 : Fœtus et nouveau-né affectés par des troubles maternels et par des complications de la grossesse, du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+Inclusions héritées du bloc P00-P04 :
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du foetus ou du nouveau-né
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du fœtus ou du nouveau-né
+
+Au niveau du code :
+- foetus ou nouveau-né affecté par les maladies de la mère classées en (I00-I99), (J00-J99), (Q20-Q28), (Q30-Q34) non mentionnées en P00.0, P00.2
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie P00) :
+
+fœtus et nouveau-né affectés par :
+ - anomalies endocriniennes et métaboliques de la mère (P70-P74) 
+ - complications de la grossesse chez la mère (P01.-) 
+ - effets nocifs transmis par le placenta ou par le lait maternel (P04.-)
+
+## Formulations cliniques alternatives
+- asphyxie maternelle per-partum
+- cardiopathie maternelle
+- collapsus maternel
+- défaillance cardio-vasculaire maternelle
+- dissection aortique maternelle
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, maladie, maternelle, circulatoire (classée à i00-i99, q20-q34)
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, maladie, maternelle, respiratoire (classée à j00-j06 et j12-j98)
+- hypotension maternelle
+- Maladie (à) (de) respiratoire, chronique nca, mère, affectant foetus ou nouveau-né
+- Maladie (à) (de) - voir aussi syndrome ou affection, circulation, circulatoire, de la mère affectant foetus ou nouveau-né
+- Maladie (à) (de) - voir aussi syndrome ou affection, coeur (chronique) (organique), congénitale, de la mère affectant foetus ou nouveau-né
+- Maladie (à) (de) - voir aussi syndrome ou affection, coeur (chronique) (organique), rhumatismale (ancienne) (chronique) (non évolutive), de la mère affectant foetus ou nouveau-né
+- péricardite constrictive radique maternelle
+- péricardite radique maternelle
+- phlébite fémorale maternelle
+- Phlébite (infectieuse) (pyohémique) (suppurée) (veine), grossesse, affectant foetus ou nouveau-né
+- syndrome vasculaire maternel
+- Thrombophlébite (de), antepartum (superficielle) (membre inférieur), affectant foetus ou nouveau-né
+- Thrombophlébite (de), antepartum (superficielle) (membre inférieur), profonde, affectant foetus ou nouveau-né
+- Thrombose (multiple) (progressive) (septique) (vasculaire) (veineuse) (de), grossesse, affectant foetus ou nouveau-né
+
+</fiche_code>
+
+<fiche_code code="P70.0">
+
+# P70.0 — Syndrome de l'enfant dont la mère a un diabète gestationnel
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P70-P74 : Anomalies endocriniennes et métaboliques transitoires spécifiques du fœtus et du nouveau-né
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+Inclusions héritées du bloc P70-P74 :
+- les affections endocriniennes et métaboliques transitoires causées par la réponse de l'enfant aux facteurs endocriniens et métaboliques maternels, ou son adaptation à l'existence extra-utérine
+
+Au niveau du code :
+- Fœtus ou nouveau-né (avec hypoglycémie) affecté par le diabète gestationnel
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+## Formulations cliniques alternatives
+- Diabète (équilibré) (familial) (grave) (léger) (sucré) (de), compliquant grossesse, accouchement ou suites de couches, affectant foetus ou nouveau-né (préexistant) (avec hypoglycémie), diabète gestationnel
+- diabète gestationnel
+- diabète gestationnel insulino-dépendant
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, maladie, maternelle, diabète (préexistant), diabète gestationnel
+- Hypoglycémie, enfant de mère diabétique (préexistant), diabète gestationnel
+- Syndrome (de) - voir aussi maladie, enfant, de mère diabétique (préexistant), diabète gestationnel
+
+</fiche_code>
+
+<fiche_code code="Z13.51">
+
+# Z13.51 — Examen spécial de dépistage des affections des oreilles
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z00-Z13 : Sujets en contact avec les services de santé pour des examens divers
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du bloc Z00-Z13) :
+
+examens relatifs à la grossesse et à la reproduction (Z30-Z36)  (Z39.-)
+
+</fiche_code>

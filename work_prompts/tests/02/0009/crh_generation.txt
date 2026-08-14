@@ -1,0 +1,154 @@
+Le compte rendu suivant respecte les élements suivants :
+        - les diagnostics ont une formulation moins formelle que la définition du code
+        - le plan du CRH est conforme aux recommandations. Les sections sont détaillées et réalistes.
+        - les informations obligatoires sont présentes
+        - les dates sont cohérentes
+        - les informations concernant le cancer ne sont pas pertinentes ici (patient de 0 an)
+        - les dictionnaires de formulations et d'informations sont présents
+
+```json
+{
+  "CR": "### Service d'hospitalisation
+Hôpital Bichat-Claude Bernard - Assistance Publique Hôpitaux de Paris
+Service d'obstétrique
+
+---
+
+### Informations patient
+Nom : Plenecassagne
+Prénom : François
+Date de naissance : 01/07/2023
+Âge : 8 mois
+
+---
+
+### Motif d'hospitalisation
+François Plenecassagne, nourrisson de 8 mois, est hospitalisé pour une prise en charge diagnostique et thérapeutique dans le cadre d'antécédents maternels ayant pu influencer son développement périnatal. La mère présente des antécédents de diabète gestationnel et de troubles circulatoires durant la grossesse, justifiant une évaluation approfondie du nouveau-né.
+
+---
+
+### Antécédents
+**Antécédents médicaux maternels pendant la grossesse :**
+- Diabète gestationnel diagnostiqué au deuxième trimestre, équilibré par régime seul.
+- Hypertension artérielle gravidique traitée par méthyldopa.
+- Thrombophlébite fémorale superficielle au troisième trimestre, traitée par anticoagulation préventive.
+
+**Antécédents familiaux :**
+- Mère : diabète gestationnel lors de la grossesse de François.
+- Père : RAS.
+- Pas d'antécédents familiaux notables de malformations congénitales ou de maladies métaboliques.
+
+**Allergies :**
+- Aucune allergie connue à ce jour.
+
+**Antécédents chirurgicaux :**
+- Aucun antécédent chirurgical.
+
+---
+
+### Mode de vie
+François est un nourrisson né à terme, unique, vivant à domicile avec ses deux parents. Il est allaité exclusivement jusqu'à 6 mois, puis une diversification alimentaire a été introduite progressivement. Aucun tabagisme passif n'est rapporté au domicile. La mère a arrêté son traitement anticoagulant après l'accouchement.
+
+---
+
+### Histoire de la maladie
+François est né le 01/07/2023 à l'hôpital Bichat-Claude Bernard par voie basse, sans complication immédiate. Cependant, sa mère présentait durant la grossesse un diabète gestationnel et une thrombophlébite fémorale superficielle, ayant nécessité une surveillance rapprochée. À la naissance, François pesait 3,8 kg et mesurait 50 cm, avec un score d'Apgar à 9/10 à 5 minutes. Une hypoglycémie néonatale transitoire a été observée dans les premières heures de vie, rapidement corrigée par une alimentation précoce.
+
+Depuis sa naissance, François a présenté un développement staturo-pondéral et psychomoteur normal. Cependant, devant les antécédents maternels, une évaluation plus approfondie a été décidée. Il a été adressé en hospitalisation pour bilan complet, incluant un dépistage auditif et une évaluation métabolique.
+
+---
+
+### Examen clinique
+**Constantes vitales à l'entrée :**
+- Poids : 8,2 kg (courbe de croissance normale).
+- Taille : 68 cm.
+- Température : 37,1°C.
+- Fréquence cardiaque : 120 battements/minute.
+- Fréquence respiratoire : 30 cycles/minute.
+- Saturation en oxygène : 99 % en air ambiant.
+- Pression artérielle : 85/50 mmHg.
+
+**Examen physique :**
+- État général conservé, nourrisson éveillé et réactif.
+- Peau : pas d'ictère, pas de pâleur, pas de lésions cutanées.
+- Tête et cou : fontanelle antérieure normotendue, pas de dysmorphie faciale.
+- Appareil cardiovasculaire : rythme cardiaque régulier, pas de souffle audible, pouls périphériques bien perçus.
+- Appareil respiratoire : murmure vésiculaire symétrique, pas de signe de détresse respiratoire.
+- Abdomen : souple, dépressible, pas d'hépatosplénomégalie.
+- Neurologique : tonus normal, réflexes archaïques présents et symétriques, pas de signe de focalisation.
+- ORL : conduits auditifs externes libres, tympans normaux à l'otoscopie.
+
+---
+
+### Examens complémentaires
+**Bilan biologique (22/03/2024) :**
+- NFS : hémoglobine 12,1 g/dL, leucocytes 9 500/mm³, plaquettes 320 000/mm³ (valeurs normales pour l'âge).
+- Glycémie : 0,85 g/L (normale).
+- Bilan hépatique : ASAT 30 UI/L, ALAT 25 UI/L, bilirubine totale 5 µmol/L (normal).
+- Créatinine : 25 µmol/L (normale).
+- CRP : < 5 mg/L (pas de syndrome inflammatoire).
+
+**Dépistage auditif (23/03/2024) :**
+- Potentiels évoqués auditifs (PEA) : seuils auditifs normaux bilatéraux, pas de surdité dépistée.
+
+**Échographie abdominale (24/03/2024) :**
+- Foie, rate, reins et surrénales de taille et d'échostructure normales. Pas d'anomalie visible.
+
+---
+
+### Évolution pendant l'hospitalisation
+François a été hospitalisé le 22/03/2024 pour une évaluation complète dans le cadre de ses antécédents périnataux. L'examen clinique initial n'a pas révélé d'anomalie notable. Les examens biologiques réalisés à l'entrée étaient tous dans les limites de la normale, confirmant l'absence de retentissement métabolique persistant lié au diabète gestationnel maternel.
+
+Un dépistage auditif a été réalisé le 23/03/2024 par potentiels évoqués auditifs, qui se sont révélés normaux, éliminant une surdité congénitale. Une échographie abdominale a également été effectuée le 24/03/2024, ne montrant aucune anomalie des organes intra-abdominaux.
+
+Aucun traitement spécifique n'a été instauré durant l'hospitalisation. François a été surveillé cliniquement, avec une croissance staturo-pondérale normale et un développement psychomoteur adapté à son âge. Les parents ont été rassurés quant à l'absence de complication liée aux antécédents maternels.
+
+---
+
+### Conclusion
+François Plenecassagne, nourrisson de 8 mois, a été hospitalisé pour une évaluation diagnostique dans le cadre d'antécédents maternels de diabète gestationnel et de troubles circulatoires durant la grossesse. Le bilan réalisé n'a pas mis en évidence d'anomalie métabolique, auditive ou organique. L'examen clinique et les examens complémentaires sont rassurants, et François peut regagner son domicile sans traitement particulier. Une surveillance en consultation de pédiatrie de ville est recommandée pour suivre son développement staturo-pondéral et psychomoteur.
+
+Le patient sort ce jour, 27/03/2024, avec un compte rendu détaillé adressé au pédiatre traitant.
+
+Dr Cheb Djordjevic
+Service d'obstétrique
+Hôpital Bichat-Claude Bernard",
+
+  "formulations": {
+    "diagnostics": {
+      "Enfant unique, né à l'hôpital (Z38.0)": [
+        "François est un nourrisson né à terme, unique, vivant à domicile avec ses deux parents",
+        "François est né le 01/07/2023 à l'hôpital Bichat-Claude Bernard par voie basse"
+      ],
+      "Fœtus et nouveau-né affectés par d'autres maladies circulatoires et respiratoires de la mère (P00.3)": [
+        "La mère présente des antécédents de thrombophlébite fémorale superficielle au troisième trimestre",
+        "antécédents maternels de troubles circulatoires durant la grossesse",
+        "Thrombophlébite fémorale superficielle au troisième trimestre, traitée par anticoagulation préventive"
+      ],
+      "Syndrome de l'enfant dont la mère a un diabète de la grossesse (P70.0)": [
+        "antécédents maternels de diabète gestationnel",
+        "Diabète gestationnel diagnostiqué au deuxième trimestre, équilibré par régime seul",
+        "Une hypoglycémie néonatale transitoire a été observée dans les premières heures de vie, rapidement corrigée par une alimentation précoce"
+      ],
+      "Examen spécial de dépistage des affections des oreilles (Z13.51)": [
+        "Un dépistage auditif a été réalisé le 23/03/2024 par potentiels évoqués auditifs",
+        "dépistage auditif"
+      ]
+    },
+    "informations": {
+      "Date entrée": ["François a été hospitalisé le 22/03/2024"],
+      "Date de sortie": ["Le patient sort ce jour, 27/03/2024"],
+      "Service d'hospitalisation": ["Service d'obstétrique", "Hôpital Bichat-Claude Bernard - Assistance Publique Hôpitaux de Paris"],
+      "Nom/Prénom du patient": ["Plenecassagne François"],
+      "Nom/Prénom du médecin": ["Dr Cheb Djordjevic"],
+      "Âge": ["8 mois"],
+      "Sexe": ["nourrisson"],
+      "Poids": ["Poids : 8,2 kg"],
+      "NFS": ["hémoglobine 12,1 g/dL, leucocytes 9 500/mm³, plaquettes 320 000/mm³ (valeurs normales pour l'âge)"],
+      "Créatinine": ["Créatinine : 25 µmol/L (normale)"],
+      "Bilan hépatique": ["ASAT 30 UI/L, ALAT 25 UI/L, bilirubine totale 5 µmol/L (normal)"],
+      "Traitements": ["Aucun traitement spécifique n'a été instauré durant l'hospitalisation"]
+    }
+  }
+}
+```
