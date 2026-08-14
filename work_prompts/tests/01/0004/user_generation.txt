@@ -1,0 +1,110 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 31 ans
+- Sexe du patient : Féminin
+- Date d'entrée : 02/01/2026
+- Date de sortie : 05/01/2026
+- Date de naissance : 20/01/1994
+- Nom du patient : Nouaux
+- Prénom du patient : Simone
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Prise en charge en hospitalisation complète pour interventions digestives autres que les gastroplasties, pour obésité.
+- Codage CIM10 :
+   * Diagnostic principal : Obésité due à un excès calorique de l'adulte avec indice de masse corporelle [IMC] égal ou supérieur à 40 kg/m² et inférieur à 50 kg/m² (E6606)
+   * Diagnostics associés :
+      - Apnée du sommeil (G473)
+- Acte CCAM : pylorotomie extramuqueuse [pyloromyotomie extramuqueuse], par coelioscopie (HFPC001)
+- Nom du médecin / signataire : Jean Serva
+- Service : CHIRURGIE VISCERALE
+- Hôpital : Hôpital de Hautepierre - Hôpitaux Universitaires de Strasbourg
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="E66.06">
+
+# E66.06 — Obésité due à un excès calorique de l'adulte avec indice de masse corporelle [IMC] égal ou supérieur à 40 kg/m² et inférieur à 50 kg/m²
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E65-E68 : Obésité et autres excès d'apport
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie E66.0 :
+- Obésité commune
+Obésité primaire
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité de la catégorie E66) :
+
+dystrophie adiposogénitale (E23.6)
+lipomatose :
+ - SAI (E88.2) 
+ - douloureuse [Dercum] (E88.2) 
+syndrome de Prader–Willi (Q87.1)
+
+</fiche_code>
+
+<fiche_code code="G47.3">
+
+# G47.3 — Apnée du sommeil
+
+## Position dans la classification
+- Chapitre VI : Maladies du système nerveux
+- Bloc G40-G47 : Affections épisodiques et paroxystiques
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- apnée du sommeil centrale
+- apnée du sommeil obstructive
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre VI) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie G47) :
+
+cauchemars (F51.5)
+noctambulisme (F51.3)
+terreurs nocturnes (F51.4)
+troubles du sommeil non organiques (F51.-)
+
+Affections relevant d'autres codes :
+
+apnée du sommeil chez le nouveau-né (P28.3)
+syndrome de Pickwick (E66.2)
+
+## Formulations cliniques alternatives
+- apnée sommeil
+- apnée sommeil stridente
+- apnées obstructives sommeil
+- CPAP
+- SAOS
+- SAOS central
+- syndrome apnée obstructive sommeil
+- syndrome apnée sommeil
+- syndrome apnée sommeil central
+- Syndrome (de) - voir aussi maladie, apnée du sommeil (centrale) (obstructive)
+- syndrome Haddad
+
+</fiche_code>

@@ -1,0 +1,82 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 0 ans
+- Sexe du patient : Féminin
+- Date d'entrée : 26/12/2025
+- Date de sortie : 01/01/2026
+- Date de naissance : 03/08/2025
+- Nom du patient : Guermeur
+- Prénom du patient : Chaina
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
+- Codage CIM10 :
+   * Diagnostic principal : Foetus et nouveau-né affectés par un accouchement par extracteur pneumatique [ventouse] (P033)
+   * Diagnostics associés :
+      - Examen spécial de dépistage des affections des oreilles (Z1351)
+- Nom du médecin / signataire : Rene Communeau
+- Service : OBSTETRIQUE
+- Hôpital : Nouvel Hôpital Civil - Hôpitaux Universitaires de Strasbourg
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="P03.3">
+
+# P03.3 — Fœtus et nouveau-né affectés par un accouchement par extracteur pneumatique [ventouse]
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P00-P04 : Fœtus et nouveau-né affectés par des troubles maternels et par des complications de la grossesse, du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+Inclusions héritées du bloc P00-P04 :
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du foetus ou du nouveau-né
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du fœtus ou du nouveau-né
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+## Formulations cliniques alternatives
+- accouchement par ventouse
+- expulsion par ventouse
+- Extracteur pneumatique (ventouse), accouchement, affectant foetus ou nouveau-né
+- Extraction, foetale (avec), ventouse, affectant foetus ou nouveau-né
+- extraction par ventouse
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, accouchement, par, extracteur pneumatique (ventouse)
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, accouchement, par, ventouse
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, extracteur pneumatique (ventouse)
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, ventouse
+- traumatisme obstétrical par ventouse
+- Ventouse, accouchement par nca, affectant foetus ou nouveau-né
+
+</fiche_code>
+
+<fiche_code code="Z13.51">
+
+# Z13.51 — Examen spécial de dépistage des affections des oreilles
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z00-Z13 : Sujets en contact avec les services de santé pour des examens divers
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du bloc Z00-Z13) :
+
+examens relatifs à la grossesse et à la reproduction (Z30-Z36)  (Z39.-)
+
+</fiche_code>

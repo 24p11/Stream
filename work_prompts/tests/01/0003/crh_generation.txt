@@ -1,0 +1,49 @@
+Le compte rendu suivant respecte les élements suivants :
+        - les diagnostics ont une formulation moins formelle que la définition du code
+        - le plan du CRH est conforme aux recommandations. Les sections sont détaillées et réalistes.
+        - les dates sont cohérentes et plausibles
+        - les informations obligatoires sont présentes
+        - les informations spécifiques au cancer ne sont pas applicables ici (nouveau-né)
+        - les dictionnaires de formulations et d'informations sont complets
+
+```json
+{
+  "CR": "### Hôpital Pellegrin - CHU de Bordeaux\nService de Néonatologie\n\n**Compte rendu d'hospitalisation**\n\n**Informations patient**\nNom : Goueffon\nPrénom : Avraham\nDate de naissance : 04/02/2025\n\n---\n\n### Motif d'hospitalisation\n\nNouveau-né de sexe masculin, né prématurément à 32 semaines d'aménorrhée (SA), admis en néonatologie le 17/02/2025 pour prise en charge d'une prématurité modérée associée à des difficultés d'alimentation.\n\n---\n\n### Antécédents\n\n**Antécédents maternels** :\n- Grossesse suivie en milieu hospitalier pour menace d'accouchement prématuré (MAP) à 28 SA, traitée par corticothérapie anténatale et tocolyse.\n- Pas d'antécédent notable de diabète gestationnel ou d'hypertension artérielle gravidique.\n- Accouchement par voie basse sous analgésie péridurale, sans complication immédiate.\n\n**Antécédents familiaux** :\n- Pas d'antécédent connu de prématurité ou de pathologie néonatale dans la famille.\n\n**Allergies** :\n- Aucune allergie connue à ce jour.\n\n---\n\n### Mode de vie\n\n**Contexte familial** :\n- Parents jeunes, primipares, vivant ensemble en appartement en milieu urbain.\n- Mère non fumeuse, pas de consommation d'alcool ou de toxiques pendant la grossesse.\n- Pas d'exposition professionnelle à des agents toxiques.\n\n---\n\n### Histoire de la maladie\n\nAvraham est né le 04/02/2025 à 32 SA + 3 jours, par voie basse, avec un poids de naissance de 1 650 grammes. L'adaptation à la vie extra-utérine a été satisfaisante (score d'Apgar 8/9/10 à 1, 5 et 10 minutes). En raison de sa prématurité, il a été transféré en unité de néonatologie pour surveillance et prise en charge initiale.\n\nDès les premiers jours de vie, des difficultés d'alimentation ont été observées, avec une succion faible et des tétées prolongées (> 40 minutes), nécessitant un complément par sonde nasogastrique. Malgré une alimentation fractionnée, une stagnation pondérale a été notée, motivant son hospitalisation prolongée pour optimisation de la prise alimentaire.\n\n---\n\n### Examen clinique\n\n**À l'entrée (17/02/2025)** :\n- Poids : 1 680 g (courbe de croissance : -1 DS pour l'âge corrigé).\n- Température : 36,8°C.\n- Fréquence cardiaque : 145 bpm.\n- Fréquence respiratoire : 50/min, sans signe de lutte.\n- Saturation en O2 : 98 % en air ambiant.\n- Examen neurologique : tonus axial et périphérique adapté pour l'âge gestationnel, réflexes archaïques présents.\n- Abdomen souple, dépressible, sans hépatosplénomégalie.\n- Peau : légère ictère physiologique, pas de lésion cutanée.\n- Pas de signe de déshydratation (fontanelle antérieure normotendue, muqueuses humides).\n\n**Évolution clinique** :\n- Poids stabilisé à 1 850 g au 10/03/2025 (prise pondérale régulière sous alimentation adaptée).\n- Amélioration progressive de la succion et de la coordination succion-déglutition-respiration.\n- Pas de signe d'infection ou de détresse respiratoire.\n\n---\n\n### Examens complémentaires\n\n**Bilan biologique (18/02/2025)** :\n- NFS : Hb 16,5 g/dL, leucocytes 9 800/mm³, plaquettes 250 000/mm³.\n- CRP : < 5 mg/L.\n- Bilan hépatique : normal (bilirubine totale 85 µmol/L, conjuguée 12 µmol/L).\n- Ionogramme sanguin : Na+ 138 mmol/L, K+ 4,2 mmol/L, créatinine 35 µmol/L.\n- Glycémie : 0,8 g/L.\n\n**Imagerie** :\n- Échographie transfontanellaire (20/02/2025) : normale, pas de signe d'hémorragie intraventriculaire.\n- Radiographie de thorax (22/02/2025) : poumons clairs, pas d'anomalie.\n\n**Autres** :\n- Test de Guthrie (19/02/2025) : en attente de résultats (dépistage néonatal standard).\n\n---\n\n### Évolution pendant l'hospitalisation\n\n**Démarche diagnostique** :\n- La prématurité à 32 SA a été confirmée par la datation échographique anténatale et l'examen clinique à la naissance.\n- Les difficultés d'alimentation ont été attribuées à une immaturité de la succion-déglutition, fréquente chez les prématurés. Aucun signe d'infection, de malformation digestive ou de trouble métabolique n'a été retrouvé.\n\n**Traitements** :\n- Alimentation entérale par sonde nasogastrique initialement, avec passage progressif à une alimentation au sein et au biberon sous surveillance.\n- Supplémentation en vitamines (D et K) et en fer.\n- Surveillance régulière des constantes vitales, de la glycémie et de la bilirubinémie.\n- Soutien parental avec éducation à l'alimentation et aux soins du prématuré.\n\n**Complications** :\n- Aucune complication majeure n'a été observée. Une légère stagnation pondérale initiale a été corrigée par un ajustement des apports caloriques.\n\n---\n\n### Conclusion\n\nAvraham Goueffon, nouveau-né prématuré à 32 SA, a été hospitalisé en néonatologie pour prise en charge d'une prématurité modérée compliquée de difficultés d'alimentation. L'évolution a été favorable sous alimentation adaptée, avec une prise pondérale régulière et une amélioration des compétences alimentaires. Il est autorisé à rentrer à domicile ce jour, avec un suivi rapproché en consultation de néonatologie et par une puéricultrice à domicile.\n\n**Sortie prévue le 11/03/2025** avec les recommandations suivantes :\n- Poursuite de l'alimentation au sein ou au biberon, avec complément si nécessaire.\n- Surveillance du poids et des signes d'alerte (fièvre, refus alimentaire, somnolence).\n- Consultation de suivi dans 48 heures avec le pédiatre traitant.\n\nBordeaux, le 11/03/2025\n\nDr Raymond Barade\nService de Néonatologie\nHôpital Pellegrin - CHU de Bordeaux",
+
+  "formulations": {
+    "diagnostics": {
+      "Autres enfants nés avant terme (P07.3)": [
+        "né prématurément à 32 semaines d'aménorrhée",
+        "prématurité modérée",
+        "prématurité à 32 SA",
+        "nouveau-né prématuré"
+      ],
+      "Alimentation lente du nouveau-né (P92.2)": [
+        "difficultés d'alimentation",
+        "succion faible",
+        "tétées prolongées",
+        "alimentation lente",
+        "difficultés de succion-déglutition"
+      ]
+    },
+    "informations": {
+      "Date entrée": ["17/02/2025"],
+      "Date de sortie": ["11/03/2025"],
+      "Service d'hospitalisation": ["Service de Néonatologie", "néonatologie"],
+      "Nom/Prénom du patient": ["Avraham Goueffon"],
+      "Nom/Prénom du médecin": ["Dr Raymond Barade"],
+      "Âge": ["11 jours à l'entrée", "nouveau-né"],
+      "Sexe": ["masculin"],
+      "Poids": ["1 680 g à l'entrée", "1 650 grammes à la naissance", "1 850 g au 10/03/2025"],
+      "NFS": ["Hb 16,5 g/dL, leucocytes 9 800/mm³, plaquettes 250 000/mm³"],
+      "Créatinine": ["35 µmol/L"],
+      "Bilan hépatique": ["bilirubine totale 85 µmol/L, conjuguée 12 µmol/L (normal)"],
+      "Traitements": [
+        "Alimentation entérale par sonde nasogastrique initialement, avec passage progressif à une alimentation au sein et au biberon sous surveillance",
+        "Supplémentation en vitamines (D et K) et en fer",
+        "Surveillance régulière des constantes vitales, de la glycémie et de la bilirubinémie"
+      ]
+    }
+  }
+}
+```

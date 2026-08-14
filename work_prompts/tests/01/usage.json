@@ -1,0 +1,124 @@
+{
+  "runs": [
+    {
+      "out": "crh_generation.txt",
+      "at": "2026-08-13T15:31:19",
+      "partial": false,
+      "n_requests": 10,
+      "model": "mistral-large-latest",
+      "input_tokens": 52833,
+      "output_tokens": 24955,
+      "input_cost_usd": 0.01320825,
+      "output_cost_usd": 0.01871625,
+      "total_cost_usd": 0.0319245
+    },
+    {
+      "out": "crh_generation.txt",
+      "at": "2026-08-13T16:04:55",
+      "partial": true,
+      "n_requests": 1,
+      "model": "mistral-large-latest",
+      "input_tokens": 4319,
+      "output_tokens": 1415,
+      "input_cost_usd": 0.00107975,
+      "output_cost_usd": 0.0010612500000000001,
+      "total_cost_usd": 0.002141
+    },
+    {
+      "out": "crh_generation.txt",
+      "at": "2026-08-13T16:11:38",
+      "partial": true,
+      "n_requests": 2,
+      "model": "mistral-large-latest",
+      "input_tokens": 8762,
+      "output_tokens": 3315,
+      "input_cost_usd": 0.0021905,
+      "output_cost_usd": 0.0024862499999999997,
+      "total_cost_usd": 0.00467675
+    },
+    {
+      "out": "crh_generation.txt",
+      "at": "2026-08-13T18:32:42",
+      "partial": true,
+      "n_requests": 1,
+      "model": "mistral-large-latest",
+      "input_tokens": 4666,
+      "output_tokens": 1554,
+      "input_cost_usd": 0.0011665,
+      "output_cost_usd": 0.0011655,
+      "total_cost_usd": 0.002332
+    },
+    {
+      "out": "crh_generation.txt",
+      "at": "2026-08-13T18:35:07",
+      "partial": true,
+      "n_requests": 1,
+      "model": "mistral-large-latest",
+      "input_tokens": 4544,
+      "output_tokens": 1260,
+      "input_cost_usd": 0.001136,
+      "output_cost_usd": 0.0009450000000000001,
+      "total_cost_usd": 0.0020810000000000004
+    },
+    {
+      "out": "crh_generation.txt",
+      "at": "2026-08-13T18:37:54",
+      "partial": true,
+      "n_requests": 1,
+      "model": "mistral-large-latest",
+      "input_tokens": 4666,
+      "output_tokens": 1668,
+      "input_cost_usd": 0.0011665,
+      "output_cost_usd": 0.001251,
+      "total_cost_usd": 0.0024175
+    },
+    {
+      "out": "crh_generation.txt",
+      "at": "2026-08-13T18:53:40",
+      "partial": false,
+      "n_requests": 12,
+      "model": "mistral-large-latest",
+      "input_tokens": 63992,
+      "output_tokens": 29416,
+      "input_cost_usd": 0.015998,
+      "output_cost_usd": 0.022062000000000002,
+      "total_cost_usd": 0.03806
+    },
+    {
+      "out": "crh_generation.txt",
+      "at": "2026-08-13T18:54:23",
+      "partial": true,
+      "n_requests": 1,
+      "model": "mistral-large-latest",
+      "input_tokens": 4666,
+      "output_tokens": 1702,
+      "input_cost_usd": 0.0011665,
+      "output_cost_usd": 0.0012764999999999999,
+      "total_cost_usd": 0.002443
+    },
+    {
+      "out": "crh_generation.txt",
+      "at": "2026-08-14T09:19:45",
+      "partial": true,
+      "n_requests": 1,
+      "model": "mistral-large-latest",
+      "input_tokens": 4765,
+      "output_tokens": 1729,
+      "input_cost_usd": 0.00119125,
+      "output_cost_usd": 0.0012967500000000002,
+      "total_cost_usd": 0.002488
+    },
+    {
+      "out": "crh_generation.txt",
+      "at": "2026-08-14T09:26:43",
+      "partial": true,
+      "n_requests": 1,
+      "model": "mistral-large-latest",
+      "input_tokens": 4815,
+      "output_tokens": 1422,
+      "input_cost_usd": 0.00120375,
+      "output_cost_usd": 0.0010665000000000002,
+      "total_cost_usd": 0.00227025
+    }
+  ]
+}

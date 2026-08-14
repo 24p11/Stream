@@ -1,0 +1,111 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 67 ans
+- Sexe du patient : Masculin
+- Date d'entrée : 02/04/2026
+- Date de sortie : 02/04/2026
+- Date de naissance : 20/11/1958
+- Nom du patient : Cauet
+- Prénom du patient : Evren
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Prise en charge en hospitalisation ambulatoire pour soins de stomies digestives.
+- Codage CIM10 :
+   * Diagnostic principal : Surveillance de gastrostomie (Z431)
+   * Diagnostics associés :
+      - Maladies du neurone moteur (G122)
+- Nom du médecin / signataire : Sylvie Viravong
+- Service : CHIRURGIE VISCERALE
+- Hôpital : Hôpital Larrey - Centre hospitalier universitaire de Toulouse
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="Z43.1">
+
+# Z43.1 — Surveillance de gastrostomie
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z40-Z54 : Sujets ayant recours aux services de santé pour des actes médicaux et des soins spécifiques
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie Z43 :
+- enlèvement d'un cathéter
+- enlèvement d'un cathéter
+nettoyage
+obturation
+passage de sonde ou de bougie
+réfection
+- nettoyage
+- obturation
+- passage de sonde ou de bougie
+- réfection
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du bloc Z40-Z54) :
+
+examen de contrôle pour surveillance médicale après traitement (Z08-Z09)
+
+Affections relevant d'autres codes (hérité de la catégorie Z43) :
+
+complications de stomies (J95.0)  (K91.4)  (N99.5)
+mise en place et ajustement de prothèses et d'autres appareils (Z44-Z46)
+stomie ne nécessitant pas de soins médicaux (Z93.-)
+
+## Formulations cliniques alternatives
+- Gastrostomie (état de), surveillance de
+- Surveillance (médicale) (de) (pour), gastrostomie
+- Surveillance (médicale) (de) (pour), stomie (enlèvement de cathéter) (nettoyage) (obturation) (passage de sonde ou bougie) (réfection), gastrostomie
+
+</fiche_code>
+
+<fiche_code code="G12.2">
+
+# G12.2 — Maladies du neurone moteur
+
+## Position dans la classification
+- Chapitre VI : Maladies du système nerveux
+- Bloc G10-G14 : Affections dégénératives systémiques affectant principalement le système nerveux central
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- amyotrophie spinale progressive
+- dégénérescence familiale du neurone moteur
+- paralysie bulbaire progressive
+- sclérose latérale amyotrophique
+- sclérose latérale primitive
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre VI) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+## Formulations cliniques alternatives
+- affection motoneuronale
+- affection motoneurone spinal
+- amyotrophie moto-neurones centraux
+- Atrophie (de), musculaire (d'), progressive (pure)
+- Dégénérescence (de), neurone moteur, familiale
+- Duchenne, paralysie de
+- Maladie (à) (de) neurone moteur (bulbaire) (mixte)
+- Paralysie (de), descendante (spinale) nca
+- Paralysie (de), labio-glosso-laryngée ou pharyngée
+- Paralysie (de), muscle(s), musculaire (flasque) (voir aussi myopathie), progressive
+- Paralysie (de), progressive (atrophique) (bulbaire) (spinale)
+- Paralysie (de), pseudobulbaire
+- Paralysie (de), spastique, progressive
+
+</fiche_code>

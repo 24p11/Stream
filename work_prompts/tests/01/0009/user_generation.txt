@@ -1,0 +1,179 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 35 ans
+- Sexe du patient : Féminin
+- Date d'entrée : 03/11/2026
+- Date de sortie : 03/11/2026
+- Date de naissance : 23/07/1991
+- Nom du patient : Ross
+- Prénom du patient : Janne
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Prise en charge en hospitalisation ambulatoire pour avortements avec aspiration ou curetage ou hystérotomie.
+- Codage CIM10 :
+   * Diagnostic principal : Interruption médicale de grossesse [IMG] [ITG] pour cause embryonnaire ou foetale, complet ou sans précision, sans complication (O0491)
+   * Diagnostics associés :
+      - Résultats échographiques anormaux au cours de l'examen prénatal systématique de la mère (O283)
+      - Soins maternels pour d'autres anomalies et lésions foetales (présumées) (O358)
+- Acte CCAM : examen anatomopathologique d'un placenta complet avec cordon et membranes (JPQX007)
+- Nom du médecin / signataire : Renee Girard
+- Service : GYNECOLOGIE
+- Hôpital : Hôpital Rangueil - Centre hospitalier universitaire de Toulouse
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_category code="O04">
+
+# O04 — Avortement médical
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O00-O08 : Grossesse se terminant par un avortement
+
+## Périmètre clinique
+
+Inclusions héritées de la catégorie O04 :
+- avortement thérapeutique
+- avortement thérapeutique
+interruption de grossesse :
+ - légale avec intervention d’un professionnel de santé
+ - thérapeutique
+- interruption de grossesse légale
+- interruption de grossesse thérapeutique
+
+Au niveau des codes :
+- Avec les états en O08.0
+ (O04.-0.0)
+- Avec les états en O08.1
+ (O04.-0.1)
+- Avec les états en O08.2
+ (O04.-0.2)
+- Avec les états en O08.3–O08.9
+ (O04.-0.3)
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Affections relevant d'autres codes (hérité du bloc O00-O08) :
+
+poursuite de la grossesse après avortement d'un ou plusieurs fœtus (O31.1)
+
+Affections relevant d'autres codes (hérité de la catégorie O04) :
+
+avortement clandestin :  [O05-]
+
+</fiche_category>
+
+<fiche_code code="O28.3">
+
+# O28.3 — Résultats échographiques anormaux au cours de l'examen prénatal systématique de la mère
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O20-O29 : Autres affections maternelles liées principalement à la grossesse
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Affections relevant d'autres codes (hérité du bloc O20-O29) :
+
+maladies de la mère classées ailleurs mais compliquant la grossesse, le travail et l'accouchement, et la puerpéralité (O98-O99)
+soins maternels liés au fœtus et à la cavité amniotique, et problèmes possibles posés par l'accouchement (O30-O48)
+
+Affections relevant d'autres codes (hérité de la catégorie O28) :
+
+résultats diagnostiques classés ailleurs – voir Index alphabétique –
+soins maternels liés au fœtus et à la cavité amniotique, et problèmes possibles posés par l'accouchement (O30-O48)
+
+## Formulations cliniques alternatives
+- Résultats anormaux (non spécifiques) (de), échographiques au cours de l'examen prénatal systématique de la mère
+- Résultats anormaux (non spécifiques) (de), examen(s) (de prélèvements) (voir aussi présence, substances anormales), prénatals systématiques de la mère, échographiques
+
+</fiche_code>
+
+<fiche_code code="O35.8">
+
+# O35.8 — Soins maternels pour d'autres anomalies et lésions fœtales (présumées)
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O30-O48 : Soins maternels liés au fœtus et à la cavité amniotique, et problèmes possibles posés par l'accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie O35 :
+- lorsqu'il y a mise en observation, hospitalisation ou soins obstétricaux, y compris une interruption de la grossesse
+
+Au niveau du code :
+- soins maternels pour lésions foetales (présumées) résultant de listériose
+- soins maternels pour lésions foetales (présumées) résultant de toxoplasmose
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Affections relevant d'autres codes (hérité de la catégorie O35) :
+
+soins maternels pour disproportion fœtopelvienne connue ou présumée (O33.-)
+
+Formes spécifiées de la catégorie O35 :
+- Soins maternels pour anomalie chromosomique (présumée) du fœtus [→ O35.1]
+- Soins maternels pour lésions fœtales (présumées) dues à d'autres actes à visée diagnostique et thérapeutique [→ O35.7]
+- Soins maternels pour lésions fœtales (présumées) dues à l'alcoolisme maternel [→ O35.4]
+- Soins maternels pour lésions fœtales (présumées) dues à une irradiation [→ O35.6]
+- Soins maternels pour lésions fœtales (présumées) médicamenteuses [→ O35.5]
+- Soins maternels pour lésions fœtales (présumées) résultant d'une maladie virale de la mère [→ O35.3]
+- Soins maternels pour maladie héréditaire (présumée) du fœtus [→ O35.2]
+- Soins maternels pour malformation (présumée) du système nerveux central du fœtus [→ O35.0]
+
+## Formulations cliniques alternatives
+- Grossesse (unique) (utérine), compliquée (par), toxoplasmose, avec lésion (présumée) du foetus
+- Grossesse (unique) (utérine), entraînant surveillance, à cause de, foetus (avec) (présumé avec), anomalie (de), précisée nca
+- Grossesse (unique) (utérine), entraînant surveillance, à cause de, foetus (avec) (présumé avec), lésion due à, listériose de la mère
+- Grossesse (unique) (utérine), entraînant surveillance, à cause de, foetus (avec) (présumé avec), lésion due à, toxoplasmose de la mère
+- infection foeto-maternelle
+- infection foetomaternelle
+- infection materno-foetale
+- infection maternofoetale
+- Listériose (avec), de la mère, affectant foetus ou nouveau-né, conditionnant la conduite thérapeutique vis-à-vis de la mère
+- Soins, maternels au cours de la grossesse pour, lésions foetales (présumées) (dues à), précisées nca
+- Toxoplasmose (acquise) (avec), maternelle, affectant foetus ou nouveau-né, conditionnant la conduite thérapeutique vis-à-vis de la mère
+
+</fiche_code>

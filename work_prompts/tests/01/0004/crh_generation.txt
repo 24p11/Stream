@@ -1,0 +1,54 @@
+Le compte rendu suivant respecte les élements suivants :
+        - les diagnostics ont une formulation moins formelle que la définition du code
+        - le plan du CRH est conforme aux recommandations. Les sections sont rédigées de manière naturelle, sans liste ni format semi-structuré.
+        - les dates sont cohérentes entre elles et avec le scénario
+        - les informations obligatoires sont présentes dans l'entête et dans l'encadré patient
+        - les informations du scénario sont intégrées de manière naturelle dans le texte
+        - les informations non présentes dans le scénario ne sont pas inventées
+
+```json
+{
+  "CR": "## Compte rendu opératoire\n\n**Hôpital de Hautepierre - Hôpitaux Universitaires de Strasbourg**\n**Service de Chirurgie Viscérale**\n\n### Intervention\nPyloromyotomie extramuqueuse par cœlioscopie.\n\n### Date de l'intervention\n03/01/2026.\n\n### Diagnostic\nObésité sévère avec IMC à 45 kg/m², compliquée d'une sténose pylorique fonctionnelle.\n\n### Technique utilisée\nInstallation en décubitus dorsal, sous anesthésie générale. Création d'un pneumopéritoine par insufflation de CO₂ à 12 mmHg. Mise en place de 4 trocarts : un ombilical de 10 mm pour l'optique, deux de 5 mm en hypochondre droit et gauche, et un de 12 mm en fosse iliaque droite pour les instruments. Exploration de la cavité abdominale sans particularité notable.\n\n### Constatations per-opératoires\nLe pylore apparaît hypertrophié, avec une paroi épaissie et une lumière rétrécie. Pas de lésion muqueuse visible après ouverture de la séreuse. Pas d'adhérences ni de signes d'inflammation locale. La région antropylorique est libre, sans infiltration suspecte.\n\n### Matériels utilisés\n- Optique 10 mm 30°.\n- Pince à préhension atraumatique.\n- Ciseaux endoscopiques.\n- Électrocoagulation monopolaire.\n- Fil de suture résorbable 3/0 pour hémostase.\n\n### Chirurgien\nDr Jean Serva.\n\n-----\n\n## Compte rendu d’hospitalisation\n\n**Hôpital de Hautepierre - Hôpitaux Universitaires de Strasbourg**\n**Service de Chirurgie Viscérale**\n\n**Nom :** Nouaux\n**Prénom :** Simone\n**Date de naissance :** 20/01/1994\n**Âge :** 31 ans\n\n### Motif d’hospitalisation\nPatiente adressée pour prise en charge chirurgicale d'une obésité morbide avec IMC à 45 kg/m², résistante aux mesures hygiéno-diététiques. Présence d'une symptomatologie digestive haute à type de pesanteurs postprandiales et vomissements occasionnels, évoquant une sténose pylorique fonctionnelle.\n\n### Antécédents\n- **Médicaux :** Apnée du sommeil sous pression positive continue (CPAP) depuis 2 ans. Pas d'autre comorbidité métabolique connue.\n- **Chirurgicaux :** Appendicectomie dans l'enfance. Pas d'autre antécédent abdominal.\n- **Familiaux :** Mère obèse, sans complication cardiovasculaire connue.\n- **Allergies :** Aucune allergie médicamenteuse connue.\n\n### Mode de vie\n- **Toxiques :** Tabagisme occasionnel (2-3 cigarettes/semaine), pas de consommation d'alcool.\n- **Profession :** Employée administrative en télétravail partiel.\n- **Activité physique :** Sédentaire, marche quotidienne limitée à 10-15 minutes.\n- **Situation sociale :** Vit seule, autonomie conservée. Pas de grossesse à ce jour.\n\n### Histoire de la maladie\nPatiente suivie depuis 5 ans pour obésité sévère, avec IMC maximal à 48 kg/m² il y a 2 ans. Plusieurs tentatives de perte de poids par régime hypocalorique et activité physique supervisée, avec perte transitoire de 10 kg, rapidement regagnés. Apparition progressive depuis 6 mois de symptômes digestifs hauts : pesanteurs épigastriques, nausées postprandiales et vomissements alimentaires en fin de journée. Une fibroscopie œsogastroduodénale réalisée en ambulatoire il y a 3 mois a objectivé un pylore serré, avec passage difficile de l'endoscope, sans lésion muqueuse visible. Un test respiratoire à l'urée était négatif. La patiente a été adressée en consultation chirurgicale pour évaluation d'une pyloromyotomie extramuqueuse.\n\n### Examen clinique\n- **Constantes :** TA 135/85 mmHg, FC 82 bpm, SpO₂ 96 % en air ambiant, température 36,8°C.\n- **Poids :** 123 kg pour 1,65 m (IMC 45,2 kg/m²).\n- **Examen abdominal :** Abdomen souple, dépressible, indolore. Cicatrice d'appendicectomie en fosse iliaque droite. Pas de masse palpable. Bruits hydroaériques présents.\n- **Examen cardiopulmonaire :** Auscultation cardiaque et pulmonaire sans particularité. Pas de signe d'insuffisance veineuse chronique.\n- **Examen ORL :** Pas de macroglossie ni d'hypertrophie amygdalienne.\n\n### Examens complémentaires\n- **Biologie préopératoire (02/01/2026) :**\n  - NFS : Hb 13,2 g/dL, leucocytes 7,8 G/L, plaquettes 250 G/L.\n  - Ionogramme sanguin : Na⁺ 139 mmol/L, K⁺ 4,1 mmol/L, créatinine 68 µmol/L.\n  - Bilan hépatique : ASAT 22 UI/L, ALAT 25 UI/L, bilirubine totale 12 µmol/L, GGT 30 UI/L.\n  - CRP : 3 mg/L.\n  - Albuminémie : 42 g/L.\n- **ECG :** Rythme sinusal régulier, pas de trouble de la repolarisation.\n- **Radiographie thoracique :** Pas d'anomalie parenchymateuse ni médiastinale.\n- **Échographie abdominale (réalisée en externe il y a 1 mois) :** Foie homogène, pas de dilatation des voies biliaires. Pas d'épanchement intra-abdominal.\n\n### Évolution pendant l'hospitalisation\nLa patiente a été admise le 02/01/2026 en vue d'une pyloromyotomie extramuqueuse par cœlioscopie. L'intervention a été réalisée le 03/01/2026 sans complication peropératoire. Les suites opératoires ont été simples : reprise du transit à J1 postopératoire, alimentation liquide puis semi-liquide tolérée dès J2. La patiente a été verticalisée à J1, avec une bonne tolérance. Les douleurs postopératoires ont été bien contrôlées par antalgiques de palier 1. La sortie a été autorisée le 05/01/2026, avec consignes de reprise progressive d'une alimentation normale et d'une activité physique adaptée. Un suivi en consultation à 1 mois a été programmé pour évaluer l'évolution des symptômes digestifs et la perte de poids.\n\n### Conclusion\nPrise en charge chirurgicale d'une obésité morbide compliquée d'une sténose pylorique fonctionnelle, par pyloromyotomie extramuqueuse sous cœlioscopie. Suites opératoires simples. Sortie à domicile le 05/01/2026 avec suivi ambulatoire programmé.\n\nDr Jean Serva\nChirurgie Viscérale\nHôpital de Hautepierre - Hôpitaux Universitaires de Strasbourg",
+
+  "formulations": {
+    "diagnostics": {
+      "E66.06 — Obésité due à un excès calorique de l'adulte avec indice de masse corporelle [IMC] égal ou supérieur à 40 kg/m² et inférieur à 50 kg/m²": [
+        "obésité sévère avec IMC à 45 kg/m²",
+        "obésité morbide avec IMC à 45,2 kg/m²",
+        "obésité sévère, avec IMC maximal à 48 kg/m²"
+      ],
+      "G47.3 — Apnée du sommeil": [
+        "apnée du sommeil sous pression positive continue (CPAP)",
+        "apnée du sommeil"
+      ]
+    },
+    "informations": {
+      "Date entrée": ["02/01/2026"],
+      "Date de sortie": ["05/01/2026"],
+      "Service d'hospitalisation": ["Service de Chirurgie Viscérale"],
+      "Intervention": ["Pyloromyotomie extramuqueuse par cœlioscopie"],
+      "Date de l'intervention": ["03/01/2026"],
+      "Nom/Prénom du chirurgien": ["Dr Jean Serva"],
+      "Nom/Prénom du patient": ["Simone Nouaux"],
+      "Âge": ["31 ans"],
+      "Sexe": ["Féminin"],
+      "État général": [
+        "Patiente en bon état général, autonomie conservée",
+        "Suites opératoires simples"
+      ],
+      "Poids": ["123 kg pour 1,65 m (IMC 45,2 kg/m²)"],
+      "Statut gestationnel": [],
+      "Gestité": ["Pas de grossesse à ce jour"],
+      "Comorbidités": ["Apnée du sommeil sous pression positive continue (CPAP)"],
+      "Médicaments": [],
+      "NFS": [
+        "Hb 13,2 g/dL, leucocytes 7,8 G/L, plaquettes 250 G/L"
+      ],
+      "Créatinine": ["créatinine 68 µmol/L"],
+      "Bilan hépatique": [
+        "ASAT 22 UI/L, ALAT 25 UI/L, bilirubine totale 12 µmol/L, GGT 30 UI/L"
+      ]
+    }
+  }
+}
+```

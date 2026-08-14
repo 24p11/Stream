@@ -1,0 +1,52 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 6 ans
+- Sexe du patient : Masculin
+- Date d'entrée : 24/05/2024
+- Date de sortie : 30/05/2024
+- Date de naissance : 18/06/2017
+- Nom du patient : Thibaut
+- Prénom du patient : Clet
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Prise en charge en hospitalisation complète pour réparations de fissures labiale et palatine.
+- Codage CIM10 :
+   * Diagnostic principal : Fente labiale bilatérale avec fente du voile et de la voûte du palais (Q374)
+   * Diagnostics associés :
+      - aucun
+- Acte CCAM : fermeture labiale primaire bilatérale d'une fente labio-alvéolo-maxillaire, avec correction complète de la déformation nasale [chéilorhinoplastie bilatérale pour fente labio-alvéolo-maxillaire] (HASA020)
+- Nom du médecin / signataire : Bernard Jouette
+- Service : STO.CHIR.MAX.FAC.INF
+- Hôpital : Hôpital Cochin - Assistance Publique Hôpitaux de Paris
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="Q37.4">
+
+# Q37.4 — Fente de la voute et du voile du palais avec fente labiale bilatérale
+
+## Position dans la classification
+- Chapitre XVII : Malformations congénitales et anomalies chromosomiques
+- Bloc Q35-Q37 : Fente labiale et fente palatine
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVII) :
+
+erreurs innées du métabolisme (E70-E90)
+
+Affections relevant d'autres codes (hérité du bloc Q35-Q37) :
+
+syndrome de Pierre Robin (Q87.0)
+
+## Formulations cliniques alternatives
+- Fente (congénitale) (de), labiale (unilatérale), bilatérale, avec fente du palais, voûte, et voile du palais
+- Fente (congénitale) (de), palais, palatine (unilatérale), voile (unilatérale), avec fente, labiale, bilatérale
+- Fente (congénitale) (de), palais, palatine (unilatérale), voile (unilatérale), avec fente, voûte du palais, avec fente labiale, bilatérale
+- Fente (congénitale) (de), palais, palatine (unilatérale), voile (unilatérale), bilatérale, avec fente, voûte du palais, avec fente labiale
+- Fente (congénitale) (de), palais, palatine (unilatérale), voûte (unilatérale), avec fente, voile du palais, bilatérale, avec fente labiale
+- Fente (congénitale) (de), palais, palatine (unilatérale), voûte (unilatérale), bilatérale, avec fente, voile du palais, avec fente labiale
+
+</fiche_code>

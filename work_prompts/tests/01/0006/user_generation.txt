@@ -1,0 +1,116 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 8 ans
+- Sexe du patient : Masculin
+- Date d'entrée : 13/12/2024
+- Date de sortie : 14/12/2024
+- Date de naissance : 06/02/2016
+- Nom du patient : Fisli
+- Prénom du patient : Timothy
+- Mode d'entrée' : URGENCES
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
+- Codage CIM10 :
+   * Diagnostic principal : Gastroentérites et colites d'origine infectieuse, autres et non précisées (A090)
+   * Diagnostics associés :
+      - Isolement (prophylactique) (Z290)
+- Nom du médecin / signataire : Reine Leclache
+- Service : PEDIATRIE GENERALE
+- Hôpital : Hôpital Sud - CHU Grenoble Alpes
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="A09.0">
+
+# A09.0 — Gastroentérites et colites d’origine infectieuse, autres et non précisées
+
+## Position dans la classification
+- Chapitre I : Certaines maladies infectieuses et parasitaires
+- Bloc A00-A09 : Maladies intestinales infectieuses
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre I :
+- les maladies considérées habituellement comme contagieuses ou transmissibles
+
+Au niveau du code :
+- Catarrhe intestinal
+- Colite infectieuse hémorragique
+- Colite infectieuse SAI
+- Colite ou septique hémorragique
+- Colite ou septique SAI
+- Diarrhée aigüe aqueuse
+- Diarrhée aigüe hémorragique
+- Diarrhée aigüe sanglante
+- Diarrhée dysentérique
+- Diarrhée épidémique
+- Diarrhée infectieuse (du nouveau-né) SAI
+- Entérite infectieuse hémorragique
+- Entérite infectieuse SAI
+- Entérite ou septique hémorragique
+- Entérite ou septique SAI
+- Gastroentérite infectieuse hémorragique
+- Gastroentérite infectieuse SAI
+- Gastroentérite ou septique hémorragique
+- Gastroentérite ou septique SAI
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre I) :
+
+certaines infections localisées – voir les chapitres relatifs aux divers systèmes, appareils et organes
+grippe et autres affections aigües des voies respiratoires (J00-J22)
+infections spécifiques de la période périnatale [à l'exception du tétanos du nouveau-né, de la coqueluche, de la syphilis congénitale, des infections périnatales à gonocoques et des maladies périnatales dues au virus de l'immunodéficience humaine [VIH]] (P35-P39)
+maladies infectieuses et parasitaires de la mère compliquant la grossesse, l'accouchement et la puerpéralité [à l'exception du tétanos obstétrical] (O98.-)
+sujet porteur ou suspecté porteur d'une maladie infectieuse (Z22.-)
+
+Affections relevant d'autres codes (hérité de la catégorie A09) :
+
+diarrhée non infectieuse  (K52.9)  - du nouveau-né (P78.3) 
+maladies dues à des bactéries, des protozoaires, des virus et d'autres agents infectieux précisés (A00-A08)
+
+## Formulations cliniques alternatives
+- colite infectieuse
+- diarrhée cholériforme
+- diarrhée hémorragique
+- diarrhée sanguinolante
+- gastro-entérite aigüe épidémique
+- infection sphère digestive
+- pathologie infectieuse digestive
+- sepsis digestif
+- Sigmoidite infectieuse (COCOA)
+- syndrome infectieux digestif
+- syndrome infectieux intestinal
+
+</fiche_code>
+
+<fiche_code code="Z29.0">
+
+# Z29.0 — Isolement
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z20-Z29 : Sujets pouvant courir un risque lié à des maladies transmissibles
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- admission pour protéger le sujet de son milieu ou pour l'isoler après un contact avec une personne atteinte d'une maladie infectieuse
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité de la catégorie Z29) :
+
+chirurgie prophylactique (Z40.-)
+désensibilisation aux allergènes (Z51.6)
+
+## Formulations cliniques alternatives
+- Isolement
+- isolement cutané
+- Isolement, prophylactique
+- isolement respiratoire
+- Mesure(s), prophylactique(s), isolement
+
+</fiche_code>

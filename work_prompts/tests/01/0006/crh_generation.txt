@@ -1,0 +1,60 @@
+Le compte rendu suivant respecte les élements suivants :
+        - les diagnostics ont une formulation moins formelle que la définition du code
+        - le plan du CRH est conforme aux recommandations. Les sections sont détaillées et réalistes.
+        - les dates sont cohérentes
+        - les informations obligatoires sont présentes
+        - le style est clinique et informel
+
+Voici le résultat au format JSON demandé :
+
+```json
+{
+  "CR": "### Hôpital Sud - CHU Grenoble Alpes\n### Service de Pédiatrie Générale\n\n**Compte rendu d'hospitalisation**\n\n**Nom du patient :** Fisli Timothy\n**Date de naissance :** 06/02/2016\n**Âge :** 8 ans\n**Sexe :** Masculin\n**Dates d'hospitalisation :** Du 13/12/2024 au 14/12/2024\n\n---\n\n### Motif d’hospitalisation\nTimothy Fisli, 8 ans, a été admis aux urgences pédiatriques le 13/12/2024 pour une diarrhée aiguë évoluant depuis 48 heures, associée à des vomissements et une fièvre modérée. Devant l’aggravation des symptômes et l’apparition de selles sanglantes, une hospitalisation en pédiatrie générale a été décidée pour évaluation et prise en charge.\n\n---\n\n### Antécédents\n- **Médicaux :** Aucun antécédent médical notable. Vaccinations à jour (incluant le rotavirus). Pas d’allergie connue.\n- **Chirurgicaux :** Aucun.\n- **Familiaux :** Pas d’antécédent familial de maladie inflammatoire chronique de l’intestin ou de pathologie infectieuse digestive récurrente.\n- **Allergies :** Aucune allergie médicamenteuse ou alimentaire connue.\n\n---\n\n### Mode de vie\nTimothy est scolarisé en classe de CE2. Il vit à domicile avec ses parents et sa sœur aînée. Pas de notion de voyage récent ou de contact avec des animaux. Pas de tabagisme passif rapporté. Alimentation variée et équilibrée.\n\n---\n\n### Histoire de la maladie\nLes symptômes ont débuté dans la nuit du 11 au 12/12/2024 par des douleurs abdominales diffuses et des nausées, rapidement suivies de vomissements alimentaires. Le lendemain, apparition d’une diarrhée liquide, initialement non sanglante, devenant hémorragique en fin de journée. La fièvre à 38,5°C a motivé une consultation aux urgences pédiatriques le 13/12/2024. À l’admission, l’enfant présentait des signes de déshydratation modérée (pli cutané persistant, muqueuses sèches) et une altération de l’état général.\n\n---\n\n### Examen clinique\n- **Constantes vitales à l’admission :**\n  - Poids : 28 kg (perte de 1 kg par rapport au poids habituel)\n  - Température : 38,2°C\n  - Fréquence cardiaque : 110 bpm\n  - Pression artérielle : 95/60 mmHg\n  - Saturation en O₂ : 99% en air ambiant\n  - Fréquence respiratoire : 22 cycles/min\n- **Examen physique :**\n  - Enfant asthénique, légèrement geignard.\n  - Muqueuses sèches, yeux cernés.\n  - Abdomen souple mais sensible à la palpation, sans défense ni contracture.\n  - Bruits hydro-aériques présents, sans météorisme.\n  - Pas d’éruption cutanée ni de signes de choc.\n\n---\n\n### Examens complémentaires\n- **Biologie :**\n  - **NFS :** Hémoglobine 12,5 g/dL, leucocytes 14 000/mm³ (polynucléaires neutrophiles 80%), plaquettes 350 000/mm³.\n  - **Ionogramme sanguin :** Natrémie 138 mmol/L, kaliémie 3,2 mmol/L, créatinine 55 µmol/L (normale pour l’âge).\n  - **CRP :** 45 mg/L.\n  - **Coproculture et recherche de toxine de *Clostridium difficile* :** En cours (résultats en attente).\n  - **Examen parasitologique des selles :** Négatif.\n- **Imagerie :**\n  - **ASP (Abdomen Sans Préparation) :** Pas de niveaux hydro-aériques, pas de signe d’occlusion.\n\n---\n\n### Évolution pendant l'hospitalisation\n- **Démarche diagnostique :**\n  Devant le tableau de gastro-entérite aiguë hémorragique fébrile, une origine infectieuse a été suspectée. Les prélèvements bactériologiques et virologiques ont été réalisés. Un isolement de contact a été mis en place dès l’admission en raison du caractère potentiellement contagieux de la pathologie.\n\n- **Traitements :**\n  - **Réhydratation :** Perfusion de soluté glucosé à 5% avec électrolytes (NaCl 0,9% + KCl) à raison de 2 L/m²/jour, adaptée en fonction de la diurèse et des pertes.\n  - **Antipyrétiques :** Paracétamol per os (15 mg/kg/dose) en cas de fièvre > 38,5°C.\n  - **Antibiotiques :** Une antibiothérapie probabiliste par céphalosporine de 3ème génération (ceftriaxone 50 mg/kg/jour IV) a été initiée en attendant les résultats des prélèvements, en raison de la présence de sang dans les selles et de la fièvre.\n  - **Surveillance :** Monitoring des constantes vitales, diurèse, et aspect des selles.\n\n- **Évolution clinique :**\n  L’état de Timothy s’est rapidement amélioré sous traitement. Les vomissements ont cessé dans les 12 heures suivant l’admission. La diarrhée a diminué en fréquence et en intensité, avec disparition des rectorragies dès le 14/12/2024. La fièvre a cédé en 24 heures. La réhydratation a permis une reprise de poids (28,5 kg au départ). Les résultats de la coproculture sont revenus négatifs pour les pathogènes habituels (*Salmonella*, *Shigella*, *Campylobacter*, *Yersinia*), et la recherche de toxine de *Clostridium difficile* était également négative. L’isolement a été levé le 14/12/2024 après 24 heures sans symptôme.\n\n---\n\n### Conclusion\nTimothy Fisli a présenté un tableau de gastro-entérite aiguë hémorragique d’origine probablement virale, compte tenu de l’évolution favorable et de la négativité des prélèvements bactériologiques. L’hospitalisation a permis une réhydratation efficace et une surveillance rapprochée, avec une évolution rapidement favorable. Le patient est autorisé à regagner son domicile ce jour, sous réserve de poursuivre une hydratation orale adaptée et de consulter en cas de récidive des symptômes.\n\n**Sortie prévue le 14/12/2024 avec :**\n- Poursuite de la réhydratation orale (solutions de réhydratation type Adiaril®).\n- Alimentation progressive (régime sans résidu les 24 premières heures).\n- Contrôle clinique par le médecin traitant dans 48 heures.\n- Arrêt de l’antibiothérapie (la ceftriaxone a été arrêtée ce jour en l’absence de documentation bactérienne).\n\n**Médecin signataire :**\nDr Reine Leclache\nService de Pédiatrie Générale\nHôpital Sud - CHU Grenoble Alpes",
+
+  "formulations": {
+    "diagnostics": {
+      "Gastroentérites et colites d’origine infectieuse, autres et non précisées (A09.0)": [
+        "diarrhée aiguë hémorragique",
+        "gastro-entérite aiguë hémorragique",
+        "diarrhée sanglante",
+        "syndrome infectieux digestif",
+        "gastro-entérite aiguë d’origine probablement virale"
+      ],
+      "Isolement (prophylactique) (Z29.0)": [
+        "isolement de contact",
+        "isolement mis en place",
+        "mesure d’isolement prophylactique"
+      ]
+    },
+    "informations": {
+      "Date entrée": ["13/12/2024"],
+      "Date de sortie": ["14/12/2024"],
+      "Service d'hospitalisation": ["Service de Pédiatrie Générale", "pédiatrie générale"],
+      "Nom/Prénom du patient": ["Fisli Timothy"],
+      "Nom/Prénom du médecin": ["Dr Reine Leclache"],
+      "Âge": ["8 ans"],
+      "Sexe": ["Masculin"],
+      "État général": [
+        "Enfant asthénique, légèrement geignard",
+        "altération de l’état général",
+        "état de Timothy s’est rapidement amélioré sous traitement"
+      ],
+      "Poids": ["28 kg (perte de 1 kg par rapport au poids habituel)", "28,5 kg au départ"],
+      "Statut gestationnel": [],
+      "Gestité": [],
+      "NFS": [
+        "Hémoglobine 12,5 g/dL, leucocytes 14 000/mm³ (polynucléaires neutrophiles 80%), plaquettes 350 000/mm³"
+      ],
+      "Créatinine": ["créatinine 55 µmol/L (normale pour l’âge)"],
+      "Bilan hépatique": [],
+      "Traitements": [
+        "Perfusion de soluté glucosé à 5% avec électrolytes (NaCl 0,9% + KCl) à raison de 2 L/m²/jour",
+        "Paracétamol per os (15 mg/kg/dose) en cas de fièvre > 38,5°C",
+        "ceftriaxone 50 mg/kg/jour IV",
+        "réhydratation orale (solutions de réhydratation type Adiaril®)",
+        "régime sans résidu les 24 premières heures"
+      ]
+    }
+  }
+}
+```

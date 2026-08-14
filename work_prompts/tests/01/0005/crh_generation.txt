@@ -1,0 +1,69 @@
+Le compte rendu suivant respecte les élements suivants :
+        - les diagnostics ont une formulation moins formelle que la définition du code
+        - le plan du CRH est conforme aux recommandations. Les sections sont clairement identifiées
+        - les dates sont cohérentes
+        - les informations obligatoires sont présentes
+        - les informations sont intégrées de façon naturelle dans le texte
+
+Voici le résultat au format JSON demandé :
+
+```json
+{
+  "CR": "### Compte rendu d'hospitalisation - Service d'obstétrique avant accouchement\n**Hôpital de la Timone - Assistance Publique – Hôpitaux de Marseille**\n**Service d'obstétrique**\n\n**Patient :**\n- Nom : Straub\n- Prénom : Berthe\n- Date de naissance : 10/03/2003\n- Âge : 22 ans\n- Sexe : Féminin\n\n---\n\n### Motif d'hospitalisation\nMme Straub Berthe, âgée de 22 ans, a été admise le 26/03/2025 dans notre service pour surveillance rapprochée en raison d'une présentation fœtale défavorable avec suspicion de rotation incomplète de la tête du fœtus. Cette hospitalisation précoce vise à optimiser les conditions de l'accouchement et à prévenir les complications liées à cette dystocie.\n\n---\n\n### Antécédents\n- **Médicaux :** Aucun antécédent médical notable. Pas d'hypertension artérielle, pas de diabète, pas d'asthme.\n- **Chirurgicaux :** Appendicectomie à l'âge de 15 ans.\n- **Gynéco-obstétricaux :** Primigeste, primipare. Grossesse actuelle suivie sans particularité jusqu'à présent. Pas d'antécédent de fausse couche ou d'interruption volontaire de grossesse.\n- **Familiaux :** Pas d'antécédent familial de diabète gestationnel ou d'hypertension gravidique. Pas de cas de dystocie rapporté dans la famille.\n- **Allergies :** Aucune allergie médicamenteuse ou alimentaire connue.\n\n---\n\n### Mode de vie\n- **Toxiques :** Non fumeuse, pas de consommation d'alcool ni de substances illicites.\n- **Profession :** Étudiante en licence de psychologie.\n- **Situation sociale :** Vit en couple, soutien familial présent. Logement stable et adapté.\n\n---\n\n### Traitement à l'entrée\nAucun traitement en cours à l'admission. Supplémentation en acide folique et vitamine D prescrite en début de grossesse, arrêtée il y a un mois.\n\n---\n\n### Résumé de la grossesse\nGrossesse spontanée, suivie régulièrement en ville par une sage-femme libérale. Les échographies obstétricales réalisées aux premier, deuxième et troisième trimestres n'ont pas révélé d'anomalie morphologique fœtale. La croissance fœtale est harmonieuse et le liquide amniotique est en quantité normale. La patiente a bénéficié d'un dépistage du diabète gestationnel qui s'est révélé négatif. À 36 semaines d'aménorrhée (SA), une présentation en occipito-postérieure a été notée lors de la consultation de suivi, sans signe de dystocie à ce stade. La patiente a été adressée en consultation spécialisée pour évaluation. À 38 SA, une nouvelle échographie a confirmé la persistance de cette présentation avec un engagement céphalique haut, motivant l'hospitalisation pour surveillance rapprochée.\n\n---\n\n### Examen clinique à l'entrée\n- **Constantes vitales :**\n  - Poids : 72 kg (prise de poids totale de 12 kg depuis le début de la grossesse)\n  - Taille : 165 cm\n  - Tension artérielle : 118/72 mmHg\n  - Fréquence cardiaque : 82 battements/minute\n  - Température : 36,8°C\n  - Saturation en oxygène : 99% en air ambiant\n- **Examen général :** Patiente en bon état général, eupnéique. Pas de signe de pré-éclampsie (pas d'œdème des membres inférieurs, pas de protéinurie à la bandelette urinaire).\n- **Examen obstétrical :**\n  - Hauteur utérine : 34 cm\n  - Présentation céphalique, mobile au-dessus du détroit supérieur\n  - Col utérin postérieur, long, fermé\n  - Activité utérine irrégulière, non douloureuse\n  - Bruits du cœur fœtal perçus à 140 battements/minute, réguliers\n  - Pas de perte de liquide amniotique ni de saignement\n\n---\n\n### Examens complémentaires\n- **Biologie :**\n  - NFS : Hémoglobine 11,2 g/dL, leucocytes 9,8 G/L, plaquettes 250 G/L\n  - Groupe sanguin : A positif, RAI négatives\n  - Bilan hépatique : Normal (ASAT 22 UI/L, ALAT 18 UI/L, bilirubine totale 8 µmol/L)\n  - Créatinine : 62 µmol/L\n  - CRP : 5 mg/L\n- **Échographie obstétricale :**\n  - Présentation céphalique en occipito-postérieure\n  - Engagement céphalique haut (mobile)\n  - Liquide amniotique en quantité normale\n  - Doppler ombilical et cérébral fœtal normaux\n  - Estimation du poids fœtal : 3200 g\n- **Monitoring fœtal :** Rythme cardiaque fœtal réactif, pas de signe de souffrance fœtale.\n\n---\n\n### Évolution pendant l'hospitalisation\nLa patiente a été hospitalisée en chambre individuelle pour surveillance rapprochée. L'évolution a été marquée par le début spontané du travail le 29/03/2025 à 3h du matin. Le col utérin s'est progressivement modifié, passant de 1 cm de dilatation à 4 cm en 6 heures. La présentation est restée en occipito-postérieure, avec une rotation incomplète de la tête fœtale, confirmant la dystocie suspectée. En raison de la stagnation de la dilatation et de la persistance de la présentation défavorable, une décision d'extraction instrumentale par ventouse a été prise en accord avec la patiente.\n\n---\n\n### Conclusion\nMme Straub a été hospitalisée pour surveillance rapprochée en raison d'une présentation fœtale en occipito-postérieure avec suspicion de dystocie par rotation incomplète de la tête. L'évolution a conduit à un accouchement par voie basse avec extraction instrumentale par ventouse. La patiente et son enfant sont en bonne santé. Elle sera transférée en suite de couches pour surveillance post-natale.\n\nFait à Marseille, le 30/03/2025\n\nDr Adja Cazelif\nService d'obstétrique\nHôpital de la Timone\n\n-----\n\n### Compte rendu d'accouchement par voie basse\n**Hôpital de la Timone - Assistance Publique – Hôpitaux de Marseille**\n**Service d'obstétrique**\n\n**Patient :**\n- Nom : Straub\n- Prénom : Berthe\n- Date de naissance : 10/03/2003\n- Âge : 22 ans\n\n---\n\n### Date de l'accouchement\n29/03/2025 à 14h30\n\n---\n\n### Personnel présent\n- Sage-femme : Mme Élodie Marceau\n- Obstétricien : Dr Adja Cazelif\n\n---\n\n### Déroulement de l'accouchement\nMme Straub a été admise en salle de naissance le 29/03/2025 à 3h du matin pour début spontané du travail. À son arrivée, le col utérin était dilaté à 1 cm, effacé à 50%, avec une présentation céphalique en occipito-postérieure. La poche des eaux était intacte. Le monitoring fœtal montrait un rythme cardiaque fœtal réactif, sans signe de souffrance.\n\nL'évolution a été marquée par une progression lente de la dilatation, avec une stagnation à 4 cm pendant 4 heures malgré une bonne dynamique utérine. La présentation est restée en occipito-postérieure, avec une rotation incomplète de la tête fœtale, confirmant la dystocie suspectée lors de l'hospitalisation. En raison de cette stagnation et de la persistance de la présentation défavorable, une décision d'extraction instrumentale a été prise après information et accord de la patiente.\n\nUne épisiotomie médio-latérale droite a été réalisée pour faciliter l'extraction. Une ventouse obstétricale a été posée à 14h15, permettant l'engagement et la rotation progressive de la tête fœtale. Après trois tractions, la tête a été dégagée à 14h25, suivie rapidement par le dégagement des épaules et du corps. L'enfant, de sexe féminin, a crié spontanément à la naissance et a été placé en peau à peau avec sa mère.\n\nÀ l'examen du périnée, une déchirure superficielle de la fourchette vulvaire et de la peau périnéale a été constatée, correspondant à une déchirure du premier degré. Cette déchirure a été suturée par des points séparés de fil résorbable.\n\nLa délivrance a été dirigée par une injection de 5 UI d'ocytocine en intraveineuse directe après le dégagement des épaules. La délivrance complète a eu lieu à 14h40, avec un placenta d'aspect normal et complet. Les pertes sanguines ont été estimées à 250 mL.\n\n---\n\n### État de la mère et de l'enfant à la naissance\n- **Mère :**\n  - État général satisfaisant\n  - Tension artérielle : 120/75 mmHg\n  - Fréquence cardiaque : 88 battements/minute\n  - Pas de signe de choc hémorragique\n  - Périnée suturé, pas de saignement actif\n- **Enfant :**\n  - Sexe : Féminin\n  - Poids : 3250 g\n  - Taille : 50 cm\n  - Périmètre crânien : 34 cm\n  - Score d'Apgar : 9/10 à 1 minute, 10/10 à 5 minutes\n  - Examen clinique initial sans particularité\n\n---\n\nFait à Marseille, le 29/03/2025\n\nDr Adja Cazelif\nService d'obstétrique\nHôpital de la Timone\n\n-----\n\n### Compte rendu d'hospitalisation - Suite de couches (maternité)\n**Hôpital de la Timone - Assistance Publique – Hôpitaux de Marseille**\n**Service de maternité**\n\n**Patient :**\n- Nom : Straub\n- Prénom : Berthe\n- Date de naissance : 10/03/2003\n- Âge : 22 ans\n\n---\n\n### Résumé de la grossesse et de l'accouchement\nMme Straub, âgée de 22 ans, a été hospitalisée dans notre service d'obstétrique le 26/03/2025 pour surveillance rapprochée en raison d'une présentation fœtale en occipito-postérieure avec suspicion de dystocie par rotation incomplète de la tête. La grossesse avait été suivie sans particularité jusqu'à 38 SA, date à laquelle la présentation défavorable a été confirmée.\n\nLe travail a débuté spontanément le 29/03/2025. En raison d'une stagnation de la dilatation et de la persistance de la présentation en occipito-postérieure, une extraction instrumentale par ventouse a été réalisée. L'accouchement a eu lieu le 29/03/2025 à 14h30, donnant naissance à une fille de 3250 g, en bonne santé. Une déchirure périnéale du premier degré a été suturée en salle de naissance. Les suites de couches immédiates ont été simples.\n\n---\n\n### Évolution dans le service\nMme Straub a été transférée en suite de couches le 29/03/2025 en fin de journée. L'évolution a été marquée par :\n\n- **État général :** Bon état général, pas de plainte fonctionnelle. Tension artérielle stable, pas de fièvre.\n- **Allaitement :** Allaitement maternel exclusif bien démarré, avec une bonne mise au sein et une succion efficace de l'enfant. Conseils prodigués par la sage-femme pour optimiser les positions et prévenir les crevasses.\n- **Périnée :** Cicatrisation de la déchirure périnéale satisfaisante. Pas de signe d'infection locale. Douleurs modérées, bien soulagées par du paracétamol.\n- **Utérus :** Utérus bien involué, fond utérin à l'ombilic le premier jour, puis en voie de rétraction. Lochies normales, sans saignement excessif.\n- **Examen clinique de l'enfant :** Enfant en bonne santé, examen clinique quotidien sans particularité. Poids stable, ictère physiologique modéré sans indication de photothérapie.\n- **Biologie :** NFS de contrôle réalisée le 30/03/2025 : Hémoglobine 10,8 g/dL, pas de signe d'anémie.\n\n---\n\n### Conclusion\nLes suites de couches se déroulent de manière satisfaisante pour Mme Straub et son enfant. L'allaitement est bien installé, la cicatrisation périnéale est en bonne voie et l'état général est excellent. La patiente a bénéficié d'une information sur les signes d'alerte à surveiller à domicile (fièvre, saignements, douleurs pelviennes, signes de thrombose veineuse). Un suivi en ville par une sage-femme libérale a été organisé pour le retour à domicile.\n\nLa sortie est autorisée ce jour, 01/04/2025, avec les documents suivants :\n- Ordonnance de sortie (paracétamol si besoin, fer en cas d'anémie)\n- Certificat d'accouchement\n- Carnet de santé de l'enfant complété\n- Rendez-vous de suivi post-natal à 6 semaines\n\nFait à Marseille, le 01/04/2025\n\nDr Adja Cazelif\nService de maternité\nHôpital de la Timone",
+
+  "formulations": {
+    "diagnostics": {
+      "Dystocie due à une rotation incomplète de la tête du fœtus (O64.0)": [
+        "présentation fœtale défavorable avec suspicion de rotation incomplète de la tête du fœtus",
+        "présentation en occipito-postérieure",
+        "rotation incomplète de la tête fœtale",
+        "dystocie par rotation incomplète de la tête",
+        "présentation défavorable en occipito-postérieure",
+        "stagnation de la dilatation et persistance de la présentation en occipito-postérieure"
+      ],
+      "Déchirure obstétricale du périnée, du premier degré (O70.0)": [
+        "déchirure superficielle de la fourchette vulvaire et de la peau périnéale",
+        "déchirure du premier degré",
+        "déchirure périnéale du premier degré"
+      ],
+      "Accouchement (unique) par extraction pneumatique (O81.4)": [
+        "extraction instrumentale par ventouse",
+        "ventouse obstétricale",
+        "accouchement par ventouse"
+      ],
+      "Naissance unique, enfant vivant (Z37.0)": [
+        "naissance à une fille de 3250 g, en bonne santé",
+        "enfant de sexe féminin, en bonne santé"
+      ]
+    },
+    "informations": {
+      "Date entrée": ["26/03/2025"],
+      "Date de sortie": ["01/04/2025"],
+      "Service d'hospitalisation": [
+        "Service d'obstétrique",
+        "Service de maternité"
+      ],
+      "Date de l'intervention": ["29/03/2025"],
+      "Nom/Prénom du chirurgien": ["Dr Adja Cazelif"],
+      "Nom/Prénom du patient": ["Straub Berthe"],
+      "Âge": ["22 ans"],
+      "Sexe": ["Féminin"],
+      "État général": [
+        "Patiente en bon état général, eupnéique",
+        "Bon état général",
+        "État général satisfaisant"
+      ],
+      "Poids": ["72 kg", "3250 g"],
+      "Statut gestationnel": ["38 semaines d'aménorrhée"],
+      "Gestité": ["Primigeste"],
+      "Médicaments": ["Supplémentation en acide folique et vitamine D", "5 UI d'ocytocine en intraveineuse directe", "paracétamol"],
+      "NFS": [
+        "Hémoglobine 11,2 g/dL, leucocytes 9,8 G/L, plaquettes 250 G/L",
+        "Hémoglobine 10,8 g/dL"
+      ],
+      "Créatinine": ["62 µmol/L"],
+      "Bilan hépatique": ["Normal (ASAT 22 UI/L, ALAT 18 UI/L, bilirubine totale 8 µmol/L)"]
+    }
+  }
+}
+```

@@ -1,0 +1,56 @@
+Le compte rendu suivant respecte les élements suivants :
+        - les diagnostics ont une formulation moins formelle que la définition du code
+        - le plan du CRH est conforme aux recommandations. Les sections sont détaillées et réalistes.
+        - les dates sont cohérentes avec le scénario
+        - les informations obligatoires sont présentes
+        - les informations sur le cancer ne sont pas applicables ici (nouveau-né)
+        - les dictionnaires de formulations et d'informations sont complets
+
+```json
+{
+  "CR": "### Compte rendu d'hospitalisation\n**Service d'obstétrique – Nouvel Hôpital Civil - Hôpitaux Universitaires de Strasbourg**\n\n**Informations patient**\nNom : Guermeur\nPrénom : Chaina\nDate de naissance : 03/08/2025\n\n---\n\n### Motif d’hospitalisation\nNouveau-né de sexe féminin, Chaina Guermeur, admise en hospitalisation complète le 26/12/2025 pour surveillance post-natale après un accouchement par ventouse. La patiente a été adressée pour évaluation des conséquences potentielles de l’extraction instrumentale et réalisation d’un dépistage auditif systématique.\n\n### Antécédents\n**Antécédents maternels (relevés dans le dossier obstétrical)** :\n- Grossesse suivie, sans particularité notable en dehors d’un diabète gestationnel équilibré par régime.\n- Accouchement à 40 SA + 3 jours, déclenché pour dépassement de terme.\n- Extraction par ventouse pour stagnation de la descente en phase expulsive.\n- Pas d’antécédent familial notable de surdité congénitale ou de pathologie néonatale.\n\n**Antécédents personnels** :\n- Aucun antécédent médical ou chirurgical chez ce nouveau-né.\n- Allergies : non connues.\n\n### Mode de vie\n**Contexte familial** :\n- Parents non consanguins, mère âgée de 32 ans, père de 34 ans.\n- Premier enfant du couple.\n- Milieu socio-économique stable, parents salariés.\n- Pas d’exposition connue à des toxiques pendant la grossesse (tabac, alcool, drogues).\n\n### Histoire de la maladie\nChaina est née le 26/12/2025 à 14h35 par voie basse après un travail déclenché pour dépassement de terme. L’accouchement a nécessité une extraction par ventouse en raison d’une stagnation de la progression en phase expulsive, sans anomalie du rythme cardiaque fœtal. Le score d’Apgar était de 8 à 1 minute et 10 à 5 minutes. Le poids de naissance était de 3 450 g, la taille de 50 cm et le périmètre crânien de 35 cm.\n\nÀ la naissance, une bosse séro-sanguine pariétale droite a été notée, sans signe de complication immédiate (pas d’hémorragie, pas de fracture sous-jacente suspectée). Le nouveau-né a été placé en surveillance en salle de naissance pendant 2 heures, puis transféré en unité de néonatalogie pour évaluation complémentaire.\n\n### Examen clinique\n**À l’admission (26/12/2025, 16h00)** :\n- Poids : 3 420 g (perte physiologique de 30 g).\n- Température : 36,8°C.\n- Fréquence cardiaque : 140 bpm, régulière.\n- Fréquence respiratoire : 45 cycles/min, sans signe de détresse.\n- Saturation en air ambiant : 98%.\n- Tension artérielle : non mesurée (nouveau-né).\n\n**Examen physique** :\n- État général satisfaisant, nouveau-né réactif, tonus normal.\n- Peau : ictère physiologique modéré, pas de pétéchies.\n- Crâne : bosse séro-sanguine pariétale droite de 3 cm de diamètre, molle, non pulsatile, sans signe inflammatoire. Pas de déformation crânienne permanente.\n- Yeux : symétriques, réflexe photomoteur présent.\n- Oreilles : pavillons bien ourlés, conduits auditifs externes perméables. Pas d’anomalie morphologique visible.\n- Bouche : palais intact, pas de fente labiale ou palatine.\n- Cou : souple, pas de masse palpable.\n- Thorax : symétrique, murmure vésiculaire bilatéral et symétrique, pas de signe de lutte.\n- Abdomen : souple, dépressible, pas d’hépatosplénomégalie.\n- Organes génitaux externes : féminins, normaux pour l’âge.\n- Membres : symétriques, pas de fracture palpable, mouvements spontanés normaux.\n- Neurologique : réflexes archaïques présents (succion, grasping, Moro), pas de signe de localisation.\n\n### Examens complémentaires\n**Réalisés le 26/12/2025** :\n- **Bilan sanguin** : NFS, CRP, bilirubine totale et conjuguée.\n  - NFS : Hb 16,5 g/dL, leucocytes 12 000/mm³, plaquettes 250 000/mm³.\n  - CRP : < 5 mg/L.\n  - Bilirubine totale : 85 µmol/L (normale pour l’âge), conjuguée : 5 µmol/L.\n- **Dépistage auditif** (potentiels évoqués auditifs automatisés) : réalisé le 27/12/2025.\n  - Résultat : normal des deux côtés, pas de signe de surdité.\n- **Échographie transfontanellaire** (réalisée le 28/12/2025) :\n  - Pas d’hémorragie intra- ou péricérébrale.\n  - Pas de signe d’hydrocéphalie ou de malformation cérébrale.\n  - Bosse séro-sanguine pariétale droite confirmée, sans collection sous-jacente.\n\n### Évolution pendant l'hospitalisation\n**Démarche diagnostique** :\n- La surveillance initiale a confirmé l’absence de complication immédiate liée à l’extraction par ventouse (pas d’hémorragie intracrânienne, pas de fracture du crâne).\n- Le dépistage auditif systématique a permis d’éliminer une surdité congénitale, conformément aux recommandations de la HAS.\n- L’ictère physiologique a été surveillé cliniquement et biologiquement, sans nécessité de photothérapie.\n\n**Traitements** :\n- Soins de nursing standard (toiletage, soins du cordon).\n- Alimentation au sein à la demande, avec une bonne prise des biberons complémentaires si nécessaire.\n- Surveillance quotidienne du poids, de la température et de l’état cutané (bosse séro-sanguine).\n- Pas de traitement médicamenteux prescrit.\n\n**Évolution clinique** :\n- La bosse séro-sanguine a progressivement diminué de volume, sans complication.\n- Le nouveau-né a repris son poids de naissance au 5ème jour de vie (3 450 g le 31/12/2025).\n- L’examen neurologique est resté normal tout au long de l’hospitalisation, sans signe de souffrance cérébrale.\n- L’allaitement maternel s’est bien installé, avec une bonne courbe pondérale.\n\n### Conclusion\nChaina Guermeur, nouveau-né de sexe féminin, a présenté une évolution favorable après un accouchement par ventouse compliqué d’une bosse séro-sanguine pariétale droite. Les examens complémentaires (dépistage auditif, échographie transfontanellaire) n’ont pas révélé de complication liée à l’extraction instrumentale. Le dépistage auditif était normal. La patiente est autorisée à rentrer à domicile ce jour, le 01/01/2026, avec un suivi en consultation de pédiatrie dans 1 semaine pour contrôle clinique et vérification de la résorption complète de la bosse séro-sanguine.\n\n**Sortie** :\n- Mode de sortie : domicile.\n- Ordonnance de sortie :\n  - Surveillance à domicile par la PMI ou un pédiatre.\n  - Consultation de contrôle dans 7 jours.\n  - Pas de traitement médicamenteux.\n\nDr Rene Communeau\nService d’obstétrique\nNouvel Hôpital Civil - Hôpitaux Universitaires de Strasbourg",
+
+  "formulations": {
+    "diagnostics": {
+      "Fœtus et nouveau-né affectés par un accouchement par extracteur pneumatique [ventouse] (P03.3)": [
+        "accouchement par ventouse",
+        "extraction par ventouse",
+        "bosse séro-sanguine pariétale droite liée à l’extraction instrumentale",
+        "complication de l’extraction par ventouse"
+      ],
+      "Examen spécial de dépistage des affections des oreilles (Z13.51)": [
+        "dépistage auditif systématique",
+        "examen de dépistage des affections des oreilles",
+        "potentiels évoqués auditifs automatisés"
+      ]
+    },
+    "informations": {
+      "Date entrée": ["26/12/2025"],
+      "Date de sortie": ["01/01/2026"],
+      "Service d'hospitalisation": ["Service d’obstétrique – Nouvel Hôpital Civil - Hôpitaux Universitaires de Strasbourg"],
+      "Nom/Prénom du patient": ["Guermeur Chaina"],
+      "Nom/Prénom du médecin": ["Rene Communeau"],
+      "Âge": ["nouveau-né", "0 an"],
+      "Sexe": ["féminin"],
+      "État général": [
+        "État général satisfaisant, nouveau-né réactif, tonus normal",
+        "bonne courbe pondérale",
+        "allaitement maternel bien installé"
+      ],
+      "Poids": ["3 420 g à l’admission", "3 450 g à la naissance", "3 450 g au 5ème jour de vie"],
+      "NFS": [
+        "Hb 16,5 g/dL, leucocytes 12 000/mm³, plaquettes 250 000/mm³"
+      ],
+      "Créatinine": ["Non dosée (non pertinent chez le nouveau-né dans ce contexte)"],
+      "Bilan hépatique": [
+        "Bilirubine totale : 85 µmol/L, conjuguée : 5 µmol/L"
+      ],
+      "Traitements": [
+        "Soins de nursing standard (toiletage, soins du cordon)",
+        "Alimentation au sein à la demande, avec biberons complémentaires si nécessaire",
+        "Surveillance quotidienne du poids, de la température et de l’état cutané"
+      ]
+    }
+  }
+}
+```

@@ -1,0 +1,66 @@
+{"CR": "### Compte rendu d'hospitalisation
+
+**Hôpital Larrey - Centre hospitalier universitaire de Toulouse**
+**Service de Chirurgie Viscérale**
+
+---
+Nom : Cauet
+Prénom : Evren
+Date de naissance : 20/11/1958
+---
+
+### Motif d'hospitalisation
+M. Evren Cauet, âgé de 67 ans, a été admis en hospitalisation de jour ce 02/04/2026 pour la surveillance et les soins de sa gastrostomie percutanée endoscopique (GPE), mise en place dans le cadre de sa sclérose latérale amyotrophique (SLA).
+
+### Antécédents
+- **Médicaux** :
+  - Sclérose latérale amyotrophique diagnostiquée en janvier 2024, évoluant progressivement avec atteinte bulbaire et difficultés de déglutition.
+  - Hypertension artérielle équilibrée sous traitement.
+  - Dyslipidémie modérée.
+- **Chirurgicaux** :
+  - Pose d’une gastrostomie percutanée endoscopique en octobre 2024 en raison d’une aggravation des troubles de la déglutition.
+- **Familiaux** : Aucun antécédent notable de maladie neurodégénérative.
+- **Allergies** : Aucune allergie médicamenteuse connue.
+
+### Mode de vie
+M. Cauet est retraité, ancien employé dans le secteur du bâtiment. Il vit à domicile avec son épouse, qui l’assiste au quotidien. Il ne fume pas et ne consomme pas d’alcool. Son autonomie est réduite en raison de sa pathologie neurologique, nécessitant une aide pour les transferts et les activités de la vie quotidienne.
+
+### Histoire de la maladie
+Le patient présente une SLA diagnostiquée il y a deux ans, marquée initialement par des fasciculations et une faiblesse musculaire progressive des membres supérieurs. L’évolution a été marquée par l’apparition de troubles bulbaires (dysarthrie, dysphagie) en 2024, conduisant à la pose d’une GPE en octobre de la même année. Depuis, il bénéficie d’une nutrition entérale exclusive via cette stomie. L’hospitalisation actuelle vise à évaluer l’état de la gastrostomie, réaliser les soins locaux et ajuster la prise en charge nutritionnelle.
+
+### Examen clinique
+À l’admission, le patient est conscient, orienté et coopérant. Son état général est altéré, avec un score ECOG à 3. Il présente une atrophie musculaire diffuse, prédominant aux membres supérieurs et aux muscles cervicaux. La tension artérielle est mesurée à 130/80 mmHg, la fréquence cardiaque à 78 battements par minute, et la saturation en oxygène à 96 % en air ambiant. Le poids est stable à 65 kg, sans œdème périphérique. L’examen de la stomie montre une peau péri-stomiale saine, sans signe d’infection ni de fuite. L’abdomen est souple, indolore, sans défense. Les réflexes ostéotendineux sont vifs aux membres inférieurs, avec un signe de Babinski bilatéral.
+
+### Examens complémentaires
+Aucun examen complémentaire n’a été réalisé lors de cette hospitalisation de jour, la prise en charge étant centrée sur les soins de stomie et l’évaluation clinique.
+
+### Conclusion
+M. Cauet a été admis pour la surveillance et les soins de sa gastrostomie dans le cadre de sa SLA évolutive. L’examen clinique confirme la stabilité de la stomie et l’absence de complication locale. Son état nutritionnel est maintenu par une alimentation entérale adaptée. La prise en charge à domicile est poursuivie, avec un suivi régulier en consultation spécialisée. Une nouvelle évaluation est prévue dans un mois, ou plus tôt en cas d’aggravation des symptômes neurologiques ou de complication liée à la stomie.
+
+**Dr Sylvie Viravong**
+Service de Chirurgie Viscérale
+Hôpital Larrey - CHU de Toulouse",
+
+"formulations": {
+    "diagnostics": {
+        "Surveillance de gastrostomie (Z431)": ["surveillance et les soins de sa gastrostomie percutanée endoscopique (GPE)", "soins de sa gastrostomie", "surveillance de sa gastrostomie"],
+        "Maladies du neurone moteur (G122)": ["sclérose latérale amyotrophique (SLA)", "SLA évolutive", "sa pathologie neurologique"]
+    },
+    "informations": {
+        "Date entrée": ["02/04/2026"],
+        "Date de sortie": ["02/04/2026"],
+        "Service d'hospitalisation": ["Service de Chirurgie Viscérale", "Chirurgie Viscérale"],
+        "Nom/Prénom du patient": ["Cauet Evren", "Evren Cauet"],
+        "Nom/Prénom du médecin": ["Sylvie Viravong"],
+        "Âge": ["67 ans"],
+        "Sexe": ["Masculin"],
+        "État général": ["Son état général est altéré, avec un score ECOG à 3"],
+        "Poids": ["Le poids est stable à 65 kg"],
+        "Statut gestationnel": [],
+        "Gestité": [],
+        "NFS": [],
+        "Créatinine": [],
+        "Bilan hépatique": [],
+        "Traitements": ["nutrition entérale exclusive via cette stomie", "alimentation entérale adaptée"]
+    }
+}}

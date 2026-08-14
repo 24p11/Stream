@@ -1,0 +1,160 @@
+Le compte rendu suivant respecte les élements suivants :
+        - les diagnostics ont une formulation moins formelle que la définition du code
+        - le plan du CRH est conforme aux recommandations. Les sections sont détaillées et réalistes.
+        - les dates sont cohérentes
+        - les informations obligatoires sont présentes
+        - les informations sur le cancer sont détaillées
+        - les informations sont cohérentes entre elles
+
+Voici le résultat au format JSON demandé :
+
+```json
+{
+  "CR": "
+Hôpital Édouard Herriot - Hospices Civils de Lyon
+Service de Cardiologie
+
+---
+
+**Informations patient**
+Nom : Desesquelles
+Prénom : Alain
+Date de naissance : 21/02/1973
+Date d'entrée : 28/10/2026
+Date de sortie : 31/10/2026
+
+---
+
+### Motif d’hospitalisation
+M. Desesquelles, âgé de 53 ans, a été admis en urgence ce jour pour une douleur thoracique constrictive évoluant depuis moins de 24 heures, associée à des sueurs froides et une sensation d’oppression. L’électrocardiogramme réalisé en préhospitalier a montré des modifications évocatrices d’un infarctus sous-endocardique, motivant son transfert immédiat en cardiologie pour prise en charge spécialisée.
+
+### Antécédents
+- **Médicaux** :
+  - Hypertension artérielle essentielle connue depuis plusieurs années, traitée mais mal équilibrée.
+  - Cardiomyopathie ischémique diagnostiquée il y a 3 ans, avec altération modérée de la fonction ventriculaire gauche.
+  - Insuffisance tricuspidienne modérée, non rhumatismale, surveillée régulièrement.
+  - Tabagisme actif important (environ 30 paquets-années), avec dépendance marquée.
+  - Antécédent de traitement au long cours par aspirine (Kardégic) dans le cadre de sa pathologie cardiovasculaire.
+- **Chirurgicaux** : Aucun antécédent notable.
+- **Familiaux** : Père décédé d’un infarctus du myocarde à 60 ans.
+- **Allergies** : Aucune allergie médicamenteuse connue.
+
+### Mode de vie
+M. Desesquelles est fumeur actif depuis plus de 30 ans, consommant environ un paquet de cigarettes par jour. Il travaille comme commercial, un métier sédentaire avec des déplacements fréquents. Il ne pratique aucune activité physique régulière. Sur le plan social, il vit seul et bénéficie d’un soutien familial occasionnel.
+
+### Histoire de la maladie
+Le patient décrit l’apparition brutale d’une douleur thoracique rétrosternale ce matin vers 6h, irradiant dans le bras gauche et la mâchoire, accompagnée de sueurs et de nausées. Les symptômes ont persisté malgré la prise de trinitrine sublinguale. Il a contacté le SAMU, qui a réalisé un ECG montrant un sous-décalage du segment ST en territoire inférieur, compatible avec un infarctus sous-endocardique. Un traitement par antiagrégants et anticoagulants a été initié en préhospitalier, et le patient a été transféré en urgence dans notre service.
+
+### Examen clinique
+À l’admission, le patient est conscient, anxieux, avec une pression artérielle à 160/95 mmHg, une fréquence cardiaque à 90 bpm, une saturation en oxygène à 96% en air ambiant et une température à 36,8°C. L’auscultation cardiaque révèle un souffle systolique au foyer tricuspide, connu, sans signe d’insuffisance cardiaque aiguë. Les pouls périphériques sont présents et symétriques. L’examen pulmonaire est sans particularité. Le poids est mesuré à 85 kg pour une taille de 1,78 m (IMC = 26,8 kg/m²). L’état général est conservé (ECOG 1).
+
+### Examens complémentaires
+- **Biologie** :
+  - Troponine Ic élevée à 12,5 ng/mL (N < 0,04 ng/mL), confirmant le diagnostic d’infarctus.
+  - Hypokaliémie modérée à 3,2 mmol/L (N : 3,5–5,0 mmol/L), corrigée par perfusion de chlorure de potassium.
+  - NFS : normale (hémoglobine à 14,2 g/dL, leucocytes à 8 500/mm³, plaquettes à 250 000/mm³).
+  - Créatinine : 95 µmol/L (DFG estimé à 78 mL/min/1,73 m²).
+  - Bilan hépatique : normal (ASAT 25 UI/L, ALAT 30 UI/L, bilirubine totale 12 µmol/L).
+- **Imagerie** :
+  - Coronarographie réalisée en urgence : sténose serrée de l’artère interventriculaire antérieure (IVA) moyenne, traitée par thromboaspiration et pose d’un stent actif.
+  - Échocardiographie transthoracique : fraction d’éjection ventriculaire gauche (FEVG) estimée à 45%, insuffisance tricuspidienne modérée sans signe de retentissement hémodynamique significatif.
+
+### Évolution pendant l'hospitalisation
+- **Démarche diagnostique** :
+  Le diagnostic d’infarctus sous-endocardique a été confirmé par l’élévation de la troponine et les anomalies ECG. La coronarographie a permis d’identifier la lésion coupable et de réaliser une revascularisation en urgence. L’hypokaliémie a été corrigée rapidement pour prévenir les troubles du rythme.
+- **Traitements** :
+  - Double antiagrégation plaquettaire (aspirine + clopidogrel) initiée dès l’admission.
+  - Anticoagulation par héparine non fractionnée en préhospitalier, relayée par héparine de bas poids moléculaire.
+  - Introduction d’un bêta-bloquant (bisoprolol) et d’un inhibiteur de l’enzyme de conversion (ramipril) pour l’hypertension et la cardiomyopathie ischémique.
+  - Correction de l’hypokaliémie par perfusion de KCl.
+  - Arrêt du tabac fortement encouragé, avec proposition d’un suivi en consultation de tabacologie.
+  - Surveillance clinique et biologique rapprochée (troponine, kaliémie, fonction rénale).
+
+L’évolution a été favorable, avec disparition des douleurs thoraciques et normalisation progressive de la troponine. Le patient est resté stable sur le plan hémodynamique, sans complication rythmique ni insuffisance cardiaque. Il a été éduqué sur les signes d’alerte et la nécessité d’un suivi cardiologique régulier.
+
+### Conclusion
+M. Desesquelles a présenté un infarctus sous-endocardique aigu de moins de 24 heures, pris en charge avec succès par revascularisation percutanée. Les facteurs de risque cardiovasculaires (hypertension, tabagisme, cardiomyopathie ischémique) ont été réévalués, et un traitement optimisé a été instauré. Le patient quitte le service avec un rendez-vous de suivi à 1 mois en consultation de cardiologie, ainsi qu’une orientation vers un programme de sevrage tabagique. Un bilan biologique de contrôle est prévu dans 15 jours pour vérifier la kaliémie et la fonction rénale.
+
+Dr Katy Tsalikian
+Service de Cardiologie
+Hôpital Édouard Herriot - Hospices Civils de Lyon
+",
+
+  "formulations": {
+    "diagnostics": {
+      "Infarctus sous-endocardique aigu du myocarde - Prise en charge initiale, infarctus de 24 heures ou moins (I21400)": [
+        "infarctus sous-endocardique",
+        "infarctus de moins de 24 heures",
+        "NSTEMI",
+        "douleur thoracique constrictive évoluant depuis moins de 24 heures",
+        "infarctus sans sus-décalage du ST"
+      ],
+      "Hypertension essentielle (primitive) (I10)": [
+        "hypertension artérielle essentielle",
+        "HTA mal équilibrée",
+        "poussée hypertensive"
+      ],
+      "Myocardiopathie ischémique (I255)": [
+        "cardiomyopathie ischémique",
+        "altération modérée de la fonction ventriculaire gauche",
+        "cardiopathie ischémique dilatée hypokinétique"
+      ],
+      "Hypokaliémies, autres et sans précision (E8768)": [
+        "hypokaliémie modérée",
+        "déficit en potassium"
+      ],
+      "Troubles mentaux et du comportement liés à l'utilisation de tabac : syndrome de dépendance (F172)": [
+        "tabagisme actif important",
+        "dépendance au tabac",
+        "fumeur actif depuis plus de 30 ans"
+      ],
+      "Syndrome de dépendance au tabac, utilisation continue (F1725)": [
+        "tabagisme non sevré",
+        "consommation continue de tabac"
+      ],
+      "Insuffisance non rhumatismale (de la valvule) tricuspide (I361)": [
+        "insuffisance tricuspidienne modérée",
+        "reflux tricuspidien non rhumatismal"
+      ],
+      "Antécédents personnels d'utilisation (actuelle) à long terme d'autres médicaments (Z922)": [
+        "traitement au long cours par aspirine",
+        "prise d’antiagrégants plaquettaires"
+      ],
+      "Dépendance envers d'autres machines et appareils auxiliaires (Z998)": [
+        "nécessité d’une revascularisation percutanée avec pose de stent"
+      ]
+    },
+    "informations": {
+      "Date entrée": ["28/10/2026"],
+      "Date de sortie": ["31/10/2026"],
+      "Service d'hospitalisation": ["Service de Cardiologie", "cardiologie"],
+      "Nom/Prénom du patient": ["Desesquelles Alain"],
+      "Nom/Prénom du médecin": ["Katy Tsalikian"],
+      "Âge": ["53 ans"],
+      "Sexe": ["masculin"],
+      "État général": ["ECOG 1", "état général conservé"],
+      "Poids": ["85 kg"],
+      "NFS": [
+        "hémoglobine à 14,2 g/dL",
+        "leucocytes à 8 500/mm³",
+        "plaquettes à 250 000/mm³",
+        "normale"
+      ],
+      "Créatinine": ["95 µmol/L", "DFG estimé à 78 mL/min/1,73 m²"],
+      "Bilan hépatique": [
+        "ASAT 25 UI/L",
+        "ALAT 30 UI/L",
+        "bilirubine totale 12 µmol/L",
+        "normal"
+      ],
+      "Traitements": [
+        "double antiagrégation plaquettaire (aspirine + clopidogrel)",
+        "anticoagulation par héparine non fractionnée puis héparine de bas poids moléculaire",
+        "bêta-bloquant (bisoprolol)",
+        "inhibiteur de l’enzyme de conversion (ramipril)",
+        "perfusion de KCl pour correction de l’hypokaliémie"
+      ]
+    }
+  }
+}
+```

@@ -1,0 +1,59 @@
+Le compte rendu suivant respecte les élements suivants :
+        - les diagnostics ont une formulation moins formelle que la définition du code
+        - le plan du CRH est conforme aux recommandations. Les sections sont introduites par des titres en ###
+        - les informations obligatoires sont présentes
+        - le style est clinique et informel
+
+Voici le résultat au format JSON demandé :
+
+```json
+{
+  "CR": "Hôpital Rangueil - Centre hospitalier universitaire de Toulouse\nService de Gynécologie\n\nCompte rendu opératoire\n\nIdentité de la patiente :\n- Nom : Ross\n- Prénom : Janne\n- Date de naissance : 23/07/1991\n\n### Intervention\nInterruption médicale de grossesse par aspiration sous contrôle échographique.\n\n### Date de l'intervention\n03/11/2026\n\n### Rappel clinique\nPatiente de 35 ans, enceinte, adressée pour interruption médicale de grossesse suite à la découverte d'anomalies fœtales lors des examens prénatals systématiques. Les résultats échographiques anormaux ont révélé des lésions fœtales présumées, motivant cette prise en charge.\n\n### Technique utilisée\nLa patiente a été installée en position gynécologique sous anesthésie générale. Après désinfection du champ opératoire, une aspiration endo-utérine a été réalisée sous contrôle échographique continu. Le produit de conception a été entièrement récupéré et adressé en anatomopathologie pour examen complet du placenta, du cordon et des membranes.\n\n### Constatations per-opératoires\nL’aspiration s’est déroulée sans difficulté technique particulière. Aucune anomalie utérine ou annexe n’a été notée en per-opératoire. Le produit de conception semblait macroscopiquement complet, sans signe évident de rétention.\n\n### Matériels utilisés\n- Canule d’aspiration de calibre adapté\n- Échographe avec sonde endovaginale pour guidage en temps réel\n- Kit de prélèvement stérile pour envoi en anatomopathologie\n\n### Nom du chirurgien\nDr Renee Girard\n\n---\nFin du compte rendu opératoire.",
+
+  "formulations": {
+    "diagnostics": {
+      "Interruption médicale de grossesse [IMG] [ITG] pour cause embryonnaire ou foetale, complet ou sans précision, sans complication (O0491)": [
+        "interruption médicale de grossesse",
+        "IMG pour cause fœtale"
+      ],
+      "Résultats échographiques anormaux au cours de l'examen prénatal systématique de la mère (O283)": [
+        "résultats échographiques anormaux lors du suivi prénatal",
+        "anomalies détectées à l’échographie prénatale"
+      ],
+      "Soins maternels pour d'autres anomalies et lésions foetales (présumées) (O358)": [
+        "lésions fœtales présumées",
+        "anomalies fœtales suspectées"
+      ]
+    },
+    "informations": {
+      "Intervention": [
+        "Interruption médicale de grossesse par aspiration sous contrôle échographique"
+      ],
+      "Date de l'intervention": [
+        "03/11/2026"
+      ],
+      "Nom/Prénom du chirurgien": [
+        "Dr Renee Girard"
+      ],
+      "Nom/Prénom du patient": [
+        "Ross Janne"
+      ],
+      "Âge": [
+        "35 ans"
+      ],
+      "Sexe": [
+        "Féminin"
+      ],
+      "État général": [
+        "Patiente installée en position gynécologique sous anesthésie générale"
+      ],
+      "Statut gestationnel": [
+        "enceinte"
+      ],
+      "Traitements": [
+        "anesthésie générale"
+      ]
+    }
+  }
+}
+```

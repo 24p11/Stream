@@ -1,0 +1,47 @@
+Le compte rendu suivant respecte les élements suivants :
+        - les diagnostics ont une formulation moins formelle que la définition du code
+        - le plan du CRH est conforme aux recommandations. Les sections sont rédigées de manière fluide et naturelle.
+        - les informations obligatoires sont présentes dans l'entête et l'encadré patient
+        - la cohérence temporelle et médicale est respectée entre les deux comptes rendus
+        - les dictionnaires de formulations sont fournis à la fin.
+
+Voici le résultat au format JSON demandé :
+
+```json
+{
+  "CR": "## Compte rendu opératoire\n\n**Service de Chirurgie Maxillo-Faciale Infantile - Hôpital Cochin - Assistance Publique Hôpitaux de Paris**\n\n**Patient :** Clet Thibaut\n**Date de naissance :** 18/06/2017\n\n### Intervention\nFermeture labiale primaire bilatérale avec chéilorhinoplastie pour fente labio-alvéolo-maxillaire.\n\n### Date de l'intervention\n27/05/2024\n\n### Diagnostic\nFente labiale bilatérale associée à une fente du voile et de la voûte palatine.\n\n### Technique utilisée\nL’enfant a été installé en décubitus dorsal sous anesthésie générale avec intubation orotrachéale. Après désinfection cutanée et mise en place des champs opératoires, une infiltration locale de xylocaïne adrénalinée a été réalisée au niveau des berges de la fente labiale et des structures nasales.\n\nUne incision cutanée a été pratiquée le long des berges de la fente labiale bilatérale, permettant de disséquer les tissus mous et de libérer les muscles orbiculaires des lèvres. Les structures alvéolaires et maxillaires ont été exposées, et une dissection sous-périostée a été réalisée pour mobiliser les lambeaux muqueux et musculaires.\n\nLa correction de la déformation nasale a été effectuée par une plastie des cartilages alaires et une reposition des dômes narinaires. Les structures nasales ont été stabilisées à l’aide de sutures résorbables.\n\nLa fermeture de la fente labiale a été réalisée en trois plans : muqueux, musculaire et cutané, avec un alignement précis du vermillon et de l’arc de Cupidon. Les sutures ont été effectuées à l’aide de fils résorbables (Vicryl 5/0 et 6/0).\n\n### Constatations per-opératoires\nLa fente labiale bilatérale était complète, s’étendant jusqu’à la base des narines. La fente palatine concernait à la fois le voile et la voûte du palais, avec une communication bucco-nasale large. Les structures alvéolaires étaient également atteintes, avec un défect osseux net. Aucune anomalie anatomique supplémentaire n’a été observée.\n\n### Matériels utilisés\n- Fils de suture résorbables (Vicryl 5/0 et 6/0)\n- Xylocaïne adrénalinée pour infiltration locale\n- Instruments de microchirurgie pour la dissection des tissus mous et des cartilages nasaux\n\n### Chirurgien\nDr Bernard Jouette\n\n-----\n\n## Compte rendu d’hospitalisation\n\n**Service de Chirurgie Maxillo-Faciale Infantile - Hôpital Cochin - Assistance Publique Hôpitaux de Paris**\n\n**Patient :** Clet Thibaut\n**Date de naissance :** 18/06/2017\n**Âge :** 6 ans\n**Sexe :** Masculin\n**Date d’entrée :** 24/05/2024\n**Date de sortie :** 30/05/2024\n\n### Motif d’hospitalisation\nPrise en charge chirurgicale d’une fente labiale bilatérale avec fente du voile et de la voûte palatine chez un enfant de 6 ans.\n\n### Antécédents\n- **Médicaux :** Aucun antécédent médical notable. Vaccinations à jour. Pas d’allergie connue.\n- **Chirurgicaux :** Aucun antécédent chirurgical.\n- **Familiaux :** Pas d’antécédent familial de fente labio-palatine connu.\n- **Allergies :** Aucune allergie médicamenteuse ou alimentaire rapportée.\n\n### Mode de vie\n- **Toxiques :** Aucun tabagisme passif rapporté. Pas de consommation d’alcool ou de substances illicites dans l’entourage familial.\n- **Profession des parents :** Non applicable (enfant scolarisé en classe de CP).\n- **Situation sociale :** Vit avec ses deux parents. Pas de difficultés sociales particulières.\n\n### Histoire de la maladie\nThibaut est né avec une fente labiale bilatérale associée à une fente du voile et de la voûte palatine, diagnostiquée en période néonatale. Une prise en charge pluridisciplinaire (chirurgien maxillo-facial, orthophoniste, ORL) a été initiée dès les premiers mois de vie. Des séances d’orthophonie ont été réalisées pour préparer la chirurgie et optimiser les conditions de la réparation. Aucune complication respiratoire ou alimentaire majeure n’a été rapportée.\n\nLa décision d’une chirurgie de fermeture labiale primaire bilatérale avec correction nasale a été prise lors d’une consultation multidisciplinaire en avril 2024.\n\n### Examen clinique\nÀ l’admission, l’enfant présentait un bon état général. Les constantes vitales étaient normales : fréquence cardiaque à 90 battements/min, tension artérielle à 95/60 mmHg, saturation en oxygène à 99 % en air ambiant, température à 36,8 °C.\n\nL’examen clinique mettait en évidence une fente labiale bilatérale complète, s’étendant jusqu’aux narines, avec une déformation nasale marquée (aplatissement des dômes narinaires et élargissement de la base nasale). La fente palatine concernait à la fois le voile et la voûte du palais, avec une communication bucco-nasale large. Le poids de l’enfant était de 20 kg, avec un indice de masse corporelle dans les limites de la normale pour l’âge.\n\nAucun signe d’infection locale ou de trouble de la croissance faciale n’était observé.\n\n### Examens complémentaires\n- **Bilan préopératoire :** NFS, ionogramme sanguin, bilan d’hémostase et groupe sanguin réalisés le 24/05/2024. Tous les résultats étaient dans les limites de la normale.\n  - Hémoglobine : 12,5 g/dL\n  - Leucocytes : 7 800/mm³\n  - Plaquettes : 320 000/mm³\n  - TP : 95 %\n  - TCA : 32 secondes\n- **Évaluation ORL :** Pas d’obstruction nasale significative. Pas de signe d’otite séreuse.\n- **Évaluation orthophonique :** Pas de trouble de la déglutition majeur. L’enfant présente un retard de langage modéré, lié à la fente palatine, en cours de rééducation.\n\n### Évolution pendant l'hospitalisation\nL’intervention chirurgicale a été réalisée le 27/05/2024 sans complication peropératoire. En postopératoire immédiat, l’enfant a été surveillé en salle de réveil pendant 2 heures, puis transféré en service de chirurgie pédiatrique.\n\nLes suites opératoires ont été simples. Une alimentation liquide froide a été débutée dès le lendemain de l’intervention, puis progressivement élargie à une alimentation molle. Une analgésie par paracétamol a été suffisante pour contrôler la douleur postopératoire.\n\nLes pansements ont été refaits quotidiennement, avec application de vaseline sur les sutures pour éviter la dessiccation. Aucune infection locale ou saignement n’a été observé. Les fils de suture résorbables n’ont pas nécessité de retrait.\n\nL’enfant a été revu en consultation postopératoire le 29/05/2024. L’examen clinique montrait une bonne cicatrisation des berges labiales, avec un alignement satisfaisant du vermillon et de l’arc de Cupidon. La correction nasale était symétrique, avec une amélioration nette de la projection des dômes narinaires. La communication bucco-nasale était fermée.\n\nUne ordonnance de soins locaux (nettoyage des sutures au sérum physiologique, application de vaseline) et d’antalgie (paracétamol si besoin) a été remise à la sortie. Un suivi en consultation a été programmé à 1 mois, avec une évaluation orthophonique et ORL.\n\n### Conclusion\nThibaut a bénéficié d’une fermeture labiale primaire bilatérale avec chéilorhinoplastie pour fente labio-alvéolo-maxillaire, réalisée avec succès. Les suites opératoires ont été simples, avec une cicatrisation satisfaisante et une amélioration esthétique et fonctionnelle notable. La sortie est autorisée ce jour, avec un suivi pluridisciplinaire programmé.\n\n**Médecin signataire :** Dr Bernard Jouette",
+
+  "formulations": {
+    "diagnostics": {
+      "Q37.4 — Fente de la voûte et du voile du palais avec fente labiale bilatérale": [
+        "Fente labiale bilatérale associée à une fente du voile et de la voûte palatine",
+        "Fente labiale bilatérale complète, s’étendant jusqu’aux narines, avec une fente du voile et de la voûte palatine",
+        "Fente labiale bilatérale avec fente du voile et de la voûte palatine",
+        "Fente labiale bilatérale avec déformation nasale marquée et fente palatine (voile et voûte)"
+      ]
+    },
+    "informations": {
+      "Date entrée": ["24/05/2024"],
+      "Date de sortie": ["30/05/2024"],
+      "Service d'hospitalisation": ["Service de Chirurgie Maxillo-Faciale Infantile - Hôpital Cochin - Assistance Publique Hôpitaux de Paris"],
+      "Intervention": ["Fermeture labiale primaire bilatérale avec chéilorhinoplastie pour fente labio-alvéolo-maxillaire"],
+      "Date de l'intervention": ["27/05/2024"],
+      "Nom/Prénom du chirurgien": ["Dr Bernard Jouette"],
+      "Nom/Prénom du patient": ["Clet Thibaut"],
+      "Âge": ["6 ans"],
+      "Sexe": ["Masculin"],
+      "État général": ["bon état général", "Les constantes vitales étaient normales"],
+      "Poids": ["20 kg"],
+      "Comorbidités": ["Aucun antécédent médical notable"],
+      "Médicaments": ["paracétamol", "xylocaïne adrénalinée"],
+      "NFS": [
+        "Hémoglobine : 12,5 g/dL",
+        "Leucocytes : 7 800/mm³",
+        "Plaquettes : 320 000/mm³"
+      ],
+      "Créatinine": ["Non mentionnée (bilan préopératoire normal)"],
+      "Bilan hépatique": ["Non mentionné (bilan préopératoire normal)"]
+    }
+  }
+}
+```

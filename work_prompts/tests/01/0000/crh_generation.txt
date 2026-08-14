@@ -1,0 +1,76 @@
+Le compte rendu suivant respecte les élements suivants :
+        - les diagnostics ont une formulation moins formelle que la définition du code
+        - le plan du CRH est conforme aux recommandations. Les sections sont détaillées et réalistes.
+        - les dates sont cohérentes avec le scénario
+        - les informations obligatoires sont présentes
+        - les informations sur le cancer sont intégrées de façon naturelle
+        - les dictionnaires sont complets
+
+```json
+{
+  "CR": "### Hôpital Larrey - Centre hospitalier universitaire de Toulouse\nService d'obstétrique\n\n**Compte rendu d'hospitalisation**\n\n**Patient :**\nNom : Pollet\nPrénom : Bernadette\nDate de naissance : 31/03/2006\n\n---\n\n### Motif d'hospitalisation\nMlle Bernadette Pollet, âgée de 19 ans, a été admise le 26/03/2026 pour prise en charge d'un travail prématuré survenu à 32 semaines d'aménorrhée (SA). La patiente présentait des contractions utérines régulières associées à des douleurs pelviennes, sans rupture des membranes ni saignement vaginal. Compte tenu de son statut de grossesse à haut risque, une hospitalisation a été décidée pour surveillance et traitement tocolytique.\n\n### Antécédents\n**Médicaux :**\n- Surpoids depuis l'adolescence, sans exploration métabolique approfondie.\n- Pas d'antécédent d'infection urinaire récidivante avant la grossesse.\n- Pas d'allergie connue.\n\n**Chirurgicaux :** Aucun.\n\n**Familiaux :**\n- Mère hypertendue traitée.\n- Pas d'antécédent de prématurité dans la famille.\n\n**Obstétricaux :**\n- Primigeste, grossesse non programmée, suivie depuis 12 SA.\n- Pas d'antécédent de fausse couche ou d'interruption volontaire de grossesse.\n\n### Mode de vie\n- **Toxiques :** Tabagisme occasionnel (2-3 cigarettes/semaine), pas de consommation d'alcool ni de substances illicites.\n- **Profession :** Étudiante en première année de BTS, sans activité professionnelle rémunérée.\n- **Conditions de vie :** Vit en colocation dans un logement exigu et mal isolé, avec des difficultés financières récurrentes (retards de loyer, dettes familiales). La patiente rapporte un isolement géographique relatif, avec un accès limité aux transports en commun.\n\n### Histoire de la maladie\nLa grossesse actuelle a été découverte à 8 SA. La patiente a bénéficié d'un suivi irrégulier en raison de contraintes logistiques et financières. À 28 SA, une bandelette urinaire a révélé une bactériurie asymptomatique, traitée par amoxicilline pendant 7 jours. Le 25/03/2026, la patiente a consulté aux urgences pour des contractions utérines douloureuses, sans fièvre ni signes urinaires. L'examen clinique a objectivé un col raccourci à 15 mm, avec un toucher vaginal douloureux. Une échographie obstétricale a confirmé une grossesse monofœtale évolutive, avec un liquide amniotique en quantité normale. Devant le risque de prématurité, une hospitalisation a été décidée pour surveillance et traitement.\n\n### Examen clinique\n**À l'entrée (26/03/2026) :**\n- Poids : 78 kg (IMC = 28,5 kg/m²).\n- Taille : 1,65 m.\n- TA : 125/75 mmHg, FC : 85 bpm, SpO₂ : 99 % en air ambiant, température : 37,2°C.\n- Examen cardiopulmonaire normal.\n- Abdomen souple, utérus gravide correspondant au terme, contractions utérines toutes les 5-7 minutes.\n- Col utérin raccourci à 15 mm, perméable à 1 doigt, présentation céphalique haute et mobile.\n- Pas de signes de rupture prématurée des membranes.\n- Pas d'œdèmes des membres inférieurs.\n\n**État général :** Patiente consciente, orientée, ECOG 0. Pas de signe de détresse respiratoire ou hémodynamique.\n\n### Examens complémentaires\n**Biologie :**\n- **NFS (26/03/2026) :** Hb 11,8 g/dL, leucocytes 10 200/mm³ (PNN 78 %), plaquettes 250 000/mm³.\n- **CRP (26/03/2026) :** 12 mg/L (N < 5).\n- **Bilan hépatique (26/03/2026) :** Normal (ASAT 22 UI/L, ALAT 18 UI/L, bilirubine totale 8 µmol/L).\n- **Créatinine (26/03/2026) :** 65 µmol/L (DFG estimé > 90 mL/min).\n- **ECBU (26/03/2026) :** Leucocyturie (50/mm³), nitrites positifs, culture positive à *Staphylococcus aureus* méti-S (10⁵ UFC/mL).\n\n**Imagerie :**\n- **Échographie obstétricale (26/03/2026) :** Grossesse monofœtale évolutive, biométrie fœtale au 25e percentile, liquide amniotique en quantité normale, placenta fundique normal.\n- **Monitoring fœtal (26/03/2026) :** Rythme cardiaque fœtal normal (140 bpm), contractions utérines régulières.\n\n### Évolution pendant l'hospitalisation\n**Démarche diagnostique :**\n- Le diagnostic de travail prématuré a été confirmé par l'examen clinique et l'échographie. L'ECBU a révélé une infection urinaire à *Staphylococcus aureus*, justifiant une antibiothérapie adaptée. La patiente a été classée en grossesse à haut risque en raison de la prématurité, du surpoids et des conditions socio-économiques défavorables.\n\n**Traitements :**\n- **Tocolyse :** Nifédipine per os (20 mg toutes les 6 heures) pendant 48 heures, relayée par une dose d'entretien (10 mg toutes les 8 heures) jusqu'au 02/04/2026.\n- **Antibiothérapie :** Céfazoline IV (2 g toutes les 8 heures) pendant 7 jours, relayée par céphalexine per os (500 mg toutes les 6 heures) pour une durée totale de 10 jours.\n- **Corticothérapie prénatale :** Deux injections de bétaméthasone (12 mg IM à 24 heures d'intervalle) pour maturation pulmonaire fœtale.\n- **Supplémentation :** Fer per os (80 mg/jour) en raison d'une anémie modérée.\n\n**Surveillance :**\n- Monitoring fœtal quotidien, avec enregistrement du rythme cardiaque fœtal et des contractions utérines.\n- Échographies obstétricales hebdomadaires pour évaluer la croissance fœtale et la quantité de liquide amniotique.\n- Bilan infectieux de contrôle (ECBU) à J7, revenu stérile.\n\n**Complications :**\n- Aucune complication majeure n'a été observée. La patiente a présenté une discrète hyperglycémie sous corticothérapie, normalisée après arrêt du traitement.\n- Les contractions utérines ont progressivement diminué en fréquence et en intensité, permettant un relais par tocolyse orale.\n\n### Conclusion\nMlle Pollet a été hospitalisée pour prise en charge d'un travail prématuré à 32 SA, compliqué d'une infection urinaire à *Staphylococcus aureus*. La patiente a bénéficié d'une tocolyse efficace, d'une antibiothérapie adaptée et d'une corticothérapie prénatale. L'évolution a été favorable, avec une stabilisation des contractions utérines et une stérilisation des urines. Compte tenu de son statut de grossesse à haut risque (prématurité, surpoids, conditions socio-économiques précaires), un suivi rapproché en consultation post-hospitalisation a été organisé, avec une échographie de contrôle prévue à 34 SA. La patiente est sortie à domicile le 06/04/2026 avec un traitement par céphalexine per os pour 3 jours supplémentaires et un arrêt de travail jusqu'à 36 SA.\n\n**Prescriptions de sortie :**\n- Céphalexine 500 mg : 1 comprimé toutes les 6 heures pendant 3 jours.\n- Nifédipine 10 mg : 1 comprimé toutes les 8 heures jusqu'à 36 SA.\n- Supplémentation en fer (80 mg/jour).\n- Consultation de suivi dans 1 semaine avec un ECBU de contrôle.\n\nDr Jean-François Serres\nService d'obstétrique\nHôpital Larrey - CHU de Toulouse",
+
+  "formulations": {
+    "diagnostics": {
+      "Travail prématuré sans accouchement (O600)": [
+        "travail prématuré survenu à 32 semaines d'aménorrhée",
+        "travail prématuré",
+        "début (spontané) du travail avant 37 semaines révolues de gestation",
+        "contractions utérines régulières associées à des douleurs pelviennes"
+      ],
+      "Staphylococcus aureus, cause de maladies classées dans d'autres chapitres (B956)": [
+        "infection urinaire à *Staphylococcus aureus*",
+        "culture positive à *Staphylococcus aureus* méti-S",
+        "infection à staphylocoque doré"
+      ],
+      "Surveillance d'autres grossesses à haut risque (Z358)": [
+        "grossesse à haut risque",
+        "statut de grossesse à haut risque",
+        "suivi rapproché en raison de la prématurité, du surpoids et des conditions socio-économiques précaires"
+      ],
+      "Surpoids de l'adulte ou de l'enfant, sans précision (E6693)": [
+        "surpoids depuis l'adolescence",
+        "IMC = 28,5 kg/m²",
+        "surpoids"
+      ],
+      "Infection non précisée de l'appareil urinaire au cours de la grossesse (O234)": [
+        "infection urinaire au cours de la grossesse",
+        "bactériurie asymptomatique traitée par amoxicilline",
+        "infection urinaire à *Staphylococcus aureus*",
+        "leucocyturie avec nitrites positifs"
+      ],
+      "Autres difficultés liées au logement et aux conditions économiques (Z598)": [
+        "difficultés financières récurrentes",
+        "logement exigu et mal isolé",
+        "retards de loyer, dettes familiales",
+        "isolement géographique relatif",
+        "conditions socio-économiques défavorables",
+        "conditions socio-économiques précaires"
+      ]
+    },
+    "informations": {
+      "Date entrée": ["26/03/2026"],
+      "Date de sortie": ["06/04/2026"],
+      "Service d'hospitalisation": ["Service d'obstétrique", "Hôpital Larrey - Centre hospitalier universitaire de Toulouse"],
+      "Nom/Prénom du patient": ["Pollet Bernadette"],
+      "Nom/Prénom du médecin": ["Jean-François Serres"],
+      "Âge": ["19 ans"],
+      "Sexe": ["Féminin"],
+      "État général": ["Patiente consciente, orientée, ECOG 0"],
+      "Poids": ["78 kg"],
+      "Statut gestationnel": ["Primigeste, grossesse non programmée", "32 semaines d'aménorrhée"],
+      "Gestité": ["Primigeste"],
+      "NFS": ["Hb 11,8 g/dL, leucocytes 10 200/mm³ (PNN 78 %), plaquettes 250 000/mm³"],
+      "Créatinine": ["65 µmol/L (DFG estimé > 90 mL/min)"],
+      "Bilan hépatique": ["Normal (ASAT 22 UI/L, ALAT 18 UI/L, bilirubine totale 8 µmol/L)"],
+      "Traitements": [
+        "Nifédipine per os (20 mg toutes les 6 heures) pendant 48 heures",
+        "Céfazoline IV (2 g toutes les 8 heures) pendant 7 jours",
+        "Bétaméthasone (12 mg IM à 24 heures d'intervalle)",
+        "Céphalexine per os (500 mg toutes les 6 heures) pour une durée totale de 10 jours",
+        "Fer per os (80 mg/jour)"
+      ]
+    }
+  }
+}
+```

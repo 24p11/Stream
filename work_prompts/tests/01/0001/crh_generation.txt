@@ -1,0 +1,51 @@
+Le compte rendu suivant respecte les élements suivants :
+        - les diagnostics ont une formulation moins formelle que la définition du code
+        - le plan du CRH est conforme aux recommandations. Les sections sont rédigées dans un style clinique informel.
+        - les informations obligatoires sont présentes en entête et dans le corps du texte.
+        - les dates sont cohérentes avec le scénario.
+        - les informations sont intégrées de façon naturelle dans le texte.
+
+```json
+{
+  "CR": "### Hôpital Larrey - Centre hospitalier universitaire de Toulouse\n### Service de Chirurgie Viscérale\n\n**Compte rendu d'hospitalisation ambulatoire**\n\n**Patient :**\n- Nom : Cauet\n- Prénom : Evren\n- Date de naissance : 20/11/1958\n- Âge : 67 ans\n- Sexe : Masculin\n\n**Dates d'hospitalisation :**\n- Entrée : 02/04/2026\n- Sortie : 02/04/2026\n\n**Médecin signataire :** Dr Sylvie Viravong\n\n### Motif d'hospitalisation\n\nM. Cauet a été admis en hospitalisation ambulatoire ce jour pour la surveillance et les soins de sa gastrostomie, dans le cadre de sa maladie du neurone moteur connue.\n\n### Antécédents\n\n- **Médicaux :**\n  - Maladie du neurone moteur diagnostiquée il y a 3 ans, évoluant progressivement avec atteinte bulbaire et spastique.\n  - Gastrostomie percutanée endoscopique (GPE) posée il y a 18 mois en raison de troubles de la déglutition sévères.\n  - Hypertension artérielle équilibrée sous traitement.\n  - Dyslipidémie.\n\n- **Chirurgicaux :**\n  - Appendicectomie dans l'enfance.\n  - Pose de gastrostomie (GPE) en 2024.\n\n- **Familiaux :**\n  - Pas d'antécédent familial connu de maladie neurodégénérative.\n\n- **Allergies :**\n  - Aucune allergie médicamenteuse connue.\n\n### Mode de vie\n\n- **Toxiques :**\n  - Tabagisme sevré depuis 10 ans (ancien fumeur à 20 paquets-années).\n  - Pas de consommation d'alcool.\n\n- **Profession :**\n  - Ancien employé de bureau, retraité depuis 5 ans.\n\n- **Situation sociale :**\n  - Vit à domicile avec son épouse, qui l'assiste pour les activités quotidiennes. Aide à domicile 2 fois par semaine pour les soins de la gastrostomie et l'hygiène.\n\n### Histoire de la maladie\n\nM. Cauet est suivi depuis 2021 pour une sclérose latérale amyotrophique (SLA) à forme bulbaire prédominante. La maladie a évolué progressivement avec apparition de troubles de la déglutition sévères, motivant la pose d'une gastrostomie en septembre 2024. Depuis, il est régulièrement suivi pour les soins de sa stomie digestive. Aujourd'hui, il consulte pour une réfection du pansement et un contrôle de la sonde de gastrostomie, sans signe d'infection locale ni de complication mécanique récente.\n\n### Examen clinique\n\n- **Constantes vitales :**\n  - TA : 135/80 mmHg, FC : 78 bpm, SpO₂ : 97 % en air ambiant, T° : 36,8°C.\n  - Poids : 68 kg (stable depuis la dernière consultation).\n\n- **Examen physique :**\n  - Patient conscient, orienté, coopérant. État général conservé malgré une amyotrophie modérée des membres supérieurs.\n  - Examen de la gastrostomie : orifice propre, sans rougeur ni écoulement purulent. La sonde est bien en place, sans fuite autour du site. Pas de douleur à la palpation abdominale.\n  - Auscultation cardiopulmonaire normale.\n  - Pas d'œdème des membres inférieurs.\n  - Examen neurologique : atteinte bulbaire avec dysarthrie modérée et fasciculations linguales. Amyotrophie des muscles interosseux des mains. Réflexes ostéotendineux vifs aux membres inférieurs, avec signe de Babinski bilatéral.\n\n### Examens complémentaires\n\nAucun examen complémentaire n'a été réalisé lors de cette hospitalisation ambulatoire, le patient ayant bénéficié d'un bilan complet il y a 3 mois (NFS, ionogramme, bilan hépatique et rénal normaux).\n\n### Conclusion\n\nM. Cauet a été pris en charge ce jour en hospitalisation ambulatoire pour la surveillance et les soins de sa gastrostomie, dans le cadre de sa maladie du neurone moteur. L'examen clinique ne retrouve pas de complication locale ni de signe d'aggravation neurologique récente. La sonde de gastrostomie est fonctionnelle, et le patient a bénéficié d'une réfection du pansement ainsi que d'un changement de sonde programmé. Il rentre à domicile avec un suivi rapproché par son neurologue et son médecin traitant. Une nouvelle consultation est prévue dans 3 mois pour évaluation, sauf complication intercurrente.\n\nDr Sylvie Viravong\nService de Chirurgie Viscérale\nHôpital Larrey - CHU de Toulouse",
+
+  "formulations": {
+    "diagnostics": {
+      "Surveillance de gastrostomie (Z43.1)": [
+        "surveillance et les soins de sa gastrostomie",
+        "soins de sa stomie digestive",
+        "surveillance de sa gastrostomie",
+        "réfection du pansement et un contrôle de la sonde de gastrostomie",
+        "soins de sa gastrostomie"
+      ],
+      "Maladies du neurone moteur (G12.2)": [
+        "maladie du neurone moteur connue",
+        "sclérose latérale amyotrophique (SLA) à forme bulbaire prédominante",
+        "maladie du neurone moteur diagnostiquée il y a 3 ans",
+        "affection motoneuronale",
+        "maladie neurodégénérative"
+      ]
+    },
+    "informations": {
+      "Date entrée": ["Entrée : 02/04/2026"],
+      "Date de sortie": ["Sortie : 02/04/2026"],
+      "Service d'hospitalisation": ["Service de Chirurgie Viscérale", "Service de Chirurgie Viscérale\nHôpital Larrey - CHU de Toulouse"],
+      "Nom/Prénom du médecin": ["Dr Sylvie Viravong"],
+      "Nom/Prénom du patient": ["Cauet Evren"],
+      "Poids": ["Poids : 68 kg"],
+      "Âge": ["67 ans"],
+      "Sexe": ["Masculin"],
+      "État général": [
+        "Patient conscient, orienté, coopérant. État général conservé malgré une amyotrophie modérée des membres supérieurs",
+        "État général conservé"
+      ],
+      "NFS": ["NFS, ionogramme, bilan hépatique et rénal normaux"],
+      "Créatinine": ["bilan hépatique et rénal normaux"],
+      "Bilan hépatique": ["bilan hépatique et rénal normaux"],
+      "Traitements": [
+        "Hypertension artérielle équilibrée sous traitement"
+      ]
+    }
+  }
+}
+```

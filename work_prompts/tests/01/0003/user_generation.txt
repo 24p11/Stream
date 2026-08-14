@@ -1,0 +1,110 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 0 ans
+- Sexe du patient : Masculin
+- Date d'entrée : 17/02/2025
+- Date de sortie : 11/03/2025
+- Date de naissance : 04/02/2025
+- Nom du patient : Goueffon
+- Prénom du patient : Avraham
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
+- Codage CIM10 :
+   * Diagnostic principal : Autres enfants nés avant terme (P073)
+   * Diagnostics associés :
+      - Alimentation lente du nouveau-né (P922)
+- Nom du médecin / signataire : Raymond Barade
+- Service : NEONATOLOGIE
+- Hôpital : Hôpital Pellegrin - CHU de Bordeaux
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="P07.3">
+
+# P07.3 — Autres enfants nés avant terme
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P05-P08 : Anomalies liées à la durée de la gestation et à la croissance du fœtus
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+Inclusions héritées de la catégorie P07 :
+- les états mentionnés, sans autre précision, comme cause de mortalité, de morbidité ou de soins supplémentaires du nouveau-né
+
+Au niveau du code :
+- 28 semaines entières ou plus mais moins de 37 semaines entières de gestation (196 jours entiers mais moins de 259 jours entiers).
+- prématurité SAI
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie P07) :
+
+faible poids de naissance dû à un retard de croissance et à une malnutrition du fœtus (P05.-)
+
+## Formulations cliniques alternatives
+- accouchement prématuré
+- ancien prématuré
+- Enfant - voir aussi nom de l'état pathologique, né, avant terme (28 à 37 semaines entières) (196 à 259 jours)
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, né, avant terme (28 à moins de 37 semaines entières) (196 à 259 jours)
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, prématurité (28 à moins de 37 semaines entières) (196 à 259 jours)
+- Immaturité (28 semaines entières ou plus mais moins de 37 semaines entières)
+- Naissance (en ce qui concerne l'enfant) (voir aussi foetus et nouveau-né), avant terme (avec)
+- naissance prématurée 29 semaines
+- Nca, prématuré (28 à moins de 37 semaines entières de gestation) (196 à moins de 259 jours)
+- prématurité + 28 semaines
+- Prématurité (28 à 37 semaines entières de gestation) (l96 à 259 jours)
+- prématurité 31 semaines
+- prématurité 32 SA
+- prématurité 33 semaines
+- prématurité 34 semaines
+- prématurité 35 SA
+- prématurité plus 28 semaines
+
+</fiche_code>
+
+<fiche_code code="P92.2">
+
+# P92.2 — Alimentation lente du nouveau-né
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P90-P96 : Autres affections dont l'origine se situe dans la période périnatale
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+## Formulations cliniques alternatives
+- Alimentation, lente, nouveau-né
+- Problème (avec) (de), alimentation (enfant) (personne âgée), nouveau-né, alimentation lente
+- Trouble(s) (de) - voir aussi maladie, alimentation (psychogène), nouveau-né, alimentation lente
+
+</fiche_code>
