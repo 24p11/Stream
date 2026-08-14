@@ -1,0 +1,92 @@
+[0000]
+    AVERT  sortie non-JSON pure : texte hors objet détecté (préambule/prefix déclaratif), JSON extrait
+    ECHEC  formulation fantôme [diagnostics/Naissance unique, enfant vivant (Z37.0)] : « accouché [...] d'un enfant vivant »
+    ECHEC  formulation fantôme [diagnostics/Accouchement (unique) spontané par présentation du sommet (O80.0)] : « accouchement par voie basse spontanée »
+    ECHEC  formulation fantôme [diagnostics/Accouchement (unique) spontané par présentation du sommet (O80.0)] : « accouchement [...] par présentation du sommet »
+    ECHEC  formulation fantôme [informations/Sexe] : « Féminin »
+    ECHEC  formulation fantôme [informations/État général] : « La patiente est apyrétique, avec une tension artérielle à 11 »
+    ECHEC  formulation fantôme [informations/Créatinine] : « bilan rénal dans les limites de la normale »
+    ECHEC  formulation fantôme [informations/Bilan hépatique] : « bilan hépatique [...] dans les limites de la normale »
+    AVERT  clés absentes du dictionnaire : Nom/Prénom du médecin, Traitements
+    ECHEC  mention IPP absente de l'en-tête
+[0001]
+    AVERT  sortie non-JSON pure : texte hors objet détecté (préambule/prefix déclaratif), JSON extrait
+    ECHEC  formulation fantôme [diagnostics/Fœtus et nouveau-né affectés par un accouchement par extracteur pneumatique [ventouse] (P03.3)] : « accouchement par voie basse instrumentale sous ventouse obst »
+    ECHEC  formulation fantôme [diagnostics/Enfant né après terme, qui n'est pas gros pour l'âge gestationnel (P08.2)] : « né à 42 semaines d'aménorrhée et 2 jours »
+    ECHEC  formulation fantôme [informations/Nom/Prénom du patient] : « De Crescenzo Khmaies »
+    ECHEC  formulation fantôme [informations/Nom/Prénom du médecin] : « Germain Lecouey »
+    ECHEC  mention IPP absente de l'en-tête
+[0002]
+    AVERT  sortie non-JSON pure : texte hors objet détecté (préambule/prefix déclaratif), JSON extrait
+    ECHEC  formulation fantôme [diagnostics/Crampe et spasme (R252)] : « spasmes localisés du membre supérieur droit »
+    ECHEC  formulation fantôme [informations/Nom/Prénom du patient] : « Melgar-Luque Lillia »
+    ECHEC  formulation fantôme [informations/Sexe] : « Féminin »
+    ECHEC  formulation fantôme [informations/NFS] : « NFS normaux »
+    ECHEC  formulation fantôme [informations/Créatinine] : « fonction rénale normale »
+    ECHEC  mention IPP absente de l'en-tête
+[0003]
+    AVERT  sortie non-JSON pure : texte hors objet détecté (préambule/prefix déclaratif), JSON extrait
+    ECHEC  formulation fantôme [informations/Nom/Prénom du patient] : « Genand desgollets Yvette »
+    ECHEC  formulation fantôme [informations/Âge] : « 0 ans »
+    ECHEC  formulation fantôme [informations/Sexe] : « Féminin »
+    ECHEC  formulation fantôme [informations/Bilan hépatique] : « bilan hépatique [...] dans les limites de la normale »
+    ECHEC  mention IPP absente de l'en-tête
+[0004]
+    AVERT  sortie non-JSON pure : texte hors objet détecté (préambule/prefix déclaratif), JSON extrait
+    ECHEC  formulation fantôme [diagnostics/Diabète sucré de type 2 - Sans complication - diabète sucré de type 2 insulinotraité (E11.90)] : « Diabète de type 2 traité par insuline, sans complication con »
+    ECHEC  formulation fantôme [diagnostics/Diabète sucré de type 2 - Sans complication - diabète sucré de type 2 insulinotraité (E11.90)] : « Diabète de type 2 insulinotraité, actuellement équilibré de  »
+    ECHEC  formulation fantôme [informations/Nom/Prénom du patient] : « Granet Pierre »
+    ECHEC  formulation fantôme [informations/Sexe] : « Masculin »
+    ECHEC  formulation fantôme [informations/État général] : « poids stable à 82 kg »
+    ECHEC  mention IPP absente de l'en-tête
+    AVERT  maladie chronique mentionnée : diabète (à confronter au scénario)
+[0005]
+    AVERT  sortie non-JSON pure : texte hors objet détecté (préambule/prefix déclaratif), JSON extrait
+    ECHEC  formulation fantôme [diagnostics/Fœtus et nouveau-né affectés par une grossesse multiple (P01.5)] : « grossesse gémellaire chez la mère »
+    ECHEC  formulation fantôme [diagnostics/Fœtus et nouveau-né affectés par d'autres complications précisées du travail et de l'accouchement (P03.8)] : « travail compliqué »
+    ECHEC  formulation fantôme [informations/Date entrée] : « 09/09/2024 »
+    ECHEC  formulation fantôme [informations/Nom/Prénom du patient] : « Sattler Monique »
+    ECHEC  formulation fantôme [informations/État général] : « bonne réactivité »
+    ECHEC  mention IPP absente de l'en-tête
+[0006]
+    AVERT  sortie non-JSON pure : texte hors objet détecté (préambule/prefix déclaratif), JSON extrait
+    ECHEC  formulation fantôme [informations/Sexe] : « Féminin »
+    ECHEC  formulation fantôme [informations/État général] : « apatiente, eupnéique »
+    ECHEC  formulation fantôme [informations/État général] : « poids stable à 58 kg »
+    AVERT  clés absentes du dictionnaire : Nom/Prénom du médecin, Traitements
+    ECHEC  mention IPP absente de l'en-tête
+    AVERT  maladie chronique mentionnée : hypertension (à confronter au scénario)
+[0007]
+    AVERT  sortie non-JSON pure : texte hors objet détecté (préambule/prefix déclaratif), JSON extrait
+    ECHEC  formulation fantôme [informations/Nom/Prénom du patient] : « Boisanfray Hanissa »
+    ECHEC  formulation fantôme [informations/Sexe] : « Féminin »
+    ECHEC  formulation fantôme [informations/État général] : « La patiente était apyrétique, avec une tension artérielle à  »
+    ECHEC  formulation fantôme [informations/Créatinine] : « créatininémie dans les limites de la normale »
+    ECHEC  formulation fantôme [informations/Bilan hépatique] : « bilan hépatique dans les limites de la normale »
+    ECHEC  formulation fantôme [informations/Traitements] : « traitement tocolytique par nifédipine pour 48 heures »
+    ECHEC  mention IPP absente de l'en-tête
+[0008]
+    AVERT  sortie non-JSON pure : texte hors objet détecté (préambule/prefix déclaratif), JSON extrait
+    ECHEC  formulation fantôme [diagnostics/Déchirure obstétricale du périnée, du premier degré (O700)] : « une déchirure périnéale du premier degré, intéressant la fou »
+    ECHEC  formulation fantôme [diagnostics/Naissance unique, enfant vivant (Z370)] : « a accouché [...] d'un garçon de 3450 grammes »
+    ECHEC  formulation fantôme [informations/Nom/Prénom du patient] : « Mme Rocheron Monique »
+    ECHEC  formulation fantôme [informations/Sexe] : « Féminin »
+    AVERT  clés absentes du dictionnaire : Nom/Prénom du médecin, Traitements
+    ECHEC  mention IPP absente de l'en-tête
+    AVERT  maladie chronique mentionnée : diabète (à confronter au scénario)
+    AVERT  maladie chronique mentionnée : hypertension (à confronter au scénario)
+[0009]
+    AVERT  sortie non-JSON pure : texte hors objet détecté (préambule/prefix déclaratif), JSON extrait
+    ECHEC  gras interdit (3 occurrence(s)) : **Biologie**, **Échographie obstétricale**, **Monitoring fœtal**
+    ECHEC  formulation fantôme [diagnostics/Naissance unique, enfant vivant (Z37.0)] : « naissance d'un enfant vivant de sexe féminin »
+    ECHEC  formulation fantôme [diagnostics/Soins maternels pour croissance insuffisante du fœtus (O36.5)] : « croissance fœtale estimée au 5e percentile pour le terme »
+    ECHEC  formulation fantôme [diagnostics/Accouchement prématuré sans travail spontané (O60.3)] : « accouchement prématuré par voie basse après déclenchement du »
+    ECHEC  formulation fantôme [diagnostics/Antécédents personnels de complications de la grossesse, de l'accouchement et de la puerpéralité (Z87.5)] : « antécédent de complications lors d'une précédente grossesse »
+    ECHEC  formulation fantôme [informations/Sexe] : « Féminin »
+    ECHEC  formulation fantôme [informations/État général] : « La patiente présentait une tension artérielle à 150/95 mmHg, »
+    ECHEC  formulation fantôme [informations/Poids] : « 1 850 grammes (poids de l'enfant à la naissance) »
+    AVERT  clés absentes du dictionnaire : Nom/Prénom du médecin, Traitements
+    ECHEC  mention IPP absente de l'en-tête
+    AVERT  maladie chronique mentionnée : hypertension (à confronter au scénario)
+
+Bilan : 61 échec(s), 19 avertissement(s) sur 10 scénario(s)

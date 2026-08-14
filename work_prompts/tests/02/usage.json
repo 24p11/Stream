@@ -23,6 +23,18 @@
       "input_cost_usd": 0.01740425,
       "output_cost_usd": 0.016152,
       "total_cost_usd": 0.033556249999999996
+    },
+    {
+      "out": "verdict.txt",
+      "at": "2026-08-14T15:24:05",
+      "partial": false,
+      "n_requests": 10,
+      "model": "mistral-large-latest",
+      "input_tokens": 22575,
+      "output_tokens": 13718,
+      "input_cost_usd": 0.00564375,
+      "output_cost_usd": 0.010288499999999999,
+      "total_cost_usd": 0.01593225
     }
   ]
 }

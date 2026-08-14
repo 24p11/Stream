@@ -1,0 +1,109 @@
+### **Verdict : CONFORME avec observations mineures**
+
+Le compte rendu hospitalier (CRH) est globalement **cohérent sur le plan clinique** et **conforme aux règles de codage**, mais quelques **anomalies mineures** ou points d'attention sont à signaler.
+
+---
+
+### **Anomalies constatées et recommandations**
+
+#### **1. Codage des diagnostics (CCAM/CIM-10)**
+✅ **Globalement conforme**, mais quelques précisions à apporter :
+- **O14.0 (Pré-éclampsie modérée)** :
+  - La protéinurie des 24h est à **0,4 g/24h**, ce qui correspond bien à une pré-éclampsie **modérée** (seuil ≥ 0,3 g/24h).
+  - **Pas d'anomalie**, mais il serait préférable de mentionner explicitement le **seuil diagnostique** dans le CR pour renforcer la justification du code.
+
+- **O43.8 (Autres anomalies du placenta)** :
+  - Le terme **"insuffisance placentaire"** est correct, mais il serait plus précis d'utiliser **"insuffisance placentaire avec retentissement fœtal"** (si les dopplers étaient anormaux, ce qui n'est pas le cas ici).
+  - **Recommandation** : Préciser si les dopplers utérins/ombilicaux étaient normaux ou pathologiques pour justifier O43.8.
+
+- **O60.3 (Accouchement prématuré sans travail spontané)** :
+  - **Conforme**, car le travail a été déclenché (pas de travail spontané).
+
+- **ELSA002 (Ligature des pédicules vasculaires de l'utérus)** :
+  - **Conforme**, mais il manque le **code CIM-10 associé** à l'hémorragie du post-partum (HPP) :
+    - **O72.1 (Hémorragie du post-partum secondaire)** ou **O72.0 (Hémorragie du troisième stade du travail)** selon le timing.
+    - **Recommandation** : Ajouter **O72.1** (HPP secondaire) dans la conclusion du CR d'accouchement.
+
+- **Z37.0 (Naissance unique, enfant vivant)** :
+  - **Conforme**, mais il manque le **poids de naissance** dans le codage (pourrait être complété par **P07.1 (Faible poids de naissance, entre 1500 et 2499 g)**).
+
+- **Z30.0 (Conseils en contraception)** :
+  - **Conforme**, mais il serait plus précis d'utiliser **Z30.011 (Conseil et choix d'une méthode contraceptive)** si un DIU a été posé.
+
+#### **2. Cohérence clinique**
+✅ **Globalement cohérent**, mais quelques points à vérifier :
+- **Hypotrophie fœtale (O36.5)** :
+  - Le poids estimé est au **5e percentile**, ce qui justifie bien O36.5.
+  - **Mais** : Les dopplers sont normaux, ce qui est un peu contradictoire avec une "insuffisance placentaire".
+  - **Recommandation** : Préciser si l'hypotrophie est **symétrique/asymétrique** et si les dopplers étaient normaux (pour écarter une cause constitutionnelle).
+
+- **Hémorragie du post-partum (HPP)** :
+  - La **ligature des pédicules vasculaires** est une procédure rare pour une HPP, généralement réservée aux échecs des autres traitements (sulprostone, embolisation).
+  - **Question** : A-t-on tenté d'autres traitements avant la laparotomie ? Si non, cela pourrait être considéré comme un **sur-traitement**.
+  - **Recommandation** : Justifier dans le CR pourquoi cette approche a été choisie (ex. : contre-indication aux prostaglandines, échec des autres méthodes).
+
+- **Date de sortie (22/11/2025)** :
+  - La patiente a accouché le **15/10/2025** et sort le **22/11/2025** (soit **38 jours d'hospitalisation**).
+  - **Problème** : Une hospitalisation aussi longue en suites de couches est **inhabituelle** pour une HPP simple.
+  - **Hypothèses possibles** :
+    - Complication infectieuse (endométrite, abcès) → **non mentionnée**.
+    - Problème social (difficulté de retour à domicile) → **non mentionné**.
+    - Erreur de date ?
+  - **Recommandation** : Vérifier la cohérence des dates ou ajouter une justification (ex. : "hospitalisation prolongée pour surveillance rapprochée en raison d'antécédents de pré-éclampsie sévère").
+
+#### **3. Formulations et exhaustivité**
+✅ **Globalement bien rédigé**, mais quelques améliorations possibles :
+- **Antécédents obstétricaux** :
+  - La **fausse couche à 10 SA** est mentionnée, mais pas codée.
+  - **Recommandation** : Ajouter **O03.9 (Fausse couche spontanée, sans précision)** si pertinent pour le codage.
+
+- **Traitement antihypertenseur** :
+  - Le **labétalol** est bien mentionné, mais pas la posologie en post-partum.
+  - **Recommandation** : Préciser si le traitement a été modifié après l'accouchement.
+
+- **Allaitement** :
+  - Aucune mention de l'allaitement (maternel ou artificiel).
+  - **Recommandation** : Ajouter une phrase sur le mode d'alimentation du nouveau-né (ex. : "Allaitement maternel exclusif initié, avec soutien de l'équipe de lactation").
+
+#### **4. Conformité aux règles de codage PMSI**
+✅ **Respect des règles**, mais quelques optimisations possibles :
+- **DP (Diagnostic Principal)** :
+  - **O14.0 (Pré-éclampsie modérée)** est le DP le plus probable.
+  - **Alternative** : Si l'HPP a été la complication majeure, **O72.1** pourrait être envisagé, mais cela semble moins probable ici.
+
+- **DA (Diagnostics Associés)** :
+  - **O36.5 (Hypotrophie fœtale)** → Justifié.
+  - **O41.0 (Oligoamnios)** → Justifié.
+  - **O43.8 (Insuffisance placentaire)** → À confirmer (voir point 1).
+  - **O60.3 (Accouchement prématuré déclenché)** → Justifié.
+  - **O72.1 (HPP secondaire)** → **À ajouter**.
+  - **Z35.2 (Surveillance pour antécédents obstétricaux)** → Justifié.
+  - **Z87.5 (Antécédents de complications obstétricales)** → Justifié.
+
+- **Actes CCAM** :
+  - **ELSA002 (Ligature des pédicules vasculaires)** → **Conforme**.
+  - **QZJA002 (Déclenchement du travail par ocytocine)** → **À ajouter** (si non facturé ailleurs).
+  - **JQGD001 (Analgésie péridurale)** → **À ajouter**.
+
+---
+
+### **Synthèse des corrections à apporter**
+| **Problème** | **Correction proposée** | **Impact** |
+|-------------|------------------------|------------|
+| Absence de code CIM-10 pour l'HPP | Ajouter **O72.1** dans le CR d'accouchement | Améliore l'exhaustivité du codage |
+| Justification insuffisante de la ligature des pédicules | Préciser les traitements tentés avant la laparotomie | Évite un sur-codage ou une remise en question par le DIM |
+| Durée d'hospitalisation anormalement longue | Vérifier la date de sortie ou ajouter une justification | Évite un contrôle PMSI pour séjour aberrant |
+| Absence de codage de la fausse couche | Ajouter **O03.9** si pertinent | Complète les antécédents |
+| Manque de précision sur les dopplers | Préciser si normaux/pathologiques | Justifie mieux O43.8 |
+| Absence de mention de l'allaitement | Ajouter une phrase sur le mode d'alimentation | Conformité aux bonnes pratiques |
+
+---
+
+### **Conclusion**
+**Verdict final : CONFORME**, sous réserve des **corrections mineures** listées ci-dessus.
+Le CR est **cliniquement cohérent**, **bien structuré** et **globalement conforme aux règles de codage**, mais quelques **optimisations** sont recommandées pour :
+1. **Renforcer la justification des codes** (notamment O43.8 et O72.1).
+2. **Clarifier certains points cliniques** (durée d'hospitalisation, traitement de l'HPP).
+3. **Compléter les actes CCAM manquants** (QZJA002, JQGD001).
+
+**Recommandation** : Appliquer ces corrections avant validation définitive du séjour.

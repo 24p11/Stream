@@ -1,0 +1,95 @@
+### **Verdict : CONFORME**
+*(avec quelques observations mineures pour optimisation)*
+
+---
+
+### **Anomalies constatées et observations :**
+
+#### **1. Cohérence clinique (globale) :**
+✅ **Conforme** – Le compte rendu est **cliniquement cohérent** :
+- **Diagnostic principal** (fracture sous-trochantérienne du fémur droit) est **précis et justifié** par l’anamnèse (chute), l’examen clinique (raccourcissement/rotation externe) et les examens complémentaires (radiographies).
+- **Technique opératoire** (clou gamma) est **adaptée** à ce type de fracture chez une patiente âgée.
+- **Évolution postopératoire** est **plausible** (lever précoce, absence de complications, orientation en SSR).
+- **Antécédents** (HTA, chirurgies mineures) et **mode de vie** (autonomie, tabagisme sevré) sont **crédibles** et **pertinents** pour le contexte.
+
+---
+
+#### **2. Conformité au codage (CCAM/PMSI) :**
+✅ **Conforme**, mais avec des **précisions utiles** pour le codage :
+
+##### **a. Diagnostic principal (DP) :**
+- **Libellé actuel** : *"Fracture fermée sous-trochantérienne du fémur droit"*.
+  - **Code CIM-10 attendu** : **S72.2** (Fracture du fémur, partie sous-trochantérienne).
+  - **Précision nécessaire** :
+    - Ajouter **"traumatique"** (pour exclure une fracture pathologique, bien que les antécédents familiaux soient rassurants).
+    - Exemple de formulation optimale :
+      > *"Fracture traumatique fermée sous-trochantérienne du fémur droit (S72.20) suite à une chute de sa hauteur."*
+
+##### **b. Acte principal (CCAM) :**
+- **Acte décrit** : *"Ostéosynthèse d’une fracture sous-trochantérienne du fémur droit par clou gamma long"*.
+  - **Code CCAM attendu** : **NFKA002** (Ostéosynthèse de fracture extra-articulaire du fémur proximal, par abord direct, avec matériel intramédullaire).
+  - **Précision nécessaire** :
+    - Vérifier que le **clou gamma long** est bien **verrouillé** (mentionné dans le CRO), ce qui est conforme à la CCAM.
+    - Le **matériel utilisé** (clou + vis) est **détaillé**, ce qui est **exigible** pour le codage.
+
+##### **c. Diagnostics associés (DA) :**
+- **Hypertension artérielle essentielle (I10)** :
+  - **Bien documentée** (traitement par amlodipine, chiffres tensionnels).
+  - **À coder** comme **DA** (pas de lien direct avec la fracture, mais comorbidité active).
+- **Ostéoporose ?**
+  - **Absence de mention explicite** dans les antécédents ou l’examen clinique.
+  - **Constat per-opératoire** : *"Corticales de bonne qualité, sans signe d’ostéoporose localement avancée"*.
+    - **À discuter** : Si la patiente a **87 ans** et une fracture après une chute de sa hauteur, un **bilan d’ostéoporose** (ostéodensitométrie) serait **recommandé** en post-opératoire.
+    - **Impact sur le codage** : Si une ostéoporose était confirmée, elle pourrait être codée comme **DA** (M81.9) avec un **lien avec la fracture** (code **Y92.8** : lieu de résidence comme lieu de l’accident).
+
+##### **d. Complications ou actes associés :**
+- **Aucune complication** (hémorragique, infectieuse, thromboembolique) n’est mentionnée → **Conforme**.
+- **Rééducation précoce** (kinésithérapie) est **attendue** et **bien documentée**.
+
+---
+
+#### **3. Conformité administrative et structurelle :**
+✅ **Conforme** :
+- **Identité du patient** (nom, prénom, date de naissance) **cohérente** entre les deux documents.
+- **Dates** :
+  - Chute : **02/12/2026** → Admission : **03/12/2026** → Intervention : **04/12/2026** → Sortie : **14/12/2026** (**11 jours d’hospitalisation**, cohérent pour une fracture sous-trochantérienne opérée).
+- **Autonomie des documents** :
+  - Le **CRO** et le **CRH** sont **autonomes** mais **complémentaires** (pas de redondance inutile).
+- **Plan du CRH** :
+  - Respecte les **recommandations** (motif, antécédents, histoire, examen, examens, évolution, conclusion).
+
+---
+
+#### **4. Points d’optimisation (non bloquants) :**
+| **Élément**               | **Observation**                                                                 | **Recommandation**                                                                 |
+|---------------------------|---------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
+| **Bilan préopératoire**   | Bilan biologique et ECG **complets**, mais **pas de groupe sanguin** mentionné. | Ajouter le groupe sanguin (exigible pour une chirurgie orthopédique majeure).     |
+| **Évaluation gériatrique**| Patiente de **87 ans** : pas de mention d’une **évaluation gériatrique standardisée** (ex : score de fragilité). | Envisager un **score GIR** ou **mini-GDS** pour documenter l’autonomie.            |
+| **Prévention thromboembolique** | Pas de mention d’un **traitement anticoagulant** (ex : HBPM).                  | Préciser si une prophylaxie a été instaurée (ex : "HBPM à dose préventive pendant 30 jours"). |
+| **Douleur postopératoire** | Pas de **score EVA** ou de **traitement antalgique** détaillé.                 | Ajouter une phrase du type : *"Douleur contrôlée par paracétamol (EVA ≤ 3/10)."*  |
+| **Sortie**                | Orientation en **SSR** : pas de **lettre de liaison** mentionnée.               | Préciser si un **compte rendu de sortie** a été transmis au SSR.                   |
+
+---
+
+#### **5. Synthèse des codes attendus (pour le PMSI) :**
+| **Type**          | **Code**       | **Libellé**                                                                 |
+|-------------------|----------------|-----------------------------------------------------------------------------|
+| **DP**            | S72.20         | Fracture traumatique fermée de la partie sous-trochantérienne du fémur droit |
+| **Acte principal**| NFKA002        | Ostéosynthèse de fracture extra-articulaire du fémur proximal, par abord direct, avec matériel intramédullaire |
+| **DA**            | I10            | Hypertension artérielle essentielle                                         |
+| **DA (optionnel)**| M81.9          | Ostéoporose, sans fracture pathologique (si bilan post-opératoire positif)  |
+
+---
+
+### **Conclusion :**
+**VERDICT : CONFORME**
+- **Aucune anomalie majeure** n’a été identifiée.
+- **Points d’optimisation** (non bloquants) proposés pour **améliorer la traçabilité** et **faciliter le codage PMSI**.
+- **Recommandation finale** :
+  - Ajouter une **mention du groupe sanguin** et de la **prophylaxie thromboembolique** dans le CRH.
+  - Envisager un **bilan d’ostéoporose** en post-opératoire (si pertinent cliniquement).
+
+**Signature :**
+*Dr [Votre Nom]*
+*Médecin DIM*
+*Date : [JJ/MM/AAAA]*

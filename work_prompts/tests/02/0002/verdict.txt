@@ -1,0 +1,56 @@
+### **Verdict : NON CONFORME**
+
+#### **Anomalies constatées :**
+
+1. **Problème de cohérence clinique et de codage des diagnostics :**
+   - **Spasmes musculaires (R25.2) :**
+     - Le compte rendu évoque des spasmes musculaires invalidants, mais l’**électromyographie (EMG) ne montre pas de signe de dénervation**, ce qui est atypique pour des spasmes neurologiques sévères.
+     - Les spasmes localisés du membre supérieur droit pourraient relever d’un **syndrome de crampe focale** ou d’une **dystonie focale**, mais le compte rendu ne précise pas si une origine neurologique centrale (ex. : dystonie) a été recherchée.
+     - **Recommandation :** Préciser si une imagerie cérébrale ou médullaire a été réalisée pour écarter une cause centrale (ex. : IRM cérébrale/médullaire).
+
+   - **Épicondylite latérale (M77.1) :**
+     - Le diagnostic est plausible, mais l’association avec des spasmes musculaires diffus du membre supérieur est **peu cohérente** avec une simple épicondylite.
+     - **Recommandation :** Vérifier si une **radiculopathie cervicale** (ex. : C6-C7) ou un **syndrome du défilé thoraco-brachial** a été écarté (examen clinique + EMG des racines cervicales).
+
+2. **Problème de conformité au codage CIM-10 :**
+   - **Code R25.2 (Crampe et spasme) :**
+     - Ce code est trop générique pour des spasmes invalidants du membre supérieur. Une **dystonie focale (G24.8)** ou un **syndrome de crampe des écrivains (G25.8)** serait plus précis.
+     - **Recommandation :** Remplacer par un code plus spécifique si le diagnostic est confirmé.
+
+   - **Code M77.1 (Épicondylite latérale) :**
+     - Correct, mais il faudrait préciser **M77.12 (Épicondylite latérale, bras droit)** pour indiquer la latéralité.
+
+3. **Incohérences dans la prise en charge :**
+   - **Injection de toxine botulique :**
+     - La toxine botulique est indiquée pour les **dystonies focales** ou les **spasticités**, mais pas pour une épicondylite simple.
+     - **Problème :** Le compte rendu ne précise pas si les spasmes sont d’origine neurologique (dystonie) ou musculaire (crampes).
+     - **Recommandation :** Clarifier le diagnostic avant de coder un traitement par toxine botulique.
+
+4. **Absence de certains éléments obligatoires :**
+   - **Score de gravité (ex. : échelle de douleur, échelle de handicap) :**
+     - Aucune quantification de la douleur (ex. : EVA) ou du retentissement fonctionnel (ex. : score QuickDASH pour le membre supérieur).
+   - **Traitements médicamenteux antérieurs :**
+     - Le compte rendu mentionne des antalgiques prescrits par le médecin traitant, mais sans préciser lesquels (ex. : paracétamol, AINS, myorelaxants).
+   - **Suivi post-hospitalisation :**
+     - La date de la consultation de suivi (1 mois) est mentionnée, mais pas le **médecin référent** (neurologue ? rhumatologue ?).
+
+5. **Problème de date :**
+   - **Date de sortie identique à la date d’entrée (26/11/2026) :**
+     - Une hospitalisation en neurologie pour spasmes invalidants + injection de toxine botulique en **1 jour** est **peu probable**.
+     - **Recommandation :** Vérifier la durée réelle du séjour (ex. : entrée le 25/11, sortie le 26/11).
+
+---
+
+### **Synthèse des corrections nécessaires :**
+| **Problème** | **Correction proposée** |
+|-------------|------------------------|
+| Diagnostic de spasmes musculaires trop générique | Préciser si dystonie focale (G24.8) ou syndrome de crampe (G25.8) |
+| Association spasmes + épicondylite peu cohérente | Rechercher une cause neurologique sous-jacente (ex. : radiculopathie) |
+| Code CIM-10 R25.2 inadapté | Utiliser un code plus spécifique (ex. : G24.8) |
+| Injection de toxine botulique non justifiée | Confirmer le diagnostic avant codage |
+| Absence de quantification de la douleur | Ajouter une échelle EVA ou QuickDASH |
+| Durée d’hospitalisation suspecte | Vérifier les dates d’entrée/sortie |
+
+---
+### **Conclusion :**
+Le compte rendu présente des **lacunes diagnostiques** et des **incohérences de codage**, notamment sur l’origine des spasmes et la justification du traitement par toxine botulique. Une **révision clinique** et une **mise à jour des codes CIM-10** sont nécessaires avant validation.

@@ -1,0 +1,74 @@
+### **Verdict : NON CONFORME**
+
+#### **Anomalies constatées :**
+
+1. **Cohérence clinique et chronologie :**
+   - **Incohérence dans la durée du travail** :
+     - L’admission pour travail d’accouchement est mentionnée le **22/12/2026**, mais l’accouchement a lieu le **24/12/2026** (soit **48h plus tard**).
+     - Une **hypotonie utérine primitive** (O62.0) avec contractions inefficaces sur **2 jours** sans progression significative de la dilatation (2 cm à l’admission) est **peu plausible** en l’absence de complications majeures (ex. : rupture utérine, infection, hémorragie).
+     - **Recommandation** : Préciser si une **césarienne** a été envisagée ou si des facteurs aggravants (ex. : macrosomie, bassin rétréci) étaient présents. Sinon, justifier cette durée prolongée.
+
+   - **Bradycardie fœtale transitoire (O68.0)** :
+     - Mentionnée en cours de travail, mais **aucune action correctrice** (ex. : changement de position, oxygénothérapie, arrêt des ocytociques) n’est décrite.
+     - **Risque** : Sous-estimation d’une souffrance fœtale aiguë (O68.9) ou d’une anomalie du rythme nécessitant une extraction instrumentale/césarienne.
+
+   - **Déchirure périnéale du 2ᵉ degré (O70.1)** :
+     - Une **épisiotomie médio-latérale droite** est réalisée, mais la déchirure est décrite comme **spontanée** ("survenue"). Cela peut prêter à confusion :
+       - Si l’épisiotomie a **précédé** la déchirure, coder **O70.2** (déchirure + épisiotomie).
+       - Si la déchirure est **indépendante**, préciser sa localisation (ex. : vaginale, périnéale).
+
+2. **Conformité au codage CIM-10 :**
+   - **Diagnostics manquants ou mal associés** :
+     - **O62.2** (Autres types d’inertie utérine) : Plus précis que O62.0 pour une hypotonie **secondaire** (ex. : après ocytociques).
+     - **O71.8** (Autres lésions obstétricales spécifiées) : Si l’épisiotomie a été **compliquée** (ex. : hémorragie, infection).
+     - **Z37.0** (Naissance unique, enfant vivant) : Correctement associé, mais **manque le poids de naissance** (3200 g) dans les formulations.
+
+   - **Codes redondants ou mal utilisés** :
+     - **O80.0** (Accouchement spontané par présentation du sommet) : **Incompatible** avec O62.0 (dystocie dynamique). Préférer **O62.0 + O80.9** (accouchement spontané non spécifié) ou **O62.2** si inertie secondaire.
+     - **Z39.1** (Soins de l’allaitement) : Correct, mais **Z39.0** (Soins immédiats du post-partum) aurait pu être ajouté pour la surveillance initiale.
+
+3. **Informations manquantes ou imprécises :**
+   - **Absence de codage pour les ocytociques** :
+     - Utilisation d’ocytociques (O62.8 : Autres anomalies des contractions utérines) ou **O62.9** (Anomalie des contractions utérines, sans précision) devrait être explicitée.
+   - **Score d’Apgar** :
+     - Bien mentionné, mais **pas de codage associé** (P21.9 : Asphyxie néonatale, sans précision).
+   - **Surveillance post-partum** :
+     - **Aucune mention** d’un éventuel **risque thromboembolique** (Z95.8 : Antécédents de facteurs de risque cardiovasculaire) ou de **dépression post-partum** (Z33.1 : État de grossesse, sans précision).
+   - **Allaitement** :
+     - **Z39.1** est correct, mais **Z39.8** (Autres soins postnataux) pourrait couvrir les conseils en lactation.
+
+4. **Problèmes de structure :**
+   - **Doublon dans les comptes rendus** :
+     - Le **résumé de la grossesse** est répété dans les 3 CR (admission, accouchement, suites de couches). **Optimiser** en synthétisant dans le premier CR et en faisant référence dans les suivants.
+   - **Manque de précision sur les actes** :
+     - **Épisiotomie** : Aucune mention de **suture** (codage possible : **JQGA001** en CCAM).
+     - **Surveillance du travail** : Pas de détail sur la **durée des phases** (latente/active) ou les **interventions** (ex. : rupture artificielle des membranes).
+
+5. **Erreurs mineures :**
+   - **Date de naissance** : 02/04/2001 → **Âge calculé à 25 ans en 2026** (correct, mais vérifier la cohérence avec le terme de 39 SA).
+   - **Appendicectomie** : Aucun impact sur la grossesse, mais **Z90.4** (Antécédent de chirurgie abdominale) pourrait être ajouté si pertinent pour le codage.
+
+---
+
+### **Recommandations pour mise en conformité :**
+1. **Clarifier la chronologie du travail** :
+   - Justifier la durée prolongée (ex. : "travail prolongé en phase active malgré ocytociques, sans signe de souffrance fœtale").
+   - Préciser les **interventions** (ex. : rupture artificielle des membranes, pose de péridurale).
+
+2. **Affiner le codage CIM-10** :
+   - Remplacer **O80.0** par **O62.0 + O80.9** ou **O62.2** si inertie secondaire.
+   - Ajouter **O70.2** si l’épisiotomie a précédé la déchirure.
+   - Coder les **complications néonatales** (ex. : P21.9 pour le score d’Apgar).
+
+3. **Compléter les informations manquantes** :
+   - **Poids de naissance** dans les formulations (Z37.0).
+   - **Actes CCAM** (ex. : suture d’épisiotomie).
+   - **Surveillance post-partum** (ex. : dépistage dépression, risque thromboembolique).
+
+4. **Éviter les doublons** :
+   - Synthétiser les antécédents et le résumé de grossesse dans le premier CR.
+
+---
+
+### **Conclusion :**
+Le compte rendu est **globalement bien structuré** et respecte les règles de base du codage, mais présente des **lacunes cliniques** (durée du travail, gestion de la bradycardie) et des **imprécisions de codage** (O80.0 vs O62.0, épisiotomie/déchirure). Une **révision ciblée** sur ces points le rendrait **CONFORME**.
