@@ -1,107 +1,366 @@
 **SCÉNARIO DE DÉPART :**
-- Âge du patient : 10 ans
+- Âge du patient : 0 ans
 - Sexe du patient : Féminin
-- Date d'entrée : 18/12/2026
-- Date de sortie : 18/12/2026
-- Date de naissance : 14/03/2016
-- Nom du patient : Pradelle
-- Prénom du patient : Shanel
+- Date d'entrée : 09/09/2024
+- Date de sortie : 15/09/2024
+- Date de naissance : 09/07/2024
+- Nom du patient : Sattler
+- Prénom du patient : Monique
 - Mode d'entrée' : DOMICILE
 - Mode de sortie' : DOMICILE
-- Contexte de l'hospitalisation : Pour prise en charge en hospitalisation ambulatoire pour Examen de contrôle après d'autres traitements pour d'autres affections.
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
 - Codage CIM10 :
-   * Diagnostic principal : Insuffisance staturale, non classée ailleurs (E343)
+   * Diagnostic principal : Jumeaux, nés à l'hôpital (Z383)
    * Diagnostics associés :
-      - Mesure de la tension artérielle (Z013)
-      - Autres conseils précisés (Z718)
-- Nom du médecin / signataire : Marie-claire Matabos
-- Service : ENDOCRINOLOGIE
-- Hôpital : Hôpital Saint-André - CHU de Bordeaux
+      - Foetus et nouveau-né affectés par une grossesse multiple (P015)
+      - Asphyxie obstétricale légère ou modérée (P211)
+      - Foetus et nouveau-né affectés par la rupture prématurée des membranes (P011)
+      - Foetus et nouveau-né affectés par d'autres présentations et positions vicieuses du foetus et disproportions foeto-pelviennes au cours du travail et de l'accouchement (P031)
+      - Foetus et nouveau-né affectés par un accouchement par césarienne (P034)
+      - Foetus et nouveau-né affectés par d'autres complications précisées du travail et de l'accouchement (P038)
+      - Examen spécial de dépistage de maladies du sang, des organes hématopoïétiques et de certains troubles du système immunitaire (Z130)
+- Nom du médecin / signataire : Bechir Bolay
+- Service : OBSTETRIQUE
+- Hôpital : Hôpital Rangueil - Centre hospitalier universitaire de Toulouse
 
 **FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
 
 Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
 Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
 
-<fiche_code code="E34.3">
+<fiche_code code="Z38.3">
 
-# E34.3 — Insuffisance staturale, non classée ailleurs
+# Z38.3 — Jumeaux, nés à l'hôpital
 
 ## Position dans la classification
-- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
-- Bloc E20-E35 : Maladies des autres glandes endocrines
-
-## Périmètre clinique du code
-
-Au niveau du code :
-- insuffisance staturale constitutionnelle
-- insuffisance staturale de type Laron
-- insuffisance staturale psychosociale
-- insuffisance staturale  SAI
-
-## À ne pas décrire
-
-Affections relevant d'autres codes (hérité du chapitre IV) :
-
-anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
-complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
-symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
-
-Affections relevant d'autres codes (hérité du bloc E20-E35) :
-
-galactorrhée (N64.3)
-gynécomastie (N62)
-
-Affections relevant d'autres codes (hérité de la catégorie E34) :
-
-pseudohypoparathyroïdie (E20.1)
-
-Affections relevant d'autres codes :
-
-insuffisance staturale (au cours de) :
- - achondroplasique (Q77.4) 
- - hypochondroplasique (Q77.4) 
- - hypophysaire (E23.0) 
- - micromélique avec immunodéficience (D82.2) 
- - nutritionnelle (E45) 
- - rénale (N25.0) 
- - syndromes dysmorphiques spécifiques – coder le syndrome – voir Index alphabétique
-progéria (E34.8) 
-syndrome de Russell–Silver (Q87.1)
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
 
 ## Formulations cliniques alternatives
-- hypotrophie
-- hypotrophie extrême
-- hypotrophie sévère
-- Nanisme
-- Nanisme, congénital
-- Nanisme, constitutionnel
-- Nanisme de type Laron
-- nanisme dysharmonieux
-- nanisme dysmorphique
-- nanisme dystrophique
-- nanisme géléophysique
-- nanisme harmonieux
-- Nanisme, infantile
-- Nanisme psychosocial
-- Nca
-- personne petite taille
-- Petite taille constitutionnelle
+- Enfant - voir aussi nom de l'état pathologique, né, vivant, en bonne santé, naissance, gémellaire, né à l'hôpital
 
 </fiche_code>
 
-<fiche_code code="Z01.3">
+<fiche_code code="P01.5">
 
-# Z01.3 — Mesure de la tension artérielle
+# P01.5 — Fœtus et nouveau-né affectés par une grossesse multiple
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P00-P04 : Fœtus et nouveau-né affectés par des troubles maternels et par des complications de la grossesse, du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+Inclusions héritées du bloc P00-P04 :
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du foetus ou du nouveau-né
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du fœtus ou du nouveau-né
+
+Au niveau du code :
+- grossesse gémellaire
+- grossesse trigémellaire
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+## Formulations cliniques alternatives
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, grossesse, multiple (tout type) (gémellaire) (trigémellaire)
+- gémellaire monochoriale
+- gémellité
+- gémellité bichoriale biamniotique
+- gémellité monochoriale
+- grossesse gémellaire bi-choriale
+- grossesse gémellaire bi-choriale bi-amniotique
+- grossesse gémellaire monoamniotique
+- grossesse gémellaire monochoriale
+- grossesse quadruple
+- grossesse triple
+- Grossesse (unique) (utérine), gémellaire (voir aussi grossesse, multiple), affectant foetus ou nouveau-né
+- Grossesse (unique) (utérine), quadruple, affectant foetus ou nouveau-né
+- Grossesse (unique) (utérine), quintuple, affectant foetus ou nouveau-né
+- Grossesse (unique) (utérine), trigémellaire, affectant foetus ou nouveau-né
+- Jumeaux (foetus ou nouveau-né)
+- Naissance (en ce qui concerne l'enfant) (voir aussi foetus et nouveau-né), gémellaire, affectant foetus ou nouveau-né
+- Naissance (en ce qui concerne l'enfant) (voir aussi foetus et nouveau-né), multiple, affectant foetus ou nouveau-né
+- Quintuplés (foetus ou nouveau-né)
+- Triple(s) (foetus ou nouveau-né)
+
+</fiche_code>
+
+<fiche_code code="P21.1">
+
+# P21.1 — Asphyxie obstétricale légère ou modérée
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P20-P29 : Affections respiratoires et cardiovasculaires spécifiques de la période périnatale
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+Au niveau du code :
+- absence de respiration normale au bout d'une minute, mais rythme cardiaque à 100 ou plus, présence d'une certaine tonicité musculaire, existence d'une réponse à la stimulation.
+- asphyxie avec indice d'Apgar à une minute entre 4 et 7
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie P21) :
+
+hypoxie ou asphyxie intra-utérine (P20.-)
+
+## Formulations cliniques alternatives
+- Apgar 4-7
+- Asphyxie (due à), obstétricale (nouveau-né), légère (avec apgar de 4 à 7 à 1 minute)
+- Indice d'apgar, 4-7 à une minute avec asphyxie
+- Score d'apgar à une minute de, 4-7, avec asphyxie
+
+</fiche_code>
+
+<fiche_code code="P01.1">
+
+# P01.1 — Fœtus et nouveau-né affectés par la rupture prématurée des membranes
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P00-P04 : Fœtus et nouveau-né affectés par des troubles maternels et par des complications de la grossesse, du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+Inclusions héritées du bloc P00-P04 :
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du foetus ou du nouveau-né
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du fœtus ou du nouveau-né
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+## Formulations cliniques alternatives
+- fissuration membranes
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, oligoamnios, dû à la rupture prématurée des membranes
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, rupture des membranes (artificielle) (prématurée) (spontanée) (suivie d'accouchement retardé)
+- RPM
+- Rupture (de) - voir aussi déchirure, membrane(s) (de), artificielle, suivie d'accouchement retardé, affectant foetus ou nouveau-né
+- Rupture (de) - voir aussi déchirure, membrane(s) (de), prématurée, affectant foetus ou nouveau-né
+- Rupture (de) - voir aussi déchirure, membrane(s) (de), prématurée, suivie d'accouchement retardé par traitement, affectant foetus ou nouveau-né
+- Rupture (de) - voir aussi déchirure, membrane(s) (de), spontanée, suivie d'accouchement retardé, affectant foetus ou nouveau-né
+- Rupture (de) - voir aussi déchirure, membrane(s) (de), suivie d'accouchement retardé, affectant foetus ou nouveau-né
+- rupture franche membranes
+- rupture poche eaux prématurée
+- rupture précoce membranes
+- rupture prématurée membranes
+- rupture prolongée membranes
+- rupture prolongée poche eaux
+- rupture prolongée prématurée membranes
+- rupture spontanée membranes
+
+</fiche_code>
+
+<fiche_code code="P03.1">
+
+# P03.1 — Fœtus et nouveau-né affectés par d'autres présentations et positions vicieuses du fœtus et disproportions fœtopelviennes au cours du travail et de l'accouchement
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P00-P04 : Fœtus et nouveau-né affectés par des troubles maternels et par des complications de la grossesse, du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+Inclusions héritées du bloc P00-P04 :
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du foetus ou du nouveau-né
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du fœtus ou du nouveau-né
+
+Au niveau du code :
+- bassin rétréci
+- foetus ou nouveau-né affecté par des troubles classés en O64.-, O65.-, O66.-
+- présentation occipito-postérieure persistante
+- présentation transverse
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+## Formulations cliniques alternatives
+- accouchement dystocique
+- Bassin (de) - voir aussi nom de l'état pathologique, androïde, avec disproportion, affectant foetus ou nouveau-né
+- Bassin (de) - voir aussi nom de l'état pathologique, oblique - ovalaire (double) (vrai), avec disproportion, affectant foetus ou nouveau-né
+- Bassin (de) - voir aussi nom de l'état pathologique, platypelloïde, avec disproportion, affectant foetus ou nouveau-né
+- bassin étroit
+- bassin limite
+- dystocie
+- Dystocie (de) (due à) (par), affectant foetus ou nouveau-né
+- Intervention, chirurgicale antérieure compliquant la grossesse, vulve, dystocique, affectant foetus ou nouveau-né
+- malformation utérine
+- présentation bras
+- présentation dystocique front
+- procidence main
+- procidence pied
+- Rectocèle (femme) (vaginale), compliquant la grossesse, dystocique, affectant foetus ou nouveau-né
+- Rétrécissement (de) - voir aussi sténose, vagin (acquis), compliquant la grossesse, dystocique, affectant foetus ou nouveau-né
+- Rigidité (de), vagin, compliquant la grossesse, dystocique, affectant foetus ou nouveau-né
+- Spondylolisthésis (acquis) (lombo-sacré), avec disproportion, affectant foetus ou nouveau-né
+- Tumeur (de), corps de l'utérus - voir aussi tumeur, utérus, corps, selon comportement, compliquant la grossesse, dystocique, affectant foetus ou nouveau-né
+- tumeur foetale
+
+</fiche_code>
+
+<fiche_code code="P03.4">
+
+# P03.4 — Fœtus et nouveau-né affectés par un accouchement par césarienne
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P00-P04 : Fœtus et nouveau-né affectés par des troubles maternels et par des complications de la grossesse, du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+Inclusions héritées du bloc P00-P04 :
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du foetus ou du nouveau-né
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du fœtus ou du nouveau-né
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+## Formulations cliniques alternatives
+- Accouchement(s), par, opération césarienne (sans mention d'indication), affectant foetus ou nouveau-né
+- césarienne
+- césarienne sauvetage maternel
+- césarienne transplacentaire
+- césarienne urgence sauvetage maternel
+- cicatrice césarienne
+- cicatrice césarienne antérieure
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, accouchement, par, opération césarienne
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, intervention, césarienne
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, opération, césarienne
+- Intervention, césarienne - voir accouchement, par, opération césarienne, affectant foetus ou nouveau-né
+
+</fiche_code>
+
+<fiche_code code="P03.8">
+
+# P03.8 — Fœtus et nouveau-né affectés par d'autres complications précisées du travail et de l'accouchement
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P00-P04 : Fœtus et nouveau-né affectés par des troubles maternels et par des complications de la grossesse, du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+Inclusions héritées du bloc P00-P04 :
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du foetus ou du nouveau-né
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du fœtus ou du nouveau-né
+
+Au niveau du code :
+- anomalies des tissus mous maternels
+- foetus ou nouveau-né affecté par des troubles classés en (O60-O75) et par des techniques utilisées pendant le travail et l'accouchement, non en P02.- et P03.0, P03.1, P03.2, P03.3, P03.4, P03.5, P03.6
+- intervention destructice pour faciliter l'accouchement
+- travail provoqué
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+Formes spécifiées de la catégorie P03 :
+- Fœtus et nouveau-né affectés par d'autres présentations et positions vicieuses du fœtus et disproportions fœtopelviennes au cours du travail et de l'accouchement [→ P03.1]
+- Fœtus et nouveau-né affectés par des contractions anormales de l'utérus [→ P03.6]
+- Fœtus et nouveau-né affectés par un accouchement et une extraction par le siège [→ P03.0]
+- Fœtus et nouveau-né affectés par un accouchement par césarienne [→ P03.4]
+- Fœtus et nouveau-né affectés par un accouchement par extracteur pneumatique [ventouse] [→ P03.3]
+- Fœtus et nouveau-né affectés par un accouchement par forceps [→ P03.2]
+- Fœtus et nouveau-né affectés par un accouchement précipité [→ P03.5]
+
+## Formulations cliniques alternatives
+- Anomalie (congénitale) (type non précisé) (de), parties molles compliquant la grossesse, affectant foetus ou nouveau-né
+- blocage dans voies génitales
+- césarienne urgence
+- conisation col utérus
+- Craniotomie foetale
+- Déchirure (de) (en) - voir aussi plaie, utérus (traumatique), pendant le travail, affectant foetus ou nouveau-né
+- Extraction, foetale (avec), manuelle nca, affectant foetus ou nouveau-né
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, accouchement, compliqué, précisé nca
+- modification col utérus
+- Polype (de), utérus (corps) (muqueux), compliquant la grossesse, affectant foetus ou nouveau-né
+- Prolapsus (de), lèvre antérieure du col utérin, compliquant la grossesse, affectant foetus ou nouveau-né
+- Rétrécissement (de) - voir aussi sténose, col utérin (acquis), compliquant la grossesse, affectant foetus ou nouveau-né
+- Rétrécissement (de) - voir aussi sténose, utérus (col), compliquant la grossesse, affectant foetus ou nouveau-né
+- rupture ligament large
+- rupture utérine
+- rupture utérine per-partum
+- Sténose (cicatricielle) (de) - voir aussi rétrécissement, vagin, compliquant la grossesse, affectant foetus ou nouveau-né
+- utérus cicatriciel
+- utérus fibromateux maternel
+- utérus polyfibromateux maternel
+
+</fiche_code>
+
+<fiche_code code="Z13.0">
+
+# Z13.0 — Examen spécial de dépistage de maladies du sang, des organes hématopoïétiques et de certains troubles du système immunitaire
 
 ## Position dans la classification
 - Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
 - Bloc Z00-Z13 : Sujets en contact avec les services de santé pour des examens divers
-
-## Périmètre clinique du code
-
-Inclusions héritées de la catégorie Z01 :
-- examen de routine limité à un organe donné
 
 ## À ne pas décrire
 
@@ -109,58 +368,12 @@ Affections relevant d'autres codes (hérité du bloc Z00-Z13) :
 
 examens relatifs à la grossesse et à la reproduction (Z30-Z36)  (Z39.-)
 
-Affections relevant d'autres codes (hérité de la catégorie Z01) :
-
-examen(s) :
- - à des fins administratives (Z02.-) 
- - pour suspicion de maladies, non confirmées (Z03.-) 
- - spéciaux de dépistage (Z11-Z13)
-
 ## Formulations cliniques alternatives
-- Examen (de) (pour) (voir aussi observation), contrôle (après) - voir aussi surveillance, tension artérielle
-- Examen (de) (pour) (voir aussi observation), mesure de la tension artérielle
-- Mesure(s), tension artérielle (de routine)
-- Surveillance (médicale) (de) (pour), tension artérielle (de routine)
-
-</fiche_code>
-
-<fiche_code code="Z71.8">
-
-# Z71.8 — Autres conseils précisés
-
-## Position dans la classification
-- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
-- Bloc Z70-Z76 : Sujets ayant recours aux services de santé pour d'autres motifs
-
-## Périmètre clinique du code
-
-Au niveau du code :
-- conseils à propos de la consanguinité
-
-## À ne pas décrire
-
-Affections relevant d'autres codes (hérité de la catégorie Z71) :
-
-conseil en matière de :
- - contraception et mesures procréatives (Z30-Z31) 
- - sexualité (Z70.-)
-
-Formes spécifiées de la catégorie Z71 :
-- Conseil à propos du virus de l'immunodéficience humaine [VIH] [→ Z71.7]
-- Conseil et surveillance pour alcoolisme [→ Z71.4]
-- Conseil et surveillance pour toxicomanie et pharmacodépendance [→ Z71.5]
-- Conseil pour tabagisme [→ Z71.6]
-- Personne consultant pour le compte d'un tiers [→ Z71.0]
-- Sujet consultant pour explications des résultats d'examen [→ Z71.2]
-- Sujet inquiet de son état de santé, aucun diagnostic n'étant posé [→ Z71.1]
-- Surveillance et conseils diététiques [→ Z71.3]
-
-## Formulations cliniques alternatives
-- Consanguinité (antécédent familial), conseils
-- Consultation médicale, précisée nca
-- Explication (de), médication
-- Personne, en quête de conseils (pour), consanguinité
-- Personne, en quête de conseils (pour), médication
-- Personne, en quête de conseils (pour), motif précisé nca
+- Examen (de) (pour) (voir aussi observation), dépistage (à) (de) (par), anémie
+- Examen (de) (pour) (voir aussi observation), dépistage (à) (de) (par), drépanocytose
+- Examen (de) (pour) (voir aussi observation), dépistage (à) (de) (par), hémoglobinopathies nca
+- Examen (de) (pour) (voir aussi observation), dépistage (à) (de) (par), trouble (de), immunitaire
+- Examen (de) (pour) (voir aussi observation), dépistage (à) (de) (par), trouble (de), organes hématopoïétiques nca
+- Examen (de) (pour) (voir aussi observation), dépistage (à) (de) (par), trouble (de), sang nca
 
 </fiche_code>

@@ -1,157 +1,46 @@
 Le compte rendu suivant respecte les élements suivants :
         - les diagnostics ont une formulation moins formelle que la définition du code
-        - le plan du CRH est conforme aux recommandations. Les sections sont détaillées et réalistes.
-        - les informations obligatoires sont présentes en entête et dans l'encadré patient.
-        - les dates sont cohérentes avec le scénario.
-        - les informations sur le cancer ne sont pas applicables ici (nouveau-né).
-        - les dictionnaires de formulations et d'informations sont fournis en fin de document.
+        - le plan du CRH est conforme aux recommandations. Les sections sont rédigées en texte libre, sans mise en forme autre que les titres.
+        - les antécédents sont limités à des événements résolus et clos, plausibles pour un nouveau-né
+        - les dates sont cohérentes avec le scénario
+        - les informations obligatoires sont présentes dans l'en-tête
+
+Voici le résultat au format JSON demandé :
 
 ```json
 {
-  "CR": "Hôpital Saint-Louis - Assistance Publique Hôpitaux de Paris\nService de Néonatologie\n\n### Compte rendu d'hospitalisation\n\n**Nom du patient :** De temmermann\n**Prénom :** Boualem\n**Date de naissance :** 04/06/2024\n**Date d'entrée :** 22/04/2025\n**Date de sortie :** 14/05/2025\n**Médecin signataire :** Dr Jean Marc'hadour\n\n---
-
-### Motif d'hospitalisation
-Nouveau-né de sexe masculin, né prématurément à 32 semaines d'aménorrhée (SA), admis en néonatologie pour prise en charge d'une prématurité et de difficultés d'alimentation. L'enfant présente une succion faible et des tétées prolongées, nécessitant une surveillance rapprochée.
-
----
-
-### Antécédents
-**Antécédents familiaux :**
-- Pas d'antécédents notables rapportés chez les parents.
-- Pas de notion de prématurité dans la fratrie.
-
-**Antécédents personnels :**
-- Naissance par césarienne en urgence pour rupture prématurée des membranes et menace d'accouchement prématuré.
-- Apgar : 7 à 1 minute, 9 à 5 minutes.
-- Pas de malformation congénitale dépistée à la naissance.
-- Pas d'antécédent d'infection materno-fœtale.
-
-**Allergies :**
-- Aucune allergie connue à ce jour.
-
----
-
-### Mode de vie
-**Contexte familial :**
-- Parents jeunes, primipares.
-- Mère non fumeuse, pas de consommation d'alcool ou de toxiques pendant la grossesse.
-- Environnement familial stable.
-
----
-
-### Histoire de la maladie
-Boualem est né le 04/06/2024 à 32 SA + 2 jours dans un contexte de rupture prématurée des membranes. L'accouchement a eu lieu par césarienne en urgence en raison d'une souffrance fœtale aiguë. À la naissance, l'enfant pesait 1 650 grammes et mesurait 42 cm. Il a été transféré en néonatologie pour surveillance et prise en charge de sa prématurité.
-
-Dès les premiers jours de vie, des difficultés d'alimentation ont été observées : tétées lentes, pauses fréquentes et fatigabilité. Malgré une mise au sein précoce, l'enfant n'arrivait pas à prendre des quantités suffisantes, nécessitant un complément par sonde nasogastrique. Une évaluation par l'équipe de néonatologie a confirmé un trouble de la succion-déglutition, probablement lié à l'immaturité neurologique et digestive.
-
----
-
-### Examen clinique
-**À l'entrée (22/04/2025) :**
-- Poids : 1 850 grammes (courbe de croissance : 10e percentile).
-- Température : 36,8°C.
-- Fréquence cardiaque : 145 battements/minute.
-- Fréquence respiratoire : 50 cycles/minute, sans signe de détresse respiratoire.
-- Saturation en oxygène : 98 % en air ambiant.
-- Examen neurologique : tonus axial et périphérique légèrement diminué, réflexes archaïques présents mais faibles (succion, grasping).
-- Examen digestif : abdomen souple, non ballonné, pas de vomissements. Selles méconiales émises.
-- Peau : légère ictère physiologique, pas de lésion cutanée.
-- Auscultation cardio-pulmonaire : normale.
-
-**Évolution pendant l'hospitalisation :**
-- Le poids a progressivement augmenté, atteignant 2 200 grammes à la sortie.
-- Amélioration progressive de la succion et de la coordination succion-déglutition-respiration.
-- Pas de signe d'infection nosocomiale.
-- Pas de complication liée à la prématurité (pas de dysplasie broncho-pulmonaire, pas d'entérocolite ulcéro-nécrosante, pas de rétinopathie du prématuré).
-
----
-
-### Examens complémentaires
-**Bilan biologique (23/04/2025) :**
-- NFS : Hb 15,2 g/dL, leucocytes 9 800/mm³, plaquettes 250 000/mm³.
-- CRP : < 5 mg/L.
-- Bilan hépatique : normal (bilirubine totale 8 mg/L, ALAT 25 UI/L, ASAT 30 UI/L).
-- Créatinine : 0,4 mg/dL.
-- Ionogramme sanguin : normal (Na+ 138 mmol/L, K+ 4,2 mmol/L, Cl- 102 mmol/L).
-- Glycémie : 0,8 g/L.
-
-**Échographie transfontanellaire (25/04/2025) :**
-- Pas d'hémorragie intraventriculaire.
-- Pas de dilatation ventriculaire.
-
-**Échographie abdominale (28/04/2025) :**
-- Pas d'anomalie digestive.
-- Pas de signe d'entérocolite ulcéro-nécrosante.
-
-**Dépistage auditif (02/05/2025) :**
-- Normal.
-
----
-
-### Évolution pendant l'hospitalisation
-**Démarche diagnostique :**
-L'hospitalisation a été motivée par deux problématiques principales : la prématurité et les difficultés d'alimentation. La prématurité à 32 SA a nécessité une surveillance rapprochée en raison des risques de complications (hypothermie, hypoglycémie, infection, troubles respiratoires). Les difficultés d'alimentation, caractérisées par des tétées lentes et une fatigabilité, ont été attribuées à l'immaturité neurologique et digestive. Aucun signe d'infection ou de malformation n'a été retrouvé.
-
-**Prise en charge thérapeutique :**
-- **Alimentation :**
-  - Mise en place d'une alimentation par sonde nasogastrique en complément des tétées au sein, avec augmentation progressive des volumes.
-  - Surveillance des résidus gastriques et des selles.
-  - Supplémentation en vitamines (D et K) et en fer.
-  - Introduction progressive d'un lait adapté pour prématurés (lait enrichi en calories et en nutriments).
-- **Surveillance :**
-  - Monitorage cardiorespiratoire continu pendant les premiers jours.
-  - Surveillance quotidienne du poids, de la température et des constantes vitales.
-  - Dépistage systématique des complications de la prématurité (échographies, fond d'œil, dépistage auditif).
-- **Soutien parental :**
-  - Accompagnement des parents pour la mise en place de l'allaitement maternel.
-  - Éducation à la reconnaissance des signes de fatigue et de faim chez le nouveau-né.
-  - Soutien psychologique pour les parents, notamment en raison de l'hospitalisation prolongée.
-
-**Évolution :**
-L'évolution a été favorable, avec une prise de poids régulière et une amélioration progressive des capacités d'alimentation. À partir du 05/05/2025, Boualem a pu être sevré de la sonde nasogastrique et s'alimenter exclusivement au sein, avec des tétées efficaces et une bonne coordination succion-déglutition. Les examens de dépistage des complications de la prématurité sont revenus normaux. L'enfant a été jugé stable sur le plan clinique et apte à rentrer à domicile.
-
----
-
-### Conclusion
-Boualem De temmermann, nouveau-né prématuré à 32 SA, a été hospitalisé en néonatologie pour prise en charge d'une prématurité et de difficultés d'alimentation. L'évolution a été favorable, avec une amélioration progressive des capacités d'alimentation et une prise de poids satisfaisante. Les examens complémentaires n'ont pas révélé de complication liée à la prématurité. L'enfant est sorti à domicile le 14/05/2025 avec un poids de 2 200 grammes et une alimentation exclusive au sein. Un suivi en consultation de néonatologie est prévu à J15 post-sortie pour évaluer la croissance et l'alimentation.",
+  "CR": "Hôpital Claude Huriez - Centre Hospitalier Universitaire de Lille\nService d'obstétrique\n\nCompte rendu d'hospitalisation\n\nNom : Genand desgollets\nPrénom : Yvette\nDate de naissance : 14/11/2023\n\n### Motif d'hospitalisation\nNouveau-né de sexe féminin, née le 14/11/2023 à l'hôpital Claude Huriez, admise en hospitalisation complète le 04/03/2024 pour surveillance et prise en charge des conséquences d'un accouchement précipité compliqué d'une compression du cordon ombilical.\n\n### Antécédents\n- Médicaux : Aucun antécédent notable.\n- Chirurgicaux : Aucun.\n- Familiaux : Pas d'antécédent familial notable rapporté.\n- Allergies : Aucune allergie connue.\n\n### Mode de vie\nNouveau-né à domicile, allaitée exclusivement. Pas d'exposition à des toxiques rapportée.\n\n### Histoire de la maladie\nYvette Genand desgollets est née le 14/11/2023 à l'hôpital Claude Huriez. L'accouchement a été marqué par un travail rapide, avec une expulsion précipitée. Par ailleurs, une double circulaire serrée du cordon ombilical a été notée à la naissance, entraînant une compression funiculaire. À la suite de ces événements, une surveillance rapprochée a été décidée pour évaluer l'impact de ces complications sur le nouveau-né.\n\n### Examen clinique\nÀ l'admission, le nouveau-né présente un état général satisfaisant. La fréquence cardiaque est régulière, à 140 battements par minute. La fréquence respiratoire est à 45 cycles par minute, sans signe de détresse respiratoire. La température est à 36,8°C. Le poids est de 3,2 kg, la taille de 50 cm et le périmètre crânien de 34 cm. L'examen neurologique est rassurant, avec des réflexes archaïques présents et symétriques. On note une légère pâleur cutanée, sans signe de souffrance aiguë. L'examen cardiovasculaire et abdominal est sans particularité.\n\n### Examens complémentaires\nUne numération formule sanguine réalisée le 04/03/2024 montre une hémoglobine à 15,5 g/dL, des globules blancs à 12 000/mm³ et des plaquettes à 250 000/mm³. Le bilan hépatique et la créatininémie sont dans les limites de la normale. Une échographie transfontanellaire réalisée le 05/03/2024 ne révèle pas d'anomalie.\n\n### Évolution pendant l'hospitalisation\nL'évolution a été favorable sous surveillance clinique et biologique. Aucun signe de souffrance neurologique ou d'anémie n'a été observé. Le nouveau-né a été alimenté par allaitement maternel exclusif, avec une bonne tolérance. Les constantes vitales sont restées stables tout au long de l'hospitalisation. Une surveillance de la bilirubinémie a été réalisée en raison de la pâleur initiale, mais les taux sont restés dans les limites normales. Aucun traitement spécifique n'a été nécessaire.\n\n### Conclusion\nYvette Genand desgollets, nouveau-né de sexe féminin, a présenté une naissance marquée par un accouchement précipité et une compression du cordon ombilical par double circulaire serrée. L'évolution a été favorable sous surveillance, sans complication notable. Elle quitte le service en bon état général, avec un retour à domicile prévu le 09/03/2024. Un suivi en consultation de pédiatrie est programmé dans une semaine pour évaluer son développement.\n\nLille, le 09/03/2024\n\nDr Monique Raby\nService d'obstétrique\nHôpital Claude Huriez - CHU de Lille",
 
   "formulations": {
     "diagnostics": {
-      "Autres enfants nés avant terme (P07.3)": [
-        "né prématurément à 32 semaines d'aménorrhée",
-        "prématurité à 32 SA",
-        "nouveau-né prématuré à 32 SA",
-        "prématurité"
+      "Enfant unique, né à l'hôpital (Z38.0)": ["Nouveau-né de sexe féminin, née le 14/11/2023 à l'hôpital Claude Huriez"],
+      "Fœtus et nouveau-né affectés par d'autres formes de compression du cordon ombilical (P02.5)": [
+        "une double circulaire serrée du cordon ombilical",
+        "compression funiculaire",
+        "compression du cordon ombilical par double circulaire serrée"
       ],
-      "Alimentation lente du nouveau-né (P92.2)": [
-        "difficultés d'alimentation",
-        "tétées lentes",
-        "succion faible",
-        "trouble de la succion-déglutition",
-        "fatigabilité lors des tétées",
-        "alimentation lente"
+      "Fœtus et nouveau-né affectés par un accouchement précipité (P03.5)": [
+        "accouchement précipité",
+        "travail rapide",
+        "expulsion précipitée"
       ]
     },
     "informations": {
-      "Date entrée": ["22/04/2025"],
-      "Date de sortie": ["14/05/2025"],
-      "Service d'hospitalisation": ["Service de Néonatologie"],
-      "Nom/Prénom du patient": ["De temmermann Boualem"],
-      "Nom/Prénom du médecin": ["Dr Jean Marc'hadour"],
-      "Âge": ["0 an", "nouveau-né"],
-      "Sexe": ["masculin"],
-      "Poids": ["1 650 grammes à la naissance", "1 850 grammes à l'entrée", "2 200 grammes à la sortie"],
-      "NFS": ["Hb 15,2 g/dL, leucocytes 9 800/mm³, plaquettes 250 000/mm³"],
-      "Créatinine": ["0,4 mg/dL"],
-      "Bilan hépatique": ["bilirubine totale 8 mg/L, ALAT 25 UI/L, ASAT 30 UI/L"],
-      "Traitements": [
-        "alimentation par sonde nasogastrique en complément des tétées au sein",
-        "supplémentation en vitamines (D et K) et en fer",
-        "lait adapté pour prématurés (lait enrichi en calories et en nutriments)",
-        "monitorage cardiorespiratoire continu",
-        "surveillance quotidienne du poids, de la température et des constantes vitales",
-        "soutien parental pour l'allaitement maternel"
-      ]
+      "Date entrée": ["04/03/2024"],
+      "Date de sortie": ["09/03/2024"],
+      "Service d'hospitalisation": ["Service d'obstétrique", "obstétrique"],
+      "Nom/Prénom du patient": ["Genand desgollets Yvette"],
+      "Nom/Prénom du médecin": ["Monique Raby"],
+      "Âge": ["0 ans"],
+      "Sexe": ["Féminin"],
+      "État général": ["état général satisfaisant", "bon état général"],
+      "Poids": ["3,2 kg"],
+      "Statut gestationnel": [],
+      "Gestité": [],
+      "NFS": ["hémoglobine à 15,5 g/dL, des globules blancs à 12 000/mm³ et des plaquettes à 250 000/mm³"],
+      "Créatinine": ["créatininémie sont dans les limites de la normale"],
+      "Bilan hépatique": ["bilan hépatique [...] dans les limites de la normale"],
+      "Traitements": ["Aucun traitement spécifique n'a été nécessaire"]
     }
   }
 }

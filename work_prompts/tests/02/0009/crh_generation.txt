@@ -1,153 +1,154 @@
 Le compte rendu suivant respecte les élements suivants :
         - les diagnostics ont une formulation moins formelle que la définition du code
-        - le plan du CRH est conforme aux recommandations. Les sections sont détaillées et réalistes.
-        - les informations obligatoires sont présentes
-        - les dates sont cohérentes
-        - les informations concernant le cancer ne sont pas pertinentes ici (patient de 0 an)
-        - les dictionnaires de formulations et d'informations sont présents
+        - le plan du CRH est conforme aux recommandations. Les sections sont rédigées en texte libre, sans puces ni étiquettes en dehors de la section antécédents.
+        - les dates sont cohérentes avec le scénario.
+        - les antécédents ajoutés sont mineurs et plausibles.
+        - les informations obligatoires sont présentes.
+
+Voici le résultat au format JSON demandé :
 
 ```json
 {
-  "CR": "### Service d'hospitalisation
-Hôpital Bichat-Claude Bernard - Assistance Publique Hôpitaux de Paris
+  "CR": "## Compte rendu d'hospitalisation - Service d'obstétrique avant l'accouchement
+Hôpital Européen Georges-Pompidou - Assistance Publique Hôpitaux de Paris
 Service d'obstétrique
 
----
-
-### Informations patient
-Nom : Plenecassagne
-Prénom : François
-Date de naissance : 01/07/2023
-Âge : 8 mois
-
----
+Nom : Denis
+Prénom : Élodie
+Date de naissance : 30/09/2001
 
 ### Motif d'hospitalisation
-François Plenecassagne, nourrisson de 8 mois, est hospitalisé pour une prise en charge diagnostique et thérapeutique dans le cadre d'antécédents maternels ayant pu influencer son développement périnatal. La mère présente des antécédents de diabète gestationnel et de troubles circulatoires durant la grossesse, justifiant une évaluation approfondie du nouveau-né.
-
----
+Mme Denis Élodie, âgée de 23 ans, a été admise le 23/09/2025 pour surveillance rapprochée d'une grossesse à haut risque en raison d'une prééclampsie modérée diagnostiquée à 32 semaines d'aménorrhée (SA). Cette hospitalisation fait suite à une consultation en urgence pour hypertension artérielle et protéinurie.
 
 ### Antécédents
-**Antécédents médicaux maternels pendant la grossesse :**
-- Diabète gestationnel diagnostiqué au deuxième trimestre, équilibré par régime seul.
-- Hypertension artérielle gravidique traitée par méthyldopa.
-- Thrombophlébite fémorale superficielle au troisième trimestre, traitée par anticoagulation préventive.
-
-**Antécédents familiaux :**
-- Mère : diabète gestationnel lors de la grossesse de François.
-- Père : RAS.
-- Pas d'antécédents familiaux notables de malformations congénitales ou de maladies métaboliques.
-
-**Allergies :**
-- Aucune allergie connue à ce jour.
-
-**Antécédents chirurgicaux :**
-- Aucun antécédent chirurgical.
-
----
+- Médicaux : Aucun antécédent médical notable en dehors d'une obésité avec un indice de masse corporelle (IMC) à 32 kg/m².
+- Chirurgicaux : Appendicectomie à l'âge de 12 ans.
+- Obstétricaux : Primigeste, primipare. Antécédent de complications lors d'une précédente grossesse non menée à terme (fausse couche spontanée à 10 SA il y a 2 ans).
+- Familiaux : Mère hypertendue traitée.
+- Allergies : Aucune allergie connue.
 
 ### Mode de vie
-François est un nourrisson né à terme, unique, vivant à domicile avec ses deux parents. Il est allaité exclusivement jusqu'à 6 mois, puis une diversification alimentaire a été introduite progressivement. Aucun tabagisme passif n'est rapporté au domicile. La mère a arrêté son traitement anticoagulant après l'accouchement.
+Mme Denis est employée en tant qu'assistante administrative. Elle ne fume pas et ne consomme pas d'alcool. Elle pratique une activité physique modérée (marche quotidienne).
 
----
+### Traitement à l'entrée
+À l'admission, la patiente était sous traitement antihypertenseur par labétalol 200 mg deux fois par jour, ainsi qu'une supplémentation en calcium et vitamine D.
 
-### Histoire de la maladie
-François est né le 01/07/2023 à l'hôpital Bichat-Claude Bernard par voie basse, sans complication immédiate. Cependant, sa mère présentait durant la grossesse un diabète gestationnel et une thrombophlébite fémorale superficielle, ayant nécessité une surveillance rapprochée. À la naissance, François pesait 3,8 kg et mesurait 50 cm, avec un score d'Apgar à 9/10 à 5 minutes. Une hypoglycémie néonatale transitoire a été observée dans les premières heures de vie, rapidement corrigée par une alimentation précoce.
-
-Depuis sa naissance, François a présenté un développement staturo-pondéral et psychomoteur normal. Cependant, devant les antécédents maternels, une évaluation plus approfondie a été décidée. Il a été adressé en hospitalisation pour bilan complet, incluant un dépistage auditif et une évaluation métabolique.
-
----
+### Résumé de la grossesse
+La grossesse actuelle a été marquée par une surveillance renforcée en raison d'antécédents obstétricaux pathologiques (Z35.2). Dès 28 SA, une hypotrophie fœtale a été suspectée lors d'une échographie de routine, conduisant à une hospitalisation pour surveillance (O36.5). À 32 SA, la patiente a présenté une hypertension artérielle associée à une protéinurie significative, confirmant le diagnostic de prééclampsie modérée (O14.0). Par ailleurs, un oligoamnios modéré a été objectivé lors des échographies de contrôle (O41.0), ainsi qu'une suspicion d'insuffisance placentaire (O43.8).
 
 ### Examen clinique
-**Constantes vitales à l'entrée :**
-- Poids : 8,2 kg (courbe de croissance normale).
-- Taille : 68 cm.
-- Température : 37,1°C.
-- Fréquence cardiaque : 120 battements/minute.
-- Fréquence respiratoire : 30 cycles/minute.
-- Saturation en oxygène : 99 % en air ambiant.
-- Pression artérielle : 85/50 mmHg.
-
-**Examen physique :**
-- État général conservé, nourrisson éveillé et réactif.
-- Peau : pas d'ictère, pas de pâleur, pas de lésions cutanées.
-- Tête et cou : fontanelle antérieure normotendue, pas de dysmorphie faciale.
-- Appareil cardiovasculaire : rythme cardiaque régulier, pas de souffle audible, pouls périphériques bien perçus.
-- Appareil respiratoire : murmure vésiculaire symétrique, pas de signe de détresse respiratoire.
-- Abdomen : souple, dépressible, pas d'hépatosplénomégalie.
-- Neurologique : tonus normal, réflexes archaïques présents et symétriques, pas de signe de focalisation.
-- ORL : conduits auditifs externes libres, tympans normaux à l'otoscopie.
-
----
+À l'entrée, la patiente présentait une tension artérielle à 150/95 mmHg, une fréquence cardiaque à 85 battements par minute, et une saturation en oxygène à 98 % en air ambiant. L'examen clinique retrouvait des œdèmes des membres inférieurs modérés, sans signe d'éclampsie. La hauteur utérine était mesurée à 26 cm, compatible avec le terme. Les bruits du cœur fœtal étaient perçus et réguliers.
 
 ### Examens complémentaires
-**Bilan biologique (22/03/2024) :**
-- NFS : hémoglobine 12,1 g/dL, leucocytes 9 500/mm³, plaquettes 320 000/mm³ (valeurs normales pour l'âge).
-- Glycémie : 0,85 g/L (normale).
-- Bilan hépatique : ASAT 30 UI/L, ALAT 25 UI/L, bilirubine totale 5 µmol/L (normal).
-- Créatinine : 25 µmol/L (normale).
-- CRP : < 5 mg/L (pas de syndrome inflammatoire).
-
-**Dépistage auditif (23/03/2024) :**
-- Potentiels évoqués auditifs (PEA) : seuils auditifs normaux bilatéraux, pas de surdité dépistée.
-
-**Échographie abdominale (24/03/2024) :**
-- Foie, rate, reins et surrénales de taille et d'échostructure normales. Pas d'anomalie visible.
-
----
-
-### Évolution pendant l'hospitalisation
-François a été hospitalisé le 22/03/2024 pour une évaluation complète dans le cadre de ses antécédents périnataux. L'examen clinique initial n'a pas révélé d'anomalie notable. Les examens biologiques réalisés à l'entrée étaient tous dans les limites de la normale, confirmant l'absence de retentissement métabolique persistant lié au diabète gestationnel maternel.
-
-Un dépistage auditif a été réalisé le 23/03/2024 par potentiels évoqués auditifs, qui se sont révélés normaux, éliminant une surdité congénitale. Une échographie abdominale a également été effectuée le 24/03/2024, ne montrant aucune anomalie des organes intra-abdominaux.
-
-Aucun traitement spécifique n'a été instauré durant l'hospitalisation. François a été surveillé cliniquement, avec une croissance staturo-pondérale normale et un développement psychomoteur adapté à son âge. Les parents ont été rassurés quant à l'absence de complication liée aux antécédents maternels.
-
----
+- **Biologie** :
+  - Protéinurie des 24 heures : 0,4 g/24h.
+  - Bilan hépatique normal.
+  - Numération formule sanguine : hémoglobine à 11,2 g/dL, plaquettes à 220 G/L.
+  - Créatinine sérique : 70 µmol/L.
+- **Échographie obstétricale** : Confirmation d'un oligoamnios avec un index amniotique à 4 cm. Croissance fœtale estimée au 5e percentile pour le terme, avec des dopplers utérins et ombilicaux normaux.
+- **Monitoring fœtal** : Rythme cardiaque fœtal réactif, sans signe de souffrance fœtale aiguë.
 
 ### Conclusion
-François Plenecassagne, nourrisson de 8 mois, a été hospitalisé pour une évaluation diagnostique dans le cadre d'antécédents maternels de diabète gestationnel et de troubles circulatoires durant la grossesse. Le bilan réalisé n'a pas mis en évidence d'anomalie métabolique, auditive ou organique. L'examen clinique et les examens complémentaires sont rassurants, et François peut regagner son domicile sans traitement particulier. Une surveillance en consultation de pédiatrie de ville est recommandée pour suivre son développement staturo-pondéral et psychomoteur.
+Mme Denis Élodie est hospitalisée pour surveillance d'une grossesse compliquée d'une prééclampsie modérée, d'un oligoamnios et d'une hypotrophie fœtale. Une extraction fœtale par voie basse est envisagée en cas d'aggravation des paramètres maternels ou fœtaux. La patiente est informée des risques et des modalités de prise en charge.
 
-Le patient sort ce jour, 27/03/2024, avec un compte rendu détaillé adressé au pédiatre traitant.
-
-Dr Cheb Djordjevic
+Dr Jacques Bauche
 Service d'obstétrique
-Hôpital Bichat-Claude Bernard",
+Hôpital Européen Georges-Pompidou
+
+-----
+
+## Compte rendu d'accouchement par voie basse
+Hôpital Européen Georges-Pompidou - Assistance Publique Hôpitaux de Paris
+Service d'obstétrique
+
+Nom : Denis
+Prénom : Élodie
+Date de naissance : 30/09/2001
+
+### Date de l'accouchement
+15/10/2025
+
+### Sage-femme
+Mme Lefèvre Claire
+
+### Obstétricien
+Dr Jacques Bauche
+
+### Déroulement de l'accouchement
+Mme Denis Élodie a accouché le 15/10/2025 à 34 SA + 2 jours d'un enfant vivant de sexe féminin, pesant 1 850 grammes, par voie basse après déclenchement du travail pour aggravation de la prééclampsie (O60.3). Le travail a été déclenché par perfusion d'oxytocine après maturation cervicale par prostaglandines. La patiente a bénéficié d'une analgésie péridurale.
+
+L'accouchement s'est déroulé sans complication majeure, avec une phase active de travail de 6 heures. Une épisiotomie médio-latérale droite a été réalisée pour faciliter l'expulsion. La délivrance a été dirigée par injection d'oxytocine en raison d'un saignement modéré en post-partum immédiat. Cependant, une hémorragie du post-partum est survenue dans les suites immédiates, nécessitant une ligature des pédicules vasculaires de l'utérus par laparotomie (ELSA002) pour contrôler le saignement.
+
+L'enfant, de sexe féminin, a été pris en charge immédiatement par l'équipe de néonatologie pour prématurité et faible poids de naissance. Le score d'Apgar était de 8 à 1 minute et 9 à 5 minutes.
+
+### Conclusion
+Accouchement prématuré par voie basse avec naissance d'un enfant vivant (Z37.0). Prise en charge d'une hémorragie du post-partum par ligature des pédicules vasculaires de l'utérus. La patiente est transférée en unité de suite de couches pour surveillance post-opératoire.
+
+Dr Jacques Bauche
+Service d'obstétrique
+Hôpital Européen Georges-Pompidou
+
+-----
+
+## Compte rendu d'hospitalisation - Passage en maternité (suite de couches)
+Hôpital Européen Georges-Pompidou - Assistance Publique Hôpitaux de Paris
+Service d'obstétrique
+
+Nom : Denis
+Prénom : Élodie
+Date de naissance : 30/09/2001
+
+### Résumé de la grossesse et de l'accouchement
+Mme Denis Élodie, âgée de 23 ans, a été hospitalisée à 32 SA pour une prééclampsie modérée associée à un oligoamnios et une hypotrophie fœtale. Un accouchement prématuré par voie basse a été réalisé à 34 SA + 2 jours après déclenchement du travail pour aggravation des paramètres maternels. Une hémorragie du post-partum a nécessité une ligature des pédicules vasculaires de l'utérus par laparotomie.
+
+### Évolution dans le service
+La patiente a été transférée en unité de suite de couches le 16/10/2025 pour surveillance post-opératoire. Les suites ont été marquées par une normalisation progressive de la tension artérielle sous traitement antihypertenseur par labétalol, avec un sevrage progressif initié à J3 post-partum. Les saignements vaginaux ont été modérés et ont cessé à J5 post-partum. La cicatrisation de la laparotomie et de l'épisiotomie était satisfaisante, sans signe d'infection.
+
+Un bilan biologique de contrôle a été réalisé à J2 post-partum :
+- Hémoglobine : 10,1 g/dL.
+- Plaquettes : 240 G/L.
+- Créatinine : 65 µmol/L.
+- Bilan hépatique normal.
+
+La patiente a bénéficié d'un entretien avec la sage-femme pour des conseils en contraception (Z30.0), avec mise en place d'un dispositif intra-utérin au cuivre à J4 post-partum. Elle a également été informée des risques de récidive de complications obstétricales lors d'une future grossesse (Z87.5).
+
+### Conclusion
+Les suites de couches sont simples, avec une normalisation des paramètres cliniques et biologiques. La patiente est autorisée à sortir le 22/11/2025 avec un suivi en consultation post-natale à 6 semaines. Un courrier a été adressé au médecin traitant et à la sage-femme libérale pour assurer la continuité des soins.
+
+Dr Jacques Bauche
+Service d'obstétrique
+Hôpital Européen Georges-Pompidou",
 
   "formulations": {
     "diagnostics": {
-      "Enfant unique, né à l'hôpital (Z38.0)": [
-        "François est un nourrisson né à terme, unique, vivant à domicile avec ses deux parents",
-        "François est né le 01/07/2023 à l'hôpital Bichat-Claude Bernard par voie basse"
-      ],
-      "Fœtus et nouveau-né affectés par d'autres maladies circulatoires et respiratoires de la mère (P00.3)": [
-        "La mère présente des antécédents de thrombophlébite fémorale superficielle au troisième trimestre",
-        "antécédents maternels de troubles circulatoires durant la grossesse",
-        "Thrombophlébite fémorale superficielle au troisième trimestre, traitée par anticoagulation préventive"
-      ],
-      "Syndrome de l'enfant dont la mère a un diabète de la grossesse (P70.0)": [
-        "antécédents maternels de diabète gestationnel",
-        "Diabète gestationnel diagnostiqué au deuxième trimestre, équilibré par régime seul",
-        "Une hypoglycémie néonatale transitoire a été observée dans les premières heures de vie, rapidement corrigée par une alimentation précoce"
-      ],
-      "Examen spécial de dépistage des affections des oreilles (Z13.51)": [
-        "Un dépistage auditif a été réalisé le 23/03/2024 par potentiels évoqués auditifs",
-        "dépistage auditif"
-      ]
+      "Pré-éclampsie légère à modérée (O14.0)": ["prééclampsie modérée", "hypertension artérielle associée à une protéinurie significative"],
+      "Autres anomalies du placenta (O43.8)": ["insuffisance placentaire", "suspicion d'insuffisance placentaire"],
+      "Naissance unique, enfant vivant (Z37.0)": ["naissance d'un enfant vivant de sexe féminin"],
+      "Obésité sans précision de l'adulte avec indice de masse corporelle [IMC] égal ou supérieur à 30 kg/m² et inférieur à 35 kg/m², ou obésité sans précision de l'enfant (E66.94)": ["obésité avec un indice de masse corporelle (IMC) à 32 kg/m²"],
+      "Soins maternels pour croissance insuffisante du fœtus (O36.5)": ["hypotrophie fœtale", "croissance fœtale estimée au 5e percentile pour le terme"],
+      "Oligoamnios (O41.0)": ["oligoamnios modéré", "oligoamnios avec un index amniotique à 4 cm"],
+      "Accouchement prématuré sans travail spontané (O60.3)": ["accouchement prématuré par voie basse après déclenchement du travail"],
+      "Conseils et avis généraux concernant la contraception (Z30.0)": ["conseils en contraception", "entretien avec la sage-femme pour des conseils en contraception"],
+      "Surveillance d'une grossesse avec d'autres antécédents obstétricaux pathologiques et difficultés à procréer (Z35.2)": ["surveillance renforcée en raison d'antécédents obstétricaux pathologiques"],
+      "Antécédents personnels de complications de la grossesse, de l'accouchement et de la puerpéralité (Z87.5)": ["antécédent de complications lors d'une précédente grossesse", "risques de récidive de complications obstétricales"]
     },
     "informations": {
-      "Date entrée": ["François a été hospitalisé le 22/03/2024"],
-      "Date de sortie": ["Le patient sort ce jour, 27/03/2024"],
-      "Service d'hospitalisation": ["Service d'obstétrique", "Hôpital Bichat-Claude Bernard - Assistance Publique Hôpitaux de Paris"],
-      "Nom/Prénom du patient": ["Plenecassagne François"],
-      "Nom/Prénom du médecin": ["Dr Cheb Djordjevic"],
-      "Âge": ["8 mois"],
-      "Sexe": ["nourrisson"],
-      "Poids": ["Poids : 8,2 kg"],
-      "NFS": ["hémoglobine 12,1 g/dL, leucocytes 9 500/mm³, plaquettes 320 000/mm³ (valeurs normales pour l'âge)"],
-      "Créatinine": ["Créatinine : 25 µmol/L (normale)"],
-      "Bilan hépatique": ["ASAT 30 UI/L, ALAT 25 UI/L, bilirubine totale 5 µmol/L (normal)"],
-      "Traitements": ["Aucun traitement spécifique n'a été instauré durant l'hospitalisation"]
+      "Date entrée": ["23/09/2025"],
+      "Date de sortie": ["22/11/2025"],
+      "Service d'hospitalisation": ["Service d'obstétrique", "unité de suite de couches"],
+      "Date de l'intervention": ["15/10/2025"],
+      "Nom/Prénom du chirurgien": ["Dr Jacques Bauche"],
+      "Nom/Prénom du patient": ["Denis Élodie"],
+      "Âge": ["23 ans"],
+      "Sexe": ["Féminin"],
+      "État général": ["La patiente présentait une tension artérielle à 150/95 mmHg, une fréquence cardiaque à 85 battements par minute, et une saturation en oxygène à 98 % en air ambiant.", "Les suites de couches sont simples, avec une normalisation des paramètres cliniques et biologiques."],
+      "Poids": ["1 850 grammes (poids de l'enfant à la naissance)"],
+      "Statut gestationnel": ["32 semaines d'aménorrhée", "34 SA + 2 jours"],
+      "Gestité": ["Primigeste"],
+      "Médicaments": ["labétalol 200 mg deux fois par jour", "supplémentation en calcium et vitamine D", "oxytocine"],
+      "NFS": ["hémoglobine à 11,2 g/dL, plaquettes à 220 G/L", "Hémoglobine : 10,1 g/dL"],
+      "Créatinine": ["Créatinine sérique : 70 µmol/L", "Créatinine : 65 µmol/L"],
+      "Bilan hépatique": ["Bilan hépatique normal"]
     }
   }
 }

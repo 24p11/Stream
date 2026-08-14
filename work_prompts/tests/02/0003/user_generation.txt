@@ -1,95 +1,62 @@
 **SCÉNARIO DE DÉPART :**
 - Âge du patient : 0 ans
-- Sexe du patient : Masculin
-- Date d'entrée : 22/04/2025
-- Date de sortie : 14/05/2025
-- Date de naissance : 04/06/2024
-- Nom du patient : De temmermann
-- Prénom du patient : Boualem
+- Sexe du patient : Féminin
+- Date d'entrée : 04/03/2024
+- Date de sortie : 09/03/2024
+- Date de naissance : 14/11/2023
+- Nom du patient : Genand desgollets
+- Prénom du patient : Yvette
 - Mode d'entrée' : DOMICILE
 - Mode de sortie' : DOMICILE
 - Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
 - Codage CIM10 :
-   * Diagnostic principal : Autres enfants nés avant terme (P073)
+   * Diagnostic principal : Enfant unique, né à l'hôpital (Z380)
    * Diagnostics associés :
-      - Alimentation lente du nouveau-né (P922)
-- Nom du médecin / signataire : Jean Marc'hadour
-- Service : NEONATOLOGIE
-- Hôpital : Hôpital Saint-Louis - Assistance Publique Hôpitaux de Paris
+      - Foetus et nouveau-né affectés par d'autres formes de compression du cordon ombilical (P025)
+      - Foetus et nouveau-né affectés par un accouchement précipité (P035)
+- Nom du médecin / signataire : Monique Raby
+- Service : OBSTETRIQUE
+- Hôpital : Hôpital Claude Huriez - Centre Hospitalier Universitaire de Lille
 
 **FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
 
 Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
 Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
 
-<fiche_code code="P07.3">
+<fiche_code code="Z38.0">
 
-# P07.3 — Autres enfants nés avant terme
+# Z38.0 — Enfant unique, né à l'hôpital
 
 ## Position dans la classification
-- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
-- Bloc P05-P08 : Anomalies liées à la durée de la gestation et à la croissance du fœtus
-
-## Périmètre clinique du code
-
-Inclusions héritées du chapitre XVI :
-- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
-
-Inclusions héritées de la catégorie P07 :
-- les états mentionnés, sans autre précision, comme cause de mortalité, de morbidité ou de soins supplémentaires du nouveau-né
-
-Au niveau du code :
-- 28 semaines entières ou plus mais moins de 37 semaines entières de gestation (196 jours entiers mais moins de 259 jours entiers).
-- prématurité SAI
-
-## À ne pas décrire
-
-Affections relevant d'autres codes (hérité du chapitre XVI) :
-
-coqueluche (A37.-)
-lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
-maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
-malformations congénitales et anomalies chromosomiques (Q00-Q99)
-tétanos du nouveau-né (A33)
-tumeurs (C00-D48)
-
-Affections relevant d'autres codes (hérité de la catégorie P07) :
-
-faible poids de naissance dû à un retard de croissance et à une malnutrition du fœtus (P05.-)
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
 
 ## Formulations cliniques alternatives
-- accouchement prématuré
-- ancien prématuré
-- Enfant - voir aussi nom de l'état pathologique, né, avant terme (28 à 37 semaines entières) (196 à 259 jours)
-- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, né, avant terme (28 à moins de 37 semaines entières) (196 à 259 jours)
-- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, prématurité (28 à moins de 37 semaines entières) (196 à 259 jours)
-- Immaturité (28 semaines entières ou plus mais moins de 37 semaines entières)
-- Naissance (en ce qui concerne l'enfant) (voir aussi foetus et nouveau-né), avant terme (avec)
-- naissance prématurée 29 semaines
-- Nca, prématuré (28 à moins de 37 semaines entières de gestation) (196 à moins de 259 jours)
-- prématurité + 28 semaines
-- Prématurité (28 à 37 semaines entières de gestation) (l96 à 259 jours)
-- prématurité 31 semaines
-- prématurité 32 SA
-- prématurité 33 semaines
-- prématurité 34 semaines
-- prématurité 35 SA
-- prématurité plus 28 semaines
+- Enfant - voir aussi nom de l'état pathologique, né, vivant, en bonne santé, naissance, unique, né à l'hôpital
 
 </fiche_code>
 
-<fiche_code code="P92.2">
+<fiche_code code="P02.5">
 
-# P92.2 — Alimentation lente du nouveau-né
+# P02.5 — Fœtus et nouveau-né affectés par d'autres formes de compression du cordon ombilical
 
 ## Position dans la classification
 - Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
-- Bloc P90-P96 : Autres affections dont l'origine se situe dans la période périnatale
+- Bloc P00-P04 : Fœtus et nouveau-né affectés par des troubles maternels et par des complications de la grossesse, du travail et de l'accouchement
 
 ## Périmètre clinique du code
 
 Inclusions héritées du chapitre XVI :
 - les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+Inclusions héritées du bloc P00-P04 :
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du foetus ou du nouveau-né
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du fœtus ou du nouveau-né
+
+Au niveau du code :
+- circulaire du cordon ombilical
+- noeud du cordon ombilical
+- torsion du cordon ombilical
 
 ## À ne pas décrire
 
@@ -103,8 +70,70 @@ tétanos du nouveau-né (A33)
 tumeurs (C00-D48)
 
 ## Formulations cliniques alternatives
-- Alimentation, lente, nouveau-né
-- Problème (avec) (de), alimentation (enfant) (personne âgée), nouveau-né, alimentation lente
-- Trouble(s) (de) - voir aussi maladie, alimentation (psychogène), nouveau-né, alimentation lente
+- Anomalie (congénitale) (type non précisé) (de), cordon, ombilical nca, par, compression
+- Asphyxie (due à), circulaire du cordon ombilical
+- circulaire cordon
+- Circulaire du cordon (ombilical) (avec compression), affectant foetus ou nouveau-né
+- compression cordon
+- compression cordon ombilical
+- Compression (de), cordon ombilical, affectant foetus ou nouveau-né
+- compression funiculaire
+- double circulaire cordon
+- double circulaire serrée cordon
+- Enchevêtrement du cordon (compliquant le travail et l'accouchement), affectant foetus ou nouveau-né
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, cordon (ombilical) (avec), circulaire
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, cordon (ombilical) (avec), compression
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, cordon (ombilical) (avec), noeud
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, cordon (ombilical) (avec), torsion
+- noeud serré cordon
+- Noeud (vrai) du cordon ombilical, affectant foetus ou nouveau-né
+- quadruple circulaire
+- striction cordon
+- triple circulaire serré cordon
+
+</fiche_code>
+
+<fiche_code code="P03.5">
+
+# P03.5 — Fœtus et nouveau-né affectés par un accouchement précipité
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P00-P04 : Fœtus et nouveau-né affectés par des troubles maternels et par des complications de la grossesse, du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+Inclusions héritées du bloc P00-P04 :
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du foetus ou du nouveau-né
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du fœtus ou du nouveau-né
+
+Au niveau du code :
+- rapidité de l'expulsion
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+## Formulations cliniques alternatives
+- accouchement dans ascenseur
+- accouchement dans voiture
+- accouchement inopiné véhicule SMUR
+- accouchement sur voie publique
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, accouchement, précipité (classé à o62.3)
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, travail, trop rapide (classé à o62.3)
+- Naissance (en ce qui concerne l'enfant) (voir aussi foetus et nouveau-né), précipitée (expulsion rapide)
+- Rapidité du deuxième stade de l'accouchement, affectant foetus ou nouveau-né
+- Travail (obstétrical) - voir aussi accouchement, trop rapide, affectant foetus ou nouveau-né
+- travail rapide
 
 </fiche_code>

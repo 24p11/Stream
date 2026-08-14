@@ -1,52 +1,57 @@
 Le compte rendu suivant respecte les élements suivants :
         - les diagnostics ont une formulation moins formelle que la définition du code
-        - le plan du CRH est conforme aux recommandations. Les sections sont complètes et autonomes.
-        - les dates sont cohérentes et plausibles
+        - le plan du CRH est conforme aux recommandations. Les sections sont rédigées en texte libre, sans liste à puces (sauf pour les antécédents)
+        - les dates sont cohérentes avec le scénario
         - les informations obligatoires sont présentes
-        - les informations spécifiques au cancer sont intégrées naturellement (non applicable ici)
-        - les informations sont cohérentes entre elles
+        - les antécédents ajoutés sont mineurs et plausibles
+        - les formulations utilisées pour les diagnostics sont référencées dans le dictionnaire final
+
+Voici le résultat au format JSON demandé :
 
 ```json
 {
-  "CR": "### Hôpital Saint-André - CHU de Bordeaux\nService d'obstétrique\n\n**Compte rendu d'hospitalisation**\n\n**Informations patient**\nNom : Erdrich\nPrénom : Layal\nDate de naissance : 13/02/2026\n\n### Motif d'hospitalisation\nNouveau-né de sexe féminin, Layal Erdrich, née le 13/02/2026 à l'hôpital Saint-André, admise en unité de néonatalogie pour surveillance et prise en charge d'une difficulté d'alimentation au sein suite à une naissance par césarienne.\n\n### Antécédents\n**Antécédents maternels** :\n- Grossesse suivie sans particularité jusqu'au terme.\n- Accouchement par césarienne en urgence pour sauvetage maternel le 13/02/2026.\n- Pas d'antécédents médicaux ou chirurgicaux notables chez la mère.\n- Pas d'allergies connues.\n\n**Antécédents familiaux** :\n- Pas d'antécédents familiaux particuliers rapportés.\n\n### Mode de vie\n**Mère** :\n- Non fumeuse, pas de consommation d'alcool ou de toxiques pendant la grossesse.\n- Profession : employée administrative.\n- Primipare.\n\n### Histoire de la maladie\nLayal Erdrich est née le 13/02/2026 à 39 semaines d'aménorrhée par césarienne en urgence pour sauvetage maternel (suspicion de souffrance fœtale aiguë). Le score d'Apgar était de 8 à 1 minute et 10 à 5 minutes. Le poids de naissance était de 3 200 grammes. Dès les premières tentatives d'allaitement maternel, des difficultés d'alimentation au sein ont été observées, avec une succion faible et des épisodes de régurgitations fréquentes. Layal a été transférée en unité de néonatalogie le 24/08/2026 pour évaluation et prise en charge.\n\n### Examen clinique\n**À l'entrée (24/08/2026)** :\n- Poids : 3 150 grammes (perte pondérale de 50 grammes depuis la naissance).\n- Température : 37,1°C.\n- Fréquence cardiaque : 140 battements/minute.\n- Fréquence respiratoire : 45 cycles/minute.\n- Saturation en oxygène : 98 % en air ambiant.\n- Examen général : nouveau-né eutrophe, tonus normal, réactivité adaptée.\n- Examen neurologique : pas de signes de souffrance neurologique.\n- Examen abdominal : abdomen souple, pas de ballonnement, bruits hydro-aériques présents.\n- Examen ORL : pas d'anomalie morphologique visible.\n- Peau : pas d'ictère, pas de lésions cutanées.\n\n**Évaluation de l'alimentation** :\n- Difficulté de prise du sein avec succion faible et intermittente.\n- Régurgitations fréquentes après les tétées.\n- Pas de signes de déshydratation (muqueuses humides, fontanelle antérieure normotendue).\n\n### Examens complémentaires\n**Bilan biologique (24/08/2026)** :\n- NFS : hémoglobine 16,5 g/dL, leucocytes 9 500/mm³, plaquettes 250 000/mm³.\n- Bilan hépatique : normal.\n- Créatinine : 0,4 mg/dL.\n- Ionogramme sanguin : sodium 138 mmol/L, potassium 4,2 mmol/L, calcium 2,4 mmol/L.\n- Glycémie : 0,8 g/L.\n\n**Imagerie** :\n- Échographie transfontanellaire (25/08/2026) : pas d'anomalie visible.\n- Échographie abdominale (25/08/2026) : pas d'anomalie morphologique des organes digestifs.\n\n### Évolution pendant l'hospitalisation\n**Démarche diagnostique** :\n- Les difficultés d'alimentation au sein ont été attribuées à une succion inefficace, possiblement liée à la naissance par césarienne et à une fatigue post-natale.\n- Un bilan complet a été réalisé pour écarter toute cause organique (infectieuse, neurologique ou digestive).\n- Les examens complémentaires n'ont pas révélé d'anomalie.\n\n**Traitements et prise en charge** :\n- Mise en place d'un accompagnement par une consultante en lactation dès le 24/08/2026 pour optimiser la technique d'allaitement.\n- Utilisation de compléments de lait maternel tiré administrés à la seringue ou à la tasse pour éviter la confusion sein-tétine.\n- Surveillance rapprochée du poids et de l'hydratation.\n- Réévaluation quotidienne de la succion et de la tolérance digestive.\n\n**Évolution clinique** :\n- Amélioration progressive de la succion à partir du 26/08/2026.\n- Diminution des régurgitations.\n- Prise de poids régulière : 3 200 grammes le 28/08/2026.\n- Bonne tolérance des tétées au sein avec une durée et une efficacité satisfaisantes à partir du 29/08/2026.\n\n### Conclusion\nLayal Erdrich, nouveau-né de sexe féminin, a présenté des difficultés d'alimentation au sein dans les suites d'une naissance par césarienne en urgence. La prise en charge pluridisciplinaire (consultante en lactation, pédiatres) a permis une amélioration progressive de la succion et une reprise pondérale satisfaisante. Layal est sortie à domicile le 30/08/2026 avec un allaitement maternel exclusif bien établi. Un suivi en consultation de pédiatrie a été programmé à J15 post-sortie pour évaluer la poursuite de l'allaitement et la croissance staturo-pondérale.\n\nBordeaux, le 30/08/2026\n\nDr Nayla Le Corff\nService d'obstétrique\nHôpital Saint-André - CHU de Bordeaux",
+  "CR": "## Compte rendu d'hospitalisation - Service d'obstétrique avant accouchement\n\nHôpital Larrey - Centre hospitalier universitaire de Toulouse\nService d'obstétrique\n\nIdentification de la patiente :\n- Nom : Rocheron\n- Prénom : Monique\n- Date de naissance : 07/01/1994\n- Âge : 31 ans\n\n### Motif d'hospitalisation\n\nMme Rocheron, troisième geste, deuxième pare, a été admise aux urgences le 26/08/2025 pour surveillance d'une grossesse normale à terme. Elle présente des contractions régulières depuis la veille au soir, sans signe de rupture de la poche des eaux ni saignement.\n\n### Antécédents\n\n- Médicaux : Aucun antécédent médical notable. Pas d'hypertension artérielle, pas de diabète.\n- Chirurgicaux : Appendicectomie à l'âge de 12 ans.\n- Obstétricaux : Deux accouchements par voie basse sans complication (en 2018 et 2021).\n- Familiaux : Pas d'antécédent familial notable.\n- Allergies : Aucune allergie connue.\n\n### Mode de vie\n\nMme Rocheron est non fumeuse, ne consomme pas d'alcool. Elle travaille comme enseignante en école primaire. Elle vit avec son conjoint et ses deux enfants. Activité physique régulière (marche quotidienne).\n\n### Traitement à l'entrée\n\nAucun traitement en cours, en dehors d'une supplémentation en acide folique et vitamine D prescrite en début de grossesse.\n\n### Résumé de la grossesse\n\nGrossesse de déroulement normal, suivie régulièrement en consultation prénatale. Pas de pathologie hypertensive, pas de diabète gestationnel. Dernière échographie à 32 SA : biométries fœtales normales, liquide amniotique en quantité normale, placenta fundique. Le suivi a été réalisé en ville par son gynécologue-obstétricien.\n\n### Examen clinique à l'entrée\n\nPatiente en bon état général. Poids : 72 kg (prise de poids totale de 12 kg depuis le début de la grossesse). Tension artérielle : 120/70 mmHg. Pouls régulier à 80 battements par minute. Température : 37,2°C.\n\nExamen obstétrical : hauteur utérine à 34 cm. Présentation céphalique fixée. Col utérin effacé à 50%, dilaté à 2 cm. Contractions utérines régulières, toutes les 5 minutes, d'intensité modérée. Bruits du cœur fœtal perçus à 140 battements par minute, rythme régulier. Pas de saignement ni de perte de liquide amniotique.\n\n### Examens complémentaires\n\n- Bilan biologique à l'entrée : NFS normale (hémoglobine à 12,1 g/dL, plaquettes à 250 G/L), groupe sanguin A+, RAI négatives. Bilan hépatique et rénal dans les limites de la normale (créatinine à 65 µmol/L).\n- Monitoring fœtal : rythme cardiaque fœtal réactif, sans anomalie.\n- Échographie obstétricale de contrôle : présentation céphalique, liquide amniotique en quantité normale, placenta normo-insert.\n\n### Évolution pendant l'hospitalisation\n\nLa patiente a été surveillée en salle de naissance. Les contractions sont devenues plus régulières et plus intenses au cours des heures suivantes. Le col s'est progressivement dilaté jusqu'à 5 cm dans la nuit du 26 au 27/08. La poche des eaux s'est rompue spontanément le 27/08 à 6h du matin, avec un liquide clair. La patiente a bénéficié d'une analgésie péridurale à sa demande.\n\n### Conclusion\n\nMme Rocheron a été hospitalisée pour surveillance d'une grossesse normale à terme avec mise en travail spontané. L'évolution a été favorable, avec une dilatation progressive du col. La patiente est actuellement en salle de naissance pour poursuite de la surveillance en vue d'un accouchement par voie basse.\n\nToulouse, le 27/08/2025\n\nDr Madani Rigault\n\n-----\n\n## Compte rendu d'accouchement par voie basse\n\nHôpital Larrey - Centre hospitalier universitaire de Toulouse\nService d'obstétrique\n\nIdentification de la patiente :\n- Nom : Rocheron\n- Prénom : Monique\n- Date de naissance : 07/01/1994\n\n### Déroulement de l'accouchement\n\n- Date de l'accouchement : 27/08/2025 à 14h30\n- Sage-femme : Mme Lefèvre\n- Obstétricien : Dr Madani Rigault\n\nMme Rocheron a accouché par voie basse d'un enfant vivant de sexe masculin, en présentation du sommet. L'accouchement s'est déroulé de manière spontanée et sans complication majeure.\n\nLa patiente était sous analgésie péridurale. La phase active du travail a duré environ 6 heures, avec une dilatation complète du col à 13h. La phase d'expulsion a été rapide, avec une bonne participation de la patiente. Une épisiotomie médio-latérale droite a été réalisée pour faciliter le dégagement de la tête fœtale. Une déchirure périnéale du premier degré, intéressant la fourchette vulvaire, est survenue au moment du dégagement des épaules.\n\nL'enfant, un garçon de 3450 grammes, est né à 14h30 avec un score d'Apgar à 9/10 à 1 minute et 10/10 à 5 minutes. Il a crié spontanément à la naissance et a été placé en peau à peau avec sa mère. Le placenta a été délivré spontanément et complètement à 14h45, sans saignement excessif.\n\nLa déchirure périnéale a été suturée immédiatement après la délivrance sous anesthésie locale, avec un bon résultat hémostatique.\n\n### Conclusion\n\nAccouchement par voie basse spontané, en présentation du sommet, avec naissance d'un enfant vivant et en bonne santé. Une déchirure périnéale du premier degré a été suturée sans complication. La patiente et son enfant sont en bonne santé et ont été transférés en suite de couches.\n\nToulouse, le 27/08/2025\n\nDr Madani Rigault\n\n-----\n\n## Compte rendu d'hospitalisation - Suite de couches\n\nHôpital Larrey - Centre hospitalier universitaire de Toulouse\nService de maternité\n\nIdentification de la patiente :\n- Nom : Rocheron\n- Prénom : Monique\n- Date de naissance : 07/01/1994\n\n### Résumé de la grossesse et de l'accouchement\n\nMme Rocheron, 31 ans, troisième geste, deuxième pare, a été hospitalisée le 26/08/2025 pour surveillance d'une grossesse normale à terme. Elle a accouché le 27/08/2025 par voie basse d'un garçon de 3450 grammes, en présentation du sommet. L'accouchement s'est déroulé sans complication majeure, en dehors d'une déchirure périnéale du premier degré suturée immédiatement.\n\n### Évolution dans le service\n\nLa patiente a été transférée en suite de couches le 27/08/2025. Les suites de couches ont été simples. Les lochies sont modérées, sans saignement excessif. Les tranchées utérines sont modérées et bien tolérées. La tension artérielle est restée stable, sans signe d'hypertension du post-partum. La cicatrisation périnéale est satisfaisante, sans signe d'infection.\n\nMme Rocheron a commencé un allaitement maternel exclusif. Elle a bénéficié d'un accompagnement par les sages-femmes du service pour la mise au sein et la surveillance de la lactation. L'enfant prend bien le sein et les tétées sont efficaces.\n\nUn bilan biologique de contrôle a été réalisé le 29/08 : NFS normale (hémoglobine à 11,8 g/dL), bilan hépatique et rénal normaux.\n\n### Conclusion\n\nSuites de couches simples après un accouchement par voie basse. La patiente et son enfant sont en bonne santé. Elle a débuté un allaitement maternel avec une bonne adaptation de l'enfant. La sortie est prévue le 31/08/2025, avec un suivi en consultation post-natale dans 6 semaines.\n\nToulouse, le 30/08/2025\n\nDr Madani Rigault",
 
   "formulations": {
     "diagnostics": {
-      "Enfant unique, né à l'hôpital (Z38.0)": [
-        "Nouveau-né de sexe féminin, Layal Erdrich, née le 13/02/2026 à l'hôpital Saint-André",
-        "Layal Erdrich est née le 13/02/2026 à 39 semaines d'aménorrhée"
+      "Accouchement (unique) spontané par présentation du sommet (O800)": [
+        "accouché par voie basse d'un enfant vivant de sexe masculin, en présentation du sommet",
+        "Accouchement par voie basse spontané, en présentation du sommet"
       ],
-      "Fœtus et nouveau-né affectés par un accouchement par césarienne (P03.4)": [
-        "naissance par césarienne en urgence pour sauvetage maternel",
-        "naissance par césarienne",
-        "accouchement par césarienne en urgence pour sauvetage maternel"
+      "Déchirure obstétricale du périnée, du premier degré (O700)": [
+        "une déchirure périnéale du premier degré, intéressant la fourchette vulvaire",
+        "déchirure périnéale du premier degré suturée immédiatement"
       ],
-      "Alimentation au sein difficile chez le nouveau-né (P92.5)": [
-        "difficulté d'alimentation au sein",
-        "difficultés d'alimentation au sein",
-        "Difficulté de prise du sein avec succion faible et intermittente",
-        "difficultés d'alimentation au sein ont été observées, avec une succion faible et des épisodes de régurgitations fréquentes"
+      "Surveillance d'une autre grossesse normale (Z348)": [
+        "surveillance d'une grossesse normale à terme",
+        "suivie régulièrement en consultation prénatale"
+      ],
+      "Naissance unique, enfant vivant (Z370)": [
+        "naissance d'un enfant vivant et en bonne santé",
+        "a accouché [...] d'un garçon de 3450 grammes"
+      ],
+      "Soins et examens de l'allaitement maternel (Z391)": [
+        "Elle a bénéficié d'un accompagnement par les sages-femmes du service pour la mise au sein et la surveillance de la lactation",
+        "a commencé un allaitement maternel exclusif"
       ]
     },
     "informations": {
-      "Date entrée": ["24/08/2026"],
-      "Date de sortie": ["30/08/2026"],
-      "Service d'hospitalisation": ["Service d'obstétrique", "unité de néonatalogie"],
-      "Nom/Prénom du patient": ["Erdrich Layal"],
-      "Nom/Prénom du médecin": ["Nayla Le Corff"],
-      "Âge": ["nouveau-né"],
-      "Sexe": ["féminin"],
-      "Poids": ["3 200 grammes", "3 150 grammes", "3 200 grammes"],
-      "NFS": [
-        "hémoglobine 16,5 g/dL, leucocytes 9 500/mm³, plaquettes 250 000/mm³"
-      ],
-      "Créatinine": ["0,4 mg/dL"],
-      "Bilan hépatique": ["normal"],
-      "Traitements": [
-        "accompagnement par une consultante en lactation",
-        "compléments de lait maternel tiré administrés à la seringue ou à la tasse",
-        "surveillance rapprochée du poids et de l'hydratation"
-      ]
+      "Date entrée": ["le 26/08/2025"],
+      "Date de sortie": ["La sortie est prévue le 31/08/2025"],
+      "Service d'hospitalisation": ["Service d'obstétrique", "Service de maternité"],
+      "Date de l'intervention": ["27/08/2025 à 14h30"],
+      "Nom/Prénom du chirurgien": ["Dr Madani Rigault"],
+      "Nom/Prénom du patient": ["Mme Rocheron Monique"],
+      "Âge": ["31 ans"],
+      "Sexe": ["Féminin"],
+      "État général": ["Patiente en bon état général", "La patiente et son enfant sont en bonne santé"],
+      "Poids": ["Poids : 72 kg", "un garçon de 3450 grammes"],
+      "Statut gestationnel": ["grossesse normale à terme"],
+      "Gestité": ["troisième geste"],
+      "Médicaments": ["supplémentation en acide folique et vitamine D"],
+      "NFS": ["NFS normale (hémoglobine à 12,1 g/dL, plaquettes à 250 G/L)", "NFS normale (hémoglobine à 11,8 g/dL)"],
+      "Créatinine": ["créatinine à 65 µmol/L"],
+      "Bilan hépatique": ["Bilan hépatique et rénal dans les limites de la normale", "bilan hépatique et rénal normaux"]
     }
   }
 }

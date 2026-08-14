@@ -1,57 +1,51 @@
 Le compte rendu suivant respecte les élements suivants :
         - les diagnostics ont une formulation moins formelle que la définition du code
-        - le plan du CRH est conforme aux recommandations. Les sections sont complètes et autonomes.
-        - les dates sont cohérentes et plausibles
+        - le plan du CRH est conforme aux recommandations. Les sections sont rédigées en texte libre, sans mise en forme autre que les titres de section.
+        - les antécédents ajoutés sont mineurs et plausibles
+        - les dates sont cohérentes
         - les informations obligatoires sont présentes
-        - les informations spécifiques au cancer sont intégrées naturellement
-        - les informations sont cohérentes entre elles
+
+Voici le résultat au format JSON demandé :
 
 ```json
 {
-  "CR": "### Hôpital Édouard Herriot - Hospices Civils de Lyon\nService d'Obstétrique\n\n**Compte rendu d'hospitalisation**\n\n**Informations patient**\n- Nom : Peron\n- Prénom : Annabella\n- Date de naissance : 23/04/2025\n- Âge : 10 mois (au moment de l'hospitalisation)\n- Sexe : Féminin\n\n---\n\n### Motif d'hospitalisation\nAnnabella Peron, nourrisson de 10 mois, a été hospitalisée pour une prise en charge diagnostique et thérapeutique d'une iso-immunisation Rh, dépistée en période néonatale. L'hospitalisation a également permis de réaliser des examens de dépistage complémentaires, notamment hématologiques et oto-rhino-laryngologiques.\n\n### Antécédents\n- **Antécédents médicaux** :\n  - Naissance à terme, unique, par voie basse, le 23/04/2025 à l'Hôpital Édouard Herriot (poids de naissance : 3 200 g).\n  - Iso-immunisation Rh diagnostiquée en période néonatale, avec présence d'anticorps anti-D maternels. Pas d'antécédent d'anémie hémolytique sévère ou d'exsanguinotransfusion.\n  - Pas d'antécédent d'ictère prolongé ou de photothérapie en période néonatale.\n  - Vaccinations à jour selon le calendrier vaccinal.\n  - Pas d'allergie connue.\n\n- **Antécédents chirurgicaux** : Aucun.\n\n- **Antécédents familiaux** :\n  - Mère : groupe sanguin O négatif (O-). Pas d'antécédent particulier.\n  - Père : groupe sanguin A positif (A+).\n  - Pas d'antécédent familial d'hémoglobinopathies ou de troubles immunitaires.\n\n### Mode de vie\n- Nourrisson vivant à domicile avec ses parents.\n- Allaitement maternel exclusif jusqu'à 6 mois, puis diversification alimentaire en cours.\n- Pas d'exposition à des toxiques (tabac, alcool, drogues) au domicile.\n- Pas d'exposition professionnelle particulière pour les parents.\n\n### Histoire de la maladie\nAnnabella est née le 23/04/2025 à l'Hôpital Édouard Herriot. Lors du bilan néonatal systématique, une incompatibilité Rh a été mise en évidence (mère O-, père A+), avec présence d'anticorps anti-D maternels. Le test de Coombs direct était positif chez le nourrisson, confirmant une iso-immunisation Rh. Aucun signe clinique d'anémie hémolytique ou d'ictère sévère n'a été observé en période néonatale.\n\nÀ l'âge de 10 mois, Annabella a été hospitalisée du 11/03/2026 au 15/03/2026 pour une évaluation complète de son état hématologique et un dépistage des éventuelles complications liées à l'iso-immunisation Rh. Un examen de dépistage des affections des oreilles a également été réalisé, dans le cadre du suivi systématique des nourrissons.\n\n### Examen clinique\n- **Constantes vitales à l'entrée** :\n  - Poids : 8,5 kg (courbe de croissance normale).\n  - Température : 37,2 °C.\n  - Fréquence cardiaque : 120 battements/min.\n  - Fréquence respiratoire : 30 cycles/min.\n  - Saturation en oxygène : 99 % en air ambiant.\n  - Tension artérielle : non mesurée (nourrisson).\n\n- **Examen physique** :\n  - État général conservé, nourrisson éveillé et réactif (score ECOG 0).\n  - Peau et muqueuses roses, pas d'ictère visible.\n  - Pas d'hépatosplénomégalie.\n  - Auscultation cardio-pulmonaire normale.\n  - Abdomen souple, indolore, pas de masse palpable.\n  - Examen neurologique normal pour l'âge.\n  - Examen ORL : conduits auditifs externes libres, tympans normaux.\n\n### Examens complémentaires\n- **Bilan sanguin (11/03/2026)** :\n  - NFS : Hémoglobine = 11,8 g/dL (normale pour l'âge), VGM = 85 fL, réticulocytes = 2 % (normaux), leucocytes = 9 000/mm³, plaquettes = 350 000/mm³.\n  - Bilan hépatique : Bilirubine totale = 8 µmol/L (normale), bilirubine conjuguée = 2 µmol/L (normale), transaminases normales.\n  - Créatinine : 25 µmol/L (normale pour l'âge).\n  - Groupe sanguin : A positif (A+).\n  - Test de Coombs direct : positif (confirmant la persistance de l'iso-immunisation Rh).\n  - Dosage des anticorps anti-D : taux résiduel faible, sans signe d'hémolyse active.\n\n- **Examen de dépistage des affections des oreilles (12/03/2026)** :\n  - Audiométrie comportementale : réponses normales pour l'âge.\n  - Tympans normaux à l'otoscopie.\n  - Pas de signe de surdité ou d'atteinte auditive.\n\n### Évolution pendant l'hospitalisation\nAnnabella a été hospitalisée pour une évaluation approfondie de son iso-immunisation Rh et la réalisation d'examens de dépistage. Le bilan hématologique a confirmé la persistance d'une iso-immunisation Rh, sans signe d'anémie hémolytique active ou de complication. Le test de Coombs direct est resté positif, mais le taux d'anticorps anti-D était faible, et l'hémoglobine était dans les limites de la normale pour l'âge.\n\nAucun traitement spécifique n'a été nécessaire pendant l'hospitalisation. Un suivi régulier en consultation de pédiatrie a été organisé pour surveiller l'évolution de l'iso-immunisation et dépister d'éventuelles complications (anémie, ictère).\n\nL'examen de dépistage des affections des oreilles n'a pas révélé d'anomalie. Annabella a été autorisée à rentrer à domicile le 15/03/2026, avec un suivi rapproché en consultation externe.\n\n### Conclusion\nAnnabella Peron, nourrisson de 10 mois, a été hospitalisée pour une évaluation diagnostique et thérapeutique d'une iso-immunisation Rh, dépistée en période néonatale. Le bilan réalisé n'a pas mis en évidence de complication hématologique ou auditive. L'état général est excellent, et aucun traitement n'a été nécessaire. Un suivi régulier en pédiatrie est recommandé pour surveiller l'évolution de l'iso-immunisation.\n\n**Médecin signataire**\nDr Myriam Monniette\nService d'Obstétrique\nHôpital Édouard Herriot - Hospices Civils de Lyon",
+  "CR": "Hôpital Saint-Louis - Assistance Publique Hôpitaux de Paris\nService de Neurologie\n\nCompte rendu d'hospitalisation\n\nIdentité du patient :\nNom : Melgar-Luque\nPrénom : Lillia\nDate de naissance : 27/03/1950\n\n### Motif d'hospitalisation\nMme Melgar-Luque, âgée de 76 ans, a été hospitalisée ce jour en neurologie pour prise en charge de spasmes musculaires invalidants au niveau du membre supérieur droit, associés à une douleur persistante du coude évoquant une épicondylite latérale.\n\n### Antécédents\n- Médicaux : appendicectomie dans l'enfance, pas d'autre antécédent notable.\n- Chirurgicaux : néant.\n- Familiaux : pas d'antécédent de maladie neurologique ou rhumatologique connu.\n- Allergies : pas d'allergie médicamenteuse connue.\n\n### Mode de vie\nMme Melgar-Luque est retraitée, anciennement employée de bureau. Elle vit seule à domicile et est autonome pour les activités de la vie quotidienne. Elle ne fume pas et ne consomme pas d'alcool. Elle pratique occasionnellement la marche.\n\n### Histoire de la maladie\nLa patiente rapporte l'apparition progressive depuis trois mois de spasmes musculaires au niveau du membre supérieur droit, initialement intermittents puis devenant quasi quotidiens. Ces spasmes s'accompagnent d'une douleur localisée au coude droit, majorée par les mouvements de préhension et de rotation du poignet, évoquant une épicondylite latérale. Elle a consulté son médecin traitant il y a un mois, qui a prescrit des antalgiques et des séances de kinésithérapie, sans amélioration significative. Devant la persistance des symptômes, une hospitalisation a été décidée pour évaluation et prise en charge spécialisée.\n\n### Examen clinique\nÀ l'entrée, la patiente est apyrétique. La tension artérielle est mesurée à 130/80 mmHg, la fréquence cardiaque à 78 battements par minute. Le poids est stable à 65 kg. L'examen neurologique met en évidence des spasmes intermittents des muscles fléchisseurs et extenseurs du membre supérieur droit, sans déficit sensitivo-moteur associé. L'examen du coude droit révèle une douleur à la palpation de l'épicondyle latéral, reproduite par l'extension contrariée du poignet. Le reste de l'examen clinique est sans particularité.\n\n### Examens complémentaires\nUne électromyographie de détection a été réalisée ce jour, confirmant l'absence de signe de dénervation et objectivant une activité musculaire anormale en faveur de spasmes localisés. Aucune anomalie biologique n'a été relevée (NFS, ionogramme sanguin, fonction rénale et bilan hépatique normaux).\n\n### Évolution pendant l'hospitalisation\nLa démarche diagnostique a permis de confirmer le diagnostic de spasmes musculaires localisés du membre supérieur droit, associés à une épicondylite latérale. Une séance d'injection de toxine botulique dans les muscles striés du membre supérieur droit a été réalisée sous contrôle électromyographique, ciblant les groupes musculaires impliqués dans les spasmes. La patiente a bien toléré le geste, sans complication immédiate. Des conseils d'ergothérapie et une ordonnance pour des séances de kinésithérapie ont été remis à la sortie.\n\n### Conclusion\nMme Melgar-Luque rentre à domicile ce jour avec un suivi en consultation externe de neurologie prévu dans un mois. Le traitement par toxine botulique devrait permettre une amélioration progressive des spasmes, tandis que la kinésithérapie visera à soulager l'épicondylite latérale. En cas de persistance ou d'aggravation des symptômes, une réévaluation sera proposée.\n\nParis, le 26/11/2026\n\nDr Nicole Borsi\nService de Neurologie\nHôpital Saint-Louis - AP-HP",
 
   "formulations": {
     "diagnostics": {
-      "Enfant unique, né à l'hôpital (Z38.0)": [
-        "Naissance à terme, unique, par voie basse, le 23/04/2025 à l'Hôpital Édouard Herriot",
-        "Annabella est née le 23/04/2025 à l'Hôpital Édouard Herriot"
+      "Crampe et spasme (R252)": [
+        "spasmes musculaires invalidants au niveau du membre supérieur droit",
+        "spasmes musculaires",
+        "spasmes intermittents des muscles fléchisseurs et extenseurs du membre supérieur droit",
+        "spasmes localisés du membre supérieur droit"
       ],
-      "Iso-immunisation Rh du fœtus et du nouveau-né (P55.0)": [
-        "Iso-immunisation Rh diagnostiquée en période néonatale",
-        "Incompatibilité Rh mise en évidence (mère O-, père A+), avec présence d'anticorps anti-D maternels",
-        "Test de Coombs direct positif chez le nourrisson, confirmant une iso-immunisation Rh",
-        "Persistance d'une iso-immunisation Rh, sans signe d'anémie hémolytique active",
-        "Iso-immunisation Rh, dépistée en période néonatale"
-      ],
-      "Examen spécial de dépistage de maladies du sang, des organes hématopoïétiques et de certains troubles du système immunitaire (Z13.0)": [
-        "Bilan sanguin réalisé pour évaluer l'état hématologique",
-        "Évaluation complète de son état hématologique",
-        "Examen de dépistage hématologique"
-      ],
-      "Examen spécial de dépistage des affections des oreilles (Z13.51)": [
-        "Examen de dépistage des affections des oreilles",
-        "Audiométrie comportementale réalisée dans le cadre du dépistage auditif",
-        "Examen ORL pour dépistage des affections des oreilles"
+      "Épicondylite - Bras (M7712)": [
+        "douleur persistante du coude évoquant une épicondylite latérale",
+        "douleur localisée au coude droit, majorée par les mouvements de préhension et de rotation du poignet, évoquant une épicondylite latérale",
+        "douleur à la palpation de l'épicondyle latéral",
+        "épicondylite latérale"
       ]
     },
     "informations": {
-      "Date entrée": ["11/03/2026"],
-      "Date de sortie": ["15/03/2026"],
-      "Service d'hospitalisation": ["Service d'Obstétrique", "Service d'Obstétrique\nHôpital Édouard Herriot - Hospices Civils de Lyon"],
-      "Nom/Prénom du patient": ["Peron Annabella"],
-      "Nom/Prénom du médecin": ["Dr Myriam Monniette"],
-      "Âge": ["10 mois (au moment de l'hospitalisation)"],
+      "Date entrée": ["26/11/2026"],
+      "Date de sortie": ["26/11/2026"],
+      "Service d'hospitalisation": ["Service de Neurologie", "neurologie"],
+      "Nom/Prénom du patient": ["Melgar-Luque Lillia"],
+      "Nom/Prénom du médecin": ["Nicole Borsi"],
+      "Âge": ["76 ans"],
       "Sexe": ["Féminin"],
-      "État général": ["État général conservé, nourrisson éveillé et réactif (score ECOG 0)"],
-      "Poids": ["8,5 kg"],
-      "NFS": [
-        "Hémoglobine = 11,8 g/dL (normale pour l'âge), VGM = 85 fL, réticulocytes = 2 % (normaux), leucocytes = 9 000/mm³, plaquettes = 350 000/mm³"
-      ],
-      "Créatinine": ["25 µmol/L (normale pour l'âge)"],
-      "Bilan hépatique": [
-        "Bilirubine totale = 8 µmol/L (normale), bilirubine conjuguée = 2 µmol/L (normale), transaminases normales"
-      ],
-      "Traitements": ["Aucun traitement spécifique n'a été nécessaire pendant l'hospitalisation"]
+      "État général": ["autonome pour les activités de la vie quotidienne"],
+      "Poids": ["65 kg"],
+      "Statut gestationnel": [],
+      "Gestité": [],
+      "NFS": ["NFS normaux"],
+      "Créatinine": ["fonction rénale normale"],
+      "Bilan hépatique": ["bilan hépatique normaux"],
+      "Traitements": [
+        "Une séance d'injection de toxine botulique dans les muscles striés du membre supérieur droit",
+        "conseils d'ergothérapie",
+        "une ordonnance pour des séances de kinésithérapie"
+      ]
     }
   }
 }

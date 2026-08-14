@@ -1,20 +1,22 @@
 **SCÉNARIO DE DÉPART :**
-- Âge du patient : 12 ans
+- Âge du patient : 0 ans
 - Sexe du patient : Masculin
-- Date d'entrée : 30/10/2024
-- Date de sortie : 06/11/2024
-- Date de naissance : 05/02/2012
-- Nom du patient : Villemond
-- Prénom du patient : Sauveur
-- Mode d'entrée' : URGENCES
+- Date d'entrée : 01/06/2026
+- Date de sortie : 05/06/2026
+- Date de naissance : 21/04/2026
+- Nom du patient : De crescenzo
+- Prénom du patient : Khmaies
+- Mode d'entrée' : DOMICILE
 - Mode de sortie' : DOMICILE
 - Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
 - Codage CIM10 :
-   * Diagnostic principal : Convulsions, autres et non précisées (R568)
+   * Diagnostic principal : Enfant unique, né à l'hôpital (Z380)
    * Diagnostics associés :
-      - Syncope et collapsus (sauf choc) (R55)
-- Nom du médecin / signataire : Annette Pouget
-- Service : PEDIATRIE NEUROLOGIE
+      - Foetus et nouveau-né affectés par un accouchement par extracteur pneumatique [ventouse] (P033)
+      - Foetus et nouveau-né affectés par une anesthésie et par une analgésie de la mère, au cours de la grossesse, du travail et de l'accouchement (P040)
+      - Enfant né après terme, qui n'est pas gros pour l'âge gestationnel (P082)
+- Nom du médecin / signataire : Germain Lecouey
+- Service : OBSTETRIQUE
 - Hôpital : Hôpital Saint-Louis - Assistance Publique Hôpitaux de Paris
 
 **FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
@@ -22,120 +24,165 @@
 Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
 Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
 
-<fiche_code code="R56.8">
+<fiche_code code="Z38.0">
 
-# R56.8 — Convulsions, autres et non précisées
+# Z38.0 — Enfant unique, né à l'hôpital
 
 ## Position dans la classification
-- Chapitre XVIII : Symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs
-- Bloc R50-R69 : Symptômes et signes généraux
-
-## Périmètre clinique du code
-
-Au niveau du code :
-- crise (convulsive) SAI
-
-## À ne pas décrire
-
-Affections relevant d'autres codes (hérité du chapitre XVIII) :
-
-certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
-résultats anormaux constatés au cours de l'examen prénatal systématique de la mère (O28.-)
-
-Affections relevant d'autres codes (hérité de la catégorie R56) :
-
-convulsions et crises convulsives (au cours de) (du) :
- - dissociatives (F44.5) 
- - épilepsie (G40-G41) 
- - nouveau-né (P90)
-
-Formes spécifiées de la catégorie R56 :
-- Convulsions fébriles [→ R56.0]
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
 
 ## Formulations cliniques alternatives
-- antécédent convulsif
-- Attaque (de) (voir aussi apoplexie), convulsive (voir aussi convulsions)
-- coma post-convulsif
-- convulsif
-- convulsion
-- Convulsions (idiopathiques) (de)
-- Convulsions (idiopathiques) (de), dues à, éther
-- Convulsions (idiopathiques) (de), dues à, éther, anesthésique
-- Convulsions (idiopathiques) (de), généralisées
-- Convulsions (idiopathiques) (de), infantiles
-- Convulsions (idiopathiques) (de), spasmodiques
-- Convulsions SAI
-- convulsions subintrantes
-- Crise(s) (de), convulsive (voir aussi convulsions)
-- équivalents convulsifs
-- Etat (de), convulsif (voir aussi convulsions)
-- état mal convulsif réfractaire
-- malaise convulsif
-- Pseudotétanos (voir aussi convulsions)
-- syndrome épileptiforme
-- troubles convulsifs
+- Enfant - voir aussi nom de l'état pathologique, né, vivant, en bonne santé, naissance, unique, né à l'hôpital
 
 </fiche_code>
 
-<fiche_code code="R55">
+<fiche_code code="P03.3">
 
-# R55 — Syncope et collapsus
+# P03.3 — Fœtus et nouveau-né affectés par un accouchement par extracteur pneumatique [ventouse]
 
 ## Position dans la classification
-- Chapitre XVIII : Symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs
-- Bloc R50-R69 : Symptômes et signes généraux
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P00-P04 : Fœtus et nouveau-né affectés par des troubles maternels et par des complications de la grossesse, du travail et de l'accouchement
 
 ## Périmètre clinique du code
 
-Au niveau du code :
-- évanouissement
-- perte de connaissance
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+Inclusions héritées du bloc P00-P04 :
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du foetus ou du nouveau-né
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du fœtus ou du nouveau-né
 
 ## À ne pas décrire
 
-Affections relevant d'autres codes (hérité du chapitre XVIII) :
+Affections relevant d'autres codes (hérité du chapitre XVI) :
 
-certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
-résultats anormaux constatés au cours de l'examen prénatal systématique de la mère (O28.-)
-
-Affections relevant d'autres codes :
-
-asthénie neurocirculatoire (F45.3)
-choc :
- - SAI (R57.9) 
- - cardiogénique (R57.0) 
- - compliquant ou consécutif à :
-  - avortement, grossesse extra-utérine ou molaire (O00-O07)  (O08.3) 
-  - travail et accouchement (O75.1) 
- - postopératoire (T81.1) 
-crise de Stokes–Adams (I45.9) 
-- hypotension orthostatique (I95.1)  - neurogène (G23.8) 
-perte de conscience SAI (R40.2) 
-- syncope :
- - due à la chaleur (T67.1) 
- - psychogène (F48.8) 
-syndrome du sinus carotidien (G90.0)
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
 
 ## Formulations cliniques alternatives
-- Collapsus (de), au sens de, syncope
-- Crise(s) (de), vagale
-- Crise(s) (de), vasomotrice
-- Défaillance (de) (voir aussi insuffisance)
-- effondrement
-- malaise cardiaque
-- Malaise (état de) (non pris dans le sens d'étourdissement), au sens d'évanouissement
-- malaise inaugural
-- malaise prolongé
-- malaise volant poids lourd
-- malaise volant voiture
-- Perte(s) (de), connaissance (évanouissement)
-- pertes connaissance itératives
-- Phénomène (de), vasomoteur
-- Réaction (à) (de), vaso-vagale
-- Syncope
-- syncope aigüe
-- syncope blanche
-- syncope effort
-- Syncope, par, vasoconstriction
+- accouchement par ventouse
+- expulsion par ventouse
+- Extracteur pneumatique (ventouse), accouchement, affectant foetus ou nouveau-né
+- Extraction, foetale (avec), ventouse, affectant foetus ou nouveau-né
+- extraction par ventouse
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, accouchement, par, extracteur pneumatique (ventouse)
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, accouchement, par, ventouse
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, extracteur pneumatique (ventouse)
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, ventouse
+- traumatisme obstétrical par ventouse
+- Ventouse, accouchement par nca, affectant foetus ou nouveau-né
+
+</fiche_code>
+
+<fiche_code code="P04.0">
+
+# P04.0 — Fœtus et nouveau-né affectés par une anesthésie et par une analgésie de la mère, au cours de la grossesse, du travail et de l'accouchement
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P00-P04 : Fœtus et nouveau-né affectés par des troubles maternels et par des complications de la grossesse, du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+Inclusions héritées du bloc P00-P04 :
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du foetus ou du nouveau-né
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du fœtus ou du nouveau-né
+
+Inclusions héritées de la catégorie P04 :
+- effets non tératogènes de substances transmises par voie placentaire
+
+Au niveau du code :
+- réactions et intoxications dues à des opiacés et tranquillisants administrés à la mère pendant le travail et l'accouchement
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie P04) :
+
+ictère du nouveau-né dû à des médicaments ou des toxines transmis par la mère (P58.4)
+malformations congénitales (Q00-Q99)
+
+## Formulations cliniques alternatives
+- Absorption de, analgésique ou anesthésique obstétrical à travers le placenta, affectant le foetus
+- Absorption de, substance, toxique, pendant la grossesse et les suites de couches à travers le, placenta, affectant foetus ou nouveau-né, due à, analgésie maternelle
+- Absorption de, substance, toxique, pendant la grossesse et les suites de couches à travers le, placenta, affectant foetus ou nouveau-né, due à, anesthésie maternelle
+- césarienne sous AG
+- choc anaphylactique
+- Effets (adverses) (indésirables) (nocifs) (de), anesthésie (au cours de) nca, grossesse, affectant foetus ou nouveau-né
+- Effets (adverses) (indésirables) (nocifs) (de), anesthésie (au cours de) nca, travail ou accouchement, affectant foetus ou nouveau-né
+- Effets (adverses) (indésirables) (nocifs) (de), foetus, analgésie ou anesthésie de la mère
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, anesthésie ou analgésie de la mère (au cours de la grossesse, du travail et de l'accouchement)
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, opiacé administré à la mère pendant la grossesse, le travail et l'accouchement
+- Intoxication (aiguë) (par) - voir aussi empoisonnement, narcotique (aiguë) nca, à travers le, lait maternel affectant l'enfant, due à, analgésie ou anesthésie maternelle
+- Intoxication (aiguë) (par) - voir aussi empoisonnement, tranquillisants (aiguë), administrés à la mère pendant l'accouchement affectant foetus ou nouveau-né
+- sédation maternelle
+
+</fiche_code>
+
+<fiche_code code="P08.2">
+
+# P08.2 — Enfant né après terme, qui n'est pas gros pour l'âge gestationnel
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P05-P08 : Anomalies liées à la durée de la gestation et à la croissance du fœtus
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+Inclusions héritées de la catégorie P08 :
+- les états mentionnés, sans autre précision, comme cause de mortalité, de morbidité ou de soins supplémentaires du foetus ou du nouveau-né
+- les états mentionnés, sans autre précision, comme cause de mortalité, de morbidité ou de soins supplémentaires du fœtus ou du nouveau-né
+
+Au niveau du code :
+- foetus ou nouveau-né dont la durée de gestation est de 42 semaines entières ou plus (294 jours ou plus), ni gros ni grand pour l'âge gestationnel.
+- postmaturité SAI
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+## Formulations cliniques alternatives
+- dépassement terme
+- enfant post-terme
+- Enfant - voir aussi nom de l'état pathologique, né, après terme (42 semaines entières ou plus) (294 jours ou plus)
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, né, après terme
+- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, postmaturité
+- Hypermaturité (foetus ou nouveau-né)
+- Naissance (en ce qui concerne l'enfant) (voir aussi foetus et nouveau-né), après terme
+- Nca, "après terme mais pas ""gros pour l'âge gestationnel"""
+- Nca, né, après terme (42 semaines entières ou plus, 294 jours ou plus de gestation) (avec)
+- Nca, né, gestation de 42 semaines ou plus, 294 jours ou plus
+- Nouveau-né - voir aussi foetus, avec, âge gestationnel à la naissance, 42 semaines entières ou plus, ou 294 jours ou plus
+- post-maturité
+- post-terme
+- Postmaturité
+- terme dépassé
 
 </fiche_code>

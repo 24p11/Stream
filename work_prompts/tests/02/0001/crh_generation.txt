@@ -1,178 +1,97 @@
 Le compte rendu suivant respecte les élements suivants :
         - les diagnostics ont une formulation moins formelle que la définition du code
-        - le plan du CRH est conforme aux recommandations. Les sections sont détaillées et réalistes.
-        - les dates sont cohérentes
-        - les informations obligatoires sont présentes
-        - les informations spécifiques au cancer ne sont pas applicables ici
-        - les dictionnaires de formulations et d'informations sont complets
+        - le plan du CRH est conforme aux recommandations. Les sections sont rédigées en texte libre, sans puces ni étiquettes.
+        - les antécédents sont limités à des événements résolus et clos
+        - les informations obligatoires sont présentes dans l'entête et dans le corps du texte
+        - les dates sont cohérentes avec le scénario
 
 ```json
 {
-  "CR": "### Hôpital Saint-Louis - Assistance Publique Hôpitaux de Paris\n### Service de Pédiatrie Neurologie\n\n**Compte rendu d'hospitalisation**\n\n**Patient :**\n- Nom : Villemond\n- Prénom : Sauveur\n- Date de naissance : 05/02/2012\n- Âge : 12 ans\n- Sexe : Masculin\n\n**Dates d'hospitalisation :**\n- Entrée : 30/10/2024 via les urgences\n- Sortie : 06/11/2024 à domicile\n\n**Médecin signataire :** Dr Annette Pouget\n\n---
+  "CR": "### Compte rendu d'hospitalisation
+
+Service d'obstétrique - Hôpital Saint-Louis - Assistance Publique Hôpitaux de Paris
+
+Nom : De Crescenzo
+Prénom : Khmaies
+Date de naissance : 21/04/2026
+
+---
 
 ### Motif d'hospitalisation
-Sauveur Villemond, 12 ans, a été admis aux urgences le 30/10/2024 pour prise en charge d’un épisode convulsif suivi d’une perte de connaissance. Les parents rapportent une crise généralisée avec mouvements tonicocloniques, d’une durée d’environ 2 minutes, survenue sans facteur déclenchant évident. À l’arrivée des secours, l’enfant était confus et présentait un malaise vagal avec pâleur et sueurs froides.
+Khmaies De Crescenzo, nouveau-né de sexe masculin, a été hospitalisé en unité de néonatologie dès sa naissance le 1er juin 2026 pour surveillance et prise en charge adaptée dans un contexte d'accouchement par ventouse et d'exposition aux anesthésiques maternels. L'enfant est né après terme, sans macrosomie associée.
 
 ---
 
 ### Antécédents
-**Médicaux :**
-- Aucun antécédent notable de convulsions ou d’épilepsie.
-- Pas de traumatisme crânien récent.
-- Vaccinations à jour.
-- Pas d’allergie connue.
-
-**Chirurgicaux :**
-- Appendicectomie à l’âge de 8 ans (2020).
-
-**Familiaux :**
-- Pas d’antécédent familial d’épilepsie ou de troubles neurologiques connus.
-- Pas de notion de mort subite dans la famille.
-
-**Allergies :**
-- Aucune allergie médicamenteuse ou alimentaire connue.
+- Médicaux : Aucun antécédent notable.
+- Chirurgicaux : Aucun.
+- Familiaux : Non contributifs dans le contexte actuel.
+- Allergies : Aucune allergie connue à ce jour.
 
 ---
 
 ### Mode de vie
-- Scolarisé en classe de 5ème, sans difficulté particulière.
-- Pratique du football en club 2 fois par semaine.
-- Pas de consommation de tabac, d’alcool ou de substances illicites.
-- Pas de voyage récent en zone tropicale.
-- Environnement familial stable.
+Né à terme dépassé, Khmaies est le premier enfant de sa mère. Aucune exposition aux toxiques n'est rapportée pendant la grossesse.
 
 ---
 
 ### Histoire de la maladie
-Le 30/10/2024 vers 16h, Sauveur a présenté une crise convulsive généralisée à domicile, décrite par ses parents comme une perte de connaissance brutale avec raidissement des membres, suivie de mouvements cloniques des quatre membres. La crise a duré environ 2 minutes, suivie d’une phase post-critique avec confusion et somnolence. À l’arrivée des secours, l’enfant était pâle, en sueurs, et a présenté un épisode de malaise avec hypotension transitoire, sans perte de connaissance prolongée. Il a été transporté aux urgences pédiatriques pour évaluation.
-
-À l’admission, Sauveur était apyrétique, avec un examen neurologique initial normal en dehors d’une légère obnubilation. Aucun signe de déficit focal n’a été retrouvé. Les parents signalent qu’il n’avait jamais présenté de tels symptômes auparavant.
+Khmaies est né le 1er juin 2026 à 42 semaines d'aménorrhée et 2 jours, par voie basse instrumentale sous ventouse obstétricale. L'accouchement a nécessité une analgésie péridurale chez la mère. À la naissance, l'enfant présentait une bonne adaptation à la vie extra-utérine, avec un score d'Apgar à 8 à 1 minute et 10 à 5 minutes. Cependant, en raison du dépassement de terme et des conditions d'accouchement, une surveillance néonatale a été instaurée.
 
 ---
 
 ### Examen clinique
-**À l’admission (30/10/2024) :**
-- Poids : 42 kg (percentile 50 pour l’âge).
-- Taille : 150 cm.
-- Température : 36,8°C.
-- Fréquence cardiaque : 88 bpm, régulière.
-- Tension artérielle : 110/65 mmHg.
-- Saturation en O2 : 99% en air ambiant.
-- Glycémie capillaire : 5,2 mmol/L.
-
-**Examen neurologique :**
-- Conscient, orienté, légèrement obnubilé.
-- Pas de raideur méningée.
-- Pas de signe de focalisation neurologique.
-- Réflexes ostéotendineux symétriques et normaux.
-- Pas de signe de Babinski.
-- Fond d’œil normal (réalisé le 31/10/2024).
-
-**Examen général :**
-- Pas de signe de traumatisme.
-- Pas d’éruption cutanée.
-- Auscultation cardiopulmonaire normale.
-- Abdomen souple, indolore.
+À l'admission, Khmaies pesait 3 450 grammes pour une taille de 51 cm et un périmètre crânien de 35 cm. L'examen clinique initial était rassurant : pas de signe de détresse respiratoire, tonus normal, réflexes archaïques présents. On notait cependant une légère bosse séro-sanguine au niveau du vertex, en regard de l'application de la ventouse, sans signe de complication hémorragique. L'examen neurologique était sans particularité, et l'auscultation cardiopulmonaire était normale.
 
 ---
 
 ### Examens complémentaires
-**Biologie (30/10/2024) :**
-- NFS : Hb 13,2 g/dL, leucocytes 7 800/mm³ (PNN 60%), plaquettes 250 000/mm³.
-- Ionogramme sanguin : Na+ 138 mmol/L, K+ 4,1 mmol/L, Cl- 102 mmol/L, Ca2+ 2,4 mmol/L (corrigé), Mg2+ 0,8 mmol/L.
-- Glycémie : 5,1 mmol/L.
-- CRP : 2 mg/L.
-- Créatinine : 50 µmol/L (DFG estimé > 90 mL/min/1,73m²).
-- Bilan hépatique : ASAT 25 UI/L, ALAT 22 UI/L, bilirubine totale 10 µmol/L.
-- Gaz du sang veineux : pH 7,38, pCO2 42 mmHg, HCO3- 24 mmol/L.
+Un bilan biologique standard a été réalisé à J1 de vie, incluant une numération formule sanguine, un dosage de la bilirubine totale et conjuguée, ainsi qu'un ionogramme sanguin. Les résultats étaient dans les limites de la normale pour l'âge :
+- Hémoglobine : 18,5 g/dL
+- Bilirubine totale : 8 mg/L
+- Ionogramme : sodium 138 mmol/L, potassium 4,2 mmol/L, glycémie 0,75 g/L.
 
-**Imagerie (31/10/2024) :**
-- IRM cérébrale avec séquences T1, T2, FLAIR et diffusion : pas d’anomalie parenchymateuse, pas de lésion focale, pas de signe d’œdème cérébral. Structures vasculaires normales.
-- EEG standard (31/10/2024) : tracé de veille et de sommeil normal, sans activité paroxystique ni anomalie focale.
-
-**Autres examens :**
-- Ponction lombaire (01/11/2024) : LCR clair, protéinorachie 0,35 g/L, glycorachie 3,2 mmol/L (glycémie concomitante 5,0 mmol/L), cellularité 2 éléments/mm³. Examen direct et culture négatifs.
-- ECG (30/10/2024) : rythme sinusal régulier, pas de trouble de la repolarisation.
+Une échographie transfontanellaire réalisée à J2 de vie n'a pas révélé d'anomalie structurelle cérébrale. La surveillance clinique rapprochée n'a pas mis en évidence de signe d'hyperexcitabilité ou de dépression neurologique liée à l'exposition aux anesthésiques maternels.
 
 ---
 
 ### Évolution pendant l'hospitalisation
-**Démarche diagnostique :**
-Devant ce premier épisode convulsif chez un enfant sans antécédent neurologique, une étiologie métabolique, infectieuse, toxique ou structurelle a été recherchée. Les examens biologiques et l’imagerie cérébrale n’ont pas révélé d’anomalie. L’EEG standard était normal, ce qui n’exclut pas une épilepsie débutante, mais rend peu probable un syndrome épileptique constitué à ce stade. La ponction lombaire a permis d’écarter une méningo-encéphalite. Aucun facteur déclenchant (fièvre, traumatisme, déshydratation, hypoglycémie) n’a été identifié.
+La surveillance clinique a été marquée par une évolution favorable. La bosse séro-sanguine a régressé spontanément en 48 heures. Aucune complication liée à l'accouchement par ventouse n'a été observée. L'alimentation au sein a été initiée dès les premières heures de vie, avec une bonne tolérance digestive. Khmaies a présenté un ictère physiologique modéré, traité par photothérapie de courte durée (24 heures), avec une décroissance satisfaisante des taux de bilirubine.
 
-Le malaise vagal survenu après la crise a été interprété comme une réaction neurovégétative post-critique, sans argument pour une origine cardiaque (ECG normal, absence de palpitations ou de douleur thoracique).
+Aucun signe d'intoxication aux anesthésiques maternels n'a été relevé : pas de dépression respiratoire, pas de trouble du tonus, ni de difficulté d'alimentation. L'examen neurologique est resté normal tout au long de l'hospitalisation.
 
-**Traitements :**
-- Surveillance clinique et monitoring cardiorespiratoire pendant 48h.
-- Pas de traitement antiépileptique instauré en l’absence de récidive et devant la normalité des examens complémentaires.
-- Hydratation intraveineuse pendant 24h (sérum physiologique 1,5 L/24h).
-- Antalgiques per os si besoin (paracétamol 500 mg en cas de céphalées).
+#### Démarche diagnostique
+La prise en charge a été centrée sur la surveillance des complications potentielles liées à l'accouchement par ventouse (risque d'hémorragie intracrânienne, de lésions cutanées ou neurologiques) et à l'exposition aux anesthésiques maternels (risque de dépression respiratoire ou neurologique). Les examens complémentaires ont permis d'éliminer ces complications.
 
-**Surveillance :**
-- Pas de récidive de crise convulsive ou de malaise pendant l’hospitalisation.
-- Réveils nocturnes normaux, pas de trouble du comportement.
-- Examen neurologique quotidien normal.
-- Sortie autorisée le 06/11/2024 avec consignes de surveillance à domicile.
+#### Traitements
+Aucun traitement spécifique n'a été nécessaire en dehors de la photothérapie pour l'ictère néonatal. Une supplémentation en vitamine K a été administrée à la naissance, conformément aux recommandations. L'alimentation a été assurée par allaitement maternel exclusif, avec un apport hydrique et calorique adapté.
 
 ---
 
 ### Conclusion
-Sauveur Villemond, 12 ans, a été hospitalisé pour un premier épisode de crise convulsive généralisée suivie d’un malaise vagal. Le bilan étiologique complet (biologie, imagerie cérébrale, EEG, ponction lombaire) n’a pas retrouvé d’anomalie. L’évolution a été favorable, sans récidive, et l’enfant est sorti à domicile après 7 jours d’hospitalisation.
-
-**Recommandations :**
-- Consultation de suivi en neurologie pédiatrique dans 1 mois pour réévaluation clinique et éventuel EEG de contrôle.
-- Consignes aux parents : appeler le SAMU en cas de nouvelle crise, éviter les facteurs favorisants (manque de sommeil, déshydratation).
-- Pas de restriction d’activité physique, mais surveillance accrue lors des activités à risque (natation, vélo).
-- Information sur les signes d’alerte (céphalées persistantes, troubles de la conscience, déficit focal).
-
----
-
-**Dr Annette Pouget**\nService de Pédiatrie Neurologie\nHôpital Saint-Louis - AP-HP",
+Khmaies De Crescenzo a présenté une évolution favorable au cours de son hospitalisation. Né après terme par accouchement instrumental sous ventouse et exposé aux anesthésiques maternels, il n'a développé aucune complication liée à ces conditions de naissance. La sortie est autorisée ce jour, le 5 juin 2026, avec un suivi en consultation de pédiatrie programmé dans une semaine. Les parents ont été informés des signes d'alerte nécessitant une consultation en urgence.",
 
   "formulations": {
     "diagnostics": {
-      "Convulsions, autres et non précisées (R56.8)": [
-        "crise convulsive généralisée",
-        "épisode convulsif",
-        "crise généralisée avec mouvements tonicocloniques",
-        "convulsions",
-        "premier épisode convulsif"
-      ],
-      "Syncope et collapsus (sauf choc) (R55)": [
-        "malaise vagal",
-        "perte de connaissance",
-        "évanouissement",
-        "malaise avec pâleur et sueurs froides",
-        "réaction neurovégétative post-critique"
-      ]
+      "Enfant unique, né à l'hôpital (Z38.0)": ["Khmaies De Crescenzo, nouveau-né de sexe masculin", "Né à terme dépassé"],
+      "Fœtus et nouveau-né affectés par un accouchement par extracteur pneumatique [ventouse] (P03.3)": ["accouchement par ventouse", "accouchement par voie basse instrumentale sous ventouse obstétricale", "bosse séro-sanguine au niveau du vertex, en regard de l'application de la ventouse"],
+      "Fœtus et nouveau-né affectés par une anesthésie et par une analgésie de la mère, au cours de la grossesse, du travail et de l'accouchement (P04.0)": ["exposition aux anesthésiques maternels", "analgésie péridurale chez la mère", "exposé aux anesthésiques maternels"],
+      "Enfant né après terme, qui n'est pas gros pour l'âge gestationnel (P08.2)": ["né après terme", "né à 42 semaines d'aménorrhée et 2 jours", "terme dépassé"]
     },
     "informations": {
-      "Date entrée": ["30/10/2024 via les urgences"],
-      "Date de sortie": ["06/11/2024 à domicile"],
-      "Service d'hospitalisation": ["Service de Pédiatrie Neurologie", "Pédiatrie Neurologie"],
-      "Nom/Prénom du patient": ["Villemond Sauveur"],
-      "Nom/Prénom du médecin": ["Dr Annette Pouget", "Annette Pouget"],
-      "Âge": ["12 ans"],
-      "Sexe": ["Masculin"],
-      "État général": [
-        "Conscient, orienté, légèrement obnubilé à l’admission",
-        "Examen neurologique normal en dehors d’une légère obnubilation initiale",
-        "Pas de récidive de crise convulsive ou de malaise pendant l’hospitalisation"
-      ],
-      "Poids": ["42 kg"],
-      "Statut gestationnel": [],
-      "Gestité": [],
-      "NFS": [
-        "Hb 13,2 g/dL, leucocytes 7 800/mm³ (PNN 60%), plaquettes 250 000/mm³"
-      ],
-      "Créatinine": ["50 µmol/L (DFG estimé > 90 mL/min/1,73m²)"],
-      "Bilan hépatique": ["ASAT 25 UI/L, ALAT 22 UI/L, bilirubine totale 10 µmol/L"],
-      "Traitements": [
-        "Surveillance clinique et monitoring cardiorespiratoire pendant 48h",
-        "Pas de traitement antiépileptique instauré",
-        "Hydratation intraveineuse pendant 24h (sérum physiologique 1,5 L/24h)",
-        "Paracétamol 500 mg per os en cas de céphalées"
-      ]
+      "Date entrée": ["1er juin 2026"],
+      "Date de sortie": ["5 juin 2026"],
+      "Service d'hospitalisation": ["Service d'obstétrique - Hôpital Saint-Louis - Assistance Publique Hôpitaux de Paris"],
+      "Nom/Prénom du patient": ["De Crescenzo Khmaies"],
+      "Nom/Prénom du médecin": ["Germain Lecouey"],
+      "Âge": ["nouveau-né"],
+      "Sexe": ["masculin"],
+      "État général": ["bonne adaptation à la vie extra-utérine, avec un score d'Apgar à 8 à 1 minute et 10 à 5 minutes", "évolution favorable"],
+      "Poids": ["3 450 grammes"],
+      "NFS": ["Hémoglobine : 18,5 g/dL"],
+      "Créatinine": [],
+      "Bilan hépatique": ["Bilirubine totale : 8 mg/L"],
+      "Traitements": ["photothérapie de courte durée (24 heures)", "supplémentation en vitamine K"]
     }
   }
 }

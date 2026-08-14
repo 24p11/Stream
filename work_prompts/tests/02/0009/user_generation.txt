@@ -1,156 +1,412 @@
 **SCÉNARIO DE DÉPART :**
-- Âge du patient : 0 ans
-- Sexe du patient : Masculin
-- Date d'entrée : 22/03/2024
-- Date de sortie : 27/03/2024
-- Date de naissance : 01/07/2023
-- Nom du patient : Plenecassagne
-- Prénom du patient : Francois
+- Âge du patient : 23 ans
+- Sexe du patient : Féminin
+- Date d'entrée : 23/09/2025
+- Date de sortie : 22/11/2025
+- Date de naissance : 30/09/2001
+- Nom du patient : Denis
+- Prénom du patient : Élodie
 - Mode d'entrée' : DOMICILE
 - Mode de sortie' : DOMICILE
-- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
+- Contexte de l'hospitalisation : Prise en charge pour accouchement par voie basse.
 - Codage CIM10 :
-   * Diagnostic principal : Enfant unique, né à l'hôpital (Z380)
+   * Diagnostic principal : Prééclampsie modérée (O140)
    * Diagnostics associés :
-      - Foetus et nouveau-né affectés par d'autres maladies circulatoires et respiratoires de la mère (P003)
-      - Syndrome de l'enfant dont la mère a un diabète de la grossesse (P700)
-      - Examen spécial de dépistage des affections des oreilles (Z1351)
-- Nom du médecin / signataire : Cheb Djordjevic
+      - Autres anomalies du placenta (O438)
+      - Naissance unique, enfant vivant (Z370)
+      - Obésité sans précision de l'adulte avec indice de masse corporelle [IMC] égal ou supérieur à 30 kg/m² et inférieur à 35 kg/m², ou obésité sans précision de l'enfant (E6694)
+      - Soins maternels pour croissance insuffisante du foetus (O365)
+      - Oligoamnios (O410)
+      - Accouchement prématuré sans travail spontané (O603)
+      - Conseils et avis généraux concernant la contraception (Z300)
+      - Surveillance d'une grossesse avec d'autres antécédents obstétricaux pathologiques et difficultés à procréer (Z352)
+      - Antécédents personnels de complications de la grossesse, de l'accouchement et de la puerpéralité (Z875)
+- Acte CCAM : ligature des pédicules vasculaires de l'utérus pour hémorragie du post-partum, par laparotomie (ELSA002)
+- Nom du médecin / signataire : Jacques Bauche
 - Service : OBSTETRIQUE
-- Hôpital : Hôpital Bichat-Claude Bernard - Assistance Publique Hôpitaux de Paris
+- Hôpital : Hôpital Européen Georges-Pompidou - Assistance Publique Hôpitaux de Paris
 
 **FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
 
 Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
 Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
 
-<fiche_code code="Z38.0">
+<fiche_code code="O14.0">
 
-# Z38.0 — Enfant unique, né à l'hôpital
+# O14.0 — Prééclampsie légère à modérée
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O10-O16 : Œdème, protéinurie et hypertension au cours de la grossesse, de l'accouchement et de la puerpéralité
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Affections relevant d'autres codes (hérité de la catégorie O14) :
+
+prééclampsie surajoutée (O11)
+
+## Formulations cliniques alternatives
+- Grossesse (unique) (utérine), compliquée (par), prééclampsie, modérée
+- Prééclampsie, modérée
+- Toxémie, prééclamptique, modérée
+
+</fiche_code>
+
+<fiche_code code="O43.8">
+
+# O43.8 — Autres anomalies du placenta
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O30-O48 : Soins maternels liés au fœtus et à la cavité amniotique, et problèmes possibles posés par l'accouchement
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- dysfonctionnement du placenta
+- infarctus placentaire
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Affections relevant d'autres codes (hérité de la catégorie O43) :
+
+décollement prématuré du placenta [hématome rétroplacentaire] (O45.-)
+placenta prævia (O44.-)
+soins maternels pour croissance insuffisante du fœtus due à une insuffisance du placenta (O36.5)
+
+Formes spécifiées de la catégorie O43 :
+- Malformation du placenta [→ O43.1]
+- Placenta adhérent pathologique [→ O43.2]
+- Syndromes de transfusion placentaire [→ O43.0]
+
+## Formulations cliniques alternatives
+- Accouchement(s), compliqué, par, placenta (avec), infarctus
+- Dégénérescence (de), placenta
+- Fibrose (de), placenta
+- Grossesse (unique) (utérine), compliquée (par), placenta (avec), dysfonctionnement
+- Infarctus (de), placenta (conditionnant la conduite thérapeutique vis-à-vis de la mère)
+- insuffisance placentaire aigüe
+- insuffisance utéro-placentaire
+- Nécrose (ischémique) (de) (voir aussi gangrène), placenta
+- Oblitération (de) - voir aussi occlusion, vaisseaux sanguins du placenta
+- Placenta (avec) - voir aussi nom de l'état pathologique, dysfonction nca
+- Placenta (avec) - voir aussi nom de l'état pathologique, ramollissement prématuré
+- Syndrome (de) - voir aussi maladie, insuffisance, placentaire
+- thromboses placentaires multiples
+
+</fiche_code>
+
+<fiche_category code="Z37">
+
+# Z37 — Résultat de l'accouchement
 
 ## Position dans la classification
 - Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
 - Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
 
-## Formulations cliniques alternatives
-- Enfant - voir aussi nom de l'état pathologique, né, vivant, en bonne santé, naissance, unique, né à l'hôpital
+## Codes enfants directs
+- Z37.0 — Naissance unique, enfant vivant
+- Z37.1 — Naissance unique, enfant mort-né
+- Z37.2 — Naissance gémellaire, jumeaux nés vivants
+- Z37.3 — Naissance gémellaire, l'un des jumeaux né vivant, l'autre mort-né
+- Z37.4 — Naissance gémellaire, jumeaux mort-nés
+- Z37.5 — Autres naissances multiples, tous nés vivants
+- Z37.6 — Autres naissances multiples, certains enfants nés vivants
+- Z37.7 — Autres naissances multiples, tous mort-nés
+- Z37.9 — Résultat de l'accouchement, sans précision
 
-</fiche_code>
+## Périmètre clinique
 
-<fiche_code code="P00.3">
+Inclusions héritées de la catégorie Z37.9 :
+- Naissance :
+ - multiple SAI
+ - unique SAI
 
-# P00.3 — Fœtus et nouveau-né affectés par d'autres maladies circulatoires et respiratoires de la mère
+</fiche_category>
+
+<fiche_code code="E66.94">
+
+# E66.94 — Obésité sans précision, de l'adulte avec indice de masse corporelle [IMC] égal ou supérieur à 30 kg/m² et inférieur à 35 kg/m², ou obésité sans précision de l'enfant
 
 ## Position dans la classification
-- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
-- Bloc P00-P04 : Fœtus et nouveau-né affectés par des troubles maternels et par des complications de la grossesse, du travail et de l'accouchement
-
-## Périmètre clinique du code
-
-Inclusions héritées du chapitre XVI :
-- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
-
-Inclusions héritées du bloc P00-P04 :
-- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du foetus ou du nouveau-né
-- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du fœtus ou du nouveau-né
-
-Au niveau du code :
-- foetus ou nouveau-né affecté par les maladies de la mère classées en (I00-I99), (J00-J99), (Q20-Q28), (Q30-Q34) non mentionnées en P00.0, P00.2
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E65-E68 : Obésité et autres excès d'apport
 
 ## À ne pas décrire
 
-Affections relevant d'autres codes (hérité du chapitre XVI) :
+Affections relevant d'autres codes (hérité du chapitre IV) :
 
-coqueluche (A37.-)
-lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
-maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
-malformations congénitales et anomalies chromosomiques (Q00-Q99)
-tétanos du nouveau-né (A33)
-tumeurs (C00-D48)
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
 
-Affections relevant d'autres codes (hérité de la catégorie P00) :
+Affections relevant d'autres codes (hérité de la catégorie E66) :
 
-fœtus et nouveau-né affectés par :
- - anomalies endocriniennes et métaboliques de la mère (P70-P74) 
- - complications de la grossesse chez la mère (P01.-) 
- - effets nocifs transmis par le placenta ou par le lait maternel (P04.-)
-
-## Formulations cliniques alternatives
-- asphyxie maternelle per-partum
-- cardiopathie maternelle
-- collapsus maternel
-- défaillance cardio-vasculaire maternelle
-- dissection aortique maternelle
-- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, maladie, maternelle, circulatoire (classée à i00-i99, q20-q34)
-- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, maladie, maternelle, respiratoire (classée à j00-j06 et j12-j98)
-- hypotension maternelle
-- Maladie (à) (de) respiratoire, chronique nca, mère, affectant foetus ou nouveau-né
-- Maladie (à) (de) - voir aussi syndrome ou affection, circulation, circulatoire, de la mère affectant foetus ou nouveau-né
-- Maladie (à) (de) - voir aussi syndrome ou affection, coeur (chronique) (organique), congénitale, de la mère affectant foetus ou nouveau-né
-- Maladie (à) (de) - voir aussi syndrome ou affection, coeur (chronique) (organique), rhumatismale (ancienne) (chronique) (non évolutive), de la mère affectant foetus ou nouveau-né
-- péricardite constrictive radique maternelle
-- péricardite radique maternelle
-- phlébite fémorale maternelle
-- Phlébite (infectieuse) (pyohémique) (suppurée) (veine), grossesse, affectant foetus ou nouveau-né
-- syndrome vasculaire maternel
-- Thrombophlébite (de), antepartum (superficielle) (membre inférieur), affectant foetus ou nouveau-né
-- Thrombophlébite (de), antepartum (superficielle) (membre inférieur), profonde, affectant foetus ou nouveau-né
-- Thrombose (multiple) (progressive) (septique) (vasculaire) (veineuse) (de), grossesse, affectant foetus ou nouveau-né
+dystrophie adiposogénitale (E23.6)
+lipomatose :
+ - SAI (E88.2) 
+ - douloureuse [Dercum] (E88.2) 
+syndrome de Prader–Willi (Q87.1)
 
 </fiche_code>
 
-<fiche_code code="P70.0">
+<fiche_code code="O36.5">
 
-# P70.0 — Syndrome de l'enfant dont la mère a un diabète gestationnel
+# O36.5 — Soins maternels pour croissance insuffisante du fœtus
 
 ## Position dans la classification
-- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
-- Bloc P70-P74 : Anomalies endocriniennes et métaboliques transitoires spécifiques du fœtus et du nouveau-né
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O30-O48 : Soins maternels liés au fœtus et à la cavité amniotique, et problèmes possibles posés par l'accouchement
 
 ## Périmètre clinique du code
 
-Inclusions héritées du chapitre XVI :
-- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
-
-Inclusions héritées du bloc P70-P74 :
-- les affections endocriniennes et métaboliques transitoires causées par la réponse de l'enfant aux facteurs endocriniens et métaboliques maternels, ou son adaptation à l'existence extra-utérine
+Inclusions héritées de la catégorie O36 :
+- lorsqu'il y a mise en observation, hospitalisation ou soins obstétricaux, y compris une interruption de la grossesse
 
 Au niveau du code :
-- Fœtus ou nouveau-né (avec hypoglycémie) affecté par le diabète gestationnel
+- soins maternels pour cause connue ou présumée de foetus léger pour l'âge gestationnel
+- soins maternels pour cause connue ou présumée de foetus petit pour l'âge gestationnel
+- soins maternels pour cause connue ou présumée de insuffisance du placenta
 
 ## À ne pas décrire
 
-Affections relevant d'autres codes (hérité du chapitre XVI) :
+Affections relevant d'autres codes (hérité du chapitre XV) :
 
-coqueluche (A37.-)
-lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
-maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
-malformations congénitales et anomalies chromosomiques (Q00-Q99)
-tétanos du nouveau-né (A33)
-tumeurs (C00-D48)
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Affections relevant d'autres codes (hérité de la catégorie O36) :
+
+syndromes de transfusion placentaire (O43.0)
+travail et accouchement compliqués d'une détresse fœtale (O68.-)
 
 ## Formulations cliniques alternatives
-- Diabète (équilibré) (familial) (grave) (léger) (sucré) (de), compliquant grossesse, accouchement ou suites de couches, affectant foetus ou nouveau-né (préexistant) (avec hypoglycémie), diabète gestationnel
-- diabète gestationnel
-- diabète gestationnel insulino-dépendant
-- Foetus (ou nouveau-né) - voir aussi nom de l'état pathologique, affecté par, maladie, maternelle, diabète (préexistant), diabète gestationnel
-- Hypoglycémie, enfant de mère diabétique (préexistant), diabète gestationnel
-- Syndrome (de) - voir aussi maladie, enfant, de mère diabétique (préexistant), diabète gestationnel
+- Développement, incomplet de, foetus, conditionnant la conduite thérapeutique vis-à-vis de la mère
+- Grossesse (unique) (utérine), compliquée (par), placenta (avec), insuffisant
+- Grossesse (unique) (utérine), entraînant surveillance, à cause de, foetus (avec) (présumé avec), croissance, insuffisante
+- Grossesse (unique) (utérine), entraînant surveillance, à cause de, foetus (avec) (présumé avec), léger pour l'âge gestationnel
+- Grossesse (unique) (utérine), entraînant surveillance, à cause de, foetus (avec) (présumé avec), petit pour l'âge gestationnel
+- hypotrophie foetale
+- Immaturité (28 semaines entières ou plus mais moins de 37 semaines entières), conditionnant la conduite thérapeutique vis-à-vis de la mère
+- Léger pour l'âge gestationnel (avec malnutrition), conditionnant la conduite thérapeutique vis-à-vis de la mère
+- Placenta (avec) - voir aussi nom de l'état pathologique, insuffisant, compliquant la grossesse
+- Retard (de), croissance, intra-utérine, affectant les soins à la mère
+- Soins, maternels au cours de la grossesse pour, croissance foetale, insuffisante
 
 </fiche_code>
 
-<fiche_code code="Z13.51">
+<fiche_code code="O41.0">
 
-# Z13.51 — Examen spécial de dépistage des affections des oreilles
+# O41.0 — Oligoamnios
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O30-O48 : Soins maternels liés au fœtus et à la cavité amniotique, et problèmes possibles posés par l'accouchement
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- oligoamnios, sans mention de rupture des membranes
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Affections relevant d'autres codes (hérité de la catégorie O41) :
+
+rupture prématurée des membranes (O42.-)
+
+## Formulations cliniques alternatives
+- Accouchement(s), compliqué, par, oligohydramnios
+- anamnios
+- Grossesse (unique) (utérine), compliquée (par), oligoamnios, oligohydramnios
+- oligo-amnios
+- oligoamnios
+- Oligoamnios (sans mention de rupture des membranes) (voir aussi oligohydramnios)
+- Oligohydramnios
+
+</fiche_code>
+
+<fiche_code code="O60.3">
+
+# O60.3 — Accouchement prématuré sans travail spontané
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O60-O75 : Complications du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie O60 :
+- début (spontané) du travail avant 37 semaines révolues de gestation
+
+Au niveau du code :
+- Accouchement prématuré par césarienne sans travail spontané
+- Accouchement prématuré par déclenchement
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+</fiche_code>
+
+<fiche_code code="Z30.0">
+
+# Z30.0 — Conseils et avis généraux concernant la contraception
 
 ## Position dans la classification
 - Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
-- Bloc Z00-Z13 : Sujets en contact avec les services de santé pour des examens divers
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- planification familiale SAI
+- première prescription de moyens contraceptifs
+
+## Formulations cliniques alternatives
+- Conseil (en) (pour) (voir aussi personne, en quête de conseils), régulation des naissances
+- Grande, multipare, multiparité (sans grossesse actuelle), nécessitant mesures contraceptives
+- Mesure(s), contraceptives (par), avis généraux
+- Mesure(s), contraceptives (par), conseils généraux
+- Personne, en quête de conseils (pour), mesures, contraceptives
+- Personne, en quête de conseils (pour), régulation des naissances
+- Planification familiale
+- Prescription de contraceptif
+
+</fiche_code>
+
+<fiche_code code="Z35.2">
+
+# Z35.2 — Surveillance d'une grossesse avec d'autres antécédents obstétricaux pathologiques et difficultés à procréer
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- surveillance d'une grossesse avec antécédent de affections classées à (O10-O16), (O20-O29), (O30-O48), (O60-O75), (O80-O84), (O85-O92)
+- surveillance d'une grossesse avec antécédent de mort-nés
+- surveillance d'une grossesse avec antécédent de morts néonatales
+
+## Formulations cliniques alternatives
+- Accouchement(s), difficile nca (voir aussi accouchement, compliqué, par), antécédent, affectant les soins de la mère pendant la grossesse
+- Accouchement(s), par, forceps (sans mention d'indication), antécédent, affectant les soins de la mère pendant la grossesse
+- Accouchement(s), prématuré, antécédent, affectant les soins de la mère pendant la grossesse
+- antécédent accident obstétrical
+- Hémorragie (de) (due à), grossesse, antécédente, affectant les soins de la mère pendant la grossesse
+- Surveillance (médicale) (de) (pour), grossesse, risque élevé, antécédent (de), maladie, obstétricale nca
+- Surveillance (médicale) (de) (pour), grossesse, risque élevé, antécédent (de), mort-né
+- Surveillance (médicale) (de) (pour), grossesse, risque élevé, antécédent (de), mort néonatale
+- Surveillance (médicale) (de) (pour), grossesse, risque élevé, antécédent (de), problème procréatif nca
+- Surveillance (médicale) (de) (pour), grossesse, risque élevé, antécédent (de), trouble obstétrical nca
+
+</fiche_code>
+
+<fiche_code code="Z87.5">
+
+# Z87.5 — Antécédents personnels de complications de la grossesse, de l'accouchement et de la puerpéralité
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z80-Z99 : Sujets dont la santé peut être menacée en raison d'antécédents personnels et familiaux et de certaines affections
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- antécédents personnels de maladie trophoblastique
+- états mentionnés en (O00-O99)
 
 ## À ne pas décrire
 
-Affections relevant d'autres codes (hérité du bloc Z00-Z13) :
+Affections relevant d'autres codes (hérité du bloc Z80-Z99) :
 
-examens relatifs à la grossesse et à la reproduction (Z30-Z36)  (Z39.-)
+dépistage spécial, autre examen ou investigation en raison d'antécédents familiaux ou personnels (Z00-Z13)
+examen de contrôle (Z08-Z09)
+mise en observation ou intervention au cours de la grossesse en raison d'un risque d'atteinte du fœtus (O35.-)
+soins de contrôle médicaux et de convalescence (Z42-Z51)  (Z54.-)
+
+Affections relevant d'autres codes (hérité de la catégorie Z87) :
+
+soins de contrôle médicaux et de convalescence (Z42-Z51)  (Z54.-)
+
+Affections relevant d'autres codes :
+
+avortements à répétition (N96)
+surveillance d'une grossesse en cours avec des antécédents obstétricaux pathologiques et difficultés à procréer (Z35.-)
+
+## Formulations cliniques alternatives
+- antécédent accident obstétrical
+- antécédent chorioamniotite
+- antécédent embolie pulmonaire post-partum
+- antécédent grossesse
+- antécédent grossesses multiples
+- antécédent hémorragie délivrance
+- antécédent HTA gravidique
+- Antécédent, personnel (de), accouchement compliqué (sans grossesse actuelle)
+- Antécédent, personnel (de), grossesse pathologique (sans grossesse actuelle)
+- Antécédent, personnel (de), maladie (de) - voir aussi antécédent, personnel, trouble, obstétricale
+- Antécédent, personnel (de), maladie (de) - voir aussi antécédent, personnel, trouble, trophoblastique
+- antécédent toxémie gravidique
+- atcd diabète gestationnel
+- cicatrice césarienne
 
 </fiche_code>

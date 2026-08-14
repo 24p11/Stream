@@ -1,60 +1,72 @@
 Le compte rendu suivant respecte les élements suivants :
         - les diagnostics ont une formulation moins formelle que la définition du code
-        - le plan du CRH est conforme aux recommandations. Les sections sont détaillées et réalistes.
-        - les dates sont cohérentes avec le scénario.
-        - les informations obligatoires sont présentes.
+        - le plan du CRH est conforme aux recommandations. Les antécédents sont présentés sous forme de liste à puces, les autres sections sont rédigées.
+        - Les dates sont cohérentes avec le scénario
+        - Les informations obligatoires sont présentes en entête
+        - Les codes CIM10 sont tous utilisés dans le texte avec une formulation clinique naturelle
+        - Les dictionnaires de formulations sont remplis
+
+Voici le résultat au format JSON :
 
 ```json
 {
-  "CR": "### Service d'hospitalisation\n**Nouvel Hôpital Civil - Hôpitaux Universitaires de Strasbourg**\n**Service d'obstétrique**\n\n**Compte rendu d'hospitalisation**\n\n**Patient :**\n- Nom : Renard\n- Prénom : Nicolas\n- Date de naissance : 12/01/2024\n- Âge : 22 jours\n- Sexe : Masculin\n\n---\n\n### Motif d'hospitalisation\nNouveau-né adressé pour surveillance post-natale en raison de complications survenues lors de l'accouchement. Présence de signes évocateurs d'une souffrance fœtale per-partum, avec anomalies du cordon ombilical et recours à une extraction instrumentale par forceps. Nécessité d'un bilan complet et d'un dépistage auditif.\n\n---\n\n### Antécédents\n**Antécédents familiaux :**\n- Non contributifs pour ce nouveau-né.\n- Pas d'antécédents connus de malformations congénitales ou de pathologies héréditaires dans la famille.\n\n**Antécédents personnels :**\n- Enfant unique, né à terme le 12/01/2024 au Nouvel Hôpital Civil.\n- Grossesse suivie sans particularité jusqu'au terme.\n- Pas d'exposition connue à des toxiques ou agents infectieux pendant la grossesse.\n\n---\n\n### Mode de vie\n**Mère :**\n- Profession : employée administrative.\n- Pas de tabagisme, d'alcoolisme ou de toxicomanie déclarés pendant la grossesse.\n- Activité physique modérée.\n- Pas d'allergies connues.\n\n---\n\n### Histoire de la maladie\nNicolas Renard est né le 12/01/2024 à 39 semaines d'aménorrhée (SA) par voie basse, après un travail prolongé et compliqué. La mère a bénéficié d'une analgésie péridurale. En cours de travail, une souffrance fœtale aiguë a été suspectée devant des anomalies du rythme cardiaque fœtal (ralentissements variables) et la présence de méconium dans le liquide amniotique. Une extraction instrumentale par forceps a été réalisée en urgence en raison d'une procidence du cordon ombilical. À la naissance, le score d'Apgar était de 5 à 1 minute, 7 à 5 minutes et 9 à 10 minutes. Le nouveau-né a nécessité une aspiration des voies aériennes supérieures et une oxygénothérapie transitoire.\n\n---\n\n### Examen clinique\n**À l'entrée (03/01/2025) :**\n- Poids : 3 200 g (stable depuis la naissance).\n- Température : 36,8°C.\n- Fréquence cardiaque : 140 battements/min.\n- Fréquence respiratoire : 45 cycles/min.\n- Saturation en oxygène : 98 % en air ambiant.\n- Tension artérielle : 65/40 mmHg.\n\n**Examen physique :**\n- Nouveau-né eutrophique, réactif.\n- Peau rosée, sans ictère visible.\n- Fontanelle antérieure normotendue.\n- Auscultation cardio-pulmonaire normale.\n- Abdomen souple, sans hépatosplénomégalie.\n- Cordon ombilical cicatrisé, sans signe d'infection.\n- Examen neurologique : tonus axial et périphérique satisfaisant, réflexes archaïques présents.\n- Pas de signe de traumatisme lié à l'extraction instrumentale (pas d'hématome du scalp, pas de paralysie faciale).\n\n---\n\n### Examens complémentaires\n**Bilan biologique (03/01/2025) :**\n- NFS : Hb 16,5 g/dL, leucocytes 12 000/mm³, plaquettes 250 000/mm³.\n- CRP : 5 mg/L.\n- Bilan hépatique : normal.\n- Créatinine : 35 µmol/L.\n- Gaz du sang (capillaire) : pH 7,35, pCO₂ 40 mmHg, HCO₃⁻ 22 mmol/L, lactates 1,8 mmol/L.\n\n**Imagerie :**\n- Échographie transfontanellaire (04/01/2025) : normale, sans signe d'hémorragie intraventriculaire.\n- Radiographie de thorax (04/01/2025) : normale.\n\n**Dépistage auditif (05/01/2025) :**\n- Potentiels évoqués auditifs automatisés (PEAA) : normaux des deux côtés.\n\n---\n\n### Évolution pendant l'hospitalisation\nNicolas a été admis en unité de néonatologie pour surveillance rapprochée. L'évolution a été favorable, avec une normalisation rapide des paramètres vitaux. Le nouveau-né a été alimenté par lait maternel dès le premier jour, avec une bonne tolérance digestive. Aucun épisode d'hypoglycémie ou d'hypothermie n'a été observé.\n\n**Démarche diagnostique :**\n- La souffrance fœtale per-partum a été confirmée par les anomalies du rythme cardiaque fœtal et la présence de méconium dans le liquide amniotique. L'extraction par forceps a été justifiée par la procidence du cordon ombilical, responsable d'une hypoxie transitoire.\n- Le bilan infectieux est resté négatif, écartant une cause septique à la détresse fœtale.\n- Le dépistage auditif a permis de confirmer l'absence de surdité congénitale.\n\n**Traitements :**\n- Surveillance continue des paramètres vitaux pendant les 48 premières heures.\n- Oxygénothérapie nasale transitoire (2 L/min) pendant 6 heures après la naissance.\n- Alimentation par lait maternel à la demande, avec complément par préparation pour nourrissons si nécessaire.\n- Soins de cordon ombilical quotidiens.\n- Pas de traitement médicamenteux spécifique.\n\n---\n\n### Conclusion\nNicolas Renard, nouveau-né de 22 jours, a présenté une souffrance fœtale aiguë per-partum en rapport avec une procidence du cordon ombilical, ayant nécessité une extraction instrumentale par forceps. L'évolution post-natale a été favorable, sans complication notable. Le bilan auditif est normal. La sortie est autorisée ce jour, avec un suivi en consultation de pédiatrie dans une semaine pour contrôle clinique et vérification de la prise de poids.\n\n**Sortie prévue le 08/01/2025.**\n\n**Médecin signataire :**\nDr Denise Berthe\nService d'obstétrique\nNouvel Hôpital Civil - Hôpitaux Universitaires de Strasbourg",
+  "CR": "----- \n## Compte rendu d'hospitalisation en service d'obstétrique avant l'accouchement \n\nHôpital de Hautepierre - Hôpitaux Universitaires de Strasbourg \nService d'obstétrique \n\nIdentification de la patiente : \nNom : Morra \nPrénom : Yaren \nDate de naissance : 02/04/2001 \n\n### Motif d'hospitalisation \n\nMme Yaren Morra, âgée de 25 ans, a été admise le 22/12/2026 pour prise en charge d'un travail d'accouchement avec hypotonie utérine primitive. La patiente, primigeste, présente des contractions utérines initiales insuffisantes nécessitant une surveillance rapprochée en milieu hospitalier. \n\n### Antécédents \n\n- Médicaux : Aucun antécédent notable. \n- Chirurgicaux : Appendicectomie à l'âge de 12 ans. \n- Familiaux : Pas d'antécédent familial particulier. \n- Allergies : Aucune allergie connue. \n\n### Mode de vie \n\nMme Morra est non fumeuse, ne consomme pas d'alcool ni de substances toxiques. Elle exerce la profession d'enseignante et mène une vie active. Elle vit en couple et bénéficie d'un bon soutien social. \n\n### Traitement à l'entrée \n\nAucun traitement en cours à l'entrée. \n\n### Résumé de la grossesse \n\nLa grossesse actuelle s'est déroulée sans complication notable jusqu'à présent. La patiente a bénéficié d'un suivi régulier en consultation prénatale. Elle est entrée en travail spontanément à 39 semaines d'aménorrhée (SA), mais les contractions utérines se sont révélées inefficaces, avec une dilatation cervicale insuffisante. \n\n### Examen clinique \n\nÀ l'admission, la patiente est apyrétique, avec une tension artérielle à 115/70 mmHg et une fréquence cardiaque à 80 battements par minute. L'examen abdominal révèle un utérus gravide compatible avec le terme. Le monitoring fœtal montre un rythme cardiaque fœtal à 140 battements par minute, sans signe de souffrance fœtale aiguë. L'examen du col utérin révèle une dilatation à 2 cm avec une hypotonie utérine marquée. \n\n### Examens complémentaires \n\n- Bilan biologique : Hémoglobine à 12,1 g/dL, plaquettes à 250 G/L, bilan hépatique et rénal dans les limites de la normale. \n- Monitoring fœtal continu : Rythme cardiaque fœtal stable, sans anomalie notable initialement. \n\n### Conclusion \n\nMme Morra est hospitalisée pour prise en charge d'une dystocie dynamique avec hypotonie utérine primitive. Une surveillance rapprochée du travail et du bien-être fœtal est mise en place. \n\n\nFait à Strasbourg, le 23/12/2026 \n\nDr Anne Bernadac \n\n-----\n\n## Compte rendu d'accouchement par voie basse \n\nHôpital de Hautepierre - Hôpitaux Universitaires de Strasbourg \nService d'obstétrique \n\nIdentification de la patiente : \nNom : Morra \nPrénom : Yaren \nDate de naissance : 02/04/2001 \n\n### Date de l'accouchement \n\n24/12/2026 \n\n### Sage-femme \n\nMme Sophie Lambert \n\n### Obstétricienne \n\nDr Anne Bernadac \n\n### Déroulement de l'accouchement \n\nMme Yaren Morra a accouché le 24/12/2026 à 14h30 d'un enfant vivant de sexe féminin, par présentation du sommet. \n\nLe travail a été marqué par une inertie utérine primitive nécessitant une stimulation par ocytociques. En cours de travail, une bradycardie fœtale transitoire a été observée, motivant une surveillance renforcée. L'accouchement s'est déroulé spontanément, avec une épisiotomie médio-latérale droite réalisée pour faciliter l'expulsion. Une déchirure périnéale du deuxième degré, intéressant les muscles du périnée, est survenue et a été suturée immédiatement après la délivrance. \n\nL'enfant, pesant 3200 grammes, présente un score d'Apgar à 9/10 à 1 minute et 10/10 à 5 minutes. \n\n### Conclusion \n\nAccouchement par voie basse spontané, compliqué d'une hypotonie utérine primitive et d'une bradycardie fœtale transitoire. Une déchirure périnéale du deuxième degré a été réparée en per-partum. La mère et l'enfant sont en bonne santé. \n\n\nFait à Strasbourg, le 24/12/2026 \n\nDr Anne Bernadac \n\n-----\n\n## Compte rendu d'hospitalisation pour le passage en maternité (suite de couches) \n\nHôpital de Hautepierre - Hôpitaux Universitaires de Strasbourg \nService de maternité \n\nIdentification de la patiente : \nNom : Morra \nPrénom : Yaren \nDate de naissance : 02/04/2001 \n\n### Résumé de la grossesse et de l'accouchement \n\nMme Yaren Morra, âgée de 25 ans, a été admise le 22/12/2026 pour prise en charge d'un travail d'accouchement compliqué d'une hypotonie utérine primitive. Elle a accouché le 24/12/2026 par voie basse spontanée d'un enfant vivant de sexe féminin, avec une présentation du sommet. L'accouchement a été marqué par une bradycardie fœtale transitoire et une déchirure périnéale du deuxième degré, suturée en per-partum. \n\n### Évolution dans le service \n\nLa patiente a été transférée en suite de couches le 24/12/2026. L'évolution post-partum a été favorable, avec une bonne cicatrisation de la déchirure périnéale. La surveillance de l'allaitement maternel a été initiée dès le premier jour post-partum, avec des conseils adaptés pour favoriser une lactation optimale. Un contrôle de routine en post-partum a été réalisé le 26/12/2026, confirmant un état général satisfaisant. Des conseils en planification familiale ont également été prodigués avant la sortie. \n\n### Conclusion \n\nMme Morra quitte le service ce jour, le 27/12/2026, en bonne santé. Elle est autorisée à regagner son domicile avec son enfant. Un suivi en consultation post-natale est prévu dans les 6 semaines. \n\n\nFait à Strasbourg, le 27/12/2026 \n\nDr Anne Bernadac",
 
   "formulations": {
     "diagnostics": {
-      "Enfant unique, né à l'hôpital (Z380)": [
-        "Enfant unique, né à terme le 12/01/2024 au Nouvel Hôpital Civil",
-        "Né à l'hôpital"
+      "Contractions (utérines) initiales insuffisantes (O62.0)": [
+        "hypotonie utérine primitive",
+        "contractions utérines initiales insuffisantes",
+        "dystocie dynamique avec hypotonie utérine primitive",
+        "inertie utérine primitive"
       ],
-      "Fœtus et nouveau-né affectés par des affections du cordon ombilical, autres et sans précision (P026)": [
-        "procidence du cordon ombilical",
-        "anomalies du cordon ombilical"
+      "Naissance unique, enfant vivant (Z37.0)": [
+        "enfant vivant de sexe féminin",
+        "accouché [...] d'un enfant vivant"
       ],
-      "Fœtus et nouveau-né affectés par un accouchement par forceps (P032)": [
-        "extraction instrumentale par forceps",
-        "accouchement compliqué nécessitant un forceps"
+      "Soins et examens de l'allaitement maternel (Z39.1)": [
+        "surveillance de l'allaitement maternel",
+        "conseils adaptés pour favoriser une lactation optimale"
       ],
-      "Fœtus et nouveau-né affectés par une anesthésie et par une analgésie de la mère, au cours de la grossesse, du travail et de l'accouchement (P040)": [
-        "analgésie péridurale",
-        "anesthésie maternelle pendant le travail"
+      "Travail et accouchement compliqués d'une anomalie du rythme cardiaque du fœtus (O68.0)": [
+        "bradycardie fœtale transitoire",
+        "bradycardie fœtale"
       ],
-      "Hypoxie intra-utérine constatée pour la première fois pendant le travail et l'accouchement (P201)": [
-        "souffrance fœtale aiguë per-partum",
-        "souffrance fœtale per-partum",
-        "anomalies du rythme cardiaque fœtal",
-        "présence de méconium dans le liquide amniotique"
+      "Déchirure obstétricale du périnée, du deuxième degré (O70.1)": [
+        "déchirure périnéale du deuxième degré",
+        "déchirure périnéale du deuxième degré, intéressant les muscles du périnée"
       ],
-      "Examen spécial de dépistage des affections des oreilles (Z1351)": [
-        "dépistage auditif",
-        "Potentiels évoqués auditifs automatisés (PEAA)"
+      "Accouchement (unique) spontané par présentation du sommet (O80.0)": [
+        "accouchement par voie basse spontanée",
+        "accouchement [...] par présentation du sommet"
+      ],
+      "Conseils et avis généraux concernant la contraception (Z30.0)": [
+        "conseils en planification familiale"
+      ],
+      "Contrôle de routine au cours du postpartum (Z39.2)": [
+        "contrôle de routine en post-partum"
       ]
     },
     "informations": {
-      "Date entrée": ["03/01/2025"],
-      "Date de sortie": ["08/01/2025"],
-      "Service d'hospitalisation": ["Service d'obstétrique"],
-      "Nom/Prénom du patient": ["Renard Nicolas"],
-      "Nom/Prénom du médecin": ["Denise Berthe"],
-      "Âge": ["22 jours"],
-      "Sexe": ["Masculin"],
-      "Poids": ["3 200 g"],
-      "NFS": ["Hb 16,5 g/dL, leucocytes 12 000/mm³, plaquettes 250 000/mm³"],
-      "Créatinine": ["35 µmol/L"],
-      "Bilan hépatique": ["normal"],
-      "Traitements": [
-        "Surveillance continue des paramètres vitaux pendant les 48 premières heures",
-        "Oxygénothérapie nasale transitoire (2 L/min) pendant 6 heures après la naissance",
-        "Alimentation par lait maternel à la demande, avec complément par préparation pour nourrissons si nécessaire",
-        "Soins de cordon ombilical quotidiens"
-      ]
+      "Date entrée": ["22/12/2026"],
+      "Date de sortie": ["27/12/2026"],
+      "Service d'hospitalisation": ["Service d'obstétrique", "Service de maternité"],
+      "Date de l'intervention": ["24/12/2026"],
+      "Nom/Prénom du chirurgien": ["Dr Anne Bernadac"],
+      "Nom/Prénom du patient": ["Mme Yaren Morra"],
+      "Âge": ["25 ans"],
+      "Sexe": ["Féminin"],
+      "État général": [
+        "La patiente est apyrétique, avec une tension artérielle à 115/70 mmHg et une fréquence cardiaque à 80 battements par minute",
+        "état général satisfaisant"
+      ],
+      "Poids": [],
+      "Statut gestationnel": ["39 semaines d'aménorrhée (SA)"],
+      "Gestité": ["primigeste"],
+      "Médicaments": ["ocytociques"],
+      "NFS": ["Hémoglobine à 12,1 g/dL, plaquettes à 250 G/L"],
+      "Créatinine": ["bilan rénal dans les limites de la normale"],
+      "Bilan hépatique": ["bilan hépatique [...] dans les limites de la normale"]
     }
   }
 }

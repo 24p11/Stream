@@ -1,61 +1,128 @@
 Le compte rendu suivant respecte les élements suivants :
         - les diagnostics ont une formulation moins formelle que la définition du code
-        - le plan du CRH est conforme aux recommandations. Les sections sont détaillées et réalistes.
-        - les dates sont cohérentes avec le scénario
-        - les informations obligatoires sont présentes
-        - les informations sur le cancer (ici non pertinent) ont été remplacées par les informations sur l'état général et le statut gestationnel
-        - les dictionnaires de formulations et d'informations sont complets
+        - le plan du CRH est conforme aux recommandations. Les sections sont rédigées en texte libre, sans puces ni étiquettes.
+        - les antécédents ajoutés sont mineurs et plausibles.
+        - les dates sont cohérentes entre elles et avec le scénario.
+        - les deux documents sont autonomes et cohérents entre eux.
+
+-----
+
+## Compte rendu opératoire
+
+Service de chirurgie orthopédique et traumatologique
+Hôpital Édouard Herriot - Hospices Civils de Lyon
+
+Identification patient
+Nom : Bohe
+Prénom : Jeanne
+Date de naissance : 10/02/1939
+
+### Intervention
+Ostéosynthèse d’une fracture sous-trochantérienne du fémur droit.
+
+### Date de l’intervention
+04 décembre 2026
+
+### Diagnostic
+Fracture fermée sous-trochantérienne du fémur droit survenue après une chute de sa hauteur.
+
+### Technique utilisée
+Installation en décubitus dorsal sur table orthopédique sous anesthésie générale. Asepsie et champs stériles. Voie d’abord latérale centrée sur le grand trochanter. Exposition du foyer de fracture qui apparaît oblique courte, sans extension intra-articulaire. Réduction progressive sous contrôle scopique jusqu’à restauration de la longueur et de l’axe du membre. Fixation par clou gamma long verrouillé en distalité par deux vis transversales et en proximalité par une vis céphalique et une vis trochantérienne. Contrôle scopique final confirmant la bonne position du matériel et l’absence de conflit articulaire.
+
+### Constatations per-opératoires
+Foyer de fracture simple, sans comminution majeure ni interposition musculaire. Pas d’extension vers la diaphyse ni vers l’articulation coxo-fémorale. Corticales de bonne qualité, sans signe d’ostéoporose localement avancée.
+
+### Matériels utilisés
+Clou gamma long 12 mm × 380 mm, vis céphalique 10,5 mm × 95 mm, vis trochantérienne 6,5 mm × 50 mm, deux vis distales 5 mm.
+
+### Chirurgien
+Dr Audrina Bertrand
+
+-----
+
+## Compte rendu d’hospitalisation
+
+Service de chirurgie orthopédique et traumatologique
+Hôpital Édouard Herriot - Hospices Civils de Lyon
+
+Identification patient
+Nom : Bohe
+Prénom : Jeanne
+Date de naissance : 10/02/1939
+
+### Motif d’hospitalisation
+Madame Jeanne Bohe, âgée de 87 ans, a été admise le 3 décembre 2026 pour prise en charge d’une fracture sous-trochantérienne du fémur droit survenue la veille lors d’une chute à domicile.
+
+### Antécédents
+- Médicaux : hypertension artérielle essentielle traitée par amlodipine 5 mg par jour.
+- Chirurgicaux : appendicectomie dans l’enfance, cure de hernie inguinale droite il y a vingt ans.
+- Familiaux : pas d’antécédent notable de fracture pathologique ou d’ostéoporose sévère.
+- Allergies : aucune allergie médicamenteuse connue.
+
+### Mode de vie
+Patiente autonome à domicile, vivant seule en appartement au rez-de-chaussée. Tabagisme ancien sevré depuis plus de trente ans. Pas de consommation d’alcool. Ancienne employée de bureau, retraitée depuis vingt-cinq ans.
+
+### Histoire de la maladie
+La patiente a chuté dans sa salle de bain le 2 décembre 2026, ressentant une douleur immédiate de la hanche droite avec impotence fonctionnelle totale. Transportée aux urgences par les pompiers, une radiographie du bassin a confirmé une fracture fermée sous-trochantérienne du fémur droit. Compte tenu de l’âge et de l’autonomie antérieure, une indication d’ostéosynthèse a été retenue.
+
+### Examen clinique
+À l’entrée, la patiente est apyrétique, eupnéique. La tension artérielle est mesurée à 150/85 mmHg sous traitement habituel. Le pouls est régulier à 78 battements par minute. L’examen cutané ne montre pas de lésion associée. La hanche droite est douloureuse à la palpation, avec un raccourcissement et une rotation externe du membre inférieur. Les pouls périphériques sont perçus. Le poids est stable à 58 kg pour une taille de 1,62 m. L’examen neurologique distal est normal.
+
+### Examens complémentaires
+Radiographie du bassin de face et de la hanche droite de profil : fracture sous-trochantérienne oblique courte, sans trait de refend articulaire.
+Bilan biologique préopératoire : hémoglobine à 12,4 g/dL, leucocytes à 7 800/mm³, plaquettes à 245 000/mm³, créatinine à 85 µmol/L, bilan hépatique normal. ECG : rythme sinusal régulier, pas de trouble de la repolarisation.
+
+### Évolution pendant l’hospitalisation
+L’intervention a eu lieu le lendemain de l’admission. Les suites opératoires ont été simples, sans complication hémorragique ni infectieuse. La patiente a été levée au fauteuil dès le premier jour postopératoire avec appui partiel autorisé sous couvert de deux cannes anglaises. La tension artérielle est restée stable sous traitement habituel, sans pic hypertensif. La rééducation a été débutée précocement avec kinésithérapie quotidienne. Les pansements ont été refaits régulièrement, sans signe d’infection locale. La sortie a été organisée vers un service de soins de suite et de réadaptation le 14 décembre 2026.
+
+### Conclusion
+Madame Bohe a bénéficié d’une ostéosynthèse par clou gamma pour fracture sous-trochantérienne du fémur droit. Les suites ont été simples, permettant une orientation en rééducation pour poursuite de la prise en charge.
+
+Dr Audrina Bertrand
+
+-----
 
 ```json
 {
-  "CR": "### Centre Hospitalier Lyon Sud - Hospices Civils de Lyon\n### Service ADDICTO MCO\n\n**Compte rendu d'hospitalisation**\n\n**Patient :**\n- Nom : De Jesus Machado\n- Prénom : Marie\n- Date de naissance : 29/10/1961\n- Âge : 62 ans\n- Sexe : Féminin\n\n**Dates d'hospitalisation :**\n- Entrée : 16/01/2024 (via les urgences)\n- Sortie : 31/01/2024 (retour à domicile)\n\n**Médecin signataire :** Dr Thierry Boudot\n\n---\n\n### Motif d'hospitalisation\n\nMme De Jesus Machado a été admise aux urgences le 16/01/2024 pour un état dépressif sévère évoluant depuis plusieurs semaines. Elle présentait une souffrance morale intense, un refus de s'alimenter et des idées noires persistantes, sans élément psychotique associé. L'hospitalisation a été décidée en raison de l'aggravation récente de ses symptômes, dans un contexte de stress post-traumatique lié à une éruption volcanique ayant touché son domicile.\n\n---\n\n### Antécédents\n\n**Médicaux :**\n- Hypertension artérielle équilibrée sous traitement (amlodipine 5 mg/jour).\n- Dyslipidémie traitée par atorvastatine 20 mg/jour.\n- Antécédent de syndrome anxio-dépressif il y a 5 ans, traité par sertraline pendant 18 mois avec une bonne réponse.\n\n**Chirurgicaux :**\n- Appendicectomie à l'âge de 22 ans.\n- Cholécystectomie il y a 10 ans pour lithiase vésiculaire.\n\n**Familiaux :**\n- Mère décédée d'un infarctus du myocarde à 70 ans.\n- Père vivant, traité pour un diabète de type 2.\n- Pas d'antécédent connu de troubles psychiatriques familiaux.\n\n**Allergies :**\n- Aucune allergie médicamenteuse connue.\n\n---\n\n### Mode de vie\n\nMme De Jesus Machado est retraitée, ancienne employée de bureau. Elle vit seule dans une maison individuelle depuis le décès de son mari il y a 3 ans. Elle fume environ 5 cigarettes par jour depuis l'âge de 30 ans et ne consomme pas d'alcool. Elle n'a pas d'activité physique régulière. Sur le plan gynécologique, elle est ménopausée depuis l'âge de 52 ans, sans traitement hormonal substitutif. Elle n'a pas d'enfant (gestité 0, parité 0).\n\n---\n\n### Histoire de la maladie\n\nMme De Jesus Machado décrit une dégradation progressive de son état thymique depuis environ 3 mois, marquée par une tristesse profonde, une perte d'intérêt pour ses activités habituelles et des troubles du sommeil (insomnies d'endormissement et réveils précoces). Elle rapporte également une perte d'appétit avec un amaigrissement non quantifié, une asthénie intense et des difficultés de concentration. Ces symptômes se sont aggravés brutalement il y a 2 semaines, dans les suites d'une éruption volcanique survenue près de son domicile. Bien qu'elle n'ait pas été blessée physiquement, elle a été profondément marquée par l'évacuation de son quartier et la destruction partielle de sa maison. Elle décrit un sentiment d'impuissance et une peur persistante de revivre un tel événement.\n\nDepuis cet épisode, elle présente des crises d'angoisse quotidiennes, un repli social complet et des idées noires récurrentes, sans projet suicidaire structuré. Elle a été adressée aux urgences par son médecin traitant en raison de l'aggravation de son état et de son refus de s'alimenter.\n\n---\n\n### Examen clinique\n\nÀ l'admission, Mme De Jesus Machado présentait les constantes suivantes :\n- Poids : 58 kg (perte de 4 kg en 2 mois, selon ses dires)\n- Taille : 1,65 m\n- IMC : 21,3 kg/m²\n- TA : 135/85 mmHg\n- FC : 88 bpm, régulière\n- Saturation en O₂ : 98 % en air ambiant\n- Température : 36,8 °C\n\nL'examen clinique général était sans particularité : pas de signe de déshydratation, auscultation cardiopulmonaire normale, abdomen souple et indolore, pas d'œdème des membres inférieurs. L'examen neurologique était normal, sans signe de focalisation.\n\nSur le plan psychiatrique, la patiente était consciente, orientée dans le temps et l'espace, mais ralentie psychomotrice. Elle présentait un contact pauvre, une mimique figée et un discours monocorde. Elle exprimait une souffrance morale intense, avec des idées de dévalorisation ("Je ne sers à rien", "Ma vie est un échec") et une culpabilité excessive ("C'est de ma faute si ma maison a été touchée"). Elle niait toute idée suicidaire active, mais reconnaissait des pensées passives de mort ("Je ne veux pas mourir, mais si c'était le cas, ce ne serait pas plus mal"). Il n'y avait pas d'élément délirant ou hallucinatoire. Son état général était altéré, avec un score ECOG à 2 (capable de se déplacer et de s'occuper d'elle-même, mais incapable de travailler).\n\n---\n\n### Examens complémentaires\n\n**Bilan biologique (16/01/2024) :**\n- NFS : Hb 12,8 g/dL, leucocytes 6,2 G/L, plaquettes 250 G/L (normal).\n- Ionogramme sanguin : Na+ 138 mmol/L, K+ 4,1 mmol/L, Cl- 102 mmol/L (normal).\n- Créatinine : 72 µmol/L (DFG estimé à 78 mL/min/1,73 m², normal).\n- Bilan hépatique : ASAT 22 UI/L, ALAT 25 UI/L, GGT 30 UI/L, bilirubine totale 12 µmol/L (normal).\n- CRP : 3 mg/L (normal).\n- TSH : 2,1 mUI/L (normal).\n- Vitamine D : 18 ng/mL (insuffisance modérée).\n- Albuminémie : 38 g/L (normal).\n\n**Imagerie :**\n- Radiographie thoracique (16/01/2024) : normale, sans anomalie parenchymateuse ou médiastinale.\n- ECG (16/01/2024) : rythme sinusal régulier, pas de trouble de la repolarisation.\n\n**Évaluation psychiatrique :**\n- Échelle de dépression de Montgomery-Åsberg (MADRS) : score de 38/60, confirmant un épisode dépressif sévère.\n- Échelle d'anxiété de Hamilton : score de 22/56, témoignant d'une anxiété modérée à sévère.\n\n---\n\n### Évolution pendant l'hospitalisation\n\n**Démarche diagnostique :**\nL'hospitalisation a permis de confirmer le diagnostic d'épisode dépressif sévère sans symptôme psychotique (F32.2), dans un contexte de réaction dépressive post-traumatique liée à l'éruption volcanique. L'absence de symptômes psychotiques, de trouble bipolaire ou de trouble de la personnalité sous-jacent a été vérifiée par l'équipe psychiatrique. Les examens complémentaires ont permis d'éliminer une cause organique à la symptomatologie dépressive (hypothyroïdie, carence vitaminique sévère, etc.).\n\n**Traitements :**\nUn traitement antidépresseur par venlafaxine a été initié à la dose de 75 mg/jour, avec une augmentation progressive jusqu'à 150 mg/jour en 5 jours. Un traitement anxiolytique par alprazolam 0,25 mg matin et midi a été introduit en raison des crises d'angoisse, avec une réévaluation prévue à 15 jours. Une supplémentation en vitamine D (100 000 UI en une prise) a été prescrite en raison de l'insuffisance modérée.\n\nUn suivi psychothérapeutique a été mis en place, associant des entretiens individuels avec un psychiatre et des séances de thérapie cognitivo-comportementale (TCC) centrées sur la gestion du stress post-traumatique. Une évaluation sociale a été réalisée pour organiser un soutien à domicile après la sortie, incluant une aide ménagère et un suivi par une infirmière psychiatrique.\n\nL'état de Mme De Jesus Machado s'est progressivement amélioré au cours de l'hospitalisation. À J10, elle présentait une réduction de son anxiété et une amélioration partielle de son humeur, avec un score MADRS à 22/60. Elle a repris une alimentation normale et a pu participer activement aux séances de TCC. Son score ECOG est passé à 1 (symptômes présents, mais capable de mener une activité normale avec effort).\n\n---\n\n### Conclusion\n\nMme De Jesus Machado a été hospitalisée pour un épisode dépressif sévère sans symptôme psychotique, survenu dans un contexte de stress post-traumatique lié à une éruption volcanique ayant touché son domicile. L'évolution sous traitement antidépresseur et anxiolytique, associé à un suivi psychothérapeutique, a été favorable, avec une amélioration significative de son état thymique et une reprise de ses activités quotidiennes.\n\nÀ sa sortie, le traitement comprend :\n- Venlafaxine 150 mg/jour (antidépresseur)\n- Alprazolam 0,25 mg matin et midi (anxiolytique, à réévaluer à 15 jours)\n- Vitamine D 100 000 UI tous les 3 mois\n\nUn suivi ambulatoire a été organisé avec :\n- Une consultation psychiatrique à 15 jours\n- La poursuite des séances de TCC\n- Un suivi infirmier à domicile 2 fois par semaine\n- Une évaluation sociale à 1 mois pour ajuster les aides à domicile\n\nLa patiente a été informée des signes d'alerte nécessitant une réhospitalisation (réapparition d'idées noires, refus de s'alimenter, aggravation de l'anxiété). Elle a exprimé sa satisfaction quant à la prise en charge et se dit motivée pour poursuivre le suivi proposé.\n\nDr Thierry Boudot\nService ADDICTO MCO\nCentre Hospitalier Lyon Sud - Hospices Civils de Lyon",
-
+  "CR": "## Compte rendu opératoire\n\nService de chirurgie orthopédique et traumatologique\nHôpital Édouard Herriot - Hospices Civils de Lyon\n\nIdentification patient\nNom : Bohe\nPrénom : Jeanne\nDate de naissance : 10/02/1939\n\n### Intervention\nOstéosynthèse d’une fracture sous-trochantérienne du fémur droit.\n\n### Date de l’intervention\n04 décembre 2026\n\n### Diagnostic\nFracture fermée sous-trochantérienne du fémur droit survenue après une chute de sa hauteur.\n\n### Technique utilisée\nInstallation en décubitus dorsal sur table orthopédique sous anesthésie générale. Asepsie et champs stériles. Voie d’abord latérale centrée sur le grand trochanter. Exposition du foyer de fracture qui apparaît oblique courte, sans extension intra-articulaire. Réduction progressive sous contrôle scopique jusqu’à restauration de la longueur et de l’axe du membre. Fixation par clou gamma long verrouillé en distalité par deux vis transversales et en proximalité par une vis céphalique et une vis trochantérienne. Contrôle scopique final confirmant la bonne position du matériel et l’absence de conflit articulaire.\n\n### Constatations per-opératoires\nFoyer de fracture simple, sans comminution majeure ni interposition musculaire. Pas d’extension vers la diaphyse ni vers l’articulation coxo-fémorale. Corticales de bonne qualité, sans signe d’ostéoporose localement avancée.\n\n### Matériels utilisés\nClou gamma long 12 mm × 380 mm, vis céphalique 10,5 mm × 95 mm, vis trochantérienne 6,5 mm × 50 mm, deux vis distales 5 mm.\n\n### Chirurgien\nDr Audrina Bertrand\n\n-----\n\n## Compte rendu d’hospitalisation\n\nService de chirurgie orthopédique et traumatologique\nHôpital Édouard Herriot - Hospices Civils de Lyon\n\nIdentification patient\nNom : Bohe\nPrénom : Jeanne\nDate de naissance : 10/02/1939\n\n### Motif d’hospitalisation\nMadame Jeanne Bohe, âgée de 87 ans, a été admise le 3 décembre 2026 pour prise en charge d’une fracture sous-trochantérienne du fémur droit survenue la veille lors d’une chute à domicile.\n\n### Antécédents\n- Médicaux : hypertension artérielle essentielle traitée par amlodipine 5 mg par jour.\n- Chirurgicaux : appendicectomie dans l’enfance, cure de hernie inguinale droite il y a vingt ans.\n- Familiaux : pas d’antécédent notable de fracture pathologique ou d’ostéoporose sévère.\n- Allergies : aucune allergie médicamenteuse connue.\n\n### Mode de vie\nPatiente autonome à domicile, vivant seule en appartement au rez-de-chaussée. Tabagisme ancien sevré depuis plus de trente ans. Pas de consommation d’alcool. Ancienne employée de bureau, retraitée depuis vingt-cinq ans.\n\n### Histoire de la maladie\nLa patiente a chuté dans sa salle de bain le 2 décembre 2026, ressentant une douleur immédiate de la hanche droite avec impotence fonctionnelle totale. Transportée aux urgences par les pompiers, une radiographie du bassin a confirmé une fracture fermée sous-trochantérienne du fémur droit. Compte tenu de l’âge et de l’autonomie antérieure, une indication d’ostéosynthèse a été retenue.\n\n### Examen clinique\nÀ l’entrée, la patiente est apyrétique, eupnéique. La tension artérielle est mesurée à 150/85 mmHg sous traitement habituel. Le pouls est régulier à 78 battements par minute. L’examen cutané ne montre pas de lésion associée. La hanche droite est douloureuse à la palpation, avec un raccourcissement et une rotation externe du membre inférieur. Les pouls périphériques sont perçus. Le poids est stable à 58 kg pour une taille de 1,62 m. L’examen neurologique distal est normal.\n\n### Examens complémentaires\nRadiographie du bassin de face et de la hanche droite de profil : fracture sous-trochantérienne oblique courte, sans trait de refend articulaire.\nBilan biologique préopératoire : hémoglobine à 12,4 g/dL, leucocytes à 7 800/mm³, plaquettes à 245 000/mm³, créatinine à 85 µmol/L, bilan hépatique normal. ECG : rythme sinusal régulier, pas de trouble de la repolarisation.\n\n### Évolution pendant l’hospitalisation\nL’intervention a eu lieu le lendemain de l’admission. Les suites opératoires ont été simples, sans complication hémorragique ni infectieuse. La patiente a été levée au fauteuil dès le premier jour postopératoire avec appui partiel autorisé sous couvert de deux cannes anglaises. La tension artérielle est restée stable sous traitement habituel, sans pic hypertensif. La rééducation a été débutée précocement avec kinésithérapie quotidienne. Les pansements ont été refaits régulièrement, sans signe d’infection locale. La sortie a été organisée vers un service de soins de suite et de réadaptation le 14 décembre 2026.\n\n### Conclusion\nMadame Bohe a bénéficié d’une ostéosynthèse par clou gamma pour fracture sous-trochantérienne du fémur droit. Les suites ont été simples, permettant une orientation en rééducation pour poursuite de la prise en charge.\n\nDr Audrina Bertrand",
   "formulations": {
     "diagnostics": {
-      "Épisode dépressif sévère sans symptômes psychotiques (F322)": [
-        "état dépressif sévère",
-        "épisode dépressif sévère sans élément psychotique",
-        "dépression grave",
-        "syndrome dépressif sévère",
-        "souffrance morale intense",
-        "état dépressif majeur",
-        "dépression profonde",
-        "réaction dépressive sévère"
+      "Fracture soustrochantérienne - Fracture fermée (S7220)": [
+        "fracture sous-trochantérienne du fémur droit",
+        "fracture fermée sous-trochantérienne du fémur droit",
+        "fracture sous-trochantérienne oblique courte"
       ],
-      "Victime d'éruption volcanique, domicile (X350)": [
-        "éruption volcanique ayant touché son domicile",
-        "stress post-traumatique lié à une éruption volcanique",
-        "évacuation de son quartier suite à une éruption volcanique",
-        "destruction partielle de sa maison lors d'une éruption volcanique"
+      "Hypertension essentielle (primitive) (I10)": [
+        "hypertension artérielle essentielle",
+        "tension artérielle est mesurée à 150/85 mmHg sous traitement habituel",
+        "sans pic hypertensif"
       ]
     },
     "informations": {
-      "Date entrée": ["16/01/2024"],
-      "Date de sortie": ["31/01/2024"],
-      "Service d'hospitalisation": ["Service ADDICTO MCO", "ADDICTO MCO"],
-      "Nom/Prénom du patient": ["De Jesus Machado Marie"],
-      "Nom/Prénom du médecin": ["Thierry Boudot"],
-      "Âge": ["62 ans"],
+      "Date entrée": ["3 décembre 2026"],
+      "Date de sortie": ["14 décembre 2026"],
+      "Service d'hospitalisation": ["Service de chirurgie orthopédique et traumatologique"],
+      "Intervention": ["Ostéosynthèse d’une fracture sous-trochantérienne du fémur droit"],
+      "Date de l’intervention": ["04 décembre 2026"],
+      "Nom/Prénom du chirurgien": ["Dr Audrina Bertrand"],
+      "Nom/Prénom du patient": ["Madame Jeanne Bohe"],
+      "Âge": ["87 ans"],
       "Sexe": ["Féminin"],
       "État général": [
-        "score ECOG à 2 (capable de se déplacer et de s'occuper d'elle-même, mais incapable de travailler)",
-        "son score ECOG est passé à 1 (symptômes présents, mais capable de mener une activité normale avec effort)"
+        "apatiente, eupnéique",
+        "autonome à domicile",
+        "poids stable à 58 kg"
       ],
-      "Poids": ["58 kg", "perte de 4 kg en 2 mois"],
-      "Statut gestationnel": ["ménopausée depuis l'âge de 52 ans, sans traitement hormonal substitutif"],
-      "Gestité": ["gestité 0"],
+      "Poids": ["58 kg"],
+      "Comorbidités": ["hypertension artérielle essentielle traitée par amlodipine 5 mg par jour"],
+      "Médicaments": ["amlodipine 5 mg par jour"],
       "NFS": [
-        "Hb 12,8 g/dL, leucocytes 6,2 G/L, plaquettes 250 G/L (normal)"
+        "hémoglobine à 12,4 g/dL",
+        "leucocytes à 7 800/mm³",
+        "plaquettes à 245 000/mm³"
       ],
-      "Créatinine": ["72 µmol/L (DFG estimé à 78 mL/min/1,73 m², normal)"],
-      "Bilan hépatique": [
-        "ASAT 22 UI/L, ALAT 25 UI/L, GGT 30 UI/L, bilirubine totale 12 µmol/L (normal)"
-      ],
-      "Traitements": [
-        "Venlafaxine 150 mg/jour (antidépresseur)",
-        "Alprazolam 0,25 mg matin et midi (anxiolytique, à réévaluer à 15 jours)",
-        "Vitamine D 100 000 UI tous les 3 mois"
-      ]
+      "Créatinine": ["créatinine à 85 µmol/L"],
+      "Bilan hépatique": ["bilan hépatique normal"]
     }
   }
 }

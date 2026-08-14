@@ -1,135 +1,120 @@
 **SCÉNARIO DE DÉPART :**
-- Âge du patient : 0 ans
+- Âge du patient : 76 ans
 - Sexe du patient : Féminin
-- Date d'entrée : 11/03/2026
-- Date de sortie : 15/03/2026
-- Date de naissance : 23/04/2025
-- Nom du patient : Peron
-- Prénom du patient : Annabella
+- Date d'entrée : 26/11/2026
+- Date de sortie : 26/11/2026
+- Date de naissance : 27/03/1950
+- Nom du patient : Melgar-luque
+- Prénom du patient : Lillia
 - Mode d'entrée' : DOMICILE
 - Mode de sortie' : DOMICILE
 - Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
 - Codage CIM10 :
-   * Diagnostic principal : Enfant unique, né à l'hôpital (Z380)
+   * Diagnostic principal : Crampe et spasme (R252)
    * Diagnostics associés :
-      - Iso-immunisation Rh du foetus et du nouveau-né (P550)
-      - Examen spécial de dépistage de maladies du sang, des organes hématopoïétiques et de certains troubles du système immunitaire (Z130)
-      - Examen spécial de dépistage des affections des oreilles (Z1351)
-- Nom du médecin / signataire : Myriam Monniette
-- Service : OBSTETRIQUE
-- Hôpital : Hôpital Édouard Herriot - Hospices Civils de Lyon
+      - Épicondylite - Bras (M7712)
+- Acte CCAM : séance d'injection de toxine botulique dans les muscles striés par voie transcutanée, avec examen électromyographique de détection (PCLB003)
+- Nom du médecin / signataire : Nicole Borsi
+- Service : NEUROLOGIE
+- Hôpital : Hôpital Saint-Louis - Assistance Publique Hôpitaux de Paris
 
 **FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
 
 Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
 Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
 
-<fiche_code code="Z38.0">
+<fiche_code code="R25.2">
 
-# Z38.0 — Enfant unique, né à l'hôpital
+# R25.2 — Crampe et spasme
 
 ## Position dans la classification
-- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
-- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+- Chapitre XVIII : Symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs
+- Bloc R25-R29 : Symptômes et signes relatifs aux systèmes nerveux et ostéomusculaire
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVIII) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+résultats anormaux constatés au cours de l'examen prénatal systématique de la mère (O28.-)
+
+Affections relevant d'autres codes (hérité de la catégorie R25) :
+
+mouvements stéréotypés (F98.4)
+tics (F95.-)
+troubles spécifiques de la motricité (G20-G26)
+
+Affections relevant d'autres codes :
+
+spasme :
+ - infantile (G40.4) 
+ - pédocarpien (R29.0)
 
 ## Formulations cliniques alternatives
-- Enfant - voir aussi nom de l'état pathologique, né, vivant, en bonne santé, naissance, unique, né à l'hôpital
+- crampe
+- Crampe (des) (due à)
+- Crampe (des) (due à), musculaire
+- crampes
+- crise spastique
+- état spastique
+- Hémispasme (facial)
+- maladie spastique face
+- spasme
+- Spasme (de)
+- Spasme (de), orbiculaire
+- spasme facial
+- spasme infundibulaire
+- spasticité
+- terrain spastique
+- Trismus (de)
 
 </fiche_code>
 
-<fiche_code code="P55.0">
+<fiche_code code="M77.12">
 
-# P55.0 — Iso-immunisation Rh du fœtus et du nouveau-né
+# M77.12 — Épicondylite - " Bras "
 
 ## Position dans la classification
-- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
-- Bloc P50-P61 : Affections hémorragiques et hématologiques du fœtus et du nouveau-né
+- Chapitre XIII : Maladies du système ostéoarticulaire, des muscles et du tissu conjonctif
+- Bloc M60-M79 : Affections des tissus mous
+- Bloc M70-M79 : Autres affections des tissus mous
+
+## Localisations anatomiques
+- articulation du coude
+- humérus
+
+Bloc d'inclusion :
+humérus
+articulation du coude
 
 ## Périmètre clinique du code
 
-Inclusions héritées du chapitre XVI :
-- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+Inclusions héritées de la catégorie M77.1 :
+- Épicondylite des joueurs de tennis
+Épicondylite latérale
+Tennis elbow
 
 ## À ne pas décrire
 
-Affections relevant d'autres codes (hérité du chapitre XVI) :
+Affections relevant d'autres codes (hérité du chapitre XIII) :
 
-coqueluche (A37.-)
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines lésions de l’articulation temporomandibulaire (K07.6)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
 lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
 maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
 malformations congénitales et anomalies chromosomiques (Q00-Q99)
-tétanos du nouveau-né (A33)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+syndrome de loge musculaire (T79.6)
 tumeurs (C00-D48)
 
-Affections relevant d'autres codes (hérité du bloc P50-P61) :
+Affections relevant d'autres codes (hérité de la catégorie M77) :
 
-anémies hémolytiques héréditaires (D55-D58)
-maladie de :
- - Crigler-Najjar (E80.5) 
- - Dubin–Johnson (E80.6) 
-sténose et rétrécissement congénitaux des voies biliaires (Q44.3) 
-syndrome de Gilbert (E80.4)
-
-## Formulations cliniques alternatives
-- allo-immunisation RH foeto-maternelle
-- Anémie (à) (de), foetus ou nouveau-né, due à, anticorps, incompatibilité foetomaternelle, iso- immunisation, rh
-- Anticorps, anti-d (rh), affectant foetus ou nouveau-né
-- Erythroblastose (foetale) (nouveau-né), due à anticorps, incompatibilité foetomaternelle, iso- immunisation, rh
-- Facteur, rhésus (rh), déterminant des troubles d'incompatibilité, foetus ou nouveau-né
-- Facteur, rhésus (rh), déterminant des troubles d'incompatibilité, maladie hémolytique
-- Ictère (de), nouveau-né (physiologique), associé à, dû à, anticorps, rh
-- Ictère (de), nouveau-né (physiologique), associé à, dû à, incompatibilité foetomaternelle, rh
-- Ictère (de), nouveau-né (physiologique), associé à, dû à, iso-immunisation, anti-rh
-- immunisation RH materno-foetale
-- incompatibilité facteur rhésus
-- Incompatibilité, facteur rhésus (rh), foetus ou nouveau-né
-- incompatibilité materno-foetale système rhésus
-- incompatibilité rhésus foeto-maternelle
-- iso-immunisation anti-C
-- iso-immunisation anti-D
-- iso-immunisation anti-E
-- Iso-immunisation (de la grossesse), anti-rh, foetus ou nouveau-né
-- iso-immunisation RH
-- iso-immunisation rhésus
-
-</fiche_code>
-
-<fiche_code code="Z13.0">
-
-# Z13.0 — Examen spécial de dépistage de maladies du sang, des organes hématopoïétiques et de certains troubles du système immunitaire
-
-## Position dans la classification
-- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
-- Bloc Z00-Z13 : Sujets en contact avec les services de santé pour des examens divers
-
-## À ne pas décrire
-
-Affections relevant d'autres codes (hérité du bloc Z00-Z13) :
-
-examens relatifs à la grossesse et à la reproduction (Z30-Z36)  (Z39.-)
-
-## Formulations cliniques alternatives
-- Examen (de) (pour) (voir aussi observation), dépistage (à) (de) (par), anémie
-- Examen (de) (pour) (voir aussi observation), dépistage (à) (de) (par), drépanocytose
-- Examen (de) (pour) (voir aussi observation), dépistage (à) (de) (par), hémoglobinopathies nca
-- Examen (de) (pour) (voir aussi observation), dépistage (à) (de) (par), trouble (de), immunitaire
-- Examen (de) (pour) (voir aussi observation), dépistage (à) (de) (par), trouble (de), organes hématopoïétiques nca
-- Examen (de) (pour) (voir aussi observation), dépistage (à) (de) (par), trouble (de), sang nca
-
-</fiche_code>
-
-<fiche_code code="Z13.51">
-
-# Z13.51 — Examen spécial de dépistage des affections des oreilles
-
-## Position dans la classification
-- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
-- Bloc Z00-Z13 : Sujets en contact avec les services de santé pour des examens divers
-
-## À ne pas décrire
-
-Affections relevant d'autres codes (hérité du bloc Z00-Z13) :
-
-examens relatifs à la grossesse et à la reproduction (Z30-Z36)  (Z39.-)
+bursite :
+ - SAI (M71.9) 
+ - par sollicitation excessive (M70.-) 
+enthésopathie spinale (M46.0) 
+ostéophyte (M25.7)
 
 </fiche_code>

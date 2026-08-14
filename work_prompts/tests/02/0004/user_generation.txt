@@ -1,91 +1,111 @@
 **SCÉNARIO DE DÉPART :**
-- Âge du patient : 43 ans
-- Sexe du patient : Féminin
-- Date d'entrée : 16/03/2025
-- Date de sortie : 31/03/2025
-- Date de naissance : 13/11/1981
-- Nom du patient : Vlasic
-- Prénom du patient : Janine
-- Mode d'entrée' : URGENCES
+- Âge du patient : 78 ans
+- Sexe du patient : Masculin
+- Date d'entrée : 28/05/2026
+- Date de sortie : 28/05/2026
+- Date de naissance : 12/03/1948
+- Nom du patient : Granet
+- Prénom du patient : Pierre
+- Mode d'entrée' : DOMICILE
 - Mode de sortie' : DOMICILE
-- Contexte de l'hospitalisation : Prise en charge en hospitalisation complète pour interventions majeures sur l'intestin grêle et le côlon.
+- Contexte de l'hospitalisation : Surveillance en hospitalisation ambulatoire de Diabète sucré de type 2 insulinotraité, sans complication.
 - Codage CIM10 :
-   * Diagnostic principal : Occlusions intestinales, autres et sans précision (K566)
+   * Diagnostic principal : Diabète sucré de type 2 insulinotraité, sans complication (E1190)
    * Diagnostics associés :
-      - aucun
-- Acte CCAM : colectomie transverse, par laparotomi (HHFA018)
-- Nom du médecin / signataire : Justino Kouzoungou
-- Service : CHIRURGIE VISCERALE
-- Hôpital : Hôpital Édouard Herriot - Hospices Civils de Lyon
+      - Surveillance et conseils diététiques (Z713)
+- Nom du médecin / signataire : Liron Kolle
+- Service : ENDOCRINOLOGIE
+- Hôpital : Hôpital Claude Huriez - Centre Hospitalier Universitaire de Lille
 
 **FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
 
 Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
 Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
 
-<fiche_code code="K56.6">
+<fiche_code code="E11.90">
 
-# K56.6 — Occlusions intestinales, autres et sans précision
+# E11.90 — Diabète sucré de type 2 - "Sans complication" - "diabète sucré de type 2 insulinotraité"
 
 ## Position dans la classification
-- Chapitre XI : Maladies de l'appareil digestif
-- Bloc K55-K64 : Autres maladies de l'intestin
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E10-E14 : Diabète sucré
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie E11 :
+- diabète (sucré) (avec obésité) (sans obésité) (de) adulte
+- diabète (sucré) (avec obésité) (sans obésité) (de) :
+ - adulte
+ - maturité
+ - non cétosique
+ - non insulinodépendant du sujet jeune
+ - stable
+- diabète (sucré) (avec obésité) (sans obésité) (de) maturité
+- diabète (sucré) (avec obésité) (sans obésité) (de) non cétosique
+- diabète (sucré) (avec obésité) (sans obésité) (de) non insulino-dépendant du sujet jeune
+- diabète (sucré) (avec obésité) (sans obésité) (de) stable
+- diabète (sucré) (avec obésité) (sans obésité) (de) type II
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité de la catégorie E11) :
+
+anomalie de l'épreuve de tolérance au glucose (R73.0)
+diabète sucré :
+ - au cours de la grossesse, de l'accouchement et de la puerpéralité (O24.-) 
+ - de malnutrition (E12.-) 
+ - du nouveau-né (P70.2) 
+- glycosurie :
+ - SAI (R81) 
+ - rénale (E74.8) 
+hypo-insulinémie postchirurgicale (E89.1)
+
+</fiche_code>
+
+<fiche_code code="Z71.3">
+
+# Z71.3 — Surveillance et conseils diététiques
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z70-Z76 : Sujets ayant recours aux services de santé pour d'autres motifs
 
 ## Périmètre clinique du code
 
 Au niveau du code :
-- entéro-sténose
-- iléus occlusif SAI
-- occlusion du côlon ou de l'intestin
-- rétrécissement du côlon ou de l'intestin
-- sténose du côlon ou de l'intestin
+- surveillance et conseils diététiques (dans le cas de) allergies ou intolérances alimentaires
+- surveillance et conseils diététiques (dans le cas de) colite
+- surveillance et conseils diététiques (dans le cas de) diabète sucré
+- surveillance et conseils diététiques (dans le cas de) gastrite
+- surveillance et conseils diététiques (dans le cas de) hypercholestérolémie
+- surveillance et conseils diététiques (dans le cas de) obésité
+- surveillance et conseils diététiques (dans le cas de)  SAI
 
 ## À ne pas décrire
 
-Affections relevant d'autres codes (hérité du chapitre XI) :
+Affections relevant d'autres codes (hérité de la catégorie Z71) :
 
-certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
-certaines maladies infectieuses et parasitaires (A00-B99)
-complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
-lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
-maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
-malformations congénitales et anomalies chromosomiques (Q00-Q99)
-symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
-tumeurs (C00-D48)
-
-Affections relevant d'autres codes (hérité de la catégorie K56) :
-
-avec hernie (K40-K46)
-étranglement :
- - congénital ou sténose congénitale de l'intestin (Q41-Q42) 
- - ischémique de l'intestin (K55.1) 
-iléus méconial (E84.1) 
-- occlusion (du) :
- - duodénum (K31.5) 
- - intestinale du nouveau-né (P75-P76) 
- - intestinale postopératoire (K91.3) 
-sténose de l'anus ou du rectum (K62.4)
+conseil en matière de :
+ - contraception et mesures procréatives (Z30-Z31) 
+ - sexualité (Z70.-)
 
 ## Formulations cliniques alternatives
-- Compression (de), intestin (extrinsèque) (voir aussi obstruction, intestin)
-- compression extrinsèque duodénum
-- état subocclusif digestif
-- Gangrène (cutanée) (extensive) (humide) (infectée) (locale) (par stase) (sèche) (septique) (ulcéreuse) (de) (due à), intestin (avec), occlusion intestinale (voir aussi obstruction, intestin)
-- Gangrène (cutanée) (extensive) (humide) (infectée) (locale) (par stase) (sèche) (septique) (ulcéreuse) (de) (due à), mésentère (avec), occlusion intestinale (voir aussi obstruction, intestin)
-- Obstruction (de) (par), intestin, intestinale (grêle) (gros), par, sténose
-- occlusion fonctionnelle chronique côlon
-- Occlusion (partielle) (totale) (transitoire) (de), intestin, intestinale
-- Occlusion (partielle) (totale) (transitoire) (de), intestin, intestinale, par, sténose
-- parésie digestive
-- pseudo-occlusion aigüe grêle
-- signes occlusifs intestinaux
-- Sténose (cicatricielle) (de) - voir aussi rétrécissement, caecum
-- Sténose (cicatricielle) (de) - voir aussi rétrécissement, côlon (voir aussi obstruction, intestin)
-- Sténose (cicatricielle) (de) - voir aussi rétrécissement, intestin (voir aussi obstruction, intestin)
-- Sténose (cicatricielle) (de) - voir aussi rétrécissement, jéjunum
-- sténose rectum
-- sténose serrée tronc coeliaque
-- syndrome occlusif réflexe
-- syndrome subocclusif chronique
+- Conseil (en) (pour) (voir aussi personne, en quête de conseils), diététique
+- Education diabétique
+- Education diététique
+- Education diététique pour diabète sucré
+- Education diététique pour obésité
+- Personne, en quête de conseils (pour), diététiques
+- Surveillance diabétique
+- Surveillance diététique
+- Surveillance diététique pour diabète sucré
+- Surveillance diététique pour obésité
+- Surveillance (médicale) (de) (pour), diététique
 
 </fiche_code>

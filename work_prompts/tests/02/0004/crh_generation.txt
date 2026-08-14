@@ -1,138 +1,73 @@
 Le compte rendu suivant respecte les élements suivants :
         - les diagnostics ont une formulation moins formelle que la définition du code
-        - le plan du CRH est conforme aux recommandations. Les sections sont rédigées dans un style clinique informel et réaliste.
-        - Les dates sont cohérentes avec le scénario.
-        - Les informations obligatoires sont présentes dans l'entête et l'encadré patient.
-        - Les informations sont intégrées de façon naturelle dans le texte.
-        - Les dictionnaires de formulations sont fournis à la fin.
+        - le plan du CRH est conforme aux recommandations. Les sections sont rédigées en texte libre, sans liste à puces (sauf pour les antécédents)
+        - les antécédents ajoutés sont mineurs et plausibles
+        - les constantes vitales et examens sont intégrés dans le texte
+        - les dates sont cohérentes
+        - les informations obligatoires sont présentes
 
 ```json
 {
-  "CR": "## Compte rendu opératoire
-
-Hôpital Édouard Herriot - Hospices Civils de Lyon
-Service de Chirurgie Viscérale
-
-### Intervention
-Colectomie transverse par laparotomie.
-
-### Date de l'intervention
-20 mars 2025.
-
-### Diagnostic
-Syndrome occlusif intestinal sans cause précise identifiée en préopératoire.
-
-### Technique utilisée
-Installation de la patiente en décubitus dorsal sous anesthésie générale. Asepsie et champs opératoires stériles. Laparotomie médiane sus- et sous-ombilicale. Exploration de la cavité abdominale mettant en évidence une distension majeure des anses grêles en amont d'une zone de sténose serrée située au niveau du côlon transverse. Absence de lésion tumorale macroscopiquement visible ou de bride évidente. Réalisation d'une colectomie transverse emportant la zone sténosée avec marges de sécurité. Anastomose iléo-colique latéro-latérale manuelle en deux plans au fil résorbable 3/0. Hémostase soigneuse vérifiée. Lavage abondant de la cavité péritonéale au sérum physiologique tiède. Drainage aspiratif type Redon en fosse iliaque droite. Fermeture pariétale plan par plan au fil non résorbable. Pansement sec.
-
-### Constatations per-opératoires
-Distension importante des anses grêles en amont d'une sténose serrée du côlon transverse, sans cause évidente (pas de bride, pas de tumeur visible, pas de diverticule compliqué). Zone sténosée mesurant environ 3 cm de long, avec paroi épaissie et inflammatoire. Absence d'ascite ou de nodules péritonéaux suspects. Appendice et autres segments coliques d'aspect macroscopiquement normal.
-
-### Matériels utilisés
-- Fils de suture : Vicryl 3/0 et Prolène 2/0.
-- Drain de Redon CH16.
-- Matériel de laparotomie standard.
-
-### Chirurgien
-Dr Justino Kouzoungou.
-
------
-
-## Compte rendu d’hospitalisation
-
-Hôpital Édouard Herriot - Hospices Civils de Lyon
-Service de Chirurgie Viscérale
-
-**Patient :**
-Nom : Vlasic
-Prénom : Janine
-Date de naissance : 13/11/1981
-Âge : 43 ans
-Sexe : Féminin
-
-### Motif d’hospitalisation
-Admission aux urgences le 16 mars 2025 pour tableau d'occlusion intestinale évoluant depuis 48 heures, associant douleurs abdominales diffuses, arrêt des matières et des gaz, et vomissements alimentaires. La patiente présentait un météorisme abdominal important avec silence auscultatoire digestif.
+  "CR": "Hôpital Claude Huriez - Centre Hospitalier Universitaire de Lille\nService d'Endocrinologie\n\nCompte rendu d'hospitalisation\n\nIdentité du patient :\nNom : Granet\nPrénom : Pierre\nDate de naissance : 12/03/1948\n\n### Motif d'hospitalisation
+Pierre Granet, âgé de 78 ans, est hospitalisé ce jour en ambulatoire pour une surveillance de son diabète de type 2 traité par insuline, sans complication connue à ce jour. Cette hospitalisation vise également à réévaluer ses habitudes alimentaires et à renforcer l'éducation diététique.
 
 ### Antécédents
-- **Médicaux :** Hypothyroïdie substituée (Lévothyrox 75 µg/jour). Pas d'antécédent de diabète ou d'hypertension artérielle.
-- **Chirurgicaux :** Appendicectomie dans l'enfance. Pas d'autre antécédent chirurgical abdominal.
-- **Familiaux :** Mère décédée d'un cancer du sein à 68 ans. Père en bonne santé.
-- **Allergies :** Aucune allergie médicamenteuse connue.
-- **Toxicomanie :** Tabagisme actif évalué à 10 paquets-année. Pas de consommation d'alcool ou de drogues illicites.
+- Médicaux : Diabète de type 2 insulinotraité, sans complication.
+- Chirurgicaux : Appendicectomie dans l’enfance, cure de hernie inguinale droite il y a 15 ans.
+- Familiaux : Père décédé d’un infarctus du myocarde à 72 ans.
+- Allergies : Aucune allergie médicamenteuse connue.
 
 ### Mode de vie
-Patiente célibataire, sans enfant. Employée administrative dans une entreprise de logistique. Activité physique limitée (marche occasionnelle). Pas de régime alimentaire particulier.
+Patient retraité, ancien employé de bureau. Il vit seul à domicile et est autonome pour les activités de la vie quotidienne. Il ne fume pas et ne consomme pas d’alcool. Il marche quotidiennement environ 30 minutes. Pas de pratique sportive régulière.
 
 ### Histoire de la maladie
-La symptomatologie a débuté brutalement deux jours avant l'admission par des douleurs abdominales diffuses, rapidement suivies d'un arrêt des matières et des gaz. Les vomissements sont apparus secondairement, de nature alimentaire puis bilieux. La patiente a consulté aux urgences devant l'aggravation des symptômes. À l'arrivée, elle présentait un abdomen distendu, tympanique, avec silence auscultatoire digestif. Le toucher rectal était normal, sans fécalome ni masse palpable. Une sonde nasogastrique a été mise en place en urgence, ramenant 800 ml de liquide bilieux.
+M. Granet est suivi pour un diabète de type 2 depuis une quinzaine d’années, initialement traité par antidiabétiques oraux. Une insulinothérapie a été introduite il y a 5 ans en raison d’un déséquilibre glycémique persistant. Il bénéficie d’un suivi régulier en consultation d’endocrinologie. Lors de sa dernière consultation il y a un mois, son HbA1c était à 7,8 %, justifiant cette hospitalisation de jour pour une réévaluation globale et un ajustement thérapeutique si nécessaire.
 
 ### Examen clinique
-- **Constantes à l'entrée :** TA 110/70 mmHg, FC 95 bpm, SpO2 98 % en air ambiant, température 37,2°C.
-- **Poids :** 68 kg (poids habituel selon la patiente).
-- **Examen abdominal :** Abdomen distendu, tympanique, avec défense diffuse. Cicatrice d'appendicectomie ancienne. Pas de masse palpable. Silence auscultatoire digestif.
-- **Examen général :** Patiente apyrétique, légèrement déshydratée (pli cutané persistant). Pas de signe de choc. Reste de l'examen sans particularité.
+À l’admission, le patient est apyrétique. La tension artérielle est mesurée à 135/80 mmHg, la fréquence cardiaque à 72 battements par minute. Le poids est stable à 82 kg pour une taille de 1,72 m (IMC = 27,7 kg/m²). L’examen cardiovasculaire est sans particularité, les pouls périphériques sont perçus. L’examen neurologique ne révèle pas de signe de neuropathie périphérique. Les pieds sont inspectés : pas de plaie ni de déformation. L’examen abdominal est normal.
 
 ### Examens complémentaires
-- **Biologie :**
-  - NFS : Hb 13,2 g/dL, leucocytes 12 500/mm³ (PNN 85 %), plaquettes 320 000/mm³.
-  - Ionogramme sanguin : Na+ 138 mmol/L, K+ 3,5 mmol/L, créatinine 78 µmol/L, urée 6,2 mmol/L.
-  - CRP : 45 mg/L.
-  - Bilan hépatique : normal.
-  - Lactates : 1,8 mmol/L.
-- **Imagerie :**
-  - **ASP debout :** Niveaux hydro-aériques grêliques multiples, sans pneumopéritoine visible.
-  - **Scanner abdominal injecté (16/03/2025) :** Distension majeure des anses grêles en amont d'une zone de sténose serrée du côlon transverse, sans cause évidente (pas de bride visible, pas de masse tumorale individualisable). Pas d'épanchement intra-péritonéal significatif. Absence de signe de souffrance digestive.
-
-### Évolution pendant l'hospitalisation
-- **Phase préopératoire :** Mise en place d'une sonde nasogastrique en aspiration douce, réhydratation intraveineuse (sérum physiologique + électrolytes). Surveillance clinique et biologique rapprochée. La patiente a été maintenue à jeun strict. Une antibiothérapie probabiliste par Augmentin 1g x 3/jour a été instaurée en prévision de la chirurgie.
-- **Intervention (20/03/2025) :** Colectomie transverse par laparotomie (cf. compte rendu opératoire). Les suites opératoires immédiates ont été simples, avec reprise du transit au 3ème jour postopératoire (23/03/2025). La sonde nasogastrique a été retirée à J2 postopératoire. Le drain de Redon a été enlevé à J4 (24/03/2025) devant un débit nul.
-- **Phase postopératoire :** Surveillance quotidienne des constantes, de la cicatrice opératoire et du transit. La patiente a été réalimentée progressivement à partir de J3, sans incident. Les douleurs postopératoires ont été bien contrôlées par antalgiques de palier I (paracétamol) et II (tramadol). Pas de complication infectieuse ou thromboembolique. La sortie a été autorisée le 31 mars 2025 après vérification de la bonne tolérance alimentaire et de l'absence de complication cicatricielle. Un rendez-vous de contrôle a été programmé à 1 mois avec le chirurgien, ainsi qu'une consultation avec l'anatomopathologiste pour les résultats définitifs de la pièce opératoire.
+Un bilan biologique a été réalisé ce jour :
+- Glycémie à jeun : 1,50 g/L.
+- HbA1c : 7,6 % (contrôle par rapport au dernier dosage).
+- Créatinine : 95 µmol/L (DFG estimé à 65 mL/min/1,73 m² selon la formule CKD-EPI).
+- Bilan hépatique : normal.
+- NFS : normale, sans anomalie.
+- Bandelette urinaire : absence de protéinurie, de cétonurie ou d’infection urinaire.
 
 ### Conclusion
-Hospitalisation pour prise en charge chirurgicale d'un syndrome occlusif intestinal sur sténose serrée du côlon transverse, sans cause évidente en préopératoire. L'intervention a consisté en une colectomie transverse avec anastomose iléo-colique. Les suites opératoires ont été simples, permettant un retour à domicile au 11ème jour postopératoire. Surveillance clinique et anatomopathologique recommandée.",
+M. Granet présente un diabète de type 2 insulinotraité, actuellement équilibré de manière satisfaisante. L’hospitalisation de jour a permis de confirmer la stabilité de son état métabolique et de renforcer les conseils diététiques. Aucun ajustement thérapeutique n’est nécessaire à ce stade. Un suivi en consultation est prévu dans 3 mois avec un nouveau dosage de l’HbA1c. Le patient rentre à domicile ce jour avec une ordonnance pour son traitement habituel et des recommandations diététiques écrites.
+
+Fait à Lille, le 28/05/2026
+Dr Liron Kolle",
 
   "formulations": {
     "diagnostics": {
-      "K56.6 — Occlusions intestinales, autres et sans précision": [
-        "syndrome occlusif intestinal sans cause précise identifiée en préopératoire",
-        "occlusion intestinale évoluant depuis 48 heures",
-        "tableau d'occlusion intestinale",
-        "syndrome occlusif intestinal",
-        "sténose serrée du côlon transverse",
-        "zone de sténose serrée du côlon transverse",
-        "occlusion intestinale"
+      "Diabète sucré de type 2 - Sans complication - diabète sucré de type 2 insulinotraité (E11.90)": [
+        "Diabète de type 2 traité par insuline, sans complication connue à ce jour",
+        "diabète de type 2 insulinotraité",
+        "Diabète de type 2 insulinotraité, actuellement équilibré de manière satisfaisante"
+      ],
+      "Surveillance et conseils diététiques (Z71.3)": [
+        "renforcer l'éducation diététique",
+        "renforcer les conseils diététiques",
+        "recommandations diététiques écrites"
       ]
     },
     "informations": {
-      "Date entrée": ["16 mars 2025"],
-      "Date de sortie": ["31 mars 2025"],
-      "Service d'hospitalisation": ["Service de Chirurgie Viscérale"],
-      "Intervention": ["Colectomie transverse par laparotomie"],
-      "Date de l'intervention": ["20 mars 2025"],
-      "Nom/Prénom du chirurgien": ["Dr Justino Kouzoungou"],
-      "Nom/Prénom du patient": ["Vlasic Janine"],
-      "Âge": ["43 ans"],
-      "Sexe": ["Féminin"],
-      "État général": [
-        "Patiente apyrétique, légèrement déshydratée (pli cutané persistant). Pas de signe de choc.",
-        "Les suites opératoires immédiates ont été simples",
-        "La patiente a été réalimentée progressivement à partir de J3, sans incident."
-      ],
-      "Poids": ["68 kg"],
-      "Statut gestationnel": [],
-      "Gestité": [],
-      "Comorbidités": ["Hypothyroïdie substituée (Lévothyrox 75 µg/jour)"],
-      "Médicaments": [
-        "Lévothyrox 75 µg/jour",
-        "Augmentin 1g x 3/jour",
-        "paracétamol",
-        "tramadol"
-      ],
-      "NFS": [
-        "Hb 13,2 g/dL, leucocytes 12 500/mm³ (PNN 85 %), plaquettes 320 000/mm³"
-      ],
-      "Créatinine": ["créatinine 78 µmol/L"],
-      "Bilan hépatique": ["normal"]
+      "Date entrée": ["28/05/2026"],
+      "Date de sortie": ["28/05/2026"],
+      "Service d'hospitalisation": ["Service d'Endocrinologie"],
+      "Nom/Prénom du médecin": ["Dr Liron Kolle"],
+      "Nom/Prénom du patient": ["Granet Pierre"],
+      "Poids": ["82 kg"],
+      "Âge": ["78 ans"],
+      "Sexe": ["Masculin"],
+      "État général": ["autonome pour les activités de la vie quotidienne", "poids stable à 82 kg"],
+      "NFS": ["normale, sans anomalie"],
+      "Créatinine": ["95 µmol/L (DFG estimé à 65 mL/min/1,73 m² selon la formule CKD-EPI)"],
+      "Bilan hépatique": ["normal"],
+      "Traitements": ["insulinothérapie", "traitement habituel"]
     }
   }
 }

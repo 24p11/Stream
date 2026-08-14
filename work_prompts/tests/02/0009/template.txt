@@ -1,1 +1,1 @@
-medical_inpatient
+delivery_inpatient_hospit

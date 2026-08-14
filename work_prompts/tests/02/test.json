@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-08-14T15:16:33",
+  "seed_path": "data/aphp/scenarios_bn_all_20260128.pq",
+  "generation_ids": {
+    "0000": "5a1784e3-c5cd-441a-a972-f82e0a9d469a",
+    "0001": "616447bc-cd77-4ae5-958d-076aa408569c",
+    "0002": "0fb64337-cd67-48f4-9e7c-19b11ff00046",
+    "0003": "ae626a02-d524-4f46-b9e3-f5efef45ea94",
+    "0004": "ca809a64-1943-4cc2-953c-c8418fda7383",
+    "0005": "e2a20332-cfcd-41c1-ad3f-7bc84a6049ae",
+    "0006": "cf65a666-f3fe-445d-8570-951bb5a029ad",
+    "0007": "55e1c825-5fd9-473d-891a-452a5c1a3c47",
+    "0008": "a53da169-cfe2-46f7-a384-107a81857d08",
+    "0009": "8fa77bf8-f865-4683-8ee5-8eb21fdf51a5"
+  },
+  "templates": {
+    "0000": "delivery_inpatient_hospit",
+    "0001": "medical_inpatient",
+    "0002": "medical_inpatient",
+    "0003": "medical_inpatient",
+    "0004": "medical_outpatient",
+    "0005": "medical_inpatient",
+    "0006": "surgery_inpatient",
+    "0007": "medical_inpatient",
+    "0008": "delivery_inpatient_hospit",
+    "0009": "delivery_inpatient_hospit"
+  },
+  "fictomed_version": "0.1.0",
+  "fictomed_commit": "83ebca9ac9b38327a7ed634de420f9c225172769",
+  "notes": ""
+}

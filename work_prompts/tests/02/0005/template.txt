@@ -1,1 +1,1 @@
-medical_outpatient
+medical_inpatient
