@@ -42,20 +42,11 @@ def normalize(s: str) -> str:
     return re.sub(r"\s+", " ", s)
 
 
-def load_json(path: Path) -> tuple[dict | None, list[str]]:
-    """Retourne (données, avertissements de réparation)."""
-    raw = path.read_text(encoding="utf-8").strip()
-    raw = re.sub(r"^```(?:json)?\s*", "", raw)
-    raw = re.sub(r"\s*```$", "", raw)
-    repairs: list[str] = []
+def _parse(raw: str, repairs: list[str]) -> dict | None:
+    """Parse tolérant : strict=False + réparation des fermetures finales."""
     try:
-        # strict=False tolère les retours à la ligne littéraux dans les
-        # chaînes (défaut fréquent de la sortie Mistral)
-        return json.loads(raw, strict=False), repairs
+        return json.loads(raw, strict=False)
     except json.JSONDecodeError as exc:
-        # Réparation : fermetures manquantes en fin de fichier (le modèle
-        # omet parfois une accolade finale). On ne répare QUE si l'erreur
-        # est à la toute fin, et on le signale.
         if exc.pos >= len(raw) - 1:
             opens = raw.count("{") - raw.count("}")
             brackets = raw.count("[") - raw.count("]")
@@ -66,11 +57,42 @@ def load_json(path: Path) -> tuple[dict | None, list[str]]:
                         f"JSON réparé : {opens} accolade(s) fermante(s) "
                         "manquante(s) en fin de fichier"
                     )
-                    return data, repairs
+                    return data
                 except json.JSONDecodeError:
                     pass
-        ctx = raw[max(0, exc.pos - 60):exc.pos + 60].replace("\n", "\\n")
-        print(f"    ERREUR JSON : {exc.msg} (char {exc.pos})")
+        raise
+
+
+def load_json(path: Path) -> tuple[dict | None, list[str]]:
+    """Retourne (données, avertissements de réparation)."""
+    raw = path.read_text(encoding="utf-8").strip()
+    raw = re.sub(r"^```(?:json)?\s*", "", raw)
+    raw = re.sub(r"\s*```$", "", raw)
+    repairs: list[str] = []
+    try:
+        return _parse(raw, repairs), repairs
+    except json.JSONDecodeError as first_exc:
+        # Extraction : sortie non-JSON pure (préambule/prose autour de
+        # l'objet — typique des CRH v1 au prefix déclaratif). On cherche un
+        # bloc ```json ... ``` n'importe où, sinon du premier { au dernier }.
+        m = re.search(r"```(?:json)?\s*(\{.*)\s*```", raw, re.DOTALL)
+        candidate = m.group(1) if m else None
+        if candidate is None:
+            i, j = raw.find("{"), raw.rfind("}")
+            candidate = raw[i:j + 1] if 0 <= i < j else None
+        if candidate and candidate.strip() != raw:
+            try:
+                data = _parse(candidate.strip(), repairs)
+                repairs.append(
+                    "sortie non-JSON pure : texte hors objet détecté "
+                    "(préambule/prefix déclaratif), JSON extrait"
+                )
+                return data, repairs
+            except json.JSONDecodeError:
+                pass
+        ctx = raw[max(0, first_exc.pos - 60):first_exc.pos + 60]
+        ctx = ctx.replace("\n", "\\n")
+        print(f"    ERREUR JSON : {first_exc.msg} (char {first_exc.pos})")
         print(f"      contexte : ...{ctx}...")
         return None, repairs
 
