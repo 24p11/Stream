@@ -1,6 +1,6 @@
 # Spécification — Banc d'essai de génération AP-HP (`bench`)
 
-Branche cible : `dev_rf` · Statut : **v3.4** — nouveau répertoire `work_prompts/`
+Branche cible : `dev_rf` · Statut : **v3.5** — les jeux de templates vivent dans les tests
 
 Changements v3.2 → v3.3 : le test contient son **jeu de templates système**
 dans `system/<position>/` (copié des sources, édité là — unité d'édition par
@@ -12,6 +12,16 @@ Vérifications actées : les trois fichiers user de l'ancien `create_prompt_file
 sont identiques → **un seul fichier user par dossier** ; le 2-step n'existe pas
 dans fictomed (couche notebook uniquement) → le lot 5 devient le chemin de
 **promotion** vers fictomed. Ajout : mécanisme `prompt_local.py` (§3.7).
+
+v3.4 → v3.5 (demande Rémi) : **les jeux de templates système vivent dans les
+tests, pas à la racine** — ils sont l'objet testé. Le jeu du test N+1 est monté
+par copie du jeu du test N puis édité ; la chaîne des tests est la chaîne des
+versions des jeux (01 = v1, 02 = évolution, 03 = figement, ...). Les dossiers
+`work_prompts/template_*` disparaissent : l'amorçage du premier test se fait
+directement depuis `work_modif_prompts/template_*` (import unique). Le
+**Tout `work_prompts/` est versionné et partagé** (décision Rémi) : jeux,
+scénarios, prompts figés, CRH — les tests complets sont l'objet de la
+collaboration. « Figer » un jeu = commiter son test.
 
 v3.3 → v3.4 (demande Rémi) : **`work_modif_prompts/` n'est plus touché** —
 l'ancien monde y reste intact (notebook, utilitaires, anciens runs, sources de
@@ -34,8 +44,9 @@ Le workflow d'un test :
 2. **Création des prompts** :
    - `seed_user_prompts` matérialise les dossiers scénario (user prompt,
      `template.txt`, `prefix.txt`) ;
-   - montage du jeu de templates du test : copie des sources dans
-     `system/<position>/` ;
+   - montage du jeu de templates du test : copie du jeu du **test
+     précédent** dans `system/<position>/` (ou de `work_modif_prompts/
+     template_*` pour l'amorçage du tout premier test) ;
    - **édition manuelle dans `system/<position>/`** — c'est l'unité d'édition,
      un fichier par famille clinique ;
    - `copy_system_prompts` **fige** le jeu par scénario
@@ -48,8 +59,8 @@ Le workflow d'un test :
    le `context` du suivant. Aucun paramètre `generation_mode`.
 
 Positions **relatives au test** : la première génération d'un test s'appelle
-`first` quel que soit le jeu qui la nourrit. Le redispatch des sources
-actuelles :
+`first` quel que soit le jeu qui la nourrit. Amorçage depuis l'ancien monde
+(premier test de chaque topologie uniquement — ensuite, la chaîne) :
 
 - Test « génération directe » : `system/first/` ← `template_one_gen`
 - Test « deux temps » : `system/first/` ← `template_first_gen`,
@@ -62,8 +73,9 @@ coexistent) ; ou copier un dossier scénario (il emporte tous ses prompts).
 Jamais de nettoyage de prompts existants (`clean_existing_prompts` disparaît) :
 pour repartir, créer `tests/02`.
 
-Le disque fait foi : aucune fonction ne maintient de registre. Les sources
-(`template_*`, puis fictomed) restent canoniques hors du test.
+Le disque fait foi : aucune fonction ne maintient de registre. La référence
+d'un jeu est le jeu commité du test précédent — la chaîne des tests est la
+chaîne des versions.
 
 Hors périmètre : la réunification de la couche batch dans `MistralClient`
 (chantier séparé), la promotion des prompts validés vers fictomed (§6).
@@ -76,14 +88,12 @@ work_modif_prompts/                        # ANCIEN MONDE — non modifié
 
 work_prompts/                              # NOUVEAU MONDE
 ├── notebook_generation_bench.ipynb        # le notebook
-├── template_one_gen/                      # SOURCES canoniques : copies (une
-├── template_first_gen/                    # fois) depuis work_modif_prompts/,
-├── template_second_gen/                   # versionnées — jamais modifiées
-│                                          # par un test
-└── tests/                                 # gitignoré (cf. §9)
+├── check_crh.py                           # vérificateur mécanique
+└── tests/                                 # versionné intégralement (cf. §9)
     └── 02/                                # ex. un test « deux temps »
-        ├── system/                        # JEU DU TEST, copié des sources,
-        │   ├── first/                     # édité ICI (un .txt par famille)
+        ├── system/                        # JEU DU TEST (objet testé) : copié
+        │   ├── first/                     # du jeu du test précédent, édité
+        │   │                              # ICI (un .txt par famille)
         │   │   ├── medical_outpatient.txt
         │   │   └── surgery_inpatient.txt
         │   └── second/
@@ -115,9 +125,8 @@ Conventions :
   copies manuelles : nom libre). Sert de `custom_id` batch, de clé de
   jointure du contexte et de valeur pour `only`.
 - **Découverte disque** : sous-dossiers directs de `test_dir`, hors
-  `system/`, `batches/`, `__pycache__/` et dossiers cachés, triés
-  alphabétiquement. Les fichiers à la racine (`prompt_local.py`,
-  `test.json`, ...) sont ignorés.
+  `system/`, `batches/` et dossiers cachés, triés alphabétiquement. Les
+  fichiers à la racine (`prompt_local.py`, `test.json`, ...) sont ignorés.
 - **Nommage** : `prompt_system_first.txt` (toujours présent),
   `prompt_system_second.txt`, ... — convention documentée, valeurs par défaut
   des fonctions ; les noms restent des arguments libres. **Un seul fichier
@@ -364,20 +373,24 @@ intra-prompt serait une évolution de spec (placeholder explicite
 ## 5. Workflows de référence (documentation notebook)
 
 ```python
-# ---------- Test 1 : génération directe ----------
+# ---------- Test 1 : génération directe (amorçage depuis l'ancien monde) ----------
 TD = Path("work_prompts/tests/01")
 seed_user_prompts(TD, seed_df, seed_path=SEED_PATH)
-shutil.copytree("work_prompts/template_one_gen", TD / "system" / "first")
+shutil.copytree("work_modif_prompts/template_one_gen", TD / "system" / "first")
 # [édition manuelle de TD/system/first/*.txt]
 copy_system_prompts(TD, "first")
 cr = generate(TD, system="prompt_system_first.txt", user="user_generation.txt",
               out="crh_generation.txt", prefix_file="prefix.txt", ...)
 
-# ---------- Test 2 : deux générations ----------
+# ---------- Test suivant : évolution du jeu (chaîne de versions) ----------
 TD = Path("work_prompts/tests/02")
 seed_user_prompts(TD, seed_df, seed_path=SEED_PATH)
-shutil.copytree("work_prompts/template_first_gen",  TD / "system" / "first")
-shutil.copytree("work_prompts/template_second_gen", TD / "system" / "second")
+shutil.copytree("work_prompts/tests/01/system/first", TD / "system" / "first")
+# [édition du jeu de 02 — c'est LA modification testée]
+
+# ---------- Test deux générations (amorçage first/second depuis l'ancien monde) ----------
+# shutil.copytree("work_modif_prompts/template_first_gen",  TD / "system" / "first")
+# shutil.copytree("work_modif_prompts/template_second_gen", TD / "system" / "second")
 copy_system_prompts(TD, "first")
 copy_system_prompts(TD, "second")
 res = generate(TD, system="prompt_system_first.txt", user="user_generation.txt",
@@ -474,9 +487,18 @@ l'import de la chaîne amont depuis `work_modif_prompts/`) fonctionnent.
 
 ## 9. Git
 
-`.gitignore` : `work_prompts/tests/`. Le notebook et les copies des sources
-de templates (`work_prompts/template_*`) restent versionnés.
+**Tout `work_prompts/` est versionné et partagé** — jeux de templates,
+scénarios, prompts figés, CRH générés, `test.json`, `usage.json` : les tests
+complets sont l'objet de la collaboration (prompts et résultats côte à
+côte). Seule exception admise, au choix : ignorer
+`work_prompts/tests/*/batches/` (JSONL techniques, redondants avec le
+contenu des dossiers scénario). « Figer » un jeu = commiter son test.
 `work_modif_prompts/` n'est pas modifié par ce chantier.
+
+Point d'attention (décision hors spec, à l'appréciation du DIM) : le dépôt
+étant public, vérifier que la publication de scénarios dérivés de profils
+PMSI réels est conforme aux règles applicables, ou cibler une visibilité
+restreinte.
 
 ## 10. Tests attendus
 
@@ -488,9 +510,9 @@ Tous sans réseau (client Mistral mocké), sur `tmp_path` :
    présents ; refus si `generation_id` dupliqués/nuls ou `template_name`
    nul ; `test.json` conforme (`seed_path` en `as_posix`, blocs
    `generation_ids` et `templates`).
-2. `scenario_dirs` : exclut `system/`, `batches/`, `__pycache__/` et cachés,
-   ignore les fichiers à la racine (dont `prompt_local.py`), tri
-   alphabétique ; **un dossier copié manuellement apparaît**.
+2. `scenario_dirs` : exclut `system/`, `batches/` et cachés, ignore les
+   fichiers à la racine (dont `prompt_local.py`), tri alphabétique ; **un
+   dossier copié manuellement apparaît**.
 3. `copy_system_prompts` : deux scénarios de familles différentes reçoivent
    des contenus différents sous le même `dest` (depuis
    `system/<position>/`) ; `system/<position>/` absent → `BenchError` ;

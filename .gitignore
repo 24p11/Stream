@@ -218,3 +218,6 @@ __marimo__/
 # artefacts locaux — seuls le notebook et work_prompts/template_* sont versionnés
 work_prompts/tests/
 work_modif_prompts/tests/
+
+# macOS
+.DS_Store
