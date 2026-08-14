@@ -31,6 +31,10 @@ Les fiches contiennent également des **synonymes** des maladies qui entrent dan
 
 **Point essentiel : les codes n'ont pas tous la même précision clinique.** Certains désignent une entité nette et unique (ex. I10, hypertension artérielle essentielle). D'autres regroupent plusieurs entités hétérogènes sous un même libellé.
 
+**Cas des codes regroupant plusieurs entités précises** (ex. G12.2, qui couvre la sclérose latérale amyotrophique, la paralysie bulbaire progressive, l'amyotrophie spinale progressive...) : choisis UNE entité du périmètre, cohérente avec le reste du scénario, et nomme-la comme le ferait un clinicien (nom de la maladie, éponyme ou acronyme usuel : « SLA », « maladie de Charcot »...). Nommer une entité listée dans les inclusions ou synonymes du code n'est PAS ajouter une précision non portée par le code : c'est l'usage attendu des fiches. Ne reste au niveau du libellé générique que pour les codes « sans précision » (.9), où le flou est volontaire.
+
+**Règle absolue de formulation des diagnostics : le libellé officiel d'un code CIM-10 ne doit JAMAIS apparaître tel quel dans le document produit.** C'est la formulation d'un classificateur, pas d'un clinicien. Chaque diagnostic doit être exprimé par une entité nommée, un synonyme clinique ou une reformulation naturelle issus de la fiche du code.
+
 **Cas des sous-catégories « autres formes précisées » (le plus souvent `.8`)** : elles rassemblent des entités précises mais diverses qui n'ont pas de code dédié dans la catégorie (ex. B17.8, « autres hépatites virales aiguës précisées »). Le libellé officiel ne suffit alors pas à savoir quelle pathologie réelle décrire ; appuie-toi sur les inclusions et synonymes propres au code.
 
 **Cas particulier des cancers (chapitre II, catégories C00-C75)** : la CIM-10 classe les tumeurs malignes primitives essentiellement selon leur siège anatomique, et en grands groupes selon le comportement de la tumeur ; la morphologie n'apparaît qu'exceptionnellement dans le titre. Deux conséquences :
@@ -68,9 +72,13 @@ Si une instruction rédactionnelle semble conduire à ajouter un diagnostic, une
 
 - Vous devez utiliser exclusivement les diagnostics fournis. Aucun autre diagnostic ne doit être ajouté ou inventé.		
 
-- Lors vous mentionnerez dans le texte les diagnostics, vous utiliserez autant que faire ce peut une formulation moins formelle que la définition du code. 
+- Lorsque vous mentionnez un diagnostic dans le texte, appliquez la règle absolue ci-dessus : jamais le libellé officiel du code, toujours une entité nommée ou une reformulation clinique tirée de la fiche.
 
-- Aucune partie du texte ne doit être mise en gras.
+- Mise en forme :
+    + Seuls les titres de section « ### » sont autorisés comme mise en forme. INTERDIT : le gras (**...**) partout ailleurs — y compris les étiquettes d'antécédents, les intitulés de constantes, l'encadré patient et la signature du médecin.
+    + La section Antécédents peut être présentée en liste à puces (une puce par catégorie : médicaux, chirurgicaux, familiaux, allergies), les étiquettes restant en texte simple suivi de deux-points, par exemple : « - Médicaux : ... ». C'est la SEULE section où les puces sont admises.
+
+- Antécédents ajoutés pour le réalisme : choisissez UNIQUEMENT parmi des événements résolus et clos, par exemple : appendicectomie, cholécystectomie, cure de hernie, fracture ancienne consolidée, chirurgie ORL ou dentaire, tabagisme sevré de longue date. JAMAIS de maladie chronique (HTA, diabète, dyslipidémie, RGO, asthme...) : même « équilibrée » ou « sous traitement », elle serait codée dans un vrai dossier. « Pas d'autre antécédent notable » est une excellente réponse.
 
 - Langue : Rédigez le compte rendu en français.
 
@@ -97,7 +105,7 @@ Si une instruction rédactionnelle semble conduire à ajouter un diagnostic, une
 	+ Accouchement :  détail sur le déroulement de l'accouchement
 - Compte rendu de passage dans l'unité de suite de couche :
 	+ Résumé de la grossesse et de l'accouchement
-    + Evolution dans le service
+    + Evolution dans le service : uniquement les soins et la surveillance directement impliqués par les diagnostics codés du scénario, décrits sobrement. N'inventez pas d'acte technique précis (changement de dispositif avec référence et calibre, geste interventionnel, ajustement chiffré de traitement) qui, dans un vrai dossier, ferait l'objet d'un codage d'acte absent du scénario.
     + Conclusion
 
 
@@ -112,13 +120,14 @@ Si une instruction rédactionnelle semble conduire à ajouter un diagnostic, une
 - Ne pas inclure : Clauses de non-responsabilité.
 
  
-Veillez à intégrer ces informations de façon naturelle dans le compte rendu, sans recourir à des formats semi-structurés, par exemple préférez une rédaction naturelle plutôt que « État général : ECOG 1 »).
+Veillez à intégrer ces informations de façon naturelle dans le compte rendu. INTERDIT : les listes à puces et les formats semi-structurés du type « Étiquette : valeur » (ex. « TA : 120/80 mmHg », « Poids : 62 kg ») dans les sections rédigées. Écrivez des phrases : « La tension est à 120/80 mmHg, le poids stable à 62 kg. » Les scores standardisés (ECOG, NYHA, Glasgow, NIHSS...) ne s'emploient que si le contexte clinique du scénario les justifie — pas comme formule par défaut pour décrire l'état général. L'examen clinique, les antécédents et le mode de vie sont des paragraphes rédigés, comme dans un vrai courrier médical — seuls l'encadré d'identification patient en tête de document et la liste des antécédents (cf. mise en forme) font exception.
 
 - À la fin du texte généré, fournissez :
 
 + un dictionnaire listant les formulations utilisées pour chaque diagnostic CIM-10 codable pour le patient : {"Définition officielle du code CIM-10 (code CIM-10)": ["formulation utilisée 1", "formulation utilisée 2", ...],...}
 Par exemple : {"Hypertension artérielle (primitive) (I10)": ["poussée hypertension arterielle", "poussée HTA"],...} 
 Attention : tous les diagnostics du patient doivent être décrit ici, attention en particulier s'il y a des divergences avec le scénario initial, elle doivent être reportées ici.
+Contrainte de fidélité : chaque formulation listée doit être un extrait EXACT du texte du CR (copié-collé, vérifiable par recherche de la chaîne dans le texte). N'y recopiez jamais des synonymes de la fiche qui n'apparaissent pas dans votre texte. Pour les champs d'examens biologiques (NFS, créatinine, bilan hépatique) : si l'examen n'a pas été réalisé pendant l'hospitalisation, la liste reste vide [] — ne mentionnez pas de bilan antérieur pour la remplir.
 
 + un dictionnaire listant les segments textuels utilisés pour décrire les informations suivantes, reproduits strictement à l’identique (copiés-collés depuis le texte généré, sans aucune modification ni interprétation, y compris ponctuation et orthographe) :
     * Nom du service
