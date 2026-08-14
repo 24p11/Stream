@@ -20,3 +20,8 @@ dependencies = [
 [project.scripts]
 stream = "cli:main"
 
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+]
+

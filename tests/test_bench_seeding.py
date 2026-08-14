@@ -146,6 +146,14 @@ class TestScenarioDirs:
 
         assert scenario_dirs(test_dir) == ["0000", "0001", "0001_bis"]
 
+    def test_pycache_exclu(self, tmp_path: Path):
+        """Un `__pycache__/` créé dans le test_dir (ex. import d'un
+        `prompt_local.py`) n'apparaît pas dans la découverte."""
+        test_dir = seeded_test_dir(tmp_path)
+        (test_dir / "__pycache__").mkdir()
+
+        assert scenario_dirs(test_dir) == ["0000", "0001"]
+
     def test_dossier_introuvable(self, tmp_path: Path):
         with pytest.raises(BenchError, match="introuvable"):
             scenario_dirs(tmp_path / "absent")

@@ -213,3 +213,8 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Banc d'essai bench (docs/spec_testrun_run_stage.md §9) : les tests sont des
+# artefacts locaux — seuls le notebook et work_prompts/template_* sont versionnés
+work_prompts/tests/
+work_modif_prompts/tests/

@@ -19,13 +19,13 @@ import polars as pl
 
 from bench.errors import BenchError
 
-_EXCLUDED_DIRS = {"system", "batches"}
+_EXCLUDED_DIRS = {"system", "batches", "__pycache__"}
 
 
 def scenario_dirs(test_dir: Path) -> list[str]:
-    """Découverte disque (§2) : sous-dossiers directs hors `system/`, `batches/`
-    et dossiers cachés, triés alphabétiquement. Les fichiers à la racine sont
-    ignorés."""
+    """Découverte disque (§2) : sous-dossiers directs hors `system/`, `batches/`,
+    `__pycache__/` et dossiers cachés, triés alphabétiquement. Les fichiers à la
+    racine sont ignorés."""
     if not test_dir.is_dir():
         raise BenchError(f"Dossier de test introuvable : {test_dir}")
     return sorted(
