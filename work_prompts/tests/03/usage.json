@@ -11,6 +11,18 @@
       "input_cost_usd": 0.02243625,
       "output_cost_usd": 0.02135475,
       "total_cost_usd": 0.043791
+    },
+    {
+      "out": "crh_generation.txt",
+      "at": "2026-08-18T08:44:08",
+      "partial": true,
+      "n_requests": 1,
+      "model": "mistral-large-latest",
+      "input_tokens": 9479,
+      "output_tokens": 1428,
+      "input_cost_usd": 0.00236975,
+      "output_cost_usd": 0.001071,
+      "total_cost_usd": 0.00344075
     }
   ]
 }

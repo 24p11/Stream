@@ -1,0 +1,453 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 50 ans
+- Sexe du patient : Féminin
+- Date d'entrée : 31/01/2024
+- Date de sortie : 31/01/2024
+- Date de naissance : 11/08/1973
+- Nom du patient : Tuffreau
+- Prénom du patient : Majida
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge en hospitalisation ambulatoire pour Examen de contrôle après traitement chirurgical d'autres affections.
+- Codage CIM10 :
+   * Diagnostic principal : Tumeur bénigne de l'hypophyse (D352)
+   * Diagnostics associés :
+      - Obésité due à un excès calorique de l'adulte avec indice de masse corporelle [IMC] égal ou supérieur à 30 kg/m² et inférieur à 40 kg/m², ou obésité due à un excès calorique de l'enfant (E6600)
+      - Troubles mentaux et du comportement liés à l'utilisation de tabac (F1720)
+      - Troubles mentaux et du comportement liés à l'utilisation d'alcool (F1020)
+      - Hypopituitarisme (E230)
+- Nom du médecin / signataire : Jacques Rozel
+- Service : ENDOCRINOLOGIE
+- Hôpital : Hôpital de Hautepierre - Hôpitaux Universitaires de Strasbourg
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="D35.2">
+
+# D35.2 — Tumeur bénigne de l'hypophyse
+
+## Position dans la classification
+- Chapitre II : Tumeurs
+- Bloc D10-D36 : Tumeurs bénignes
+
+## Périmètre clinique du code
+
+Inclusions héritées du bloc D10-D36 :
+- les codes morphologiques avec code de comportement /0
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité de la catégorie D35) :
+
+ovaire (D27)
+pancréas endocrine (D13.7)
+testicule (D29.2)
+thymus (D15.0)
+
+## Formulations cliniques alternatives
+- adénome anté-hypophysaire
+- adénome anté-hypophysaire prolactine
+- Adénome hypophysaire à ACTH
+- Adénome hypophysaire à FSH
+- Adénome hypophysaire à GH
+- Adénome hypophysaire à LH
+- Adénome hypophysaire à prolactine
+- Adénome hypophysaire gonadotrope
+- Adénome hypophysaire non sécrétant
+- adénome hypophysaire prolactine
+- Adénome hypophysaire, sans précision
+- adénome hypophyse
+- adénome prolactine
+- Adénome (sessile) (de) (m8140/0) - voir aussi tumeur bénigne, à cellules (de), mucoïdes (m8300/0), siège, non précisé
+- Adénome (sessile) (de) (m8140/0) - voir aussi tumeur bénigne, acidophile et basophile, mixte (m8281/0), siège, non précisé
+- Adénome (sessile) (de) (m8140/0) - voir aussi tumeur bénigne, acidophile (m8280/0), siège, non précisé
+- Adénome (sessile) (de) (m8140/0) - voir aussi tumeur bénigne, basophile (m8300/0), siège, non précisé
+- Adénome (sessile) (de) (m8140/0) - voir aussi tumeur bénigne, chromophobe (m8270/0), siège, non précisé
+- Adénome (sessile) (de) (m8140/0) - voir aussi tumeur bénigne, éosinophile (m8280/0), siège, non précisé
+- macro-adénome selle turcique
+- macroadénome Cushing
+- macroadénome prolactine
+- méningiome selle turcique
+- prolactinome
+- Prolactinome (m8271/0), siège, non précisé
+
+</fiche_code>
+
+<fiche_code code="E23.0">
+
+# E23.0 — Hypopituitarisme
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E20-E35 : Maladies des autres glandes endocrines
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie E23 :
+- les états mentionnés ci-dessous, qu'il s'agisse d'une anomalie hypophysaire ou hypothalamique
+
+Au niveau du code :
+- cachexie hypophysaire
+- hypogonadisme hypogonadotrophique
+- insuffisance (de) hormone de croissance idiopathique
+- insuffisance (de) isolée en gonadotrophine
+- insuffisance (de) isolée en hormone de croissance
+- insuffisance (de) isolée en hormone hypophysaire
+- insuffisance staturale pituitaire SAI
+- maladie de Simmonds
+- nécrose pituitaire (post-partum)
+- panhypopituitarisme
+- syndrome de eunuchoïdisme fertile
+- syndrome de Kallmann
+- syndrome de Lorain-Lévi
+- syndrome de Sheehan
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité du bloc E20-E35) :
+
+galactorrhée (N64.3)
+gynécomastie (N62)
+
+Affections relevant d'autres codes (hérité de la catégorie E23) :
+
+hypopituitarisme après un acte à visée diagnostique et thérapeutique (E89.3)
+
+## Formulations cliniques alternatives
+- déficit hormone croissance
+- déficit somatotrope
+- Hypogonadisme hypogonadotrophique acquis
+- Hypogonadisme hypogonadotrophique congénital
+- Hypogonadisme (primitif), hypogonadotrophique
+- Hypopituitarisme (juvénile), post-partum
+- Infantilisme (de), brissaud (type)
+- Infantilisme (de), pituitaire
+- insuffisance anté-hypophysaire
+- insuffisance corticotrope
+- Insuffisance hypophysaire corticotrope
+- Insuffisance hypophysaire globale
+- Insuffisance hypophysaire gonadotrope, autre et sans précision
+- Insuffisance hypophysaire somatotrope
+- Insuffisance hypophysaire thyréotrope
+- insuffisance panhypophysaire
+- insuffisance pituitaire
+- insuffisance thyréotrope
+- Lorain-lévi, maladie ou syndrome de
+- Nanisme idiopathique
+- Nanisme, pituitaire
+- Nanisme, type, lorain-lévi
+- Nécrose hypophysaire du post-partum
+- Nécrose (ischémique) (de) (voir aussi gangrène), hypophysaire
+- section tige pituitaire
+- Syndrome de Kallman-Demorsier
+- Syndrome (de) - voir aussi maladie, eunuchoïdisme fertile
+- Syndrome (de) - voir aussi maladie, hypopituitarisme
+- Syndrome des eunuques fertiles
+- syndrome selle turcique vide
+- syndrome Sheehan
+
+</fiche_code>
+
+<fiche_category code="E66">
+
+# E66 — Obésité et surpoids
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E65-E68 : Obésité et autres excès d'apport
+
+## Codes enfants directs
+- E66.0 — Obésité due à un excès calorique
+- E66.1 — Obésité médicamenteuse
+- E66.2 — Obésité (extrême) avec hypoventilation alvéolaire
+- E66.8 — Autres obésités
+- E66.9 — Obésité, sans précision
+
+## Périmètre clinique
+
+Inclusions héritées de la catégorie E66.0 :
+- Obésité commune
+Obésité primaire
+- Obésité d'origine génétique
+Obésité liée à des dysfonctionnements hormonaux
+- Syndrome de Pickwick
+Syndrome obésité hypoventilation (SOH)
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité de la catégorie E66) :
+
+dystrophie adiposogénitale (E23.6)
+lipomatose :
+ - SAI (E88.2) 
+ - douloureuse [Dercum] (E88.2) 
+syndrome de Prader–Willi (Q87.1)
+
+</fiche_category>
+
+<fiche_category code="F17">
+
+# F17 — Troubles mentaux et du comportement liés à l'utilisation de tabac
+
+## Position dans la classification
+- Chapitre V : Troubles mentaux et du comportement
+- Bloc F10-F19 : Troubles mentaux et du comportement liés à l'utilisation de substances psychoactives
+
+## Codes enfants directs
+- F17.0 — Troubles mentaux et du comportement liés à l'utilisation de tabac - " Intoxication aigüe "
+- F17.1 — Troubles mentaux et du comportement liés à l'utilisation de tabac - " Utilisation nocive pour la santé "
+- F17.2 — Troubles mentaux et du comportement liés à l'utilisation de tabac - " Syndrome de dépendance "
+- F17.3 — Troubles mentaux et du comportement liés à l'utilisation de tabac - " Syndrome de sevrage "
+- F17.4 — Troubles mentaux et du comportement liés à l'utilisation de tabac - " Syndrome de sevrage avec délirium "
+- F17.5 — Troubles mentaux et du comportement liés à l'utilisation de tabac - " Trouble psychotique "
+- F17.6 — Troubles mentaux et du comportement liés à l'utilisation de tabac - " Syndrome amnésique "
+- F17.7 — Troubles mentaux et du comportement liés à l'utilisation de tabac - " Trouble résiduel ou psychotique de survenue tardive "
+- F17.8 — Troubles mentaux et du comportement liés à l'utilisation de tabac - " Autres troubles mentaux et du comportement "
+- F17.9 — Troubles mentaux et du comportement liés à l'utilisation de tabac - " Trouble mental ou du comportement, sans précision "
+
+## Périmètre clinique
+
+Inclusions héritées du chapitre V :
+- troubles du développement psychologique
+
+Au niveau des codes :
+- Abus d'une substance psychoactive
+ (F17.1)
+- Alcoolisme chronique
+Dipsomanie
+Toxicomanie
+ (F17.200)
+- Délirium trémens [Delirium tremens]
+ (F17.40)
+- Démence :
+ - alcoolique SAI
+ - et autres altérations des fonctions cognitives durables, moins sévères
+Flashbacks
+Syndrome cérébral alcoolique chronique
+- Trouble (des) :
+ - affectif résiduel
+ - perceptions persistant, induit par des substances hallucinogènes
+ - psychotique de survenue tardive, induit par des substances psychoactives
+ - résiduel de la personnalité et du comportement
+ (F17.70)
+- États de transe et de possession au cours d'une intoxication par une substance psychoactive
+Intoxication pathologique
+Ivresse :
+ - SAI
+ - (alcoolique) aigüe
+« Mauvais voyages » (drogues)
+ (F17.00)
+- Hallucinose  alcoolique
+Jalousie  alcoolique
+Paranoïa  alcoolique
+Psychose SAI  alcoolique
+ (F17.50)
+- Psychose ou syndrome de Korsakov, induit par l'alcool ou d'autres substances psychoactives ou sans précision
+Trouble amnésique induit par l'alcool ou les drogues
+ (F17.6)
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre V) :
+
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité du bloc F10-F19) :
+
+abus de substances n'entraînant pas de dépendance [F55.–]
+
+Affections relevant d'autres codes (hérité de la catégorie F17.0) :
+
+intoxication signifiant empoisonnement [T36–T50]
+trouble psychotique résiduel ou de survenue tardive, induit par l'alcool ou d'autres substances psychoactives [F10-F19 avec le quatrième caractère .7]
+état psychotique induit par l'alcool ou d'autres subtances psychoactives [F10-F19 avec le quatrième caractère .5]
+syndrome de Korsakov induit par l'alcool ou d'autres substances psychoactives [F10-F19 avec le quatrième caractère .6]
+
+Affections relevant d'autres codes :
+
+- syndrome de Korsakov non alcoolique (F04)
+
+## Formulations cliniques alternatives
+- Abus (de), sans dépendance, tabac (F17.1)
+- abus tabac (F17.1)
+- état tabagique (F17.9)
+- fumeur (F17.9)
+- grand fumeur (F17.9)
+- gros fumeur (F17.9)
+- intoxication chronique tabagique (F17.9)
+- intoxication tabac (F17.9)
+- intoxication tabagique (F17.9)
+- intoxication tabagique ancienne (F17.9)
+- intoxication tabagique chronique (F17.9)
+- intoxication tabagique sévère (F17.9)
+- post-tabagique (F17.9)
+- séquelles intoxication tabagique (F17.9)
+- séquelles tabagisme (F17.9)
+- syndrome Seita (F17.9)
+- tabac (F17.9)
+- tabac chronique (F17.9)
+- tabagique (F17.9)
+- tabagisme (F17.9)
+- tabagisme actif (F17.9)
+- tabagisme actif important (F17.9)
+- tabagisme ancien (F17.9)
+- tabagisme chronique (F17.9)
+- tabagisme chronique sévère (F17.9)
+- tabagisme excessif (F17.9)
+- tabagisme important (F17.9)
+- tabagisme long cours (F17.9)
+- tabagisme majeur (F17.9)
+- tabagisme massif (F17.9)
+- tabagisme modéré (F17.9)
+- tabagisme non sevré (F17.9)
+- tabagisme permanent (F17.9)
+- tabagisme sévère (F17.9)
+- terrain tabagique (F17.9)
+- terrain tabagique chronique (F17.9)
+
+</fiche_category>
+
+<fiche_category code="F10">
+
+# F10 — Troubles mentaux et du comportement liés à l'utilisation d'alcool
+
+## Position dans la classification
+- Chapitre V : Troubles mentaux et du comportement
+- Bloc F10-F19 : Troubles mentaux et du comportement liés à l'utilisation de substances psychoactives
+
+## Codes enfants directs
+- F10.0 — Troubles mentaux et du comportement liés à l'utilisation d'alcool - " Intoxication aigüe "
+- F10.1 — Troubles mentaux et du comportement liés à l'utilisation d'alcool - " Utilisation nocive pour la santé "
+- F10.2 — Troubles mentaux et du comportement liés à l'utilisation d'alcool - " Syndrome de dépendance "
+- F10.3 — Troubles mentaux et du comportement liés à l'utilisation d'alcool - " Syndrome de sevrage "
+- F10.4 — Troubles mentaux et du comportement liés à l'utilisation d'alcool - " Syndrome de sevrage avec délirium "
+- F10.5 — Troubles mentaux et du comportement liés à l'utilisation d'alcool - " Trouble psychotique "
+- F10.6 — Troubles mentaux et du comportement liés à l'utilisation d'alcool - " Syndrome amnésique "
+- F10.7 — Troubles mentaux et du comportement liés à l'utilisation d'alcool - " Trouble résiduel ou psychotique de survenue tardive "
+- F10.8 — Troubles mentaux et du comportement liés à l'utilisation d'alcool - " Autres troubles mentaux et du comportement "
+- F10.9 — Troubles mentaux et du comportement liés à l'utilisation d'alcool - " Trouble mental ou du comportement, sans précision "
+
+## Périmètre clinique
+
+Inclusions héritées du chapitre V :
+- troubles du développement psychologique
+
+Au niveau des codes :
+- abus d'une substance psycho-active (F10.1)
+- Abus d'une substance psychoactive
+ (F10.1)
+- Alcoolisme chronique
+Dipsomanie
+Toxicomanie
+ (F10.200)
+- Délirium trémens [Delirium tremens]
+ (F10.40)
+- Démence :
+ - alcoolique SAI
+ - et autres altérations des fonctions cognitives durables, moins sévères
+Flashbacks
+Syndrome cérébral alcoolique chronique
+- Trouble (des) :
+ - affectif résiduel
+ - perceptions persistant, induit par des substances hallucinogènes
+ - psychotique de survenue tardive, induit par des substances psychoactives
+ - résiduel de la personnalité et du comportement
+ (F10.70)
+- États de transe et de possession au cours d'une intoxication par une substance psychoactive
+Intoxication pathologique
+Ivresse :
+ - SAI
+ - (alcoolique) aigüe
+« Mauvais voyages » (drogues)
+ (F10.00)
+- Hallucinose  alcoolique
+Jalousie  alcoolique
+Paranoïa  alcoolique
+Psychose SAI  alcoolique
+ (F10.50)
+- psychose ou syndrome de Korsakov, induit par l'alcool ou d'autres substances psycho-actives ou sans précision (F10.6)
+- Psychose ou syndrome de Korsakov, induit par l'alcool ou d'autres substances psychoactives ou sans précision
+Trouble amnésique induit par l'alcool ou les drogues
+ (F10.6)
+- trouble amnésique induit par l'alcool ou les drogues (F10.6)
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre V) :
+
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité du bloc F10-F19) :
+
+abus de substances n'entraînant pas de dépendance [F55.–]
+
+Affections relevant d'autres codes (hérité de la catégorie F10.0) :
+
+intoxication signifiant empoisonnement [T36–T50]
+trouble psychotique résiduel ou de survenue tardive, induit par l'alcool ou d'autres substances psychoactives [F10-F19 avec le quatrième caractère .7]
+état psychotique induit par l'alcool ou d'autres subtances psychoactives [F10-F19 avec le quatrième caractère .5]
+syndrome de Korsakov induit par l'alcool ou d'autres substances psychoactives [F10-F19 avec le quatrième caractère .6]
+
+Affections relevant d'autres codes :
+
+- syndrome de Korsakov non alcoolique (F04)
+
+## Formulations cliniques alternatives
+- Abus (de), alcool (sans dépendance) (F10.1)
+- Abus (de), sans dépendance, alcool (F10.1)
+- alcoolisme Bêta (F10.1)
+- Alcoolisme (chronique) (avec), psychose (de), korsakoff (F10.6)
+- alcoolisme occasionnel (F10.8)
+- Délire (de), alcoolique (aigu), chronique (F10.6)
+- démence alcoolique Korsakoff (F10.6)
+- démence carentielle type Korsakoff (F10.6)
+- démence éthylique type Korsakoff (F10.6)
+- démence Korsakoff (F10.6)
+- démence type Korsakoff (F10.6)
+- encéphalopathie alcoolique type Korsakoff (F10.6)
+- encéphalopathie carentielle type korsakoff (F10.6)
+- encéphalopathie Korsakoff (F10.6)
+- encéphalopathie Korsakov (F10.6)
+- encéphalopathie Korsakovienne (F10.6)
+- éthylisme suicidaire (F10.1)
+- Korsakoff (F10.6)
+- Korsakoff alcoolique (F10.6)
+- Korsakoff, korsakov, korsakow, maladie, psychose ou syndrome de (alcoolique) (F10.6)
+- Korsakoff post-éthylique (F10.6)
+- Korsakov (F10.6)
+- maladie Korsakoff (F10.6)
+- maladie Korsakov (F10.6)
+- psychose alcoolique Korsakoff (F10.6)
+- psychose alcoolique Korsakov (F10.6)
+- Psychose (de), alcoolique (avec hallucinations, idées délirantes) (de), amnésique avec fabulation (F10.6)
+- Psychose (de), alcoolique (avec hallucinations, idées délirantes) (de), korsakoff (korsakov) (korsakow) (F10.6)
+- Psychose (de), korsakoff (korsakov) (korsakow) (alcoolique) (F10.6)
+- psychose Korsakoff (F10.6)
+- psychose Korsakov (F10.6)
+- syndrome alcoolique Korsakoff (F10.6)
+- Syndrome (de) - voir aussi maladie, amnésique, induit par, alcool (F10.6)
+- Syndrome (de) - voir aussi maladie, amnésique, organique (non dû à alcool ou drogue), alcoolique (F10.6)
+- syndrome démentiel Korsakoff (F10.6)
+- syndrome Korsakoff (F10.6)
+- syndrome Korsakov (F10.6)
+- Trouble(s) (de) - voir aussi maladie, mental, mentaux, liés à l'utilisation (de), alcool (F10.9)
+- Trouble(s) (de) - voir aussi maladie, mental, mentaux, liés à l'utilisation (de), alcool, précisés nca (F10.8)
+- troubles mentaux éthyliques (F10.9)
+- troubles type Korsakoff (F10.6)
+
+</fiche_category>
