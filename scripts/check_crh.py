@@ -43,7 +43,9 @@ def normalize(s: str) -> str:
 
 
 def _parse(raw: str, repairs: list[str]) -> dict | None:
-    """Parse tolérant : strict=False + réparation des fermetures finales."""
+    """Parse tolérant : strict=False + réparation des fermetures finales
+    (manquantes OU excédentaires — le modèle omet parfois une accolade,
+    ou glisse un `]`/`}` orphelin juste avant la fin)."""
     try:
         return json.loads(raw, strict=False)
     except json.JSONDecodeError as exc:
@@ -60,6 +62,28 @@ def _parse(raw: str, repairs: list[str]) -> dict | None:
                     return data
                 except json.JSONDecodeError:
                     pass
+        # Fermeture excédentaire en toute fin (ex. `...]}}]}` au lieu de
+        # `...]}}}`) : on retire un à un les `]`/`}` pointés par l'erreur,
+        # UNIQUEMENT dans les derniers caractères, et on le signale.
+        candidate = raw
+        removed = 0
+        last_exc = exc
+        while removed < 3:
+            pos = last_exc.pos
+            if pos < len(candidate) - 8 or pos >= len(candidate) \
+                    or candidate[pos] not in "]}":
+                break
+            candidate = candidate[:pos] + candidate[pos + 1:]
+            removed += 1
+            try:
+                data = json.loads(candidate, strict=False)
+                repairs.append(
+                    f"JSON réparé : {removed} fermeture(s) excédentaire(s) "
+                    "(']' ou '}') retirée(s) en fin de fichier"
+                )
+                return data
+            except json.JSONDecodeError as next_exc:
+                last_exc = next_exc
         raise
 
 
