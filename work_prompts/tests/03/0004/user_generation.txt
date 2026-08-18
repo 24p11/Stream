@@ -1,0 +1,111 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 13 ans
+- Sexe du patient : Masculin
+- Date d'entrée : 09/10/2026
+- Date de sortie : 09/10/2026
+- Date de naissance : 27/03/2013
+- Nom du patient : Batigne
+- Prénom du patient : Logan
+- Localisation anatomique de la tumeur primaire : Leucémie lymphoblastique aigüe [LLA] (C910)
+- Type anatomopathologique de la tumeur primaire : Vous choisirez vous même un type histologique cohérent avec la localisation anatomique
+- Score TNM : Si la notion de score de TNM est pertinente avec le type histologique et la localisation anatomique, vous choisirez un score TNM
+- Biomarqueurs tumoraux : Vous choisirez des biomarqueurs tumoraux cohérents avec la localisation anatomique et l'histologie de la tumeur
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Prise en charge pour transfusions, en séances.
+- Codage CIM10 :
+   * Diagnostic principal : Leucémie lymphoblastique aigüe [LLA] (C910)
+   * Diagnostics associés :
+      - Anémie au cours de maladies tumorales (C00-D48) (D630)
+- Nom du médecin / signataire : Claudine Cros
+- Service : HEMATOLOGIE CLINIQUE
+- Hôpital : Hôpital Rangueil - Centre hospitalier universitaire de Toulouse 
+Ce cas clinique concerne un patient présentant un cancer
+Veillez à bien préciser le type histologique et la valeur des biomarqueurs si recherchés
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="C91.0">
+
+# C91.0 — Leucémie lymphoblastique aigüe [LLA]
+
+## Position dans la classification
+- Chapitre II : Tumeurs
+- Bloc C00-C97 : Tumeurs malignes
+- Bloc C81-C96 : Tumeurs malignes primitives ou présumées primitives des tissus lymphoïde, hématopoïétique et apparentés
+
+## Périmètre clinique du code
+
+Inclusions héritées du bloc C81-C96 :
+- les codes morphologiques M959-M994 avec code de comportement /3
+
+Inclusions héritées de la catégorie C91 :
+- les codes morphologiques M982, M9940-M9941 avec code de comportement /3
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du bloc C81-C96) :
+
+tumeur des ganglions lymphatiques, secondaire et non précisée (C77.-)
+
+## Formulations cliniques alternatives
+- anémie réfractaire transformation lymphoblastique
+- LAL biphénotypique
+- LAL réfractaire
+- LAL type 3
+- leucémie aigüe lymphoblastique type 4
+- leucémie aigüe lymphocytaire
+- leucémie aigüe lymphoïde
+- Leucémie (congénitale) (à) (m9800/3), cellules (de), burkitt (m9826/3)
+- Leucémie (congénitale) (à) (m9800/3), lymphatique (m9820/3), aiguë (m9821/3)
+- Leucémie (congénitale) (à) (m9800/3), lymphoblastique (aiguë) (m9821/3)
+- Leucémie (congénitale) (à) (m9800/3), lymphoblastique (aiguë) (m9821/3), type burkitt
+- Leucémie (congénitale) (à) (m9800/3), lymphocytaire (m9820/3), aiguë (m9821/3)
+- Leucémie (congénitale) (à) (m9800/3), lymphoïde (m9820/3), aiguë (m9821/3)
+- Leucémie (congénitale) (à) (m9800/3), lymphoïde (m9820/3), blastique (m9821/3)
+- leucémie lymphoblastique chromosome Philadelphie
+- leucémie lymphoïde aigüe
+- poussée lymphocytaire aigüe
+
+</fiche_code>
+
+<fiche_category code="D63">
+
+# D63 — Anémie au cours de maladies chroniques classées ailleurs
+
+## Position dans la classification
+- Chapitre III : Maladies du sang et des organes hématopoïétiques et certains troubles du système immunitaire
+- Bloc D60-D64 : Aplasies médullaires et autres anémies
+
+## Codes enfants directs
+- D63.0 — Anémie au cours de maladies tumorales
+- D63.8 — Anémie au cours d'autres maladies chroniques classées ailleurs
+
+## Périmètre clinique
+
+Au niveau des codes :
+- Anémie au cours d’une maladie rénale chronique de stade 3  ou plus  (N18.3-N18.9)
+ (D63.8)
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre III) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies auto-immunes (systémiques) SAI (M35.9)
+maladies dues au virus de l'immunodéficience humaine [VIH] (B20-B24)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+## Formulations cliniques alternatives
+- anémie carence EPO (D63.8)
+- anémie déficit érythropoïétine (D63.0)
+
+</fiche_category>

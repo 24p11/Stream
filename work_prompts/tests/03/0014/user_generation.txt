@@ -1,0 +1,84 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 33 ans
+- Sexe du patient : Féminin
+- Date d'entrée : 09/10/2025
+- Date de sortie : 09/10/2025
+- Date de naissance : 11/10/1992
+- Nom du patient : De araujo gomes
+- Prénom du patient : Monique
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation ambulatoire.
+- Codage CIM10 :
+   * Diagnostic principal : Rétention partielle du placenta et des membranes, sans hémorragie (O731)
+   * Diagnostics associés :
+      - Contrôle de routine au cours du post-partum (Z392)
+- Nom du médecin / signataire : Yolande Zimmer
+- Service : OBSTETRIQUE
+- Hôpital : Hôpital Saint-André - CHU de Bordeaux
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="O73.1">
+
+# O73.1 — Rétention partielle du placenta et des membranes, sans hémorragie
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O60-O75 : Complications du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- rétention de produits de la conception après l'accouchement, sans hémorragie
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+## Formulations cliniques alternatives
+- Accouchement(s), compliqué, par, rétention de, cotylédons placentaires (avec hémorragie), sans hémorragie
+- Accouchement(s), compliqué, par, rétention de, membranes (avec hémorragie), sans hémorragie
+- Rétention (de), membranes (avec hémorragie), sans hémorragie
+- Rétention (de), placenta (avec hémorragie), cotylédons, sans hémorragie
+- Rétention (de), placenta (avec hémorragie), partielle, sans hémorragie
+- Rétention (de), produits de conception, après l'accouchement (avec hémorragie), sans hémorragie
+- Suites de couches, compliquées par, placenta, incarcéré (avec hémorragie), sans hémorragie
+- Suites de couches, compliquées par, rétention de, cotylédons placentaires (avec hémorragie), sans hémorragie
+- Suites de couches, compliquées par, rétention de, membranes (avec hémorragie), sans hémorragie
+- Suites de couches, compliquées par, rétention de, produits de la conception (avec hémorragie), sans hémorragie
+
+</fiche_code>
+
+<fiche_code code="Z39.2">
+
+# Z39.2 — Contrôle de routine au cours du postpartum
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+
+## Formulations cliniques alternatives
+- Etat (de), post-partum
+- Etat (de), post-partum, surveillance
+- Examen (de) (pour) (voir aussi observation), post-partum, de routine
+- Soins, post-partum (de routine)
+- Suites de couches, surveillance
+- Suites de couches, surveillance, routine
+- Surveillance (médicale) (de) (pour), post-partum de routine
+
+</fiche_code>

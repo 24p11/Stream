@@ -1,0 +1,346 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 0 ans
+- Sexe du patient : Masculin
+- Date d'entrée : 01/05/2025
+- Date de sortie : 08/05/2025
+- Date de naissance : 07/09/2024
+- Nom du patient : Weinstein crenovich
+- Prénom du patient : Mathéis
+- Mode d'entrée' : URGENCES
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
+- Codage CIM10 :
+   * Diagnostic principal : Bronchiolite aiguë due au virus respiratoire syncytial [VRS] (J210)
+   * Diagnostics associés :
+      - Autres détresses respiratoires du nouveau-né (P228)
+      - Isolement (prophylactique) (Z290)
+      - Hypovolémie (E86)
+      - Otite moyenne aiguë suppurée (H660)
+      - Insuffisance respiratoire aigüe de type II [hypercapnique] (J9601)
+      - Insuffisance respiratoire aigüe, type non précisé (J9609)
+      - Alimentation lente du nouveau-né (P922)
+- Nom du médecin / signataire : Rene Erny
+- Service : PEDIATRIE GENERALE
+- Hôpital : Hôpital Roger Salengro - Centre Hospitalier Universitaire de Lille
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="J21.0">
+
+# J21.0 — Bronchiolite aigüe due au virus respiratoire syncytial [VRS]
+
+## Position dans la classification
+- Chapitre X : Maladies de l'appareil respiratoire
+- Bloc J20-J22 : Autres affections aigües des voies respiratoires inférieures
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie J21 :
+- avec bronchospasme
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre X) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité du bloc J20-J22) :
+
+maladie pulmonaire obstructive chronique avec :
+ - épisodes aigus SAI (J44.1) 
+ - infection aigüe des voies respiratoires inférieures (J44.0)
+
+## Formulations cliniques alternatives
+- bronchio-alvéolite VRS
+- Bronchiolite (aiguë) (avec bronchospasme) (infectieuse) (subaiguë), virus respiratoire syncytial (vrs)
+- bronchiolite aigüe VRS
+- bronchiolite virus respiratoire syncytial
+- bronchiolite VRS
+- infection respiratoire VRS
+
+</fiche_code>
+
+<fiche_code code="P22.8">
+
+# P22.8 — Autres détresses respiratoires du nouveau-né
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P20-P29 : Affections respiratoires et cardiovasculaires spécifiques de la période périnatale
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie P22) :
+
+insuffisance respiratoire du nouveau-né (P28.5)
+
+Formes spécifiées de la catégorie P22 :
+- Syndrome de détresse respiratoire [SDR] du nouveau-né [→ P22.0]
+- Tachypnée transitoire du nouveau-né [→ P22.1]
+
+## Formulations cliniques alternatives
+- absence insufflation pulmonaire
+- chylothorax anténatal
+- Détresse, respiratoire, du nouveau-né, type précisé nca
+- détresse respiratoire multiépisodique
+
+</fiche_code>
+
+<fiche_code code="Z29.0">
+
+# Z29.0 — Isolement
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z20-Z29 : Sujets pouvant courir un risque lié à des maladies transmissibles
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- admission pour protéger le sujet de son milieu ou pour l'isoler après un contact avec une personne atteinte d'une maladie infectieuse
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité de la catégorie Z29) :
+
+chirurgie prophylactique (Z40.-)
+désensibilisation aux allergènes (Z51.6)
+
+## Formulations cliniques alternatives
+- Isolement
+- isolement cutané
+- Isolement, prophylactique
+- isolement respiratoire
+- Mesure(s), prophylactique(s), isolement
+
+</fiche_code>
+
+<fiche_code code="E86">
+
+# E86 — Hypovolémie
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E70-E90 : Anomalies du métabolisme
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- déplétion du volume du plasma ou du liquide extracellulaire
+- déshydratation
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité du bloc E70-E90) :
+
+anémies hémolytiques dues à des anomalies enzymatiques (D55.-)
+déficit en 5-alpha-réductase (E29.1)
+hyperplasie surrénale congénitale (E25.0)
+syndrome de :
+ - Ehlers–Danlos (Q79.6) 
+ - Marfan (Q87.4) 
+ - résistance aux androgènes (E34.5)
+
+Affections relevant d'autres codes :
+
+choc hypovolémique :
+ - SAI (R57.1) 
+ - postopératoire (T81.1) 
+ - traumatique (T79.4) 
+déshydratation du nouveau-né (P74.1)
+
+## Formulations cliniques alternatives
+- Anhydrémie
+- déplétion
+- Déplétion (de), liquide extracellulaire
+- Déplétion (de), volume du plasma
+- déshydratation centrale
+- déshydratation extracellulaire
+- déshydratation totale
+- déshydrataton globale
+- Diminution de, liquide extracellulaire
+- Diminution de, volume du plasma
+- DSH intra-cellulaire
+- état déshydratation aigüe
+- état hypovolémique
+- hydratation insuffisante
+- Hypovolémie (due à)
+- Perte(s) (de), liquide (interstitiel) (rapide)
+- pertes hydriques
+- Sécheresse de, bouche (due à), déshydratation
+- Sécheresse de la bouche due à une deshydratation
+- troubles hypovolémiques
+
+</fiche_code>
+
+<fiche_code code="H66.0">
+
+# H66.0 — Otite moyenne aigüe suppurée
+
+## Position dans la classification
+- Chapitre VIII : Maladies de l'oreille et de l'apophyse mastoïde
+- Bloc H65-H75 : Maladies de l'oreille moyenne et de l'apophyse mastoïde
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie H66 :
+- avec myringite
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre VIII) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+## Formulations cliniques alternatives
+- Gradenigo(-lanois), syndrome de
+- otite aigüe suppurée
+- otite Klebsiella
+- otite moyenne aigüe pneumocoque
+- otite moyenne aigüe streptocoques A
+- Otite, moyenne (avec myringite), aiguë, nécrotique
+- Otite, moyenne (avec myringite), aiguë, purulente
+- Otite, moyenne (avec myringite), aiguë, suppurée
+- Otite, moyenne (avec myringite), suppurée, aiguë
+- otite moyenne Pseudomonas Aeruginosa
+- otite pneumocoques
+- otite Pseudomonas Aeruginosa
+- Pointe du rocher, syndrome de la
+- Syndrome (de) - voir aussi maladie, pointe du rocher
+
+</fiche_code>
+
+<fiche_code code="J96.01">
+
+# J96.01 — Insuffisance respiratoire aigüe - " Type II [hypercapnique] "
+
+## Position dans la classification
+- Chapitre X : Maladies de l'appareil respiratoire
+- Bloc J95-J99 : Autres maladies de l'appareil respiratoire
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre X) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie J96) :
+
+détresse respiratoire du nouveau-né [P22.–]
+insuffisance cardiopulmonaire (R09.2)
+syndrome de détresse respiratoire de l’adulte (J80)
+troubles respiratoires après un acte à visée diagnostique et thérapeutique (J95.-)
+
+## Formulations cliniques alternatives
+- détresse respiratoire aigüe hypercapnique
+- détresse respiratoire hypercapnique
+- insuffisance respiratoire aigüe hypercapnique
+- insuffisance respiratoire aigüe type 2
+- insuffisance respiratoire aigüe type II
+
+</fiche_code>
+
+<fiche_code code="J96.09">
+
+# J96.09 — Insuffisance respiratoire aigüe - " Type non précisé "
+
+## Position dans la classification
+- Chapitre X : Maladies de l'appareil respiratoire
+- Bloc J95-J99 : Autres maladies de l'appareil respiratoire
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre X) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie J96) :
+
+détresse respiratoire du nouveau-né [P22.–]
+insuffisance cardiopulmonaire (R09.2)
+syndrome de détresse respiratoire de l’adulte (J80)
+troubles respiratoires après un acte à visée diagnostique et thérapeutique (J95.-)
+
+</fiche_code>
+
+<fiche_code code="P92.2">
+
+# P92.2 — Alimentation lente du nouveau-né
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P90-P96 : Autres affections dont l'origine se situe dans la période périnatale
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+## Formulations cliniques alternatives
+- Alimentation, lente, nouveau-né
+- Problème (avec) (de), alimentation (enfant) (personne âgée), nouveau-né, alimentation lente
+- Trouble(s) (de) - voir aussi maladie, alimentation (psychogène), nouveau-né, alimentation lente
+
+</fiche_code>

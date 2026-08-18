@@ -1,0 +1,339 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 67 ans
+- Sexe du patient : Féminin
+- Date d'entrée : 15/01/2025
+- Date de sortie : 25/01/2025
+- Date de naissance : 31/07/1957
+- Nom du patient : Reinartz
+- Prénom du patient : Cyara
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : SMR
+- Contexte de l'hospitalisation : Prise en charge en hospitalisation complète pour pontages aortocoronariens sans cathétérisme cardiaque, ni coronarographie.
+- Codage CIM10 :
+   * Diagnostic principal : Cardiopathie artérioscléreuse (I251)
+   * Diagnostics associés :
+      - Hypothyroïdie, sans précision (E039)
+      - Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication (E1198)
+      - Hyperlipidémie, sans précision (E785)
+      - Hypertension essentielle (primitive) (I10)
+      - Myocardiopathie ischémique (I255)
+- Acte CCAM : revascularisation coronaire par 2 greffons artériels avec 2 anastomoses distales, par thoracotomie avec cec (DDMA020)
+- Nom du médecin / signataire : Rosemarie Vujcic
+- Service : CHIR.CARDIO-VASC.
+- Hôpital : Hôpital Sud - CHU Grenoble Alpes
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="I25.1">
+
+# I25.1 — Cardiopathie artérioscléreuse
+
+## Position dans la classification
+- Chapitre IX : Maladies de l'appareil circulatoire
+- Bloc I20-I25 : Cardiopathies ischémiques
+
+## Périmètre clinique du code
+
+Inclusions héritées du bloc I20-I25 :
+- avec mention d'hypertension (I10-I15)
+
+Au niveau du code :
+- athérome des (artères) coronaires
+- athérosclérose des (artères) coronaires
+- maladie des (artères) coronaires
+- sclérose des (artères) coronaires
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IX) :
+
+accidents ischémiques cérébraux transitoires et syndromes apparentés (G45.-)
+affections disséminées du tissu conjonctif (M30-M36)
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie I25) :
+
+maladie cardiovasculaire SAI (I51.6)
+
+## Formulations cliniques alternatives
+- Artériosclérose (avec calcification) (diffuse) (généralisée) (oblitérante) (occlusive) (sénile) (de), coronarienne
+- artérite tritronculaire
+- athérosclérose coronarienne
+- bi-pontage cardiaque
+- cardiopathie coronarienne sévère
+- Cardiopathie (voir aussi maladie, coeur), artérioscléreuse
+- Cardiosclérose
+- coeur coronaire
+- Coronarite (voir aussi artériosclérose, coronarienne)
+- Défaillance (de) (voir aussi insuffisance), cardiaque (voir aussi insuffisance, cardiaque), due à, artériosclérose
+- Dégénérescence (de), coeur (graisseuse) (hyaline) (sénile), athéromateuse
+- état cardio-vasculaire athéromateux
+- maladie coronaire athéromateuse
+- maladie coronaire tritronculaire
+- Myocardite (ancienne) (chronique) (fibreuse) (interstitielle) (progressive) (sénile) (à) (de), artérioscléreuse chronique
+- Obstruction (de) (par), coronaire (artère)
+- occlusions coronaires tritronculaires
+- Sclérose (de), coeur
+- Sténose (cicatricielle) (de) - voir aussi rétrécissement, artère nca, coronaire
+- stent coronarien
+- sub-occlusion tronc commun
+
+</fiche_code>
+
+<fiche_code code="E03.9">
+
+# E03.9 — Hypothyroïdie, sans précision
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E00-E07 : Affections de la glande thyroïde
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- myxoedème SAI
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes :
+
+hypothyroïdie :
+ - après un acte à visée diagnostique et thérapeutique (E89.0) 
+ - liée à une carence en iode (E00-E02)
+
+## Formulations cliniques alternatives
+- Anémie (à) (de), myxoedémateuse
+- Cataracte, due à, myxoedème
+- Dégénérescence (de), cerveau (corticale) (diffuse) (parenchymateuse) (progressive), au cours de, myxoedème
+- Dégénérescence (de), système nerveux (central), systémique, au cours de, myxoedème
+- Diamond (myxoedème prétibial)
+- hypothyroïdie
+- Hypothyroïdie (acquise)
+- Hypothyroïdie SAI
+- Hypothyroïdie sans précision
+- Myopathie (à) (de), au cours de, hypothyroïdie
+- Myxoedème (infantile) (prétibial)
+- Myxoedème prétibial (mucinose prétibiale)
+- Nca, thyroïde (acquise) (voir aussi hypothyroïdie)
+- Obésité, hypothyroïdienne
+- Obésité, thyroïdienne (insuffisance)
+
+</fiche_code>
+
+<fiche_code code="E11.98">
+
+# E11.98 — Diabète sucré de type 2 - "Sans complication" - "diabète sucré de type 2 non insulinotraité ou sans précision"
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E10-E14 : Diabète sucré
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie E11 :
+- diabète (sucré) (avec obésité) (sans obésité) (de) adulte
+- diabète (sucré) (avec obésité) (sans obésité) (de) :
+ - adulte
+ - maturité
+ - non cétosique
+ - non insulinodépendant du sujet jeune
+ - stable
+- diabète (sucré) (avec obésité) (sans obésité) (de) maturité
+- diabète (sucré) (avec obésité) (sans obésité) (de) non cétosique
+- diabète (sucré) (avec obésité) (sans obésité) (de) non insulino-dépendant du sujet jeune
+- diabète (sucré) (avec obésité) (sans obésité) (de) stable
+- diabète (sucré) (avec obésité) (sans obésité) (de) type II
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité de la catégorie E11) :
+
+anomalie de l'épreuve de tolérance au glucose (R73.0)
+diabète sucré :
+ - au cours de la grossesse, de l'accouchement et de la puerpéralité (O24.-) 
+ - de malnutrition (E12.-) 
+ - du nouveau-né (P70.2) 
+- glycosurie :
+ - SAI (R81) 
+ - rénale (E74.8) 
+hypo-insulinémie postchirurgicale (E89.1)
+
+</fiche_code>
+
+<fiche_code code="E78.5">
+
+# E78.5 — Hyperlipidémie, sans précision
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E70-E90 : Anomalies du métabolisme
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité du bloc E70-E90) :
+
+anémies hémolytiques dues à des anomalies enzymatiques (D55.-)
+déficit en 5-alpha-réductase (E29.1)
+hyperplasie surrénale congénitale (E25.0)
+syndrome de :
+ - Ehlers–Danlos (Q79.6) 
+ - Marfan (Q87.4) 
+ - résistance aux androgènes (E34.5)
+
+Affections relevant d'autres codes (hérité de la catégorie E78) :
+
+sphingolipidose (E75.0-E75.3)
+
+## Formulations cliniques alternatives
+- hyperlipémie
+- Hyperlipidémie
+- Hyperlipidémie SAI
+- hyperlipoprotéinémie
+- Hyperlipoprotéinémie (à)
+- lipidémie
+- Lipoprotéinémie (voir aussi hyperlipoprotéinémie)
+- surcharge lipidique
+- Xanthome (familial) (héréditaire) (de), hyperlipidémique
+- Xanthome hyperlipidémique
+
+</fiche_code>
+
+<fiche_code code="I10">
+
+# I10 — Hypertension essentielle (primitive)
+
+## Position dans la classification
+- Chapitre IX : Maladies de l'appareil circulatoire
+- Bloc I10-I15 : Maladies hypertensives
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- hypertension (artérielle) (bénigne) (essentielle) (maligne) (primitive) (systémique)
+- tension artérielle élevée
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IX) :
+
+accidents ischémiques cérébraux transitoires et syndromes apparentés (G45.-)
+affections disséminées du tissu conjonctif (M30-M36)
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité du bloc I10-I15) :
+
+cardiopathies ischémiques (I20-I25)
+compliquant la grossesse, l'accouchement et la puerpéralité (O10-O11)  (O13-O16)
+hypertension :
+ - du nouveau-né (P29.2) 
+ - pulmonaire :
+  - primaire (I27.0) 
+  - secondaire (I27.2)
+
+Affections relevant d'autres codes :
+
+avec :
+ - maladies cérébrovasculaires (I60-I69) 
+ - rétinopathies vasculaires (H35.0)
+
+## Formulations cliniques alternatives
+- Elévation de (voir aussi augmentation), pression ou tension (non spécifique), artérielle (voir aussi hypertension)
+- HTA bien contrôlée
+- HTA contrôlée
+- HTA effort
+- HTA essentielle
+- HTA essentielle "maligne" [coder aussi les conséquences]
+- HTA instable
+- HTA modérée
+- HTA rebelle
+- hypertension aigüe
+- Hypertension (artérielle) (bénigne) (essentielle) (idiopathique) (maligne) (primitive) (systémique)
+- hypertension artérielle idiopathique
+- Hypertension artérielle primitive
+- polyangiopathie hypertensive
+- poussées hypertensives
+- Tension, artérielle, élevée (épisodique) (non spécifique), due à hypertension (voir aussi hypertension)
+
+</fiche_code>
+
+<fiche_code code="I25.5">
+
+# I25.5 — Myocardiopathie ischémique
+
+## Position dans la classification
+- Chapitre IX : Maladies de l'appareil circulatoire
+- Bloc I20-I25 : Cardiopathies ischémiques
+
+## Périmètre clinique du code
+
+Inclusions héritées du bloc I20-I25 :
+- avec mention d'hypertension (I10-I15)
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IX) :
+
+accidents ischémiques cérébraux transitoires et syndromes apparentés (G45.-)
+affections disséminées du tissu conjonctif (M30-M36)
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie I25) :
+
+maladie cardiovasculaire SAI (I51.6)
+
+## Formulations cliniques alternatives
+- cardiomyopathie congestive ischémique
+- cardiomyopathie ischémique réfractaire
+- Cardiomyopathie (primitive) (secondaire) (due à), ischémique (chronique)
+- cardiopathie dilatée ischémique
+- cardiopathie ischémique dilatée hypokinétique
+- CMNO ischémique dilatée
+- décompensation cardiomyopathie ischémique
+- myocardiopathie coronarienne
+- myocardiopathie ischémique
+- myocardiopathie ischémique hypokinétique
+- myocardiopathie ischémique nécrotique
+
+</fiche_code>

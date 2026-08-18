@@ -1,0 +1,155 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 50 ans
+- Sexe du patient : Féminin
+- Date d'entrée : 31/01/2024
+- Date de sortie : 31/01/2024
+- Date de naissance : 11/08/1973
+- Nom du patient : Tuffreau
+- Prénom du patient : Majida
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge en hospitalisation ambulatoire pour Examen de contrôle après traitement chirurgical d'autres affections.
+- Codage CIM10 :
+   * Diagnostic principal : Tumeur bénigne de l'hypophyse (D352)
+   * Diagnostics associés :
+      - Hypopituitarisme (E230)
+- Nom du médecin / signataire : Jacques Rozel
+- Service : ENDOCRINOLOGIE
+- Hôpital : Hôpital de Hautepierre - Hôpitaux Universitaires de Strasbourg
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="D35.2">
+
+# D35.2 — Tumeur bénigne de l'hypophyse
+
+## Position dans la classification
+- Chapitre II : Tumeurs
+- Bloc D10-D36 : Tumeurs bénignes
+
+## Périmètre clinique du code
+
+Inclusions héritées du bloc D10-D36 :
+- les codes morphologiques avec code de comportement /0
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité de la catégorie D35) :
+
+ovaire (D27)
+pancréas endocrine (D13.7)
+testicule (D29.2)
+thymus (D15.0)
+
+## Formulations cliniques alternatives
+- adénome anté-hypophysaire
+- adénome anté-hypophysaire prolactine
+- Adénome hypophysaire à ACTH
+- Adénome hypophysaire à FSH
+- Adénome hypophysaire à GH
+- Adénome hypophysaire à LH
+- Adénome hypophysaire à prolactine
+- Adénome hypophysaire gonadotrope
+- Adénome hypophysaire non sécrétant
+- adénome hypophysaire prolactine
+- Adénome hypophysaire, sans précision
+- adénome hypophyse
+- adénome prolactine
+- Adénome (sessile) (de) (m8140/0) - voir aussi tumeur bénigne, à cellules (de), mucoïdes (m8300/0), siège, non précisé
+- Adénome (sessile) (de) (m8140/0) - voir aussi tumeur bénigne, acidophile et basophile, mixte (m8281/0), siège, non précisé
+- Adénome (sessile) (de) (m8140/0) - voir aussi tumeur bénigne, acidophile (m8280/0), siège, non précisé
+- Adénome (sessile) (de) (m8140/0) - voir aussi tumeur bénigne, basophile (m8300/0), siège, non précisé
+- Adénome (sessile) (de) (m8140/0) - voir aussi tumeur bénigne, chromophobe (m8270/0), siège, non précisé
+- Adénome (sessile) (de) (m8140/0) - voir aussi tumeur bénigne, éosinophile (m8280/0), siège, non précisé
+- macro-adénome selle turcique
+- macroadénome Cushing
+- macroadénome prolactine
+- méningiome selle turcique
+- prolactinome
+- Prolactinome (m8271/0), siège, non précisé
+
+</fiche_code>
+
+<fiche_code code="E23.0">
+
+# E23.0 — Hypopituitarisme
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E20-E35 : Maladies des autres glandes endocrines
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie E23 :
+- les états mentionnés ci-dessous, qu'il s'agisse d'une anomalie hypophysaire ou hypothalamique
+
+Au niveau du code :
+- cachexie hypophysaire
+- hypogonadisme hypogonadotrophique
+- insuffisance (de) hormone de croissance idiopathique
+- insuffisance (de) isolée en gonadotrophine
+- insuffisance (de) isolée en hormone de croissance
+- insuffisance (de) isolée en hormone hypophysaire
+- insuffisance staturale pituitaire SAI
+- maladie de Simmonds
+- nécrose pituitaire (post-partum)
+- panhypopituitarisme
+- syndrome de eunuchoïdisme fertile
+- syndrome de Kallmann
+- syndrome de Lorain-Lévi
+- syndrome de Sheehan
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité du bloc E20-E35) :
+
+galactorrhée (N64.3)
+gynécomastie (N62)
+
+Affections relevant d'autres codes (hérité de la catégorie E23) :
+
+hypopituitarisme après un acte à visée diagnostique et thérapeutique (E89.3)
+
+## Formulations cliniques alternatives
+- déficit hormone croissance
+- déficit somatotrope
+- Hypogonadisme hypogonadotrophique acquis
+- Hypogonadisme hypogonadotrophique congénital
+- Hypogonadisme (primitif), hypogonadotrophique
+- Hypopituitarisme (juvénile), post-partum
+- Infantilisme (de), brissaud (type)
+- Infantilisme (de), pituitaire
+- insuffisance anté-hypophysaire
+- insuffisance corticotrope
+- Insuffisance hypophysaire corticotrope
+- Insuffisance hypophysaire globale
+- Insuffisance hypophysaire gonadotrope, autre et sans précision
+- Insuffisance hypophysaire somatotrope
+- Insuffisance hypophysaire thyréotrope
+- insuffisance panhypophysaire
+- insuffisance pituitaire
+- insuffisance thyréotrope
+- Lorain-lévi, maladie ou syndrome de
+- Nanisme idiopathique
+- Nanisme, pituitaire
+- Nanisme, type, lorain-lévi
+- Nécrose hypophysaire du post-partum
+- Nécrose (ischémique) (de) (voir aussi gangrène), hypophysaire
+- section tige pituitaire
+- Syndrome de Kallman-Demorsier
+- Syndrome (de) - voir aussi maladie, eunuchoïdisme fertile
+- Syndrome (de) - voir aussi maladie, hypopituitarisme
+- Syndrome des eunuques fertiles
+- syndrome selle turcique vide
+- syndrome Sheehan
+
+</fiche_code>

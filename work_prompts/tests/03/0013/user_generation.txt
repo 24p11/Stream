@@ -1,0 +1,134 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 31 ans
+- Sexe du patient : Féminin
+- Date d'entrée : 17/02/2024
+- Date de sortie : 21/02/2024
+- Date de naissance : 25/02/1992
+- Nom du patient : Brugalais
+- Prénom du patient : Maïwen
+- Mode d'entrée' : URGENCES
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Prise en charge pour accouchement par voie basse.
+- Codage CIM10 :
+   * Diagnostic principal : Soins et examens immédiatement après un accouchement hors d'un établissement de santé (Z3900)
+   * Diagnostics associés :
+      - Déchirure obstétricale du périnée, du premier degré (O700)
+      - Naissance unique, enfant vivant (Z370)
+- Nom du médecin / signataire : Jeannine Rossi
+- Service : OBSTETRIQUE
+- Hôpital : Hôpital Larrey - Centre hospitalier universitaire de Toulouse
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="Z39.00">
+
+# Z39.00 — Soins et examens immédiatement après un accouchement hors d’un établissement de santé
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie Z39.0 :
+- Soins et mise en observation, cas sans complications
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité de la catégorie Z39.0) :
+
+soins pour des complications du postpartum – voir Index alphabétique
+
+</fiche_code>
+
+<fiche_code code="O70.0">
+
+# O70.0 — Déchirure obstétricale du périnée, du premier degré
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O60-O75 : Complications du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie O70 :
+- épisiotomie agrandie par déchirure
+
+Au niveau du code :
+- déchirure ou rupture périnéale (intéressant) fourchette au cours de l'accouchement
+- déchirure ou rupture périnéale (intéressant) légère au cours de l'accouchement
+- déchirure ou rupture périnéale (intéressant) lèvres au cours de l'accouchement
+- déchirure ou rupture périnéale (intéressant) peau au cours de l'accouchement
+- déchirure ou rupture périnéale (intéressant) vagin au cours de l'accouchement
+- déchirure ou rupture périnéale (intéressant) vulve au cours de l'accouchement
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Affections relevant d'autres codes (hérité de la catégorie O70) :
+
+déchirure obstétricale vaginale haute isolée (O71.4)
+déchirure du sillon vaginal (071.4)
+
+Affections relevant d'autres codes :
+
+déchirure périurétrale avec atteinte urétrale (O71.5)
+déchirure de la paroi vaginale haute (partie moyenne) (tiers supérieur) (071.4)
+déchirure du sillon vaginal (O71.4)
+
+## Formulations cliniques alternatives
+- Accouchement(s), compliqué, par, déchirure (de), lèvres, grandes ou petites
+- Accouchement(s), compliqué, par, déchirure (de), périnéale (après épisiotomie), incomplète du premier degré
+- Accouchement(s), compliqué, par, déchirure (de), périnéale (après épisiotomie), intéressant, fourchette (vulvaire)
+- Accouchement(s), compliqué, par, déchirure (de), périnéale (après épisiotomie), intéressant, lèvres, grandes ou petites
+- Accouchement(s), compliqué, par, déchirure (de), périnéale (après épisiotomie), légère
+- Accouchement(s), compliqué, par, déchirure (de), vulve
+- Déchirure (de) (en) - voir aussi plaie, fourchette, au cours de l'accouchement
+- Déchirure (de) (en) - voir aussi plaie, périnée, au cours de l'accouchement, intéressant, fourchette
+- Déchirure (de) (en) - voir aussi plaie, périnée, au cours de l'accouchement, intéressant, lèvres, grandes ou petites
+- Déchirure (de) (en) - voir aussi plaie, périnée, au cours de l'accouchement, intéressant, peau
+
+</fiche_code>
+
+<fiche_category code="Z37">
+
+# Z37 — Résultat de l'accouchement
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+
+## Codes enfants directs
+- Z37.0 — Naissance unique, enfant vivant
+- Z37.1 — Naissance unique, enfant mort-né
+- Z37.2 — Naissance gémellaire, jumeaux nés vivants
+- Z37.3 — Naissance gémellaire, l'un des jumeaux né vivant, l'autre mort-né
+- Z37.4 — Naissance gémellaire, jumeaux mort-nés
+- Z37.5 — Autres naissances multiples, tous nés vivants
+- Z37.6 — Autres naissances multiples, certains enfants nés vivants
+- Z37.7 — Autres naissances multiples, tous mort-nés
+- Z37.9 — Résultat de l'accouchement, sans précision
+
+## Périmètre clinique
+
+Inclusions héritées de la catégorie Z37.9 :
+- Naissance :
+ - multiple SAI
+ - unique SAI
+
+</fiche_category>

@@ -1,0 +1,97 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 79 ans
+- Sexe du patient : Masculin
+- Date d'entrée : 20/10/2026
+- Date de sortie : 23/10/2026
+- Date de naissance : 07/02/1947
+- Nom du patient : Klaebe
+- Prénom du patient : Elhadji
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
+- Codage CIM10 :
+   * Diagnostic principal : Anévrisme cérébral, (non rompu) (I671)
+   * Diagnostics associés :
+      - aucun
+- Acte CCAM : embolisation suprasélective unilatérale ou bilatérale de branche de l'artère carotide interne, par voie artérielle transcutanée (EASF004)
+- Nom du médecin / signataire : Claude Severin
+- Service : NEURO-CHIRURGIE
+- Hôpital : Hôpital Saint-André - CHU de Bordeaux
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="I67.1">
+
+# I67.1 — Anévrisme cérébral, non rompu
+
+## Position dans la classification
+- Chapitre IX : Maladies de l'appareil circulatoire
+- Bloc I60-I69 : Maladies cérébrovasculaires
+
+## Périmètre clinique du code
+
+Inclusions héritées du bloc I60-I69 :
+- avec mention d'hypertension (états classés en I10 et I15.-)
+
+Au niveau du code :
+- anévrisme cérébral SAI
+- fistule artérioveineuse cérébrale, acquise
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IX) :
+
+accidents ischémiques cérébraux transitoires et syndromes apparentés (G45.-)
+affections disséminées du tissu conjonctif (M30-M36)
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité du bloc I60-I69) :
+
+accidents ischémiques cérébraux transitoires et syndromes apparentés (G45.-)
+démence vasculaire (F01.-)
+hémorragie intracrânienne traumatique (S06.-)
+
+Affections relevant d'autres codes (hérité de la catégorie I67) :
+
+séquelles des états mentionnés (I69.8)
+
+Affections relevant d'autres codes :
+
+anévrisme cérébral :
+ - congénital, non rompu (Q28.-) 
+ - rompu [I60.–]
+
+## Formulations cliniques alternatives
+- Anévrisme, anévrysme (anastomotique) (cirsoïde) (diffus) (faux) (fusiforme) (multiple) (sacculaire) (de), artère, cérébrale (non rompu)
+- Anévrisme, anévrysme (anastomotique) (cirsoïde) (diffus) (faux) (fusiforme) (multiple) (sacculaire) (de), artérioscléreux, cérébral
+- Anévrisme, anévrysme (anastomotique) (cirsoïde) (diffus) (faux) (fusiforme) (multiple) (sacculaire) (de), artérioveineux (congénital) (périphérique), acquis, cerveau
+- Anévrisme, anévrysme (anastomotique) (cirsoïde) (diffus) (faux) (fusiforme) (multiple) (sacculaire) (de), cerveau (non rompu) (artérioscléreux)
+- Anévrisme, anévrysme (anastomotique) (cirsoïde) (diffus) (faux) (fusiforme) (multiple) (sacculaire) (de), cerveau (non rompu) (artérioscléreux), artérioveineux (congénital) (non rompu), acquis (non rompu)
+- Anévrisme, anévrysme (anastomotique) (cirsoïde) (diffus) (faux) (fusiforme) (multiple) (sacculaire) (de), cerveau (non rompu) (artérioscléreux), méninges (non rompu)
+- Anévrisme, anévrysme (anastomotique) (cirsoïde) (diffus) (faux) (fusiforme) (multiple) (sacculaire) (de), polygone de willis
+- Anévrisme, anévrysme (anastomotique) (cirsoïde) (diffus) (faux) (fusiforme) (multiple) (sacculaire) (de), sinus (de), caverneux (voir aussi anévrisme, cerveau)
+- Anévrisme, anévrysme (anastomotique) (cirsoïde) (diffus) (faux) (fusiforme) (multiple) (sacculaire) (de), sinus (de), caverneux (voir aussi anévrisme, cerveau), non rompu
+- anévrisme artériel cérébral non rompu
+- anévrisme artériel sylvien
+- anévrisme bifurcation artère sylvienne
+- anévrisme bulbaire
+- anévrisme fosse postérieure
+- anévrisme supra-caverneux
+- anévrisme supra-sellaire
+- anévrisme sylvien temporal
+- anévrismes artériels intracérébraux
+- fistule artério-veineuse durale
+- Fistule (de), artérioveineuse, cerveau (acquise)
+- thrombose anévrisme cérébral
+
+</fiche_code>

@@ -1,0 +1,114 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 77 ans
+- Sexe du patient : Masculin
+- Date d'entrée : 28/01/2026
+- Date de sortie : 28/01/2026
+- Date de naissance : 15/12/1948
+- Nom du patient : Perrot-minnot
+- Prénom du patient : Pierre
+- Localisation anatomique de la tumeur primaire : Myélome multiple (C900)
+- Type anatomopathologique de la tumeur primaire : Vous choisirez vous même un type histologique cohérent avec la localisation anatomique
+- Score TNM : Si la notion de score de TNM est pertinente avec le type histologique et la localisation anatomique, vous choisirez un score TNM
+- Biomarqueurs tumoraux : Vous choisirez des biomarqueurs tumoraux cohérents avec la localisation anatomique et l'histologie de la tumeur
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Prise en charge pour transfusions, en séances.
+- Codage CIM10 :
+   * Diagnostic principal : Myélome multiple (C900)
+   * Diagnostics associés :
+      - Autogreffe de cellules souches hématopoïétiques (Z94800)
+- Nom du médecin / signataire : Antoinette Redoules
+- Service : HEMATOLOGIE CLINIQUE
+- Hôpital : Hôpital Saint-Louis - Assistance Publique Hôpitaux de Paris
+Ce cas clinique concerne un patient présentant un cancer
+Veillez à bien préciser le type histologique et la valeur des biomarqueurs si recherchés
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="C90.0">
+
+# C90.0 — Myélome multiple
+
+## Position dans la classification
+- Chapitre II : Tumeurs
+- Bloc C00-C97 : Tumeurs malignes
+- Bloc C81-C96 : Tumeurs malignes primitives ou présumées primitives des tissus lymphoïde, hématopoïétique et apparentés
+
+## Périmètre clinique du code
+
+Inclusions héritées du bloc C81-C96 :
+- les codes morphologiques M959-M994 avec code de comportement /3
+
+Inclusions héritées de la catégorie C90 :
+- les codes morphologiques M973, M9830 avec code de comportement /3
+
+Au niveau du code :
+- maladie de Kahler
+- myélomatose
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du bloc C81-C96) :
+
+tumeur des ganglions lymphatiques, secondaire et non précisée (C77.-)
+
+Affections relevant d'autres codes :
+
+plasmocytome solitaire (C90.3)
+
+## Formulations cliniques alternatives
+- acutisation myélome IgA
+- Arthropathie (à) (de) (voir aussi arthrite), associée à, au cours de, due à (voir aussi arthropathie, réactionnelle), myélome multiple (m9732/3)
+- Glomérulopathie (à) (voir aussi glomérulonéphrite), au cours de (voir aussi glomérulonéphrite, au cours de), myélome multiple (m9732/3)
+- Kahler, maladie de (m9732/3)
+- Maladie (à) (de) rein (bassinet) (fonctionnelle), tubulo-interstitielle, au cours de, myélome multiple (m9732/3)
+- maladie Kahler chaîne Kappa
+- Myélomatose (m9732/3)
+- myélome Ig Kappa
+- myélome IgA chaînes légères Kappa
+- myélome IgA stade 1
+- myélome IgG Kappa
+- Myélome multiple [Maladie de Kahler]
+- Myélome (multiple) (plasmocytaire) (m9732/3)
+- myélome plasmocytaire colique
+- myélome prolifératif
+- myélome tête pancréas
+- nodules myélomateux cutanés
+- Ostéoporose (avec) (de), due à, myélome multiple (m9732/3)
+- Trouble(s) (de) - voir aussi maladie, glomérulaires (au cours de) (dans) (voir aussi syndrome, néphritique), myélome multiple (m9732/3)
+
+</fiche_code>
+
+<fiche_code code="Z94.800">
+
+# Z94.800 — Autogreffe de cellules souches hématopoïétiques
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z80-Z99 : Sujets dont la santé peut être menacée en raison d'antécédents personnels et familiaux et de certaines affections
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie Z94 :
+- organe ou tissu remplacé par greffe hétérologue ou homologue
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du bloc Z80-Z99) :
+
+dépistage spécial, autre examen ou investigation en raison d'antécédents familiaux ou personnels (Z00-Z13)
+examen de contrôle (Z08-Z09)
+mise en observation ou intervention au cours de la grossesse en raison d'un risque d'atteinte du fœtus (O35.-)
+soins de contrôle médicaux et de convalescence (Z42-Z51)  (Z54.-)
+
+Affections relevant d'autres codes (hérité de la catégorie Z94) :
+
+complications d'organes ou tissus greffés – voir Index alphabétique
+présence de :
+ - greffe vasculaire (Z95.-) 
+ - valvule cardiaque xénogénique (Z95.3)
+
+</fiche_code>

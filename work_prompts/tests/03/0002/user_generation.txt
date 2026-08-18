@@ -1,0 +1,88 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 22 ans
+- Sexe du patient : Féminin
+- Date d'entrée : 08/07/2024
+- Date de sortie : 08/07/2024
+- Date de naissance : 27/02/2002
+- Nom du patient : Le nillon
+- Prénom du patient : Annais
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
+- Codage CIM10 :
+   * Diagnostic principal : Échec d'une tentative d'avortement médical, sans complication (O074)
+   * Diagnostics associés :
+      - Difficultés liées à une grossesse non désirée (Z640)
+- Nom du médecin / signataire : Andre Supinski
+- Service : I.V.G.
+- Hôpital : Hôpital Michallon - CHU Grenoble Alpes
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="O07.4">
+
+# O07.4 — Échec d'une tentative d'avortement médical, sans complication
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O00-O08 : Grossesse se terminant par un avortement
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- échec d'une tentative d'avortement médical SAI
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Affections relevant d'autres codes (hérité du bloc O00-O08) :
+
+poursuite de la grossesse après avortement d'un ou plusieurs fœtus (O31.1)
+
+Affections relevant d'autres codes (hérité de la catégorie O07) :
+
+avortement incomplet (O03-O06)
+
+## Formulations cliniques alternatives
+- Avortement (avec), médical (complet) (sans complication), échec d'une tentative (sans complication)
+
+</fiche_code>
+
+<fiche_code code="Z64.0">
+
+# Z64.0 — Difficultés liées à une grossesse non désirée
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z55-Z65 : Sujets dont la santé peut être menacée par des conditions socioéconomiques et psychosociales
+
+## À ne pas décrire
+
+Affections relevant d'autres codes :
+
+surveillance d'une grossesse à haut risque du fait de problèmes sociaux (Z35.7)
+
+## Formulations cliniques alternatives
+- déni grossesse
+- Difficulté(s) de(s), liées à, grossesse non désirée
+- Grossesse (unique) (utérine), illégitime (non désirée)
+- Grossesse (unique) (utérine), non désirée
+- Illégitimité (grossesse non désirée)
+- Problème (avec) (de), grossesse non désirée
+
+</fiche_code>

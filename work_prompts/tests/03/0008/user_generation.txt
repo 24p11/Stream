@@ -1,0 +1,177 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 66 ans
+- Sexe du patient : Féminin
+- Date d'entrée : 03/09/2025
+- Date de sortie : 05/09/2025
+- Date de naissance : 11/12/1958
+- Nom du patient : Leboucher
+- Prénom du patient : Jeannine
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Prise en charge en hospitalisation complète pour interventions réparatrices sur l'appareil génital féminin.
+- Codage CIM10 :
+   * Diagnostic principal : Prolapsus utéro-vaginal complet (N813)
+   * Diagnostics associés :
+      - Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication (E1198)
+      - Hypertension essentielle (primitive) (I10)
+- Acte CCAM : résection ou cloisonnement du cul-de-sac recto-utérin [de douglas], par coelioscopie (HPFC007)
+- Nom du médecin / signataire : Yvette Ngo wendjel
+- Service : GYNECOLOGIE
+- Hôpital : Hôpital de Hautepierre - Hôpitaux Universitaires de Strasbourg
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="N81.3">
+
+# N81.3 — Prolapsus utérovaginal complet
+
+## Position dans la classification
+- Chapitre XIV : Maladies de l'appareil génito-urinaire
+- Bloc N80-N98 : Affections non inflammatoires de l'appareil génital de la femme
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- procidence SAI
+- prolapsus utérin du troisième degré
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XIV) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie N81) :
+
+compliquant grossesse, travail ou accouchement (O34.5)
+prolapsus de la paroi supérieure du vagin après hystérectomie (N99.3)
+prolapsus et hernie de l'ovaire et de la trompe de Fallope (N83.4)
+
+## Formulations cliniques alternatives
+- Procidentia uteri (canada)
+- Prolapsus (de), utéro-vaginal, complet
+- Prolapsus (de), utéro-vaginal, troisième degré
+- urétrocèle complet extériorisé
+
+</fiche_code>
+
+<fiche_code code="E11.98">
+
+# E11.98 — Diabète sucré de type 2 - "Sans complication" - "diabète sucré de type 2 non insulinotraité ou sans précision"
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E10-E14 : Diabète sucré
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie E11 :
+- diabète (sucré) (avec obésité) (sans obésité) (de) adulte
+- diabète (sucré) (avec obésité) (sans obésité) (de) :
+ - adulte
+ - maturité
+ - non cétosique
+ - non insulinodépendant du sujet jeune
+ - stable
+- diabète (sucré) (avec obésité) (sans obésité) (de) maturité
+- diabète (sucré) (avec obésité) (sans obésité) (de) non cétosique
+- diabète (sucré) (avec obésité) (sans obésité) (de) non insulino-dépendant du sujet jeune
+- diabète (sucré) (avec obésité) (sans obésité) (de) stable
+- diabète (sucré) (avec obésité) (sans obésité) (de) type II
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité de la catégorie E11) :
+
+anomalie de l'épreuve de tolérance au glucose (R73.0)
+diabète sucré :
+ - au cours de la grossesse, de l'accouchement et de la puerpéralité (O24.-) 
+ - de malnutrition (E12.-) 
+ - du nouveau-né (P70.2) 
+- glycosurie :
+ - SAI (R81) 
+ - rénale (E74.8) 
+hypo-insulinémie postchirurgicale (E89.1)
+
+</fiche_code>
+
+<fiche_code code="I10">
+
+# I10 — Hypertension essentielle (primitive)
+
+## Position dans la classification
+- Chapitre IX : Maladies de l'appareil circulatoire
+- Bloc I10-I15 : Maladies hypertensives
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- hypertension (artérielle) (bénigne) (essentielle) (maligne) (primitive) (systémique)
+- tension artérielle élevée
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IX) :
+
+accidents ischémiques cérébraux transitoires et syndromes apparentés (G45.-)
+affections disséminées du tissu conjonctif (M30-M36)
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité du bloc I10-I15) :
+
+cardiopathies ischémiques (I20-I25)
+compliquant la grossesse, l'accouchement et la puerpéralité (O10-O11)  (O13-O16)
+hypertension :
+ - du nouveau-né (P29.2) 
+ - pulmonaire :
+  - primaire (I27.0) 
+  - secondaire (I27.2)
+
+Affections relevant d'autres codes :
+
+avec :
+ - maladies cérébrovasculaires (I60-I69) 
+ - rétinopathies vasculaires (H35.0)
+
+## Formulations cliniques alternatives
+- Elévation de (voir aussi augmentation), pression ou tension (non spécifique), artérielle (voir aussi hypertension)
+- HTA bien contrôlée
+- HTA contrôlée
+- HTA effort
+- HTA essentielle
+- HTA essentielle "maligne" [coder aussi les conséquences]
+- HTA instable
+- HTA modérée
+- HTA rebelle
+- hypertension aigüe
+- Hypertension (artérielle) (bénigne) (essentielle) (idiopathique) (maligne) (primitive) (systémique)
+- hypertension artérielle idiopathique
+- Hypertension artérielle primitive
+- polyangiopathie hypertensive
+- poussées hypertensives
+- Tension, artérielle, élevée (épisodique) (non spécifique), due à hypertension (voir aussi hypertension)
+
+</fiche_code>

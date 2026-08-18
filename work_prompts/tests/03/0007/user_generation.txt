@@ -1,0 +1,221 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 36 ans
+- Sexe du patient : Féminin
+- Date d'entrée : 12/09/2025
+- Date de sortie : 17/09/2025
+- Date de naissance : 27/03/1989
+- Nom du patient : Petitdidier
+- Prénom du patient : Djamila
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Prise en charge pour accouchement par voie basse.
+- Codage CIM10 :
+   * Diagnostic principal : Accouchement (unique) spontané par présentation du sommet (O800)
+   * Diagnostics associés :
+      - Diabète sucré survenant au cours de la grossesse (O244)
+      - Examens de laboratoire (Z017)
+      - Naissance unique, enfant vivant (Z370)
+      - Soins et examens immédiatement après l'accouchement, autres et sans précision (Z3908)
+      - Soins et examens de l'allaitement maternel (Z391)
+- Nom du médecin / signataire : Joseph Delhome
+- Service : OBSTETRIQUE
+- Hôpital : Hôpital Claude Huriez - Centre Hospitalier Universitaire de Lille
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="O80.0">
+
+# O80.0 — Accouchement spontané par présentation du sommet
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O80-O84 : Accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie O80 :
+- accouchement tout à fait normal
+- accouchement tout à fait normal
+cas avec assistance minime ou sans assistance, avec ou sans épisiotomie
+- cas avec assistance minime ou sans assistance, avec ou sans épisiotomie
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+## Formulations cliniques alternatives
+- Accouchement(s), normal (avec assistance minime ou sans assistance, avec ou sans épisiotomie), avec présentation (du), sommet
+- Accouchement(s), spontané (et unique) (par), présentation du, sommet
+
+</fiche_code>
+
+<fiche_code code="O24.4">
+
+# O24.4 — Diabète sucré survenant au cours de la grossesse
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O20-O29 : Autres affections maternelles liées principalement à la grossesse
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie O24 :
+- au cours de l'accouchement et de la puerpéralité
+
+Au niveau du code :
+- diabète sucré gestationnel SAI
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Affections relevant d'autres codes (hérité du bloc O20-O29) :
+
+maladies de la mère classées ailleurs mais compliquant la grossesse, le travail et l'accouchement, et la puerpéralité (O98-O99)
+soins maternels liés au fœtus et à la cavité amniotique, et problèmes possibles posés par l'accouchement (O30-O48)
+
+## Formulations cliniques alternatives
+- Accouchement(s), compliqué, par, diabète sucré, gestationnel
+- Accouchement(s), compliqué, par, diabète sucré, survenant au cours de la grossesse
+- Diabète (équilibré) (familial) (grave) (léger) (sucré) (de), compliquant grossesse, accouchement ou suites de couches, gestationnel
+- diabète gestationnel
+- Grossesse (unique) (utérine), compliquée (par), diabète sucré, gestationnel
+- Grossesse (unique) (utérine), compliquée (par), diabète sucré, survenant au cours de la grossesse
+- Suites de couches, compliquées par, diabète sucré, gestationnel
+- Suites de couches, compliquées par, diabète sucré, survenant au cours de la grossesse
+
+</fiche_code>
+
+<fiche_code code="Z01.7">
+
+# Z01.7 — Examens de laboratoire
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z00-Z13 : Sujets en contact avec les services de santé pour des examens divers
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie Z01 :
+- examen de routine limité à un organe donné
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du bloc Z00-Z13) :
+
+examens relatifs à la grossesse et à la reproduction (Z30-Z36)  (Z39.-)
+
+Affections relevant d'autres codes (hérité de la catégorie Z01) :
+
+examen(s) :
+ - à des fins administratives (Z02.-) 
+ - pour suspicion de maladies, non confirmées (Z03.-) 
+ - spéciaux de dépistage (Z11-Z13)
+
+## Formulations cliniques alternatives
+- Examen (de) (pour) (voir aussi observation), laboratoire
+
+</fiche_code>
+
+<fiche_category code="Z37">
+
+# Z37 — Résultat de l'accouchement
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+
+## Codes enfants directs
+- Z37.0 — Naissance unique, enfant vivant
+- Z37.1 — Naissance unique, enfant mort-né
+- Z37.2 — Naissance gémellaire, jumeaux nés vivants
+- Z37.3 — Naissance gémellaire, l'un des jumeaux né vivant, l'autre mort-né
+- Z37.4 — Naissance gémellaire, jumeaux mort-nés
+- Z37.5 — Autres naissances multiples, tous nés vivants
+- Z37.6 — Autres naissances multiples, certains enfants nés vivants
+- Z37.7 — Autres naissances multiples, tous mort-nés
+- Z37.9 — Résultat de l'accouchement, sans précision
+
+## Périmètre clinique
+
+Inclusions héritées de la catégorie Z37.9 :
+- Naissance :
+ - multiple SAI
+ - unique SAI
+
+</fiche_category>
+
+<fiche_code code="Z39.08">
+
+# Z39.08 — Soins et examens immédiatement après l’accouchement, autres et sans précision
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie Z39.0 :
+- Soins et mise en observation, cas sans complications
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité de la catégorie Z39.0) :
+
+soins pour des complications du postpartum – voir Index alphabétique
+
+</fiche_code>
+
+<fiche_code code="Z39.1">
+
+# Z39.1 — Soins et examens de l'allaitement maternel
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- surveillance de l'allaitement
+
+## À ne pas décrire
+
+Affections relevant d'autres codes :
+
+troubles de la lactation (O92.-)
+
+## Formulations cliniques alternatives
+- Allaitement, surveillance d'
+- Etat (de), post-partum, surveillance, allaitement
+- Soins, post-partum (de routine), allaitement
+- Suites de couches, surveillance, allaitement
+- Surveillance (médicale) (de) (pour), allaitement
+- Surveillance (médicale) (de) (pour), lactation
+
+</fiche_code>

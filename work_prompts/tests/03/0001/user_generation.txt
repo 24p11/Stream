@@ -1,0 +1,94 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 56 ans
+- Sexe du patient : Féminin
+- Date d'entrée : 06/03/2026
+- Date de sortie : 07/03/2026
+- Date de naissance : 06/07/1969
+- Nom du patient : Grebert
+- Prénom du patient : Yolande
+- Localisation anatomique de la tumeur primaire : Tumeur maligne du col de l'utérus, sans précision (C539)
+- Type anatomopathologique de la tumeur primaire : Vous choisirez vous même un type histologique cohérent avec la localisation anatomique
+- Score TNM : Si la notion de score de TNM est pertinente avec le type histologique et la localisation anatomique, vous choisirez un score TNM
+- Biomarqueurs tumoraux : Vous choisirez des biomarqueurs tumoraux cohérents avec la localisation anatomique et l'histologie de la tumeur
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Prise en charge en hospitalisation complète pour réalisation du traitement par radiothérapie.
+- Codage CIM10 :
+   * Diagnostic principal : Tumeur maligne du col de l'utérus, sans précision (C539)
+   * Diagnostics associés :
+      - Séance de chimiothérapie pour tumeur (Z511)
+- Acte CCAM : séance d'irradiation externe par machine dédiée produisant des photons avec modulation d'intensité et contrôle de la position de la cible par imagerie [igrt] (ZZNL051)
+- Nom du médecin / signataire : Dorota Artigue
+- Service : NEURO-CHIRURGIE
+- Hôpital : Hôpital Larrey - Centre hospitalier universitaire de Toulouse
+Ce cas clinique concerne un patient présentant un cancer
+Veillez à bien préciser le type histologique et la valeur des biomarqueurs si recherchés
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="C53.9">
+
+# C53.9 — Tumeur maligne du col de l'utérus, sans précision
+
+## Position dans la classification
+- Chapitre II : Tumeurs
+- Bloc C00-C97 : Tumeurs malignes
+- Bloc C00-C75 : Tumeurs malignes, primitives ou présumées primitives, de siège précisé, à l’exception des tissus lymphoïde, hématopoïétique et apparentés
+- Bloc C51-C58 : Tumeurs malignes des organes génitaux de la femme
+
+## Périmètre clinique du code
+
+Inclusions héritées du bloc C51-C58 :
+- peau des organes génitaux de la femme
+
+## Formulations cliniques alternatives
+- adénocarcinome squameux col utérus
+- cancer cervical
+- cancer cervico-utérin
+- cancer col utérin grandes cellules
+- cancer épidermoïde col utérin
+- Carcinome (à) (de) (m8010/3) - voir aussi tumeur maligne, spinocellulaire (à) (m8070/3), micro-invasif (m8076/3), siège, non précisé
+- carcinome épidermoïde col utérin
+- carcinome épidermoïde glandulaire col utérin
+- carcinosarcome col
+- néoplasme col utérin
+- néoplasme col utérin invasif
+
+</fiche_code>
+
+<fiche_code code="Z51.1">
+
+# Z51.1 — Séance de chimiothérapie pour tumeur
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z40-Z54 : Sujets ayant recours aux services de santé pour des actes médicaux et des soins spécifiques
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du bloc Z40-Z54) :
+
+examen de contrôle pour surveillance médicale après traitement (Z08-Z09)
+
+Affections relevant d'autres codes (hérité de la catégorie Z51) :
+
+examen de contrôle après traitement (Z08-Z09)
+
+## Formulations cliniques alternatives
+- Asparaginase
+- chimiothérapie anticancéreuse
+- Chimiothérapie (séance) (de), entretien nca, pour tumeur
+- CPB
+- hormonothérapie
+- Imurel
+- Séance (de), chimiothérapie nca, pour tumeur
+- sous Novantrone
+- sous Tarceva
+- traitement Arimidex
+- traitement Hydrea
+- traitement Muphoran
+
+</fiche_code>

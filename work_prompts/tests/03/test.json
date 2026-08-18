@@ -1,0 +1,41 @@
+{
+  "created_at": "2026-08-17T16:50:23",
+  "seed_path": "data/aphp/scenarios_bn_all_20260128.pq",
+  "generation_ids": {
+    "0000": "fcb5a049-0480-4a60-8abb-983e89638d17",
+    "0001": "833cb0d7-9252-4fd8-b15c-043221a6706f",
+    "0002": "1a893117-4de6-45b9-b112-643779deafaa",
+    "0003": "3e0bf329-539c-4d6e-9f19-d6c7f10dff28",
+    "0004": "53ebe086-9cab-4bee-9ddf-221f4e34aeb3",
+    "0005": "929efe42-a013-4427-be49-5431edf0e1da",
+    "0006": "6bcc03cf-cac2-4cba-b299-d4da18210941",
+    "0007": "ecdda68e-9b2d-45ef-9bf3-0a5a0e722ac3",
+    "0008": "22f00fd4-5798-40cd-990e-96f9d0de7539",
+    "0009": "a5f91f03-3a76-4328-b147-69dd0b9b611b",
+    "0010": "ca5af961-3a3e-4358-bf84-4b1af7726ae0",
+    "0011": "0288c8aa-156f-460b-adb8-17bc0f26a467",
+    "0012": "0d4f6429-d036-43b3-8f4a-f11bbbad017c",
+    "0013": "b393f1a1-cf80-4717-a8a3-ff96fc33be03",
+    "0014": "91121137-58fb-43b5-a916-cfa07c629918"
+  },
+  "templates": {
+    "0000": "surgery_inpatient",
+    "0001": "medical_inpatient_onco",
+    "0002": "medical_inpatient",
+    "0003": "medical_outpatient",
+    "0004": "medical_outpatient",
+    "0005": "medical_inpatient",
+    "0006": "medical_inpatient",
+    "0007": "delivery_inpatient_urg",
+    "0008": "surgery_inpatient",
+    "0009": "medical_outpatient",
+    "0010": "medical_inpatient",
+    "0011": "surgery_inpatient",
+    "0012": "surgery_inpatient",
+    "0013": "delivery_inpatient_hospit",
+    "0014": "medical_outpatient"
+  },
+  "fictomed_version": "0.1.0",
+  "fictomed_commit": "83ebca9ac9b38327a7ed634de420f9c225172769",
+  "notes": ""
+}

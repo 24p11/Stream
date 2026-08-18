@@ -1,0 +1,160 @@
+# 0010 — crh_generation.txt
+
+> réparation JSON : JSON réparé : 1 fermeture(s) excédentaire(s) (']' ou '}') retirée(s) en fin de fichier
+
+### Compte rendu d'hospitalisation
+
+**Hôpital Michallon - CHU Grenoble Alpes**
+**Service d’Endocrinologie**
+
+---
+
+**Identification du patient**
+Nom : Lesbegueries
+Prénom : Koralie
+Date de naissance : 13/05/2013
+
+---
+
+### Motif d’hospitalisation
+Koralie Lesbegueries, âgée de 12 ans, a été admise en urgence le 15 mars 2026 pour une décompensation aiguë de son diabète de type 1, compliquée d’une acidocétose. Elle présentait également un amaigrissement marqué ces dernières semaines.
+
+---
+
+### Antécédents
+- **Médicaux** : Diabète de type 1 diagnostiqué il y a 3 ans, traité par insulinothérapie.
+- **Chirurgicaux** : Appendicectomie à l’âge de 8 ans.
+- **Familiaux** : Pas d’antécédent notable de diabète ou de maladie métabolique chez les parents ou la fratrie.
+- **Allergies** : Aucune allergie connue.
+
+---
+
+### Mode de vie
+Koralie est scolarisée en classe de cinquième. Elle vit avec ses parents et son frère aîné. Elle ne fume pas et ne consomme pas d’alcool. Son activité physique est modérée, limitée par les épisodes de fatigue liés à son diabète. Son alimentation était déséquilibrée ces dernières semaines, avec des écarts répétés par rapport aux recommandations diététiques.
+
+---
+
+### Histoire de la maladie
+Koralie est suivie régulièrement pour son diabète de type 1, avec un équilibre glycémique habituellement satisfaisant sous schéma basal-bolus. Depuis environ un mois, elle présentait une fatigue progressive, une polydipsie et une polyurie marquées. Ses parents ont également noté un amaigrissement d’environ 4 kg en 3 semaines, sans modification volontaire de son alimentation. Deux jours avant l’hospitalisation, elle a développé des nausées et des douleurs abdominales, suivies de vomissements répétés. Devant l’aggravation des symptômes, les parents ont consulté aux urgences pédiatriques, où une acidocétose diabétique a été confirmée (glycémie à 3,8 g/L, cétonurie à 3+, pH veineux à 7,15). Elle a été transférée en endocrinologie pour prise en charge spécialisée.
+
+---
+
+### Examen clinique
+À l’admission, Koralie était consciente mais asthénique, avec des signes de déshydratation (muqueuses sèches, pli cutané persistant). Son poids était de 38 kg (perte de 4 kg par rapport à son poids habituel de 42 kg). La tension artérielle était à 105/60 mmHg, la fréquence cardiaque à 110 battements/minute, et la température à 37,2°C. L’examen abdominal retrouvait une sensibilité diffuse sans défense. L’auscultation cardiopulmonaire était normale. Il n’y avait pas de signe d’infection focale.
+
+---
+
+### Examens complémentaires
+- **Bilan biologique à l’admission** :
+  - Glycémie : 3,8 g/L (21 mmol/L).
+  - Gaz du sang veineux : pH 7,15, bicarbonates 10 mmol/L, lactates 1,8 mmol/L.
+  - Ionogramme sanguin : natrémie 132 mmol/L, kaliémie 4,8 mmol/L, créatinine 65 µmol/L (normale pour l’âge).
+  - Bandelette urinaire : glycosurie 3+, cétonurie 3+.
+  - NFS : hémoglobine 13,2 g/dL, leucocytes 12 000/mm³ (polynucléaires neutrophiles 75 %), plaquettes 320 000/mm³.
+  - CRP : 8 mg/L (normale).
+- **Électrocardiogramme** : Rythme sinusal régulier, sans trouble de la repolarisation.
+- **Radiographie de thorax** : Normale, sans foyer infectieux.
+
+---
+
+### Évolution pendant l'hospitalisation
+
+#### Démarche diagnostique
+Le diagnostic d’acidocétose diabétique a été confirmé dès l’admission. Une recherche étiologique a été menée pour expliquer la décompensation : absence de signe infectieux clinique ou biologique, pas d’erreur manifeste dans la gestion de l’insulinothérapie (les parents ont confirmé un respect des doses habituelles). L’interrogatoire a révélé des écarts alimentaires répétés ces dernières semaines, avec une consommation accrue de sucres rapides, ainsi qu’un stress scolaire récent pouvant avoir contribué à la déstabilisation glycémique.
+
+#### Traitements
+- **Réhydratation** : Perfusion de sérum physiologique à raison de 5 L/m²/jour pendant les 24 premières heures, avec correction progressive de la déshydratation.
+- **Insulinothérapie** : Perfusion intraveineuse continue d’insuline rapide à la dose de 0,1 UI/kg/h, relayée par un schéma basal-bolus sous-cutané dès la résolution de l’acidocétose (pH > 7,30, bicarbonates > 18 mmol/L, cétonurie négative).
+- **Supplémentation potassique** : Apport de 20 mmol de potassium par litre de soluté, adapté en fonction des ionogrammes de contrôle.
+- **Surveillance** : Glycémies capillaires horaires initialement, puis toutes les 3 heures après stabilisation. Ionogrammes sanguins toutes les 4 heures pendant les 24 premières heures, puis quotidiens. Bandelettes urinaires pour surveillance de la cétonurie.
+
+L’acidocétose a été corrigée en 36 heures, avec normalisation du pH et disparition de la cétonurie. Koralie a repris une alimentation orale progressive à J2, avec un retour à son schéma insulinique habituel sous-cutané.
+
+#### Éducation thérapeutique
+Une éducation diététique renforcée a été réalisée par la diététicienne du service, avec rappel des principes d’équilibre alimentaire adaptés au diabète de type 1. Les parents et Koralie ont également bénéficié d’un rappel sur la gestion des écarts alimentaires et la prévention des décompensations. Un entretien a été mené pour discuter des facteurs de stress scolaire et proposer un accompagnement psychologique si nécessaire.
+
+---
+
+### Conclusion
+Koralie Lesbegueries a présenté une décompensation aiguë de son diabète de type 1 sous forme d’acidocétose, favorisée par des écarts alimentaires et un amaigrissement récent. L’évolution a été favorable sous traitement, avec une correction complète de l’acidocétose en 36 heures. Elle est autorisée à rentrer à domicile ce 29 mars 2026, avec un suivi rapproché en consultation d’endocrinologie pédiatrique dans une semaine. Un renforcement de l’éducation thérapeutique et diététique a été mis en place pour prévenir les récidives.
+
+**Dr Françoise Medina**
+Service d’Endocrinologie
+Hôpital Michallon - CHU Grenoble Alpes
+
+
+---
+
+## Formulations
+
+```json
+{
+  "diagnostics": {
+    "Diabète sucré de type 1 - Avec acidocétose (E10.1)": [
+      "décompensation aiguë de son diabète de type 1, compliquée d’une acidocétose",
+      "acidocétose diabétique",
+      "décompensation aiguë de son diabète de type 1 sous forme d’acidocétose"
+    ],
+    "Perte de poids anormale (R63.4)": [
+      "amaigrissement marqué",
+      "amaigrissement d’environ 4 kg en 3 semaines",
+      "perte de 4 kg par rapport à son poids habituel"
+    ],
+    "Surveillance et conseils diététiques (Z71.3)": [
+      "éducation diététique renforcée",
+      "rappel des principes d’équilibre alimentaire adaptés au diabète de type 1",
+      "éducation diététique"
+    ],
+    "Autres conseils précisés (Z71.8)": [
+      "rappel sur la gestion des écarts alimentaires et la prévention des décompensations",
+      "entretien [...] pour discuter des facteurs de stress scolaire"
+    ]
+  },
+  "informations": {
+    "Date entrée": [
+      "15 mars 2026"
+    ],
+    "Date de sortie": [
+      "29 mars 2026"
+    ],
+    "Service d'hospitalisation": [
+      "Service d’Endocrinologie",
+      "Endocrinologie"
+    ],
+    "Nom/Prénom du patient": [
+      "Lesbegueries Koralie"
+    ],
+    "Nom/Prénom du médecin": [
+      "Françoise Medina"
+    ],
+    "Âge": [
+      "12 ans"
+    ],
+    "Sexe": [
+      "Féminin"
+    ],
+    "État général": [
+      "consciente mais asthénique"
+    ],
+    "Poids": [
+      "38 kg",
+      "perte de 4 kg par rapport à son poids habituel de 42 kg"
+    ],
+    "Statut gestationnel": [],
+    "Gestité": [],
+    "NFS": [
+      "hémoglobine 13,2 g/dL, leucocytes 12 000/mm³ (polynucléaires neutrophiles 75 %), plaquettes 320 000/mm³"
+    ],
+    "Créatinine": [
+      "créatinine 65 µmol/L (normale pour l’âge)"
+    ],
+    "Bilan hepatique": [],
+    "Traitements": [
+      "Perfusion de sérum physiologique",
+      "Perfusion intraveineuse continue d’insuline rapide",
+      "schéma basal-bolus sous-cutané",
+      "Supplémentation potassique"
+    ]
+  }
+}
+```

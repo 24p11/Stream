@@ -1,0 +1,117 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 77 ans
+- Sexe du patient : Masculin
+- Date d'entrée : 08/01/2026
+- Date de sortie : 10/01/2026
+- Date de naissance : 30/08/1948
+- Nom du patient : Delaroche
+- Prénom du patient : Zion
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Prise en charge en hospitalisation complète pour résections osseuses localisées et/ou ablation de matériel de fixation interne au niveau de la hanche et du fémur.
+- Codage CIM10 :
+   * Diagnostic principal : Soins de contrôle impliquant l'enlèvement d'une plaque et autre prothèse interne (orthopédique) de fixation (Z470)
+   * Diagnostics associés :
+      - Surveillance des sutures et pansements chirurgicaux (Z480)
+- Acte CCAM : ablation de matériel d'ostéosynthèse des membres sur plusieurs sites, par abord direct (PAGA009)
+- Nom du médecin / signataire : Emile Demer
+- Service : CH.ORTHO.ET TRAUMATO
+- Hôpital : Hôpital Saint-André - CHU de Bordeaux
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="Z47.0">
+
+# Z47.0 — Soins de contrôle impliquant l'enlèvement d'une plaque et autre prothèse interne de fixation
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z40-Z54 : Sujets ayant recours aux services de santé pour des actes médicaux et des soins spécifiques
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- enlèvement de broche
+- enlèvement de plaque
+- enlèvement de tringle
+- enlèvement de vis
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du bloc Z40-Z54) :
+
+examen de contrôle pour surveillance médicale après traitement (Z08-Z09)
+
+Affections relevant d'autres codes (hérité de la catégorie Z47) :
+
+complications de prothèses, implants et greffes orthopédiques internes (T84.-)
+examen de contrôle après traitement d'une fracture (Z09.4)
+soins impliquant une rééducation (Z50.-)
+
+Affections relevant d'autres codes :
+
+enlèvement d'un appareil externe de fixation (Z47.8)
+
+## Formulations cliniques alternatives
+- ablation clou Gamma
+- Ablation (de), clou orthopédique (interne)
+- Ablation (de), plaque orthopédique (interne)
+- Ablation (de), prothèse interne de fixation
+- ablation matériel cheville
+- ablation matériel ostéo-synthèse fémur
+- ablation matériel ostéosynthèse hanche
+- ablation matériel prothétique
+- cerclage fémoral
+- Changement (de), dispositif de, immobilisation (orthopédique), interne
+- changement prothèse genou
+- changement PTH
+- reprise prothèse hanche
+- révision PTH
+- Surveillance (médicale) (de) (pour), orthopédique (changement) (contrôle) (enlèvement), broche
+- Surveillance (médicale) (de) (pour), orthopédique (changement) (contrôle) (enlèvement), clou
+- Surveillance (médicale) (de) (pour), orthopédique (changement) (contrôle) (enlèvement), plaque
+- Surveillance (médicale) (de) (pour), orthopédique (changement) (contrôle) (enlèvement), prothèse interne de fixation
+- Surveillance (médicale) (de) (pour), orthopédique (changement) (contrôle) (enlèvement), tringle
+- Surveillance (médicale) (de) (pour), orthopédique (changement) (contrôle) (enlèvement), vis
+
+</fiche_code>
+
+<fiche_code code="Z48.0">
+
+# Z48.0 — Surveillance des sutures et pansements chirurgicaux
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z40-Z54 : Sujets ayant recours aux services de santé pour des actes médicaux et des soins spécifiques
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- ablation de sutures
+- changement de pansement
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du bloc Z40-Z54) :
+
+examen de contrôle pour surveillance médicale après traitement (Z08-Z09)
+
+Affections relevant d'autres codes (hérité de la catégorie Z48) :
+
+examen de contrôle après :
+ - chirurgie (Z08.0)  (Z09.0) 
+ - traitement d'une fracture (Z09.4) 
+mise en place et ajustement de prothèses et d'autres appareils (Z44-Z46) 
+soins de contrôle orthopédiques (Z47.-) 
+surveillance de stomies (Z43.-)
+
+## Formulations cliniques alternatives
+- Ablation (de), points de suture
+- HAD postopératoire
+- Pansement, changement de
+- Pansement, post-opératoire, impliquant surveillance
+
+</fiche_code>

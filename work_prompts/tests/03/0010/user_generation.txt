@@ -1,0 +1,200 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 12 ans
+- Sexe du patient : Féminin
+- Date d'entrée : 15/03/2026
+- Date de sortie : 29/03/2026
+- Date de naissance : 13/05/2013
+- Nom du patient : Lesbegueries
+- Prénom du patient : Koralie
+- Mode d'entrée' : URGENCES
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Hospitalisation en hospitalisation complète pour poussée aigue de la maladie  Diabète sucré de type 1, avec acidocétose.
+- Codage CIM10 :
+   * Diagnostic principal : Diabète sucré de type 1, avec acidocétose (E101)
+   * Diagnostics associés :
+      - Perte de poids anormale (R634)
+      - Surveillance et conseils diététiques (Z713)
+      - Autres conseils précisés (Z718)
+- Nom du médecin / signataire : Francoise Medina
+- Service : ENDOCRINOLOGIE
+- Hôpital : Hôpital Michallon - CHU Grenoble Alpes
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="E10.1">
+
+# E10.1 — Diabète sucré de type 1 - " Avec acidocétose "
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E10-E14 : Diabète sucré
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie E10 :
+- diabète (sucré) instable
+- diabète (sucré) :
+ - instable
+ - juvénile
+ - sujet à cétose
+- diabète (sucré) juvénile
+- diabète (sucré) sujet à cétose
+- diabète (sucré) type I
+
+Au niveau du code :
+- acidocétose diabétique, sans mention de coma
+- acidose diabétique, sans mention de coma
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité de la catégorie E10) :
+
+anomalie de l'épreuve de tolérance au glucose (R73.0)
+diabète sucré :
+ - au cours de la grossesse, de l'accouchement et de la puerpéralité (O24.-) 
+ - de malnutrition (E12.-) 
+ - du nouveau-né (P70.2) 
+- glycosurie :
+ - SAI (R81) 
+ - rénale (E74.8) 
+hypo-insulinémie postchirurgicale (E89.1)
+
+## Formulations cliniques alternatives
+- Acétonémie, diabétique (type), insulino-dépendant
+- Acidocétose, diabétique (type), insulino-dépendant
+- acidose cétose diabétique
+- Céto-acidose diabétique, type, insulino-dépendant
+- Cétonurie, diabétique, type, insulino-dépendant
+- Cétose, diabétique, type, insulino-dépendant
+- Diabète (équilibré) (familial) (grave) (léger) (sucré) (de), insulino-dépendant (de), avec, acidocétose
+
+</fiche_code>
+
+<fiche_code code="R63.4">
+
+# R63.4 — Perte de poids anormale
+
+## Position dans la classification
+- Chapitre XVIII : Symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs
+- Bloc R50-R69 : Symptômes et signes généraux
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVIII) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+résultats anormaux constatés au cours de l'examen prénatal systématique de la mère (O28.-)
+
+Affections relevant d'autres codes (hérité de la catégorie R63) :
+
+boulimie SAI (F50.2)
+malnutrition (E40-E46)
+troubles de l'alimentation d'origine non organique (F50.-)
+
+## Formulations cliniques alternatives
+- Amaigrissement
+- amaigrissement extrême
+- amaigrissement massif
+- amaigrissement rapide
+- consomption terminale
+- diminution poids
+- hypotrophie pondérale
+- insuffisance pondérale
+- maigreur
+- maigreur constitutionnelle
+- maigreur extrême
+- Perte(s) (de), poids, anormale
+
+</fiche_code>
+
+<fiche_code code="Z71.3">
+
+# Z71.3 — Surveillance et conseils diététiques
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z70-Z76 : Sujets ayant recours aux services de santé pour d'autres motifs
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- surveillance et conseils diététiques (dans le cas de) allergies ou intolérances alimentaires
+- surveillance et conseils diététiques (dans le cas de) colite
+- surveillance et conseils diététiques (dans le cas de) diabète sucré
+- surveillance et conseils diététiques (dans le cas de) gastrite
+- surveillance et conseils diététiques (dans le cas de) hypercholestérolémie
+- surveillance et conseils diététiques (dans le cas de) obésité
+- surveillance et conseils diététiques (dans le cas de)  SAI
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité de la catégorie Z71) :
+
+conseil en matière de :
+ - contraception et mesures procréatives (Z30-Z31) 
+ - sexualité (Z70.-)
+
+## Formulations cliniques alternatives
+- Conseil (en) (pour) (voir aussi personne, en quête de conseils), diététique
+- Education diabétique
+- Education diététique
+- Education diététique pour diabète sucré
+- Education diététique pour obésité
+- Personne, en quête de conseils (pour), diététiques
+- Surveillance diabétique
+- Surveillance diététique
+- Surveillance diététique pour diabète sucré
+- Surveillance diététique pour obésité
+- Surveillance (médicale) (de) (pour), diététique
+
+</fiche_code>
+
+<fiche_code code="Z71.8">
+
+# Z71.8 — Autres conseils précisés
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z70-Z76 : Sujets ayant recours aux services de santé pour d'autres motifs
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- conseils à propos de la consanguinité
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité de la catégorie Z71) :
+
+conseil en matière de :
+ - contraception et mesures procréatives (Z30-Z31) 
+ - sexualité (Z70.-)
+
+Formes spécifiées de la catégorie Z71 :
+- Conseil à propos du virus de l'immunodéficience humaine [VIH] [→ Z71.7]
+- Conseil et surveillance pour alcoolisme [→ Z71.4]
+- Conseil et surveillance pour toxicomanie et pharmacodépendance [→ Z71.5]
+- Conseil pour tabagisme [→ Z71.6]
+- Personne consultant pour le compte d'un tiers [→ Z71.0]
+- Sujet consultant pour explications des résultats d'examen [→ Z71.2]
+- Sujet inquiet de son état de santé, aucun diagnostic n'étant posé [→ Z71.1]
+- Surveillance et conseils diététiques [→ Z71.3]
+
+## Formulations cliniques alternatives
+- Consanguinité (antécédent familial), conseils
+- Consultation médicale, précisée nca
+- Explication (de), médication
+- Personne, en quête de conseils (pour), consanguinité
+- Personne, en quête de conseils (pour), médication
+- Personne, en quête de conseils (pour), motif précisé nca
+
+</fiche_code>
