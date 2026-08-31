@@ -1,0 +1,118 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 61 ans
+- Sexe du patient : Masculin
+- Date d'entrée : 24/10/2025
+- Date de sortie : 29/10/2025
+- Date de naissance : 25/02/1964
+- Nom du patient : Kopaliani
+- Prénom du patient : Jean-claude
+- Mode d'entrée' : URGENCES
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
+- Codage CIM10 :
+   * Diagnostic principal : Autres accidents ischémiques cérébraux transitoires et syndromes apparentés (G458)
+   * Diagnostics associés :
+      - Hyperlipidémie, sans précision (E785)
+- Nom du médecin / signataire : Hakim Juliot
+- Service : NEURO-VASCULAIRE
+- Hôpital : Hôpital Nord - Assistance Publique – Hôpitaux de Marseille
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="G45.8">
+
+# G45.8 — Autres accidents ischémiques cérébraux transitoires et syndromes apparentés
+
+## Position dans la classification
+- Chapitre VI : Maladies du système nerveux
+- Bloc G40-G47 : Affections épisodiques et paroxystiques
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre VI) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie G45) :
+
+ischémie cérébrale du nouveau-né (P91.0)
+
+Formes spécifiées de la catégorie G45 :
+- Accident ischémique transitoire de territoires artériels précérébraux multiples et bilatéraux [→ G45.2]
+- Amaurose fugace [→ G45.3]
+- Amnésie globale transitoire [→ G45.4]
+- Syndrome carotidien (hémisphérique) [→ G45.1]
+- Syndrome vertébrobasilaire [→ G45.0]
+
+## Formulations cliniques alternatives
+- Accident - voir aussi traumatisme, ischémique cérébral transitoire (de), type précisé nca et syndrome apparenté
+- accidents cérébraux transitoires
+- accidents vasculaires cérébraux transitoires
+- AIT tronc cérébral
+- antécédent AIT sylvien
+- antécédent AIT sylvien multilacunaire
+- AVC transitoire vertébral
+- hémiplégie transitoire
+- Insuffisance (de), artère, artérielle, précérébrale nca
+- Insuffisance (de), cérébrovasculaire (aiguë), avec signes neurologiques focaux et transitoires
+- ischémie transitoire territoire sylvien
+- Syndrome (de) - voir aussi maladie, détournement de l'artère, sous-clavière
+- Syndrome (de) - voir aussi maladie, suppléance vertébro-sous-clavière
+- syndrome suppléance vertébro-sous-clavière
+- vol sous-clavier
+
+</fiche_code>
+
+<fiche_code code="E78.5">
+
+# E78.5 — Hyperlipidémie, sans précision
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E70-E90 : Anomalies du métabolisme
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité du bloc E70-E90) :
+
+anémies hémolytiques dues à des anomalies enzymatiques (D55.-)
+déficit en 5-alpha-réductase (E29.1)
+hyperplasie surrénale congénitale (E25.0)
+syndrome de :
+ - Ehlers–Danlos (Q79.6) 
+ - Marfan (Q87.4) 
+ - résistance aux androgènes (E34.5)
+
+Affections relevant d'autres codes (hérité de la catégorie E78) :
+
+sphingolipidose (E75.0-E75.3)
+
+## Formulations cliniques alternatives
+- hyperlipémie
+- Hyperlipidémie
+- Hyperlipidémie SAI
+- hyperlipoprotéinémie
+- Hyperlipoprotéinémie (à)
+- lipidémie
+- Lipoprotéinémie (voir aussi hyperlipoprotéinémie)
+- surcharge lipidique
+- Xanthome (familial) (héréditaire) (de), hyperlipidémique
+- Xanthome hyperlipidémique
+
+</fiche_code>

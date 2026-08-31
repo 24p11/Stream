@@ -1,0 +1,129 @@
+# 0007 — crh_generation.txt
+
+### Hôpital Pellegrin - CHU de Bordeaux
+Service d'ENDOCRINOLOGIE
+
+Nom : Laffaille
+Prénom : Yvon
+Date de naissance : 01/05/1964
+
+---
+
+### Motif d'hospitalisation
+M. Yvon Laffaille, âgé de 62 ans, a été admis en hospitalisation ambulatoire ce jour pour un examen de contrôle post-chimiothérapie dans le cadre de la surveillance de son diabète de type 2 et de ses comorbidités métaboliques.
+
+---
+
+### Antécédents
+- Médicaux :
+  - Diabète de type 2 non insulinodépendant, diagnostiqué il y a 8 ans, actuellement sans complication connue.
+  - Hypercholestérolémie familiale, suivie depuis une dizaine d’années.
+  - Hypertension artérielle essentielle, stabilisée sous traitement.
+- Chirurgicaux : Appendicectomie dans l’enfance.
+- Familiaux : Père décédé d’un infarctus du myocarde à 68 ans.
+- Allergies : Aucune allergie médicamenteuse connue.
+
+---
+
+### Mode de vie
+M. Laffaille est retraité, ancien employé dans le secteur du bâtiment. Il vit seul à domicile et gère lui-même ses repas. Il ne fume pas et ne consomme pas d’alcool de manière régulière. Il signale une activité physique modérée, limitée à la marche quotidienne.
+
+---
+
+### Histoire de la maladie
+Le patient est suivi pour un diabète de type 2 depuis 2018, initialement découvert lors d’un bilan systématique. Il a bénéficié d’une chimiothérapie dans le cadre d’une affection néoplasique récemment traitée, dont il est actuellement en rémission. Ce jour, il consulte pour un contrôle métabolique et une évaluation diététique dans le cadre de son suivi régulier. Il décrit une stabilité de son état général, sans signe d’hypoglycémie ni de déséquilibre glycémique récent. Son hypertension artérielle est bien contrôlée sous traitement, et son hypercholestérolémie est suivie par des bilans lipidiques réguliers.
+
+---
+
+### Examen clinique
+À l’examen, le patient est apyrétique, avec une tension artérielle mesurée à 130/80 mmHg aux deux bras. Le pouls est régulier à 72 battements par minute. L’auscultation cardio-pulmonaire est sans particularité. L’abdomen est souple et indolore, sans hépatomégalie ni masse palpable. Les réflexes ostéotendineux sont présents et symétriques. Le poids est stable à 82 kg pour une taille de 1,75 m (IMC à 26,8 kg/m²). Il n’y a pas de signe de neuropathie périphérique ni de lésion cutanée évocatrice de complication diabétique.
+
+---
+
+### Examens complémentaires
+Un bilan biologique a été réalisé ce jour :
+- Glycémie à jeun : 1,20 g/L (valeurs antérieures stables autour de 1,10-1,30 g/L).
+- HbA1c : 6,8 % (objectif atteint).
+- Bilan lipidique : cholestérol total à 2,10 g/L, LDL à 1,30 g/L, HDL à 0,50 g/L, triglycérides à 1,20 g/L.
+- Créatinine : 85 µmol/L (DFG estimé à 80 mL/min/1,73 m²).
+- Ionogramme sanguin et bilan hépatique normaux.
+- Bandelette urinaire négative pour la protéinurie et la cétonurie.
+
+---
+
+### Conclusion
+M. Laffaille présente un diabète de type 2 bien équilibré sous traitement oral, sans complication apparente. Son hypertension artérielle et son hypercholestérolémie sont contrôlées. Le bilan métabolique actuel est satisfaisant, et aucune modification thérapeutique n’est nécessaire à ce stade. Une consultation diététique a été programmée pour optimiser ses apports nutritionnels, notamment dans le cadre de sa rémission post-chimiothérapie. Le patient est autorisé à regagner son domicile avec un rendez-vous de suivi dans 3 mois.
+
+Bordeaux, le 13/05/2026
+Dr Bernadette Dumasfaure
+Service d’Endocrinologie
+Hôpital Pellegrin - CHU de Bordeaux
+
+
+---
+
+## Formulations
+
+```json
+{
+  "diagnostics": {
+    "Diabète sucré de type 2 - sans complication - diabète sucré de type 2 non insulinotraité ou sans précision (E11.98)": [
+      "Diabète de type 2 non insulinodépendant",
+      "diabète de type 2"
+    ],
+    "Hypercholestérolémie essentielle (E78.0)": [
+      "Hypercholestérolémie familiale",
+      "hypercholestérolémie"
+    ],
+    "Hypertension essentielle (primitive) (I10)": [
+      "Hypertension artérielle essentielle",
+      "hypertension artérielle"
+    ],
+    "Surveillance et conseils diététiques (Z71.3)": [
+      "consultation diététique",
+      "éducation diététique"
+    ]
+  },
+  "informations": {
+    "Date entrée": [
+      "13/05/2026"
+    ],
+    "Date de sortie": [
+      "13/05/2026"
+    ],
+    "Service d'hospitalisation": [
+      "Service d’ENDOCRINOLOGIE"
+    ],
+    "Nom/Prénom du médecin": [
+      "Bernadette Dumasfaure"
+    ],
+    "Nom/Prénom du patient": [
+      "Yvon Laffaille"
+    ],
+    "Poids": [
+      "82 kg"
+    ],
+    "Âge": [
+      "62 ans"
+    ],
+    "Sexe": [
+      "Masculin"
+    ],
+    "État général": [
+      "stabilité de son état général",
+      "état général conservé"
+    ],
+    "NFS": [],
+    "Créatinine": [
+      "85 µmol/L"
+    ],
+    "Bilan hepatique": [
+      "normaux"
+    ],
+    "Traitements": [
+      "traitement oral",
+      "traitement"
+    ]
+  }
+}
+```

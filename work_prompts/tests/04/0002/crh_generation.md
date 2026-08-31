@@ -1,0 +1,141 @@
+# 0002 — crh_generation.txt
+
+> réparation JSON : JSON réparé : 1 accolade(s) fermante(s) manquante(s) en fin de fichier
+
+### Hôpital de la Timone - Assistance Publique – Hôpitaux de Marseille
+Service d'Hépato-Gastro-Entérologie
+
+**Compte rendu d'hospitalisation**
+
+**Patient :**
+Nom : Ozon
+Prénom : Louann
+Date de naissance : 01/02/1984
+
+---
+
+### Motif d’hospitalisation
+Mme Ozon, âgée de 41 ans, a été admise le 27 août 2025 pour prise en charge diagnostique et thérapeutique d’une pancréatite aiguë sévère. Elle présentait depuis 48 heures des douleurs épigastriques intenses irradiant dans le dos, associées à des nausées et des vomissements. L’aggravation rapide des symptômes a motivé son hospitalisation en urgence.
+
+### Antécédents
+- **Médicaux :**
+  - Diabète de type 2 non insulinodépendant, diagnostiqué il y a 3 ans, équilibré sous mesures hygiéno-diététiques.
+  - Hypertension artérielle essentielle, connue depuis 5 ans, traitée par inhibiteur de l’enzyme de conversion.
+  - Appendicectomie dans l’enfance.
+- **Chirurgicaux :** Aucun autre antécédent notable.
+- **Familiaux :** Aucun antécédent familial de pancréatite ou de maladie métabolique connue.
+- **Allergies :** Aucune allergie médicamenteuse ou alimentaire connue.
+
+### Mode de vie
+Mme Ozon est employée comme gestionnaire dans une entreprise locale. Elle ne fume pas et ne consomme pas d’alcool de manière régulière. Elle pratique une activité physique modérée (marche, natation) deux fois par semaine. Elle vit seule et est autonome pour les activités de la vie quotidienne. Pas de grossesse en cours, contraception par dispositif intra-utérin.
+
+### Histoire de la maladie
+La patiente décrit l’apparition brutale, il y a trois jours, de douleurs abdominales intenses localisées en épigastre, avec une irradiation postérieure. Ces douleurs, initialement intermittentes, sont devenues continues et insomniantes, accompagnées de nausées et de vomissements alimentaires puis bilieux. Elle rapporte également une asthénie marquée et une sensation de malaise général. Aucun facteur déclenchant évident n’a été identifié (pas de prise médicamenteuse récente en dehors de son traitement habituel, pas d’excès alimentaire ou alcoolique). Devant la persistance des symptômes, elle a consulté aux urgences où un bilan biologique initial a révélé une lipasémie élevée à 12 fois la normale, confirmant le diagnostic de pancréatite aiguë.
+
+### Examen clinique
+À l’admission, la patiente est apyrétique, avec une tension artérielle à 145/90 mmHg, une fréquence cardiaque à 95 battements par minute et une saturation en oxygène à 98 % en air ambiant. Elle pèse 72 kg pour une taille de 1,68 m (IMC à 25,5 kg/m²). L’examen abdominal retrouve une défense épigastrique sans contracture, avec une sensibilité marquée à la palpation. Les bruits hydro-aériques sont présents mais diminués. Il n’y a pas de signe d’ictère cutanéo-muqueux, ni d’œdème des membres inférieurs. L’auscultation cardiopulmonaire est sans particularité. Les réflexes ostéotendineux sont normaux, et il n’y a pas de signe de déshydratation.
+
+### Examens complémentaires
+- **Biologie :**
+  - Lipasémie : 1 850 UI/L (N < 60 UI/L), confirmant le diagnostic de pancréatite aiguë.
+  - Bilan hépatique : ASAT à 85 UI/L (N < 35), ALAT à 92 UI/L (N < 45), bilirubine totale à 18 µmol/L (N < 20), gamma-GT à 120 UI/L (N < 55), phosphatases alcalines à 110 UI/L (N < 120).
+  - NFS : leucocytes à 14 500/mm³ (N : 4 000–10 000), hémoglobine à 13,2 g/dL, plaquettes à 320 000/mm³.
+  - CRP : 185 mg/L (N < 5).
+  - Créatininémie : 78 µmol/L (N : 44–80), urée à 6,2 mmol/L.
+  - Glycémie à jeun : 8,2 mmol/L (1,48 g/L), HbA1c à 7,1 %.
+  - Ionogramme sanguin : sodium à 138 mmol/L, potassium à 4,1 mmol/L, calcémie corrigée à 2,20 mmol/L.
+- **Imagerie :**
+  - Échographie abdominale : pancréas œdématié avec infiltration de la graisse péripancréatique, pas de dilatation des voies biliaires intra- ou extrahépatiques, vésicule biliaire alithiasique.
+  - TDM abdominale avec injection : pancréatite aiguë nécrotico-hémorragique avec coulées de nécrose péripancréatiques et infiltration de la racine du mésentère. Pas d’épanchement intra-abdominal significatif. Pas de signe de thrombose vasculaire.
+
+### Évolution pendant l'hospitalisation
+La prise en charge a consisté en une mise à jeun stricte avec nutrition parentérale périphérique, une hydratation intraveineuse adaptée et une antalgie multimodale (paracétamol, tramadol en perfusion continue). Une surveillance clinique et biologique rapprochée a été instaurée, avec monitorage des constantes vitales et contrôle quotidien de la lipasémie, de la CRP et du bilan hépatique. L’évolution a été favorable sous traitement, avec une diminution progressive des douleurs abdominales et une normalisation partielle des paramètres inflammatoires (CRP à 45 mg/L au 4ᵉ jour). La réalimentation orale a été reprise progressivement à J4, sans récidive des symptômes. Le diabète a été surveillé par des glycémies capillaires pluriquotidiennes, avec un équilibre satisfaisant sous régime seul. L’hypertension artérielle est restée stable sous traitement habituel, sans nécessité d’ajustement thérapeutique.
+
+### Conclusion
+Mme Ozon a présenté une pancréatite aiguë nécrotico-hémorragique d’étiologie indéterminée, survenant dans un contexte de diabète de type 2 et d’hypertension artérielle essentielle. L’évolution a été favorable sous traitement symptomatique, avec une régression des signes cliniques et biologiques. Elle est autorisée à regagner son domicile ce jour, avec un suivi en consultation spécialisée dans 15 jours pour réévaluation et recherche étiologique complémentaire (bilan lipidique, recherche de mutations génétiques si récidive). Un régime pauvre en graisses et une hydratation abondante sont recommandés. Son traitement habituel pour le diabète et l’hypertension est reconduit.
+
+Fait à Marseille, le 01 septembre 2025.
+
+Dr Erol Girardet
+Service d’Hépato-Gastro-Entérologie
+Hôpital de la Timone
+
+
+---
+
+## Formulations
+
+```json
+{
+  "diagnostics": {
+    "Autres pancréatites aiguës (K85.8)": [
+      "pancréatite aiguë sévère",
+      "pancréatite aiguë nécrotico-hémorragique",
+      "pancréatite aiguë"
+    ],
+    "Diabète sucré de type 2 - sans complication - non insulinotraité ou sans précision (E11.98)": [
+      "Diabète de type 2 non insulinodépendant",
+      "diabète de type 2"
+    ],
+    "Hypertension essentielle (primitive) (I10)": [
+      "Hypertension artérielle essentielle",
+      "hypertension artérielle"
+    ]
+  },
+  "informations": {
+    "Date entrée": [
+      "27 août 2025"
+    ],
+    "Date de sortie": [
+      "01 septembre 2025"
+    ],
+    "Service d'hospitalisation": [
+      "Service d'Hépato-Gastro-Entérologie"
+    ],
+    "Nom/Prénom du patient": [
+      "Ozon Louann"
+    ],
+    "Nom/Prénom du médecin": [
+      "Erol Girardet"
+    ],
+    "Âge": [
+      "41 ans"
+    ],
+    "Sexe": [
+      "Féminin"
+    ],
+    "État général": [
+      "autonome pour les activités de la vie quotidienne"
+    ],
+    "Poids": [
+      "72 kg"
+    ],
+    "Statut gestationnel": [
+      "Pas de grossesse en cours, contraception par dispositif intra-utérin"
+    ],
+    "Gestité": [],
+    "NFS": [
+      "leucocytes à 14 500/mm³",
+      "hémoglobine à 13,2 g/dL",
+      "plaquettes à 320 000/mm³"
+    ],
+    "Créatinine": [
+      "78 µmol/L"
+    ],
+    "Bilan hépatique": [
+      "ASAT à 85 UI/L",
+      "ALAT à 92 UI/L",
+      "bilirubine totale à 18 µmol/L",
+      "gamma-GT à 120 UI/L",
+      "phosphatases alcalines à 110 UI/L"
+    ],
+    "Traitements": [
+      "mise à jeun stricte avec nutrition parentérale périphérique",
+      "hydratation intraveineuse adaptée",
+      "antalgie multimodale (paracétamol, tramadol en perfusion continue)",
+      "régime pauvre en graisses",
+      "traitement habituel pour le diabète et l’hypertension"
+    ]
+  }
+}
+```

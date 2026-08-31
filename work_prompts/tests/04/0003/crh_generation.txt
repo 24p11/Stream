@@ -1,0 +1,151 @@
+{"CR": "## Compte rendu opératoire de césarienne
+
+### Identification du patient
+Nom : Breysse
+Prénom : Madeleine
+Date de naissance : 10/12/1989
+Âge : 35 ans
+
+### Date de l’intervention
+22/04/2025
+
+### Service
+Obstétrique – Hôpital Européen Georges-Pompidou – Assistance Publique Hôpitaux de Paris
+
+### Indication opératoire
+Patiente primipare admise pour césarienne programmée en raison d’une grossesse prolongée à 42 semaines d’aménorrhée (SA) associée à des anomalies des contractions utérines objectivées lors du monitorage. La décision de césarienne a été prise devant la persistance d’une dystocie de rétraction cervicale malgré une tentative de maturation cervicale par prostaglandines.
+
+### Déroulement de l’intervention
+- Installation en décubitus dorsal, sous rachianesthésie efficace.
+- Incision de Pfannenstiel après désinfection cutanée et mise en place des champs opératoires.
+- Ouverture de l’aponévrose des grands droits, dissection prudente des plans musculaires.
+- Ouverture du péritoine pariétal, exposition de l’utérus.
+- Incision transversale segmentaire basse, extraction fœtale sans difficulté à 10h45. Naissance d’un enfant de sexe masculin, pesant 3850 grammes, avec un score d’Apgar à 9/10 à 1 minute et 10/10 à 5 minutes.
+- Délivrance dirigée par traction contrôlée du cordon, vérification de la vacuité utérine.
+- Suture utérine en deux plans par surjet de fil résorbable.
+- Fermeture pariétale plan par plan, vérification de l’hémostase.
+- Pas de complication peropératoire. Durée totale de l’intervention : 45 minutes.
+
+### Prescriptions postopératoires
+- Surveillance rapprochée des saignements et de la reprise du transit.
+- Antalgiques de palier 1 (paracétamol) et prévention thromboembolique par bas de contention.
+- Allaitement maternel autorisé dès la salle de réveil.
+
+### Signataire
+Dr Monique Painchault
+Obstétricienne
+
+-----
+
+## Compte rendu d’hospitalisation en service d’obstétrique avant l’accouchement
+
+### Identification du patient
+Nom : Breysse
+Prénom : Madeleine
+Date de naissance : 10/12/1989
+Âge : 35 ans
+
+### Dates d’hospitalisation
+Entrée : 18/04/2025
+Sortie : 25/04/2025
+
+### Service
+Obstétrique – Hôpital Européen Georges-Pompidou – Assistance Publique Hôpitaux de Paris
+
+### Antécédents
+- Médicaux : Aucun antécédent notable.
+- Chirurgicaux : Appendicectomie à l’âge de 12 ans.
+- Familiaux : Mère hypertendue, pas d’antécédent de diabète ou de pathologie thromboembolique.
+- Allergies : Aucune allergie médicamenteuse connue.
+
+### Mode de vie
+- Profession : Enseignante en école primaire.
+- Toxiques : Tabagisme sevré depuis 5 ans (5 paquets-années avant sevrage).
+- Activité physique : Marche quotidienne de 30 minutes.
+- Situation sociale : Vit en couple, soutien familial présent.
+
+### Traitement à l’entrée
+- Supplémentation en fer (Tardyféron®) depuis le 6ème mois de grossesse.
+- Vitamine D (Uvedose®) en prévention de la carence.
+
+### Résumé de la grossesse
+Grossesse suivie de manière régulière, sans complication notable jusqu’à 40 SA. À 41 SA + 3 jours, la patiente a été hospitalisée pour surveillance en raison d’un terme dépassé. Le monitorage fœtal a révélé des contractions utérines irrégulières et une stagnation de la dilatation cervicale à 2 cm malgré l’administration de prostaglandines (Propess®). Devant la persistance d’une dystocie de rétraction cervicale et l’absence de progression du travail, la décision de césarienne programmée a été prise après concertation pluridisciplinaire.
+
+### Examen clinique à l’entrée
+- Constantes : TA 120/70 mmHg, FC 80 bpm, SpO2 99 % en air ambiant, température 36,8°C.
+- Poids : 78 kg (prise de poids totale de 12 kg depuis le début de la grossesse).
+- Examen cardiopulmonaire : Normal.
+- Examen obstétrical : Utérus gravide, hauteur utérine à 34 cm. Col utérin postérieur, long de 1 cm, perméable à 1 doigt. Présentation céphalique fixée. Activité utérine irrégulière à la palpation.
+- Toucher vaginal : Stagnation de la dilatation à 2 cm après 12 heures de surveillance.
+
+### Examens complémentaires
+- **Biologie** :
+  - NFS : Hémoglobine à 11,2 g/dL, plaquettes à 220 G/L, leucocytes à 9,5 G/L.
+  - Bilan hépatique : Normal (ASAT 22 UI/L, ALAT 18 UI/L, bilirubine totale 8 µmol/L).
+  - Créatinine : 65 µmol/L, ionogramme sanguin normal.
+  - Groupe sanguin : O positif, RAI négatives.
+- **Monitorage fœtal** : Rythme cardiaque fœtal réactif, contractions utérines irrégulières et peu efficaces.
+- **Échographie obstétricale** : Liquide amniotique en quantité normale, placenta fundique grade II, biométrie fœtale estimée à 3800 grammes.
+
+### Conclusion
+Patiente primipare admise pour terme dépassé (42 SA) compliqué d’une dystocie de rétraction cervicale. Césarienne programmée réalisée sans complication, donnant naissance à un enfant vivant de sexe masculin en bonne santé. Surveillance postopératoire simple, sortie prévue à J3 post-césarienne après vérification de la bonne cicatrisation et reprise du transit.
+
+### Signataire
+Dr Monique Painchault
+Obstétricienne
+
+-----
+
+## Compte rendu d’accouchement par voie basse (non réalisé – césarienne programmée)
+
+### Identification du patient
+Nom : Breysse
+Prénom : Madeleine
+Date de naissance : 10/12/1989
+
+### Date de l’accouchement
+22/04/2025
+
+### Service
+Obstétrique – Hôpital Européen Georges-Pompidou – Assistance Publique Hôpitaux de Paris
+
+### Sage-femme
+Mme Sophie Lambert
+
+### Obstétricienne
+Dr Monique Painchault
+
+### Déroulement
+L’accouchement par voie basse n’a pas été possible en raison d’une dystocie de rétraction cervicale persistante malgré les tentatives de maturation cervicale. Une césarienne programmée a été réalisée (voir compte rendu opératoire ci-dessus). Naissance d’un enfant vivant de sexe masculin, pesant 3850 grammes, avec un score d’Apgar à 9/10 à 1 minute et 10/10 à 5 minutes.
+
+-----
+
+## Compte rendu d’hospitalisation en suite de couches (maternité)
+
+### Identification du patient
+Nom : Breysse
+Prénom : Madeleine
+Date de naissance : 10/12/1989
+
+### Dates d’hospitalisation
+Entrée : 22/04/2025 (post-césarienne)
+Sortie : 25/04/2025
+
+### Service
+Maternité – Hôpital Européen Georges-Pompidou – Assistance Publique Hôpitaux de Paris
+
+### Résumé de la grossesse et de l’accouchement
+Patiente primipare de 35 ans, admise pour terme dépassé (42 SA) compliqué d’une dystocie de rétraction cervicale. Césarienne programmée réalisée le 22/04/2025 sans complication, donnant naissance à un enfant vivant de sexe masculin. Surveillance postopératoire initiale en salle de réveil puis transfert en maternité.
+
+### Évolution dans le service
+- **J0 (22/04/2025)** : Surveillance rapprochée des saignements et de la douleur postopératoire. Reprise de l’alimentation légère à H6. Mobilisation précoce encouragée. Allaitement maternel initié avec succès.
+- **J1 (23/04/2025)** : Douleur contrôlée par paracétamol, reprise du transit (premiers gaz). Cicatrice propre, sans signe d’infection. Surveillance de la diurèse et des lochies normales.
+- **J2 (24/04/2025)** : Autonomie retrouvée, marche sans difficulté. Allaitement bien toléré par l’enfant. Bilan biologique de contrôle : hémoglobine stable à 10,8 g/dL, pas de signe d’anémie.
+- **J3 (25/04/2025)** : Cicatrice indolore, pas de signe inflammatoire local. Sortie autorisée avec conseils de surveillance à domicile (saignements, fièvre, douleur).
+
+### Conclusion
+Séjour en maternité sans complication. Cicatrisation satisfaisante, allaitement maternel exclusif bien installé. Sortie à J3 post-césarienne avec suivi en consultation postnatale programmée à 6 semaines.
+
+### Signataire
+Dr Monique Painchault
+Obstétricienne", "formulations": {"diagnostics": {"Autres anomalies des forces en jeu au cours du travail (O62.8)": ["dystocie de rétraction cervicale", "anomalies des contractions utérines", "contractions utérines irrégulières et peu efficaces"], "Grossesse prolongée (O48)": ["terme dépassé", "grossesse prolongée à 42 semaines d’aménorrhée", "postmaturité"], "Naissance unique, enfant vivant (Z370)": ["naissance d’un enfant vivant de sexe masculin", "enfant vivant"]}, "informations": {"Date entrée": ["18/04/2025"], "Date de sortie": ["25/04/2025"], "Service d'hospitalisation": ["Obstétrique – Hôpital Européen Georges-Pompidou – Assistance Publique Hôpitaux de Paris", "Maternité – Hôpital Européen Georges-Pompidou – Assistance Publique Hôpitaux de Paris"], "Date de l’intervention": ["22/04/2025"], "Nom/Prénom du chirurgien": ["Dr Monique Painchault"], "Nom/Prénom du patient": ["Breysse Madeleine"], "Âge": ["35 ans"], "Sexe": ["Féminin"], "État général": ["Autonomie retrouvée, marche sans difficulté", "Douleur contrôlée par paracétamol"], "Poids": ["78 kg (prise de poids totale de 12 kg depuis le début de la grossesse)", "3850 grammes"], "Statut gestationnel": ["42 semaines d’aménorrhée (SA)", "terme dépassé"], "Gestité": ["primipare"], "Médicaments": ["Supplémentation en fer (Tardyféron®)", "Vitamine D (Uvedose®)", "paracétamol"], "NFS": ["Hémoglobine à 11,2 g/dL, plaquettes à 220 G/L, leucocytes à 9,5 G/L", "hémoglobine stable à 10,8 g/dL"], "Créatinine": ["65 µmol/L"], "Bilan hépatique": ["Normal (ASAT 22 UI/L, ALAT 18 UI/L, bilirubine totale 8 µmol/L)"]}}}

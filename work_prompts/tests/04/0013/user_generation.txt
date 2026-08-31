@@ -1,0 +1,203 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 76 ans
+- Sexe du patient : Masculin
+- Date d'entrée : 21/06/2024
+- Date de sortie : 21/06/2024
+- Date de naissance : 27/12/1947
+- Nom du patient : Duchatel
+- Prénom du patient : Aladji
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge en hospitalisation ambulatoire pour Autres formes de chimiothérapie.
+- Codage CIM10 :
+   * Diagnostic principal : Autres anémies par carence en fer (D508)
+   * Diagnostics associés :
+      - Cirrhoses (du foie), autres et sans précision (K746)
+- Nom du médecin / signataire : Rolland Bauhain
+- Service : PED.HEPATO-GASTRO.
+- Hôpital : Hôpital Saint-André - CHU de Bordeaux
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_category code="D50">
+
+# D50 — Anémie par carence en fer
+
+## Position dans la classification
+- Chapitre III : Maladies du sang et des organes hématopoïétiques et certains troubles du système immunitaire
+- Bloc D50-D53 : Anémies nutritionnelles
+
+## Codes enfants directs
+- D50.0 — Anémie par carence en fer secondaire à une perte de sang (chronique)
+- D50.1 — Dysphagie sidéropénique
+- D50.8 — Autres anémies par carence en fer
+- D50.9 — Anémie par carence en fer, sans précision
+
+## Périmètre clinique
+
+Inclusions héritées de la catégorie D50 :
+- anémie ferriprive
+- anémie :
+ - ferriprive
+ - hypochrome
+- anémie hypochrome
+
+Au niveau des codes :
+- anémie posthémorragique (chronique) (D50.0)
+- syndrome de Kelly-Paterson (D50.1)
+- Syndrome de :
+ - Kelly–Paterson
+ - Plummer–Vinson
+ (D50.1)
+- syndrome de Plummer-Vinson (D50.1)
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre III) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies auto-immunes (systémiques) SAI (M35.9)
+maladies dues au virus de l'immunodéficience humaine [VIH] (B20-B24)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes :
+
+- anémie :
+ - congénitale par perte de sang fœtal (P61.3) 
+ - posthémorragique aigüe (D62)
+
+## Formulations cliniques alternatives
+- Anémie (à) (de), achlorhydrique (D50.8)
+- Anémie (à) (de), avec, carence en fer (D50.9)
+- Anémie (à) (de), hypochrome, hyposidérémique (D50.8)
+- Anémie (à) (de), normocytaire (infectieuse), due à hémorragie (chronique) (D50.0)
+- Anémie (à) (de), nutritionnelle, sidéropénique (D50.8)
+- Anémie (à) (de), par carence (en), fer, due à une perte de sang (chronique) (D50.0)
+- anémie carence martiale (D50.9)
+- anémie chronique ferriprive (D50.9)
+- anémie chronique saignement (D50.0)
+- anémie déglobulisation (D50.0)
+- anémie déperdition sanguine (D50.0)
+- anémie déperditionnelle (D50.0)
+- anémie férriprive acutisée (D50.9)
+- anémie ferriprive ancienne (D50.9)
+- anémie ferriprive chronique (D50.9)
+- anémie ferriprive hémorragique chronique (D50.0)
+- anémie ferriprive par pertes sanguines (D50.0)
+- anémie ferriprive par spoliation chronique (D50.0)
+- anémie ferriprive subaigüe (D50.9)
+- anémie fuite digestive (D50.0)
+- anémie hémorragique chronique (D50.0)
+- anémie hypochrome chronique (D50.0)
+- anémie hypochrome microcytaire (D50.8)
+- anémie hypochrome microcytaire arégénérative (D50.8)
+- anémie hypochrome microcytaire hyposidérémique (D50.8)
+- anémie hyposidérémique (D50.9)
+- anémie inflammatoire ferriprive (D50.9)
+- anémie méléna (D50.0)
+- anémie microcytaire carentielle (D50.8)
+- anémie microcytaire hypochrome arégénérative (D50.8)
+- anémie microcytaire hyposidérémique (D50.8)
+- anémie microcytaire réfractaire (D50.8)
+- anémie microcytaire spoliation digestive (D50.8)
+- anémie par hémorragie (D50.0)
+- anémie par saignement (D50.0)
+- anémie par spoliation sanguine digestive (D50.0)
+- anémie perte sanguine (D50.0)
+- anémie perte sanguine digestive (D50.0)
+- anémie post-rectorragie (D50.0)
+- anémie réfractaire par saignement (D50.0)
+- anémie sidéropénique réfractaire (D50.9)
+- anémie spoliation (D50.0)
+- anémie spoliative (D50.0)
+- anémie spoliative aigüe (D50.0)
+- Carence (en), fer, avec anémie (D50.9)
+- Chlorose (D50.8)
+- Kelly(-patterson), syndrome de (D50.1)
+- Paterson(-kelly), syndrome de (D50.1)
+- Sidéropénie, avec anémie (D50.9)
+- Witt, anémie de (D50.8)
+
+</fiche_category>
+
+<fiche_code code="K74.6">
+
+# K74.6 — Cirrhoses du foie, autres et sans précision
+
+## Position dans la classification
+- Chapitre XI : Maladies de l'appareil digestif
+- Bloc K70-K77 : Maladies du foie
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- cirrhose (du foie) cryptogénique
+- cirrhose (du foie) de type mixte
+- cirrhose (du foie) macronodulaire
+- cirrhose (du foie) micronodulaire
+- cirrhose (du foie) portale
+- cirrhose (du foie) post-nécrotique
+- cirrhose (du foie)  SAI
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XI) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité du bloc K70-K77) :
+
+hémochromatose (E83.1)
+hépatite virale (B15-B19)
+ictère SAI (R17.0)
+maladie de Wilson (E83.0)
+syndrome de Reye (G93.7)
+
+Affections relevant d'autres codes (hérité de la catégorie K74) :
+
+avec maladie toxique du foie (K71.7)
+cirrhose (du foie) :
+ - alcoolique (K70.3) 
+ - congénitale (P78.8) 
+fibrose alcoolique du foie (K70.2) 
+sclérose du foie d'origine cardiaque (K76.1)
+
+## Formulations cliniques alternatives
+- Baumgarten-cruveilhier, maladie ou syndrome de, avec cirrhose du foie
+- cirrhose C15 score Child
+- cirrhose cryptogénétique
+- Cirrhose (cryptogénique) (macronodulaire) (micronodulaire) (portale) (post-nécrotique) (type mixte) (de)
+- Cirrhose (cryptogénique) (macronodulaire) (micronodulaire) (portale) (post-nécrotique) (type mixte) (de), cruveilhier-baumgarten
+- Cirrhose (cryptogénique) (macronodulaire) (micronodulaire) (portale) (post-nécrotique) (type mixte) (de), foie (chronique) (monolobulaire) (nodulaire) (plurilobulaire) (splénomégalique) (au cours de)
+- Cirrhose (cryptogénique) (macronodulaire) (micronodulaire) (portale) (post-nécrotique) (type mixte) (de), laennec (alcoolique), non alcoolique
+- Cirrhose (cryptogénique) (macronodulaire) (micronodulaire) (portale) (post-nécrotique) (type mixte) (de), métabolique nca
+- Cirrhose (cryptogénique) (macronodulaire) (micronodulaire) (portale) (post-nécrotique) (type mixte) (de), septale
+- cirrhose décompensée stade C
+- cirrhose foie
+- cirrhose hépatique non éthylique
+- cirrhose hépatique stade C10
+- cirrhose hépatique stade I
+- cirrhose stade C
+- cirrhose virale B
+- cirrhose virale C
+- Cruveilhier-baumgarten, maladie ou syndrome de, avec cirrhose du foie
+- hépatopathie chronique cirrhogène
+- hépatopathie cirrhotique
+- Laennec, cirrhose de, non alcoolique
+
+</fiche_code>

@@ -1,0 +1,110 @@
+# 0011 — crh_generation.txt
+
+### Hôpital Cochin - Assistance Publique Hôpitaux de Paris
+Service CANCERO ADULTE
+
+Nom : Calsolaro
+Prénom : Samih
+Date de naissance : 13/07/1970
+
+---
+
+### Motif d'hospitalisation
+M. Samih Calsolaro, âgé de 55 ans, est hospitalisé ce jour pour la prise en charge d’un adénocarcinome pancréatique métastatique. Le patient présente une altération de l’état général et des douleurs abdominales évoluant depuis plusieurs semaines. Une évaluation globale en soins palliatifs est programmée afin d’optimiser la prise en charge symptomatique et d’organiser le suivi à domicile.
+
+
+### Antécédents
+- Médicaux : Pas d’autre antécédent notable.
+- Chirurgicaux : Appendicectomie dans l’enfance.
+- Familiaux : Aucun antécédent familial de néoplasie pancréatique connu.
+- Allergies : Aucune allergie médicamenteuse connue.
+
+
+### Mode de vie
+M. Calsolaro est ancien fumeur (sevré depuis 15 ans, tabagisme évalué à 10 paquets-années). Il travaillait comme employé dans le secteur tertiaire avant son arrêt maladie. Il vit à domicile avec son épouse et bénéficie d’un soutien familial régulier. Il ne consomme pas d’alcool.
+
+
+### Histoire de la maladie
+Le diagnostic d’adénocarcinome pancréatique a été posé il y a trois mois suite à l’apparition de douleurs épigastriques et d’un ictère. Une imagerie par TDM abdominale avait alors révélé une masse corporéo-caudale du pancréas avec envahissement local et des lésions hépatiques secondaires multiples. Une biopsie pancréatique sous écho-endoscopie avait confirmé le diagnostic d’adénocarcinome peu différencié. Le dosage du CA 19-9 était élevé à 1 250 UI/mL. Une prise en charge palliative avait été décidée en réunion de concertation pluridisciplinaire (RCP), avec mise en place d’un traitement symptomatique et d’un suivi rapproché en ambulatoire.
+
+
+### Examen clinique
+À l’admission, le patient est apyrétique, avec une tension artérielle à 110/70 mmHg et une fréquence cardiaque à 88 battements par minute. Il pèse 68 kg pour une taille de 1,75 m (IMC à 22,2 kg/m²), avec une perte de poids estimée à 5 kg sur les trois derniers mois. L’examen abdominal révèle une sensibilité modérée de l’épigastre sans défense ni masse palpable. Les aires ganglionnaires sont libres. Il n’y a pas d’ictère conjonctival ni de signe d’hypertension portale. L’auscultation cardiopulmonaire est normale. Le patient présente une asthénie marquée (ECOG 2) mais reste autonome pour les activités de la vie quotidienne.
+
+
+### Examens complémentaires
+Une TDM thoraco-abdomino-pelvienne réalisée ce jour confirme la présence d’une masse tumorale corporéo-caudale du pancréas mesurant 45 × 38 mm, associée à de multiples lésions hépatiques secondaires bilobaires, dont certaines mesurent jusqu’à 3 cm de diamètre. Il n’y a pas d’épanchement péritonéal ni d’atteinte pulmonaire visible. Le dosage du CA 19-9 est stable à 1 200 UI/mL. Le bilan biologique montre une fonction rénale normale (créatinine à 78 µmol/L) et un bilan hépatique légèrement perturbé (bilirubine totale à 22 µmol/L, PAL à 180 UI/L, ALAT à 65 UI/L). La NFS est sans particularité, avec une hémoglobine à 12,5 g/dL.
+
+
+### Conclusion
+M. Calsolaro présente un adénocarcinome pancréatique corporéo-caudal métastatique au foie, en phase palliative. Une prise en charge symptomatique optimisée est mise en place, incluant un traitement antalgique adapté, un soutien nutritionnel et un suivi psychologique. Le patient regagne son domicile ce jour avec un rendez-vous de suivi en hôpital de jour prévu dans une semaine. Une coordination avec l’équipe mobile de soins palliatifs et le médecin traitant est organisée pour assurer la continuité des soins.
+
+
+Paris, le 19/08/2025
+
+Dr Amaliya Baconnier
+
+
+---
+
+## Formulations
+
+```json
+{
+  "diagnostics": {
+    "Tumeur maligne du pancréas endocrine, autre et non précisée (C254+8)": [
+      "adénocarcinome pancréatique",
+      "adénocarcinome pancréatique corporéo-caudal",
+      "adénocarcinome peu différencié"
+    ],
+    "Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques (C787)": [
+      "lésions hépatiques secondaires multiples",
+      "lésions hépatiques secondaires bilobaires",
+      "métastatique au foie"
+    ]
+  },
+  "informations": {
+    "Date entrée": [
+      "19/08/2025"
+    ],
+    "Date de sortie": [
+      "19/08/2025"
+    ],
+    "Service d'hospitalisation": [
+      "CANCERO ADULTE"
+    ],
+    "Nom/Prénom du médecin": [
+      "Dr Amaliya Baconnier"
+    ],
+    "Nom/Prénom du patient": [
+      "Samih Calsolaro"
+    ],
+    "Poids": [
+      "68 kg"
+    ],
+    "Âge": [
+      "55 ans"
+    ],
+    "Sexe": [
+      "masculin"
+    ],
+    "État général": [
+      "asthénie marquée (ECOG 2)"
+    ],
+    "NFS": [
+      "hémoglobine à 12,5 g/dL"
+    ],
+    "Créatinine": [
+      "créatinine à 78 µmol/L"
+    ],
+    "Bilan hépatique": [
+      "bilirubine totale à 22 µmol/L, PAL à 180 UI/L, ALAT à 65 UI/L"
+    ],
+    "Traitements": [
+      "traitement antalgique adapté",
+      "soutien nutritionnel",
+      "suivi psychologique"
+    ]
+  }
+}
+```

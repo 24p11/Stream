@@ -1,0 +1,39 @@
+{
+  "created_at": "2026-08-20T18:17:30",
+  "seed_path": "data/aphp/scenarios_bn_all_20260128.pq",
+  "generation_ids": {
+    "0000": "e979f93a-6f65-4499-a2df-352d6ba72d53",
+    "0001": "4f1ff17b-afc0-49e3-8e64-1112a932fd69",
+    "0002": "587ebadd-6b48-4764-8d03-cbcb9a41421d",
+    "0003": "d6ee3198-eaaf-4f61-a7c1-de5eef4b3b4f",
+    "0004": "f43e57cb-9032-49f5-b8c6-ebcbcf64cca4",
+    "0005": "cfdc4dc8-6958-428c-a60c-59eda4b64fd4",
+    "0006": "1835dbee-0b0c-47cc-a45c-72df8fa041c9",
+    "0007": "275f057f-8844-4bde-9f21-09e4612d096a",
+    "0008": "c95ec935-14d4-4acb-9b68-bc0b3c51b305",
+    "0009": "3daa9301-6794-440b-8903-91dc99d56e07",
+    "0010": "008e2129-8da1-48b9-858b-237abda14520",
+    "0011": "ba2cf41c-8600-4ac0-ae01-fc615b93c2d7",
+    "0012": "f4c3d03e-e372-4efd-b67a-f4719c10d554",
+    "0013": "8ea557bd-20ef-45e9-96df-1f7d91534ce8"
+  },
+  "templates": {
+    "0000": "surgery_inpatient",
+    "0001": "surgery_inpatient",
+    "0002": "medical_inpatient",
+    "0003": "delivery_inpatient_csection_hospit",
+    "0004": "delivery_inpatient_hospit",
+    "0005": "surgery_outpatient",
+    "0006": "surgery_inpatient",
+    "0007": "medical_outpatient",
+    "0008": "medical_inpatient",
+    "0009": "medical_outpatient",
+    "0010": "medical_outpatient",
+    "0011": "medical_outpatient",
+    "0012": "medical_inpatient",
+    "0013": "medical_outpatient"
+  },
+  "fictomed_version": "0.1.0",
+  "fictomed_commit": "83ebca9ac9b38327a7ed634de420f9c225172769",
+  "notes": ""
+}

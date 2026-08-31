@@ -1,0 +1,150 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 36 ans
+- Sexe du patient : Masculin
+- Date d'entrée : 18/08/2026
+- Date de sortie : 18/08/2026
+- Date de naissance : 17/12/1989
+- Nom du patient : Derepas
+- Prénom du patient : Fabien
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Prise en charge en hospitalisation ambulatoire pour injections de toxine botulique dans l'appareil urinaire.
+- Codage CIM10 :
+   * Diagnostic principal : Autres affections précisées de la vessie (N328)
+   * Diagnostics associés :
+      - Sclérose en plaques (G35)
+- Acte CCAM : injection de toxine botulique dans la musculeuse vésicale, par urétrocystoscopie (JDLE332)
+- Nom du médecin / signataire : Marie-josette De belza
+- Service : NEUROLOGIE
+- Hôpital : Hôpital de la Timone- Assistance Publique – Hôpitaux de Marseille
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="N32.8">
+
+# N32.8 — Autres affections précisées de la vessie
+
+## Position dans la classification
+- Chapitre XIV : Maladies de l'appareil génito-urinaire
+- Bloc N30-N39 : Autres maladies de l'appareil urinaire
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- calcification de la vessie
+- vessie spastique
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XIV) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité du bloc N30-N39) :
+
+infection urinaire (compliquant) :
+ - avec lithiase urinaire (N20-N23) 
+ - avortement, grossesse extra-utérine ou molaire (O00-O07)  (O08.8) 
+ - grossesse, accouchement et puerpéralité (O23.-)  (O75.3)  (O86.2)
+
+Affections relevant d'autres codes (hérité de la catégorie N32) :
+
+calcul de la vessie (N21.0)
+cystocèle (N81.1)
+hernie ou prolapsus de la vessie chez la femme (N81.1)
+
+Formes spécifiées de la catégorie N32 :
+- Diverticule de la vessie [→ N32.3]
+- Fistule vésicale, non classée ailleurs [→ N32.2]
+- Fistule vésico-intestinale [→ N32.1]
+- Obstruction du col de la vessie [→ N32.0]
+- Rupture de la vessie, non traumatique [→ N32.4]
+
+## Formulations cliniques alternatives
+- Atrophie (de), vessie
+- caillotage intra-vésical
+- compression vésico-urétérale
+- Congestion (chronique) (passive) (de), vessie
+- Déplacement (de), vessie (acquis)
+- dysplasie vésicale
+- Fibrose (de), vessie
+- globe vésical surinfecté
+- Hémorragie (de) (due à), vessie
+- Inversion (de), vessie
+- obstacle urétéro-vésical
+- ptose vésicale
+- saignement vessie
+- sclérose vessie
+- Spasme (de), vessie (sphincter, externe ou interne)
+- sténose méat urinaire
+- Trabéculation de la vessie
+- Ulcère (à) (de), vessie, vésical (solitaire) (sphincter)
+- Vessie de lutte
+- vessie scléro-atrophique
+- Vessie - voir aussi nom de l'état pathologique, à colonnes
+
+</fiche_code>
+
+<fiche_code code="G35">
+
+# G35 — Sclérose en plaques
+
+## Position dans la classification
+- Chapitre VI : Maladies du système nerveux
+- Bloc G35-G37 : Maladies démyélinisantes du système nerveux central
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- sclérose en plaques (de) disséminée
+- sclérose en plaques (de) généralisée
+- sclérose en plaques (de) moelle épinière
+- sclérose en plaques (de)  SAI
+- sclérose en plaques (de) tronc cérébral
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre VI) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+## Formulations cliniques alternatives
+- Démence (par), associée à, sclérose en plaques
+- Névrite (de) (voir aussi névralgie), rétrobulbaire (au cours de), sclérose en plaques
+- Sclérose (de), bulbaire progressive
+- Sclérose (de), cérébrospinale (en plaques) (multiple)
+- Sclérose (de), en plaques (disséminée) (généralisée) (moelle épinière) (tronc cérébral)
+- Sclérose (de), insulaire
+- Sclérose (de), moelle épinière, à foyers multiples
+- Sclérose (de), moelle épinière, combinée (voir aussi myélose, funiculaire), multiple
+- Sclérose (de), moelle épinière, multiple
+- Sclérose (de), multiloculaire, multiple (cérébrale) (médullaire) (tronc cérébral)
+- sclérose en plaques disséminée
+- sclérose en plaques généralisée
+- sclérose multiloculaire
+- sclérose plaques
+- sclérose plaques généralisée
+- sclérose plaques invalidante
+- SEP forme progressive
+- SEP forme tardive
+- SEP généralisée
+- SEP invalidante
+
+</fiche_code>

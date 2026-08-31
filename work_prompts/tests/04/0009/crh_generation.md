@@ -1,0 +1,93 @@
+# 0009 — crh_generation.txt
+
+### Hôpital Pellegrin - CHU de Bordeaux
+Service de Gynécologie
+
+Nom : Fonti
+Prénom : Joulia
+Date de naissance : 25/06/1982
+
+---
+
+### Motif d'hospitalisation
+Mme Joulia Fonti, âgée de 42 ans, a été admise ce jour en hospitalisation ambulatoire pour exploration et prise en charge d’un avortement spontané incomplet sans complication, associé à une fibrose utérine suspectée. La patiente présente des saignements vaginaux persistants depuis quelques jours, motivant cette consultation.
+
+### Antécédents
+- Médicaux : Pas d’antécédent notable.
+- Chirurgicaux : Appendicectomie dans l’enfance.
+- Familiaux : Aucun antécédent familial significatif rapporté.
+- Allergies : Aucune allergie connue.
+
+### Mode de vie
+Mme Fonti est non fumeuse, ne consomme pas d’alcool. Elle exerce la profession d’enseignante et vit seule. Elle n’a pas d’enfant et n’a pas d’activité physique régulière.
+
+### Histoire de la maladie
+La patiente rapporte des saignements vaginaux modérés depuis environ une semaine, survenus en dehors de tout contexte traumatique. Elle décrit également des douleurs pelviennes intermittentes, sans fièvre ni signes urinaires associés. Elle a consulté son gynécologue traitant il y a trois jours, qui a suspecté un avortement spontané incomplet et une possible anomalie utérine sous-jacente, motivant cette hospitalisation pour exploration complémentaire.
+
+### Examen clinique
+À l’admission, la patiente est apyrétique, avec une tension artérielle à 120/70 mmHg et un pouls régulier à 78 battements par minute. L’examen abdominal ne révèle pas de défense ni de masse palpable. L’examen gynécologique au spéculum met en évidence des saignements d’origine endo-utérine, sans lésion visible du col. Le toucher vaginal retrouve un utérus de taille normale, légèrement sensible à la mobilisation, sans masse annexielle palpable. Le poids est stable à 60 kg.
+
+### Examens complémentaires
+Une vaginoscopie a été réalisée ce jour sous anesthésie locale. Cet examen a permis de visualiser des résidus trophoblastiques au niveau de la cavité utérine, confirmant le diagnostic d’avortement spontané incomplet. Par ailleurs, la muqueuse utérine apparaît légèrement atrophique et fibreuse, sans signe d’endométriose ni de polype visible. Aucun prélèvement bactériologique n’a été réalisé, l’examen clinique ne retrouvant pas de signe infectieux.
+
+### Conclusion
+Mme Fonti présente un avortement spontané incomplet sans complication, associé à une fibrose utérine modérée. La vaginoscopie a permis de confirmer le diagnostic et d’éliminer d’autres causes de saignements. La patiente est autorisée à rentrer à domicile ce jour avec un suivi gynécologique rapproché. Un contrôle échographique sera programmé dans un mois pour évaluer l’évolution de la cavité utérine.
+
+Bordeaux, le 14/05/2025
+
+Dr Marie Rudloff
+Service de Gynécologie
+Hôpital Pellegrin - CHU de Bordeaux
+
+
+---
+
+## Formulations
+
+```json
+{
+  "diagnostics": {
+    "Autres affections non inflammatoires précisées de l'utérus (N85.8)": [
+      "fibrose utérine",
+      "muqueuse utérine apparaît légèrement atrophique et fibreuse"
+    ],
+    "Avortement spontané incomplet, sans complication (O03.4)": [
+      "avortement spontané incomplet sans complication",
+      "résidus trophoblastiques au niveau de la cavité utérine"
+    ]
+  },
+  "informations": {
+    "Date entrée": [
+      "14/05/2025"
+    ],
+    "Date de sortie": [
+      "14/05/2025"
+    ],
+    "Service d'hospitalisation": [
+      "Service de Gynécologie"
+    ],
+    "Nom/Prénom du médecin": [
+      "Marie Rudloff"
+    ],
+    "Nom/Prénom du patient": [
+      "Joulia Fonti"
+    ],
+    "Poids": [
+      "60 kg"
+    ],
+    "Âge": [
+      "42 ans"
+    ],
+    "Sexe": [
+      "Féminin"
+    ],
+    "État général": [
+      "La patiente est apyrétique, avec une tension artérielle à 120/70 mmHg et un pouls régulier à 78 battements par minute."
+    ],
+    "NFS": [],
+    "Créatinine": [],
+    "Bilan hépatique": [],
+    "Traitements": []
+  }
+}
+```

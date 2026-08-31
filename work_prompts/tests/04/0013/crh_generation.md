@@ -1,0 +1,127 @@
+# 0013 — crh_generation.txt
+
+### Compte rendu d'hospitalisation
+
+**Hôpital Saint-André - CHU de Bordeaux**
+**Service de Pédiatrie Hépatologie-Gastroentérologie**
+
+---
+
+*Identification du patient*
+Nom : Duchatel
+Prénom : Aladji
+Date de naissance : 27/12/1947
+Hospitalisation du 21/06/2024 au 21/06/2024
+
+---
+
+### Motif d'hospitalisation
+M. Duchatel, âgé de 76 ans, a été admis ce jour en hospitalisation ambulatoire pour la poursuite d'une chimiothérapie dans un contexte d'anémie microcytaire hypochrome arégénérative associée à une cirrhose hépatique non éthylique.
+
+---
+
+### Antécédents
+- **Médicaux** : Cirrhose hépatique cryptogénétique connue, sans décompensation récente. Pas d'autre antécédent notable.
+- **Chirurgicaux** : Appendicectomie dans l'enfance.
+- **Familiaux** : Aucun antécédent familial significatif rapporté.
+- **Allergies** : Aucune allergie médicamenteuse connue.
+
+---
+
+### Mode de vie
+M. Duchatel est retraité, ancien employé dans le secteur tertiaire. Il vit à domicile de manière autonome. Il ne fume pas et ne consomme pas d'alcool, notamment en raison de sa pathologie hépatique. Il n'a jamais été exposé à des toxiques professionnels.
+
+---
+
+### Histoire de la maladie
+Le patient présente une cirrhose hépatique cryptogénétique diagnostiquée il y a cinq ans, surveillée régulièrement en consultation spécialisée. Depuis quelques mois, il décrit une asthénie progressive associée à une pâleur cutanéo-muqueuse. Un bilan biologique récent a révélé une anémie microcytaire hypochrome avec un taux d'hémoglobine à 9,2 g/dL, une ferritinémie basse et un coefficient de saturation de la transferrine diminué, confirmant une carence martiale. Une origine digestive a été suspectée, mais les explorations endoscopiques (fibroscopie œsogastroduodénale et coloscopie) n'ont pas mis en évidence de saignement actif. La carence en fer a été attribuée à des pertes digestives chroniques infracliniques, possiblement liées à l'hypertension portale secondaire à la cirrhose. Un traitement par fer intraveineux a été initié il y a trois mois, avec une amélioration partielle des paramètres hématologiques. Une chimiothérapie a été instaurée récemment dans le cadre d'un protocole spécifique pour la prise en charge de l'anémie réfractaire par spoliation chronique.
+
+---
+
+### Examen clinique
+À l'admission, le patient est apyrétique, avec une tension artérielle à 130/80 mmHg et une fréquence cardiaque à 80 battements par minute. Il pèse 68 kg, stable par rapport aux dernières consultations. L'examen cutané révèle une pâleur conjonctivale et des téguments secs. L'abdomen est souple, indolore, avec une hépatomégalie modérée et une rate palpable à deux travers de doigt. Il n'y a pas de signe d'ascite ni d'œdème des membres inférieurs. L'examen cardiopulmonaire est sans particularité. Le patient est conscient, orienté, et son état général reste conservé malgré une asthénie modérée.
+
+---
+
+### Examens complémentaires
+Un bilan biologique a été réalisé ce jour :
+- **Numération formule sanguine** : Hémoglobine à 9,5 g/dL, VGM à 72 fL, CCMH à 28 g/dL, plaquettes à 120 G/L, leucocytes normaux.
+- **Bilan martial** : Ferritinémie à 15 µg/L (normale : 30-300), coefficient de saturation de la transferrine à 8 %.
+- **Bilan hépatique** : ASAT à 45 UI/L, ALAT à 50 UI/L, bilirubine totale à 22 µmol/L, albuminémie à 32 g/L, TP à 65 %.
+- **Créatininémie** : 85 µmol/L, fonction rénale normale.
+
+Une échographie abdominale réalisée la semaine dernière a confirmé la présence d'une cirrhose avec signes d'hypertension portale (splénomégalie, circulation collatérale) sans lésion focale suspecte.
+
+---
+
+### Conclusion
+M. Duchatel, 76 ans, présente une anémie microcytaire hypochrome arégénérative par carence martiale dans un contexte de cirrhose hépatique cryptogénétique. La prise en charge en hospitalisation ambulatoire ce jour a permis la poursuite de la chimiothérapie adaptée à son anémie réfractaire. Le patient regagne son domicile ce soir avec un rendez-vous de suivi en consultation dans un mois pour réévaluation clinique et biologique. Un contrôle endoscopique est prévu dans trois mois pour surveiller l'évolution de l'hypertension portale.
+
+*Dr Rolland Bauhain*
+*Pédiatrie Hépatologie-Gastroentérologie*
+*Hôpital Saint-André - CHU de Bordeaux*
+
+
+---
+
+## Formulations
+
+```json
+{
+  "diagnostics": {
+    "Autres anémies par carence en fer (D508)": [
+      "anémie microcytaire hypochrome arégénérative",
+      "carence martiale",
+      "anémie réfractaire par spoliation chronique"
+    ],
+    "Cirrhoses (du foie), autres et sans précision (K746)": [
+      "cirrhose hépatique non éthylique",
+      "cirrhose hépatique cryptogénétique",
+      "cirrhose"
+    ]
+  },
+  "informations": {
+    "Date entrée": [
+      "21/06/2024"
+    ],
+    "Date de sortie": [
+      "21/06/2024"
+    ],
+    "Service d'hospitalisation": [
+      "Pédiatrie Hépatologie-Gastroentérologie"
+    ],
+    "Nom/Prénom du médecin": [
+      "Rolland Bauhain"
+    ],
+    "Nom/Prénom du patient": [
+      "Duchatel Aladji"
+    ],
+    "Poids": [
+      "68 kg"
+    ],
+    "Âge": [
+      "76 ans"
+    ],
+    "Sexe": [
+      "Masculin"
+    ],
+    "État général": [
+      "son état général reste conservé malgré une asthénie modérée",
+      "conscient, orienté"
+    ],
+    "NFS": [
+      "Hémoglobine à 9,5 g/dL, VGM à 72 fL, CCMH à 28 g/dL, plaquettes à 120 G/L, leucocytes normaux"
+    ],
+    "Créatinine": [
+      "85 µmol/L, fonction rénale normale"
+    ],
+    "Bilan hépatique": [
+      "ASAT à 45 UI/L, ALAT à 50 UI/L, bilirubine totale à 22 µmol/L, albuminémie à 32 g/L, TP à 65 %"
+    ],
+    "Traitements": [
+      "chimiothérapie adaptée à son anémie réfractaire",
+      "traitement par fer intraveineux"
+    ]
+  }
+}
+```

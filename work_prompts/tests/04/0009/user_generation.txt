@@ -1,0 +1,131 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 42 ans
+- Sexe du patient : Féminin
+- Date d'entrée : 14/05/2025
+- Date de sortie : 14/05/2025
+- Date de naissance : 25/06/1982
+- Nom du patient : Fonti
+- Prénom du patient : Joulia
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation ambulatoire.
+- Codage CIM10 :
+   * Diagnostic principal : Autres affections (non inflammatoires précisées) de l'utérus (N858)
+   * Diagnostics associés :
+      - Avortement spontané incomplet, sans complication (O034)
+- Acte CCAM : vaginoscopie (JLQE001)
+- Nom du médecin / signataire : Marie Rudloff
+- Service : GYNECOLOGIE
+- Hôpital : Hôpital Pellegrin - CHU de Bordeaux
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="N85.8">
+
+# N85.8 — Autres affections non inflammatoires précisées de l'utérus
+
+## Position dans la classification
+- Chapitre XIV : Maladies de l'appareil génito-urinaire
+- Bloc N80-N98 : Affections non inflammatoires de l'appareil génital de la femme
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- atrophie acquise de l'utérus
+- fibrose de l'utérus SAI
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XIV) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie N85) :
+
+affections :
+ - inflammatoires de l'utérus (N71.-) 
+ - non inflammatoires du col de l'utérus, sauf malposition (N86-N88) 
+endométriose (N80.-) 
+polype du corps de l'utérus (N84.0) 
+prolapus utérin (N81.-)
+
+Formes spécifiées de la catégorie N85 :
+- Hématométrie [→ N85.7]
+- Hyperplasie adénomateuse de l'endomètre [→ N85.1]
+- Hyperplasie glandulaire de l'endomètre [→ N85.0]
+- Hypertrophie de l'utérus [→ N85.2]
+- Inversion de l'utérus [→ N85.5]
+- Malposition de l'utérus [→ N85.4]
+- Subinvolution de l'utérus [→ N85.3]
+- Synéchie utérine [→ N85.6]
+
+## Formulations cliniques alternatives
+- Atrophie (de), utérus (sénile), due à irradiation (effet désiré)
+- atrophie endomètre
+- Calcification (de), utérus
+- Cicatrice (adhérente) (cutanée) (douloureuse) (rétractile) (vicieuse) (de), utérus
+- compression utérus
+- Contraction(s), utérines
+- Déformation (acquise) (système ostéo-articulaire) (de), utérus
+- Dégénérescence (de), utérus
+- dysplasie endomètre
+- dysplasie utérine
+- Fibrose (de), utérus (non tumorale)
+- Hydrométrie
+- ischémie utérine
+- kyste utérus
+- Obstruction (de) (par), utérus
+- perforation utérus
+- pré-rupture utérine
+- Trouble(s) (de) - voir aussi maladie, fonctionnel(s) (de), endomètre nca
+- ulcère endomètre
+- ulcère utérin
+
+</fiche_code>
+
+<fiche_code code="O03.4">
+
+# O03.4 — Avortement spontané - " Incomplet, sans complication "
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O00-O08 : Grossesse se terminant par un avortement
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie O03 :
+- fausse-couche
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Affections relevant d'autres codes (hérité du bloc O00-O08) :
+
+poursuite de la grossesse après avortement d'un ou plusieurs fœtus (O31.1)
+
+## Formulations cliniques alternatives
+- Avortement (avec), spontané (complet) (sans complication), incomplet (sans complication)
+
+</fiche_code>

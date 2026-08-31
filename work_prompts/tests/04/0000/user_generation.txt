@@ -1,0 +1,68 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 19 ans
+- Sexe du patient : Masculin
+- Date d'entrée : 26/08/2024
+- Date de sortie : 29/08/2024
+- Date de naissance : 17/03/2005
+- Nom du patient : Rovel
+- Prénom du patient : Raymond
+- Mode d'entrée' : URGENCES
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Prise en charge en hospitalisation complète pour appendicectomies compliquées.
+- Codage CIM10 :
+   * Diagnostic principal : Appendicites aigües, autres et non précisées (K358)
+   * Diagnostics associés :
+      - aucun
+- Acte CCAM : appendicectomie, par abord de la fosse iliaque (HHFA001)
+- Nom du médecin / signataire : Olivier Gounet
+- Service : CHIRURGIE VISCERALE
+- Hôpital : Hôpital Nord - Assistance Publique – Hôpitaux de Marseille
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="K35.8">
+
+# K35.8 — Appendicite aigüe, autre et non précisée
+
+## Position dans la classification
+- Chapitre XI : Maladies de l'appareil digestif
+- Bloc K35-K38 : Maladies de l'appendice
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- Appendicite aigüe sans mention de péritonite localisée ou généralisée
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XI) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Formes spécifiées de la catégorie K35 :
+- Appendicite aigüe avec péritonite généralisée [→ K35.2]
+- Appendicite aigüe avec péritonite localisée [→ K35.3]
+
+## Formulations cliniques alternatives
+- appendicite gangrenée
+- perforation appendiculaire
+- perforation caecale diastatique
+- perforation coecale
+- perforation diastatique caecum
+- perforation diastatique coecale
+- perforation Douglas
+- rupture appendiculaire
+- rupture diastatique caecum
+- sphacèle appendiculaire
+
+</fiche_code>

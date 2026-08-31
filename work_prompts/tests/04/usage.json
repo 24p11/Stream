@@ -1,0 +1,28 @@
+{
+  "runs": [
+    {
+      "out": "crh_generation.txt",
+      "at": "2026-08-20T18:19:17",
+      "partial": false,
+      "n_requests": 14,
+      "model": "mistral-large-latest",
+      "input_tokens": 88934,
+      "output_tokens": 24026,
+      "input_cost_usd": 0.0222335,
+      "output_cost_usd": 0.0180195,
+      "total_cost_usd": 0.040253
+    },
+    {
+      "out": "crh_generation.txt",
+      "at": "2026-08-21T05:09:18",
+      "partial": true,
+      "n_requests": 1,
+      "model": "mistral-large-latest",
+      "input_tokens": 9248,
+      "output_tokens": 1258,
+      "input_cost_usd": 0.002312,
+      "output_cost_usd": 0.0009435,
+      "total_cost_usd": 0.0032554999999999997
+    }
+  ]
+}
