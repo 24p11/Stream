@@ -121,6 +121,27 @@ def load_json(path: Path) -> tuple[dict | None, list[str]]:
         return None, repairs
 
 
+def contexte_enrichi(sdir: Path) -> dict | None:
+    """Contexte patient fourni par l'enrichissement, lu dans
+    user_generation.txt (lignes « - Taille : N cm » / « - Poids : N kg ») —
+    la détection se fait sur le prompt lui-même, pas sur un fichier d'état.
+    Retourne None si le scénario n'est pas enrichi."""
+    ug = sdir / "user_generation.txt"
+    if not ug.is_file():
+        return None
+    texte = ug.read_text(encoding="utf-8")
+    m_taille = re.search(r"^- Taille : (\d+) cm", texte, re.M)
+    m_poids = re.search(r"^- Poids : (\d+) kg", texte, re.M)
+    if not (m_taille and m_poids):
+        return None
+    m_tabac = re.search(r"^- Tabac : (.+)$", texte, re.M)
+    return {
+        "taille_cm": m_taille.group(1),
+        "poids_kg": m_poids.group(1),
+        "tabac": (m_tabac.group(1).strip() if m_tabac else ""),
+    }
+
+
 def check_scenario(sdir: Path, out_name: str) -> tuple[int, int]:
     """Retourne (nb_echecs, nb_avertissements)."""
     fails, warns = 0, 0
@@ -180,6 +201,20 @@ def check_scenario(sdir: Path, out_name: str) -> tuple[int, int]:
     for m in sorted({m.lower() for m in CHRONIC_RE.findall(cr)}):
         warns += 1
         print(f"    AVERT  maladie chronique mentionnée : {m} (à confronter au scénario)")
+
+    # 7. Contexte patient enrichi : poids/taille restitués, tabac évoqué
+    ctx7 = contexte_enrichi(sdir)
+    if ctx7:
+        for valeur, unite, label in ((ctx7["poids_kg"], "kg", "poids"),
+                                     (ctx7["taille_cm"], "cm", "taille")):
+            if not re.search(rf"\b{valeur}\s*{unite}", cr):
+                fails += 1
+                print(f"    ECHEC  {label} du scénario ({valeur} {unite}) "
+                      "absent du CR")
+        if "actif" in ctx7["tabac"].lower() and not re.search(
+                r"tabac|tabagi|fume", cr, re.IGNORECASE):
+            warns += 1
+            print("    AVERT  fumeur actif au scénario, tabac non évoqué dans le CR")
 
     if fails == 0 and warns == 0:
         print("    OK")
