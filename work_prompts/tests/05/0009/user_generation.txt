@@ -1,0 +1,163 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 25 ans
+- Sexe du patient : Féminin
+- Taille : 163 cm
+- Poids : 91 kg (IMC 34,3)
+- Tabac : non-fumeur
+- Alcool : pas de mésusage
+- Date d'entrée : 21/01/2025
+- Date de sortie : 21/01/2025
+- Date de naissance : 28/11/1999
+- Nom du patient : Bretau
+- Prénom du patient : Jeanine
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation ambulatoire.
+- Codage CIM10 :
+   * Diagnostic principal : Mise en place et ajustement d'autres appareils précisés (Z468)
+   * Diagnostics associés :
+      - Apnée du sommeil (G473)
+      - Obésité due à un excès calorique de l'adulte avec indice de masse corporelle [IMC] égal ou supérieur à 30 kg/m² et inférieur à 35 kg/m², ou obésité due à un excès calorique de l'enfant (E6604)
+- Nom du médecin / signataire : Jacqueline Le gallo
+- Service : PEDIATRIE NEUROLOGIE
+- Hôpital : Hôpital Sud - CHU Grenoble Alpes
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="Z46.8">
+
+# Z46.8 — Mise en place et ajustement d'autres appareils précisés
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z40-Z54 : Sujets ayant recours aux services de santé pour des actes médicaux et des soins spécifiques
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- fauteuil roulant
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du bloc Z40-Z54) :
+
+examen de contrôle pour surveillance médicale après traitement (Z08-Z09)
+
+Affections relevant d'autres codes (hérité de la catégorie Z46) :
+
+mauvais résultat fonctionnel ou autres complications d'un appareil – voir Index alphabétique
+présence de prothèses et d'autres appareils (Z95-Z97)
+renouvellement d'une ordonnance (Z76.0)
+
+Formes spécifiées de la catégorie Z46 :
+- Mise en place et ajustement d'autres appareils en rapport avec le système nerveux et les organes des sens [→ Z46.2]
+- Mise en place et ajustement d'un appareil auditif [→ Z46.1]
+- Mise en place et ajustement d'un appareil orthodontique [→ Z46.4]
+- Mise en place et ajustement d'un appareil orthopédique [→ Z46.7]
+- Mise en place et ajustement d'un appareil urinaire [→ Z46.6]
+- Mise en place et ajustement d'une iléostomie et autres dispositifs intestinaux [→ Z46.5]
+- Mise en place et ajustement d'une prothèse dentaire [→ Z46.3]
+- Mise en place et ajustement de lunettes et verres de contact [→ Z46.0]
+
+## Formulations cliniques alternatives
+- drainage biliaire
+- drainage loge pancréatique
+- drainage péricardique
+- drainage pleural
+- drainage pleural bilatéral
+- Fauteuil roulant, mise en place et ajustement
+- Hospitalisation pour mise en place ou réglage d'une VNI [ventilation non invasive] (AGO LD 050310)
+- Mise en place et ajustement (de), appareil (de), précisé nca
+- Mise en place et ajustement (de), fauteuil roulant
+- pessaire
+
+</fiche_code>
+
+<fiche_code code="G47.3">
+
+# G47.3 — Apnée du sommeil
+
+## Position dans la classification
+- Chapitre VI : Maladies du système nerveux
+- Bloc G40-G47 : Affections épisodiques et paroxystiques
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- apnée du sommeil centrale
+- apnée du sommeil obstructive
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre VI) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie G47) :
+
+cauchemars (F51.5)
+noctambulisme (F51.3)
+terreurs nocturnes (F51.4)
+troubles du sommeil non organiques (F51.-)
+
+Affections relevant d'autres codes :
+
+apnée du sommeil chez le nouveau-né (P28.3)
+syndrome de Pickwick (E66.2)
+
+## Formulations cliniques alternatives
+- apnée sommeil
+- apnée sommeil stridente
+- apnées obstructives sommeil
+- CPAP
+- SAOS
+- SAOS central
+- syndrome apnée obstructive sommeil
+- syndrome apnée sommeil
+- syndrome apnée sommeil central
+- Syndrome (de) - voir aussi maladie, apnée du sommeil (centrale) (obstructive)
+- syndrome Haddad
+
+</fiche_code>
+
+<fiche_code code="E66.04">
+
+# E66.04 — Obésité due à un excès calorique de l'adulte avec indice de masse corporelle [IMC] égal ou supérieur à 30 kg/m² et inférieur à 35 kg/m², ou obésité due à un excès calorique de l'enfant
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E65-E68 : Obésité et autres excès d'apport
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie E66.0 :
+- Obésité commune
+Obésité primaire
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité de la catégorie E66) :
+
+dystrophie adiposogénitale (E23.6)
+lipomatose :
+ - SAI (E88.2) 
+ - douloureuse [Dercum] (E88.2) 
+syndrome de Prader–Willi (Q87.1)
+
+</fiche_code>

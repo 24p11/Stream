@@ -1,0 +1,443 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 46 ans
+- Sexe du patient : Féminin
+- Taille : 163 cm
+- Poids : 53 kg (IMC 19,9)
+- Tabac : non-fumeur
+- Alcool : pas de mésusage
+- Date d'entrée : 12/03/2025
+- Date de sortie : 09/05/2025
+- Date de naissance : 27/02/1979
+- Nom du patient : Couillebault
+- Prénom du patient : Kalyani
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Prise en charge en hospitalisation complète pour autres interventions pour blessures ou complications d'acte.
+- Codage CIM10 :
+   * Diagnostic principal : Désunions d'une plaie opératoire non classées ailleurs, autres et non précisées (T8138)
+   * Diagnostics associés :
+      - Autres infections localisées précisées de la peau et du tissu cellulaire sous-cutané (L088)
+      - Infection après un acte à visée diagnostique et thérapeutique, non classée ailleurs (T814)
+      - Staphylococcus aureus, cause de maladies classées dans d'autres chapitres (B956)
+      - Autres staphylocoques, cause de maladies classées dans d'autres chapitres (B957)
+      - Proteus (P.mirabilis) (P.morganii), cause de maladies classées dans d'autres chapitres (B964)
+      - Hypertension essentielle (primitive) (I10)
+- Acte CCAM : suture de plaie ou de perforation de l'intestin grêle, par laparotomi (HGCA002)
+- Nom du médecin / signataire : Elida Vanderveken
+- Service : CH.ORTHO.ET TRAUMATO
+- Hôpital : Hôpital Bichat-Claude Bernard - Assistance Publique Hôpitaux de Paris
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="T81.38">
+
+# T81.38 — Désunions d'une plaie opératoire non classées ailleurs, autres et non précisées
+
+## Position dans la classification
+- Chapitre XIX : Lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes
+- Bloc T80-T88 : Complications de soins chirurgicaux et médicaux, non classées ailleurs
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie T81.3 :
+- Déhiscence  d'une plaie opératoire
+Rupture  d'une plaie opératoire
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XIX) :
+
+fracture :
+ - mal consolidée (M84.0) 
+ - non consolidée [pseudarthrose] (M84.1) 
+ - par sollicitation excessive (M84.3) 
+ - pathologique (M84.4)   - avec ostéoporose (M80.-) 
+- traumatisme obstétrical :
+ - fœtus ou nouveau-né (P10-P15) 
+ - mère (O70-O71)
+
+Affections relevant d'autres codes (hérité du bloc T80-T88) :
+
+brulures et corrosions dues à des applications locales et des irradiations (T20-T32)
+complications chirurgicales au cours de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+complications précisées classées ailleurs, telles que :
+ - déséquilibres hydroélectrolytiques (E86-E87) 
+ - dysfonctionnement d'une colostomie (K91.4) 
+ - écoulement du liquide céphalorachidien après rachicentèse (G97.0) 
+ - lymphœdème après mastectomie (I97.2) 
+ - syndrome(s) (de) :
+  - consécutifs à la chirurgie gastrique (K91.1) 
+  - postchirurgical de l'anse borgne (K91.2) 
+  - postlaminectomie NCA (M96.1) 
+ - troubles fonctionnels après chirurgie cardiaque (I97.0-I97.1) 
+effets indésirables d'agent médicinaux (A00-R99)  (T78.-) 
+intoxications et effets toxiques de médicaments et de produits chimiques (T36-T65) 
+- tout recours aux soins médicaux pour des états postopératoires en dehors de toute complication, tel que :
+ - mise en place et ajustement d'appareils de prothèse externe (Z44.-) 
+ - obturation de stomies (Z43.-) 
+ - stomies (Z93.-)
+
+Affections relevant d'autres codes (hérité de la catégorie T81) :
+
+complication après :
+ - injection thérapeutique, perfusion et transfusion (T80.-) 
+ - vaccination (T88.0-T88.1) 
+- complications précisées classées ailleurs, telles que :
+ - complications de prothèses, implants et greffes (T82-T85) 
+ - dermites dues à des médicaments (L23.3)  (L24.4)  (L25.1)  (L27.0-L27.1) 
+ - échec et rejet d'organes et de tissus greffés [T86.–] 
+ - intoxications et effets toxiques de médicaments et de produits chimiques (T36-T65) 
+effet indésirable d'un médicament SAI (T88.7)
+rupture d'une suture (de) :
+ - césarienne (O90.0) 
+ - obstétricale du périnée (O90.1)
+
+## Formulations cliniques alternatives
+- Désinsertion stomiale (AGO LD 300113)
+
+</fiche_code>
+
+<fiche_code code="L08.8">
+
+# L08.8 — Autres infections localisées précisées de la peau et du tissu cellulaire souscutané
+
+## Position dans la classification
+- Chapitre XII : Maladies de la peau et du tissu cellulaire souscutané
+- Bloc L00-L08 : Infections de la peau et du tissu cellulaire souscutané
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XII) :
+
+affections disséminées du tissu conjonctif (M30-M36)
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+réticulose lipomélanique (I89.8)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité du bloc L00-L08) :
+
+dermite infectée (L30.3)
+granulome pyogène (L98.0)
+infections localisées de la peau classées dans le chapitre I, telles que :
+ - érysipèle (A46) 
+ - érysipéloïde (A26.-) 
+ - infection par le virus de l'herpès [Herpes simplex] (B00.-)  :
+  - anogénital (A60.-)
+ - molluscum contagiosum (B08.1) 
+ - mycoses (B35-B49) 
+ - pédiculose, acariase et autres infestations (B85-B89) 
+ - verrues virales (B07) 
+ - zona (B02.-) 
+orgelet (H00.0) 
+- panniculite :
+ - SAI (M79.3) 
+ - affectant le cou et le dos (M54.0) 
+ - lupique (L93.2) 
+ - récidivante [Weber–Christian] (M35.6) 
+- perlèche (due à) :
+ - SAI (K13.0) 
+ - candidose (B37.-) 
+ - carence en riboflavine (E53.0)
+
+Formes spécifiées de la catégorie L08 :
+- Érythrasma [→ L08.1]
+- Pyodermite [→ L08.0]
+
+## Formulations cliniques alternatives
+- Angiomatose bacillaire
+- Bactéricide d'Andrews
+- Cicatrice (adhérente) (cutanée) (douloureuse) (rétractile) (vicieuse) (de), infectée
+- cytostéatonécrose
+- Dermoépidermite de jambe (microbienne)
+- Dermoépidermite microbienne SAI
+- Dermohypodermite diffuse aigue
+- Dermohypodermite nodulaire
+- Dermohypodermite SAI
+- Dermohypodermite streptoccique SAI
+- Hypodermite nodulaire migratrice (Vilanova-Pinol)
+- Hypodermite SAI
+- Infection (à) (de), locale, localisée, de la peau et du tissu cellulaire sous- cutané, type précisé nca
+- Infection (à) (de), peau (locale) (avec) (due à), type précisé nca
+- Infection (à) (de), tissu, sous-cutané, locale, type précisé nca
+- infection cutanée pied
+- infection tissulaire pied
+- Pustule microbienne
+- Pustulose palmoplantaire
+- Pyodermite, végétante
+- Rupia
+- surinfection cutanée membres inférieurs
+- Vilanova-Pinol (hypodermite)
+
+</fiche_code>
+
+<fiche_code code="T81.4">
+
+# T81.4 — Infection après un acte à visée diagnostique et thérapeutique, non classée ailleurs
+
+## Position dans la classification
+- Chapitre XIX : Lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes
+- Bloc T80-T88 : Complications de soins chirurgicaux et médicaux, non classées ailleurs
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- abcès de(s) intra-abdominal après un acte à visée diagnostique et thérapeutique
+- abcès de(s) plaie après un acte à visée diagnostique et thérapeutique
+- abcès de(s) sous-phrénique après un acte à visée diagnostique et thérapeutique
+- abcès de(s) sutures après un acte à visée diagnostique et thérapeutique
+- septicémie après un acte à visée diagnostique et thérapeutique
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XIX) :
+
+fracture :
+ - mal consolidée (M84.0) 
+ - non consolidée [pseudarthrose] (M84.1) 
+ - par sollicitation excessive (M84.3) 
+ - pathologique (M84.4)   - avec ostéoporose (M80.-) 
+- traumatisme obstétrical :
+ - fœtus ou nouveau-né (P10-P15) 
+ - mère (O70-O71)
+
+Affections relevant d'autres codes (hérité du bloc T80-T88) :
+
+brulures et corrosions dues à des applications locales et des irradiations (T20-T32)
+complications chirurgicales au cours de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+complications précisées classées ailleurs, telles que :
+ - déséquilibres hydroélectrolytiques (E86-E87) 
+ - dysfonctionnement d'une colostomie (K91.4) 
+ - écoulement du liquide céphalorachidien après rachicentèse (G97.0) 
+ - lymphœdème après mastectomie (I97.2) 
+ - syndrome(s) (de) :
+  - consécutifs à la chirurgie gastrique (K91.1) 
+  - postchirurgical de l'anse borgne (K91.2) 
+  - postlaminectomie NCA (M96.1) 
+ - troubles fonctionnels après chirurgie cardiaque (I97.0-I97.1) 
+effets indésirables d'agent médicinaux (A00-R99)  (T78.-) 
+intoxications et effets toxiques de médicaments et de produits chimiques (T36-T65) 
+- tout recours aux soins médicaux pour des états postopératoires en dehors de toute complication, tel que :
+ - mise en place et ajustement d'appareils de prothèse externe (Z44.-) 
+ - obturation de stomies (Z43.-) 
+ - stomies (Z93.-)
+
+Affections relevant d'autres codes (hérité de la catégorie T81) :
+
+complication après :
+ - injection thérapeutique, perfusion et transfusion (T80.-) 
+ - vaccination (T88.0-T88.1) 
+- complications précisées classées ailleurs, telles que :
+ - complications de prothèses, implants et greffes (T82-T85) 
+ - dermites dues à des médicaments (L23.3)  (L24.4)  (L25.1)  (L27.0-L27.1) 
+ - échec et rejet d'organes et de tissus greffés [T86.–] 
+ - intoxications et effets toxiques de médicaments et de produits chimiques (T36-T65) 
+effet indésirable d'un médicament SAI (T88.7)
+
+Affections relevant d'autres codes :
+
+infection (due à) :
+ - injection thérapeutique, perfusion et transfusion (T80.2) 
+ - plaie chirurgicale obstétricale (O86.0) 
+ - prothèses, implants et greffes (T82.6-T82.7)  (T83.5-T83.6)  (T84.5-T84.7)  (T85.7)
+
+## Formulations cliniques alternatives
+- abcès de paroi
+- Abcès (embolique) (infectieux) (multiple) (pyogène) (septique) (de), péritoine, péritonéal (voir aussi péritonite), dû à un acte à visée diagnostique, thérapeutique
+- Abcès (embolique) (infectieux) (multiple) (pyogène) (septique) (de), plaie opératoire
+- Abcès (embolique) (infectieux) (multiple) (pyogène) (septique) (de), sous-phrénique, dû à un acte à visée diagnostique, thérapeutique
+- Abcès (embolique) (infectieux) (multiple) (pyogène) (septique) (de), suture (opératoire)
+- abcès fistulisé post-chirurgical
+- abcès sous-phrénique post-opératoire
+- cellulite périnéale post-sondage urinaire
+- Complication infectieuse après une arthroscopie
+- Complication infectieuse après une ponction articulaire
+- Complications (de) (dues à), acte à visée diagnostique, thérapeutique (avec) (voir aussi selon le type de complication), suppuration des points de suture
+- dermo-hypodermite gangréneuse post-laparotomie
+- Infection (à) (de), post-opératoire (d'une plaie)
+- infection cicatrice staphylocoque doré
+- infection péritonéale en dialyse péritonéale
+- infection post-opératoire Pseudomonas
+- péritonite post-gastrostomie
+- Phlegmon (avec lymphangite aiguë) (à) (de), dû à, drain (secondaire à un acte à visée diagnostique, thérapeutique)
+- Phlegmon (avec lymphangite aiguë) (à) (de), post-opératoire (plaie) (suture)
+- sepsis inguinal cicatrice
+- sepsis réanimation
+- Septicémie (avec suppuration) (généralisée) (à), post-opératoire
+- Suppuration (de) - voir aussi abcès, points de suture
+- surinfection post-opératoire
+
+</fiche_code>
+
+<fiche_code code="B95.6">
+
+# B95.6 — Staphylococcus aureus, cause de maladies classées dans d'autres chapitres
+
+## Position dans la classification
+- Chapitre I : Certaines maladies infectieuses et parasitaires
+- Bloc B95-B98 : Agents d'infections bactériennes, virales et autres
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre I :
+- les maladies considérées habituellement comme contagieuses ou transmissibles
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre I) :
+
+certaines infections localisées – voir les chapitres relatifs aux divers systèmes, appareils et organes
+grippe et autres affections aigües des voies respiratoires (J00-J22)
+infections spécifiques de la période périnatale [à l'exception du tétanos du nouveau-né, de la coqueluche, de la syphilis congénitale, des infections périnatales à gonocoques et des maladies périnatales dues au virus de l'immunodéficience humaine [VIH]] (P35-P39)
+maladies infectieuses et parasitaires de la mère compliquant la grossesse, l'accouchement et la puerpéralité [à l'exception du tétanos obstétrical] (O98.-)
+sujet porteur ou suspecté porteur d'une maladie infectieuse (Z22.-)
+
+## Formulations cliniques alternatives
+- Infection (à) (de), staphylocoques nca, dorés, cause de maladie classée ailleurs
+- Staphylococcus aureus
+- Staphylococcus aureus méti-R
+- Staphylococcus aureus méti-S
+- staphylocoque aureus
+- staphylocoque aureus méthi-S
+- staphylocoque doré
+
+</fiche_code>
+
+<fiche_code code="B95.7">
+
+# B95.7 — Autres staphylocoques, cause de maladies classées dans d'autres chapitres
+
+## Position dans la classification
+- Chapitre I : Certaines maladies infectieuses et parasitaires
+- Bloc B95-B98 : Agents d'infections bactériennes, virales et autres
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre I :
+- les maladies considérées habituellement comme contagieuses ou transmissibles
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre I) :
+
+certaines infections localisées – voir les chapitres relatifs aux divers systèmes, appareils et organes
+grippe et autres affections aigües des voies respiratoires (J00-J22)
+infections spécifiques de la période périnatale [à l'exception du tétanos du nouveau-né, de la coqueluche, de la syphilis congénitale, des infections périnatales à gonocoques et des maladies périnatales dues au virus de l'immunodéficience humaine [VIH]] (P35-P39)
+maladies infectieuses et parasitaires de la mère compliquant la grossesse, l'accouchement et la puerpéralité [à l'exception du tétanos obstétrical] (O98.-)
+sujet porteur ou suspecté porteur d'une maladie infectieuse (Z22.-)
+
+## Formulations cliniques alternatives
+- Infection (à) (de), staphylocoques nca, précisés nca, cause de maladie classée ailleurs
+- Staphylococcus à coagulase négative
+- Staphylococcus autre précisé que aureus
+- staphylocoque blanc
+- staphylocoque épidermidis
+
+</fiche_code>
+
+<fiche_code code="B96.4">
+
+# B96.4 — Proteus (P. mirabilis) (P. morganii), cause de maladies classées dans d'autres chapitres
+
+## Position dans la classification
+- Chapitre I : Certaines maladies infectieuses et parasitaires
+- Bloc B95-B98 : Agents d'infections bactériennes, virales et autres
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre I :
+- les maladies considérées habituellement comme contagieuses ou transmissibles
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre I) :
+
+certaines infections localisées – voir les chapitres relatifs aux divers systèmes, appareils et organes
+grippe et autres affections aigües des voies respiratoires (J00-J22)
+infections spécifiques de la période périnatale [à l'exception du tétanos du nouveau-né, de la coqueluche, de la syphilis congénitale, des infections périnatales à gonocoques et des maladies périnatales dues au virus de l'immunodéficience humaine [VIH]] (P35-P39)
+maladies infectieuses et parasitaires de la mère compliquant la grossesse, l'accouchement et la puerpéralité [à l'exception du tétanos obstétrical] (O98.-)
+sujet porteur ou suspecté porteur d'une maladie infectieuse (Z22.-)
+
+## Formulations cliniques alternatives
+- Autres Proteus (Proteus vulgaris...)
+- Infection (à) (de), proteus (mirabilis) (morganii) (vulgaris) nca, cause de maladie classée ailleurs
+- infection Proteus
+- Proteus
+- Proteus mirabilis
+- Proteus vulgaris
+- Protéus vulgaris BLSE
+
+</fiche_code>
+
+<fiche_code code="I10">
+
+# I10 — Hypertension essentielle (primitive)
+
+## Position dans la classification
+- Chapitre IX : Maladies de l'appareil circulatoire
+- Bloc I10-I15 : Maladies hypertensives
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- hypertension (artérielle) (bénigne) (essentielle) (maligne) (primitive) (systémique)
+- tension artérielle élevée
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IX) :
+
+accidents ischémiques cérébraux transitoires et syndromes apparentés (G45.-)
+affections disséminées du tissu conjonctif (M30-M36)
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité du bloc I10-I15) :
+
+cardiopathies ischémiques (I20-I25)
+compliquant la grossesse, l'accouchement et la puerpéralité (O10-O11)  (O13-O16)
+hypertension :
+ - du nouveau-né (P29.2) 
+ - pulmonaire :
+  - primaire (I27.0) 
+  - secondaire (I27.2)
+
+Affections relevant d'autres codes :
+
+avec :
+ - maladies cérébrovasculaires (I60-I69) 
+ - rétinopathies vasculaires (H35.0)
+
+## Formulations cliniques alternatives
+- Elévation de (voir aussi augmentation), pression ou tension (non spécifique), artérielle (voir aussi hypertension)
+- HTA bien contrôlée
+- HTA contrôlée
+- HTA effort
+- HTA essentielle
+- HTA essentielle "maligne" [coder aussi les conséquences]
+- HTA instable
+- HTA modérée
+- HTA rebelle
+- hypertension aigüe
+- Hypertension (artérielle) (bénigne) (essentielle) (idiopathique) (maligne) (primitive) (systémique)
+- hypertension artérielle idiopathique
+- Hypertension artérielle primitive
+- polyangiopathie hypertensive
+- poussées hypertensives
+- Tension, artérielle, élevée (épisodique) (non spécifique), due à hypertension (voir aussi hypertension)
+
+</fiche_code>

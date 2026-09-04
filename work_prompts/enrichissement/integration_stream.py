@@ -69,11 +69,25 @@ def enrichir_candidats(candidate_source: pl.DataFrame, seed: int | None,
     faits = int(enrichi["enrichi"].sum())
     codes = [c for v in enrichi["codes_ajoutes"].drop_nulls() for c in v.split() if v]
     print(f"Enrichissement : {faits}/{total} ligne(s) enrichie(s), "
-          f"{total - faits} exclue(s) (âge/politique), "
-          f"{len(codes)} code(s) DAS ajouté(s).")
-    if codes:
-        from collections import Counter
+          f"{total - faits} exclue(s), {len(codes)} code(s) DAS ajouté(s).")
 
+    from collections import Counter
+
+    if total - faits:
+        # motif d'exclusion par ligne (même logique que la politique)
+        motifs: Counter[str] = Counter()
+        for r in enrichi.filter(~pl.col("enrichi").fill_null(False)).iter_rows(named=True):
+            age = r.get("agean") if r.get("agean") is not None else r.get("age2")
+            if age is None or int(age) < politique.age_min:
+                motifs[f"âge < {politique.age_min} (ou manquant)"] += 1
+                continue
+            codes_ligne = [str(r.get("diag2") or "")] + str(
+                r.get("diagnostic_associes") or "").split()
+            prefixe = next((p for p in politique.prefixes_exclusion
+                            if any(c.startswith(p) for c in codes_ligne)), "?")
+            motifs[f"préfixe {prefixe}"] += 1
+        print("Exclusions :", ", ".join(f"{m} ×{n}" for m, n in motifs.most_common()))
+    if codes:
         comptes = Counter(codes).most_common(12)
         print("Codes ajoutés :", ", ".join(f"{c}×{n}" for c, n in comptes))
     return enrichi

@@ -1,0 +1,132 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 35 ans
+- Sexe du patient : Féminin
+- Date d'entrée : 22/03/2024
+- Date de sortie : 29/03/2024
+- Date de naissance : 24/10/1988
+- Nom du patient : Dunet
+- Prénom du patient : Annie-marie
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Prise en charge pour accouchement par voie basse.
+- Codage CIM10 :
+   * Diagnostic principal : Autres anomalies des forces en jeu au cours du travail (O628)
+   * Diagnostics associés :
+      - Grossesse prolongée (O48)
+      - Naissance unique, enfant vivant (Z370)
+- Acte CCAM : section de bride et/ou d'adhérences péritonéales pour occlusion intestinale aigüe, par coelioscopie (HPPC003)
+- Nom du médecin / signataire : Sotero Dubourg
+- Service : OBSTETRIQUE
+- Hôpital : Hôpital Saint-Louis - Assistance Publique Hôpitaux de Paris
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="O62.8">
+
+# O62.8 — Autres anomalies des forces en jeu au cours du travail
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O60-O75 : Complications du travail et de l'accouchement
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Formes spécifiées de la catégorie O62 :
+- Autres formes d'inertie utérine [→ O62.2]
+- Contractions initiales insuffisantes [→ O62.0]
+- Contractions utérines hypertoniques, non coordonnées et prolongées [→ O62.4]
+- Inertie utérine secondaire [→ O62.1]
+- Travail trop rapide [→ O62.3]
+
+## Formulations cliniques alternatives
+- Accouchement(s), compliqué, par, contractions (utérines), anormales, type précisé nca
+- Accouchement(s), compliqué, par, dilatation (du col utérin), anormale, type précisé nca
+- Anomalie (congénitale) (type non précisé) (de), contraction utérine, compliquant le travail et l'accouchement, précisée nca
+- Anomalie (congénitale) (type non précisé) (de), dilatation du col, compliquant le travail et l'accouchement, précisée nca
+- dystocie rétraction cervicale
+
+</fiche_code>
+
+<fiche_code code="O48">
+
+# O48 — Grossesse prolongée
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O30-O48 : Soins maternels liés au fœtus et à la cavité amniotique, et problèmes possibles posés par l'accouchement
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- naissance après terme
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+## Formulations cliniques alternatives
+- Accouchement(s), après terme (à 42 semaines de gestation ou plus)
+- Début d'accouchement, à 42 semaines de gestation ou plus
+- Début d'accouchement, après terme
+- grossesse terme dépassé
+- Grossesse (unique) (utérine), compliquée (par), gestation prolongée
+- Grossesse (unique) (utérine), compliquée (par), postmaturité
+- Grossesse (unique) (utérine), prolongée
+- Postmaturité, conditionnant les soins à la mère
+
+</fiche_code>
+
+<fiche_category code="Z37">
+
+# Z37 — Résultat de l'accouchement
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+
+## Codes enfants directs
+- Z37.0 — Naissance unique, enfant vivant
+- Z37.1 — Naissance unique, enfant mort-né
+- Z37.2 — Naissance gémellaire, jumeaux nés vivants
+- Z37.3 — Naissance gémellaire, l'un des jumeaux né vivant, l'autre mort-né
+- Z37.4 — Naissance gémellaire, jumeaux mort-nés
+- Z37.5 — Autres naissances multiples, tous nés vivants
+- Z37.6 — Autres naissances multiples, certains enfants nés vivants
+- Z37.7 — Autres naissances multiples, tous mort-nés
+- Z37.9 — Résultat de l'accouchement, sans précision
+
+## Périmètre clinique
+
+Inclusions héritées de la catégorie Z37.9 :
+- Naissance :
+ - multiple SAI
+ - unique SAI
+
+</fiche_category>
