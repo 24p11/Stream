@@ -1,0 +1,75 @@
+{"CR": "### Hôpital Roger Salengro - Centre Hospitalier Universitaire de Lille
+Service de Neuro-Vasculaire
+
+**Compte rendu d'hospitalisation**
+
+**Patient :**
+Nom : Taron
+Prénom : Jack
+Date de naissance : 20/04/1962
+
+---
+
+### Motif d'hospitalisation
+M. Jack Taron, âgé de 61 ans, a été admis aux urgences le 23/03/2024 pour la prise en charge d’un épisode neurologique transitoire évocateur d’un accident ischémique transitoire (AIT). Le patient a présenté une hémiplégie transitoire gauche, résolutive en moins d’une heure, sans séquelle motrice persistante.
+
+---
+
+### Antécédents
+- **Médicaux :**
+  - Hyperlipidémie connue, non traitée.
+  - Surpoids modéré.
+- **Chirurgicaux :** Aucun antécédent notable.
+- **Familiaux :** Pas d’antécédent connu d’accident vasculaire cérébral ou d’hyperlipidémie familiale.
+- **Allergies :** Aucune allergie médicamenteuse connue.
+
+---
+
+### Mode de vie
+M. Taron est non-fumeur et ne présente pas de mésusage d’alcool. Il exerce une activité professionnelle sédentaire et ne pratique pas d’activité physique régulière. Son poids est stable à 79 kg pour une taille de 177 cm (IMC à 25,2).
+
+---
+
+### Histoire de la maladie
+Le patient décrit l’apparition brutale, le matin du 23/03/2024, d’une faiblesse musculaire du membre supérieur et inférieur gauches, associée à une difficulté d’élocution transitoire. Ces symptômes ont duré environ 45 minutes avant de régresser spontanément. Il n’a pas présenté de céphalées, de troubles visuels ou de vertiges associés. Devant la persistance d’une inquiétude légitime, il a consulté aux urgences où un bilan initial a été réalisé.
+
+---
+
+### Examen clinique
+À l’admission, le patient est apyrétique, avec une tension artérielle à 135/85 mmHg et une fréquence cardiaque régulière à 78 battements par minute. L’examen neurologique est strictement normal, sans déficit moteur ou sensitif résiduel. Les réflexes ostéotendineux sont symétriques, et il n’y a pas de signe de Babinski. L’examen cardiovasculaire ne révèle pas de souffle carotidien ou cardiaque. Le poids est mesuré à 79 kg, confirmant un surpoids modéré.
+
+---
+
+### Examens complémentaires
+- **Biologie :**
+  - NFS : normale, sans anomalie des globules blancs, rouges ou plaquettaires.
+  - Bilan lipidique : hyperlipidémie mixte avec LDL-cholestérol à 1,8 g/L et triglycérides à 2,1 g/L.
+  - Créatinine : 85 µmol/L (DFG estimé à 80 mL/min/1,73 m²).
+  - Bilan hépatique : normal.
+- **Imagerie :**
+  - Doppler des troncs supra-aortiques : athérome carotidien bilatéral non sténosant.
+  - IRM cérébrale avec séquences de diffusion : absence de lésion ischémique aiguë ou ancienne.
+  - Échocardiographie transthoracique : normale, sans thrombus intracavitaire ni valvulopathie significative.
+
+---
+
+### Évolution pendant l'hospitalisation
+#### Démarche diagnostique
+L’ensemble des examens réalisés a permis de confirmer le diagnostic d’accident ischémique transitoire du territoire sylvien droit, sans lésion cérébrale constituée. Le bilan étiologique a mis en évidence une hyperlipidémie non contrôlée et un athérome carotidien bilatéral, facteurs de risque majeurs d’événements vasculaires récidivants.
+
+#### Traitements
+Un traitement préventif a été instauré :
+- Antiagrégant plaquettaire : clopidogrel 75 mg/jour.
+- Statine : atorvastatine 40 mg/jour pour cibler un LDL-cholestérol < 0,7 g/L.
+- Mesures hygiéno-diététiques : conseils pour une alimentation équilibrée et une activité physique régulière, avec suivi par une diététicienne.
+
+Le patient a été surveillé pendant 5 jours, sans récidive des symptômes neurologiques. Une consultation de suivi en neurologie vasculaire a été programmée à un mois, avec contrôle du bilan lipidique et du Doppler carotidien.
+
+---
+
+### Conclusion
+M. Taron a présenté un accident ischémique transitoire du territoire sylvien droit, sans séquelle neurologique. Le bilan étiologique a révélé une hyperlipidémie et un athérome carotidien non sténosant. Un traitement préventif par antiagrégant plaquettaire et statine a été initié, associé à des mesures hygiéno-diététiques. Le patient est autorisé à regagner son domicile ce jour, avec un suivi spécialisé programmé.
+
+**Dr Jacqueline Blie**
+Service de Neuro-Vasculaire
+Hôpital Roger Salengro - CHU de Lille", "formulations": {"diagnostics": {"Autres accidents ischémiques cérébraux transitoires et syndromes apparentés (G45.8)": ["épisode neurologique transitoire évocateur d’un accident ischémique transitoire (AIT)", "hémiplégie transitoire gauche", "accident ischémique transitoire du territoire sylvien droit"], "Hyperlipidémie, sans précision (E78.5)": ["Hyperlipidémie connue, non traitée", "hyperlipidémie mixte avec LDL-cholestérol à 1,8 g/L et triglycérides à 2,1 g/L"], "Surpoids dû à un excès calorique, de l'adulte ou de l'enfant (E66.03)": ["Surpoids modéré", "poids est stable à 79 kg pour une taille de 177 cm (IMC à 25,2)"]}, "informations": {"Date entrée": ["23/03/2024"], "Date de sortie": ["28/03/2024"], "Service d'hospitalisation": ["Service de Neuro-Vasculaire"], "Nom/Prénom du patient": ["Taron Jack"], "Nom/Prénom du médecin": ["Jacqueline Blie"], "Âge": ["61 ans"], "Sexe": ["Masculin"], "État général": [], "Poids": ["79 kg"], "Statut gestationnel": [], "Gestité": [], "NFS": ["normale, sans anomalie des globules blancs, rouges ou plaquettaires"], "Créatinine": ["85 µmol/L (DFG estimé à 80 mL/min/1,73 m²)"], "Bilan hepatique": ["normal"], "Traitements": ["clopidogrel 75 mg/jour", "atorvastatine 40 mg/jour"]}}}

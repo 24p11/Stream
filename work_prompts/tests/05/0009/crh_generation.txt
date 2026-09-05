@@ -1,0 +1,86 @@
+{"CR": "### Hôpital Sud - CHU Grenoble Alpes
+Service de Pédiatrie Neurologie
+
+Nom : Bretau
+Prénom : Jeanine
+Date de naissance : 28/11/1999
+
+---
+
+### Motif d'hospitalisation
+Mme Jeanine Bretau, âgée de 25 ans, est hospitalisée ce jour en hospitalisation ambulatoire pour la mise en place et l'ajustement d'un fauteuil roulant dans le cadre de son syndrome d'apnée obstructive du sommeil (SAOS) associé à une obésité modérée.
+
+---
+
+### Antécédents
+- Médicaux : Syndrome d'apnée obstructive du sommeil diagnostiqué en 2023, obésité avec un IMC à 34,3 kg/m².
+- Chirurgicaux : Appendicectomie en 2010.
+- Familiaux : Pas d'antécédent notable connu.
+- Allergies : Aucune allergie médicamenteuse ou environnementale connue.
+
+---
+
+### Mode de vie
+Mme Bretau ne fume pas et ne présente pas de mésusage d'alcool. Elle travaille comme employée administrative et mène une vie sédentaire. Elle ne pratique pas d'activité physique régulière. Elle vit seule à domicile.
+
+---
+
+### Histoire de la maladie
+Mme Bretau présente un syndrome d'apnée obstructive du sommeil diagnostiqué il y a deux ans, traité par ventilation non invasive (VNI) nocturne. En raison de son obésité (IMC à 34,3 kg/m²), une prise en charge multidisciplinaire a été initiée, incluant un suivi diététique et une évaluation pour la mise en place d'un fauteuil roulant afin de faciliter ses déplacements et améliorer sa mobilité. Elle a été adressée par son médecin traitant pour ajustement de ce dispositif dans le cadre de son suivi en pédiatrie neurologie.
+
+---
+
+### Examen clinique
+À l'admission, Mme Bretau est apyrétique. Ses constantes sont les suivantes : tension artérielle à 130/80 mmHg, fréquence cardiaque à 78 battements par minute, saturation en oxygène à 98 % en air ambiant. Elle pèse 91 kg pour une taille de 163 cm, confirmant un IMC à 34,3 kg/m². L'examen neurologique est sans particularité. On note une légère dyspnée à l'effort, sans signe de détresse respiratoire. L'auscultation cardiopulmonaire est normale.
+
+---
+
+### Examens complémentaires
+Aucun examen complémentaire n'a été réalisé durant cette hospitalisation de jour.
+
+---
+
+### Conclusion
+Mme Bretau a bénéficié ce jour de la mise en place et de l'ajustement d'un fauteuil roulant dans le cadre de sa prise en charge pour un syndrome d'apnée obstructive du sommeil et une obésité modérée. Elle regagne son domicile avec un rendez-vous de suivi prévu dans un mois pour évaluer la tolérance et l'efficacité du dispositif. Un suivi diététique et une réévaluation de sa mobilité sont également programmés.
+
+Fait à Grenoble, le 21/01/2025
+Dr Jacqueline Le Gallo",
+
+"formulations": {
+    "diagnostics": {
+        "Mise en place et ajustement d'autres appareils précisés (Z46.8)": [
+            "mise en place et l'ajustement d'un fauteuil roulant",
+            "mise en place et de l'ajustement d'un fauteuil roulant"
+        ],
+        "Apnée du sommeil (G47.3)": [
+            "syndrome d'apnée obstructive du sommeil (SAOS)",
+            "syndrome d'apnée obstructive du sommeil",
+            "SAOS"
+        ],
+        "Obésité due à un excès calorique de l'adulte avec indice de masse corporelle [IMC] égal ou supérieur à 30 kg/m² et inférieur à 35 kg/m², ou obésité due à un excès calorique de l'enfant (E66.04)": [
+            "obésité modérée",
+            "obésité avec un IMC à 34,3 kg/m²"
+        ]
+    },
+    "informations": {
+        "Date entrée": ["21/01/2025"],
+        "Date de sortie": ["21/01/2025"],
+        "Service d'hospitalisation": ["Service de Pédiatrie Neurologie"],
+        "Nom/Prénom du médecin": ["Dr Jacqueline Le Gallo"],
+        "Nom/Prénom du patient": ["Mme Jeanine Bretau"],
+        "Poids": ["91 kg"],
+        "Âge": ["25 ans"],
+        "Sexe": ["Féminin"],
+        "État général": [
+            "Mme Bretau est apyrétique. Ses constantes sont les suivantes : tension artérielle à 130/80 mmHg, fréquence cardiaque à 78 battements par minute, saturation en oxygène à 98 % en air ambiant",
+            "Elle pèse 91 kg pour une taille de 163 cm, confirmant un IMC à 34,3 kg/m². L'examen neurologique est sans particularité. On note une légère dyspnée à l'effort, sans signe de détresse respiratoire. L'auscultation cardiopulmonaire est normale"
+        ],
+        "NFS": [],
+        "Créatinine": [],
+        "Bilan hépatique": [],
+        "Traitements": [
+            "ventilation non invasive (VNI) nocturne"
+        ]
+    }
+}
+}

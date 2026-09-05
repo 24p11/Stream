@@ -1,0 +1,106 @@
+{"CR": "### Hôpital Sud - CHU Grenoble Alpes
+Service de CANCERO ADULTE
+
+Nom : Rolland
+Prénom : Jean
+Date de naissance : 11/06/1968
+
+---
+
+### Motif d'hospitalisation
+M. Jean Rolland, 55 ans, est hospitalisé ce jour pour la prise en charge d'un adénocarcinome du pancréas endocrine, associé à des localisations secondaires hépatiques. Cette hospitalisation s'inscrit dans le cadre d'une évaluation préopératoire et d'une discussion pluridisciplinaire pour une stratégie thérapeutique adaptée.
+
+---
+
+### Antécédents
+- Médicaux : Pas d'antécédent notable.
+- Chirurgicaux : Appendicectomie dans l'enfance.
+- Familiaux : Aucun antécédent familial de néoplasie pancréatique ou hépatique connu.
+- Allergies : Aucune allergie médicamenteuse connue.
+
+---
+
+### Mode de vie
+M. Rolland est non-fumeur et ne présente pas de mésusage d'alcool. Il exerce une activité professionnelle sédentaire et n'a pas d'activité physique régulière. Il vit à domicile et est autonome pour les activités de la vie quotidienne.
+
+---
+
+### Histoire de la maladie
+Le patient a consulté son médecin traitant il y a trois semaines pour des douleurs épigastriques persistantes, associées à une altération de l'état général et à une perte de poids non quantifiée. Une échographie abdominale réalisée en ville a révélé une masse pancréatique suspecte, confirmée par une tomodensitométrie (TDM) thoraco-abdomino-pelvienne avec injection de produit de contraste. Cet examen a mis en évidence une lésion tumorale corporéo-caudale du pancréas, mesurant environ 3 cm, ainsi que plusieurs nodules hépatiques évocateurs de métastases. Une ponction-biopsie sous écho-endoscopie a permis de poser le diagnostic d'adénocarcinome canalaire pancréatique. Le dosage du marqueur tumoral CA 19-9 était élevé à 450 UI/mL (normale < 37 UI/mL). Le bilan d'extension, incluant une IRM hépatique et un scanner thoracique, n'a pas révélé d'autres localisations secondaires. Le dossier a été présenté en réunion de concertation pluridisciplinaire (RCP), qui a retenu l'indication d'une résection chirurgicale, suivie d'une chimiothérapie adjuvante par FOLFIRINOX modifié.
+
+---
+
+### Examen clinique
+À l'entrée, M. Rolland est apyrétique, avec une tension artérielle à 130/80 mmHg et une fréquence cardiaque à 78 battements par minute. L'examen abdominal retrouve une sensibilité modérée à la palpation de l'épigastre, sans défense ni masse palpable. Il n'y a pas d'ictère cutanéo-muqueux, ni d'ascite clinique. Le poids est stable à 82 kg pour une taille de 184 cm (IMC 24,2). L'examen cardiopulmonaire est sans particularité, et il n'y a pas de signe de thrombose veineuse profonde.
+
+---
+
+### Examens complémentaires
+- **Biologie** :
+  - NFS : Hémoglobine à 13,2 g/dL, leucocytes à 7 800/mm³, plaquettes à 250 000/mm³.
+  - Bilan hépatique : ASAT à 35 UI/L (N < 40), ALAT à 42 UI/L (N < 45), bilirubine totale à 12 µmol/L (N < 17), phosphatases alcalines à 80 UI/L (N < 120), gamma-GT à 50 UI/L (N < 55).
+  - Créatinine : 78 µmol/L (clairance estimée à 90 mL/min).
+  - CA 19-9 : 450 UI/mL (contrôle en hausse par rapport au précédent dosage à 380 UI/mL).
+- **Imagerie** :
+  - TDM thoraco-abdomino-pelvienne : Lésion tumorale corporéo-caudale du pancréas de 3 cm, sans envahissement vasculaire majeur. Présence de trois nodules hépatiques hypodenses, mesurant entre 1 et 2 cm, compatibles avec des métastases.
+  - IRM hépatique : Confirmation des lésions secondaires hépatiques, sans autre anomalie notable.
+- **Anatomopathologie** :
+  - Biopsie pancréatique sous écho-endoscopie : Adénocarcinome canalaire peu différencié, avec immunomarquage positif pour la cytokératine 19 et négatif pour les marqueurs neuro-endocrines.
+
+---
+
+### Conclusion
+M. Jean Rolland présente un adénocarcinome corporéo-caudal du pancréas, classé T2N0M0, avec des métastases hépatiques synchrones. Le dossier a été validé en RCP pour une prise en charge chirurgicale première, suivie d'une chimiothérapie adjuvante par FOLFIRINOX modifié. Le patient est informé de la stratégie thérapeutique et des modalités de suivi. Il sortira ce jour avec un rendez-vous de consultation préopératoire programmé dans 10 jours, ainsi qu'une ordonnance pour un bilan pré-anesthésique et une consultation avec l'équipe d'oncologie médicale.
+
+Dr Danielle Gobe
+Service de CANCERO ADULTE
+Hôpital Sud - CHU Grenoble Alpes",
+
+"formulations": {
+    "diagnostics": {
+        "Tumeur maligne du pancréas endocrine, autre et non précisée (C254+8)": [
+            "adénocarcinome du pancréas endocrine",
+            "adénocarcinome canalaire pancréatique",
+            "adénocarcinome corporéo-caudal du pancréas",
+            "lésion tumorale corporéo-caudale du pancréas",
+            "tumeur pancréatique maligne corporéo-caudale"
+        ],
+        "Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques (C787)": [
+            "localisations secondaires hépatiques",
+            "nodules hépatiques évocateurs de métastases",
+            "métastases hépatiques synchrones",
+            "lésions secondaires hépatiques"
+        ]
+    },
+    "informations": {
+        "Date entrée": ["05/04/2024"],
+        "Date de sortie": ["05/04/2024"],
+        "Service d'hospitalisation": ["Service de CANCERO ADULTE"],
+        "Nom/Prénom du médecin": ["Danielle Gobe"],
+        "Nom/Prénom du patient": ["Rolland Jean"],
+        "Poids": ["82 kg"],
+        "Âge": ["55 ans"],
+        "Sexe": ["Masculin"],
+        "État général": [
+            "altération de l'état général",
+            "autonome pour les activités de la vie quotidienne"
+        ],
+        "NFS": [
+            "Hémoglobine à 13,2 g/dL",
+            "leucocytes à 7 800/mm³",
+            "plaquettes à 250 000/mm³"
+        ],
+        "Créatinine": ["78 µmol/L (clairance estimée à 90 mL/min)"],
+        "Bilan hépatique": [
+            "ASAT à 35 UI/L (N < 40)",
+            "ALAT à 42 UI/L (N < 45)",
+            "bilirubine totale à 12 µmol/L (N < 17)",
+            "phosphatases alcalines à 80 UI/L (N < 120)",
+            "gamma-GT à 50 UI/L (N < 55)"
+        ],
+        "Traitements": [
+            "chimiothérapie adjuvante par FOLFIRINOX modifié",
+            "résection chirurgicale"
+        ]
+    }
+}}

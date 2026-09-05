@@ -1,0 +1,73 @@
+{"CR": "## Compte rendu opératoire
+
+Service de Chirurgie Orthopédique et Traumatologique
+Hôpital Bichat-Claude Bernard - Assistance Publique Hôpitaux de Paris
+
+Nom : Couillebault
+Prénom : Kalyani
+Date de naissance : 27/02/1979
+
+### Intervention
+Suture de plaie de l’intestin grêle par laparotomie.
+
+### Date de l’intervention
+20/03/2025
+
+### Diagnostic
+Déhiscence d’une plaie opératoire abdominale avec surinfection locale et abcès de paroi.
+
+### Technique utilisée
+Laparotomie médiane sous-ombilicale sous anesthésie générale. Exploration de la cavité abdominale après effondrement des adhérences épiploïques. Identification d’une désunion partielle d’une suture antérieure de l’iléon terminal sur environ 3 cm, avec issue de liquide trouble et présence de fausses membranes. Lavage abondant au sérum physiologique tiède. Résection économique des berges nécrotiques. Suture en un plan au fil résorbable 3/0, points séparés extramuqueux. Vérification de l’étanchéité par épreuve au bleu de méthylène. Drainage aspiratif de la zone opératoire par un drain de Redon 14 Ch.
+
+### Constatations per-opératoires
+La désunion intéresse la totalité de l’épaisseur de la paroi intestinale, avec infiltration purulente du mésentère adjacent. Pas d’autre lésion visible sur le reste du grêle ni sur le cadre colique. La paroi abdominale présente un abcès sous-aponévrotique de 4 cm de diamètre, en regard de la désunion, avec présence de pus franc et de débris fibrineux.
+
+### Matériels utilisés
+Fil résorbable Vicryl 3/0, drain de Redon 14 Ch, matériel de laparotomie standard.
+
+### Chirurgien
+Dr Elida Vanderveken
+
+-----
+
+## Compte rendu d’hospitalisation
+
+Service de Chirurgie Orthopédique et Traumatologique
+Hôpital Bichat-Claude Bernard - Assistance Publique Hôpitaux de Paris
+
+Nom : Couillebault
+Prénom : Kalyani
+Date de naissance : 27/02/1979
+
+### Motif d’hospitalisation
+Prise en charge d’une désunion de plaie opératoire abdominale compliquée d’une infection locale, survenue trois semaines après une intervention pour occlusion intestinale.
+
+### Antécédents
+- Médicaux : hypertension artérielle essentielle sous traitement par inhibiteur de l’enzyme de conversion.
+- Chirurgicaux : appendicectomie dans l’enfance.
+- Familiaux : sans particularité.
+- Allergies : aucune connue.
+
+### Mode de vie
+Patiente non fumeuse, ne consommant pas d’alcool. Exerce la profession d’enseignante. Vit seule à domicile.
+
+### Histoire de la maladie
+Mme Couillebault a été opérée en urgence le 25/02/2025 pour une occlusion intestinale sur bride, par laparotomie médiane. Les suites initiales ont été simples, avec une sortie à domicile au cinquième jour postopératoire. Elle consulte aux urgences le 12/03/2025 pour des douleurs abdominales croissantes, un écoulement purulent au niveau de la cicatrice et une fièvre à 38,5 °C. L’examen clinique retrouve une désunion partielle de la plaie opératoire avec issue de pus et une rougeur inflammatoire en regard. Un scanner abdominal confirme la présence d’un abcès de paroi et d’un épanchement intra-abdominal localisé. Une antibiothérapie probabiliste par amoxicilline-acide clavulanique est instaurée, et la patiente est hospitalisée pour prise en charge chirurgicale.
+
+### Examen clinique
+À l’entrée, la patiente est apyrétique après prise d’antipyrétique. Poids stable à 53 kg pour une taille de 163 cm. Tension artérielle à 145/90 mmHg, fréquence cardiaque à 85/min. L’abdomen est souple mais douloureux à la palpation de la cicatrice médiane, avec une zone inflammatoire de 5 cm de diamètre, indurée et sensible. Pas de défense ni de contracture. Le transit est présent, sans nausées ni vomissements. Les orifices herniaires sont libres.
+
+### Examens complémentaires
+- NFS : leucocytes à 14 500/mm³ (polynucléaires neutrophiles à 82 %), hémoglobine à 11,2 g/dL, plaquettes à 380 000/mm³.
+- CRP : 125 mg/L.
+- Créatinine : 78 µmol/L, ionogramme sanguin normal.
+- Bilan hépatique : normal.
+- Hémocultures : positives à Staphylococcus aureus méticilline-sensible et Proteus mirabilis.
+- Prélèvement local de pus : culture positive à Staphylococcus aureus et Proteus mirabilis.
+- Scanner abdominal : abcès de paroi de 4 cm en regard de la cicatrice, épanchement liquidien localisé dans la gouttière pariétocolique droite, sans signe de péritonite généralisée.
+
+### Évolution pendant l'hospitalisation
+La patiente est opérée le 20/03/2025 comme décrit dans le compte rendu opératoire. Les suites postopératoires sont marquées par une apyrexie sous antibiothérapie adaptée (amoxicilline-acide clavulanique relayée par ofloxacine et métronidazole après résultats des cultures). Le drain de Redon est retiré au cinquième jour postopératoire, après tarissement de l’écoulement. La cicatrice est nettoyée quotidiennement et présente une évolution favorable, avec diminution progressive de l’inflammation locale. La tension artérielle est surveillée et contrôlée par ajustement du traitement antihypertenseur. La patiente est autorisée à reprendre une alimentation progressive à J3 postopératoire, sans complication digestive. Elle quitte le service le 09/05/2025 avec une ordonnance d’antibiotiques per os pour dix jours et un suivi en consultation à une semaine.
+
+### Conclusion
+Prise en charge réussie d’une désunion de plaie opératoire abdominale compliquée d’un abcès de paroi et d’une infection locale à Staphylococcus aureus et Proteus mirabilis. Les suites postopératoires sont simples, avec une cicatrisation en bonne voie et un contrôle satisfaisant de l’hypertension artérielle. La patiente regagne son domicile avec un suivi rapproché.", "formulations": {"diagnostics": {"Désunions d'une plaie opératoire non classées ailleurs, autres et non précisées (T8138)": ["désunion de plaie opératoire abdominale", "désunion partielle de la plaie opératoire", "déhiscence d’une plaie opératoire abdominale"], "Autres infections localisées précisées de la peau et du tissu cellulaire sous-cutané (L088)": ["infection locale", "surinfection locale", "abcès de paroi", "zone inflammatoire"], "Infection après un acte à visée diagnostique et thérapeutique, non classée ailleurs (T814)": ["abcès de paroi", "infection locale"], "Staphylococcus aureus, cause de maladies classées dans d'autres chapitres (B956)": ["Staphylococcus aureus méticilline-sensible", "Staphylococcus aureus"], "Autres staphylocoques, cause de maladies classées dans d'autres chapitres (B957)": [], "Proteus (P.mirabilis) (P.morganii), cause de maladies classées dans d'autres chapitres (B964)": ["Proteus mirabilis"], "Hypertension essentielle (primitive) (I10)": ["hypertension artérielle essentielle", "hypertension artérielle"]}, "informations": {"Date entrée": ["12/03/2025"], "Date de sortie": ["09/05/2025"], "Service d'hospitalisation": ["Service de Chirurgie Orthopédique et Traumatologique"], "Intervention": ["Suture de plaie de l’intestin grêle par laparotomie"], "Date de l’intervention": ["20/03/2025"], "Nom/Prénom du chirurgien": ["Dr Elida Vanderveken"], "Nom/Prénom du patient": ["Couillebault Kalyani"], "Âge": ["46 ans"], "Sexe": ["Féminin"], "État général": ["Poids stable à 53 kg pour une taille de 163 cm. Tension artérielle à 145/90 mmHg, fréquence cardiaque à 85/min."], "Poids": ["53 kg"], "Statut gestationnel": [], "Gestité": [], "Comorbidités": ["hypertension artérielle essentielle sous traitement par inhibiteur de l’enzyme de conversion"], "Médicaments": ["amoxicilline-acide clavulanique", "ofloxacine et métronidazole", "inhibiteur de l’enzyme de conversion"], "NFS": ["leucocytes à 14 500/mm³ (polynucléaires neutrophiles à 82 %), hémoglobine à 11,2 g/dL, plaquettes à 380 000/mm³"], "Créatinine": ["78 µmol/L"], "Bilan hépatique": ["normal"]}}
