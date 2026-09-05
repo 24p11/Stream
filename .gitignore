@@ -224,3 +224,6 @@ work_modif_prompts/tests/
 
 # macOS
 .DS_Store
+
+# Réglages Claude Code propres au poste (règles d'auto-mode, clé locale) — jamais versionnés
+.claude/settings.local.json
