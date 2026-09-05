@@ -1,19 +1,27 @@
 """Cycle de génération (§3.5), injection de contexte (§4), reprise (§3.6).
 
-Spécification : docs/spec_testrun_run_stage.md (v3.4). La logique batch est
-une copie adaptée de `run_mistral_batch` (work_modif_prompts/
-aphp_generation_utils.py, non modifié) : JSONL sous `batches/<stem de out>/`,
-`custom_id` = nom du scénario, polling borné par `timeout_seconds`.
+Spécification : docs/spec_testrun_run_stage.md (v3.7). Deux transports vers
+Mistral, choisis par `transport` :
+
+- `sync` (défaut) : un appel `chat.complete` par scénario, quelques appels en
+  parallèle, reprise automatique sur erreur transitoire ;
+- `batch` : copie adaptée de `run_mistral_batch` (work_modif_prompts/
+  aphp_generation_utils.py, non modifié), polling borné par `timeout_seconds`.
+
+Dans les deux cas : JSONL d'entrée et de sortie archivés sous
+`batches/<stem de out>/`, `custom_id` = nom du scénario, même forme de
+réponse (`choices`/`usage`) — validation et journal des coûts communs.
 """
 
 from __future__ import annotations
 
 import json
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
-from typing import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any, Literal
 
 import polars as pl
 
@@ -23,6 +31,14 @@ from bench.seeding import scenario_dirs
 
 if TYPE_CHECKING:
     from core.clients import MistralClient
+
+Transport = Literal["sync", "batch"]
+_TRANSPORTS: tuple[str, ...] = ("sync", "batch")
+
+# Reprise sur erreur transitoire (transport sync) : nombre de tentatives par
+# requête et pauses entre tentatives, en secondes (la dernière valeur se répète).
+_SYNC_ATTEMPTS = 3
+_SYNC_BACKOFF_SECONDS: tuple[float, ...] = (5.0, 15.0)
 
 
 @dataclass
@@ -69,6 +85,8 @@ def generate(
     context_footer: str = "",
     only: list[str] | None = None,
     dry_run: bool = False,
+    transport: Transport = "sync",
+    max_workers: int = 3,
     poll_interval_seconds: float = 1.0,
     timeout_seconds: float = 3600.0,
 ) -> GenResult:
@@ -80,12 +98,22 @@ def generate(
     appel API, aucune écriture — c'est le test de complétude. Un run réel
     valide les réponses (§3.5.5) avant toute écriture, puis écrit `out`
     dans chaque dossier traité et ajoute une entrée au journal (§7).
+
+    `transport` : `"sync"` (un appel par scénario, `max_workers` en
+    parallèle, `timeout_seconds` borne chaque requête) ou `"batch"`
+    (`timeout_seconds` borne le polling). `pricing` doit être le tarif du
+    transport choisi.
     """
     if prefix_file is not None and prefix_text:
         raise BenchError(
             "`prefix_file` et `prefix_text` sont exclusifs : fournir l'un ou "
             f"l'autre (reçus : prefix_file={prefix_file!r}, "
             f"prefix_text={prefix_text!r})."
+        )
+    if transport not in _TRANSPORTS:
+        raise BenchError(
+            f"Transport inconnu : {transport!r}. Valeurs acceptées : "
+            f"{list(_TRANSPORTS)}."
         )
 
     # Étape 1 — découverte + filtre.
@@ -153,19 +181,30 @@ def generate(
             dry_run=True,
         )
 
-    # Étape 4 — batch Mistral, JSONL sous batches/<stem de out>/.
-    batch_job_id, responses = _run_mistral_batch(
-        rows,
-        client=client,
-        batches_dir=test_dir / "batches" / Path(out).stem,
-        model=model,
-        max_tokens=max_tokens,
-        poll_interval_seconds=poll_interval_seconds,
-        timeout_seconds=timeout_seconds,
-    )
+    # Étape 4 — appels Mistral selon `transport`, JSONL sous batches/<stem de out>/.
+    requests = _build_requests(rows, max_tokens=max_tokens)
+    archive_dir = test_dir / "batches" / Path(out).stem
+    if transport == "batch":
+        run_id, responses = _run_mistral_batch(
+            requests,
+            client=client,
+            batches_dir=archive_dir,
+            model=model,
+            poll_interval_seconds=poll_interval_seconds,
+            timeout_seconds=timeout_seconds,
+        )
+    else:
+        run_id, responses = _run_mistral_sync(
+            requests,
+            client=client,
+            batches_dir=archive_dir,
+            model=model,
+            max_workers=max_workers,
+            timeout_seconds=timeout_seconds,
+        )
 
     # Étape 5 — validation (§3.5.5), AVANT toute écriture de `out` ou du journal.
-    _validate_responses(selected, responses, batch_job_id=batch_job_id, out=out)
+    _validate_responses(selected, responses, run_id=run_id, out=out)
 
     # Étape 6 — sauvegarde : `out` par scénario traité (écrasement = geste
     # normal), puis entrée au journal usage.json (§7, append-only).
@@ -183,7 +222,14 @@ def generate(
         output_tokens=sum(row["output_tokens"] for row in rows),
         pricing=pricing,
     )
-    append_usage(test_dir, out=out, partial=partial, model=model, usage=usage)
+    append_usage(
+        test_dir,
+        out=out,
+        partial=partial,
+        model=model,
+        transport=transport,
+        usage=usage,
+    )
 
     # Étape 7.
     return GenResult(
@@ -262,32 +308,15 @@ def _inject_context(
 
 
 # =============================================================================
-# Batch Mistral — copie adaptée de run_mistral_batch (ancien monde, §8, §11)
+# Requêtes Mistral — forme commune aux deux transports
 # =============================================================================
 
 
-def _run_mistral_batch(
-    rows: list[dict],
-    *,
-    client: MistralClient,
-    batches_dir: Path,
-    model: str,
-    max_tokens: int,
-    poll_interval_seconds: float,
-    timeout_seconds: float,
-) -> tuple[str, dict[str, dict[str, Any]]]:
-    """Lance un batch Mistral, retourne (id du batch, réponses par scénario).
-
-    Copie adaptée de `run_mistral_batch` (work_modif_prompts/
-    aphp_generation_utils.py) : `custom_id` = nom du scénario, JSONL archivés
-    sous `batches_dir`, polling borné par `timeout_seconds`. L'accès
-    `client._client` est conservé tel quel (§8 — la réunification dans
-    `MistralClient` est un chantier séparé).
-    """
-    batches_dir.mkdir(parents=True, exist_ok=True)
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
-
-    batch_requests: list[dict[str, Any]] = []
+def _build_requests(rows: list[dict], *, max_tokens: int) -> list[dict[str, Any]]:
+    """Une requête chat par scénario : `custom_id` = nom du scénario, `body` =
+    messages (système, user, prefix assistant le cas échéant) + max_tokens.
+    Même forme que le JSONL d'entrée du batch Mistral."""
+    requests: list[dict[str, Any]] = []
     for row in rows:
         name = row["scenario"]
         system_prompt = str(row["system_prompt"] or "").strip()
@@ -305,19 +334,190 @@ def _run_mistral_batch(
             messages.append(
                 {"role": "assistant", "content": prefix, "prefix": True}
             )
-        batch_requests.append(
+        requests.append(
             {
                 "custom_id": name,
                 "body": {"messages": messages, "max_tokens": int(max_tokens)},
             }
         )
+    return requests
 
-    input_bytes = (
-        "\n".join(
-            json.dumps(request, ensure_ascii=False) for request in batch_requests
-        )
-        + "\n"
+
+def _to_jsonl(items: list[dict[str, Any]]) -> bytes:
+    return (
+        "\n".join(json.dumps(item, ensure_ascii=False) for item in items) + "\n"
     ).encode("utf-8")
+
+
+# =============================================================================
+# Transport sync — un appel chat.complete par scénario
+# =============================================================================
+
+
+def _run_mistral_sync(
+    requests: list[dict[str, Any]],
+    *,
+    client: MistralClient,
+    batches_dir: Path,
+    model: str,
+    max_workers: int,
+    timeout_seconds: float,
+) -> tuple[str, dict[str, dict[str, Any]]]:
+    """Appels synchrones, `max_workers` en parallèle ; retourne (id du run,
+    réponses par scénario).
+
+    Chaque requête est tentée `_SYNC_ATTEMPTS` fois ; une erreur persistante
+    est archivée sous la même forme qu'une erreur batch (`error`) et fait
+    échouer la validation — rien n'est écrit. JSONL d'entrée et de sortie
+    sous `batches_dir`, au format du batch (parseur commun).
+    """
+    batches_dir.mkdir(parents=True, exist_ok=True)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
+    run_id = f"sync_{timestamp}"
+
+    input_path = batches_dir / f"sync_input_{timestamp}.jsonl"
+    input_path.write_bytes(_to_jsonl(requests))
+
+    sdk_client = client._client
+    total = len(requests)
+    workers = max(1, int(max_workers))
+    timeout_ms = int(float(timeout_seconds) * 1000)
+    print(
+        f"Run Mistral {run_id} — {total} requête(s) synchrone(s), modèle "
+        f"{model}, {workers} appel(s) en parallèle, JSONL : {input_path}"
+    )
+
+    lines_by_id: dict[str, dict[str, Any]] = {}
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futures = {
+            pool.submit(
+                _complete_one, sdk_client, request, model=model, timeout_ms=timeout_ms
+            ): str(request["custom_id"])
+            for request in requests
+        }
+        for done, future in enumerate(as_completed(futures), start=1):
+            custom_id = futures[future]
+            line = future.result()
+            lines_by_id[custom_id] = line
+            state = "ERREUR" if line.get("error") else "ok"
+            print(f"  {done}/{total} — {custom_id} : {state}", flush=True)
+
+    ordered = [lines_by_id[str(request["custom_id"])] for request in requests]
+    output_bytes = _to_jsonl(ordered)
+    output_path = batches_dir / f"sync_output_{timestamp}.jsonl"
+    output_path.write_bytes(output_bytes)
+    return run_id, _parse_batch_jsonl(output_bytes, output_path)
+
+
+def _complete_one(
+    sdk_client: Any,
+    request: dict[str, Any],
+    *,
+    model: str,
+    timeout_ms: int,
+) -> dict[str, Any]:
+    """Un appel `chat.complete`, avec reprise sur exception ; retourne une
+    ligne au format JSONL du batch (`response.body` ou `error`)."""
+    custom_id = str(request["custom_id"])
+    body = request["body"]
+    last_error: Exception | None = None
+    for attempt in range(1, _SYNC_ATTEMPTS + 1):
+        try:
+            response = sdk_client.chat.complete(
+                model=model,
+                messages=body["messages"],
+                max_tokens=body["max_tokens"],
+                timeout_ms=timeout_ms,
+            )
+        except Exception as exc:  # noqa: BLE001 — archivée, validée ensuite
+            last_error = exc
+            if attempt < _SYNC_ATTEMPTS:
+                pause = _SYNC_BACKOFF_SECONDS[
+                    min(attempt, len(_SYNC_BACKOFF_SECONDS)) - 1
+                ]
+                print(
+                    f"  {custom_id} : tentative {attempt}/{_SYNC_ATTEMPTS} en "
+                    f"échec ({type(exc).__name__}: {exc}) — reprise dans {pause:g}s",
+                    flush=True,
+                )
+                time.sleep(pause)
+            continue
+        return {
+            "custom_id": custom_id,
+            "response": {"status_code": 200, "body": _response_body(response)},
+        }
+    return {
+        "custom_id": custom_id,
+        "error": {
+            "type": type(last_error).__name__,
+            "message": str(last_error),
+            "attempts": _SYNC_ATTEMPTS,
+        },
+    }
+
+
+def _response_body(response: Any) -> dict[str, Any]:
+    """Réponse `chat.complete` (objet SDK ou dict) → corps au format batch."""
+    choices = _object_get(response, "choices") or []
+    first = choices[0] if choices else None
+    message = _object_get(first, "message") if first is not None else None
+    finish_reason = _object_get(first, "finish_reason") if first is not None else None
+    finish_reason = getattr(finish_reason, "value", finish_reason)
+    usage = _object_get(response, "usage")
+    body_choices: list[dict[str, Any]] = []
+    if first is not None:
+        body_choices.append(
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": _message_content_to_text(
+                        _object_get(message, "content")
+                    ),
+                },
+                "finish_reason": (
+                    str(finish_reason) if finish_reason is not None else None
+                ),
+            }
+        )
+    return {
+        "id": _object_get(response, "id"),
+        "model": _object_get(response, "model"),
+        "choices": body_choices,
+        "usage": {
+            "prompt_tokens": _object_get(usage, "prompt_tokens"),
+            "completion_tokens": _object_get(usage, "completion_tokens"),
+            "total_tokens": _object_get(usage, "total_tokens"),
+        },
+    }
+
+
+# =============================================================================
+# Transport batch — copie adaptée de run_mistral_batch (ancien monde, §8, §11)
+# =============================================================================
+
+
+def _run_mistral_batch(
+    requests: list[dict[str, Any]],
+    *,
+    client: MistralClient,
+    batches_dir: Path,
+    model: str,
+    poll_interval_seconds: float,
+    timeout_seconds: float,
+) -> tuple[str, dict[str, dict[str, Any]]]:
+    """Lance un batch Mistral, retourne (id du batch, réponses par scénario).
+
+    Copie adaptée de `run_mistral_batch` (work_modif_prompts/
+    aphp_generation_utils.py) : `custom_id` = nom du scénario, JSONL archivés
+    sous `batches_dir`, polling borné par `timeout_seconds`. L'accès
+    `client._client` est conservé tel quel (§8 — la réunification dans
+    `MistralClient` est un chantier séparé).
+    """
+    batches_dir.mkdir(parents=True, exist_ok=True)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
+
+    input_bytes = _to_jsonl(requests)
     input_path = batches_dir / f"batch_input_{timestamp}.jsonl"
     input_path.write_bytes(input_bytes)
 
@@ -334,7 +534,7 @@ def _run_mistral_batch(
     )
     batch_job_id = str(_object_get(batch_job, "id", ""))
     print(
-        f"Batch Mistral {batch_job_id} — {len(batch_requests)} requête(s), "
+        f"Batch Mistral {batch_job_id} — {len(requests)} requête(s), "
         f"modèle {model}, JSONL : {input_path}"
     )
 
@@ -382,11 +582,16 @@ def _run_mistral_batch(
     return batch_job_id, responses
 
 
+# =============================================================================
+# Validation et parsing — communs aux deux transports
+# =============================================================================
+
+
 def _validate_responses(
     selected: list[str],
     responses: dict[str, dict[str, Any]],
     *,
-    batch_job_id: str,
+    run_id: str,
     out: str,
 ) -> None:
     """Validation §3.5.5 — chaque écart → `BenchError` listant les scénarios,
@@ -427,14 +632,14 @@ def _validate_responses(
         details = {
             name: str(responses[name]["mistral_batch_error"]) for name in errors
         }
-        problems.append(f"erreurs batch Mistral : {details}")
+        problems.append(f"erreurs Mistral : {details}")
     if blank:
         problems.append(f"réponses vides ou blanches pour {blank}")
     if no_usage:
         problems.append(f"usage (tokens) absent pour {no_usage}")
     if problems:
         raise BenchError(
-            f"Batch Mistral {batch_job_id}, sortie '{out}' : "
+            f"Run Mistral {run_id}, sortie '{out}' : "
             + " ; ".join(problems)
             + ". Rien n'est écrit (ni sorties, ni journal usage.json)."
         )
@@ -495,7 +700,8 @@ def _error_to_text(error: Any) -> str:
 
 
 def _parse_batch_jsonl(raw_bytes: bytes, path: Path) -> dict[str, dict[str, Any]]:
-    """Parse un JSONL Mistral (sortie ou erreurs) en réponses par `custom_id`."""
+    """Parse un JSONL Mistral (sortie ou erreurs, batch ou sync) en réponses
+    par `custom_id`."""
     parsed: dict[str, dict[str, Any]] = {}
     text = raw_bytes.decode("utf-8").strip()
     if not text:

@@ -124,7 +124,7 @@ def write_results(
             f"custom_id sans dossier scénario dans {test_dir} : {orphans} — "
             "mauvais test ciblé ?"
         )
-    _validate_responses(selected, responses, batch_job_id="(récupération)", out=out)
+    _validate_responses(selected, responses, run_id="(récupération)", out=out)
 
     input_tokens = 0
     output_tokens = 0

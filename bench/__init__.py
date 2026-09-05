@@ -1,8 +1,9 @@
 """Banc d'essai de génération AP-HP.
 
-Spécification : docs/spec_testrun_run_stage.md (v3.4). Lots 1 à 3 :
-amorçage, figement des prompts, cycle `generate` complet (dry-run et batch
-Mistral), reprise `load_reports`, coûts `summarize_costs`.
+Spécification : docs/spec_testrun_run_stage.md (v3.7). Lots 1 à 3 :
+amorçage, figement des prompts, cycle `generate` complet (dry-run, puis
+transport Mistral `sync` ou `batch`), reprise `load_reports`, coûts
+`summarize_costs`.
 """
 
 from bench.costs import Pricing, Usage, summarize_costs

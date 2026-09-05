@@ -17,7 +17,8 @@ from bench.errors import BenchError
 
 @dataclass(frozen=True)
 class Pricing:
-    """Tarifs batch Mistral, en USD par million de tokens."""
+    """Tarifs Mistral du transport utilisé (sync ou batch), en USD par
+    million de tokens. Les noms de champs datent du transport batch."""
 
     batch_input_usd_per_million: float
     batch_output_usd_per_million: float
@@ -51,7 +52,7 @@ def compute_usage(
     output_tokens: int,
     pricing: Pricing,
 ) -> Usage:
-    """Calcule un `Usage` depuis les tokens agrégés et le tarif batch."""
+    """Calcule un `Usage` depuis les tokens agrégés et le tarif fourni."""
     input_cost = input_tokens / 1_000_000 * pricing.batch_input_usd_per_million
     output_cost = output_tokens / 1_000_000 * pricing.batch_output_usd_per_million
     return Usage(
@@ -72,11 +73,13 @@ def append_usage(
     partial: bool,
     model: str,
     usage: Usage,
+    transport: str = "batch",
 ) -> None:
     """Ajoute une entrée au journal `usage.json` (§7, append-only).
 
     L'argent dépensé reste tracé même quand les sorties sont écrasées :
     chaque run réel ajoute son entrée, étiquetée par `out`, re-runs compris.
+    `transport` (sync ou batch) est noté : les tarifs diffèrent.
     """
     runs = _load_runs(test_dir)
     runs.append(
@@ -86,6 +89,7 @@ def append_usage(
             "partial": partial,
             "n_requests": usage.n_requests,
             "model": model,
+            "transport": transport,
             "input_tokens": usage.input_tokens,
             "output_tokens": usage.output_tokens,
             "input_cost_usd": usage.input_cost_usd,

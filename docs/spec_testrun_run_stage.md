@@ -1,6 +1,17 @@
 # Spécification — Banc d'essai de génération AP-HP (`bench`)
 
-Branche cible : `dev_rf` · Statut : **v3.6** — positions nommées par topologie (`one_gen`)
+Branche cible : `dev_rf` · Statut : **v3.7** — transport Mistral `sync` (défaut) ou `batch`
+
+v3.6 → v3.7 (septembre 2026, demande Rémi) : **transport des appels Mistral**.
+Le batch Mistral reste en file (`QUEUED`) sans jamais démarrer ; `generate`
+reçoit un paramètre `transport` — `"sync"` (défaut : un `chat.complete` par
+scénario, `max_workers` appels en parallèle, trois tentatives par requête,
+`timeout_seconds` borne chaque requête) ou `"batch"` (inchangé, à réactiver
+quand Mistral l'aura rétabli). Même requête (système, user, prefix assistant,
+`max_tokens`), même forme de réponse archivée (JSONL `sync_input_*` /
+`sync_output_*` sous `batches/<stem de out>/`), validation et journal
+communs ; l'entrée `usage.json` note le `transport`, car les tarifs diffèrent
+(sync = deux fois le batch). `Pricing` garde ses noms de champs.
 
 v3.5 → v3.6 (demande Rémi) : **renommage des positions** — `first` évoquait
 la génération en deux étapes ; la génération directe (seule en service)
@@ -169,7 +180,8 @@ ou `git rev-parse` en repli), sinon `null` + avertissement.
 ## 3. API (`bench/`)
 
 Une seule exception, `BenchError`, toujours à message actionnable (chemin
-complet, liste des scénarios, id de batch Mistral le cas échéant). Politique
+complet, liste des scénarios, id du run Mistral — batch ou sync — le cas
+échéant). Politique
 générale : **échec dur** — un banc d'essai comparatif n'a pas de mode dégradé.
 
 ### 3.1 `scenario_dirs`
@@ -262,10 +274,16 @@ def generate(
     context_footer: str = "",
     only: list[str] | None = None,
     dry_run: bool = False,
-    poll_interval_seconds: float = 1.0,
-    timeout_seconds: float = 3600.0,
+    transport: Literal["sync", "batch"] = "sync",
+    max_workers: int = 3,            # sync : appels en parallèle
+    poll_interval_seconds: float = 1.0,   # batch : cadence du polling
+    timeout_seconds: float = 3600.0,      # sync : par requête ; batch : polling
 ) -> GenResult
 ```
+
+`transport` inconnu → `BenchError` avant tout travail (dry-run compris).
+`pricing` est le tarif du transport choisi (le notebook les tient côte à
+côte).
 
 `system`, `user`, `out`, `prefix_file` : tous des noms de fichiers **relatifs
 au dossier de chaque scénario** — parfaitement symétriques. Aucune résolution
@@ -273,8 +291,8 @@ dans `generate` : elle a eu lieu à l'installation (§3.3).
 
 ```python
 @dataclass(frozen=True)
-class Pricing:
-    batch_input_usd_per_million: float
+class Pricing:                       # tarif du transport utilisé (noms hérités
+    batch_input_usd_per_million: float    # du batch, conservés)
     batch_output_usd_per_million: float
 
 @dataclass(frozen=True)
@@ -314,13 +332,22 @@ Déroulement :
    avant tout appel API.
 3. **Point d'arrêt `dry_run`.** Retourne le `GenResult` (prompts assemblés,
    `report` vide, usage nul). **Aucun appel API, aucune écriture.**
-4. **Batch Mistral.** JSONL sous `batches/<stem de out>/`. `custom_id` = nom
-   du scénario. Polling borné par `timeout_seconds` → `BenchError`
-   mentionnant l'id du batch Mistral pour récupération manuelle.
+4. **Appels Mistral selon `transport`.** Requête commune : messages système,
+   user, prefix assistant (`prefix: true`) le cas échéant, `max_tokens` ;
+   `custom_id` = nom du scénario ; JSONL d'entrée et de sortie sous
+   `batches/<stem de out>/`, au même format quel que soit le transport.
+   - `sync` : un `chat.complete` par scénario, `max_workers` en parallèle,
+     trois tentatives par requête (pauses 5 s puis 15 s) ; une erreur
+     persistante est archivée comme une erreur batch et tombe en validation.
+     Fichiers `sync_input_<ts>.jsonl` / `sync_output_<ts>.jsonl`, id de run
+     `sync_<ts>`.
+   - `batch` : upload, job, polling borné par `timeout_seconds` →
+     `BenchError` mentionnant l'id du batch Mistral pour récupération
+     manuelle. Fichiers `batch_input/output/errors_<ts>.jsonl`.
 5. **Validation** — précède toute écriture : scénarios retournés == attendus ;
-   réponses non vides/non blanches ; **aucune erreur batch Mistral**
-   (`mistral_batch_error` ou équivalent). Chaque écart → `BenchError` listant
-   les scénarios.
+   réponses non vides/non blanches ; **aucune erreur Mistral**
+   (`mistral_batch_error`, alimentée par les deux transports). Chaque écart →
+   `BenchError` nommant le run et listant les scénarios.
 6. **Sauvegarde.** `out` écrit dans chaque dossier traité (écrasement = geste
    normal) ; entrée ajoutée au journal `usage.json` (§7), étiquetée par `out`.
 7. Retour du `GenResult`.
@@ -484,11 +511,12 @@ bench/
 │                   # GenResult, BenchError
 ├── seeding.py      # scenario_dirs, seed_user_prompts, copy_system_prompts,
 │                   # write_prompts
-├── generate.py     # generate, load_reports (+ batch Mistral privé)
+├── generate.py     # generate, load_reports (+ transports Mistral privés : sync, batch)
 ├── costs.py
 └── errors.py
 ```
 
+Le transport sync est nouveau (`_run_mistral_sync`, `chat.complete` du SDK).
 La logique batch reprend `run_mistral_batch` de l'ancien
 `work_modif_prompts/aphp_generation_utils.py` — **copiée/adaptée dans
 `bench/generate.py`, sans modifier le fichier d'origine**. L'accès
@@ -547,8 +575,11 @@ Tous sans réseau (client Mistral mocké), sur `tmp_path` :
    `partial=True`.
 9. Prefix : `prefix_file` absent du dossier → `BenchError` ; `prefix_file`
    et `prefix_text` fournis ensemble → `BenchError`.
-10. Validation batch : réponse manquante, vide, ou en erreur Mistral →
-    `BenchError` avant toute écriture (ni `out`, ni journal).
+10. Validation (sync et batch) : réponse manquante, vide, ou en erreur
+    Mistral → `BenchError` avant toute écriture (ni `out`, ni journal).
+    Sync : reprise après erreur transitoire ; erreur persistante après trois
+    tentatives → `BenchError` ; `transport` inconnu → `BenchError` sans
+    appel.
 11. Usage : journal append-only (re-run = nouvelle entrée, l'ancienne
     subsiste) ; `summarize_costs` distingue total engagé et état courant.
 12. `user_from_column` : colonne absente ou valeur nulle → `BenchError`.

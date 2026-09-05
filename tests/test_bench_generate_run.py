@@ -3,15 +3,18 @@
 (`load_reports`).
 
 Client Mistral MOCKÉ, aucun réseau : le faux SDK reproduit la surface
-utilisée par le batch (`files.upload/download`, `batch.jobs.create/get`) et
-la forme des retours actuels de `run_mistral_batch` — JSONL de sortie avec
-`choices`/`usage`, fichier d'erreurs séparé donnant la colonne d'erreur
-batch (`mistral_batch_error`).
+utilisée par les deux transports — batch (`files.upload/download`,
+`batch.jobs.create/get`, JSONL de sortie avec `choices`/`usage`, fichier
+d'erreurs séparé donnant la colonne d'erreur `mistral_batch_error`) et sync
+(`chat.complete`, un objet réponse par appel, exceptions transitoires ou
+persistantes).
 """
 
 import json
 from pathlib import Path
 from types import SimpleNamespace
+
+import importlib
 
 import polars as pl
 import pytest
@@ -25,6 +28,9 @@ from bench import (
     summarize_costs,
 )
 
+# Le module, pas la fonction `bench.generate` ré-exportée par le paquet.
+generate_module = importlib.import_module("bench.generate")
+
 PRICING = Pricing(1.0, 3.0)
 PROMPT_TOKENS = 100
 COMPLETION_TOKENS = 50
@@ -34,6 +40,12 @@ COST_PER_REQUEST = 0.00025
 SYSTEM_BY_FAMILY = {
     "medical_outpatient": "SYSTÈME MÉDECINE",
     "surgery_inpatient": "SYSTÈME CHIRURGIE",
+}
+# Transport sync : `chat.complete` ne reçoit pas de custom_id — le faux SDK
+# retrouve le scénario par le début de son user prompt (voir make_test_dir).
+SCENARIO_BY_USER_PREFIX = {
+    "USER MÉDECINE": "0000",
+    "USER CHIRURGIE": "0001",
 }
 
 
@@ -64,9 +76,23 @@ class FakeMistralSdk:
     `errors` : message d'erreur batch par custom_id (le scénario passe alors
     dans le fichier d'erreurs, comme Mistral) ; `drop` : custom_id absents de
     la sortie ; `stuck=True` : le job reste RUNNING (test du timeout).
+
+    Transport sync : `sync_failures` : nombre d'exceptions transitoires avant
+    succès, par scénario ; `sync_errors` : exception à chaque appel (erreur
+    persistante). `sync_calls` journalise les appels reçus, `sync_requests`
+    garde les arguments du dernier appel par scénario.
     """
 
-    def __init__(self, *, reports=None, errors=None, drop=(), stuck=False):
+    def __init__(
+        self,
+        *,
+        reports=None,
+        errors=None,
+        drop=(),
+        stuck=False,
+        sync_failures=None,
+        sync_errors=None,
+    ):
         self.reports = reports or {}
         self.errors = errors or {}
         self.drop = set(drop)
@@ -75,6 +101,55 @@ class FakeMistralSdk:
         self.files = SimpleNamespace(upload=self._upload, download=self._download)
         self.batch = SimpleNamespace(
             jobs=SimpleNamespace(create=self._create, get=self._get)
+        )
+        self.sync_failures = dict(sync_failures or {})
+        self.sync_errors = dict(sync_errors or {})
+        self.sync_calls: list[str] = []
+        self.sync_requests: dict[str, dict] = {}
+        self.chat = SimpleNamespace(complete=self._complete)
+
+    def _complete(self, *, model, messages, max_tokens, timeout_ms=None, **kwargs):
+        assert messages[0]["role"] == "system"
+        user_prompt = messages[1]["content"]
+        custom_id = next(
+            name
+            for prefix, name in SCENARIO_BY_USER_PREFIX.items()
+            if user_prompt.startswith(prefix)
+        )
+        self.sync_calls.append(custom_id)
+        self.sync_requests[custom_id] = {
+            "model": model,
+            "messages": messages,
+            "max_tokens": max_tokens,
+            "timeout_ms": timeout_ms,
+        }
+        if custom_id in self.sync_errors:
+            raise RuntimeError(self.sync_errors[custom_id])
+        if self.sync_failures.get(custom_id, 0) > 0:
+            self.sync_failures[custom_id] -= 1
+            raise ConnectionError("réseau indisponible")
+        if custom_id in self.drop:
+            return SimpleNamespace(
+                id=f"cmpl-{custom_id}", model=model, choices=[], usage=None
+            )
+        return SimpleNamespace(
+            id=f"cmpl-{custom_id}",
+            model="mistral-large-latest",
+            choices=[
+                SimpleNamespace(
+                    index=0,
+                    finish_reason="stop",
+                    message=SimpleNamespace(
+                        role="assistant",
+                        content=self.reports.get(custom_id, f"RAPPORT {custom_id}"),
+                    ),
+                )
+            ],
+            usage=SimpleNamespace(
+                prompt_tokens=PROMPT_TOKENS,
+                completion_tokens=COMPLETION_TOKENS,
+                total_tokens=PROMPT_TOKENS + COMPLETION_TOKENS,
+            ),
         )
 
     def _upload(self, *, file, purpose):
@@ -170,7 +245,15 @@ def run_real(test_dir: Path, sdk: FakeMistralSdk, **kwargs):
     kwargs.setdefault("max_tokens", 1000)
     kwargs.setdefault("pricing", PRICING)
     kwargs.setdefault("poll_interval_seconds", 0.0)
+    kwargs.setdefault("transport", "batch")
     return generate(test_dir, dry_run=False, **kwargs)
+
+
+def run_sync(test_dir: Path, sdk: FakeMistralSdk, **kwargs):
+    """`generate` en run réel, transport sync, deux appels en parallèle."""
+    kwargs.setdefault("transport", "sync")
+    kwargs.setdefault("max_workers", 2)
+    return run_real(test_dir, sdk, **kwargs)
 
 
 def read_out(test_dir: Path, scenario: str, out: str = "crh_generation.txt") -> str:
@@ -387,3 +470,133 @@ class TestLoadReports:
 
         assert reports["scenario"].to_list() == ["0001"]
         assert reports["report"].to_list() == ["RAPPORT 0001"]
+
+
+class TestRunSync:
+    """Transport sync (§3.5.4) : un `chat.complete` par scénario, même
+    validation, mêmes écritures, JSONL archivés sous `batches/`."""
+
+    @pytest.fixture(autouse=True)
+    def _sans_pause_entre_tentatives(self, monkeypatch):
+        monkeypatch.setattr(generate_module, "_SYNC_BACKOFF_SECONDS", (0.0,))
+
+    def test_out_reports_usage_et_journal(self, tmp_path: Path):
+        test_dir = make_test_dir(tmp_path)
+        sdk = FakeMistralSdk()
+        result = run_sync(
+            test_dir, sdk, max_tokens=1000, timeout_seconds=600, prefix_file="prefix.txt"
+        )
+
+        assert sorted(sdk.sync_calls) == ["0000", "0001"]
+        assert result.dry_run is False and result.partial is False
+        assert read_out(test_dir, "0000") == "RAPPORT 0000"
+        assert read_out(test_dir, "0001") == "RAPPORT 0001"
+        assert result.usage.n_requests == 2
+        assert result.usage.total_cost_usd == pytest.approx(2 * COST_PER_REQUEST)
+
+        # La requête envoyée : système, user, prefix assistant, max_tokens,
+        # délai par requête dérivé de timeout_seconds.
+        sent = sdk.sync_requests["0000"]
+        assert sent["max_tokens"] == 1000
+        assert sent["timeout_ms"] == 600_000
+        assert sent["messages"][2] == {
+            "role": "assistant",
+            "content": "PRÉFIXE MÉDECINE",
+            "prefix": True,
+        }
+
+        entry = journal_runs(test_dir)[0]
+        assert entry["transport"] == "sync"
+        assert entry["n_requests"] == 2
+
+    def test_jsonl_sync_sous_batches_stem_de_out(self, tmp_path: Path):
+        test_dir = make_test_dir(tmp_path)
+        run_sync(test_dir, FakeMistralSdk(), out="crh_v2.txt")
+
+        batch_dir = test_dir / "batches" / "crh_v2"
+        inputs = list(batch_dir.glob("sync_input_*.jsonl"))
+        outputs = list(batch_dir.glob("sync_output_*.jsonl"))
+        assert len(inputs) == 1 and len(outputs) == 1
+        assert not list(batch_dir.glob("batch_*.jsonl"))
+
+        requests = [
+            json.loads(line)
+            for line in inputs[0].read_text(encoding="utf-8").splitlines()
+        ]
+        assert [r["custom_id"] for r in requests] == ["0000", "0001"]
+        assert requests[0]["body"]["messages"][0]["role"] == "system"
+
+        # Sortie au format batch : même parseur, ordre des scénarios conservé.
+        lines = [
+            json.loads(line)
+            for line in outputs[0].read_text(encoding="utf-8").splitlines()
+        ]
+        assert [line["custom_id"] for line in lines] == ["0000", "0001"]
+        body = lines[0]["response"]["body"]
+        assert body["choices"][0]["message"]["content"] == "RAPPORT 0000"
+        assert body["choices"][0]["finish_reason"] == "stop"
+        assert body["usage"]["prompt_tokens"] == PROMPT_TOKENS
+        assert body["model"] == "mistral-large-latest"
+
+    def test_reprise_apres_echec_transitoire(self, tmp_path: Path):
+        test_dir = make_test_dir(tmp_path)
+        sdk = FakeMistralSdk(sync_failures={"0000": 2})
+        run_sync(test_dir, sdk)
+
+        assert sdk.sync_calls.count("0000") == 3
+        assert sdk.sync_calls.count("0001") == 1
+        assert read_out(test_dir, "0000") == "RAPPORT 0000"
+
+    @pytest.mark.parametrize(
+        "sdk",
+        [
+            pytest.param(
+                FakeMistralSdk(sync_errors={"0001": "Rate limit exceeded"}),
+                id="erreur-persistante",
+            ),
+            pytest.param(FakeMistralSdk(drop={"0001"}), id="reponse-sans-choix"),
+            pytest.param(
+                FakeMistralSdk(reports={"0001": "   \n"}), id="reponse-vide"
+            ),
+        ],
+    )
+    def test_ecart_leve_bencherror_sans_aucune_ecriture(
+        self, tmp_path: Path, sdk: FakeMistralSdk
+    ):
+        test_dir = make_test_dir(tmp_path)
+        with pytest.raises(BenchError, match="0001"):
+            run_sync(test_dir, sdk)
+        assert not (test_dir / "0000" / "crh_generation.txt").exists()
+        assert not (test_dir / "0001" / "crh_generation.txt").exists()
+        assert not (test_dir / "usage.json").exists()
+
+    def test_message_actionnable_nomme_le_run(self, tmp_path: Path):
+        test_dir = make_test_dir(tmp_path)
+        sdk = FakeMistralSdk(sync_errors={"0001": "Rate limit exceeded"})
+        with pytest.raises(BenchError) as excinfo:
+            run_sync(test_dir, sdk)
+        message = str(excinfo.value)
+        assert "sync_" in message
+        assert "crh_generation.txt" in message
+        assert "Rate limit exceeded" in message
+        # Trois tentatives avant d'abandonner, l'autre scénario servi une fois.
+        assert sdk.sync_calls.count("0001") == 3
+        assert sdk.sync_calls.count("0000") == 1
+
+    def test_only_n_ecrit_que_les_dossiers_traites(self, tmp_path: Path):
+        test_dir = make_test_dir(tmp_path)
+        sdk = FakeMistralSdk()
+        result = run_sync(test_dir, sdk, only=["0001"])
+
+        assert result.partial is True
+        assert sdk.sync_calls == ["0001"]
+        assert not (test_dir / "0000" / "crh_generation.txt").exists()
+        assert read_out(test_dir, "0001") == "RAPPORT 0001"
+
+    def test_transport_inconnu_refuse_avant_tout_appel(self, tmp_path: Path):
+        test_dir = make_test_dir(tmp_path)
+        sdk = FakeMistralSdk()
+        with pytest.raises(BenchError, match="fax"):
+            run_real(test_dir, sdk, transport="fax")
+        assert sdk.sync_calls == [] and sdk.custom_ids == []
+        assert not (test_dir / "batches").exists()
