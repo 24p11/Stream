@@ -10,7 +10,8 @@ Mistral, choisis par `transport` :
 
 Dans les deux cas : JSONL d'entrée et de sortie archivés sous
 `batches/<stem de out>/`, `custom_id` = nom du scénario, même forme de
-réponse (`choices`/`usage`) — validation et journal des coûts communs.
+réponse (`choices`/`usage`) — validation et journaux des coûts communs
+(`usage.json` du test, journal CSV global `usage_log.csv`).
 """
 
 from __future__ import annotations
@@ -19,13 +20,20 @@ import json
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
+from types import EllipsisType
 from typing import TYPE_CHECKING, Any, Literal
 
 import polars as pl
 
-from bench.costs import Pricing, Usage, append_usage, compute_usage
+from bench.costs import (
+    Pricing,
+    Usage,
+    append_usage,
+    append_usage_csv,
+    compute_usage,
+)
 from bench.errors import BenchError
 from bench.seeding import scenario_dirs
 
@@ -89,6 +97,7 @@ def generate(
     max_workers: int = 3,
     poll_interval_seconds: float = 1.0,
     timeout_seconds: float = 3600.0,
+    usage_csv: Path | str | None | EllipsisType = ...,
 ) -> GenResult:
     """Un cycle de génération (§3.5).
 
@@ -103,6 +112,11 @@ def generate(
     parallèle, `timeout_seconds` borne chaque requête) ou `"batch"`
     (`timeout_seconds` borne le polling). `pricing` doit être le tarif du
     transport choisi.
+
+    `usage_csv` : journal CSV global d'observation (§7), une ligne par
+    scénario traité, écrit au même moment que l'entrée `usage.json`. Défaut
+    (`...`) : `<racine des tests>.parent / "usage_log.csv"`, soit
+    `work_prompts/usage_log.csv` ; `None` désactive.
     """
     if prefix_file is not None and prefix_text:
         raise BenchError(
@@ -207,7 +221,9 @@ def generate(
     _validate_responses(selected, responses, run_id=run_id, out=out)
 
     # Étape 6 — sauvegarde : `out` par scénario traité (écrasement = geste
-    # normal), puis entrée au journal usage.json (§7, append-only).
+    # normal), puis entrée au journal usage.json (§7, append-only) et lignes
+    # du journal CSV global — un seul instant pour les deux journaux.
+    saved_at = datetime.now().astimezone()
     for row in rows:
         response = responses[row["scenario"]]
         row["report"] = response["report"]
@@ -229,7 +245,27 @@ def generate(
         model=model,
         transport=transport,
         usage=usage,
+        at=saved_at,
     )
+    if usage_csv is not None:
+        csv_path = (
+            _default_usage_csv(test_dir)
+            if usage_csv is ...
+            else Path(usage_csv)
+        )
+        append_usage_csv(
+            csv_path,
+            _usage_csv_rows(
+                rows,
+                test_dir=test_dir,
+                out=out,
+                model=model,
+                pricing=pricing,
+                run_id=run_id,
+                partial=partial,
+                saved_at=saved_at,
+            ),
+        )
 
     # Étape 7.
     return GenResult(
@@ -265,6 +301,51 @@ def load_reports(
             "Utiliser strict=False pour ne charger que les présents."
         )
     return pl.DataFrame(rows, schema={"scenario": pl.String, "report": pl.String})
+
+
+def _default_usage_csv(test_dir: Path) -> Path:
+    """`<racine des tests>.parent / usage_log.csv` — soit work_prompts/usage_log.csv."""
+    return Path(test_dir).resolve().parent.parent / "usage_log.csv"
+
+
+def _usage_csv_rows(
+    rows: list[dict],
+    *,
+    test_dir: Path,
+    out: str,
+    model: str,
+    pricing: Pricing,
+    run_id: str,
+    partial: bool,
+    saved_at: datetime,
+) -> list[dict[str, Any]]:
+    """Lignes du journal CSV global (§7) : une par scénario traité, depuis
+    l'usage par réponse déjà validé ; coût de la ligne au tarif du run."""
+    timestamp_utc = saved_at.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    csv_rows: list[dict[str, Any]] = []
+    for row in rows:
+        line_usage = compute_usage(
+            n_requests=1,
+            input_tokens=int(row["input_tokens"]),
+            output_tokens=int(row["output_tokens"]),
+            pricing=pricing,
+        )
+        csv_rows.append(
+            {
+                "timestamp_utc": timestamp_utc,
+                "test": Path(test_dir).name,
+                "out": out,
+                "scenario": row["scenario"],
+                "template": row["template"] or "",
+                "model": model,
+                "input_tokens": int(row["input_tokens"]),
+                "output_tokens": int(row["output_tokens"]),
+                "cost_usd": line_usage.total_cost_usd,
+                "batch_id": run_id,
+                "partial": partial,
+            }
+        )
+    return csv_rows
 
 
 def _read_required(path: Path, scenario: str) -> str:

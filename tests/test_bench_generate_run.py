@@ -14,7 +14,9 @@ import json
 from pathlib import Path
 from types import SimpleNamespace
 
+import csv
 import importlib
+import re
 
 import polars as pl
 import pytest
@@ -27,6 +29,7 @@ from bench import (
     seed_user_prompts,
     summarize_costs,
 )
+from bench.costs import USAGE_CSV_COLUMNS
 
 # Le module, pas la fonction `bench.generate` ré-exportée par le paquet.
 generate_module = importlib.import_module("bench.generate")
@@ -262,6 +265,16 @@ def read_out(test_dir: Path, scenario: str, out: str = "crh_generation.txt") -> 
 
 def journal_runs(test_dir: Path) -> list[dict]:
     return json.loads((test_dir / "usage.json").read_text(encoding="utf-8"))["runs"]
+
+
+def usage_log_path(test_dir: Path) -> Path:
+    """Chemin par défaut du journal CSV : <racine des tests>.parent/usage_log.csv."""
+    return test_dir.parent.parent / "usage_log.csv"
+
+
+def csv_rows(path: Path) -> list[dict]:
+    with path.open(newline="", encoding="utf-8") as handle:
+        return list(csv.DictReader(handle))
 
 
 class TestRunComplet:
@@ -600,3 +613,101 @@ class TestRunSync:
             run_real(test_dir, sdk, transport="fax")
         assert sdk.sync_calls == [] and sdk.custom_ids == []
         assert not (test_dir / "batches").exists()
+
+
+class TestJournalCsv:
+    """§7 — journal CSV global des appels : une ligne par scénario traité,
+    append pur, écrit au même moment que l'entrée usage.json."""
+
+    def test_creation_avec_en_tete_puis_append_sans_doublon(self, tmp_path: Path):
+        test_dir = make_test_dir(tmp_path)
+        log = usage_log_path(test_dir)
+        assert not log.exists()
+
+        run_real(test_dir, FakeMistralSdk())
+        lines = log.read_text(encoding="utf-8").splitlines()
+        assert lines[0] == ",".join(USAGE_CSV_COLUMNS)
+        assert len(lines) == 1 + 2
+
+        run_real(test_dir, FakeMistralSdk())
+        lines = log.read_text(encoding="utf-8").splitlines()
+        assert len(lines) == 1 + 4
+        assert sum(1 for line in lines if line.startswith("timestamp_utc")) == 1
+
+    def test_une_ligne_par_scenario_avec_les_colonnes(self, tmp_path: Path):
+        test_dir = make_test_dir(tmp_path)
+        run_real(test_dir, FakeMistralSdk())
+        rows = csv_rows(usage_log_path(test_dir))
+
+        assert [r["scenario"] for r in rows] == ["0000", "0001"]
+        assert [r["template"] for r in rows] == [
+            "medical_outpatient",
+            "surgery_inpatient",
+        ]
+        first = rows[0]
+        assert list(first) == list(USAGE_CSV_COLUMNS)
+        assert first["test"] == "01"
+        assert first["out"] == "crh_generation.txt"
+        assert first["model"] == "mistral-large-latest"
+        assert first["input_tokens"] == str(PROMPT_TOKENS)
+        assert first["output_tokens"] == str(COMPLETION_TOKENS)
+        assert float(first["cost_usd"]) == pytest.approx(COST_PER_REQUEST)
+        assert first["batch_id"] == "batch-42"
+        assert first["partial"] == "False"
+        assert re.fullmatch(r"\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ", first["timestamp_utc"])
+
+    def test_somme_des_lignes_egale_l_entree_usage_json(self, tmp_path: Path):
+        test_dir = make_test_dir(tmp_path)
+        run_real(test_dir, FakeMistralSdk())
+        run_real(test_dir, FakeMistralSdk(), only=["0001"])
+        run_real(test_dir, FakeMistralSdk(), out="crh_v2.txt")
+
+        rows = csv_rows(usage_log_path(test_dir))
+        entries = journal_runs(test_dir)
+        assert len(rows) == sum(entry["n_requests"] for entry in entries)
+
+        cursor = 0
+        for entry in entries:
+            chunk = rows[cursor : cursor + entry["n_requests"]]
+            cursor += entry["n_requests"]
+            assert {r["out"] for r in chunk} == {entry["out"]}
+            assert sum(int(r["input_tokens"]) for r in chunk) == entry["input_tokens"]
+            assert sum(int(r["output_tokens"]) for r in chunk) == entry["output_tokens"]
+            assert sum(float(r["cost_usd"]) for r in chunk) == pytest.approx(
+                entry["total_cost_usd"], abs=1e-6
+            )
+
+    def test_run_partiel_marque_ses_lignes(self, tmp_path: Path):
+        test_dir = make_test_dir(tmp_path)
+        run_real(test_dir, FakeMistralSdk())
+        run_real(test_dir, FakeMistralSdk(), only=["0001"])
+        rows = csv_rows(usage_log_path(test_dir))
+
+        assert [r["partial"] for r in rows] == ["False", "False", "True"]
+        assert rows[-1]["scenario"] == "0001"
+
+    def test_usage_csv_none_aucun_fichier(self, tmp_path: Path):
+        test_dir = make_test_dir(tmp_path)
+        run_real(test_dir, FakeMistralSdk(), usage_csv=None)
+        assert not usage_log_path(test_dir).exists()
+        assert (test_dir / "usage.json").exists()
+
+    def test_usage_csv_chemin_explicite(self, tmp_path: Path):
+        test_dir = make_test_dir(tmp_path)
+        target = tmp_path / "ailleurs" / "appels.csv"
+        run_real(test_dir, FakeMistralSdk(), usage_csv=target)
+        assert not usage_log_path(test_dir).exists()
+        assert len(csv_rows(target)) == 2
+
+    def test_validation_echouee_n_ecrit_rien_dans_le_csv(self, tmp_path: Path):
+        test_dir = make_test_dir(tmp_path)
+        with pytest.raises(BenchError):
+            run_real(test_dir, FakeMistralSdk(errors={"0001": "Rate limit exceeded"}))
+        assert not usage_log_path(test_dir).exists()
+
+    def test_transport_sync_note_l_id_du_run(self, tmp_path: Path, monkeypatch):
+        monkeypatch.setattr(generate_module, "_SYNC_BACKOFF_SECONDS", (0.0,))
+        test_dir = make_test_dir(tmp_path)
+        run_sync(test_dir, FakeMistralSdk())
+        rows = csv_rows(usage_log_path(test_dir))
+        assert all(r["batch_id"].startswith("sync_") for r in rows)

@@ -278,6 +278,7 @@ def generate(
     max_workers: int = 3,            # sync : appels en parallèle
     poll_interval_seconds: float = 1.0,   # batch : cadence du polling
     timeout_seconds: float = 3600.0,      # sync : par requête ; batch : polling
+    usage_csv: Path | None | ... = ...,   # journal CSV global (§7) ; None désactive
 ) -> GenResult
 ```
 
@@ -497,6 +498,14 @@ helper `install_fictomed_system_set(test_dir, set_name, position)` remplace le
 - `summarize_costs(test_dir) -> pl.DataFrame` : total engagé par `out` et
   global, plus coût de l'état courant par `out` (entrées depuis le dernier
   run complet, celui-ci inclus).
+- `usage_log.csv` : **journal CSV global d'observation**, tous tests confondus
+  (défaut `work_prompts/usage_log.csv` = `<racine des tests>.parent`, paramètre
+  `usage_csv` de `generate`, `None` désactive) — une ligne par scénario traité
+  et par run (`timestamp_utc, test, out, scenario, template, model,
+  input_tokens, output_tokens, cost_usd, batch_id, partial`), append pur
+  (`append_usage_csv`), écrite au même instant que l'entrée `usage.json` et
+  jamais si la validation échoue. `usage.json` reste la source de
+  `summarize_costs`.
 
 ## 8. Emplacement du code
 

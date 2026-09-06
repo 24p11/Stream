@@ -1,10 +1,12 @@
-"""Coûts (§7) : Usage depuis les tokens, journal `usage.json`, synthèse.
+"""Coûts (§7) : Usage depuis les tokens, journal `usage.json`, synthèse,
+journal CSV global des appels (`usage_log.csv`).
 
-Spécification : docs/spec_testrun_run_stage.md (v3.4).
+Spécification : docs/spec_testrun_run_stage.md (v3.7).
 """
 
 from __future__ import annotations
 
+import csv
 import json
 from dataclasses import dataclass
 from datetime import datetime
@@ -36,6 +38,21 @@ class Usage:
     output_cost_usd: float
     total_cost_usd: float
 
+
+# Colonnes du journal CSV global (§7), dans l'ordre d'écriture.
+USAGE_CSV_COLUMNS: tuple[str, ...] = (
+    "timestamp_utc",
+    "test",
+    "out",
+    "scenario",
+    "template",
+    "model",
+    "input_tokens",
+    "output_tokens",
+    "cost_usd",
+    "batch_id",
+    "partial",
+)
 
 _SUMMARY_SCHEMA: dict[str, type[pl.DataType]] = {
     "out": pl.String,
@@ -74,18 +91,24 @@ def append_usage(
     model: str,
     usage: Usage,
     transport: str = "batch",
+    at: datetime | None = None,
 ) -> None:
     """Ajoute une entrée au journal `usage.json` (§7, append-only).
 
     L'argent dépensé reste tracé même quand les sorties sont écrasées :
     chaque run réel ajoute son entrée, étiquetée par `out`, re-runs compris.
-    `transport` (sync ou batch) est noté : les tarifs diffèrent.
+    `transport` (sync ou batch) est noté : les tarifs diffèrent. `at` : instant
+    du run (défaut : maintenant), écrit en heure locale sans fuseau — le même
+    instant sert au journal CSV (`append_usage_csv`, en UTC).
     """
+    stamp = at if at is not None else datetime.now()
+    if stamp.tzinfo is not None:
+        stamp = stamp.astimezone().replace(tzinfo=None)
     runs = _load_runs(test_dir)
     runs.append(
         {
             "out": out,
-            "at": datetime.now().isoformat(timespec="seconds"),
+            "at": stamp.isoformat(timespec="seconds"),
             "partial": partial,
             "n_requests": usage.n_requests,
             "model": model,
@@ -101,6 +124,41 @@ def append_usage(
         json.dumps({"runs": runs}, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
+
+
+def append_usage_csv(path: Path, rows: list[dict]) -> None:
+    """Journal CSV global des appels (§7) : une ligne par scénario traité.
+
+    Rôle d'observation, tous tests confondus (`usage.json` reste la source de
+    `summarize_costs`). Création avec en-tête si le fichier n'existe pas,
+    sinon append pur — jamais de réécriture. `cost_usd` arrondi à 6 décimales.
+    Colonnes : `USAGE_CSV_COLUMNS`. Échec d'écriture → `BenchError`.
+    """
+    path = Path(path)
+    for index, row in enumerate(rows):
+        missing = [column for column in USAGE_CSV_COLUMNS if column not in row]
+        if missing:
+            raise BenchError(
+                f"Journal CSV {path} : colonnes absentes de la ligne {index} : "
+                f"{missing}."
+            )
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        write_header = not path.is_file() or path.stat().st_size == 0
+        with path.open("a", newline="", encoding="utf-8") as handle:
+            writer = csv.DictWriter(
+                handle, fieldnames=USAGE_CSV_COLUMNS, extrasaction="raise"
+            )
+            if write_header:
+                writer.writeheader()
+            for row in rows:
+                record = {column: row[column] for column in USAGE_CSV_COLUMNS}
+                record["cost_usd"] = round(float(record["cost_usd"]), 6)
+                writer.writerow(record)
+    except OSError as exc:
+        raise BenchError(
+            f"Journal CSV inaccessible en écriture : {path} ({exc})."
+        ) from exc
 
 
 def summarize_costs(test_dir: Path) -> pl.DataFrame:
