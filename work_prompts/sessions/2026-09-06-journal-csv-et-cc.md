@@ -102,3 +102,18 @@ ambulatoire, qui n'avaient aucun bloc H).
   sommes vérifiées), 14 lignes. Leçon : après modification de `bench`,
   redémarrer le noyau avant tout run.
 - Commit : 14 CRH + 14 .md + `usage.json` de 06, `usage_log.csv`.
+
+## Étape 5 — notebook de bilan API (`work_prompts/notebook_bilan_api.ipynb`) — FAIT, commité
+
+- Notebook de Rémi : lit `usage_log.csv` (cwd = `work_prompts/`), un run par
+  `batch_id`, dernier run en détail, évolution run par run, cumul, coût par
+  famille, part des runs partiels, projection à 100 / 1 000 / 10 000 CRH.
+- Dépendance manquante : **matplotlib**, ajouté au groupe `dev` de
+  `pyproject.toml` (`uv add --group dev matplotlib`, `uv.lock` mis à jour).
+  Attention : `uv add`, comme `uv sync`, réinstalle le fictomed PyPI 0.1.2 →
+  réinstallation éditable refaite (`uv pip install -e <clone>` depuis la
+  racine, chemin absolu).
+- Vérifié hors interface (pilote, noyau du venv, cwd `work_prompts/`) : les 15
+  cellules passent, 6 figures, horodatage parsé sans nul. Avec un seul run au
+  journal, la comparaison « dernier vs précédents » attend le run suivant.
+  Projection au coût du run 06 : 0,0061 USD par CRH, soit ~61 USD pour 10 000.
