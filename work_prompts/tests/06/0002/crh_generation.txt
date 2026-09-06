@@ -1,0 +1,71 @@
+{"CR": "### Hôpital Saint-Louis - Assistance Publique Hôpitaux de Paris
+Service de Pédiatrie Neurologie
+
+---
+Nom : Galan
+Prénom : Jacqueline
+Date de naissance : 10/11/1998
+
+---
+
+### Motif d'hospitalisation
+Mademoiselle Galan, âgée de 25 ans, est hospitalisée ce jour en ambulatoire pour la mise en place et l'ajustement d'un fauteuil roulant, dans le cadre de la prise en charge de son syndrome d'apnées obstructives du sommeil (SAOS) associé à une obésité.
+
+### Antécédents
+- Médicaux : Syndrome d'apnées obstructives du sommeil (SAOS) diagnostiqué il y a 6 mois.
+- Chirurgicaux : Cure de hernie inguinale droite en 2018.
+- Familiaux : Pas d'antécédent notable.
+- Allergies : Aucune allergie connue.
+
+### Mode de vie
+La patiente ne fume pas et ne consomme pas d'alcool. Elle travaille comme employée administrative et mène une vie sédentaire. Son indice de masse corporelle (IMC) est à 34,3 kg/m² (poids : 91 kg, taille : 163 cm), témoignant d'une obésité modérée.
+
+### Histoire de la maladie
+Mademoiselle Galan présente depuis environ un an une fatigue diurne marquée, des ronflements nocturnes et des épisodes d'apnées constatés par son entourage. Une polysomnographie réalisée en avril 2024 a confirmé le diagnostic de SAOS avec un index d'apnées-hypopnées (IAH) à 28 événements par heure. Un traitement par pression positive continue (PPC) a été initié, mais la patiente rencontre des difficultés d'adaptation en raison de son obésité et de son inconfort lors des déplacements. Une évaluation pour la mise en place d'un fauteuil roulant a donc été proposée afin d'améliorer son autonomie et son confort au quotidien.
+
+### Examen clinique
+À l'admission, la patiente est apyrétique, avec une tension artérielle à 130/80 mmHg et une fréquence cardiaque à 78 battements par minute. L'examen neurologique est sans particularité. On note une obésité androïde avec un tour de taille à 102 cm. L'auscultation cardiopulmonaire est normale. Le poids est stable à 91 kg.
+
+### Examens complémentaires
+Aucun examen complémentaire n'a été réalisé durant cette hospitalisation.
+
+### Conclusion
+Mademoiselle Galan a bénéficié ce jour de la mise en place et de l'ajustement d'un fauteuil roulant adapté à sa morphologie et à ses besoins, dans le cadre de la prise en charge de son SAOS et de son obésité. Un suivi régulier en consultation de pneumologie et de nutrition est prévu pour évaluer l'efficacité du traitement par PPC et optimiser la prise en charge de son obésité. La patiente regagne son domicile ce jour avec des consignes de surveillance et un rendez-vous de contrôle programmé dans un mois.",
+
+"formulations": {
+    "diagnostics": {
+        "Mise en place et ajustement d'autres appareils précisés (Z46.8)": [
+            "mise en place et l'ajustement d'un fauteuil roulant",
+            "mise en place et de l'ajustement d'un fauteuil roulant adapté à sa morphologie et à ses besoins"
+        ],
+        "Apnée du sommeil (G47.3)": [
+            "syndrome d'apnées obstructives du sommeil (SAOS)",
+            "SAOS",
+            "syndrome d'apnées obstructives du sommeil"
+        ],
+        "Obésité due à un excès calorique de l'adulte avec indice de masse corporelle [IMC] égal ou supérieur à 30 kg/m² et inférieur à 35 kg/m², ou obésité due à un excès calorique de l'enfant (E66.04)": [
+            "obésité",
+            "obésité modérée",
+            "son obésité"
+        ]
+    },
+    "informations": {
+        "Date entrée": ["07/10/2024"],
+        "Date de sortie": ["07/10/2024"],
+        "Service d'hospitalisation": ["Service de Pédiatrie Neurologie"],
+        "Nom/Prénom du médecin": ["Jean Levitre"],
+        "Nom/Prénom du patient": ["Galan Jacqueline"],
+        "Poids": ["91 kg"],
+        "Âge": ["25 ans"],
+        "Sexe": ["Féminin"],
+        "État général": ["La patiente est apyrétique"],
+        "NFS": [],
+        "Créatinine": [],
+        "Bilan hépatique": [],
+        "Traitements": [
+            "Un traitement par pression positive continue (PPC) a été initié",
+            "traitement par PPC"
+        ]
+    }
+}
+}

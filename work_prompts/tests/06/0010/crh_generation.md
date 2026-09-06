@@ -1,0 +1,118 @@
+# 0010 — crh_generation.txt
+
+### Hôpital Haut-Lévêque - CHU de Bordeaux
+Service de Pédiatrie Hépatogastroentérologie
+
+---
+
+**Nom :** Morchipont
+**Prénom :** Robert
+**Date de naissance :** 21/12/1948
+
+---
+
+### Motif d'hospitalisation
+M. Robert Morchipont, âgé de 76 ans, est admis ce jour en hospitalisation ambulatoire pour la poursuite d'une chimiothérapie dans un contexte d'anémie ferriprive chronique associée à une cirrhose hépatique non alcoolique.
+
+### Antécédents
+- **Médicaux :**
+  - Cirrhose hépatique cryptogénétique connue, sans décompensation récente.
+  - Anémie microcytaire hypochrome arégénérative, en cours de bilan étiologique.
+  - Consommation alcoolique à risque, sans dépendance avérée.
+- **Chirurgicaux :** Aucun antécédent chirurgical notable.
+- **Familiaux :** Pas d'antécédent familial connu de maladie hépatique ou hématologique.
+- **Allergies :** Aucune allergie médicamenteuse connue.
+
+### Mode de vie
+M. Morchipont est retraité, vivant à domicile de manière autonome. Il ne fume pas et présente une consommation régulière d'alcool estimée à environ cinq verres par jour. Son activité physique est limitée en raison d'une asthénie persistante.
+
+### Histoire de la maladie
+Le patient est suivi depuis plusieurs mois pour une anémie ferriprive réfractaire, initialement attribuée à des saignements digestifs chroniques. Une fibroscopie œsogastroduodénale et une coloscopie réalisées en février 2025 n'ont pas révélé de lésion hémorragique active, mais ont confirmé la présence de signes indirects de spoliation sanguine digestive. Parallèlement, une cirrhose hépatique cryptogénétique a été diagnostiquée en 2023, sans signe de décompensation jusqu'à présent. Une consommation alcoolique excessive a été identifiée comme facteur aggravant, bien qu'aucune dépendance n'ait été objectivée. Une chimiothérapie a été initiée il y a trois semaines pour stabiliser l'anémie, avec une première cure bien tolérée. La présente hospitalisation vise à administrer la deuxième cure.
+
+### Examen clinique
+À l'admission, le patient est apyrétique, avec une tension artérielle à 130/80 mmHg et une fréquence cardiaque régulière à 78 battements par minute. L'examen abdominal révèle une hépatomégalie modérée, sans signe d'ascite ni d'ictère. On note une pâleur cutanéomuqueuse, sans œdème des membres inférieurs. Le poids est stable à 75 kg pour une taille de 184 cm (IMC 22,2). L'examen neurologique est sans particularité, et l'état général est conservé (ECOG 1).
+
+### Examens complémentaires
+- **Bilan biologique :**
+  - Hémoglobine : 9,2 g/dL (microcytaire, hypochrome).
+  - Ferritinémie : 12 µg/L (normale : 30-300).
+  - Coefficient de saturation de la transferrine : 8 %.
+  - Bilan hépatique : légère cytolyse (ASAT 65 UI/L, ALAT 58 UI/L), sans cholestase.
+  - TP : 78 %, albuminémie : 32 g/L.
+  - Créatinine : 85 µmol/L, fonction rénale normale.
+- **Échographie abdominale (réalisée la veille) :** Foie dysmorphique avec signes de cirrhose, sans lésion focale suspecte. Rate de taille normale, sans hypertension portale significative.
+
+### Conclusion
+M. Morchipont présente une anémie ferriprive chronique réfractaire dans un contexte de cirrhose hépatique cryptogénétique, associée à une consommation alcoolique nocive. La chimiothérapie en cours vise à corriger l'anémie et à prévenir les complications liées à la carence martiale. Le patient regagnera son domicile ce jour après la perfusion, avec un suivi rapproché en consultation d'hépatogastroentérologie prévu dans deux semaines.
+
+**Dr Victor Martins Fernandes**
+Service de Pédiatrie Hépatogastroentérologie
+Hôpital Haut-Lévêque - CHU de Bordeaux
+
+
+---
+
+## Formulations
+
+```json
+{
+  "diagnostics": {
+    "Autres anémies par carence en fer (D508)": [
+      "anémie ferriprive chronique",
+      "anémie microcytaire hypochrome arégénérative",
+      "anémie ferriprive réfractaire",
+      "carence martiale"
+    ],
+    "Cirrhoses (du foie), autres et sans précision (K746)": [
+      "cirrhose hépatique cryptogénétique",
+      "cirrhose hépatique non alcoolique"
+    ],
+    "Troubles mentaux et du comportement liés à l'utilisation d'alcool : utilisation nocive pour la santé (F101)": [
+      "consommation alcoolique à risque",
+      "consommation alcoolique nocive"
+    ]
+  },
+  "informations": {
+    "Date entrée": [
+      "25/04/2025"
+    ],
+    "Date de sortie": [
+      "25/04/2025"
+    ],
+    "Service d'hospitalisation": [
+      "Service de Pédiatrie Hépatogastroentérologie"
+    ],
+    "Nom/Prénom du médecin": [
+      "Dr Victor Martins Fernandes"
+    ],
+    "Nom/Prénom du patient": [
+      "M. Robert Morchipont"
+    ],
+    "Poids": [
+      "75 kg"
+    ],
+    "Âge": [
+      "76 ans"
+    ],
+    "Sexe": [
+      "masculin"
+    ],
+    "État général": [
+      "ECOG 1"
+    ],
+    "NFS": [
+      "Hémoglobine : 9,2 g/dL (microcytaire, hypochrome)"
+    ],
+    "Créatinine": [
+      "85 µmol/L, fonction rénale normale"
+    ],
+    "Bilan hépatique": [
+      "légère cytolyse (ASAT 65 UI/L, ALAT 58 UI/L), sans cholestase",
+      "TP : 78 %, albuminémie : 32 g/L"
+    ],
+    "Traitements": [
+      "chimiothérapie"
+    ]
+  }
+}
+```

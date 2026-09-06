@@ -1,0 +1,162 @@
+# 0008 — crh_generation.txt
+
+## Compte rendu opératoire
+
+Centre Hospitalier Lyon Sud - Hospices Civils de Lyon
+Service de Chirurgie Orthopédique et Traumatologique
+
+### Intervention
+Nettoyage de l'articulation tibiotalienne par arthrotomie.
+
+### Date de l'intervention
+02/04/2025
+
+### Diagnostic
+Déhiscence de plaie opératoire de la cheville droite avec dermohypodermite microbienne et abcès de paroi post-opératoire.
+
+### Technique utilisée
+Sous anesthésie générale, installation en décubitus dorsal avec garrot pneumatique à la racine du membre inférieur droit. Incision cutanée reprenant la cicatrice précédente en regard de l'articulation tibiotalienne. Exploration de la zone qui retrouve une désunion partielle des berges cutanées avec présence de tissus nécrotiques et d'un écoulement purulent localisé. Excision des tissus infectés et nécrotiques jusqu'en zone saine. Lavage abondant au sérum physiologique et à la Bétadine®. Exploration articulaire confirmant l'absence d'atteinte intra-articulaire profonde. Mise en place d'une lame de drainage type Delbet. Suture cutanée par points séparés de fil non résorbable après hémostase soigneuse.
+
+### Constatations per-opératoires
+Désunion partielle de la plaie opératoire mesurant environ 3 cm de long sur 1,5 cm de large, avec présence de pus et de tissus inflammatoires en regard de la face antéro-latérale de la cheville. Pas d'extension profonde de l'infection au niveau articulaire. Pas de corps étranger retrouvé.
+
+### Matériels utilisés
+- Lame de bistouri n°15
+- Pinces à disséquer et ciseaux de Metzenbaum
+- Lame de drainage type Delbet
+- Fil de suture non résorbable (Ethilon® 3/0)
+- Garrot pneumatique
+
+### Chirurgien
+Dr Saida Junk
+
+-----
+
+## Compte rendu d’hospitalisation
+
+Centre Hospitalier Lyon Sud - Hospices Civils de Lyon
+Service de Chirurgie Orthopédique et Traumatologique
+
+Nom : Bernadi
+Prénom : Dominique
+Date de naissance : 05/09/1978
+
+### Motif d’hospitalisation
+Prise en charge d'une désunion de plaie opératoire de la cheville droite compliquée d'une infection locale avec abcès de paroi, survenue dans les suites d'une intervention chirurgicale récente.
+
+### Antécédents
+- Médicaux : Hypertension artérielle essentielle sous traitement.
+- Chirurgicaux : Pas d'antécédent chirurgical notable.
+- Familiaux : Pas d'antécédent familial particulier.
+- Allergies : Aucune allergie connue.
+
+### Mode de vie
+Patiente ne fumant pas et ne consommant pas d'alcool. Exerce une activité professionnelle sédentaire. Pas de pratique sportive régulière.
+
+### Histoire de la maladie
+Dominique Bernadi a été opérée initialement le 10/03/2025 pour une fracture bimalléolaire de la cheville droite, traitée par ostéosynthèse. Les suites opératoires immédiates ont été simples, avec une sortie à domicile au troisième jour post-opératoire. Elle a consulté aux urgences le 24/03/2025 pour une douleur et un écoulement purulent au niveau de la cicatrice opératoire, associée à une rougeur locale et un œdème. Une échographie des parties molles a confirmé la présence d'un abcès sous-cutané. Une hospitalisation a été décidée le 25/03/2025 pour prise en charge chirurgicale.
+
+### Examen clinique
+À l'entrée, la patiente présente une température à 38,2°C. La tension artérielle est mesurée à 150/90 mmHg, le pouls à 88 battements par minute. L'examen local retrouve une désunion partielle de la cicatrice opératoire de la cheville droite, avec écoulement purulent et rougeur inflammatoire s'étendant sur environ 5 cm autour de la plaie. La cheville est œdématiée, avec une douleur à la palpation. Le poids est stable à 53 kg pour une taille de 163 cm. L'examen cardiopulmonaire est sans particularité.
+
+### Examens complémentaires
+- Bilan biologique à l'entrée : hyperleucocytose à 14 500/mm³ avec polynucléose neutrophile, CRP à 85 mg/L. La fonction rénale et le bilan hépatique sont normaux.
+- Prélèvements bactériologiques per-opératoires : mise en évidence de *Staphylococcus aureus* méticilline-sensible et de *Proteus mirabilis*.
+- Radiographie de la cheville droite : pas de signe d'ostéite, matériel d'ostéosynthèse en place sans anomalie.
+
+### Évolution pendant l'hospitalisation
+La patiente a bénéficié d'un nettoyage chirurgical de la plaie le 02/04/2025, avec mise en place d'une lame de drainage. Une antibiothérapie intraveineuse probabiliste par céfazoline a été initiée, puis adaptée à l'antibiogramme par l'association amoxicilline-acide clavulanique et ofloxacine. Les prélèvements de contrôle réalisés à J5 post-opératoire sont revenus stériles. L'évolution locale a été favorable avec tarissement de l'écoulement, diminution de l'œdème et de la rougeur. La tension artérielle a été contrôlée par ajustement du traitement antihypertenseur. La patiente a été revue en consultation de contrôle le 15/05/2025, où la cicatrisation était complète, sans signe d'infection résiduelle. La sortie a été autorisée le 22/05/2025 avec poursuite de l'antibiothérapie per os pour une durée totale de 14 jours et suivi en consultation externe.
+
+### Conclusion
+Prise en charge réussie d'une désunion de plaie opératoire de la cheville droite compliquée d'une dermohypodermite microbienne et d'un abcès de paroi à *Staphylococcus aureus* et *Proteus mirabilis*. L'évolution a été favorable après nettoyage chirurgical et antibiothérapie adaptée. La patiente regagne son domicile avec un suivi rapproché en consultation.
+
+
+---
+
+## Formulations
+
+```json
+{
+  "diagnostics": {
+    "Désunions d'une plaie opératoire non classées ailleurs, autres et non précisées (T8138)": [
+      "désunion de plaie opératoire de la cheville droite",
+      "désunion partielle de la plaie opératoire",
+      "Déhiscence de plaie opératoire"
+    ],
+    "Autres infections localisées précisées de la peau et du tissu cellulaire sous-cutané (L088)": [
+      "dermohypodermite microbienne",
+      "infection locale"
+    ],
+    "Infection après un acte à visée diagnostique et thérapeutique, non classée ailleurs (T814)": [
+      "abcès de paroi post-opératoire",
+      "abcès sous-cutané"
+    ],
+    "Staphylococcus aureus, cause de maladies classées dans d'autres chapitres (B956)": [
+      "*Staphylococcus aureus* méticilline-sensible",
+      "infection à *Staphylococcus aureus*"
+    ],
+    "Autres staphylocoques, cause de maladies classées dans d'autres chapitres (B957)": [],
+    "Proteus (P.mirabilis) (P.morganii), cause de maladies classées dans d'autres chapitres (B964)": [
+      "*Proteus mirabilis*"
+    ],
+    "Hypertension essentielle (primitive) (I10)": [
+      "Hypertension artérielle essentielle",
+      "hypertension artérielle"
+    ]
+  },
+  "informations": {
+    "Date entrée": [
+      "25/03/2025"
+    ],
+    "Date de sortie": [
+      "22/05/2025"
+    ],
+    "Service d'hospitalisation": [
+      "Service de Chirurgie Orthopédique et Traumatologique"
+    ],
+    "Intervention": [
+      "Nettoyage de l'articulation tibiotalienne par arthrotomie"
+    ],
+    "Date de l'intervention": [
+      "02/04/2025"
+    ],
+    "Nom/Prénom du chirurgien": [
+      "Dr Saida Junk"
+    ],
+    "Nom/Prénom du patient": [
+      "Bernadi Dominique"
+    ],
+    "Âge": [
+      "46 ans"
+    ],
+    "Sexe": [
+      "féminin"
+    ],
+    "État général": [
+      "La patiente présente une température à 38,2°C. La tension artérielle est mesurée à 150/90 mmHg, le pouls à 88 battements par minute."
+    ],
+    "Poids": [
+      "53 kg"
+    ],
+    "Statut gestationnel": [],
+    "Gestité": [],
+    "Comorbidités": [
+      "Hypertension artérielle essentielle sous traitement"
+    ],
+    "Médicaments": [
+      "antibiothérapie intraveineuse probabiliste par céfazoline",
+      "amoxicilline-acide clavulanique et ofloxacine",
+      "traitement antihypertenseur"
+    ],
+    "NFS": [
+      "hyperleucocytose à 14 500/mm³ avec polynucléose neutrophile"
+    ],
+    "Créatinine": [
+      "La fonction rénale [...] est normale"
+    ],
+    "Bilan hépatique": [
+      "Le bilan hépatique est normal"
+    ]
+  }
+}
+```

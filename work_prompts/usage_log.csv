@@ -1,0 +1,15 @@
+timestamp_utc,test,out,scenario,template,model,input_tokens,output_tokens,cost_usd,batch_id,partial
+2026-09-06T10:43:13Z,06,crh_generation.txt,0000,surgery_inpatient,mistral-large-latest,5396,1957,0.005633,sync_20260906_124117_973760,False
+2026-09-06T10:43:13Z,06,crh_generation.txt,0001,surgery_inpatient,mistral-large-latest,6349,1653,0.005654,sync_20260906_124117_973760,False
+2026-09-06T10:43:13Z,06,crh_generation.txt,0002,medical_outpatient,mistral-large-latest,5968,1105,0.004641,sync_20260906_124117_973760,False
+2026-09-06T10:43:13Z,06,crh_generation.txt,0003,medical_outpatient,mistral-large-latest,5736,939,0.004276,sync_20260906_124117_973760,False
+2026-09-06T10:43:13Z,06,crh_generation.txt,0004,medical_inpatient,mistral-large-latest,8511,1995,0.007248,sync_20260906_124117_973760,False
+2026-09-06T10:43:13Z,06,crh_generation.txt,0005,medical_outpatient,mistral-large-latest,6063,1318,0.005008,sync_20260906_124117_973760,False
+2026-09-06T10:43:13Z,06,crh_generation.txt,0006,surgery_outpatient,mistral-large-latest,5617,678,0.003825,sync_20260906_124117_973760,False
+2026-09-06T10:43:13Z,06,crh_generation.txt,0007,medical_outpatient,mistral-large-latest,7320,1375,0.005723,sync_20260906_124117_973760,False
+2026-09-06T10:43:13Z,06,crh_generation.txt,0008,surgery_inpatient,mistral-large-latest,10467,2144,0.00845,sync_20260906_124117_973760,False
+2026-09-06T10:43:13Z,06,crh_generation.txt,0009,delivery_inpatient_csection_hospit,mistral-large-latest,6215,2145,0.006325,sync_20260906_124117_973760,False
+2026-09-06T10:43:13Z,06,crh_generation.txt,0010,medical_outpatient,mistral-large-latest,8877,1440,0.006599,sync_20260906_124117_973760,False
+2026-09-06T10:43:13Z,06,crh_generation.txt,0011,medical_inpatient,mistral-large-latest,6141,1721,0.005652,sync_20260906_124117_973760,False
+2026-09-06T10:43:13Z,06,crh_generation.txt,0012,medical_inpatient,mistral-large-latest,7916,2006,0.006967,sync_20260906_124117_973760,False
+2026-09-06T10:43:13Z,06,crh_generation.txt,0013,delivery_inpatient_hospit,mistral-large-latest,10049,2862,0.009317,sync_20260906_124117_973760,False

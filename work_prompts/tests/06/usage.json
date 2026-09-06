@@ -1,0 +1,17 @@
+{
+  "runs": [
+    {
+      "out": "crh_generation.txt",
+      "at": "2026-09-06T12:43:13",
+      "partial": false,
+      "n_requests": 14,
+      "model": "mistral-large-latest",
+      "transport": "sync",
+      "input_tokens": 100625,
+      "output_tokens": 23338,
+      "input_cost_usd": 0.0503125,
+      "output_cost_usd": 0.035007,
+      "total_cost_usd": 0.0853195
+    }
+  ]
+}

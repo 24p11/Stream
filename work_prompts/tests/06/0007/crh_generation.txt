@@ -1,0 +1,98 @@
+{"CR": "### Hôpital Pitié-Salpêtrière - Assistance Publique Hôpitaux de Paris
+Service d'ENDOCRINOLOGIE
+
+Nom : Sedara
+Prénom : Thierry
+Date de naissance : 08/11/1961
+
+---
+
+### Motif d'hospitalisation
+M. Thierry Sedara, âgé de 62 ans, a été admis ce jour en hospitalisation ambulatoire pour un examen de contrôle post-chimiothérapie dans le cadre de la surveillance de son diabète de type 2 et de ses comorbidités métaboliques.
+
+---
+
+### Antécédents
+- Médicaux : Diabète de type 2 non insulinodépendant, hypertension artérielle essentielle, hypercholestérolémie familiale.
+- Chirurgicaux : Appendicectomie dans l’enfance.
+- Familiaux : Père décédé d’un infarctus du myocarde à 68 ans.
+- Allergies : Aucune allergie médicamenteuse connue.
+
+---
+
+### Mode de vie
+M. Sedara ne fume pas et ne consomme pas d’alcool. Il travaille comme employé administratif et mène une vie sédentaire. Son indice de masse corporelle est à 28,1 kg/m² (taille : 172 cm, poids : 83 kg), témoignant d’un surpoids modéré lié à un excès calorique.
+
+---
+
+### Histoire de la maladie
+Le patient est suivi depuis plusieurs années pour un diabète de type 2 bien équilibré sous mesures hygiéno-diététiques et traitement oral. Il présente également une hypertension artérielle contrôlée par monothérapie et une hypercholestérolémie familiale traitée par statine. Une chimiothérapie a été initiée il y a trois mois dans le cadre d’une affection oncologique non précisée ici, nécessitant aujourd’hui un bilan de contrôle métabolique et cardiovasculaire.
+
+---
+
+### Examen clinique
+À l’admission, M. Sedara est apyrétique, avec une tension artérielle à 135/85 mmHg et une fréquence cardiaque régulière à 72 battements par minute. L’examen cardiopulmonaire est sans particularité. Le poids est stable à 83 kg. L’examen abdominal ne révèle pas d’hépatomégalie ni de sensibilité. Les réflexes ostéotendineux sont normaux, et il n’y a pas de signe de neuropathie périphérique.
+
+---
+
+### Examens complémentaires
+Un bilan biologique a été réalisé ce jour :
+- Hémoglobine glyquée : 6,8 % (objectif atteint).
+- Glycémie à jeun : 1,15 g/L.
+- Bilan lipidique : LDL-cholestérol à 1,05 g/L (sous traitement), HDL-cholestérol à 0,50 g/L, triglycérides à 1,20 g/L.
+- Fonction rénale : créatinine à 85 µmol/L, clairance estimée à 82 mL/min.
+- Bilan hépatique : normal.
+- NFS : sans anomalie notable.
+
+---
+
+### Conclusion
+M. Sedara présente un diabète de type 2 bien équilibré sous traitement oral et mesures diététiques, associé à une hypertension artérielle contrôlée et une hypercholestérolémie familiale stabilisée. Son surpoids modéré justifie la poursuite des conseils diététiques et d’une activité physique adaptée. Le bilan de contrôle post-chimiothérapie est rassurant, sans complication métabolique ou cardiovasculaire aiguë. La sortie est autorisée ce jour avec un suivi régulier en consultation d’endocrinologie.
+
+Dr Yvette Descure
+Service d’Endocrinologie
+Hôpital Pitié-Salpêtrière",
+
+"formulations": {
+    "diagnostics": {
+        "Diabète sucré de type 2 - sans complication - diabète sucré de type 2 non insulinotraité ou sans précision (E1198)": [
+            "Diabète de type 2 non insulinodépendant",
+            "diabète de type 2 bien équilibré sous mesures hygiéno-diététiques et traitement oral"
+        ],
+        "Hypercholestérolémie essentielle (E780)": [
+            "hypercholestérolémie familiale",
+            "hypercholestérolémie familiale traitée par statine"
+        ],
+        "Hypertension essentielle (primitive) (I10)": [
+            "hypertension artérielle essentielle",
+            "hypertension artérielle contrôlée par monothérapie"
+        ],
+        "Surveillance et conseils diététiques (Z713)": [
+            "conseils diététiques",
+            "poursuite des conseils diététiques"
+        ],
+        "Surpoids dû à un excès calorique, de l'adulte ou de l'enfant (E6603)": [
+            "surpoids modéré lié à un excès calorique",
+            "Son surpoids modéré"
+        ]
+    },
+    "informations": {
+        "Date entrée": ["14/08/2024"],
+        "Date de sortie": ["14/08/2024"],
+        "Service d'hospitalisation": ["Service d’Endocrinologie"],
+        "Nom/Prénom du médecin": ["Dr Yvette Descure"],
+        "Nom/Prénom du patient": ["M. Thierry Sedara"],
+        "Poids": ["83 kg"],
+        "Âge": ["62 ans"],
+        "Sexe": ["Masculin"],
+        "État général": ["apyrétique, avec une tension artérielle à 135/85 mmHg et une fréquence cardiaque régulière à 72 battements par minute"],
+        "NFS": ["sans anomalie notable"],
+        "Créatinine": ["créatinine à 85 µmol/L, clairance estimée à 82 mL/min"],
+        "Bilan hépatique": ["normal"],
+        "Traitements": [
+            "traitement oral",
+            "monothérapie",
+            "statin"
+        ]
+    }
+}}

@@ -1,0 +1,38 @@
+{"CR": "## Compte rendu opératoire\n\nService de Chirurgie Viscérale\nHôpital Haut-Lévêque - CHU de Bordeaux\n\n### Identification du patient\n- Nom : Havrez\n- Prénom : Christophe\n- Date de naissance : 01/07/2005\n\n### Intervention\nAppendicectomie par cœlioscopie avec préparation laparoscopique\n\n### Date de l'intervention\n25/04/2025\n\n### Diagnostic\nAppendicite aiguë compliquée de perforation appendiculaire\n\n### Technique utilisée\nSous anesthésie générale, installation en décubitus dorsal avec abord cœlioscopique standard. Introduction de trois trocarts (ombilical, fosse iliaque gauche et hypogastre). Exploration de la cavité péritonéale révélant un épanchement purulent modéré en fosse iliaque droite et dans le cul-de-sac de Douglas. L’appendice était perforé à sa base, avec présence de fausses membranes et d’un abcès localisé. Dissection minutieuse du méso-appendice après coagulation bipolaire, puis ligature de la base appendiculaire à l’aide d’un endoloop. Extraction de la pièce opératoire dans un sac endoscopique via le trocart ombilical. Lavage abondant de la cavité péritonéale au sérum physiologique tiède, puis drainage par un drain de Redon en fosse iliaque droite. Vérification de l’hémostase et fermeture des orifices de trocarts.\n\n### Constatations per-opératoires\nAppendice perforé à sa base, mesurant environ 8 cm de long, avec présence de fausses membranes et d’un abcès localisé en fosse iliaque droite. Pas d’atteinte visible des organes adjacents (cæcum, iléon terminal). Épanchement purulent modéré sans péritonite généralisée.\n\n### Matériels utilisés\n- Trocarts : 10 mm (ombilical), 5 mm (fosse iliaque gauche et hypogastre)\n- Optique 0°\n- Pince à coagulation bipolaire\n- Endoloop pour ligature de la base appendiculaire\n- Drain de Redon (10 Ch)\n\n### Chirurgien\nDr Marcellin Boisset\n\n-----\n\n## Compte rendu d’hospitalisation\n\nService de Chirurgie Viscérale\nHôpital Haut-Lévêque - CHU de Bordeaux\n\n### Identification du patient\n- Nom : Havrez\n- Prénom : Christophe\n- Date de naissance : 01/07/2005\n\n### Motif d’hospitalisation\nPrise en charge en urgence pour douleurs abdominales fébriles évoluant depuis 48 heures, localisées en fosse iliaque droite, associées à des nausées et une hyperleucocytose. Le diagnostic d’appendicite aiguë compliquée a été retenu, motivant une hospitalisation pour appendicectomie.\n\n### Antécédents\n- Médicaux : Aucun antécédent notable\n- Chirurgicaux : Aucun\n- Familiaux : Aucun antécédent familial particulier\n- Allergies : Aucune allergie connue\n\n### Mode de vie\nChristophe Havrez, âgé de 19 ans, ne fume pas et ne consomme pas d’alcool. Il est étudiant et pratique une activité physique régulière (football en club). Pas de notion de voyage récent ni d’exposition particulière.\n\n### Histoire de la maladie\nLe patient a présenté depuis le 23/04/2025 des douleurs abdominales progressives, initialement péri-ombilicales, puis localisées en fosse iliaque droite. Ces douleurs étaient associées à des nausées sans vomissement, ainsi qu’à une fièvre à 38,5°C. Une consultation aux urgences le 25/04/2025 a révélé une défense en fosse iliaque droite, une hyperleucocytose à 15 000/mm³ et une CRP à 85 mg/L. Le scanner abdominal a confirmé le diagnostic d’appendicite aiguë avec signes de perforation appendiculaire sans péritonite généralisée. Une appendicectomie par cœlioscopie a été réalisée en urgence le jour même.\n\n### Examen clinique\nÀ l’admission, le patient présentait un état général conservé, avec une température à 38,2°C, une tension artérielle à 120/70 mmHg et une fréquence cardiaque à 90 battements/minute. L’examen abdominal retrouvait une défense localisée en fosse iliaque droite, sans contracture généralisée. Le poids était stable à 71 kg pour une taille de 173 cm (IMC 23,7). Pas de signe de déshydratation ni de sepsis sévère.\n\n### Examens complémentaires\n- **Biologie** :\n  - NFS : leucocytes à 15 200/mm³ (PNN 85%), hémoglobine à 14,5 g/dL, plaquettes à 320 000/mm³.\n  - CRP : 85 mg/L.\n  - Ionogramme sanguin et créatinine : normaux.\n  - Bilan hépatique : normal.\n- **Imagerie** :\n  - Scanner abdominal (25/04/2025) : appendice épaissi et inflammatoire, mesurant 12 mm de diamètre, avec présence d’un stercolithe et d’un épanchement localisé en fosse iliaque droite. Pas de signe de péritonite généralisée.\n\n### Évolution pendant l'hospitalisation\nL’intervention s’est déroulée sans complication per-opératoire. En postopératoire, le patient a été surveillé en unité de chirurgie ambulatoire. Une antibiothérapie par amoxicilline-acide clavulanique a été instaurée pour une durée de 5 jours. Le drain de Redon a été retiré à J2 postopératoire en l’absence de débit significatif. Les suites ont été simples, avec apyrexie dès J1 et régression progressive des douleurs abdominales. La reprise du transit a été observée à J2. Le patient a été autorisé à rentrer à domicile le 28/04/2025 avec un arrêt de travail de 10 jours et une ordonnance de paracétamol en cas de douleur.\n\n### Conclusion\nAppendicectomie par cœlioscopie pour appendicite aiguë compliquée de perforation appendiculaire, avec suites opératoires simples. Le patient est sorti à domicile à J3 postopératoire avec un suivi en consultation externe prévu dans 15 jours.\n\nDr Marcellin Boisset\nChirurgie Viscérale\nHôpital Haut-Lévêque - CHU de Bordeaux",
+
+"formulations": {
+    "diagnostics": {
+        "Appendicite aiguë, autre et non précisée (K35.8)": [
+            "appendicite aiguë compliquée de perforation appendiculaire",
+            "appendicite aiguë avec signes de perforation appendiculaire",
+            "appendicite aiguë compliquée"
+        ]
+    },
+    "informations": {
+        "Date entrée": ["25/04/2025"],
+        "Date de sortie": ["28/04/2025"],
+        "Service d'hospitalisation": ["Service de Chirurgie Viscérale"],
+        "Intervention": ["Appendicectomie par cœlioscopie avec préparation laparoscopique"],
+        "Date de l'intervention": ["25/04/2025"],
+        "Nom/Prénom du chirurgien": ["Dr Marcellin Boisset"],
+        "Nom/Prénom du patient": ["Christophe Havrez"],
+        "Âge": ["19 ans"],
+        "Sexe": ["masculin"],
+        "État général": [
+            "état général conservé",
+            "Pas de signe de déshydratation ni de sepsis sévère"
+        ],
+        "Poids": ["71 kg"],
+        "Statut gestationnel": [],
+        "Gestité": [],
+        "Comorbidités": ["Aucun antécédent notable"],
+        "Médicaments": ["paracétamol", "amoxicilline-acide clavulanique"],
+        "NFS": [
+            "leucocytes à 15 200/mm³ (PNN 85%)",
+            "hémoglobine à 14,5 g/dL",
+            "plaquettes à 320 000/mm³"
+        ],
+        "Créatinine": ["normaux"],
+        "Bilan hépatique": ["normal"]
+    }
+}}

@@ -81,3 +81,24 @@ ambulatoire, qui n'avaient aucun bloc H).
   14 (variante « Rappel clinique » pour le CRO de chirurgie ambulatoire).
 - Reste à faire : run réel 3.2 (14 scénarios, sync, ~0,09 USD — feu vert de
   Rémi requis), aperçus .md, bilan §4, check_crh, commit.
+
+## Étape 4 — run réel tests/06, aperçus .md, bilan — FAIT, commité
+
+- Run réel (feu vert Rémi) joué dans le noyau VS Code (seul détenteur de la
+  clé) via le pilote : 14/14 réponses `stop`, 0 erreur, 116 s, 100 625 tokens
+  in / 23 338 out, **0,085 USD** (`usage.json`, transport sync). Aperçus `.md`
+  écrits (cellule « Lecture des CR »). Section 4 jouée.
+- **Objectif CC atteint** : dans les 14 CRH de 06, 0 étiquette recopiée
+  (« Tabac : », « Alcool : »), 0 « mésusage », 0 « Non-fumeur » — contre 4
+  étiquettes recopiées, 6 CRH « mésusage », 6 CRH « Non-fumeur » dans tests/05.
+- `check_crh` (mécanique, hors modèle) : 06 = 94 ECHEC / 19 AVERT (70
+  formulations fantômes, 14 IPP absent, 9 gras interdit, 1 taille de scénario)
+  contre 05 = 74 / 17 (53, 14, 7). Hausse des formulations fantômes à
+  surveiller (variance d'un run, ou effet de la consigne ?) — hors périmètre CC.
+- **Journal CSV** : le noyau VS Code (démarré le 5 au soir) avait l'ancien
+  module `bench` en mémoire → `generate` sans `usage_csv`, `usage_log.csv` non
+  créé par le run. Reconstruit après coup depuis l'archive validée
+  `sync_output_20260906_124117_973760.jsonl` + `usage.json` (mêmes données,
+  sommes vérifiées), 14 lignes. Leçon : après modification de `bench`,
+  redémarrer le noyau avant tout run.
+- Commit : 14 CRH + 14 .md + `usage.json` de 06, `usage_log.csv`.
