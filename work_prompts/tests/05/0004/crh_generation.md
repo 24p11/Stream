@@ -1,0 +1,129 @@
+# 0004 — crh_generation.txt
+
+Hôpital Bichat-Claude Bernard - Assistance Publique Hôpitaux de Paris
+Service d'Hépato-Gastro-Entérologie
+
+--------------------------------------------------
+Nom : Gaugue
+Prénom : Gena
+Date de naissance : 27/06/1985
+--------------------------------------------------
+
+### Motif d’hospitalisation
+Mme Gena Gaugue, âgée de 41 ans, a été hospitalisée le 15 décembre 2026 pour prise en charge d’une pancréatite aiguë nécrotico-hémorragique. Elle présentait depuis 48 heures des douleurs épigastriques intenses, irradiant dans le dos, associées à des nausées et des vomissements. Devant l’aggravation des symptômes et l’apparition d’une fièvre à 38,5°C, elle a consulté aux urgences où une hospitalisation en urgence a été décidée.
+
+### Antécédents
+- Médicaux : 
+  - Diabète de type 2 non insulinotraité, diagnostiqué il y a 3 ans, actuellement équilibré sous mesures hygiéno-diététiques.
+  - Hypertension artérielle essentielle, traitée par inhibiteur de l’enzyme de conversion depuis 2 ans.
+  - Obésité modérée (IMC à 30,5 kg/m²).
+- Chirurgicaux : Cure de hernie inguinale droite en 2018.
+- Familiaux : Mère décédée d’un infarctus du myocarde à 65 ans.
+- Allergies : Aucune allergie médicamenteuse connue.
+
+### Mode de vie
+Mme Gaugue est tabagique active, consommant environ 12 cigarettes par jour depuis une vingtaine d’années (10 paquets-années). Elle ne présente pas de mésusage d’alcool. Elle travaille comme employée administrative et mène une vie sédentaire. Elle n’a pas d’activité physique régulière.
+
+### Histoire de la maladie
+La patiente décrit l’apparition brutale de douleurs abdominales épigastriques il y a trois jours, d’intensité croissante, associées à des vomissements alimentaires puis bilieux. Elle a initialement tenté de se soulager par des antalgiques de palier 1, sans efficacité. Devant la persistance des symptômes et l’apparition d’une fièvre, elle s’est présentée aux urgences. Le bilan biologique initial a révélé une lipasémie à 5 fois la normale, une CRP élevée à 180 mg/L, ainsi qu’une hyperglycémie à 2,8 g/L. Une échographie abdominale a montré un pancréas œdématié avec des zones de nécrose, confirmées par un scanner abdominal injecté réalisé en urgence. Le diagnostic de pancréatite aiguë nécrotico-hémorragique a été retenu, sans étiologie biliaire ou alcoolique évidente.
+
+### Examen clinique
+À l’admission, la patiente était apyrétique, avec une tension artérielle à 145/90 mmHg, une fréquence cardiaque à 95 battements par minute et une saturation en oxygène à 98 % en air ambiant. Elle pesait 77 kg pour une taille de 159 cm (IMC 30,5 kg/m²). L’examen abdominal retrouvait une défense épigastrique sans contracture, avec une sensibilité diffuse à la palpation. Les bruits hydro-aériques étaient présents. Le reste de l’examen clinique était sans particularité, en dehors d’une discrète surcharge pondérale abdominale.
+
+### Examens complémentaires
+- Biologie : 
+  - Lipasémie : 1200 UI/L (N < 200 UI/L).
+  - CRP : 180 mg/L (N < 5 mg/L).
+  - Glycémie à jeun : 2,8 g/L (sans acidocétose).
+  - Bilan hépatique : normal.
+  - NFS : hyperleucocytose à 14 000/mm³ à prédominance polynucléaires neutrophiles, hémoglobine à 13,2 g/dL, plaquettes à 320 000/mm³.
+  - Créatinine : 75 µmol/L (DFG estimé à 90 mL/min).
+  - Ionogramme sanguin : normal.
+- Imagerie : 
+  - Échographie abdominale : pancréas œdématié, sans dilatation des voies biliaires.
+  - Scanner abdominal injecté : pancréatite aiguë nécrotico-hémorragique avec des zones de nécrose étendues sur environ 30 % de la glande, sans coulée de nécrose extrapancréatique.
+
+### Évolution pendant l'hospitalisation
+La prise en charge a consisté en une mise à jeun stricte, une réhydratation intraveineuse par sérum physiologique, et une antalgie adaptée par paracétamol et morphiniques en titration. Une antibiothérapie probabiliste par imipénème a été instaurée en raison de la fièvre et des signes de nécrose pancréatique. La surveillance clinique et biologique a été rapprochée, avec un contrôle quotidien de la lipasémie, de la CRP et de la glycémie. L’évolution a été favorable sous traitement, avec une diminution progressive des douleurs et une normalisation de la lipasémie au 5ème jour. La patiente a pu reprendre une alimentation progressive sans récidive des symptômes. Un suivi en consultation d’hépato-gastro-entérologie a été programmé pour explorer l’étiologie de cette pancréatite et adapter la prise en charge du diabète et de l’hypertension artérielle.
+
+### Conclusion
+Mme Gaugue a présenté une pancréatite aiguë nécrotico-hémorragique d’évolution favorable sous traitement médical. Les étiologies biliaire et alcoolique ont été écartées, et un bilan complémentaire sera réalisé en ambulatoire pour en déterminer la cause. La patiente est sortie à domicile le 20 décembre 2026 avec un traitement antalgique de palier 1, une poursuite du traitement antihypertenseur et des conseils hygiéno-diététiques renforcés. Un suivi régulier est prévu pour évaluer l’évolution du diabète et de l’hypertension artérielle, ainsi que pour discuter d’un éventuel sevrage tabagique.
+
+Dr Justine Pasquet
+Service d'Hépato-Gastro-Entérologie
+Hôpital Bichat-Claude Bernard
+
+
+---
+
+## Formulations
+
+```json
+{
+  "diagnostics": {
+    "Autres pancréatites aiguës (K85.8)": [
+      "pancréatite aiguë nécrotico-hémorragique",
+      "pancréatite aiguë nécrotico-hémorragique avec des zones de nécrose étendues"
+    ],
+    "Diabète sucré de type 2 - sans complication - non insulinotraité ou sans précision (E11.98)": [
+      "Diabète de type 2 non insulinotraité",
+      "diabète de type 2"
+    ],
+    "Hypertension essentielle (primitive) (I10)": [
+      "Hypertension artérielle essentielle",
+      "hypertension artérielle"
+    ],
+    "Syndrome de dépendance au tabac, utilisation continue (F17.25)": [
+      "tabagique active",
+      "tabagisme actif"
+    ],
+    "Obésité due à un excès calorique de l'adulte avec indice de masse corporelle [IMC] égal ou supérieur à 30 kg/m² et inférieur à 35 kg/m² (E66.04)": [
+      "Obésité modérée (IMC à 30,5 kg/m²)",
+      "surcharge pondérale abdominale"
+    ]
+  },
+  "informations": {
+    "Date entrée": [
+      "15 décembre 2026"
+    ],
+    "Date de sortie": [
+      "20 décembre 2026"
+    ],
+    "Service d'hospitalisation": [
+      "Service d'Hépato-Gastro-Entérologie"
+    ],
+    "Nom/Prénom du patient": [
+      "Gaugue Gena"
+    ],
+    "Nom/Prénom du médecin": [
+      "Justine Pasquet"
+    ],
+    "Âge": [
+      "41 ans"
+    ],
+    "Sexe": [
+      "Féminin"
+    ],
+    "État général": [],
+    "Poids": [
+      "77 kg"
+    ],
+    "Statut gestationnel": [],
+    "Gestité": [],
+    "NFS": [
+      "hyperleucocytose à 14 000/mm³ à prédominance polynucléaires neutrophiles, hémoglobine à 13,2 g/dL, plaquettes à 320 000/mm³"
+    ],
+    "Créatinine": [
+      "75 µmol/L (DFG estimé à 90 mL/min)"
+    ],
+    "Bilan hépatique": [
+      "normal"
+    ],
+    "Traitements": [
+      "antalgie adaptée par paracétamol et morphiniques en titration",
+      "antibiothérapie probabiliste par imipénème",
+      "traitement antihypertenseur"
+    ]
+  }
+}
+```

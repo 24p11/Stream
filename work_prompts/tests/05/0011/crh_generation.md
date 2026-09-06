@@ -1,0 +1,137 @@
+# 0011 — crh_generation.txt
+
+### Hôpital de la Timone - Assistance Publique – Hôpitaux de Marseille
+Service de Pédiatrie Hépatologie-Gastroentérologie
+
+Nom : Soubabere
+Prénom : Jerome
+Date de naissance : 21/09/1948
+
+---
+
+### Motif d'hospitalisation
+M. Jerome Soubabere, âgé de 76 ans, est admis ce jour en hospitalisation ambulatoire pour la poursuite d'une chimiothérapie dans un contexte d'anémie ferriprive chronique et de cirrhose hépatique non alcoolique.
+
+---
+
+### Antécédents
+- Médicaux : Cirrhose hépatique cryptogénique connue, anémie microcytaire hypochrome arégénérative évoluant depuis plusieurs mois.
+- Chirurgicaux : Appendicectomie dans l'enfance.
+- Familiaux : Pas d'antécédent notable de pathologie hépatique ou hématologique.
+- Allergies : Aucune allergie médicamenteuse connue.
+
+---
+
+### Mode de vie
+M. Soubabere est retraité, ancien employé dans le secteur du bâtiment. Il ne fume pas mais présente une consommation alcoolique jugée nocive, estimée à environ cinq verres par jour depuis de nombreuses années. Il vit à domicile, autonome, sans aide particulière pour les activités quotidiennes.
+
+---
+
+### Histoire de la maladie
+Le patient est suivi depuis plusieurs années pour une cirrhose hépatique non alcoolique, diagnostiquée initialement devant une hépatomégalie et des anomalies biologiques persistantes. Une ponction-biopsie hépatique réalisée en 2022 avait confirmé le diagnostic de cirrhose micronodulaire sans étiologie virale, métabolique ou auto-immune identifiée.
+
+Parallèlement, une anémie ferriprive chronique a été mise en évidence il y a dix-huit mois, avec un bilan étiologique révélant des pertes sanguines digestives occultes. Une fibroscopie œsogastroduodénale et une coloscopie réalisées en 2024 n’avaient pas identifié de source active de saignement, mais des signes d’hypertension portale modérée étaient notés. Un traitement martial par voie orale a été instauré, avec une réponse partielle et transitoire.
+
+En raison de la persistance de l’anémie malgré le traitement martial, une chimiothérapie a été initiée il y a trois mois pour optimiser la prise en charge de cette carence martiale réfractaire. Le patient est aujourd’hui hospitalisé pour une nouvelle cure en ambulatoire.
+
+---
+
+### Examen clinique
+À l’admission, M. Soubabere est conscient, orienté, et en état général conservé. Il pèse 75 kg pour une taille de 184 cm (IMC à 22,2). La tension artérielle est mesurée à 130/80 mmHg, la fréquence cardiaque à 78 battements par minute, et la saturation en oxygène à 98 % en air ambiant. L’examen abdominal retrouve une hépatomégalie modérée, indolore, sans signe d’ascite clinique. Il n’y a pas d’ictère cutanéomuqueux, ni d’œdème des membres inférieurs. L’examen neurologique est sans particularité, et l’état cutané ne montre pas de pétéchies ou d’ecchymoses.
+
+---
+
+### Examens complémentaires
+Les examens biologiques réalisés ce jour montrent :
+- Une hémoglobine à 9,2 g/dL, avec un volume globulaire moyen à 78 fL et une ferritinémie basse à 12 µg/L, confirmant la persistance de l’anémie microcytaire hypochrome.
+- Un bilan hépatique perturbé : ASAT à 65 UI/L (N < 40), ALAT à 58 UI/L (N < 45), gamma-GT à 120 UI/L (N < 55), bilirubine totale à 22 µmol/L (N < 17), et albuminémie à 32 g/L (N > 35).
+- La créatininémie est normale à 85 µmol/L, et l’ionogramme sanguin ne montre pas de trouble hydro-électrolytique.
+- Le taux de prothrombine est à 65 %, sans signe de décompensation aiguë de la cirrhose.
+
+Une échographie abdominale réalisée en externe il y a deux semaines montrait un foie dysmorphique, sans lésion focale suspecte, et une rate modérément augmentée de volume.
+
+---
+
+### Conclusion
+M. Soubabere est hospitalisé ce jour pour la poursuite de sa chimiothérapie dans le cadre d’une anémie ferriprive chronique réfractaire au traitement martial oral, sur fond de cirrhose hépatique cryptogénique. L’état général est stable, et il n’y a pas de signe de décompensation aiguë de la cirrhose. Le patient regagnera son domicile en fin de journée après la perfusion, avec un suivi rapproché en consultation d’hépatologie et d’hématologie.
+
+Dr Gerard Herrmann
+Service de Pédiatrie Hépatologie-Gastroentérologie
+Hôpital de la Timone - AP-HM
+
+
+---
+
+## Formulations
+
+```json
+{
+  "diagnostics": {
+    "Autres anémies par carence en fer (D508)": [
+      "anémie ferriprive chronique",
+      "anémie microcytaire hypochrome arégénérative",
+      "carence martiale réfractaire",
+      "anémie microcytaire hypochrome"
+    ],
+    "Cirrhoses (du foie), autres et sans précision (K746)": [
+      "cirrhose hépatique non alcoolique",
+      "cirrhose hépatique cryptogénique",
+      "cirrhose micronodulaire",
+      "cirrhose hépatique"
+    ],
+    "Troubles mentaux et du comportement liés à l'utilisation d'alcool : utilisation nocive pour la santé (F101)": [
+      "consommation alcoolique jugée nocive",
+      "consommation alcoolique estimée à environ cinq verres par jour"
+    ]
+  },
+  "informations": {
+    "Date entrée": [
+      "30/07/2025"
+    ],
+    "Date de sortie": [
+      "30/07/2025"
+    ],
+    "Service d'hospitalisation": [
+      "Service de Pédiatrie Hépatologie-Gastroentérologie"
+    ],
+    "Nom/Prénom du médecin": [
+      "Gerard Herrmann"
+    ],
+    "Nom/Prénom du patient": [
+      "Soubabere Jerome"
+    ],
+    "Poids": [
+      "75 kg"
+    ],
+    "Âge": [
+      "76 ans"
+    ],
+    "Sexe": [
+      "Masculin"
+    ],
+    "État général": [
+      "conscient, orienté, et en état général conservé",
+      "état général stable"
+    ],
+    "NFS": [
+      "hémoglobine à 9,2 g/dL",
+      "volume globulaire moyen à 78 fL",
+      "ferritinémie basse à 12 µg/L"
+    ],
+    "Créatinine": [
+      "créatininémie normale à 85 µmol/L"
+    ],
+    "Bilan hepatique": [
+      "ASAT à 65 UI/L (N < 40)",
+      "ALAT à 58 UI/L (N < 45)",
+      "gamma-GT à 120 UI/L (N < 55)",
+      "bilirubine totale à 22 µmol/L (N < 17)",
+      "albuminémie à 32 g/L (N > 35)"
+    ],
+    "Traitements": [
+      "chimiothérapie",
+      "traitement martial par voie orale"
+    ]
+  }
+}
+```

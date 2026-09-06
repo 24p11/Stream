@@ -49,6 +49,9 @@ sélectionnable (`transport="batch"`) pour le jour où Mistral le rétablit.
 - **tests/05 généré** : 14 CRH (`crh_generation.txt`) par le transport sync, run
   complet du 5 septembre 18h32 (98 429 tokens in, 24 279 out, 0,086 USD), après un
   run partiel sur 0000 à 18h02 (0,004 USD). `usage.json` porte les deux entrées.
+- Aperçus lisibles `crh_generation.md` écrits à côté de chaque `.txt`
+  (`python scripts/show_crh.py work_prompts/tests/05 --md`, ou cellule « Lecture
+  des CR » de la section 3.2), versionnés avec le test.
 - Section 3.3 (vérificateur) non lancée ; section 4 (bilan + vérification
   mécanique) à faire ou refaire au calme.
 - Observations à la relecture de 0000 : CRH court (903 tokens) et en-tête
