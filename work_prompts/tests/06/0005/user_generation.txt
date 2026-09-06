@@ -1,0 +1,143 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 55 ans
+- Sexe du patient : Masculin
+- Taille : 184 cm
+- Poids : 82 kg (IMC 24,2)
+- Tabac : non
+- Alcool : non
+- Date d'entrée : 06/05/2026
+- Date de sortie : 06/05/2026
+- Date de naissance : 04/08/1970
+- Nom du patient : Reyjasse
+- Prénom du patient : Sylvestre
+- Localisation anatomique de la tumeur primaire : Tumeur maligne du pancréas endocrine, autre et non précisée (C254+8)
+- Type anatomopathologique de la tumeur primaire : Adénocarcinome
+- Score TNM : T4Tout NM0
+- Stade tumoral : Localement avancé
+- Biomarqueurs tumoraux : CA 19-9
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Hospitalisation pour prise en charge du cancer.
+- Codage CIM10 :
+   * Diagnostic principal : Tumeur maligne du pancréas endocrine, autre et non précisée (C254+8)
+   * Diagnostics associés :
+      - Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques (C787)
+- Nom du médecin / signataire : Alain Godessa
+- Service : CANCERO ADULTE
+- Hôpital : Nouvel Hôpital Civil - Hôpitaux Universitaires de Strasbourg
+Ce cas clinique concerne un patient présentant un cancer
+Vous choisirez un épisode de traitement sachant que les recommandations pour ce stade du cancer sont les suivantes :
+   - Schéma thérapeutique : Chimiothérapie
+   - Protocole de chimiothérapie : FOLFIRINOX ou Gemcitabine + albumin-bound paclitaxel
+Veillez à bien préciser le type histologique et la valeur des biomarqueurs si recherchés
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_category code="C25">
+
+# C25 — Tumeur maligne du pancréas
+
+## Position dans la classification
+- Chapitre II : Tumeurs
+- Bloc C00-C97 : Tumeurs malignes
+- Bloc C00-C75 : Tumeurs malignes, primitives ou présumées primitives, de siège précisé, à l’exception des tissus lymphoïde, hématopoïétique et apparentés
+- Bloc C15-C26 : Tumeurs malignes des organes digestifs
+
+## Codes enfants directs
+- C25.0 — Tumeur maligne de la tête du pancréas
+- C25.1 — Tumeur maligne du corps du pancréas
+- C25.2 — Tumeur maligne de la queue du pancréas
+- C25.3 — Tumeur maligne du canal pancréatique
+- C25.4 — Tumeur maligne du pancréas endocrine
+- C25.7 — Tumeur maligne d'autres parties du pancréas
+- C25.8 — Tumeur maligne à localisations contiguës du pancréas
+- C25.9 — Tumeur maligne du pancréas, sans précision
+
+## Périmètre clinique
+
+Inclusions héritées de la catégorie C25.4 :
+- Ilots de Langerhans
+
+Au niveau des codes :
+- col du pancréas (C25.7)
+
+## Formulations cliniques alternatives
+- adénocarcinome canalaire pancréas (C25.3)
+- adénocarcinome canalaire tête pancréas (C25.0)
+- adénocarcinome caudal pancréas (C25.2)
+- adénocarcinome céphalo-isthmique pancréas (C25.8)
+- adénocarcinome corporéo-isthmique pancréas (C25.8)
+- adénocarcinome excréto-canalaire pancréatique (C25.3)
+- adénocarcinome excréto-pancréatique tête pancréas (C25.0)
+- adénocarcinome peu différencié tête pancréas (C25.0)
+- ampullo-carcinome tête pancréas (C25.0)
+- ampullome tête pancréas (C25.0)
+- ampullome Wirsung (C25.3)
+- calculo-cancer tête pancréas (C25.0)
+- cancer canalaire pancréas (C25.3)
+- cancer caudal pancréatique (C25.2)
+- cancer céphalique pancréas (C25.0)
+- cancer corporéo-caudal pancréas (C25.8)
+- cancer corporéo-céphalique pancréas (C25.8)
+- cancer corporéo-pancréatique (C25.1)
+- cancer corps pancréas (C25.1)
+- cancer corps tête pancréas (C25.8)
+- cancer excréto-pancréatique type ductal (C25.3)
+- cancer intra-canalaire papillaire pancréas (C25.3)
+- cancer localisations contiguës pancréas (C25.8)
+- cancer loge pancréatique (C25.7)
+- cancer nécrosé tête pancréas (C25.0)
+- cancer pancréas bi-focal (C25.8)
+- cancer pancréas corporéo-caudal (C25.8)
+- cancer pancréas exocrine (C25.8)
+- cancer pancréatique caudal (C25.2)
+- cancer tête corps pancréas (C25.8)
+- cancer tête isthme pancréas (C25.8)
+- cancer voies excrétrices pancréas (C25.8)
+- cancer Wirsung (C25.3)
+- carcinome cellules géantes céphalique pancréatique (C25.0)
+- carcinome céphalique pancréatique (C25.0)
+- carcinome neuro-endocrine canal pancréas (C25.3)
+- carcinome neuro-endocrine tête pancréas (C25.0)
+- carcinome peu différencié queue pancréas (C25.2)
+- carcinome peu différencié tête pancréas (C25.0)
+- céphalome pancréatique (C25.0)
+- lésion carcino-nécrotique tête pancréas (C25.0)
+- néoplasie corporéo-caudale pancréas (C25.8)
+- néoplasie crochet pancréas (C25.7)
+- néoplasie pancréatique caudale (C25.2)
+- néoplasie pancréatique corps + queue (C25.8)
+- sarcome queue pancréas (C25.2)
+- tumeur intra-canalaire papillaire mucineux pancréas (C25.3)
+- tumeur neuroendocrine queue pancréas (C25.2)
+- tumeur neuroendocrine tête pancréas (C25.0)
+- tumeur pancréatique maligne corporéo-caudale (C25.8)
+
+</fiche_category>
+
+<fiche_code code="C78.7">
+
+# C78.7 — Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+
+## Position dans la classification
+- Chapitre II : Tumeurs
+- Bloc C00-C97 : Tumeurs malignes
+- Bloc C76-C80 : Tumeurs malignes de sièges mal définis, secondaires et non précisés
+
+## Formulations cliniques alternatives
+- diffusion hépatique
+- foie multi-tumoral
+- foie multinodulaire secondaire
+- lâcher ballon hépatique
+- lésions secondaires hépatiques
+- localisations secondaires intra-hépatiques
+- métastase hépatique
+- métastase hépatique synchrone
+- métastases foie
+- métastases péri-hépatiques
+- néoplasme hépatique secondaire
+
+</fiche_code>

@@ -59,3 +59,25 @@ ambulatoire, qui n'avaient aucun bloc H).
   `TEST_NUM = "06"`, `PREV_TEST = "05"` ; la cellule de montage SKIP (déjà
   monté), puis tirage + seeding (enrichissement avec les nouvelles
   étiquettes) + figement, contrôle à sec, run réel (sync).
+
+## Étape 3 — test 06 seedé et figé (sans appel API) — FAIT, commité
+
+- Notebook basculé : `TEST_NUM = "06"`, `PREV_TEST = "05"`.
+- Cellules jouées hors interface (pilote `jupyter_client` sur un noyau du venv,
+  cwd `work_prompts/`) : sections 1, 2 (préparation, filtre DP en 8, tirage
+  stratifié seed 42, enrichissement seed 42), 3.1 (montage SKIP — déjà monté —,
+  génération fictomed, seeding, figement, prompts vérificateur), contrôle à sec
+  3.2. Tout OK, 4 s pour fictomed.
+- Résultat : 14 dossiers `0000`-`0013`, `test.json` du 6 sept. 12h37.
+  **Mêmes 14 séjours que tests/05** (DP, âge, sexe identiques deux à deux) mais
+  fictomed régénère l'habillage synthétique (nom, dates, hôpital, signataire,
+  `generation_id`) et la numérotation change (ex. 05/0000 N328 → 06/0006). Une
+  césarienne : 05 `delivery_inpatient_hospit` → 06 `delivery_inpatient_csection_hospit`
+  pour le même séjour O628 (choix de template fictomed).
+- Prompts utilisateur : nouvelles étiquettes (« Tabac : non », « sevré depuis
+  4 ans (22 PA) », « actif, 12 cigarettes/jour, 10 PA », « Alcool : environ 5
+  verres/jour »…), 11 lignes enrichies sur 14 (3 exclues par la politique),
+  zéro « mésusage ». Prompts système figés : consigne bloc H présente dans les
+  14 (variante « Rappel clinique » pour le CRO de chirurgie ambulatoire).
+- Reste à faire : run réel 3.2 (14 scénarios, sync, ~0,09 USD — feu vert de
+  Rémi requis), aperçus .md, bilan §4, check_crh, commit.

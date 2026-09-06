@@ -1,0 +1,338 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 76 ans
+- Sexe du patient : Masculin
+- Taille : 184 cm
+- Poids : 75 kg (IMC 22,2)
+- Tabac : non
+- Alcool : environ 5 verres/jour
+- Date d'entrée : 25/04/2025
+- Date de sortie : 25/04/2025
+- Date de naissance : 21/12/1948
+- Nom du patient : Morchipont
+- Prénom du patient : Robert
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge en hospitalisation ambulatoire pour Autres formes de chimiothérapie.
+- Codage CIM10 :
+   * Diagnostic principal : Autres anémies par carence en fer (D508)
+   * Diagnostics associés :
+      - Cirrhoses (du foie), autres et sans précision (K746)
+      - Troubles mentaux et du comportement liés à l'utilisation d'alcool : utilisation nocive pour la santé (F101)
+- Nom du médecin / signataire : Victor Martins fernandes
+- Service : PED.HEPATO-GASTRO.
+- Hôpital : Hôpital Haut-Lévêque - CHU de Bordeaux
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_category code="D50">
+
+# D50 — Anémie par carence en fer
+
+## Position dans la classification
+- Chapitre III : Maladies du sang et des organes hématopoïétiques et certains troubles du système immunitaire
+- Bloc D50-D53 : Anémies nutritionnelles
+
+## Codes enfants directs
+- D50.0 — Anémie par carence en fer secondaire à une perte de sang (chronique)
+- D50.1 — Dysphagie sidéropénique
+- D50.8 — Autres anémies par carence en fer
+- D50.9 — Anémie par carence en fer, sans précision
+
+## Périmètre clinique
+
+Inclusions héritées de la catégorie D50 :
+- anémie ferriprive
+- anémie :
+ - ferriprive
+ - hypochrome
+- anémie hypochrome
+
+Au niveau des codes :
+- anémie posthémorragique (chronique) (D50.0)
+- syndrome de Kelly-Paterson (D50.1)
+- Syndrome de :
+ - Kelly–Paterson
+ - Plummer–Vinson
+ (D50.1)
+- syndrome de Plummer-Vinson (D50.1)
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre III) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies auto-immunes (systémiques) SAI (M35.9)
+maladies dues au virus de l'immunodéficience humaine [VIH] (B20-B24)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes :
+
+- anémie :
+ - congénitale par perte de sang fœtal (P61.3) 
+ - posthémorragique aigüe (D62)
+
+## Formulations cliniques alternatives
+- Anémie (à) (de), achlorhydrique (D50.8)
+- Anémie (à) (de), avec, carence en fer (D50.9)
+- Anémie (à) (de), hypochrome, hyposidérémique (D50.8)
+- Anémie (à) (de), normocytaire (infectieuse), due à hémorragie (chronique) (D50.0)
+- Anémie (à) (de), nutritionnelle, sidéropénique (D50.8)
+- Anémie (à) (de), par carence (en), fer, due à une perte de sang (chronique) (D50.0)
+- anémie carence martiale (D50.9)
+- anémie chronique ferriprive (D50.9)
+- anémie chronique saignement (D50.0)
+- anémie déglobulisation (D50.0)
+- anémie déperdition sanguine (D50.0)
+- anémie déperditionnelle (D50.0)
+- anémie férriprive acutisée (D50.9)
+- anémie ferriprive ancienne (D50.9)
+- anémie ferriprive chronique (D50.9)
+- anémie ferriprive hémorragique chronique (D50.0)
+- anémie ferriprive par pertes sanguines (D50.0)
+- anémie ferriprive par spoliation chronique (D50.0)
+- anémie ferriprive subaigüe (D50.9)
+- anémie fuite digestive (D50.0)
+- anémie hémorragique chronique (D50.0)
+- anémie hypochrome chronique (D50.0)
+- anémie hypochrome microcytaire (D50.8)
+- anémie hypochrome microcytaire arégénérative (D50.8)
+- anémie hypochrome microcytaire hyposidérémique (D50.8)
+- anémie hyposidérémique (D50.9)
+- anémie inflammatoire ferriprive (D50.9)
+- anémie méléna (D50.0)
+- anémie microcytaire carentielle (D50.8)
+- anémie microcytaire hypochrome arégénérative (D50.8)
+- anémie microcytaire hyposidérémique (D50.8)
+- anémie microcytaire réfractaire (D50.8)
+- anémie microcytaire spoliation digestive (D50.8)
+- anémie par hémorragie (D50.0)
+- anémie par saignement (D50.0)
+- anémie par spoliation sanguine digestive (D50.0)
+- anémie perte sanguine (D50.0)
+- anémie perte sanguine digestive (D50.0)
+- anémie post-rectorragie (D50.0)
+- anémie réfractaire par saignement (D50.0)
+- anémie sidéropénique réfractaire (D50.9)
+- anémie spoliation (D50.0)
+- anémie spoliative (D50.0)
+- anémie spoliative aigüe (D50.0)
+- Carence (en), fer, avec anémie (D50.9)
+- Chlorose (D50.8)
+- Kelly(-patterson), syndrome de (D50.1)
+- Paterson(-kelly), syndrome de (D50.1)
+- Sidéropénie, avec anémie (D50.9)
+- Witt, anémie de (D50.8)
+
+</fiche_category>
+
+<fiche_code code="K74.6">
+
+# K74.6 — Cirrhoses du foie, autres et sans précision
+
+## Position dans la classification
+- Chapitre XI : Maladies de l'appareil digestif
+- Bloc K70-K77 : Maladies du foie
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- cirrhose (du foie) cryptogénique
+- cirrhose (du foie) de type mixte
+- cirrhose (du foie) macronodulaire
+- cirrhose (du foie) micronodulaire
+- cirrhose (du foie) portale
+- cirrhose (du foie) post-nécrotique
+- cirrhose (du foie)  SAI
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XI) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité du bloc K70-K77) :
+
+hémochromatose (E83.1)
+hépatite virale (B15-B19)
+ictère SAI (R17.0)
+maladie de Wilson (E83.0)
+syndrome de Reye (G93.7)
+
+Affections relevant d'autres codes (hérité de la catégorie K74) :
+
+avec maladie toxique du foie (K71.7)
+cirrhose (du foie) :
+ - alcoolique (K70.3) 
+ - congénitale (P78.8) 
+fibrose alcoolique du foie (K70.2) 
+sclérose du foie d'origine cardiaque (K76.1)
+
+## Formulations cliniques alternatives
+- Baumgarten-cruveilhier, maladie ou syndrome de, avec cirrhose du foie
+- cirrhose C15 score Child
+- cirrhose cryptogénétique
+- Cirrhose (cryptogénique) (macronodulaire) (micronodulaire) (portale) (post-nécrotique) (type mixte) (de)
+- Cirrhose (cryptogénique) (macronodulaire) (micronodulaire) (portale) (post-nécrotique) (type mixte) (de), cruveilhier-baumgarten
+- Cirrhose (cryptogénique) (macronodulaire) (micronodulaire) (portale) (post-nécrotique) (type mixte) (de), foie (chronique) (monolobulaire) (nodulaire) (plurilobulaire) (splénomégalique) (au cours de)
+- Cirrhose (cryptogénique) (macronodulaire) (micronodulaire) (portale) (post-nécrotique) (type mixte) (de), laennec (alcoolique), non alcoolique
+- Cirrhose (cryptogénique) (macronodulaire) (micronodulaire) (portale) (post-nécrotique) (type mixte) (de), métabolique nca
+- Cirrhose (cryptogénique) (macronodulaire) (micronodulaire) (portale) (post-nécrotique) (type mixte) (de), septale
+- cirrhose décompensée stade C
+- cirrhose foie
+- cirrhose hépatique non éthylique
+- cirrhose hépatique stade C10
+- cirrhose hépatique stade I
+- cirrhose stade C
+- cirrhose virale B
+- cirrhose virale C
+- Cruveilhier-baumgarten, maladie ou syndrome de, avec cirrhose du foie
+- hépatopathie chronique cirrhogène
+- hépatopathie cirrhotique
+- Laennec, cirrhose de, non alcoolique
+
+</fiche_code>
+
+<fiche_category code="F10">
+
+# F10 — Troubles mentaux et du comportement liés à l'utilisation d'alcool
+
+## Position dans la classification
+- Chapitre V : Troubles mentaux et du comportement
+- Bloc F10-F19 : Troubles mentaux et du comportement liés à l'utilisation de substances psychoactives
+
+## Codes enfants directs
+- F10.0 — Troubles mentaux et du comportement liés à l'utilisation d'alcool - " Intoxication aigüe "
+- F10.1 — Troubles mentaux et du comportement liés à l'utilisation d'alcool - " Utilisation nocive pour la santé "
+- F10.2 — Troubles mentaux et du comportement liés à l'utilisation d'alcool - " Syndrome de dépendance "
+- F10.3 — Troubles mentaux et du comportement liés à l'utilisation d'alcool - " Syndrome de sevrage "
+- F10.4 — Troubles mentaux et du comportement liés à l'utilisation d'alcool - " Syndrome de sevrage avec délirium "
+- F10.5 — Troubles mentaux et du comportement liés à l'utilisation d'alcool - " Trouble psychotique "
+- F10.6 — Troubles mentaux et du comportement liés à l'utilisation d'alcool - " Syndrome amnésique "
+- F10.7 — Troubles mentaux et du comportement liés à l'utilisation d'alcool - " Trouble résiduel ou psychotique de survenue tardive "
+- F10.8 — Troubles mentaux et du comportement liés à l'utilisation d'alcool - " Autres troubles mentaux et du comportement "
+- F10.9 — Troubles mentaux et du comportement liés à l'utilisation d'alcool - " Trouble mental ou du comportement, sans précision "
+
+## Périmètre clinique
+
+Inclusions héritées du chapitre V :
+- troubles du développement psychologique
+
+Au niveau des codes :
+- abus d'une substance psycho-active (F10.1)
+- Abus d'une substance psychoactive
+ (F10.1)
+- Alcoolisme chronique
+Dipsomanie
+Toxicomanie
+ (F10.200)
+- Délirium trémens [Delirium tremens]
+ (F10.40)
+- Démence :
+ - alcoolique SAI
+ - et autres altérations des fonctions cognitives durables, moins sévères
+Flashbacks
+Syndrome cérébral alcoolique chronique
+- Trouble (des) :
+ - affectif résiduel
+ - perceptions persistant, induit par des substances hallucinogènes
+ - psychotique de survenue tardive, induit par des substances psychoactives
+ - résiduel de la personnalité et du comportement
+ (F10.70)
+- États de transe et de possession au cours d'une intoxication par une substance psychoactive
+Intoxication pathologique
+Ivresse :
+ - SAI
+ - (alcoolique) aigüe
+« Mauvais voyages » (drogues)
+ (F10.00)
+- Hallucinose  alcoolique
+Jalousie  alcoolique
+Paranoïa  alcoolique
+Psychose SAI  alcoolique
+ (F10.50)
+- psychose ou syndrome de Korsakov, induit par l'alcool ou d'autres substances psycho-actives ou sans précision (F10.6)
+- Psychose ou syndrome de Korsakov, induit par l'alcool ou d'autres substances psychoactives ou sans précision
+Trouble amnésique induit par l'alcool ou les drogues
+ (F10.6)
+- trouble amnésique induit par l'alcool ou les drogues (F10.6)
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre V) :
+
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité du bloc F10-F19) :
+
+abus de substances n'entraînant pas de dépendance [F55.–]
+
+Affections relevant d'autres codes (hérité de la catégorie F10.0) :
+
+intoxication signifiant empoisonnement [T36–T50]
+trouble psychotique résiduel ou de survenue tardive, induit par l'alcool ou d'autres substances psychoactives [F10-F19 avec le quatrième caractère .7]
+état psychotique induit par l'alcool ou d'autres subtances psychoactives [F10-F19 avec le quatrième caractère .5]
+syndrome de Korsakov induit par l'alcool ou d'autres substances psychoactives [F10-F19 avec le quatrième caractère .6]
+
+Affections relevant d'autres codes :
+
+- syndrome de Korsakov non alcoolique (F04)
+
+## Formulations cliniques alternatives
+- Abus (de), alcool (sans dépendance) (F10.1)
+- Abus (de), sans dépendance, alcool (F10.1)
+- alcoolisme Bêta (F10.1)
+- Alcoolisme (chronique) (avec), psychose (de), korsakoff (F10.6)
+- alcoolisme occasionnel (F10.8)
+- Délire (de), alcoolique (aigu), chronique (F10.6)
+- démence alcoolique Korsakoff (F10.6)
+- démence carentielle type Korsakoff (F10.6)
+- démence éthylique type Korsakoff (F10.6)
+- démence Korsakoff (F10.6)
+- démence type Korsakoff (F10.6)
+- encéphalopathie alcoolique type Korsakoff (F10.6)
+- encéphalopathie carentielle type korsakoff (F10.6)
+- encéphalopathie Korsakoff (F10.6)
+- encéphalopathie Korsakov (F10.6)
+- encéphalopathie Korsakovienne (F10.6)
+- éthylisme suicidaire (F10.1)
+- Korsakoff (F10.6)
+- Korsakoff alcoolique (F10.6)
+- Korsakoff, korsakov, korsakow, maladie, psychose ou syndrome de (alcoolique) (F10.6)
+- Korsakoff post-éthylique (F10.6)
+- Korsakov (F10.6)
+- maladie Korsakoff (F10.6)
+- maladie Korsakov (F10.6)
+- psychose alcoolique Korsakoff (F10.6)
+- psychose alcoolique Korsakov (F10.6)
+- Psychose (de), alcoolique (avec hallucinations, idées délirantes) (de), amnésique avec fabulation (F10.6)
+- Psychose (de), alcoolique (avec hallucinations, idées délirantes) (de), korsakoff (korsakov) (korsakow) (F10.6)
+- Psychose (de), korsakoff (korsakov) (korsakow) (alcoolique) (F10.6)
+- psychose Korsakoff (F10.6)
+- psychose Korsakov (F10.6)
+- syndrome alcoolique Korsakoff (F10.6)
+- Syndrome (de) - voir aussi maladie, amnésique, induit par, alcool (F10.6)
+- Syndrome (de) - voir aussi maladie, amnésique, organique (non dû à alcool ou drogue), alcoolique (F10.6)
+- syndrome démentiel Korsakoff (F10.6)
+- syndrome Korsakoff (F10.6)
+- syndrome Korsakov (F10.6)
+- Trouble(s) (de) - voir aussi maladie, mental, mentaux, liés à l'utilisation (de), alcool (F10.9)
+- Trouble(s) (de) - voir aussi maladie, mental, mentaux, liés à l'utilisation (de), alcool, précisés nca (F10.8)
+- troubles mentaux éthyliques (F10.9)
+- troubles type Korsakoff (F10.6)
+
+</fiche_category>

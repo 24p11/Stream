@@ -1,0 +1,421 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 35 ans
+- Sexe du patient : Féminin
+- Date d'entrée : 14/09/2026
+- Date de sortie : 17/09/2026
+- Date de naissance : 11/12/1990
+- Nom du patient : Calletier
+- Prénom du patient : Herta
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Prise en charge pour accouchement par voie basse.
+- Codage CIM10 :
+   * Diagnostic principal : Soins maternels pour d'autres anomalies et lésions foetales (présumées) (O358)
+   * Diagnostics associés :
+      - Suppression de la lactation (O925)
+      - Naissance unique, enfant mort-né, à la suite d'une interruption de la grossesse pour motif médical (Z3711)
+      - Résultats échographiques anormaux au cours de l'examen prénatal systématique de la mère (O283)
+      - Accouchement prématuré sans travail spontané (O603)
+      - Anémie compliquant la grossesse, l'accouchement et la puerpéralité (O990)
+      - Maladies endocriniennes, nutritionnelles et métaboliques compliquant la grossesse, l'accouchement et la puerpéralité (O992)
+      - Conseils et avis généraux concernant la contraception (Z300)
+      - Surveillance d'autres grossesses à haut risque (Z358)
+      - Soins et examens immédiatement après l'accouchement, autres et sans précision (Z3908)
+- Nom du médecin / signataire : Marie Vaubourg
+- Service : OBSTETRIQUE
+- Hôpital : Hôpital de la Conception- Assistance Publique – Hôpitaux de Marseille
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="O35.8">
+
+# O35.8 — Soins maternels pour d'autres anomalies et lésions fœtales (présumées)
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O30-O48 : Soins maternels liés au fœtus et à la cavité amniotique, et problèmes possibles posés par l'accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie O35 :
+- lorsqu'il y a mise en observation, hospitalisation ou soins obstétricaux, y compris une interruption de la grossesse
+
+Au niveau du code :
+- soins maternels pour lésions foetales (présumées) résultant de listériose
+- soins maternels pour lésions foetales (présumées) résultant de toxoplasmose
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Affections relevant d'autres codes (hérité de la catégorie O35) :
+
+soins maternels pour disproportion fœtopelvienne connue ou présumée (O33.-)
+
+Formes spécifiées de la catégorie O35 :
+- Soins maternels pour anomalie chromosomique (présumée) du fœtus [→ O35.1]
+- Soins maternels pour lésions fœtales (présumées) dues à d'autres actes à visée diagnostique et thérapeutique [→ O35.7]
+- Soins maternels pour lésions fœtales (présumées) dues à l'alcoolisme maternel [→ O35.4]
+- Soins maternels pour lésions fœtales (présumées) dues à une irradiation [→ O35.6]
+- Soins maternels pour lésions fœtales (présumées) médicamenteuses [→ O35.5]
+- Soins maternels pour lésions fœtales (présumées) résultant d'une maladie virale de la mère [→ O35.3]
+- Soins maternels pour maladie héréditaire (présumée) du fœtus [→ O35.2]
+- Soins maternels pour malformation (présumée) du système nerveux central du fœtus [→ O35.0]
+
+## Formulations cliniques alternatives
+- Grossesse (unique) (utérine), compliquée (par), toxoplasmose, avec lésion (présumée) du foetus
+- Grossesse (unique) (utérine), entraînant surveillance, à cause de, foetus (avec) (présumé avec), anomalie (de), précisée nca
+- Grossesse (unique) (utérine), entraînant surveillance, à cause de, foetus (avec) (présumé avec), lésion due à, listériose de la mère
+- Grossesse (unique) (utérine), entraînant surveillance, à cause de, foetus (avec) (présumé avec), lésion due à, toxoplasmose de la mère
+- infection foeto-maternelle
+- infection foetomaternelle
+- infection materno-foetale
+- infection maternofoetale
+- Listériose (avec), de la mère, affectant foetus ou nouveau-né, conditionnant la conduite thérapeutique vis-à-vis de la mère
+- Soins, maternels au cours de la grossesse pour, lésions foetales (présumées) (dues à), précisées nca
+- Toxoplasmose (acquise) (avec), maternelle, affectant foetus ou nouveau-né, conditionnant la conduite thérapeutique vis-à-vis de la mère
+
+</fiche_code>
+
+<fiche_code code="O92.5">
+
+# O92.5 — Suppression de la lactation
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O85-O92 : Complications principalement liées à la puerpéralité
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie O92 :
+- les états mentionnés au cours de la grossesse, de la puerpéralité ou de la lactation
+
+Au niveau du code :
+- agalactie induite
+- agalactie secondaire
+- agalactie thérapeutique
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Affections relevant d'autres codes (hérité du bloc O85-O92) :
+
+ostéomalacie puerpérale (M83.0)
+tétanos obstétrical (A34)
+troubles mentaux et du comportement associés à la puerpéralité (F53.-)
+
+## Formulations cliniques alternatives
+- Agalactie (primaire), induite, secondaire ou thérapeutique
+- Lactation (post-partum, puerpérale, suites de couches), suppression
+- Suites de couches, compliquées par, lactation, suppression
+- Suppression de, lactation
+
+</fiche_code>
+
+<fiche_category code="Z37">
+
+# Z37 — Résultat de l'accouchement
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+
+## Codes enfants directs
+- Z37.0 — Naissance unique, enfant vivant
+- Z37.1 — Naissance unique, enfant mort-né
+- Z37.2 — Naissance gémellaire, jumeaux nés vivants
+- Z37.3 — Naissance gémellaire, l'un des jumeaux né vivant, l'autre mort-né
+- Z37.4 — Naissance gémellaire, jumeaux mort-nés
+- Z37.5 — Autres naissances multiples, tous nés vivants
+- Z37.6 — Autres naissances multiples, certains enfants nés vivants
+- Z37.7 — Autres naissances multiples, tous mort-nés
+- Z37.9 — Résultat de l'accouchement, sans précision
+
+## Périmètre clinique
+
+Inclusions héritées de la catégorie Z37.9 :
+- Naissance :
+ - multiple SAI
+ - unique SAI
+
+</fiche_category>
+
+<fiche_code code="O28.3">
+
+# O28.3 — Résultats échographiques anormaux au cours de l'examen prénatal systématique de la mère
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O20-O29 : Autres affections maternelles liées principalement à la grossesse
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Affections relevant d'autres codes (hérité du bloc O20-O29) :
+
+maladies de la mère classées ailleurs mais compliquant la grossesse, le travail et l'accouchement, et la puerpéralité (O98-O99)
+soins maternels liés au fœtus et à la cavité amniotique, et problèmes possibles posés par l'accouchement (O30-O48)
+
+Affections relevant d'autres codes (hérité de la catégorie O28) :
+
+résultats diagnostiques classés ailleurs – voir Index alphabétique –
+soins maternels liés au fœtus et à la cavité amniotique, et problèmes possibles posés par l'accouchement (O30-O48)
+
+## Formulations cliniques alternatives
+- Résultats anormaux (non spécifiques) (de), échographiques au cours de l'examen prénatal systématique de la mère
+- Résultats anormaux (non spécifiques) (de), examen(s) (de prélèvements) (voir aussi présence, substances anormales), prénatals systématiques de la mère, échographiques
+
+</fiche_code>
+
+<fiche_code code="O60.3">
+
+# O60.3 — Accouchement prématuré sans travail spontané
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O60-O75 : Complications du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie O60 :
+- début (spontané) du travail avant 37 semaines révolues de gestation
+
+Au niveau du code :
+- Accouchement prématuré par césarienne sans travail spontané
+- Accouchement prématuré par déclenchement
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+</fiche_code>
+
+<fiche_code code="O99.0">
+
+# O99.0 — Anémie compliquant la grossesse, l'accouchement et la puerpéralité
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O94-O99 : Autres problèmes obstétricaux, non classés ailleurs
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- états en (D50-D53), (D55-D59), (D60-D64)
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Affections relevant d'autres codes (hérité de la catégorie O99) :
+
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies infectieuses et parasitaires (O98.-)
+quand la raison des soins maternels est que l'affection est considérée comme ayant affecté le fœtus ou présumée l'avoir fait (O35-O36)
+
+## Formulations cliniques alternatives
+- anémie
+- Anémie (à) (de), grossesse (états classés en d50-d64)
+- Anémie (à) (de), macrocytaire, compliquant grossesse
+- Anémie (à) (de), mégaloblastique, compliquant grossesse
+- Anémie (à) (de), mégalocytique, compliquant grossesse
+- Anémie (à) (de), pernicieuse (biermer), compliquant grossesse
+- Anémie (à) (de), puerpérale (non hémorragique)
+- anémie pendant grossesse
+- Grossesse (unique) (utérine), compliquée (par), anémie (classée à d50-d64)
+- Suites de couches, compliquées par, anémie
+- Suites de couches, compliquées par, maladie (de), organes hématopoïétiques nca, anémie
+- Valsuani, maladie de
+
+</fiche_code>
+
+<fiche_code code="O99.2">
+
+# O99.2 — Maladies endocriniennes, nutritionnelles et métaboliques compliquant la grossesse, l'accouchement et la puerpéralité
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O94-O99 : Autres problèmes obstétricaux, non classés ailleurs
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- états en (E00-E90)
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Affections relevant d'autres codes (hérité de la catégorie O99) :
+
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies infectieuses et parasitaires (O98.-)
+quand la raison des soins maternels est que l'affection est considérée comme ayant affecté le fœtus ou présumée l'avoir fait (O35-O36)
+
+Affections relevant d'autres codes :
+
+diabète sucré (O24.-)
+malnutrition (O25)
+thyroïdite du postpartum (O90.5)
+
+## Formulations cliniques alternatives
+- Dysfonction, dysfonctionnement (de) (voir aussi trouble, fonctionnel), thyroïdien(ne), compliquant grossesse, accouchement ou suites de couches
+- Etat (de), carence - voir aussi carence, compliquant grossesse, accouchement ou suites de couches
+- Grossesse (unique) (utérine), compliquée (par), dysfonction thyroïdienne (classée à e00-e07)
+- Grossesse (unique) (utérine), compliquée (par), maladie (de) (voir aussi grossesse, compliquée (par), trouble), endocrinienne nca (classée à e00-e34)
+- Grossesse (unique) (utérine), compliquée (par), maladie (de) (voir aussi grossesse, compliquée (par), trouble), métabolique (classée à e70-e90)
+- Grossesse (unique) (utérine), compliquée (par), maladie (de) (voir aussi grossesse, compliquée (par), trouble), nutritionnelle (classée à e40-e68)
+- Grossesse (unique) (utérine), compliquée (par), maladie (de) (voir aussi grossesse, compliquée (par), trouble), thyroïdienne (classée à e00-e07)
+- hyperthyroïdie pendant grossesse
+- insuffisance anté-hypophysaire post-partum
+- Maladie (à) (de) métabolique, compliquant grossesse, accouchement ou suites de couches
+- obésité compliquant grossesse
+- Suites de couches, compliquées par, maladie (de), métabolique
+- Suites de couches, compliquées par, maladie (de), nutritionnelle nca
+
+</fiche_code>
+
+<fiche_code code="Z30.0">
+
+# Z30.0 — Conseils et avis généraux concernant la contraception
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- planification familiale SAI
+- première prescription de moyens contraceptifs
+
+## Formulations cliniques alternatives
+- Conseil (en) (pour) (voir aussi personne, en quête de conseils), régulation des naissances
+- Grande, multipare, multiparité (sans grossesse actuelle), nécessitant mesures contraceptives
+- Mesure(s), contraceptives (par), avis généraux
+- Mesure(s), contraceptives (par), conseils généraux
+- Personne, en quête de conseils (pour), mesures, contraceptives
+- Personne, en quête de conseils (pour), régulation des naissances
+- Planification familiale
+- Prescription de contraceptif
+
+</fiche_code>
+
+<fiche_code code="Z35.8">
+
+# Z35.8 — Surveillance d'autres grossesses à haut risque
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+
+## À ne pas décrire
+
+Formes spécifiées de la catégorie Z35 :
+- Surveillance d'une grossesse à haut risque du fait de problèmes sociaux [→ Z35.7]
+- Surveillance d'une grossesse avec antécédent d'avortement [→ Z35.1]
+- Surveillance d'une grossesse avec antécédent de soins prénatals insuffisants [→ Z35.3]
+- Surveillance d'une grossesse avec antécédent de stérilité [→ Z35.0]
+- Surveillance d'une grossesse avec d'autres antécédents obstétricaux pathologiques et difficultés à procréer [→ Z35.2]
+- Surveillance d'une primipare âgée [→ Z35.5]
+- Surveillance d'une primipare très jeune [→ Z35.6]
+- Surveillance de grossesse avec multiparité élevée [→ Z35.4]
+
+## Formulations cliniques alternatives
+- âge maternel
+- Surveillance (médicale) (de) (pour), grossesse, risque élevé, précisé nca
+- Trouble(s) (de) - voir aussi maladie, mental, mentaux, antécédents, affectant les soins de la mère pendant la grossesse
+
+</fiche_code>
+
+<fiche_code code="Z39.08">
+
+# Z39.08 — Soins et examens immédiatement après l’accouchement, autres et sans précision
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie Z39.0 :
+- Soins et mise en observation, cas sans complications
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité de la catégorie Z39.0) :
+
+soins pour des complications du postpartum – voir Index alphabétique
+
+</fiche_code>
