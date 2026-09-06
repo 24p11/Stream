@@ -105,6 +105,13 @@ def _ans(n: int) -> str:
     return f"{n} an" if n == 1 else f"{n} ans"
 
 
+def _sevrage_court(sevrage: str | None) -> str:
+    """« depuis 5 mois (rechutes occasionnelles) » -> « depuis 5 mois, rechutes
+    occasionnelles » — forme courte pour une étiquette de donnée."""
+    texte = (sevrage or "").strip()
+    return texte.replace(" (rechutes occasionnelles)", ", rechutes occasionnelles")
+
+
 def _sexe_hf(sexe: int | str) -> str:
     """PMSI (1/2) -> clé interne 'H'/'F' ; 'H'/'F'/'M' acceptés par tolérance."""
     s = str(sexe).strip().upper()
@@ -125,14 +132,21 @@ class Tabac:
     sevrage: str | None = None     # ex. "depuis 4 mois" / "depuis 12 ans"
 
     def as_ligne(self) -> str:
-        """Description courte pour une ligne de prompt (« - Tabac : ... »)."""
+        """Étiquette courte et factuelle pour la ligne « - Tabac : ... » du
+        prompt user (bloc contexte) — une DONNÉE que le template fait
+        reformuler, pas une phrase :
+
+        - non-fumeur   -> « non »
+        - fumeur actif -> « actif, 15 cigarettes/jour, 20 PA »
+        - ex-fumeur    -> « sevré depuis 4 ans (22 PA) »
+                          (« sevré depuis 5 mois, rechutes occasionnelles (22 PA) »)
+        """
         if self.statut == "non-fumeur":
-            return "non-fumeur"
+            return "non"
         if self.statut == "fumeur actif":
-            return (f"tabagisme actif, {self.cigarettes_par_jour} cigarettes/jour, "
-                    f"{self.paquets_annees} paquets-années")
-        return (f"ex-fumeur, sevré {self.sevrage} "
-                f"({self.paquets_annees} paquets-années)")
+            return (f"actif, {self.cigarettes_par_jour} cigarettes/jour, "
+                    f"{self.paquets_annees} PA")
+        return f"sevré {_sevrage_court(self.sevrage)} ({self.paquets_annees} PA)"
 
     def as_texte(self, sexe: int | str | None = None) -> str:
         if self.statut == "non-fumeur":
@@ -159,20 +173,32 @@ class Alcool:
     annees_consommation: int | None = None
 
     def as_ligne(self) -> str:
-        """Description courte pour une ligne de prompt (« - Alcool : ... »)."""
+        """Étiquette courte et factuelle pour la ligne « - Alcool : ... » du
+        prompt user (bloc contexte) — une DONNÉE que le template fait
+        reformuler ; la catégorie clinique (usage nocif, dépendance...) est
+        portée par le code F10.– du scénario et sa fiche, pas par l'étiquette :
+
+        - pas de mésusage             -> « non »
+        - consommation modérée        -> « environ 3 verres/jour »
+        - usage nocif                 -> « environ 4 verres/jour »
+        - dépendance active           -> « environ 9 verres/jour »
+                                         (+ « , symptômes physiques de sevrage »)
+        - dépendance, usage épisodique -> « 8 verres par épisode, 2 épisodes/semaine »
+        - dépendance, abstinent       -> « sevré depuis 3 ans »
+                                         (« sevré depuis 8 mois, rechutes occasionnelles »)
+        """
         if self.statut == "pas de mésusage":
-            return "pas de mésusage"
-        if self.statut == "consommation modérée":
-            return f"consommation régulière modérée, environ {self.verres_par_jour} verres/jour"
-        if self.statut == "usage nocif":
-            return f"usage nocif, environ {self.verres_par_jour} verres/jour"
+            return "non"
+        if self.statut in ("consommation modérée", "usage nocif"):
+            return f"environ {self.verres_par_jour} verres/jour"
         if self.statut == "dépendance active":
-            s = f"dépendance, environ {self.verres_par_jour} verres/jour"
+            s = f"environ {self.verres_par_jour} verres/jour"
             return s + (", symptômes physiques de sevrage" if self.symptomes_physiques else "")
         if self.statut == "dépendance, usage épisodique":
-            return (f"dépendance à usage épisodique, {self.verres_par_episode} verres "
-                    f"par épisode, {self.episodes_par_semaine} épisode(s)/semaine")
-        return f"dépendance, abstinent {self.sevrage}"
+            n = self.episodes_par_semaine
+            return (f"{self.verres_par_episode} verres par épisode, "
+                    f"{n} épisode{'s' if (n or 0) > 1 else ''}/semaine")
+        return f"sevré {_sevrage_court(self.sevrage)}"
 
     def as_texte(self) -> str:
         if self.statut == "pas de mésusage":

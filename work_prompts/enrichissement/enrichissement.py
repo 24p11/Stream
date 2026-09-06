@@ -221,6 +221,13 @@ def bloc_contexte(ligne: Mapping[str, Any]) -> str:
     retour à la ligne, vide si la ligne n'a pas été enrichie — dans
     fictomed, à appeler depuis le template du prompt user, à la suite des
     lignes d'identité du patient.
+
+    Les lignes Tabac / Alcool portent des étiquettes courtes et factuelles
+    (``Tabac.as_ligne`` / ``Alcool.as_ligne`` : « non », « actif, 15
+    cigarettes/jour, 20 PA », « sevré depuis 4 ans (22 PA) », « environ 4
+    verres/jour »...) : ce sont des DONNÉES, jamais des phrases — le template
+    système doit demander au modèle de les reformuler en langage clinique
+    (cf. bloc H du jeu de templates, README_fictomed.md).
     """
     if not ligne.get("enrichi"):
         return ""

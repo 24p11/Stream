@@ -40,8 +40,36 @@ le copier** dans fictomed.
 
 `bloc_contexte(ligne) -> str` : lignes patient prêtes pour le prompt user,
 dans le style des lignes existantes (`- Taille : 176 cm`, `- Poids : 81 kg
-(IMC 26,1)`, `- Tabac : ex-fumeur, sevré depuis 8 ans (18 paquets-années)`,
-`- Alcool : pas de mésusage`) ; chaîne vide si `enrichi=False`.
+(IMC 26,1)`, `- Tabac : sevré depuis 8 ans (18 PA)`, `- Alcool : non`) ;
+chaîne vide si `enrichi=False`.
+
+### Note pour fictomed — les étiquettes tabac/alcool sont des DONNÉES
+
+Les lignes `Tabac` / `Alcool` du bloc portent des **étiquettes courtes et
+factuelles**, jamais des phrases (une génération de test recopiait
+« Pas de mésusage d'alcool » tel quel dans l'encadré patient du CRH). Le
+template système doit donc demander au modèle de les **reformuler** en
+langage clinique naturel, dans la section Mode de vie (pas dans l'encadré
+d'identification), en variant les formulations d'un CR à l'autre et en gardant
+les valeurs chiffrées exactes — cf. bloc H du jeu de templates Stream
+(`work_prompts/tests/06/system/one_gen/`). Formes produites
+(`Tabac.as_ligne`, `Alcool.as_ligne`) :
+
+| Statut du module | Étiquette |
+|---|---|
+| non-fumeur | `non` |
+| fumeur actif | `actif, 15 cigarettes/jour, 20 PA` |
+| ex-fumeur | `sevré depuis 4 ans (22 PA)` — sevrage récent : `sevré depuis 5 mois, rechutes occasionnelles (22 PA)` |
+| pas de mésusage | `non` |
+| consommation modérée (contexte poly, sans code) | `environ 3 verres/jour` |
+| usage nocif (F10.1) | `environ 4 verres/jour` |
+| dépendance active (F10.24x, F10.25) | `environ 9 verres/jour` (+ `, symptômes physiques de sevrage` si F10.241) |
+| dépendance, usage épisodique (F10.26) | `8 verres par épisode, 2 épisodes/semaine` |
+| dépendance, abstinent (F10.20x) | `sevré depuis 3 ans` / `sevré depuis 8 mois, rechutes occasionnelles` |
+
+La catégorie clinique (usage nocif, dépendance...) est portée par le code
+F10.– / F17.– du scénario et sa fiche, pas par l'étiquette. `contexte_texte`
+(phrase complète, `as_texte`) n'est pas destiné au prompt.
 
 ## Politique (les décisions, ajustables)
 

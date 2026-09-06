@@ -13,6 +13,7 @@ relevé dans fictomed (sites/aphp) —
 
 from __future__ import annotations
 
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -21,7 +22,9 @@ import polars as pl
 import pytest
 
 from work_prompts.enrichissement import (
+    Alcool,
     Politique,
+    Tabac,
     bloc_contexte,
     enrichir_scenarios,
 )
@@ -233,6 +236,20 @@ def test_codage_systematique_selon_classe():
 # bloc_contexte et user_fn_enrichi
 # ---------------------------------------------------------------------------
 
+# Formes courtes et factuelles des étiquettes du bloc (données, pas phrases).
+TABAC_RE = re.compile(
+    r"non"
+    r"|actif, \d+ cigarettes/jour, \d+ PA"
+    r"|sevré depuis \d+ (ans?|mois)(, rechutes occasionnelles)? \(\d+ PA\)"
+)
+ALCOOL_RE = re.compile(
+    r"non"
+    r"|environ \d+ verres/jour(, symptômes physiques de sevrage)?"
+    r"|\d+ verres par épisode, \d+ épisodes?/semaine"
+    r"|sevré depuis \d+ (ans?|mois)(, rechutes occasionnelles)?"
+)
+
+
 def test_bloc_contexte_contenu_et_style():
     out = enrichir_scenarios(profils(), seed=42)
     r = _ligne(out, "E1120")
@@ -243,8 +260,68 @@ def test_bloc_contexte_contenu_et_style():
     assert "," in lignes[1].split("IMC ")[1], "IMC en notation française"
     assert lignes[2].startswith("- Tabac : ")
     assert lignes[3].startswith("- Alcool : ")
+    assert TABAC_RE.fullmatch(lignes[2].removeprefix("- Tabac : "))
+    assert ALCOOL_RE.fullmatch(lignes[3].removeprefix("- Alcool : "))
+    assert "mésusage" not in bloc
     assert bloc.endswith("\n")
     assert bloc_contexte(_ligne(out, "O800")) == ""   # exclue -> vide
+
+
+def test_etiquettes_tabac_alcool_par_statut():
+    """Chaque statut du module intoxications a sa forme courte et factuelle."""
+    assert Tabac("non-fumeur").as_ligne() == "non"
+    assert Tabac("fumeur actif", "F171", 15, 20, 25).as_ligne() == (
+        "actif, 15 cigarettes/jour, 20 PA"
+    )
+    assert Tabac("ex-fumeur", "F17202", 20, 22, 22, "depuis 4 ans").as_ligne() == (
+        "sevré depuis 4 ans (22 PA)"
+    )
+    assert Tabac("ex-fumeur", "F17200", 20, 22, 22, "depuis 4 mois").as_ligne() == (
+        "sevré depuis 4 mois (22 PA)"
+    )
+    assert Tabac(
+        "ex-fumeur", "F17201", 20, 22, 22, "depuis 5 mois (rechutes occasionnelles)"
+    ).as_ligne() == "sevré depuis 5 mois, rechutes occasionnelles (22 PA)"
+
+    assert Alcool("pas de mésusage").as_ligne() == "non"
+    assert Alcool("consommation modérée", verres_par_jour=3).as_ligne() == (
+        "environ 3 verres/jour"
+    )
+    assert Alcool("usage nocif", "F101", verres_par_jour=4).as_ligne() == (
+        "environ 4 verres/jour"
+    )
+    assert Alcool("dépendance active", "F1025", verres_par_jour=9).as_ligne() == (
+        "environ 9 verres/jour"
+    )
+    assert Alcool(
+        "dépendance active", "F10241", verres_par_jour=9, symptomes_physiques=True
+    ).as_ligne() == "environ 9 verres/jour, symptômes physiques de sevrage"
+    assert Alcool(
+        "dépendance, usage épisodique", "F1026",
+        verres_par_episode=8, episodes_par_semaine=1,
+    ).as_ligne() == "8 verres par épisode, 1 épisode/semaine"
+    assert Alcool(
+        "dépendance, usage épisodique", "F1026",
+        verres_par_episode=8, episodes_par_semaine=2,
+    ).as_ligne() == "8 verres par épisode, 2 épisodes/semaine"
+    assert Alcool("dépendance, abstinent", "F10202", sevrage="depuis 3 ans").as_ligne() == (
+        "sevré depuis 3 ans"
+    )
+    assert Alcool(
+        "dépendance, abstinent", "F10201",
+        sevrage="depuis 8 mois (rechutes occasionnelles)",
+    ).as_ligne() == "sevré depuis 8 mois, rechutes occasionnelles"
+
+
+def test_etiquettes_du_bloc_sur_toute_la_table():
+    """Sur plusieurs graines, toutes les lignes enrichies portent des
+    étiquettes conformes, sans le mot « mésusage »."""
+    for seed in (1, 42, 2024):
+        out = enrichir_scenarios(profils(), seed=seed)
+        for r in out.filter(pl.col("enrichi")).iter_rows(named=True):
+            assert TABAC_RE.fullmatch(r["tabac"]), (seed, r["tabac"])
+            assert ALCOOL_RE.fullmatch(r["alcool"]), (seed, r["alcool"])
+            assert "mésusage" not in bloc_contexte(r)
 
 
 def test_user_fn_enrichi_insertion_idempotence_noop():
