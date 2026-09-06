@@ -117,3 +117,20 @@ ambulatoire, qui n'avaient aucun bloc H).
   cellules passent, 6 figures, horodatage parsé sans nul. Avec un seul run au
   journal, la comparaison « dernier vs précédents » attend le run suivant.
   Projection au coût du run 06 : 0,0061 USD par CRH, soit ~61 USD pour 10 000.
+
+## Reprise suggérée (autre PC)
+
+1. `git checkout dev_rf && git pull fork dev_rf` (sur l'ancien poste le fork
+   s'appelle `fork`) ; `uv sync` ; puis `uv pip install -e
+   work_modif_prompts/_dependencies/fictomed_prompt_work` (clone `prompt-work`
+   à faire si le dossier est vide) ; contrôle `python -c "import fictomed;
+   print(fictomed.__file__)"`. Clé : `.env` à la racine (`MISTRAL_API_KEY=`).
+2. Le notebook principal pointe sur **tests/06** (seedé, généré, bilan joué).
+   Relire les CRH 06 (aperçus `.md`) contre 05, séjour par séjour (mêmes
+   séjours, numérotation différente) : tabac/alcool reformulés, section Mode
+   de vie / Rappel clinique, en-tête sans étiquettes.
+3. `check_crh` : 70 formulations fantômes sur 06 (53 sur 05) — comprendre
+   avant le test 07 (variance ou effet de la consigne).
+4. Décider d'un statut alcool « occasionnel » (aucune catégorie ne le porte
+   aujourd'hui) et de la puce CRO « Rappel clinique » (interprétation).
+5. `notebook_bilan_api.ipynb` après chaque run réel (journal CSV).
