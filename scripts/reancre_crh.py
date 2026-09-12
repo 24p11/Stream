@@ -19,51 +19,22 @@ from __future__ import annotations
 import argparse
 import difflib
 import json
-import re
 import sys
-import unicodedata
 from pathlib import Path
 
-RESERVED_DIRS = {"system", "batches", "__pycache__"}
+if str(Path(__file__).resolve().parent) not in sys.path:
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-
-# ---------------------------------------------------------------- chargement
-
-def normalize(s: str) -> str:
-    s = unicodedata.normalize("NFC", s)
-    s = s.replace("\u2019", "'").replace("\u00a0", " ")
-    return re.sub(r"\s+", " ", s).strip()
-
-
-def _parse(raw: str) -> dict:
-    try:
-        return json.loads(raw, strict=False)
-    except json.JSONDecodeError as exc:
-        if exc.pos >= len(raw) - 1:
-            opens = raw.count("{") - raw.count("}")
-            if 0 < opens <= 3 and raw.count("[") == raw.count("]"):
-                return json.loads(raw + "}" * opens, strict=False)
-        raise
+# Chargement et normalisation partag\u00e9s avec le v\u00e9rificateur : m\u00eame
+# tol\u00e9rance de r\u00e9paration JSON (fermetures manquantes ET exc\u00e9dentaires),
+# m\u00eames r\u00e8gles de normalisation douce.
+from check_crh import RESERVED_DIRS, load_json as _load_json_repare, normalize
 
 
 def load_json(path: Path) -> dict | None:
-    raw = path.read_text(encoding="utf-8").strip()
-    raw = re.sub(r"^```(?:json)?\s*", "", raw)
-    raw = re.sub(r"\s*```$", "", raw)
-    try:
-        return _parse(raw)
-    except json.JSONDecodeError:
-        m = re.search(r"```(?:json)?\s*(\{.*)\s*```", raw, re.DOTALL)
-        candidate = m.group(1) if m else None
-        if candidate is None:
-            i, j = raw.find("{"), raw.rfind("}")
-            candidate = raw[i:j + 1] if 0 <= i < j else None
-        if candidate:
-            try:
-                return _parse(candidate.strip())
-            except json.JSONDecodeError:
-                return None
-        return None
+    """Chargement tol\u00e9rant (check_crh), r\u00e9parations silencieuses."""
+    data, _repairs = _load_json_repare(path)
+    return data
 
 
 # ---------------------------------------------------------------- réancrage
@@ -92,21 +63,20 @@ def best_window(cr_words: list[str], target: str) -> tuple[float, str]:
     return best_score, best_text
 
 
-def reancre_scenario(sdir: Path, out_name: str, seuil: float) -> dict | None:
-    path = sdir / out_name
-    if not path.exists():
-        print(f"    (pas de {out_name})")
-        return None
-    data = load_json(path)
-    if data is None:
-        print("    JSON illisible — scénario ignoré")
-        return None
+def trier_formulations(data: dict, seuil: float) -> dict:
+    """Trie les formulations du dictionnaire d'un CRH généré en trois
+    classes — le cœur du réancrage, partagé avec nettoie_dictionnaire.
 
-    cr = data.get("CR", "")
-    cr_norm = normalize(cr)
+    Retourne {"exactes": [...], "reancrees": [...], "orphelines": [...]},
+    chaque entrée portant {"section", "cle", "formulation"} plus, hors
+    exactes, "score" et "extrait_propose" (réancrées) ou
+    "meilleur_candidat" (orphelines). Les formulations vides sont ignorées.
+    L'ordre de parcours (diagnostics puis informations, clés puis valeurs
+    dans l'ordre du dictionnaire) est préservé dans chaque classe."""
+    cr_norm = normalize(data.get("CR", ""))
     cr_words = cr_norm.split()
 
-    result = {"exactes": [], "reancrees": [], "orphelines": []}
+    result: dict = {"exactes": [], "reancrees": [], "orphelines": []}
     formulations = data.get("formulations", {})
     for section in ("diagnostics", "informations"):
         for key, values in (formulations.get(section) or {}).items():
@@ -123,14 +93,30 @@ def reancre_scenario(sdir: Path, out_name: str, seuil: float) -> dict | None:
                 if score >= seuil:
                     entry["extrait_propose"] = extrait
                     result["reancrees"].append(entry)
-                    print(f"    RÉANCRÉE  [{key}] ({score:.2f})")
-                    print(f"      dico  : « {v[:70]} »")
-                    print(f"      texte : « {extrait[:70]} »")
                 else:
                     entry["meilleur_candidat"] = extrait
                     result["orphelines"].append(entry)
-                    print(f"    ORPHELINE [{key}] (meilleur score {score:.2f})")
-                    print(f"      dico  : « {v[:70]} »")
+    return result
+
+
+def reancre_scenario(sdir: Path, out_name: str, seuil: float) -> dict | None:
+    path = sdir / out_name
+    if not path.exists():
+        print(f"    (pas de {out_name})")
+        return None
+    data = load_json(path)
+    if data is None:
+        print("    JSON illisible — scénario ignoré")
+        return None
+
+    result = trier_formulations(data, seuil)
+    for entry in result["reancrees"]:
+        print(f"    RÉANCRÉE  [{entry['cle']}] ({entry['score']:.2f})")
+        print(f"      dico  : « {entry['formulation'][:70]} »")
+        print(f"      texte : « {entry['extrait_propose'][:70]} »")
+    for entry in result["orphelines"]:
+        print(f"    ORPHELINE [{entry['cle']}] (meilleur score {entry['score']:.2f})")
+        print(f"      dico  : « {entry['formulation'][:70]} »")
 
     e, r, o = (len(result[k]) for k in ("exactes", "reancrees", "orphelines"))
     print(f"    bilan : {e} exacte(s), {r} réancrée(s), {o} orpheline(s)")
