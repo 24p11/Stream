@@ -220,7 +220,6 @@ __marimo__/
 work_prompts/tests/*/batches/
 work_prompts/tests/*/.fictomed/
 work_prompts/tests/*/.preview/
-work_modif_prompts/tests/
 
 # macOS
 .DS_Store

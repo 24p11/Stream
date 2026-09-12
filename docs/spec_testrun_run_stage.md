@@ -64,8 +64,10 @@ Le workflow d'un test :
    - `seed_user_prompts` matérialise les dossiers scénario (user prompt,
      `template.txt`, `prefix.txt`) ;
    - montage du jeu de templates du test : copie du jeu du **test
-     précédent** dans `system/<position>/` (ou de `work_modif_prompts/
-     template_*` pour l'amorçage du tout premier test) ;
+     précédent** dans `system/<position>/` (premier test d'une topologie :
+     jeu initial fourni à la main — l'ancien monde `work_modif_prompts/`
+     est retiré, historique dans git ; les jeux historiques sont dans
+     `tests/01`) ;
    - **édition manuelle dans `system/<position>/`** — c'est l'unité d'édition,
      un fichier par famille clinique ;
    - `copy_system_prompts` **fige** le jeu par scénario
@@ -103,9 +105,6 @@ Hors périmètre : la réunification de la couche batch dans `MistralClient`
 ## 2. Arborescence d'un test
 
 ```
-work_modif_prompts/                        # ANCIEN MONDE — non modifié
-└── ... (ancien notebook, utils, runs, template_*)
-
 scripts/
 └── check_crh.py                           # vérificateur mécanique des CRH
 
@@ -410,12 +409,13 @@ intra-prompt serait une évolution de spec (placeholder explicite
 ## 5. Workflows de référence (documentation notebook)
 
 ```python
-# ---------- Test 1 : génération directe (amorçage depuis l'ancien monde) ----------
-# (historique : le test 01 utilisait la position "first" ; convention
-#  actuelle : "one_gen")
+# ---------- Test 1 : génération directe (amorçage historique) ----------
+# (historique : le test 01 utilisait la position "first" et un amorçage
+#  depuis l'ancien monde work_modif_prompts/, retiré depuis — historique
+#  dans git ; un premier test fournit désormais son jeu initial à la main)
 TD = Path("work_prompts/tests/01")
 seed_user_prompts(TD, seed_df, seed_path=SEED_PATH)
-shutil.copytree("work_modif_prompts/template_one_gen", TD / "system" / "one_gen")
+# [jeu initial fourni à la main dans TD/system/one_gen]
 # [édition manuelle de TD/system/one_gen/*.txt]
 copy_system_prompts(TD, "one_gen")
 cr = generate(TD, system="prompt_system_one_gen.txt", user="user_generation.txt",
@@ -429,8 +429,8 @@ shutil.copytree("work_prompts/tests/01/system/first",   # 01 : ancienne position
 # [édition du jeu de 02 — c'est LA modification testée]
 
 # ---------- Test deux générations (non utilisé — amorçage le jour venu) ----------
-# shutil.copytree("work_modif_prompts/template_first_gen",  TD / "system" / "first_gen")
-# shutil.copytree("work_modif_prompts/template_second_gen", TD / "system" / "second_gen")
+# (jeux template_first_gen / template_second_gen : retirés avec l'ancien
+#  monde, historique dans git — dernier commit les contenant : 339b2b4)
 copy_system_prompts(TD, "one_gen")
 copy_system_prompts(TD, "second_gen")  # si 2-gen
 res = generate(TD, system="prompt_system_one_gen.txt", user="user_generation.txt",
@@ -527,12 +527,13 @@ bench/
 
 Le transport sync est nouveau (`_run_mistral_sync`, `chat.complete` du SDK).
 La logique batch reprend `run_mistral_batch` de l'ancien
-`work_modif_prompts/aphp_generation_utils.py` — **copiée/adaptée dans
-`bench/generate.py`, sans modifier le fichier d'origine**. L'accès
+`aphp_generation_utils.py` (ancien monde retiré, historique dans git) —
+**copiée/adaptée dans `bench/generate.py`**. La chaîne amont des scénarios
+vit dans `bench/scenarios.py` (lot R1). L'accès
 `client._client` est conservé provisoirement (résorbé par le chantier
 `MistralClient` séparé). Le notebook vit dans `work_prompts/` ; sa cellule
-bootstrap `sys.path` pointe la **racine du repo** pour que `import bench` (et
-l'import de la chaîne amont depuis `work_modif_prompts/`) fonctionnent.
+bootstrap `sys.path` pointe la **racine du repo** pour que `import bench`
+fonctionne (chaîne amont comprise : `bench.scenarios`).
 
 ## 9. Git
 
@@ -542,7 +543,7 @@ complets sont l'objet de la collaboration (prompts et résultats côte à
 côte). Seule exception admise, au choix : ignorer
 `work_prompts/tests/*/batches/` (JSONL techniques, redondants avec le
 contenu des dossiers scénario). « Figer » un jeu = commiter son test.
-`work_modif_prompts/` n'est pas modifié par ce chantier.
+`work_modif_prompts/` (ancien monde) a été retiré — historique dans git.
 
 Point d'attention (décision hors spec, à l'appréciation du DIM) : le dépôt
 étant public, vérifier que la publication de scénarios dérivés de profils
@@ -609,5 +610,5 @@ Tous sans réseau (client Mistral mocké), sur `tmp_path` :
 - `run_mistral_batch`, `validate_reports`, `save_individual_outputs`,
   `calculate_and_print_usage` sont absorbés/adaptés dans `bench/`.
 - `work_modif_prompts/` (notebook, utilitaires, runs, templates d'origine)
-  n'est **pas modifié** ; sa suppression éventuelle est une décision séparée,
-  ultérieure.
+  a été **retiré** (lot R2 de la consolidation) — tout reste dans
+  l'historique git.

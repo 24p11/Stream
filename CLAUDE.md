@@ -18,6 +18,16 @@ prochaines étapes). En fin de session significative, y déposer une nouvelle en
 - `work_prompts/tests/0X/` : jeux de test figés, un dossier par scénario. On n'édite pas
   un jeu figé ; on itère par copie de dossier scénario (annexe C du notebook).
 
+## Environnement
+
+- fictomed s'installe en **éditable** depuis le clone local `FICTOMED_SRC`
+  (convention : clone frère du repo, `~/Documents/fictomed`, remote CHU-Brest,
+  branche `prompt-work` — chemin propre à chaque poste) :
+  `uv pip install -e ~/Documents/fictomed`. Attention : `uv sync` **et**
+  `uv run` réinstallent le fictomed PyPI 0.1.2 (cassé) — refaire l'éditable
+  après chaque sync, puis redémarrer le noyau ; la cellule bootstrap du
+  notebook vérifie l'installation.
+
 ## Conventions
 
 - Langue de travail : français (code, commits, documents).
