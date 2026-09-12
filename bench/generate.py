@@ -5,8 +5,8 @@ Mistral, choisis par `transport` :
 
 - `sync` (défaut) : un appel `chat.complete` par scénario, quelques appels en
   parallèle, reprise automatique sur erreur transitoire ;
-- `batch` : copie adaptée de `run_mistral_batch` (work_modif_prompts/
-  aphp_generation_utils.py, non modifié), polling borné par `timeout_seconds`.
+- `batch` : copie adaptée de `run_mistral_batch` (historique : ancien
+  `aphp_generation_utils.py`, dans git), polling borné par `timeout_seconds`.
 
 Dans les deux cas : JSONL d'entrée et de sortie archivés sous
 `batches/<stem de out>/`, `custom_id` = nom du scénario, même forme de
@@ -589,8 +589,8 @@ def _run_mistral_batch(
 ) -> tuple[str, dict[str, dict[str, Any]]]:
     """Lance un batch Mistral, retourne (id du batch, réponses par scénario).
 
-    Copie adaptée de `run_mistral_batch` (work_modif_prompts/
-    aphp_generation_utils.py) : `custom_id` = nom du scénario, JSONL archivés
+    Copie adaptée de `run_mistral_batch` (historique : ancien
+    `aphp_generation_utils.py`, dans git) : `custom_id` = nom du scénario, JSONL archivés
     sous `batches_dir`, polling borné par `timeout_seconds`. L'accès
     `client._client` est conservé tel quel (§8 — la réunification dans
     `MistralClient` est un chantier séparé).
