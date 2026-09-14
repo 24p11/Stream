@@ -8,6 +8,7 @@ transport Mistral `sync` ou `batch`), reprise `load_reports`, coûts
 
 from bench.costs import Pricing, Usage, summarize_costs
 from bench.errors import BenchError
+from bench.fiches import charger_index, codes_emissibles, codes_sans_fiche
 from bench.generate import GenResult, generate, load_reports
 from bench.scenarios import (
     apply_filters,
@@ -32,6 +33,9 @@ __all__ = [
     "Usage",
     "apply_filters",
     "build_filter_expr",
+    "charger_index",
+    "codes_emissibles",
+    "codes_sans_fiche",
     "copy_system_prompts",
     "generate",
     "generate_and_select_fictomed_scenarios",

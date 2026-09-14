@@ -214,6 +214,27 @@ Schéma minimal des sorties CRH : generation_id, scenario, report, model, timest
 
 Les sorties AP-HP peuvent contenir des colonnes supplémentaires utiles au debug et à la comparaison avec la méthode historique AP-HP.
 
+## Dépendance fiches recode-icd
+
+Le banc AP-HP consomme les bibliothèques de fiches CIM-10 produites par
+[24p11/recode-icd](https://github.com/24p11/recode-icd), sous le contrat
+d'interface qui fait foi :
+[docs/livraison/CONTRAT.md](https://github.com/24p11/recode-icd/blob/main/docs/livraison/CONTRAT.md)
+(un exemplaire épinglé est embarqué à la racine de chaque bibliothèque
+livrée — ne pas copier le contrat dans ce dépôt).
+
+- **Version consommée** : archive
+  `recode-icd_fiches_generation_33d89c0_atih-2025.tar.gz`
+  (commit `33d89c0`, kit `atih-2025`), `format_version` **1** —
+  déployée dans `data/aphp/referentials/cards_library*` (non versionné).
+- **Point d'accès unique** dans ce dépôt : `bench/fiches.py`
+  (`charger_index`, `codes_emissibles`, `codes_sans_fiche`) — l'index
+  `index.csv` fait foi, refus bruyant d'un `format_version` inconnu,
+  jamais de parcours du répertoire.
+- **Mise à jour = décision explicite** : consommer une nouvelle archive
+  se fait en lisant les notes de la livraison (et `CONTRAT.md` si
+  `format_version` change), jamais par synchronisation automatique.
+
 ## Tests
 
 Pour exécuter les tests unitaires, utilisez la commande suivante :
