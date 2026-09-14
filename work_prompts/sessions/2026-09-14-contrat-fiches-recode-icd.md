@@ -58,9 +58,12 @@ fictomed `83ebca9` lit bien `index.csv` mais joint sur `filepath`
 (historique) : face au schéma contrat (`fichier`), **registre vide, zéro
 fiche** — vérifié. Patch minimal dans le clone éditable
 `~/Documents/fictomed` : `row.get("fichier") or row.get("filepath")`,
-commit local **`4386ad5`** sur `prompt-work` (non poussé — à proposer à
-Brest). Registre restauré : 15 111 exactes / 2 054 catégories, chaîne
-notebook rejouée verte jusqu'au contrôle du contrat.
+commit **`4386ad5`** sur `prompt-work`, complété du merge de
+`origin/two_stages_generation` (2-gen, `e7e2e75`, sans conflit). Poussé
+sur le fork `24p11/fictomed` (créé pour l'occasion) et proposé à Brest :
+**PR CHU-Brest/fictomed#13**. Registre restauré : 15 111 exactes /
+2 054 catégories, chaîne notebook rejouée verte jusqu'au contrôle du
+contrat.
 
 ## Prochaines étapes
 
