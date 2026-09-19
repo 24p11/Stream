@@ -38,7 +38,7 @@
 #   generate(user="user_regeneration.txt", only=only, out="crh_v2.txt")
 #
 # Usage :
-#   python prepare_regeneration.py work_prompts/tests/06 --check rapport.json
+#   python prepare_regeneration.py generation/runs/06 --check rapport.json
 #       [--verdicts verdicts.jsonl] [--seed 0] [--force]
 
 from __future__ import annotations

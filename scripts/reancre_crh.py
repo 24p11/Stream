@@ -9,7 +9,7 @@
 #                 contenu manque au CR (motif de régénération)
 #
 # Usage :
-#   python reancre_crh.py work_prompts/tests/01 [--out crh_generation.txt]
+#   python reancre_crh.py generation/runs/01 [--out crh_generation.txt]
 #                         [--seuil 0.75] [--json rapport.json]
 #
 # Stdlib uniquement. Rapport en lecture seule : n'écrit jamais dans les tests.

@@ -1,4 +1,4 @@
-"""Tests du package d'enrichissement (work_prompts/enrichissement).
+"""Tests du package d'enrichissement (enrichissement/, racine du repo).
 
 Sans fictomed en exécution, sans réseau : les fixtures reproduisent le schéma
 relevé dans fictomed (sites/aphp) —
@@ -21,14 +21,14 @@ from pathlib import Path
 import polars as pl
 import pytest
 
-from work_prompts.enrichissement import (
+from enrichissement import (
     Alcool,
     Politique,
     Tabac,
     bloc_contexte,
     enrichir_scenarios,
 )
-from work_prompts.enrichissement.integration_stream import user_fn_enrichi
+from enrichissement.integration_stream import user_fn_enrichi
 
 REPO = Path(__file__).resolve().parents[1]
 
@@ -348,9 +348,9 @@ def test_user_fn_enrichi_insertion_idempotence_noop():
 # ---------------------------------------------------------------------------
 
 @pytest.mark.parametrize("module", [
-    "work_prompts.enrichissement.intoxications",
-    "work_prompts.enrichissement.anthropometrie",
-    "work_prompts.enrichissement.enrichissement",
+    "enrichissement.intoxications",
+    "enrichissement.anthropometrie",
+    "enrichissement.enrichissement",
 ])
 def test_auto_controles_modules(module):
     proc = subprocess.run([sys.executable, "-m", module], cwd=REPO,

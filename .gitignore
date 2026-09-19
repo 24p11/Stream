@@ -214,12 +214,12 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-# Banc d'essai bench (docs/spec_testrun_run_stage.md §9) : tout work_prompts/
+# Banc d'essai bench (docs/spec_testrun_run_stage.md §9) : tout generation/
 # est versionné et partagé ; seuls les JSONL techniques des batches (redondants
 # avec les dossiers scénario) restent locaux
-work_prompts/tests/*/batches/
-work_prompts/tests/*/.fictomed/
-work_prompts/tests/*/.preview/
+generation/runs/*/batches/
+generation/runs/*/.fictomed/
+generation/runs/*/.preview/
 
 # macOS
 .DS_Store

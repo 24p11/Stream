@@ -7,12 +7,12 @@
 # Usage :
 #   python scripts/recover_batch.py --list
 #       liste les jobs batch récents (statut, avancement, id).
-#   python scripts/recover_batch.py work_prompts/tests/03 --job <job_id> \
+#   python scripts/recover_batch.py generation/runs/03 --job <job_id> \
 #       [--out crh_generation.txt] [--wait 7200]
 #       télécharge les résultats du job (en attendant sa fin si --wait),
 #       archive les JSONL sous tests/NN/batches/<stem>/, écrit <out> dans
 #       chaque dossier scénario et ajoute l'entrée usage.json.
-#   python scripts/recover_batch.py work_prompts/tests/03 --from-file sortie.jsonl
+#   python scripts/recover_batch.py generation/runs/03 --from-file sortie.jsonl
 #       même écriture depuis un JSONL de sortie déjà téléchargé (hors ligne,
 #       pas de clé requise) ; usage.json est alors alimenté par les tokens
 #       du JSONL.
@@ -157,7 +157,7 @@ def main() -> int:
         description="Récupération des résultats d'un batch Mistral (hors notebook)"
     )
     ap.add_argument("test_dir", nargs="?", type=Path,
-                    help="dossier du test (ex. work_prompts/tests/03)")
+                    help="dossier du test (ex. generation/runs/03)")
     ap.add_argument("--list", action="store_true", help="lister les jobs batch")
     ap.add_argument("--job", help="id du job batch à récupérer")
     ap.add_argument("--from-file", type=Path,
@@ -175,7 +175,7 @@ def main() -> int:
     if args.list:
         return list_jobs()
     if args.test_dir is None or not args.test_dir.is_dir():
-        ap.error("test_dir requis (ou --list). Ex. work_prompts/tests/03")
+        ap.error("test_dir requis (ou --list). Ex. generation/runs/03")
     if bool(args.job) == bool(args.from_file):
         ap.error("fournir soit --job <id>, soit --from-file <jsonl>")
 

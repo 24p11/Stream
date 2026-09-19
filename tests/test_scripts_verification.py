@@ -4,7 +4,7 @@ d'export (nettoie_dictionnaire), contrat d'E/S du juge d'équivalence
 (juge_io), préparation de la régénération (prepare_regeneration).
 
 Sans réseau. Les fixtures reproduisent le format réel de
-work_prompts/tests/06 : bloc « Codage CIM10 » (codes compacts), fiches
+generation/runs/06 : bloc « Codage CIM10 » (codes compacts), fiches
 <fiche_code> (codes pointés), sortie {"CR", "formulations"} avec clés de
 diagnostics à habillage variable (« Libellé (N85.8) », « Libellé (N328) »).
 """
@@ -185,7 +185,7 @@ class TestCompletudeCodage:
                     "Libellé (avec parenthèses) internes (Z43.1)"):
             assert check_crh.code_de_cle(cle) == "Z431", cle
         assert check_crh.code_de_cle("Libellé sans code") is None
-        # extension PMSI « +n » (relevée sur tests/06/0005) : appariement
+        # extension PMSI « +n » (relevée sur generation/runs/06/0005) : appariement
         # sur le code de base
         assert check_crh.code_de_cle(
             "Tumeur maligne du pancréas endocrine (C254+8)") == "C254"

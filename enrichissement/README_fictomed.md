@@ -52,7 +52,7 @@ template système doit donc demander au modèle de les **reformuler** en
 langage clinique naturel, dans la section Mode de vie (pas dans l'encadré
 d'identification), en variant les formulations d'un CR à l'autre et en gardant
 les valeurs chiffrées exactes — cf. bloc H du jeu de templates Stream
-(`work_prompts/tests/06/system/one_gen/`). Formes produites
+(`generation/runs/06/system/one_gen/`). Formes produites
 (`Tabac.as_ligne`, `Alcool.as_ligne`) :
 
 | Statut du module | Étiquette |

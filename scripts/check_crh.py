@@ -1,5 +1,5 @@
 # check_crh.py — vérification mécanique des CRH générés par bench
-# Usage : python check_crh.py work_prompts/tests/01 [--out crh_generation.txt]
+# Usage : python check_crh.py generation/runs/01 [--out crh_generation.txt]
 #                             [--json rapport.json]
 # Aucune dépendance hors stdlib. Code retour 1 si au moins un échec.
 #

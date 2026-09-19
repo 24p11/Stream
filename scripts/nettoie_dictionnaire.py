@@ -21,7 +21,7 @@
 #                    "meilleur_candidat", "score"}, ...]}
 #
 # Usage :
-#   python nettoie_dictionnaire.py work_prompts/tests/06
+#   python nettoie_dictionnaire.py generation/runs/06
 #       [--source crh_generation.txt] [--seuil 0.75] [--out DIR]
 #
 # Stdlib uniquement (via reancre_crh).

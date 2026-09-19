@@ -1,6 +1,14 @@
 # Spécification — Banc d'essai de génération AP-HP (`bench`)
 
-Branche cible : `dev_rf` · Statut : **v3.7** — transport Mistral `sync` (défaut) ou `batch`
+Branche cible : `dev_rf` · Statut : **v3.8** — répertoire `generation/`
+
+v3.7 → v3.8 (septembre 2026, demande Rémi) : **renommage des répertoires,
+sans changement de code** — `work_prompts/` devient `generation/`, ses
+`tests/` deviennent `generation/runs/` (fin de la collision avec le
+`tests/` pytest de la racine), et le package `enrichissement/` remonte à
+la racine du repo (livrable destiné à fictomed). Les mentions
+`work_prompts/tests/0X` des versions antérieures se lisent
+`generation/runs/0X` ; l'historique git suit les renommages.
 
 v3.6 → v3.7 (septembre 2026, demande Rémi) : **transport des appels Mistral**.
 Le batch Mistral reste en file (`QUEUED`) sans jamais démarrer ; `generate`
@@ -67,7 +75,7 @@ Le workflow d'un test :
      précédent** dans `system/<position>/` (premier test d'une topologie :
      jeu initial fourni à la main — l'ancien monde `work_modif_prompts/`
      est retiré, historique dans git ; les jeux historiques sont dans
-     `tests/01`) ;
+     `generation/runs/01`) ;
    - **édition manuelle dans `system/<position>/`** — c'est l'unité d'édition,
      un fichier par famille clinique ;
    - `copy_system_prompts` **fige** le jeu par scénario
@@ -93,7 +101,7 @@ Itération : éditer `system/<position>/` puis re-figer sous un autre nom
 (`dest="prompt_system_one_gen_v2.txt"` → `out="crh_v2.txt"`, les variantes
 coexistent) ; ou copier un dossier scénario (il emporte tous ses prompts).
 Jamais de nettoyage de prompts existants (`clean_existing_prompts` disparaît) :
-pour repartir, créer `tests/02`.
+pour repartir, créer `runs/02`.
 
 Le disque fait foi : aucune fonction ne maintient de registre. La référence
 d'un jeu est le jeu commité du test précédent — la chaîne des tests est la
@@ -108,9 +116,9 @@ Hors périmètre : la réunification de la couche batch dans `MistralClient`
 scripts/
 └── check_crh.py                           # vérificateur mécanique des CRH
 
-work_prompts/                              # NOUVEAU MONDE
+generation/                                # notebook + générations
 ├── notebook_generation_bench.ipynb        # le notebook
-└── tests/                                 # versionné intégralement (cf. §9)
+└── runs/                                  # versionné intégralement (cf. §9)
     └── 02/                                # ex. un test « génération directe »
         ├── system/                        # JEU DU TEST (objet testé) : copié
         │   └── one_gen/                   # du jeu du test précédent, édité
@@ -371,7 +379,7 @@ toucher au package, l'utilisateur pose un `prompt_local.py` à la racine du
 test (c'est un fichier : la découverte l'ignore) :
 
 ```python
-# tests/02/prompt_local.py
+# generation/runs/02/prompt_local.py
 def build_user(row: dict) -> str:
     return f"...{row['icd_primary_code']}...{row['ghm2']}..."
 ```
@@ -413,7 +421,7 @@ intra-prompt serait une évolution de spec (placeholder explicite
 # (historique : le test 01 utilisait la position "first" et un amorçage
 #  depuis l'ancien monde work_modif_prompts/, retiré depuis — historique
 #  dans git ; un premier test fournit désormais son jeu initial à la main)
-TD = Path("work_prompts/tests/01")
+TD = Path("generation/runs/01")
 seed_user_prompts(TD, seed_df, seed_path=SEED_PATH)
 # [jeu initial fourni à la main dans TD/system/one_gen]
 # [édition manuelle de TD/system/one_gen/*.txt]
@@ -422,9 +430,9 @@ cr = generate(TD, system="prompt_system_one_gen.txt", user="user_generation.txt"
               out="crh_generation.txt", prefix_file="prefix.txt", ...)
 
 # ---------- Test suivant : évolution du jeu (chaîne de versions) ----------
-TD = Path("work_prompts/tests/02")
+TD = Path("generation/runs/02")
 seed_user_prompts(TD, seed_df, seed_path=SEED_PATH)
-shutil.copytree("work_prompts/tests/01/system/first",   # 01 : ancienne position
+shutil.copytree("generation/runs/01/system/first",      # 01 : ancienne position
                 TD / "system" / "one_gen")              # 02+ : convention one_gen
 # [édition du jeu de 02 — c'est LA modification testée]
 
@@ -499,7 +507,7 @@ helper `install_fictomed_system_set(test_dir, set_name, position)` remplace le
   global, plus coût de l'état courant par `out` (entrées depuis le dernier
   run complet, celui-ci inclus).
 - `usage_log.csv` : **journal CSV global d'observation**, tous tests confondus
-  (défaut `work_prompts/usage_log.csv` = `<racine des tests>.parent`, paramètre
+  (défaut `generation/usage_log.csv` = `<racine des runs>.parent`, paramètre
   `usage_csv` de `generate`, `None` désactive) — une ligne par scénario traité
   et par run (`timestamp_utc, test, out, scenario, template, model,
   input_tokens, output_tokens, cost_usd, batch_id, partial`), append pur
@@ -531,17 +539,17 @@ La logique batch reprend `run_mistral_batch` de l'ancien
 **copiée/adaptée dans `bench/generate.py`**. La chaîne amont des scénarios
 vit dans `bench/scenarios.py` (lot R1). L'accès
 `client._client` est conservé provisoirement (résorbé par le chantier
-`MistralClient` séparé). Le notebook vit dans `work_prompts/` ; sa cellule
+`MistralClient` séparé). Le notebook vit dans `generation/` ; sa cellule
 bootstrap `sys.path` pointe la **racine du repo** pour que `import bench`
 fonctionne (chaîne amont comprise : `bench.scenarios`).
 
 ## 9. Git
 
-**Tout `work_prompts/` est versionné et partagé** — jeux de templates,
+**Tout `generation/` est versionné et partagé** — jeux de templates,
 scénarios, prompts figés, CRH générés, `test.json`, `usage.json` : les tests
 complets sont l'objet de la collaboration (prompts et résultats côte à
 côte). Seule exception admise, au choix : ignorer
-`work_prompts/tests/*/batches/` (JSONL techniques, redondants avec le
+`generation/runs/*/batches/` (JSONL techniques, redondants avec le
 contenu des dossiers scénario). « Figer » un jeu = commiter son test.
 `work_modif_prompts/` (ancien monde) a été retiré — historique dans git.
 

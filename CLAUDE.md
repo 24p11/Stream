@@ -6,16 +6,16 @@ statistiques PMSI nationales et de LLM. Voir `README.md` pour l'architecture com
 
 ## Reprise de session
 
-En début de session, lire le fichier le plus récent de `work_prompts/sessions/` : c'est
+En début de session, lire le fichier le plus récent de `generation/sessions/` : c'est
 le journal de travail versionné (une entrée courte par session — décisions, état,
 prochaines étapes). En fin de session significative, y déposer une nouvelle entrée datée.
 
 ## Zone de travail courante (branche `dev_rf`)
 
-- `work_prompts/notebook_generation_bench.ipynb` : banc d'essai de génération AP-HP
+- `generation/notebook_generation_bench.ipynb` : banc d'essai de génération AP-HP
   (préparation des données, tirage des scénarios, figement des prompts, runs, bilan).
-- `work_prompts/enrichissement/` : modules d'enrichissement des séjours (fictomed).
-- `work_prompts/tests/0X/` : jeux de test figés, un dossier par scénario. On n'édite pas
+- `enrichissement/` (racine) : package d'enrichissement des séjours, livrable destiné à fictomed.
+- `generation/runs/0X/` : générations figées (ex-tests/0X), un dossier par scénario. On n'édite pas
   un jeu figé ; on itère par copie de dossier scénario (annexe C du notebook).
 
 ## Environnement

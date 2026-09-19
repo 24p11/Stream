@@ -116,7 +116,7 @@ def generate(
     `usage_csv` : journal CSV global d'observation (§7), une ligne par
     scénario traité, écrit au même moment que l'entrée `usage.json`. Défaut
     (`...`) : `<racine des tests>.parent / "usage_log.csv"`, soit
-    `work_prompts/usage_log.csv` ; `None` désactive.
+    `generation/usage_log.csv` ; `None` désactive.
     """
     if prefix_file is not None and prefix_text:
         raise BenchError(
@@ -304,7 +304,7 @@ def load_reports(
 
 
 def _default_usage_csv(test_dir: Path) -> Path:
-    """`<racine des tests>.parent / usage_log.csv` — soit work_prompts/usage_log.csv."""
+    """`<racine des runs>.parent / usage_log.csv` — soit generation/usage_log.csv."""
     return Path(test_dir).resolve().parent.parent / "usage_log.csv"
 
 

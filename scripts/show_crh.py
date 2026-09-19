@@ -1,9 +1,9 @@
 # show_crh.py — lecture des CRH générés par bench (le JSON sur une ligne est
 # illisible dans l'éditeur : ici le champ "CR" est déplié en vrai texte).
 # Usage :
-#   python scripts/show_crh.py work_prompts/tests/02/0007/crh_generation.txt
-#   python scripts/show_crh.py work_prompts/tests/02 [--out crh_generation.txt]
-#   python scripts/show_crh.py work_prompts/tests/02 --md
+#   python scripts/show_crh.py generation/runs/02/0007/crh_generation.txt
+#   python scripts/show_crh.py generation/runs/02 [--out crh_generation.txt]
+#   python scripts/show_crh.py generation/runs/02 --md
 # Sans --md : impression sur stdout. Avec --md : écrit un aperçu markdown À
 # CÔTÉ de chaque .txt (ex. 0007/crh_generation.md — versionné avec le test) —
 # à ouvrir dans VS Code avec « Markdown: Open Preview » (⇧⌘V).
