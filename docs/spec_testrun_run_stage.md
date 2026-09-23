@@ -1,6 +1,26 @@
 # Spécification — Banc d'essai de génération AP-HP (`bench`)
 
-Branche cible : `dev_rf` · Statut : **v3.8** — répertoire `generation/`
+Branche cible : `dev_rf` · Statut : **v3.9** — notebook aminci, `bench/banc.py`
+
+v3.8 → v3.9 (23 septembre 2026, demande Rémi) : **amincissement du
+notebook**, sans changement de comportement des gardes. Les fonctions de
+données définies en cellules rejoignent `bench/scenarios.py` (typologie
+`with_typologie`/`DPEC_TO_TPEC`, `ensure_source_ids`, `tirage_stratifie` —
+qui accepte aussi `"couverture"` : un séjour par modalité présente —,
+`quotas_couverture`) ; l'orchestration (gardes, idempotence, messages)
+descend dans `bench/banc.py` (`verifier_environnement`, `preparer_pool`,
+`dossiers_test`, `etat_test`, `monter_jeu`, `seeder`, `prompts_verificateur`,
+`mistral_client`, `show_first_prompt`, `afficher_crh`, `ecrire_apercus_md`,
+`contexte_verificateur`, `bilan`). NOUVEAU : `verifier_source` contrôle les
+prérequis du fichier de scénarios contre `SCHEMA_SOURCE` (colonnes, types,
+encodage sexe 1/2 et mode HC/HP, DP/DAS lisibles, âge numérique, typologie
+fournie ou calculable ; écarts bloquants en `BenchError`, colonnes
+supplémentaires et modalités nouvelles seulement signalées) — appelé en tête
+de `preparer_pool`. Le notebook devient une suite courte d'appels (12
+cellules de code) à paramètres à deux étages (courants / avancés) ; ses
+annexes (2-gen, `prompt_local.py`, itération par copie, ajout de DAS) sont
+déplacées à l'identique dans `generation/notebook_annexes.ipynb`. `generate`
+est inchangé.
 
 v3.7 → v3.8 (septembre 2026, demande Rémi) : **renommage des répertoires,
 sans changement de code** — `work_prompts/` devient `generation/`, ses
@@ -525,10 +545,16 @@ bench/
 ├── __init__.py     # scenario_dirs, seed_user_prompts, user_from_column,
 │                   # copy_system_prompts, write_prompts, generate,
 │                   # load_reports, summarize_costs, Pricing, Usage,
-│                   # GenResult, BenchError
+│                   # GenResult, BenchError, + chaîne amont et fiches
 ├── seeding.py      # scenario_dirs, seed_user_prompts, copy_system_prompts,
 │                   # write_prompts
 ├── generate.py     # generate, load_reports (+ transports Mistral privés : sync, batch)
+├── scenarios.py    # chaîne amont fictomed (lot R1) ; typologie with_typologie,
+│                   # ensure_source_ids, tirage_stratifie, quotas_couverture (v3.9)
+├── fiches.py       # accès aux bibliothèques recode-icd sous contrat
+├── banc.py         # orchestration du notebook (v3.9) : verifier_environnement,
+│                   # verifier_source (SCHEMA_SOURCE), preparer_pool, etat_test,
+│                   # monter_jeu, seeder, bilan, …
 ├── costs.py
 └── errors.py
 ```
@@ -541,7 +567,9 @@ vit dans `bench/scenarios.py` (lot R1). L'accès
 `client._client` est conservé provisoirement (résorbé par le chantier
 `MistralClient` séparé). Le notebook vit dans `generation/` ; sa cellule
 bootstrap `sys.path` pointe la **racine du repo** pour que `import bench`
-fonctionne (chaîne amont comprise : `bench.scenarios`).
+fonctionne (chaîne amont comprise : `bench.scenarios`). Depuis la v3.9 le
+notebook n'est plus qu'une suite d'appels à `bench.banc` ; les annexes
+vivent dans `generation/notebook_annexes.ipynb`.
 
 ## 9. Git
 

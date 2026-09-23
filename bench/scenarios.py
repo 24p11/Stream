@@ -13,6 +13,13 @@ Dépendances internes : ``build_filter_expr``, ``apply_filters``.
 stratifié s'y substitue) mais reste ici : c'est l'étape filtres +
 échantillon historique, réutilisable pour un pool candidat simple.
 
+Depuis l'amincissement du notebook (septembre 2026), le module porte aussi
+les fonctions de données qui y étaient définies en cellules, à
+l'identique : la typologie des séjours (``with_typologie``, ``DPEC_TO_TPEC``),
+les identifiants de traçabilité (``ensure_source_ids``) et le tirage
+stratifié (``tirage_stratifie``, ``quotas_couverture``). L'orchestration
+(gardes, idempotence, messages) vit dans ``bench/banc.py``.
+
 ``generate_and_select_fictomed_scenarios`` REMPLACE TEMPORAIREMENT le
 fichier ``profiles`` actif du dossier de données AP-HP par les candidats
 fournis (backup horodaté dans ``paths["backups"]``), lance
@@ -132,16 +139,7 @@ def prepare_source_candidates(
     print("Shape          :", source_df.shape)
     print("Colonnes       :", source_df.columns)
 
-    if "source_row_id" not in source_df.columns:
-        source_df = source_df.with_row_index("source_row_id")
-
-    if "source_scenario_id" not in source_df.columns:
-        source_df = source_df.with_columns(
-            (
-                pl.lit(source_path.stem + "_row_")
-                + pl.col("source_row_id").cast(pl.Utf8).str.zfill(7)
-            ).alias("source_scenario_id")
-        )
+    source_df = ensure_source_ids(source_df, source_path)
 
     source_filtered = apply_filters(source_df, source_filters, label="SOURCE")
     if source_filtered.height == 0:
@@ -352,3 +350,202 @@ def generate_and_select_fictomed_scenarios(
     print("Écrit             :", selected_path)
 
     return generated_candidates, generated_filtered, selected_scenarios
+
+
+# ---------------------------------------------------------------------------
+# Typologie des séjours et tirage stratifié
+#
+# Extraits du notebook de génération (cellules « typologie » et « tirage
+# stratifié », septembre 2026), à l'identique — mêmes règles, mêmes messages.
+# ---------------------------------------------------------------------------
+
+# Typologie des séjours — TPEC (type de prise en charge) / DPEC (détail).
+# CMD = 2 premiers caractères du GHM ; type GHM = 3e ; sévérité = dernier.
+# L'ordre des .when() fait la précédence : le spécifique (séances, obstétrique,
+# néonat, séjours complexes) AVANT le tout-venant médecine/chirurgie, sinon les
+# GHM 14Z/15M/27Z/28Z seraient avalés par « type M ou Z ».
+
+RACINES_GREFFES_CART = ["27Z02", "27Z03"]
+RACINES_TRANSPLANT = ["27C02", "27C03", "27C04", "27C05", "27C06", "27C07"]
+RACINES_IMG_FC = ["14Z04", "14C05", "14C06", "14C09", "14Z10", "14Z15", "14Z09"]
+GHM_ACC_NORMAL = ["14C03A","14C07A", "14C08A", "14Z11A", "14Z12A",
+                  "14Z13A", "14Z13T", "14Z14A", "14Z14T"]
+RACINES_ACC_PATHO = ["14C07", "14C08", "14Z10", "14Z11", "14Z12", "14Z13", "14Z14"]
+GHM_BB_NORMAL = ["15M05A", "15M06A", "15M07A", "15M08A", "15M09A",
+                 "15M10A", "15M11A", "15M13A", "15M14A"]
+RACINES_BB_MED = ["15M05", "15M06", "15M07", "15M08", "15M09",
+                  "15M10", "15M11", "15M13", "15M14"]
+RACINES_BB_CHIR = ["15C02", "15C03", "15C04", "15C05", "15C06",
+                   "15M10", "15M11", "15M13", "15M14"]
+RACINES_AUTRE_NEONAT = ["15M02", "15M03", "15M04"]
+
+DPEC_TO_TPEC = {
+    "Séances simples": "Médecine",
+    "Séance polysomno": "Médecine",
+    "Séance chimiothérapie simple adulte": "Médecine",
+    "HDJ médecine adultes": "Médecine",
+    "Médecine adultes > 3 nuits": "Médecine",
+    "Médecine adultes < 3 nuits": "Médecine",
+    "Interventionnel adultes < 3 nuits": "Chirurgie et interventionnel",
+    "Chirurgie adultes < 3 nuits": "Chirurgie et interventionnel",
+    "Interventionnel adultes > 3 nuits": "Chirurgie et interventionnel",
+    "Chirurgie adultes > 3 nuits": "Chirurgie et interventionnel",
+    "Greffes de moelle, CAR-T Cells": "Séjours complexes",
+    "Transplantations": "Séjours complexes",
+    "Brûlés": "Séjours complexes",
+    "IVG": "Obstétrique",
+    "IMG & fausses couches": "Obstétrique",
+    "Accouchement normal mère": "Obstétrique",
+    "Accouchement pathologique mère": "Obstétrique",
+    "Bébé normal": "Néonatalogie",
+    "Bébé néonat med": "Néonatalogie",
+    "Bébé néonat chir": "Néonatalogie",
+    "Autre néonat": "Néonatalogie",
+    "Autre": "Autre",
+}
+
+# Colonnes du fichier source lues par with_typologie.
+COLONNES_TYPOLOGIE = ("ghm2", "racine", "diag2", "duree", "mode_hospit", "agean")
+
+
+def with_typologie(df: pl.DataFrame) -> pl.DataFrame:
+    """Ajoute les colonnes ``DPEC`` (détail de la prise en charge, une
+    vingtaine de modalités) et ``TPEC`` (type de prise en charge, six
+    modalités agrégées via :data:`DPEC_TO_TPEC`).
+
+    Colonnes requises (:data:`COLONNES_TYPOLOGIE`) : ``ghm2`` (GHM — CMD,
+    type, sévérité), ``racine``, ``diag2`` (DP), ``duree``, ``mode_hospit``
+    (``HP`` = hospitalisation partielle), ``agean`` (âge en années).
+    Applicable au parquet source ; à reporter au niveau scénario (mêmes noms
+    de colonnes dans le DataFrame fictomed). Une ligne qui ne tombe dans
+    aucune règle (durée nulle, GHM inconnu…) est classée ``Autre``.
+    """
+    cmd = pl.col("ghm2").str.slice(0, 2)
+    type_ghm = pl.col("ghm2").str.slice(2, 1)
+    sev = pl.col("ghm2").str.slice(-1)
+    racine = pl.col("racine")
+    dp = pl.col("diag2")
+    duree = pl.col("duree")
+    adulte = pl.col("agean") >= 18
+    hdj = pl.col("mode_hospit") == "HP"
+
+    dpec = (
+        # --- Séjours complexes (CMD 27, 22)
+        pl.when(racine.is_in(RACINES_GREFFES_CART))
+        .then(pl.lit("Greffes de moelle, CAR-T Cells"))
+        .when(racine.is_in(RACINES_TRANSPLANT)).then(pl.lit("Transplantations"))
+        .when(cmd == "22").then(pl.lit("Brûlés"))  # critère à confirmer (CMD 22)
+        # --- Obstétrique
+        .when(pl.col("ghm2") == "14Z08Z").then(pl.lit("IVG"))
+        .when(racine.is_in(RACINES_IMG_FC)).then(pl.lit("IMG & fausses couches"))
+        .when(pl.col("ghm2").is_in(GHM_ACC_NORMAL))
+        .then(pl.lit("Accouchement normal mère"))
+        .when(((racine.is_in(RACINES_ACC_PATHO) & ~sev.is_in(["A", "T"]))))
+        .then(pl.lit("Accouchement pathologique mère"))
+        # --- Néonatalogie
+        .when(pl.col("ghm2").is_in(GHM_BB_NORMAL)).then(pl.lit("Bébé normal"))
+        .when(racine.is_in(RACINES_BB_MED)).then(pl.lit("Bébé néonat med"))
+        .when(racine.is_in(RACINES_BB_CHIR)).then(pl.lit("Bébé néonat chir"))
+        .when(racine.is_in(RACINES_AUTRE_NEONAT)).then(pl.lit("Autre néonat"))
+        # --- Médecine : séances (les spécifiques avant le tout-venant CMD 28)
+        .when((cmd == "28") & (dp == "Z04801")).then(pl.lit("Séance polysomno"))
+        .when((cmd == "28") & (dp == "Z511") & adulte)
+        .then(pl.lit("Séance chimiothérapie simple adulte"))
+        .when(cmd == "28").then(pl.lit("Séances simples"))
+        # --- Médecine hors séances (HDJ d'abord, puis durée ; borne : 3 nuits
+        #     et plus => « > 3 nuits », pour ne pas laisser duree == 3 sans case)
+        .when(hdj & type_ghm.is_in(["M", "Z"])).then(pl.lit("HDJ médecine adultes"))
+        .when((duree >= 3) & type_ghm.is_in(["M", "Z"]))
+        .then(pl.lit("Médecine adultes > 3 nuits"))
+        .when((duree < 3) & type_ghm.is_in(["M", "Z"]))
+        .then(pl.lit("Médecine adultes < 3 nuits"))
+        # --- Chirurgie et interventionnel (même borne à 3)
+        .when((duree < 3) & (type_ghm == "K"))
+        .then(pl.lit("Interventionnel adultes < 3 nuits"))
+        .when((duree < 3) & (type_ghm == "C")).then(pl.lit("Chirurgie adultes < 3 nuits"))
+        .when((duree >= 3) & (type_ghm == "K"))
+        .then(pl.lit("Interventionnel adultes > 3 nuits"))
+        .when((duree >= 3) & (type_ghm == "C")).then(pl.lit("Chirurgie adultes > 3 nuits"))
+        .otherwise(pl.lit("Autre"))
+    )
+    return df.with_columns(dpec.alias("DPEC")).with_columns(
+        pl.col("DPEC").replace_strict(DPEC_TO_TPEC, default="Autre").alias("TPEC")
+    )
+
+
+def ensure_source_ids(df: pl.DataFrame, source_path: Path) -> pl.DataFrame:
+    """Pose les identifiants de traçabilité aval s'ils manquent :
+    ``source_row_id`` (index de ligne) et ``source_scenario_id``
+    (``<stem du fichier source>_row_<index sur 7 chiffres>``).
+
+    Réplique l'identification de :func:`prepare_source_candidates` — à
+    appeler sur le parquet COMPLET, avant tout filtre, pour que
+    ``source_row_id`` reste celui du fichier. Idempotent.
+    """
+    if "source_row_id" not in df.columns:
+        df = df.with_row_index("source_row_id")
+    if "source_scenario_id" not in df.columns:
+        df = df.with_columns(
+            (
+                pl.lit(Path(source_path).stem + "_row_")
+                + pl.col("source_row_id").cast(pl.Utf8).str.zfill(7)
+            ).alias("source_scenario_id")
+        )
+    return df
+
+
+def quotas_couverture(df: pl.DataFrame, by: str = "DPEC") -> dict[str, int]:
+    """Quotas « couverture » : un séjour par modalité de ``by`` présente dans
+    ``df`` (modalités triées, nuls ignorés) — le smoke d'un nouveau fichier.
+    """
+    modalites = sorted(m for m in df[by].unique().to_list() if m is not None)
+    return {m: 1 for m in modalites}
+
+
+def tirage_stratifie(
+    df: pl.DataFrame,
+    quotas: dict[str, int] | str,
+    *,
+    by: str = "DPEC",
+    seed: int = 42,
+) -> pl.DataFrame:
+    """Tire au sort `quotas[modalité]` lignes dans chaque strate de `by`.
+
+    ``quotas`` : ``{modalité: effectif}`` (un quota à 0 documente une strate
+    volontairement exclue), ou la chaîne ``"couverture"`` — un séjour par
+    modalité présente (:func:`quotas_couverture`).
+
+    Refuse si une modalité est inconnue ou si l'effectif disponible est
+    insuffisant. Retourne la concaténation des strates (ordre des quotas) ;
+    reproductible à ``seed`` donné.
+    """
+    if isinstance(quotas, str):
+        if quotas != "couverture":
+            raise ValueError(
+                f"quotas inconnus : {quotas!r} — dict {{modalité: n}}, "
+                "\"couverture\" ou None (tirage simple)."
+            )
+        quotas = quotas_couverture(df, by)
+        print(f"Couverture : 1 séjour par modalité de {by} présente "
+              f"({len(quotas)} modalité(s)).")
+    dispo = dict(df.group_by(by).len().iter_rows())
+    absentes_zero = [m for m, n in quotas.items() if n == 0 and m not in dispo]
+    if absentes_zero:
+        print(f"(quotas à 0 sur modalités absentes de {by} — sans effet : "
+              f"{absentes_zero})")
+    manquants = {m: (n, dispo.get(m, 0)) for m, n in quotas.items()
+                 if n > 0 and dispo.get(m, 0) < n}
+    if manquants:
+        raise ValueError(
+            f"Effectifs insuffisants (demandé, disponible) : {manquants} — "
+            f"modalités disponibles : {sorted(dispo)}"
+        )
+    parts = [
+        df.filter(pl.col(by) == m).sample(n=n, with_replacement=False,
+                                          shuffle=True, seed=seed)
+        for m, n in quotas.items() if n > 0
+    ]
+    tirage = pl.concat(parts)
+    print(f"Tirage stratifié par {by} : {tirage.height} séjours "
+          f"({len(parts)} strate(s), seed={seed}).")
+    return tirage
