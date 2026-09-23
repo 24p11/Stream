@@ -12,8 +12,12 @@ prochaines étapes). En fin de session significative, y déposer une nouvelle en
 
 ## Zone de travail courante (branche `dev_rf`)
 
-- `generation/notebook_generation_bench.ipynb` : banc d'essai de génération AP-HP
-  (préparation des données, tirage des scénarios, figement des prompts, runs, bilan).
+- `generation/notebook_generation_bench.ipynb` : banc d'essai de génération AP-HP —
+  suite courte d'appels (paramètres courants / avancés, puis environnement, pool,
+  montage, seeding/figement, dry-run, run réel, vérificateur, bilan). Les fonctions
+  de données sont dans `bench/scenarios.py`, l'orchestration (gardes, idempotence,
+  messages) dans `bench/banc.py` ; `generation/notebook_annexes.ipynb` porte les
+  annexes (2-gen, `prompt_local.py`, itération par copie, ajout de DAS).
 - `enrichissement/` (racine) : package d'enrichissement des séjours, livrable destiné à fictomed.
 - `generation/runs/0X/` : générations figées (ex-tests/0X), un dossier par scénario. On n'édite pas
   un jeu figé ; on itère par copie de dossier scénario (annexe C du notebook).
