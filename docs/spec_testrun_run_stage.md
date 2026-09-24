@@ -20,7 +20,14 @@ de `preparer_pool`. Le notebook devient une suite courte d'appels (12
 cellules de code) à paramètres à deux étages (courants / avancés) ; ses
 annexes (2-gen, `prompt_local.py`, itération par copie, ajout de DAS) sont
 déplacées à l'identique dans `generation/notebook_annexes.ipynb`. `generate`
-est inchangé.
+est inchangé. Complément du 24 septembre : étape amont FICHIER → FICHIER
+`scripts/substituer_dp_imprecis.py` (substitution des DP « sans précision »
+d'un corpus de campagne, exemption UHCD, repli hiérarchique, graine stable
+par `id_scenario`, colonnes de traçabilité `dp_origine` / `dp_substitue` /
+`repli_substitution`) ; `SCHEMA_SOURCE` reconnaît ces colonnes et celles des
+campagnes récentes (`id_scenario`, `branche`, `cage`, `type_unite`) comme
+facultatives — `agean` reste obligatoire. Le notebook consomme le corpus
+substitué comme n'importe quelle source (`SOURCE_PROFILES_PATH`).
 
 v3.7 → v3.8 (septembre 2026, demande Rémi) : **renommage des répertoires,
 sans changement de code** — `work_prompts/` devient `generation/`, ses

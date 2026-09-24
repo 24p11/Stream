@@ -206,7 +206,8 @@ class Exigence:
     ``"typologie"`` (requise seulement quand le fichier ne fournit pas déjà
     ``TPEC``/``DPEC`` — c'est ``with_typologie`` qui la lit), ou
     ``"facultative"`` (lue si présente). ``type`` : ``"chaine"``,
-    ``"numerique"``, ``"entier"`` ou ``"chaine_ou_entier"``. ``valeurs`` :
+    ``"numerique"``, ``"entier"``, ``"booleen"`` ou ``"chaine_ou_entier"``.
+    ``valeurs`` :
     ensemble fermé des valeurs admises (contrôle d'encodage, sur la forme
     texte). ``motif`` : expression régulière que chaque valeur non vide doit
     respecter (contrôle de forme). ``nuls`` : nuls tolérés. ``role`` : qui
@@ -245,6 +246,11 @@ _DAS = rf"({_CODE_CIM}|NA)"
 #   mode_sortie → discharge_disposition, racine → drg_parent_code, mdp →
 #   case_management_type, n → nb, nbda → nb_associated ;
 # - contrôle du contrat fiches : diag2, diagnostic_associes (codes du pool).
+# Colonnes des campagnes récentes (scenarios_bn_pmsi) et de l'étape amont de
+# substitution des DP imprécis (scripts/substituer_dp_imprecis.py) : reconnues
+# comme FACULTATIVES — documentées, jamais exigées. `cage` est une classe
+# d'âge (strates de substitution) : elle ne remplace pas `agean`, l'âge
+# numérique dont l'enrichisseur et fictomed ont besoin.
 SCHEMA_SOURCE: dict[str, Exigence] = {
     "diag2": Exigence(
         "obligatoire", "chaine",
@@ -300,6 +306,28 @@ SCHEMA_SOURCE: dict[str, Exigence] = {
     "DPEC": Exigence(
         "facultative", "chaine",
         "typologie fournie par le fichier (sinon calculée) — clés des quotas"),
+    # --- campagnes récentes (scenarios_bn_pmsi) ---
+    "id_scenario": Exigence(
+        "facultative", "chaine",
+        "identifiant du scénario amont — clé de la graine de substitution des DP "
+        "(non unique par ligne : variantes de contexte de séjour)"),
+    "branche": Exigence(
+        "facultative", "chaine",
+        "long / court — axe du rapport de substitution ; non lue par la chaîne"),
+    "cage": Exigence(
+        "facultative", "chaine",
+        "classe d'âge (strates de la substitution des DP) — ne remplace pas agean"),
+    "type_unite": Exigence(
+        "facultative", "chaine",
+        "type d'unité (UHCD = exemption de substitution) — non lue par la chaîne"),
+    # --- traçabilité de scripts/substituer_dp_imprecis.py ---
+    "dp_origine": Exigence(
+        "facultative", "chaine", "DP d'entrée avant substitution (traçabilité)"),
+    "dp_substitue": Exigence(
+        "facultative", "booleen", "DP substitué ? (traçabilité)"),
+    "repli_substitution": Exigence(
+        "facultative", "entier",
+        "niveau de repli de la substitution 0/1/2, nul sinon (traçabilité)"),
 }
 
 
@@ -340,6 +368,8 @@ def _type_ok(dtype: pl.DataType, attendu: str) -> bool:
         return dtype.is_numeric()
     if attendu == "entier":
         return dtype.is_integer()
+    if attendu == "booleen":
+        return dtype == pl.Boolean
     if attendu == "chaine_ou_entier":
         return chaine or dtype.is_integer()
     raise ValueError(f"type d'exigence inconnu : {attendu!r}")
