@@ -99,9 +99,50 @@ reconnues, fichier sans elles conforme, type inattendu détecté).
 
 Les deux décisions sont inscrites dans la docstring du script.
 
+## Rapport réel sur C1 (référence déposée dans `data/aphp/`, 24 septembre, fin de journée)
+
+Référence : 69 461 lignes, 1 273 catégories, 1 510 codes imprécis
+(détection), 5 854 codes précis candidats, `niveau` en chaîne (2/3/4, nul),
+mêmes encodages `cage`/`sexe` que le corpus. Passage en 12 s ; sortie
+`data/aphp/scenarios_C1_dp.parquet` (38 colonnes) + `.rapport.txt`
+(non versionnés).
+
+| | court | long | total |
+|---|---|---|---|
+| lignes | 372 108 | 715 417 | 1 087 525 |
+| DP imprécis rencontrés | 59 343 | 120 890 | 180 233 |
+| substitués | 52 305 | 100 187 | 152 492 (14,0 % des lignes, 84,6 % des imprécis) |
+| dont niveau 0 / 1 / 2 | 51 600 / 705 / 0 | 99 338 / 849 / 0 | 150 938 / 1 554 / 0 |
+| conservés UHCD | **0** | **0** | **0** (attendu) |
+| conservés faute de candidat | 7 038 | 20 703 | 27 741 |
+
+Invariants vérifiés sur la sortie : DAS et toutes les colonnes d'entrée
+intouchés, `dp_origine` = `diag2` source, codes substitués tous dans la
+référence et de la même catégorie, variantes d'un même `id_scenario` →
+même DP final, second processus (`PYTHONHASHSEED` différent) → parquet
+bit à bit identique. `verifier_source` sur la sortie : les colonnes du
+chantier sont reconnues ; seul écart bloquant, `agean` manquante (hors
+périmètre, côté producteur).
+
+Observations à soumettre à Rémi (aucune action) :
+
+- **27 741 conservés faute de candidat**, 42 catégories sans aucun code
+  précis dans la référence : en tête J180 (4 233), J181 (2 711), R31
+  (2 358), A090, E43, A099, F03, F03+02, J188, A491 — catégories dont
+  tous les codes sont « sans précision » par nature (la référence n'y
+  marque aucun précis). C'est le comportement voulu (jamais inventer),
+  mais ces DP restent imprécis dans le corpus substitué.
+- **La référence classe les codes « .8 » (autres formes précisées) comme
+  précis** : 20 % des DP substitués se terminent par 8 (N179 → N178,
+  J441 → J448, D509 → D508, J159 → J158…). Le corpus passe de 128 057 à
+  137 332 DP en « 8 » — à garder en tête avec le filtre `FILTRE_DP_SUFFIXE
+  = "8"` du banc.
+
 ## Prochaines étapes
 
-1. Déposer `ref_substitution_imprecis.parquet` sur le poste, lancer le
-   script sur C1, lire le rapport (niveaux de repli, codes conservés,
-   « conservés UHCD » attendu à 0).
-2. Puis, toujours en attente : `agean` pour C1, test 07, message à Brest.
+1. Décider de `SOURCE_PROFILES_PATH` → `scenarios_C1_dp.parquet` une fois
+   `agean` fourni côté producteur (la substitution ne dépend pas de
+   `agean`, le banc si).
+2. Retour sur les deux observations ci-dessus (catégories sans précis,
+   statut des « .8 »).
+3. Toujours en attente : test 07, message à Brest.
