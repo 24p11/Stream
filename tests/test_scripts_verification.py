@@ -62,7 +62,8 @@ Affections relevant d'autres codes :
 
 def _user_generation(dp: tuple[str, str], das: list[tuple[str, str]] = [],
                      fiches: list[str] = [],
-                     poids_taille: tuple[int, int] | None = None) -> str:
+                     poids_taille: tuple[int, int] | None = None,
+                     service: str | None = None) -> str:
     lignes = [
         "**SCÉNARIO DE DÉPART :**",
         "- Âge du patient : 42 ans",
@@ -78,10 +79,9 @@ def _user_generation(dp: tuple[str, str], das: list[tuple[str, str]] = [],
     ]
     for code, libelle in das:
         lignes.append(f"      - {libelle} ({code})")
-    lignes += [
-        "- Acte CCAM : geste de fixture (ABCD001)",
-        "- Service : FIXTURE",
-    ]
+    lignes += ["- Acte CCAM : geste de fixture (ABCD001)"]
+    if service:  # ligne « - Service : » = spécialité fournie (contrôle de fidélité)
+        lignes.append(f"- Service : {service}")
     texte = "\n".join(lignes)
     if fiches:
         texte += ("\n\n**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**"
@@ -244,7 +244,7 @@ class TestRapportJson:
             for e in r["echecs"]:
                 assert e["type"] in {"fichier_absent", "json_invalide", "gras",
                                      "fantome", "code_absent_texte",
-                                     "fidelite_poids_taille"}
+                                     "fidelite_poids_taille", "fidelite_service"}
                 assert e["detail"]
             for a in r["avertissements"]:
                 assert a["type"] in {"json_repare", "cles_manquantes",
@@ -256,6 +256,38 @@ class TestRapportJson:
         types_0000 = [e["type"] for e in rapports[0]["echecs"]]
         assert "fantome" in types_0000 and "code_absent_texte" in types_0000
         assert rapports[1]["echecs"] == []
+
+
+class TestFideliteService:
+    """Ligne « - Service : X » du user prompt → X restitué dans le CR (casse,
+    espaces, accents indifférents) ; pas de ligne → pas de contrôle."""
+
+    def _run(self, tmp_path, service, cr):
+        test_dir = tmp_path / "t"
+        user = _user_generation(("N858", "Autres affections précisées de l'utérus"), service=service)
+        d = _scenario(test_dir, "0000", user, _crh(cr, {"Autres affections précisées de l'utérus (N858)": [
+            "atrophie utérine"]}))
+        return check_crh.check_scenario(d, "crh_generation.txt")
+
+    def test_fourni_present_ok(self, tmp_path):
+        r = self._run(tmp_path, "CHIRURGIE VISCERALE",
+                      "Service de Chirurgie viscérale — Hôpital X. " + CR_UTERUS)
+        assert not [e for e in r["echecs"] if e["type"] == "fidelite_service"]
+
+    def test_fourni_absent_du_cr_echec(self, tmp_path, capsys):
+        r = self._run(tmp_path, "CH.ORTHO.ET TRAUMATO",
+                      "Service de chirurgie orthopédique et traumatologique. " + CR_UTERUS)
+        echecs = [e for e in r["echecs"] if e["type"] == "fidelite_service"]
+        assert len(echecs) == 1 and echecs[0]["service"] == "CH.ORTHO.ET TRAUMATO"
+        assert "service du scénario (CH.ORTHO.ET TRAUMATO) absent du CR" in capsys.readouterr().out
+
+    def test_non_fourni_pas_de_controle(self, tmp_path):
+        r = self._run(tmp_path, None, CR_UTERUS)
+        assert not [e for e in r["echecs"] if e["type"] == "fidelite_service"]
+
+    def test_normalisation(self):
+        assert check_crh.normalise_service("  Chirurgie   Viscérale ") == "chirurgie viscerale"
+        assert check_crh.normalise_service("O.R.L.") == "o.r.l."  # ponctuation conservée : tel quel
 
 
 # ---------------------------------------------------------------- nettoyage

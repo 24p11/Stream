@@ -11,7 +11,7 @@
 #    "codes_dictionnaire": [codes extraits des clés du dictionnaire]}
 # Types d'échec STABLES (contrat pour prepare_regeneration) :
 #   fichier_absent, json_invalide, gras, fantome, code_absent_texte,
-#   fidelite_poids_taille.
+#   fidelite_poids_taille, fidelite_service.
 # Types d'avertissement STABLES :
 #   json_repare, cles_manquantes, cle_orpheline, mention_en_tete,
 #   score_standardise, maladie_chronique, tabac_non_evoque.
@@ -216,6 +216,28 @@ def contexte_enrichi(sdir: Path) -> dict | None:
     }
 
 
+def service_du_scenario(sdir: Path) -> str | None:
+    """Service d'hospitalisation fourni au modèle : ligne « - Service : X »
+    de user_generation.txt (spécialité observée ou dérivée par la chaîne,
+    bench.scenarios.deriver_specialite). None si la ligne est absente (repli :
+    le modèle propose, aucun contrôle)."""
+    ug = sdir / "user_generation.txt"
+    if not ug.is_file():
+        return None
+    m = re.search(r"^- Service : (.+?)\s*$", ug.read_text(encoding="utf-8"), re.M)
+    return m.group(1).strip() if m else None
+
+
+def normalise_service(s: str) -> str:
+    """Comparaison de fidélité du service : casse, espaces, accents
+    indifférents (les libellés du dictionnaire sont en majuscules sans
+    accent — « CHIRURGIE VISCERALE » — quand un CR écrit « Chirurgie
+    viscérale ») ; la ponctuation reste telle quelle (restitution TEL QUEL)."""
+    s = unicodedata.normalize("NFD", normalize(s))
+    s = "".join(c for c in s if not unicodedata.combining(c))
+    return re.sub(r"\s+", " ", s).strip().lower()
+
+
 def check_scenario(sdir: Path, out_name: str) -> dict:
     """Vérifie un scénario : imprime le détail (format historique) et
     retourne le rapport structuré (schéma documenté en tête de fichier)."""
@@ -328,6 +350,14 @@ def check_scenario(sdir: Path, out_name: str) -> dict:
                 r"tabac|tabagi|fume", cr, re.IGNORECASE):
             avert("tabac_non_evoque",
                   "fumeur actif au scénario, tabac non évoqué dans le CR")
+
+    # 8. Service fourni dans le scénario (ligne « - Service : ») restitué
+    # TEL QUEL dans le CR — contrôle de fidélité, même famille que
+    # poids/taille ; pas de ligne Service → pas de contrôle.
+    service = service_du_scenario(sdir)
+    if service and normalise_service(service) not in normalise_service(cr):
+        echec("fidelite_service",
+              f"service du scénario ({service}) absent du CR", service=service)
 
     if not rapport["echecs"] and not rapport["avertissements"]:
         print("    OK")

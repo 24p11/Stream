@@ -7,6 +7,7 @@ sur répertoire scratch (lot R3) en tient lieu.
 
 from __future__ import annotations
 
+from collections import Counter
 from pathlib import Path
 
 import polars as pl
@@ -482,3 +483,197 @@ class TestDeriverAgean:
     def test_libelle_inattendu_remonte(self):
         with pytest.raises(ValueError, match="classe d'âge illisible"):
             deriver_agean(corpus_cage(3, "80+"))
+
+
+# ---------------------------------------------------------------------------
+# Garde-fou racine et spécialité (service d'hospitalisation) — 24/09/2026
+# ---------------------------------------------------------------------------
+
+from bench.scenarios import (  # noqa: E402
+    DERIVER, charger_mapping_type_unite, deriver_specialite, reparer_racine,
+)
+
+
+class TestReparerRacine:
+    def test_reparation_nominale_et_compteur(self):
+        df = pl.DataFrame({"racine": [None, "01C03", None], "ghm2": ["01C031", "01C031", "06C08A"]})
+        out, rapport = reparer_racine(df)
+        assert out["racine"].to_list() == ["01C03", "01C03", "06C08"]
+        assert out["racine_reparee"].to_list() == [True, False, True]
+        assert rapport.n_reparees == 2 and rapport.n_lignes == 3
+        assert rapport.n_irreparables == 0 and rapport.n_divergentes == 0
+        assert "2/3 réparée(s) depuis ghm2[:5]" in rapport.texte()
+        assert "doit valoir 0" in rapport.texte()
+
+    def test_les_deux_nuls_signale(self):
+        df = pl.DataFrame({"racine": [None, "01C03"], "ghm2": [None, "01C031"]})
+        out, rapport = reparer_racine(df)
+        assert out["racine"].to_list() == [None, "01C03"]
+        assert rapport.n_reparees == 0 and rapport.n_irreparables == 1
+        assert "sans racine ni ghm2" in rapport.texte()
+
+    def test_divergence_detectee_sans_ecrasement(self):
+        df = pl.DataFrame({"racine": ["01C05", "01C03"], "ghm2": ["01C999", "01C031"]})
+        out, rapport = reparer_racine(df)
+        assert out["racine"].to_list() == ["01C05", "01C03"]  # l'observé prime
+        assert out["racine_reparee"].to_list() == [False, False]
+        assert rapport.n_divergentes == 1 and rapport.exemples_divergence == [("01C05", "01C999")]
+        assert "NON modifiées" in rapport.texte()
+
+    def test_compteur_zero_apres_correction_amont(self):
+        df = pl.DataFrame({"racine": ["01C03", "06C08"], "ghm2": ["01C031", "06C08A"]})
+        out, rapport = reparer_racine(df)
+        assert rapport.n_reparees == 0 and not out["racine_reparee"].any()
+
+    def test_colonne_racine_absente_creee_et_sans_ghm2_erreur(self):
+        out, rapport = reparer_racine(pl.DataFrame({"ghm2": ["01C031", None]}))
+        assert out["racine"].to_list() == ["01C03", None] and rapport.colonne_creee
+        assert rapport.n_reparees == 1 and rapport.n_irreparables == 1
+        with pytest.raises(ValueError, match="ni `racine` ni `ghm2`"):
+            reparer_racine(pl.DataFrame({"diag2": ["A00"]}))
+
+
+def dico_jouet() -> pl.DataFrame:
+    """Dictionnaire brut : 01C03 adulte unique ; 01C05 adulte 3 candidates
+    (0.6 / 0.3 / 0.1) ; 01C05 enfant unique ; 05K10 adulte 2 candidates ;
+    15M05 enfant unique (NEONATOLOGIE)."""
+    lignes = [
+        ("01C03", "ge_18", "NEURO-CHIRURGIE", 1.0),
+        ("01C05", "ge_18", "NEURO-CHIRURGIE", 0.6),
+        ("01C05", "ge_18", "CH.ORTHO.ET TRAUMATO", 0.3),
+        ("01C05", "ge_18", "MEDECINE INTERNE", 0.1),
+        ("01C05", "lt_18", "NEURO-CHIRURGIE INFANTILE", 1.0),
+        ("05K10", "ge_18", "CARDIOLOGIE", 0.5),
+        ("05K10", "ge_18", "CHIR.CARDIO-VASC.", 0.5),
+        ("15M05", "lt_18", "NEONATOLOGIE", 1.0),
+    ]
+    return pl.DataFrame(lignes, schema=["racine", "age", "lib_spe_uma", "ratio_spe_racine"], orient="row") \
+        .with_columns(pl.lit(1).alias("nb_spe"), pl.lit(100).alias("effectifs_aphp"))
+
+
+def yaml_mapping(tmp_path: Path, texte: str) -> Path:
+    p = tmp_path / "mapping_type_unite.yaml"
+    p.write_text(texte, encoding="utf-8")
+    return p
+
+
+class TestChargerMappingTypeUnite:
+    def test_valide_applique_proposition_ignoree(self, tmp_path):
+        p = yaml_mapping(tmp_path, """
+entrees:
+  NEONAT: {specialite: NEONATOLOGIE, statut: valide}
+  geriatrie: {specialite: MEDECINE INTERNE, statut: proposition}
+  HC: {specialite: DERIVER, statut: valide}
+""")
+        assert charger_mapping_type_unite(p) == {"NEONAT": "NEONATOLOGIE"}
+        assert charger_mapping_type_unite(p, ["NEONATOLOGIE"]) == {"NEONAT": "NEONATOLOGIE"}
+
+    def test_valide_hors_vocabulaire_refuse(self, tmp_path):
+        p = yaml_mapping(tmp_path, "entrees:\n  X: {specialite: URGENCES, statut: valide}\n")
+        with pytest.raises(ValueError, match="hors vocabulaire"):
+            charger_mapping_type_unite(p, ["NEONATOLOGIE"])
+
+    def test_fichier_vide_ou_illisible(self, tmp_path):
+        assert charger_mapping_type_unite(yaml_mapping(tmp_path, "# rien\n")) == {}
+        with pytest.raises(ValueError, match="illisible"):
+            charger_mapping_type_unite(yaml_mapping(tmp_path, "entrees:\n  X: NEONATOLOGIE\n"))
+
+    def test_yaml_du_depot_toutes_en_proposition(self):
+        p = Path(__file__).resolve().parents[1] / "data" / "aphp" / "referentials" / "mapping_type_unite.yaml"
+        if not p.is_file():
+            pytest.skip("mapping_type_unite.yaml absent de data/ sur ce poste")
+        assert charger_mapping_type_unite(p) == {}  # propositions : rien d'appliqué tant que Rémi n'a pas validé
+
+
+def corpus_specialite(n: int = 1, **colonnes) -> pl.DataFrame:
+    base = {"id_scenario": ["s"] * n, "racine": ["01C05"] * n, "agean": [40] * n,
+            "duree": list(range(n)), "mode_entree": ["DOMICILE"] * n,
+            "mode_sortie": ["DOMICILE"] * n, "mdp": [""] * n, "type_unite": [None] * n}
+    base.update(colonnes)
+    return pl.DataFrame(base)
+
+
+class TestDeriverSpecialite:
+    def test_etage1_mapping_observee(self):
+        df = corpus_specialite(2, type_unite=["NEONAT", " neonat "])
+        out, rapport = deriver_specialite(df, dico_jouet(), {"NEONAT": "NEONATOLOGIE"})
+        assert out["specialty"].to_list() == ["NEONATOLOGIE"] * 2
+        assert out["specialite_source"].to_list() == ["observee"] * 2
+        assert rapport.par_source["observee"] == 2 and rapport.n_mapping_applicable == 1
+
+    def test_etage2_unique_sans_tirage(self):
+        out, rapport = deriver_specialite(corpus_specialite(1, racine=["01C03"]), dico_jouet())
+        assert out["specialty"][0] == "NEURO-CHIRURGIE" and out["specialite_source"][0] == "unique"
+
+    def test_etage2_pondere_proportions_sous_graine(self):
+        n = 3000
+        df = corpus_specialite(n, id_scenario=[f"s-{i}" for i in range(n)])
+        out, rapport = deriver_specialite(df, dico_jouet())
+        assert set(out["specialite_source"].to_list()) == {"tiree"}
+        comptes = Counter(out["specialty"].to_list())
+        assert abs(comptes["NEURO-CHIRURGIE"] / n - 0.6) < 0.03
+        assert abs(comptes["CH.ORTHO.ET TRAUMATO"] / n - 0.3) < 0.03
+        assert abs(comptes["MEDECINE INTERNE"] / n - 0.1) < 0.03
+
+    def test_frontiere_age_17_vs_18(self):
+        df = corpus_specialite(2, agean=[17, 18], duree=[0, 0])
+        out, _ = deriver_specialite(df, dico_jouet())
+        assert out["specialty"].to_list() == ["NEURO-CHIRURGIE INFANTILE", out["specialty"][1]]
+        assert out["specialite_source"].to_list()[0] == "unique"
+        assert out["specialty"][1] in ("NEURO-CHIRURGIE", "CH.ORTHO.ET TRAUMATO", "MEDECINE INTERNE")
+
+    def test_graine_composite_par_ligne(self):
+        # même id_scenario, contextes différents → tirages indépendants ; lignes identiques → même résultat
+        n = 400
+        df = corpus_specialite(n, id_scenario=["v"] * n, racine=["05K10"] * n, duree=list(range(n)))
+        out, rapport = deriver_specialite(df, dico_jouet())
+        assert rapport.colonnes_graine == ("id_scenario", "duree", "mode_entree", "mode_sortie", "mdp")
+        assert out["specialty"].n_unique() == 2  # les deux candidates sortent : contextes indépendants
+        identiques = corpus_specialite(50, id_scenario=["v"] * 50, racine=["05K10"] * 50, duree=[7] * 50)
+        assert deriver_specialite(identiques, dico_jouet())[0]["specialty"].n_unique() == 1
+
+    def test_deterministe_ordre_et_deux_processus(self, tmp_path):
+        import subprocess, sys
+        n = 300
+        df = corpus_specialite(n, id_scenario=[f"s-{i % 60}" for i in range(n)],
+                               racine=["01C05", "05K10", "01C03"] * 100)
+        a, _ = deriver_specialite(df, dico_jouet())
+        b, _ = deriver_specialite(df.sample(fraction=1.0, shuffle=True, seed=5), dico_jouet())
+        assert a.sort("id_scenario", "duree")["specialty"].to_list() == b.sort("id_scenario", "duree")["specialty"].to_list()
+        df.write_parquet(tmp_path / "c.parquet"); dico_jouet().write_parquet(tmp_path / "d.parquet")
+        code = ("import polars as pl, sys; sys.path.insert(0, %r); from bench.scenarios import deriver_specialite; "
+                "print(deriver_specialite(pl.read_parquet(%r), pl.read_parquet(%r))[0]['specialty'].to_list())"
+                % (str(Path(__file__).resolve().parents[1]), str(tmp_path / "c.parquet"), str(tmp_path / "d.parquet")))
+        sorties = []
+        for g in ("1", "2"):
+            res = subprocess.run([sys.executable, "-c", code], capture_output=True, text=True,
+                                 env={"PYTHONHASHSEED": g, "PATH": ""})
+            assert res.returncode == 0, res.stderr
+            sorties.append(res.stdout)
+        assert sorties[0] == sorties[1] and str(a["specialty"].to_list()) in sorties[0]
+
+    def test_repli_trace_et_compte(self):
+        df = corpus_specialite(3, racine=["99Z99", None, "01C03"], agean=[40, 40, None])
+        out, rapport = deriver_specialite(df, dico_jouet())
+        assert out["specialty"].to_list() == [None, None, None]
+        assert out["specialite_source"].to_list() == ["repli"] * 3
+        assert rapport.par_source["repli"] == 3
+        assert rapport.racines_sans_entree == {"99Z99": 1, "(racine nulle)": 1, "01C03": 1}
+        assert "pas de ligne Service" in rapport.texte()
+
+    def test_ratios_ne_sommant_pas_a_1_echec_bruyant(self):
+        dico = dico_jouet().with_columns(
+            pl.when(pl.col("lib_spe_uma") == "MEDECINE INTERNE").then(0.3).otherwise(pl.col("ratio_spe_racine")).alias("ratio_spe_racine"))
+        with pytest.raises(ValueError, match="ne somment pas à 1"):
+            deriver_specialite(corpus_specialite(1), dico)
+
+    def test_schema_brut_verifie(self):
+        with pytest.raises(ValueError, match=r"colonne\(s\) manquante\(s\) \['lib_spe_uma'\]"):
+            deriver_specialite(corpus_specialite(1), dico_jouet().rename({"lib_spe_uma": "specialty"}))
+
+    def test_mapping_sans_vocabulaire_deriver_ignore(self):
+        out, _ = deriver_specialite(corpus_specialite(1, type_unite=["HC"], racine=["01C03"]), dico_jouet(), {"HC": DERIVER})
+        # DERIVER n'est jamais transmis par charger_mapping ; passé à la main il s'appliquerait : on vérifie que
+        # charger_mapping l'écarte (voir TestChargerMappingTypeUnite) et que l'étage 2 fonctionne sans mapping
+        out2, _ = deriver_specialite(corpus_specialite(1, racine=["01C03"]), dico_jouet(), None)
+        assert out2["specialite_source"][0] == "unique"

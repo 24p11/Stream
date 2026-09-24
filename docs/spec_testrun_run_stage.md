@@ -39,6 +39,17 @@ fourni (ancien format). `SCHEMA_SOURCE` : `agean` passe de « obligatoire » à
 `cage` (libellé « [a-b[ ») et `id_scenario` deviennent requises quand `agean`
 est absente (statut `derivation`), facultatives sinon — l'ancien format avec
 `agean` reste conforme. Le récap du pool dit si `agean` a été dérivée ou lue.
+Même jour encore, **spécialité (service d'hospitalisation)** : `racine`
+devient « réparable » depuis `ghm2[:5]` (`reparer_racine`, compteur au récap
+— attendu 0 après correction amont) ; `deriver_specialite` attribue à chaque
+ligne du pool une colonne `specialty` (mapping `type_unite` valide →
+dictionnaire des spécialités par racine et groupe d'âge, unique ou tirage
+pondéré à graine composite par ligne → repli) qui traverse fictomed telle
+quelle jusqu'à la ligne « - Service : » du user prompt ; sans cette colonne,
+fictomed joignait la « première spécialité » de la racine, sans groupe d'âge
+ni ratio. `scripts/check_crh.py` contrôle la restitution TEL QUEL du service
+fourni (`fidelite_service`) ; le jeu `runs/07/system/one_gen` porte
+l'instruction correspondante.
 
 v3.7 → v3.8 (septembre 2026, demande Rémi) : **renommage des répertoires,
 sans changement de code** — `work_prompts/` devient `generation/`, ses

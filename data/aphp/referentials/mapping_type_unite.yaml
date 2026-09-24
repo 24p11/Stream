@@ -1,0 +1,45 @@
+# mapping_type_unite.yaml — type d'unité (type_unite des corpus de campagne)
+# → spécialité (service d'hospitalisation), étage 1 de
+# bench.scenarios.deriver_specialite.
+#
+# Producteur : Rémi (décisions, entrée par entrée).
+# Campagne source : C1 (scenarios_C1.parquet) — valeurs relevées le 24/09/2026,
+#   effectifs par branche en commentaire. Les valeurs nouvelles d'une campagne
+#   entrent ici en `proposition`.
+# Vocabulaire : les 55 libellés `lib_spe_uma` du dictionnaire
+#   data/aphp/referentials/dictionnaire_spe_racine.parquet (vocabulaire
+#   officiel des unités médicales AP-HP), ou la valeur DERIVER (« pas une
+#   spécialité : l'étage 2 — dictionnaire par racine et groupe d'âge — décide »).
+#   Une entrée `valide` hors vocabulaire est refusée au chargement.
+# RÈGLE D'APPLICATION : seules les entrées `statut: valide` sont appliquées par
+#   la chaîne ; une entrée `proposition` est IGNORÉE (l'étage 2 prend le
+#   relais). Corriger les statuts suffit à activer — aucun autre geste.
+#
+# Constat C1 : la branche courte (372 108 lignes) a type_unite nulle partout ;
+#   aucune ligne UHCD (attendues en campagne 2, branche courte).
+
+campagne: C1
+producteur: Rémi
+vocabulaire: data/aphp/referentials/dictionnaire_spe_racine.parquet (lib_spe_uma)
+entrees:
+  HC:            # 602 822 lignes (long) — hospitalisation complète : un mode, pas une spécialité
+    specialite: DERIVER
+    statut: proposition
+  GERIATRIE:     # 70 898 (long) — 69 844 en [80-[ ; pas de « gériatrie » dans le vocabulaire
+    specialite: MEDECINE INTERNE   # candidats : MEDECINE INTERNE ; DERIVER (la racine dirait cardio, pneumo…) ; SOINS PALLIATIFS non
+    statut: proposition
+  NEONAT:        # 20 861 (long) — unité de néonatalogie
+    specialite: NEONATOLOGIE       # candidats : NEONATOLOGIE ; PEDIATRIE GENERALE (le dictionnaire donne surtout OBSTETRIQUE sur ces racines : nouveau-né rattaché à la mère)
+    statut: proposition
+  SC:            # 17 692 (long) — soins continus : médecine 10 309, chirurgie 6 636, brûlés 353 → pas une spécialité
+    specialite: DERIVER
+    statut: proposition
+  SC-NEONAT:     # 2 470 (long) — soins continus de néonatalogie
+    specialite: NEONATOLOGIE
+    statut: proposition
+  HP:            # 674 (long) — hospitalisation partielle, toutes en « Séances simples » (dialyse, radiothérapie…)
+    specialite: DERIVER            # candidats : DERIVER ; DIALYSE ADULTE / RADIOTHERAPIE selon la racine — l'étage 2 le sait
+    statut: proposition
+  UHCD:          # 0 dans C1 — attendu en campagne 2 (branche courte) ; pas d'« urgences » dans le vocabulaire
+    specialite: DERIVER            # candidats : DERIVER ; MEDECINE INTERNE
+    statut: proposition

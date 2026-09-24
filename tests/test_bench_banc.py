@@ -57,6 +57,9 @@ def bibliotheque_jouet(tmp_path: Path, codes: list[str]) -> Path:
         # au moins une ligne : le contrat garantit format_version constant
         for c in ["A00.0", *codes]:
             w.writerow([c, f"I/{c}.md", "autorise", "1", "emissible"])
+    # dictionnaire des spécialités (brut) : requis par preparer_pool (deriver_specialite)
+    from tests.test_bench_scenarios import dico_jouet
+    dico_jouet().write_parquet(tmp_path / "referentials" / "dictionnaire_spe_racine.parquet")
     return tmp_path / "referentials"
 
 
@@ -141,7 +144,10 @@ class TestVerifierSource:
             pl.Series("DPEC", MODALITES_JOUET),
             pl.Series("TPEC", ["Médecine"] * 9),
         )
-        rapport = verifier_source(parquet_jouet(tmp_path, df))
+        # sans ghm2 NI racine : non conforme (racine réparable seulement depuis ghm2)
+        with pytest.raises(BenchError, match="colonne manquante : racine \\(reparable"):
+            verifier_source(parquet_jouet(tmp_path, df))
+        rapport = verifier_source(parquet_jouet(tmp_path, df.with_columns(pl.lit("01C03").alias("racine")), "r.pq"))
         assert rapport.conforme and rapport.typologie_fournie
         # mais obligatoire sans typologie
         with pytest.raises(BenchError, match="colonne manquante : ghm2 \\(typologie"):
@@ -197,10 +203,22 @@ class TestVerifierSource:
 
     def test_schema_documente(self):
         for col, ex in SCHEMA_SOURCE.items():
-            assert ex.statut in ("obligatoire", "typologie", "derivee", "derivation", "facultative"), col
+            assert ex.statut in ("obligatoire", "typologie", "derivee", "derivation", "reparable", "facultative"), col
             assert ex.role, col
         assert SCHEMA_SOURCE["agean"].statut == "derivee"
         assert SCHEMA_SOURCE["cage"].statut == SCHEMA_SOURCE["id_scenario"].statut == "derivation"
+        assert SCHEMA_SOURCE["racine"].statut == "reparable"
+
+    def test_racine_reparable(self, tmp_path):
+        # racine nulle → signalée, réparée ; racine absente avec ghm2 → signalée ; ni l'une ni l'autre → écart
+        df = source_jouet().with_columns(pl.lit(None, dtype=pl.String).alias("racine"))
+        rapport = verifier_source(parquet_jouet(tmp_path, df))
+        assert rapport.conforme and any("réparées depuis ghm2[:5]" in s for s in rapport.signalements)
+        assert rapport.types == {m: 1 for m in MODALITES_JOUET}  # typologie calculée sur la racine réparée
+        rapport = verifier_source(parquet_jouet(tmp_path, source_jouet().drop("racine"), "b.pq"))
+        assert rapport.conforme and any(s.startswith("racine absente : réparée") for s in rapport.signalements)
+        with pytest.raises(BenchError, match="colonne manquante : racine \\(reparable"):
+            verifier_source(parquet_jouet(tmp_path, source_jouet().drop("racine", "ghm2"), "c.pq"))
 
 
 # ---------------------------------------------------------------------------
@@ -226,7 +244,7 @@ class TestPreparerPool:
         # absents ; le jeton « NA » d'un DAS est journalisé lui aussi —
         # comportement de la cellule d'origine, conservé)
         assert "sans fiche à l'index — JOURNAL : ['E119', 'F172', 'I208', 'NA', 'Z640']" in out
-        assert "Pool candidat : 4 séjours — agean lu du fichier — couverture par type :" in out
+        assert "Pool candidat : 4 séjours — agean lu du fichier — racine réparée sur 0 ligne(s) — couverture par type :" in out
 
     def test_quotas_dict_et_sans_filtre(self, tmp_path):
         p = parquet_jouet(tmp_path)
@@ -292,7 +310,7 @@ class TestPreparerPool:
         out = capsys.readouterr().out
         # source_jouet porte la colonne pivot `age` (ge_18 / lt_18)
         assert "agean : dérivé de cage, pivot age — 9/9 lignes" in out
-        assert "Pool candidat : 9 séjours — agean dérivé de cage, pivot age — couverture par type :" in out
+        assert "Pool candidat : 9 séjours — agean dérivé de cage, pivot age — racine réparée sur 0 ligne(s) — couverture par type :" in out
         # typologie calculée sur l'âge dérivé : une modalité par ligne
         assert pool["DPEC"].n_unique() == 9
 
@@ -301,10 +319,55 @@ class TestPreparerPool:
                       filtre_dp_suffixe=None, referentials=bibliotheque_jouet(tmp_path, []))
         out = capsys.readouterr().out
         assert "agean : lu du fichier (9 lignes) — conservée telle quelle." in out
-        assert "Pool candidat : 9 séjours — agean lu du fichier — couverture par type :" in out
+        assert "Pool candidat : 9 séjours — agean lu du fichier — racine réparée sur 0 ligne(s) — couverture par type :" in out
+
+    def test_specialite_attribuee_et_recap(self, tmp_path, capsys):
+        # racines du jouet : 06C12 / 28Z07 … absentes du dictionnaire jouet → repli ;
+        # on force deux racines connues pour voir « unique » et « observee »
+        df = source_jouet().with_columns(
+            pl.Series("racine", ["01C03", "28Z04", "04M10", "01C05", "14Z08", "15M05", "23M20", "05K10", "90Z00"]),
+            pl.Series("type_unite", [None, None, None, None, None, "NEONAT", None, None, None]),
+        )
+        ref = bibliotheque_jouet(tmp_path, [])
+        (ref / "mapping_type_unite.yaml").write_text(
+            "entrees:\n  NEONAT: {specialite: NEONATOLOGIE, statut: valide}\n"
+            "  HC: {specialite: DERIVER, statut: proposition}\n", encoding="utf-8")
+        pool = preparer_pool(parquet_jouet(tmp_path, df), "couverture", 1, enrichir=False,
+                             filtre_dp_suffixe=None, referentials=ref)
+        assert {"specialty", "specialite_source", "racine_reparee"} <= set(pool.columns)
+        par = dict(pool.group_by("specialite_source").len().iter_rows())
+        assert par["observee"] == 1 and par["unique"] == 1 and par["tiree"] >= 1 and par["repli"] >= 1
+        assert pool.filter(pl.col("type_unite") == "NEONAT")["specialty"][0] == "NEONATOLOGIE"
+        out = capsys.readouterr().out
+        assert "racine : 0/9 réparée(s) depuis ghm2[:5]" in out
+        assert "spécialité : observee 1, unique 1, tiree" in out
+        assert "mapping type_unite : 1 entrée(s) valide(s) appliquée(s)" in out
+        assert "racine réparée sur 0 ligne(s)" in out
+
+    def test_racine_reparee_dans_le_pool(self, tmp_path, capsys):
+        df = source_jouet().with_columns(pl.lit(None, dtype=pl.String).alias("racine"))
+        pool = preparer_pool(parquet_jouet(tmp_path, df), "couverture", 1, enrichir=False,
+                             filtre_dp_suffixe=None, referentials=bibliotheque_jouet(tmp_path, []))
+        assert pool["racine_reparee"].all() and pool["racine"].null_count() == 0
+        out = capsys.readouterr().out
+        assert "racine : 9/9 réparée(s) depuis ghm2[:5]" in out
+        assert "racine réparée sur 9 ligne(s)" in out
+
+    def test_dictionnaire_absent_refus_explicite_et_specialite_false(self, tmp_path, capsys):
+        ref = bibliotheque_jouet(tmp_path, [])
+        (ref / "dictionnaire_spe_racine.parquet").unlink()
+        with pytest.raises(BenchError, match="dictionnaire des spécialités absent"):
+            preparer_pool(parquet_jouet(tmp_path), "couverture", 1, enrichir=False,
+                          filtre_dp_suffixe=None, referentials=ref)
+        pool = preparer_pool(parquet_jouet(tmp_path), "couverture", 1, enrichir=False,
+                             filtre_dp_suffixe=None, referentials=ref, specialite=False)
+        assert "specialty" not in pool.columns
+        assert "specialite=False" in capsys.readouterr().out
 
     def test_bibliotheque_hors_contrat_refusee(self, tmp_path):
+        from tests.test_bench_scenarios import dico_jouet
         (tmp_path / "referentials" / "cards_library").mkdir(parents=True)
+        dico_jouet().write_parquet(tmp_path / "referentials" / "dictionnaire_spe_racine.parquet")
         with pytest.raises(BenchError, match="index.csv absent"):
             preparer_pool(parquet_jouet(tmp_path), "couverture", 1, enrichir=False,
                           referentials=tmp_path / "referentials")

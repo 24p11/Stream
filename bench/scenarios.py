@@ -40,7 +40,7 @@ import shutil
 from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
-from typing import Any
+from typing import Any, Iterable
 
 import polars as pl
 import yaml
@@ -749,3 +749,259 @@ def deriver_agean(
         rapport.constats.append(
             f"{rapport.n_sans_classe} ligne(s) sans classe d'âge : agean nul.")
     return df.with_columns(pl.Series("agean", valeurs, dtype=pl.Int32)), rapport
+
+
+# ---------------------------------------------------------------------------
+# Garde-fou racine — réparation depuis le GHM (24/09/2026)
+#
+# La branche courte de C1 livre `racine` nulle (erreur du producteur,
+# correction amont prévue). La relation vraie : racine = ghm2[:5]. Après la
+# correction amont, le compteur de réparations DEVRA valoir 0 — c'est un
+# contrôle d'intégrité, pas un service permanent.
+# ---------------------------------------------------------------------------
+
+@dataclass
+class ReparationRacine:
+    """Ce que :func:`reparer_racine` a fait — à imprimer dans le récap."""
+
+    n_lignes: int = 0
+    n_reparees: int = 0            # racine nulle, ghm2 présent → ghm2[:5]
+    n_irreparables: int = 0        # racine ET ghm2 nuls : racine reste nulle
+    n_divergentes: int = 0         # racine observée ≠ ghm2[:5] : NON modifiée
+    exemples_divergence: list[tuple[str, str]] = field(default_factory=list)
+    colonne_creee: bool = False    # `racine` absente du fichier : créée entièrement
+
+    def texte(self) -> str:
+        lignes = [f"racine : {self.n_reparees}/{self.n_lignes} réparée(s) depuis ghm2[:5]"
+                  + (" (colonne absente du fichier : créée)" if self.colonne_creee else "")
+                  + " — après la correction amont, ce compteur doit valoir 0."]
+        if self.n_irreparables:
+            lignes.append(f"  - {self.n_irreparables} ligne(s) sans racine ni ghm2 : racine nulle.")
+        if self.n_divergentes:
+            lignes.append(f"  - {self.n_divergentes} ligne(s) où racine observée ≠ ghm2[:5] — "
+                          f"NON modifiées (l'observé prime), ex. {self.exemples_divergence}")
+        return "\n".join(lignes)
+
+
+def reparer_racine(df: pl.DataFrame) -> tuple[pl.DataFrame, ReparationRacine]:
+    """Répare ``racine`` depuis ``ghm2`` : ``racine = ghm2[:5]`` quand
+    ``racine`` est nulle et ``ghm2`` non nul, sinon ``racine`` inchangée.
+    Colonne de trace ``racine_reparee`` (booléen). Une racine observée qui
+    diverge de ``ghm2[:5]`` est SIGNALÉE (comptée, exemples) sans être
+    modifiée : l'observé prime, la divergence est une information de
+    campagne. Sans ``racine`` ni ``ghm2`` → ``ValueError``.
+
+    Retourne ``(df, rapport)`` ; ``rapport.n_reparees`` doit tomber à 0
+    après la correction amont (contrôle d'intégrité).
+    """
+    a_racine, a_ghm2 = "racine" in df.columns, "ghm2" in df.columns
+    if not a_racine and not a_ghm2:
+        raise ValueError("réparation de racine impossible : ni `racine` ni `ghm2` dans le fichier.")
+    rapport = ReparationRacine(n_lignes=df.height, colonne_creee=not a_racine)
+    if not a_ghm2:
+        return df.with_columns(pl.lit(False).alias("racine_reparee")), rapport
+    if not a_racine:
+        df = df.with_columns(pl.lit(None, dtype=pl.String).alias("racine"))
+    ghm5 = pl.col("ghm2").cast(pl.String).str.slice(0, 5)
+    reparable = pl.col("racine").is_null() & pl.col("ghm2").is_not_null()
+    divergente = pl.col("racine").is_not_null() & pl.col("ghm2").is_not_null() & (ghm5 != pl.col("racine"))
+    stats = df.select(
+        reparable.sum().alias("reparees"),
+        (pl.col("racine").is_null() & pl.col("ghm2").is_null()).sum().alias("irreparables"),
+        divergente.sum().alias("divergentes"),
+    ).row(0, named=True)
+    rapport.n_reparees = int(stats["reparees"])
+    rapport.n_irreparables = int(stats["irreparables"])
+    rapport.n_divergentes = int(stats["divergentes"])
+    if rapport.n_divergentes:
+        rapport.exemples_divergence = [
+            (r, g) for r, g in df.filter(divergente).select("racine", "ghm2").unique().head(5).iter_rows()
+        ]
+    return df.with_columns(
+        pl.when(reparable).then(ghm5).otherwise(pl.col("racine")).alias("racine"),
+        reparable.alias("racine_reparee"),
+    ), rapport
+
+
+# ---------------------------------------------------------------------------
+# Spécialité (service d'hospitalisation) — observée ou dérivée (24/09/2026)
+#
+# Trois étages, par LIGNE (la spécialité est une propriété du séjour, pas du
+# cas : les variantes de contexte d'un même id_scenario peuvent différer) :
+#   1. type_unite a une entrée « valide » du mapping YAML → spécialité
+#      observée ;
+#   2. dictionnaire des spécialités par (racine réparée, groupe d'âge
+#      ge_18 / lt_18 dérivé d'agean) : une candidate → elle ; plusieurs →
+#      tirage pondéré par ratio, graine composite par ligne ;
+#   3. aucune entrée → pas de spécialité (la ligne « - Service : » du prompt
+#      restera absente, le modèle propose), compté.
+# La colonne s'appelle `specialty` pour traverser fictomed tel quel
+# (profile["specialty"] → scenario["department"] → « - Service : »).
+# ---------------------------------------------------------------------------
+
+DERIVER = "DERIVER"  # valeur du mapping : « pas une spécialité, l'étage 2 décide »
+COLONNES_DICO_SPECIALITE = ("racine", "age", "lib_spe_uma", "ratio_spe_racine")  # schéma BRUT du parquet
+COLONNES_GRAINE_SPECIALITE = ("id_scenario", "duree", "mode_entree", "mode_sortie", "mdp")
+SOURCES_SPECIALITE = ("observee", "unique", "tiree", "repli")
+
+
+def charger_mapping_type_unite(
+    chemin: Path,
+    vocabulaire: Iterable[str] | None = None,
+) -> dict[str, str]:
+    """Lit ``mapping_type_unite.yaml`` et rend les seules entrées
+    APPLICABLES : ``statut: valide`` et spécialité différente de
+    :data:`DERIVER` → ``{type_unite: spécialité}``. Une entrée en
+    ``proposition`` est ignorée (l'étage 2 prend le relais) — corriger les
+    statuts suffit à activer, sans autre geste. Si ``vocabulaire`` est
+    donné (les libellés du dictionnaire des spécialités), une entrée
+    valide hors vocabulaire est une erreur explicite.
+    """
+    import yaml
+
+    chemin = Path(chemin)
+    contenu = yaml.safe_load(chemin.read_text(encoding="utf-8")) or {}
+    entrees = contenu.get("entrees", {}) or {}
+    if not isinstance(entrees, dict):
+        raise ValueError(f"{chemin} : `entrees` doit être un dictionnaire type_unite → entrée.")
+    vocab = set(vocabulaire) if vocabulaire is not None else None
+    applicables: dict[str, str] = {}
+    for type_unite, entree in entrees.items():
+        if not isinstance(entree, dict):
+            raise ValueError(f"{chemin} : entrée {type_unite!r} illisible ({entree!r}).")
+        if str(entree.get("statut", "")).strip().lower() != "valide":
+            continue
+        specialite = str(entree.get("specialite", "")).strip()
+        if not specialite or specialite == DERIVER:
+            continue
+        if vocab is not None and specialite not in vocab:
+            raise ValueError(
+                f"{chemin} : entrée {type_unite!r} valide avec une spécialité hors "
+                f"vocabulaire du dictionnaire : {specialite!r}.")
+        applicables[str(type_unite).strip().upper()] = specialite
+    return applicables
+
+
+def _candidats_specialite(dico: pl.DataFrame) -> dict[tuple[str, str], list[tuple[str, float]]]:
+    """``{(racine, groupe d'âge): [(spécialité, ratio), …]}`` triés par
+    libellé ; vérifie le schéma BRUT et que les ratios somment à 1 par
+    (racine, groupe) — échec bruyant sinon."""
+    manquantes = [c for c in COLONNES_DICO_SPECIALITE if c not in dico.columns]
+    if manquantes:
+        raise ValueError(
+            f"dictionnaire des spécialités : colonne(s) manquante(s) {manquantes} — "
+            f"schéma brut attendu {list(COLONNES_DICO_SPECIALITE)}, trouvé {dico.columns}.")
+    sommes = dico.group_by("racine", "age").agg(pl.col("ratio_spe_racine").sum().alias("s"))
+    hors = sommes.filter((pl.col("s") - 1.0).abs() > 1e-6)
+    if hors.height:
+        raise ValueError(
+            "dictionnaire des spécialités : les ratios ne somment pas à 1 par (racine, age) sur "
+            f"{hors.height} groupe(s), ex. {hors.head(3).to_dicts()}.")
+    table: dict[tuple[str, str], list[tuple[str, float]]] = {}
+    for racine, age, lib, ratio in dico.select("racine", "age", "lib_spe_uma", "ratio_spe_racine") \
+            .sort("racine", "age", "lib_spe_uma").iter_rows():
+        table.setdefault((str(racine), str(age)), []).append((str(lib), float(ratio)))
+    return table
+
+
+@dataclass
+class DerivationSpecialite:
+    """Ce que :func:`deriver_specialite` a fait — à imprimer dans le récap."""
+
+    n_lignes: int = 0
+    par_source: dict[str, int] = field(default_factory=lambda: {s: 0 for s in SOURCES_SPECIALITE})
+    n_mapping_applicable: int = 0
+    colonnes_graine: tuple[str, ...] = ()
+    racines_sans_entree: dict[str, int] = field(default_factory=dict)  # repli : racine → n (top)
+    constats: list[str] = field(default_factory=list)
+
+    def texte(self) -> str:
+        repartition = ", ".join(f"{s} {n}" for s, n in self.par_source.items())
+        lignes = [f"spécialité : {repartition} (sur {self.n_lignes}) — mapping type_unite : "
+                  f"{self.n_mapping_applicable} entrée(s) valide(s) appliquée(s) ; graine composite "
+                  f"{list(self.colonnes_graine)}."]
+        if self.par_source["repli"]:
+            lignes.append(f"  - repli (pas de ligne Service, le modèle propose) : "
+                          f"{self.par_source['repli']} ligne(s) — racines sans entrée : "
+                          f"{self.racines_sans_entree}")
+        lignes += [f"  - {c}" for c in self.constats]
+        return "\n".join(lignes)
+
+
+def deriver_specialite(
+    df: pl.DataFrame,
+    dico: pl.DataFrame,
+    mapping: dict[str, str] | None = None,
+    *,
+    colonne_type_unite: str = "type_unite",
+) -> tuple[pl.DataFrame, DerivationSpecialite]:
+    """Ajoute ``specialty`` et ``specialite_source`` (voir le bloc de
+    commentaires ci-dessus pour les trois étages).
+
+    ``dico`` : le parquet BRUT ``dictionnaire_spe_racine`` (colonnes
+    :data:`COLONNES_DICO_SPECIALITE`) ; ``mapping`` : les entrées
+    applicables de :func:`charger_mapping_type_unite`. Requiert ``racine``
+    (réparée) et ``agean`` (dérivée) : le groupe d'âge est ``ge_18`` si
+    ``agean >= 18`` sinon ``lt_18`` ; sans ``agean`` ni ``racine`` → repli.
+
+    Tirage (étage 2, plusieurs candidates) : uniforme ``u`` en [0, 1) tiré du
+    sha256 de ``"specialite" ‖ id_scenario ‖ duree ‖ mode_entree ‖
+    mode_sortie ‖ mdp`` (:data:`COLONNES_GRAINE_SPECIALITE`, celles
+    présentes), premier libellé dont le ratio cumulé dépasse ``u`` :
+    déterministe par ligne, entre passes et entre processus, indépendant
+    de l'ordre ; deux lignes identiques sur ces colonnes tirent la même
+    spécialité, deux contextes différents tirent indépendamment.
+    """
+    candidats = _candidats_specialite(dico)
+    mapping = {k.strip().upper(): v for k, v in (mapping or {}).items()}
+    rapport = DerivationSpecialite(n_lignes=df.height, n_mapping_applicable=len(mapping))
+    colonnes_graine = tuple(c for c in COLONNES_GRAINE_SPECIALITE if c in df.columns)
+    rapport.colonnes_graine = colonnes_graine
+    if "id_scenario" not in colonnes_graine:
+        rapport.constats.append("id_scenario absent : graine composite sur les seules colonnes de contexte.")
+
+    racines = df["racine"].cast(pl.String).to_list() if "racine" in df.columns else [None] * df.height
+    ages = df["agean"].to_list() if "agean" in df.columns else [None] * df.height
+    types = (df[colonne_type_unite].cast(pl.String).str.strip_chars().str.to_uppercase().to_list()
+             if colonne_type_unite in df.columns else [None] * df.height)
+    parties = [df[c].to_list() for c in colonnes_graine]
+    if "agean" not in df.columns:
+        rapport.constats.append("agean absente : groupe d'âge inconnu, étage 2 impossible (repli).")
+
+    specialites: list[str | None] = []
+    sources: list[str] = []
+    sans_entree: dict[str, int] = {}
+    for i in range(df.height):
+        tu = types[i]
+        if tu is not None and tu in mapping:
+            specialites.append(mapping[tu]); sources.append("observee"); continue
+        racine, age = racines[i], ages[i]
+        cand = None
+        if racine is not None and age is not None:
+            groupe = "ge_18" if int(age) >= SEUIL_MAJORITE else "lt_18"
+            cand = candidats.get((racine, groupe))
+        if not cand:
+            specialites.append(None); sources.append("repli")
+            cle = racine if racine is not None else "(racine nulle)"
+            sans_entree[cle] = sans_entree.get(cle, 0) + 1
+            continue
+        if len(cand) == 1:
+            specialites.append(cand[0][0]); sources.append("unique"); continue
+        graine = graine_ligne("‖".join(str(p[i]) for p in parties), domaine="specialite")
+        u = graine / 2 ** 64
+        cumul = 0.0
+        choix = cand[-1][0]
+        for lib, ratio in cand:
+            cumul += ratio
+            if u < cumul:
+                choix = lib
+                break
+        specialites.append(choix); sources.append("tiree")
+
+    for s in sources:
+        rapport.par_source[s] += 1
+    rapport.racines_sans_entree = dict(sorted(sans_entree.items(), key=lambda kv: -kv[1])[:8])
+    return df.with_columns(
+        pl.Series("specialty", specialites, dtype=pl.String),
+        pl.Series("specialite_source", sources, dtype=pl.String),
+    ), rapport

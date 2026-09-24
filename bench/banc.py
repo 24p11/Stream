@@ -54,9 +54,12 @@ from bench.generate import GenResult, load_reports
 from bench.scenarios import (
     COLONNES_TYPOLOGIE,
     DPEC_TO_TPEC,
+    charger_mapping_type_unite,
     deriver_agean,
+    deriver_specialite,
     ensure_source_ids,
     generate_and_select_fictomed_scenarios,
+    reparer_racine,
     resolve_parquet_path,
     tirage_stratifie,
     with_typologie,
@@ -102,8 +105,15 @@ RECAP_TIRAGE_COLUMNS = [
 ]
 
 _COLONNES_CONTROLE = ("TPEC", "DPEC", *RECAP_TIRAGE_COLUMNS,
+                      "department", "specialite_source",  # spécialité (service) — paires (famille, spécialité)
                       "taille_cm", "poids_kg", "imc", "tabac", "alcool",
                       "codes_ajoutes")
+
+# Référentiels de la spécialité (service d'hospitalisation) — voir
+# bench.scenarios.deriver_specialite : le dictionnaire fait foi pour l'étage 2,
+# le mapping type_unite (statuts valide / proposition) pour l'étage 1.
+DICO_SPECIALITE = "dictionnaire_spe_racine.parquet"
+MAPPING_TYPE_UNITE = "mapping_type_unite.yaml"
 
 
 def _chemin(p: Path | str) -> Path:
@@ -209,7 +219,10 @@ class Exigence:
     ``"derivee"`` (``agean`` : lue si présente, sinon DÉRIVÉE de ``cage`` par
     ``deriver_agean`` — variable dérivée, jamais une donnée observée),
     ``"derivation"`` (requise seulement quand ``agean`` est absente : ce sont
-    les entrées de la dérivation), ou ``"facultative"`` (lue si présente).
+    les entrées de la dérivation), ``"reparable"`` (``racine`` : réparée
+    depuis ``ghm2[:5]`` quand elle est nulle ou absente — sans ``racine`` ni
+    ``ghm2`` le fichier est non conforme), ou ``"facultative"`` (lue si
+    présente).
     ``type`` : ``"chaine"``,
     ``"numerique"``, ``"entier"``, ``"booleen"`` ou ``"chaine_ou_entier"``.
     ``valeurs`` :
@@ -290,8 +303,12 @@ SCHEMA_SOURCE: dict[str, Exigence] = {
         "typologie", "chaine",
         "GHM (CMD, type, sévérité) — typologie"),
     "racine": Exigence(
-        "typologie", "chaine",
-        "racine de GHM — typologie ; fictomed (drg_parent_code)"),
+        "reparable", "chaine",
+        "racine de GHM — typologie ; fictomed (drg_parent_code) ; spécialité "
+        "(dictionnaire par racine). RÉPARABLE depuis ghm2[:5] quand nulle ou "
+        "absente (reparer_racine, compteur au récap — doit valoir 0 après la "
+        "correction amont) ; une racine observée divergente est signalée, "
+        "jamais modifiée"),
     "duree": Exigence(
         "obligatoire", "numerique",
         "durée de séjour — typologie (borne 3 nuits), fictomed (los)"),
@@ -436,10 +453,13 @@ def verifier_source(
     for col, ex in SCHEMA_SOURCE.items():
         requise = (ex.statut == "obligatoire"
                    or (ex.statut == "typologie" and not typologie_fournie)
-                   or (ex.statut == "derivation" and agean_absente))
+                   or (ex.statut == "derivation" and agean_absente)
+                   or (ex.statut == "reparable" and "ghm2" not in df.columns))
         if col not in df.columns:
             if requise:
                 ecarts.append(f"colonne manquante : {col} ({ex.statut} — {ex.role})")
+            elif ex.statut == "reparable":
+                signal.append(f"{col} absente : réparée depuis ghm2[:5] (reparer_racine)")
             continue
         serie = df[col]
         if not _type_ok(serie.dtype, ex.type):
@@ -450,6 +470,9 @@ def verifier_source(
         nuls = serie.null_count()
         if nuls and not ex.nuls:
             ecarts.append(f"valeurs nulles : {col} ({nuls} ligne(s)) — nuls interdits ({ex.role})")
+        elif nuls and ex.statut == "reparable":
+            signal.append(f"{col} : {nuls} valeur(s) nulle(s) — réparées depuis ghm2[:5] "
+                          "(reparer_racine ; compteur au récap, attendu 0 après correction amont)")
         elif nuls and requise:
             signal.append(f"{col} : {nuls} valeur(s) nulle(s) tolérée(s)")
         texte = serie.drop_nulls().cast(pl.String)
@@ -489,6 +512,8 @@ def verifier_source(
                 e.startswith(("forme illisible : cage", "type inattendu : cage",
                               "valeurs nulles : cage")) for e in ecarts):
             pour_typologie = deriver_agean(df)[0]
+        if "ghm2" in pour_typologie.columns and _type_ok(pour_typologie["ghm2"].dtype, "chaine"):
+            pour_typologie = reparer_racine(pour_typologie)[0]
         colonnes_saines = all(
             c in pour_typologie.columns
             and _type_ok(pour_typologie[c].dtype, SCHEMA_SOURCE[c].type)
@@ -522,12 +547,14 @@ def preparer_pool(
     filtre_dp_suffixe: str | None = "8",
     target_n: int | None = None,
     referentials: Path = REFERENTIALS,
+    specialite: bool = True,
 ) -> pl.DataFrame:
     """Le pool candidat, prêt pour fictomed : :func:`verifier_source`
     d'abord, puis chargement, dérivation d'``agean`` si le fichier ne la
     fournit pas (``deriver_agean`` — premier geste : l'aval lit l'âge
-    final), typologie (conservée si le fichier la fournit, sinon
-    ``with_typologie``), identifiants de traçabilité, filtre
+    final), réparation de ``racine`` depuis ``ghm2`` (``reparer_racine``,
+    compteur au récap), typologie (conservée si le fichier la fournit,
+    sinon ``with_typologie``), identifiants de traçabilité, filtre
     DP (séjours dont le DP se termine par ``filtre_dp_suffixe`` — ``None``
     pour ne rien filtrer), tirage, enrichissement (lot E1), contrôle du
     contrat fiches côté pool, récap de la couverture par type.
@@ -537,6 +564,17 @@ def preparer_pool(
     nouveau fichier), ou ``None`` (tirage simple de ``target_n`` séjours).
     ``enrichissement_seed`` vaut ``seed`` par défaut ; ``politique`` est une
     :class:`enrichissement.Politique` (défaut : ``Politique()``).
+
+    Après le tirage et avant l'enrichissement, la spécialité (service
+    d'hospitalisation) est attribuée à chaque ligne du pool
+    (``deriver_specialite`` : mapping ``type_unite`` valide → dictionnaire
+    des spécialités par racine et groupe d'âge → repli) depuis
+    ``<referentials>/dictionnaire_spe_racine.parquet`` (requis) et
+    ``<referentials>/mapping_type_unite.yaml`` (facultatif) ; ``specialite=False``
+    la désactive (fictomed appliquera alors sa propre jointure « première
+    spécialité de la racine », sans groupe d'âge — le comportement d'avant).
+    Le récap montre la répartition des sources et les paires (type de
+    séjour, spécialité) : les combinaisons surprenantes se voient à l'œil.
     """
     source_path = resolve_parquet_path(_chemin(source_path))
     source_df = pl.read_parquet(source_path)
@@ -550,6 +588,11 @@ def preparer_pool(
     # finale (même principe d'ordre que la substitution des DP en amont).
     source_df, _agean = deriver_agean(source_df)
     print(_agean.texte())
+
+    # Garde-fou racine : réparée depuis ghm2[:5] quand elle manque (branche
+    # courte de C1) — la typologie et la spécialité lisent la racine finale.
+    source_df, _racine = reparer_racine(source_df)
+    print(_racine.texte())
 
     if {"TPEC", "DPEC"} <= set(source_df.columns):
         print("Typologie TPEC/DPEC fournie par le fichier — conservée telle quelle.")
@@ -585,6 +628,27 @@ def preparer_pool(
             ensure_source_ids(source_df, source_path), quotas, by=by, seed=seed
         )
     _afficher(candidate_source.group_by("TPEC", "DPEC").len().sort(["TPEC", "DPEC"]))
+
+    # Spécialité (service d'hospitalisation) — observée (mapping type_unite
+    # valide) ou dérivée (dictionnaire par racine réparée et groupe d'âge),
+    # sinon repli : la colonne `specialty` traverse fictomed telle quelle.
+    if specialite:
+        _dico_path = Path(referentials) / DICO_SPECIALITE
+        if not _dico_path.is_file():
+            raise BenchError(
+                f"dictionnaire des spécialités absent : {_dico_path} — référentiel AP-HP "
+                "requis pour attribuer le service (deriver_specialite) ; specialite=False "
+                "pour s'en passer (fictomed appliquera sa jointure « première spécialité »).")
+        _dico = pl.read_parquet(_dico_path)
+        _mapping_path = Path(referentials) / MAPPING_TYPE_UNITE
+        _mapping = (charger_mapping_type_unite(_mapping_path, vocabulaire=_dico["lib_spe_uma"].unique().to_list())
+                    if _mapping_path.is_file() else {})
+        candidate_source, _spec = deriver_specialite(candidate_source, _dico, _mapping)
+        print(_spec.texte())
+        _afficher(candidate_source.group_by("TPEC", "DPEC", "specialty", "specialite_source").len()
+                  .sort(["TPEC", "DPEC", "specialty"]))
+    else:
+        print("specialite=False — pas de colonne specialty : fictomed joindra sa « première spécialité » par racine.")
 
     # Enrichissement du pool candidat (lot E1) — codes DAS tabac/alcool/
     # corpulence + contexte patient. Le pool sort de la préparation des données
@@ -635,7 +699,7 @@ def preparer_pool(
               "tous émissibles.")
 
     print(f"Pool candidat : {candidate_source.height} séjours — agean {_agean.source} — "
-          "couverture par type :")
+          f"racine réparée sur {_racine.n_reparees} ligne(s) — couverture par type :")
     _afficher(candidate_source.group_by("TPEC", "DPEC").len().sort(["TPEC", "DPEC"]))
     return candidate_source
 
