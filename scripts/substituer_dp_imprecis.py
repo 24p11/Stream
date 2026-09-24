@@ -47,11 +47,20 @@
 # DÉTERMINISME — graine PAR LIGNE dérivée de id_scenario par un hash STABLE
 # (sha256 tronqué ; jamais hash() natif, salé par processus) : le même corpus
 # resubstitué donne un résultat bit à bit identique, quel que soit l'ordre des
-# lignes et le processus. Constat C1 : id_scenario n'est PAS unique par ligne
-# (474 077 valeurs pour 1 087 525 lignes) — les lignes qui le partagent sont
-# des variantes de contexte de séjour (duree, mode_entree, mode_sortie, mdp)
-# du MÊME scénario clinique (DP, DAS, cage, sexe identiques) : elles reçoivent
-# la même substitution, ce qui est cohérent (un scénario, un DP final).
+# lignes et le processus. id_scenario n'est PAS unique par ligne (C1 :
+# 474 077 valeurs pour 1 087 525 lignes) — les lignes qui le partagent sont des
+# variantes de contexte de séjour (duree, mode_entree, mode_sortie, mdp) du
+# MÊME scénario clinique (DP, DAS, cage, sexe identiques). Décision (Rémi,
+# 24/09/2026) : un scénario = un cas clinique ; ses variantes de contexte
+# (durée, modes) partagent le DP final, par construction de la graine — VOULU.
+#
+# CONSTATS CAMPAGNE C1 (scenarios_C1.parquet, décision Rémi du 24/09/2026)
+#   - C1 ne contient AUCUN séjour UHCD : type_unite est nulle sur toute la
+#     branche « court » et ne vaut jamais UHCD sur « long » (GERIATRIE, HC,
+#     HP, NEONAT, SC, SC-NEONAT). Les séjours UHCD arriveront en campagne 2,
+#     avec type_unite renseigné sur la branche courte. Conséquence : sur C1
+#     la substitution s'applique UNIFORMÉMENT — le compteur « conservés
+#     UHCD » du rapport doit valoir 0 ; toute autre valeur est une anomalie.
 #
 # TRAÇABILITÉ — sortie : toutes les colonnes d'entrée inchangées SAUF diag2
 # (valeur finale) ; ajoutées : dp_origine (diag2 d'entrée), dp_substitue

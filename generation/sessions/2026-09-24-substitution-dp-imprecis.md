@@ -86,9 +86,22 @@ reconnues, fichier sans elles conforme, type inattendu détecté).
    hospitalisation classique) : 0 en v1 ; réglable si la revue clinique
    des CRH le demande.
 
+## Décisions Rémi (24 septembre, consignées)
+
+- **C1 ne contient aucun séjour UHCD.** Ils arriveront en campagne 2, avec
+  `type_unite` renseigné sur la branche courte. Sur C1 la substitution
+  s'applique donc uniformément : le compteur « conservés UHCD » du rapport
+  doit valoir **0**, toute autre valeur serait une anomalie.
+- **Clé de graine = `id_scenario`, voulu** : un scénario = un cas
+  clinique ; ses variantes de contexte (durée, modes) partagent le DP
+  final, par construction de la graine. L'alternative « clé composite »
+  n'est pas retenue.
+
+Les deux décisions sont inscrites dans la docstring du script.
+
 ## Prochaines étapes
 
 1. Déposer `ref_substitution_imprecis.parquet` sur le poste, lancer le
-   script sur C1, lire le rapport (niveaux de repli, codes conservés).
-2. Décisions : UHCD absent de C1 ; clé de graine (scénario vs variante).
-3. Puis, toujours en attente : `agean` pour C1, test 07, message à Brest.
+   script sur C1, lire le rapport (niveaux de repli, codes conservés,
+   « conservés UHCD » attendu à 0).
+2. Puis, toujours en attente : `agean` pour C1, test 07, message à Brest.
