@@ -124,3 +124,15 @@ l'ignorent ; il est journalisé comme « sans fiche », comme avant).
 4. Message à Brest (wheel 0.1.2, patch `4386ad5`, promotion enrichissement,
    doctrine E669x→E660x) ; décisions en attente (alcool « occasionnel »,
    puce CRO).
+
+## Post-scriptum du 24 septembre — librairie sous contrat déployée
+
+Livraison `33d89c0` en place (`index.csv` au schéma contrat, `CONTRAT.md`,
+`format_version` 1 ; 15 282 fiches dont 15 071 émissibles et 211 troncs,
+2 097 catégories) — mêmes chiffres que le 14/09. Notebook aminci rejoué
+sans clé sur `runs/06` : **toutes les gardes vertes** — registre fictomed
+15 111 / 2 054, pool de 46 codes sans code manquant, 5 codes ajoutés tous
+émissibles, SKIP montage/seedé/figé, dry-run identique, bilan complet.
+`preparer_pool(quotas="couverture")` aboutit : 14 modalités, un séjour
+chacune, 49 codes, seul le jeton `NA` journalisé. Étape 1 des prochaines
+étapes close ; reste C1 (`agean`), le test 07 et le message à Brest.
