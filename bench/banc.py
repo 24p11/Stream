@@ -54,6 +54,7 @@ from bench.generate import GenResult, load_reports
 from bench.scenarios import (
     COLONNES_TYPOLOGIE,
     DPEC_TO_TPEC,
+    deriver_agean,
     ensure_source_ids,
     generate_and_select_fictomed_scenarios,
     resolve_parquet_path,
@@ -204,8 +205,12 @@ class Exigence:
 
     ``statut`` : ``"obligatoire"`` (la chaîne la lit toujours),
     ``"typologie"`` (requise seulement quand le fichier ne fournit pas déjà
-    ``TPEC``/``DPEC`` — c'est ``with_typologie`` qui la lit), ou
-    ``"facultative"`` (lue si présente). ``type`` : ``"chaine"``,
+    ``TPEC``/``DPEC`` — c'est ``with_typologie`` qui la lit),
+    ``"derivee"`` (``agean`` : lue si présente, sinon DÉRIVÉE de ``cage`` par
+    ``deriver_agean`` — variable dérivée, jamais une donnée observée),
+    ``"derivation"`` (requise seulement quand ``agean`` est absente : ce sont
+    les entrées de la dérivation), ou ``"facultative"`` (lue si présente).
+    ``type`` : ``"chaine"``,
     ``"numerique"``, ``"entier"``, ``"booleen"`` ou ``"chaine_ou_entier"``.
     ``valeurs`` :
     ensemble fermé des valeurs admises (contrôle d'encodage, sur la forme
@@ -248,9 +253,10 @@ _DAS = rf"({_CODE_CIM}|NA)"
 # - contrôle du contrat fiches : diag2, diagnostic_associes (codes du pool).
 # Colonnes des campagnes récentes (scenarios_bn_pmsi) et de l'étape amont de
 # substitution des DP imprécis (scripts/substituer_dp_imprecis.py) : reconnues
-# comme FACULTATIVES — documentées, jamais exigées. `cage` est une classe
-# d'âge (strates de substitution) : elle ne remplace pas `agean`, l'âge
-# numérique dont l'enrichisseur et fictomed ont besoin.
+# et documentées. Les campagnes ne livrent pas l'âge exact (agrégé en classes
+# `cage` dès l'extraction, protection assumée) : `agean` y est DÉRIVÉE de
+# `cage` (deriver_agean, graine par id_scenario) — d'où `cage` et
+# `id_scenario` requises quand `agean` est absente.
 SCHEMA_SOURCE: dict[str, Exigence] = {
     "diag2": Exigence(
         "obligatoire", "chaine",
@@ -268,13 +274,18 @@ SCHEMA_SOURCE: dict[str, Exigence] = {
         "(int(sexe), prénoms)",
         valeurs=("1", "2"), nuls=False),
     "agean": Exigence(
-        "obligatoire", "numerique",
+        "derivee", "numerique",
         "âge en années — typologie (adulte), enrichissement (age2 : nul = "
-        "ligne exclue), fictomed (age2)"),
+        "ligne exclue), fictomed (age2). Lue telle quelle si le fichier la "
+        "fournit (ancien format) ; sinon DÉRIVÉE de cage (tirage entier "
+        "uniforme, déterministe par id_scenario) : variable dérivée que le "
+        "CRH utilise, jamais une donnée observée"),
     "age": Exigence(
         "facultative", "chaine",
-        "classe d'âge (ge_18 / lt_18) — repli fictomed (cage) quand agean "
-        "est nul"),
+        "pivot ge_18 / lt_18 (branche longue des campagnes) : borne le tirage "
+        "d'agean à la frontière des 18 ans ; ancien format : classe d'âge, "
+        "repli fictomed (cage) quand agean est nul ; âge numérique en chaîne "
+        "(branche courte de C1) : sans effet, signalé"),
     "ghm2": Exigence(
         "typologie", "chaine",
         "GHM (CMD, type, sévérité) — typologie"),
@@ -308,15 +319,20 @@ SCHEMA_SOURCE: dict[str, Exigence] = {
         "typologie fournie par le fichier (sinon calculée) — clés des quotas"),
     # --- campagnes récentes (scenarios_bn_pmsi) ---
     "id_scenario": Exigence(
-        "facultative", "chaine",
-        "identifiant du scénario amont — clé de la graine de substitution des DP "
-        "(non unique par ligne : variantes de contexte de séjour)"),
+        "derivation", "chaine",
+        "identifiant du scénario amont — clé des graines (substitution des DP, "
+        "dérivation d'agean) ; obligatoire quand agean est absente ; non "
+        "unique par ligne (variantes de contexte de séjour d'un même scénario)",
+        nuls=False),
     "branche": Exigence(
         "facultative", "chaine",
         "long / court — axe du rapport de substitution ; non lue par la chaîne"),
     "cage": Exigence(
-        "facultative", "chaine",
-        "classe d'âge (strates de la substitution des DP) — ne remplace pas agean"),
+        "derivation", "chaine",
+        "classe d'âge « [a-b[ » (« [a-[ » pour la classe ouverte) — source de "
+        "la dérivation d'agean, obligatoire quand agean est absente ; strates "
+        "de la substitution des DP ; ne remplace pas l'âge numérique",
+        motif=r"^\[\d+-\d*\[$", nuls=False),
     "type_unite": Exigence(
         "facultative", "chaine",
         "type d'unité (UHCD = exemption de substitution) — non lue par la chaîne"),
@@ -382,9 +398,11 @@ def verifier_source(
     """Contrôle des prérequis du fichier de scénarios (:data:`SCHEMA_SOURCE`).
 
     Le fichier existe et se lit en parquet ; colonnes présentes selon leur
-    statut ; types ; encodage du sexe (PMSI 1/2) et du mode
+    statut (``agean`` absente → dérivée de ``cage``, alors requise avec
+    ``id_scenario``) ; types ; encodage du sexe (PMSI 1/2) et du mode
     d'hospitalisation (HC/HP) ; DP et DAS lisibles (codes compacts, DAS
-    séparés par des espaces) ; âge numérique ; typologie — fournie par le
+    séparés par des espaces) ; âge numérique s'il est fourni, libellé de
+    classe d'âge « [a-b[ » sinon ; typologie — fournie par le
     fichier (``TPEC``/``DPEC``, modalités affichées, modalités inconnues de
     :data:`DPEC_TO_TPEC` SIGNALÉES sans échec) ou calculable
     (:data:`COLONNES_TYPOLOGIE`, modalités calculées pour le rapport).
@@ -407,12 +425,18 @@ def verifier_source(
             raise BenchError(f"{chemin} : lecture parquet impossible — {exc}") from None
 
     typologie_fournie = {"TPEC", "DPEC"} <= set(df.columns)
+    agean_absente = "agean" not in df.columns
     rapport = RapportSource(chemin, df.height, list(df.columns), typologie_fournie)
     ecarts, signal = rapport.ecarts, rapport.signalements
+    if agean_absente:
+        signal.append("agean absente : DÉRIVÉE de cage par deriver_agean (tirage entier "
+                      "uniforme dans la classe, déterministe par id_scenario) — variable "
+                      "dérivée, pas une donnée observée")
 
     for col, ex in SCHEMA_SOURCE.items():
-        requise = ex.statut == "obligatoire" or (
-            ex.statut == "typologie" and not typologie_fournie)
+        requise = (ex.statut == "obligatoire"
+                   or (ex.statut == "typologie" and not typologie_fournie)
+                   or (ex.statut == "derivation" and agean_absente))
         if col not in df.columns:
             if requise:
                 ecarts.append(f"colonne manquante : {col} ({ex.statut} — {ex.role})")
@@ -459,11 +483,18 @@ def verifier_source(
                     f"modalités de DPEC inconnues de DPEC_TO_TPEC (nouvelles, "
                     f"conservées telles quelles) : {nouvelles}")
     else:
+        # agean dérivée à la volée pour le rapport (mêmes tirages que preparer_pool)
+        pour_typologie = df
+        if agean_absente and {"cage", "id_scenario"} <= set(df.columns) and not any(
+                e.startswith(("forme illisible : cage", "type inattendu : cage",
+                              "valeurs nulles : cage")) for e in ecarts):
+            pour_typologie = deriver_agean(df)[0]
         colonnes_saines = all(
-            c in df.columns and _type_ok(df[c].dtype, SCHEMA_SOURCE[c].type)
+            c in pour_typologie.columns
+            and _type_ok(pour_typologie[c].dtype, SCHEMA_SOURCE[c].type)
             for c in COLONNES_TYPOLOGIE)
         if colonnes_saines:
-            comptes = with_typologie(df).group_by("DPEC").len().sort("DPEC")
+            comptes = with_typologie(pour_typologie).group_by("DPEC").len().sort("DPEC")
             rapport.types = {str(k): int(v) for k, v in comptes.iter_rows()}
         else:
             signal.append("typologie non calculable (voir les écarts ci-dessus)")
@@ -493,8 +524,10 @@ def preparer_pool(
     referentials: Path = REFERENTIALS,
 ) -> pl.DataFrame:
     """Le pool candidat, prêt pour fictomed : :func:`verifier_source`
-    d'abord, puis chargement, typologie (conservée si le fichier la
-    fournit, sinon ``with_typologie``), identifiants de traçabilité, filtre
+    d'abord, puis chargement, dérivation d'``agean`` si le fichier ne la
+    fournit pas (``deriver_agean`` — premier geste : l'aval lit l'âge
+    final), typologie (conservée si le fichier la fournit, sinon
+    ``with_typologie``), identifiants de traçabilité, filtre
     DP (séjours dont le DP se termine par ``filtre_dp_suffixe`` — ``None``
     pour ne rien filtrer), tirage, enrichissement (lot E1), contrôle du
     contrat fiches côté pool, récap de la couverture par type.
@@ -511,6 +544,12 @@ def preparer_pool(
     print("Shape  :", source_df.shape, "— colonnes :", source_df.columns)
 
     verifier_source(source_path, df=source_df)
+
+    # agean en PREMIER geste après le contrôle : la typologie et
+    # l'enrichisseur consomment l'âge numérique, ils doivent voir la valeur
+    # finale (même principe d'ordre que la substitution des DP en amont).
+    source_df, _agean = deriver_agean(source_df)
+    print(_agean.texte())
 
     if {"TPEC", "DPEC"} <= set(source_df.columns):
         print("Typologie TPEC/DPEC fournie par le fichier — conservée telle quelle.")
@@ -595,7 +634,8 @@ def preparer_pool(
         print(f"Enrichissement : {len(_ajoutes)} code(s) ajouté(s) distincts, "
               "tous émissibles.")
 
-    print(f"Pool candidat : {candidate_source.height} séjours — couverture par type :")
+    print(f"Pool candidat : {candidate_source.height} séjours — agean {_agean.source} — "
+          "couverture par type :")
     _afficher(candidate_source.group_by("TPEC", "DPEC").len().sort(["TPEC", "DPEC"]))
     return candidate_source
 

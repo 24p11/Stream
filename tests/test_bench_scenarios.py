@@ -333,3 +333,152 @@ class TestTirageStratifie:
     def test_chaine_inconnue_refusee(self):
         with pytest.raises(ValueError, match="quotas inconnus"):
             tirage_stratifie(strates_jouet(), "tout")
+
+
+# ---------------------------------------------------------------------------
+# Dérivation de l'âge numérique depuis la classe d'âge (24/09/2026)
+# ---------------------------------------------------------------------------
+
+from bench.scenarios import (  # noqa: E402
+    LARGEUR_CLASSE_OUVERTE, bornes_cage, deriver_agean, graine_ligne,
+)
+
+
+class TestBornesCage:
+    def test_nominal_et_extremes(self):
+        assert bornes_cage("[18-30[") == (18, 29)
+        assert bornes_cage("[5-10[") == (5, 9)
+        assert bornes_cage("[0-1[") == (0, 0)
+        assert bornes_cage("[15-18[") == (15, 17)
+        assert bornes_cage("[80-[") == (80, 80 + LARGEUR_CLASSE_OUVERTE - 1) == (80, 89)
+        assert bornes_cage("  [1-5[ ") == (1, 4)
+
+    @pytest.mark.parametrize("libelle", ["80+", "18-30", "[18-30]", "", "ge_18", "[a-b[", None])
+    def test_libelle_inattendu_erreur_explicite(self, libelle):
+        with pytest.raises(ValueError, match="classe d'âge illisible"):
+            bornes_cage(libelle)
+
+    def test_classe_vide_refusee(self):
+        with pytest.raises(ValueError, match="classe d'âge vide"):
+            bornes_cage("[30-30[")
+
+
+def corpus_cage(n: int = 200, cage: str = "[18-30[", pivot: str | None = None) -> pl.DataFrame:
+    df = pl.DataFrame({"id_scenario": [f"s-{i:04d}" for i in range(n)],
+                       "cage": [cage] * n, "diag2": ["K358"] * n})
+    return df.with_columns(pl.lit(pivot).alias("age")) if pivot is not None else df
+
+
+class TestDeriverAgean:
+    def test_tirage_dans_la_classe_et_couverture(self):
+        out, rapport = deriver_agean(corpus_cage(600, "[18-30["))
+        assert out["agean"].dtype == pl.Int32
+        assert out["agean"].min() == 18 and out["agean"].max() == 29
+        assert set(out["agean"].to_list()) == set(range(18, 30))  # uniforme : toutes les valeurs sorties
+        assert rapport.derive and rapport.source == "dérivé de cage"
+        assert rapport.n_derives == 600 and rapport.n_lignes == 600
+        assert "variable DÉRIVÉE" in rapport.texte()
+
+    def test_classes_extremes(self):
+        df = pl.DataFrame({"id_scenario": ["a", "b"], "cage": ["[0-1[", "[80-["]})
+        out, _ = deriver_agean(df)
+        assert out["agean"][0] == 0 and 80 <= out["agean"][1] <= 89
+
+    def test_deterministe_deux_passes_et_ordre(self):
+        df = corpus_cage(300).with_columns(pl.Series("cage", ["[18-30[", "[60-70[", "[0-1["] * 100))
+        a, _ = deriver_agean(df)
+        b, _ = deriver_agean(df)
+        assert a["agean"].to_list() == b["agean"].to_list()
+        c, _ = deriver_agean(df.sample(fraction=1.0, shuffle=True, seed=3))
+        assert a.sort("id_scenario")["agean"].to_list() == c.sort("id_scenario")["agean"].to_list()
+
+    def test_deterministe_deux_processus(self, tmp_path):
+        import subprocess, sys
+        corpus_cage(50, "[40-50[").write_parquet(tmp_path / "c.parquet")
+        code = ("import polars as pl, sys; sys.path.insert(0, %r); "
+                "from bench.scenarios import deriver_agean; "
+                "print(deriver_agean(pl.read_parquet(%r))[0]['agean'].to_list())"
+                % (str(Path(__file__).resolve().parents[1]), str(tmp_path / "c.parquet")))
+        sorties = []
+        for graine_processus in ("1", "2"):
+            res = subprocess.run([sys.executable, "-c", code], capture_output=True, text=True,
+                                 env={"PYTHONHASHSEED": graine_processus, "PATH": ""})
+            assert res.returncode == 0, res.stderr
+            sorties.append(res.stdout)
+        assert sorties[0] == sorties[1]
+
+    def test_meme_cle_meme_age(self):
+        df = pl.DataFrame({"id_scenario": ["v"] * 20, "cage": ["[50-60["] * 20, "duree": list(range(20))})
+        out, _ = deriver_agean(df)
+        assert out["agean"].n_unique() == 1
+
+    def test_graine_stable_separee_par_domaine(self):
+        assert graine_ligne("x") == graine_ligne("x")
+        assert graine_ligne("x") != graine_ligne("y")
+        assert graine_ligne("x", "agean") != graine_ligne("x", "dp")
+
+    def test_agean_existant_jamais_ecrase(self):
+        df = corpus_cage(5).with_columns(pl.Series("agean", [3, 99, 7, 42, 0]))
+        out, rapport = deriver_agean(df)
+        assert out.equals(df)
+        assert not rapport.derive and rapport.source == "lu du fichier"
+        assert "conservée telle quelle" in rapport.texte()
+
+    def test_agean_non_numerique_erreur(self):
+        df = corpus_cage(3).with_columns(pl.lit("ge_18").alias("agean"))
+        with pytest.raises(ValueError, match="agean présente mais non numérique"):
+            deriver_agean(df)
+
+    def test_colonnes_manquantes(self):
+        with pytest.raises(ValueError, match=r"colonne\(s\) manquante\(s\) \['cage'\]"):
+            deriver_agean(pl.DataFrame({"id_scenario": ["a"]}))
+        with pytest.raises(ValueError, match=r"\['id_scenario'\]"):
+            deriver_agean(pl.DataFrame({"cage": ["[0-1["]}))
+
+    def test_pivot_restreint_la_classe_a_cheval(self):
+        n = 300
+        df = pl.DataFrame({"id_scenario": [f"p-{i}" for i in range(n)],
+                           "cage": ["[15-20["] * n,
+                           "age": ["lt_18", "ge_18"] * (n // 2)})
+        out, rapport = deriver_agean(df)
+        mineurs = out.filter(pl.col("age") == "lt_18")["agean"]
+        majeurs = out.filter(pl.col("age") == "ge_18")["agean"]
+        assert set(mineurs.to_list()) == {15, 16, 17}
+        assert set(majeurs.to_list()) == {18, 19}
+        assert rapport.source == "dérivé de cage, pivot age"
+        assert rapport.n_pivot_restreint == n and rapport.n_chevauchant_18_sans_pivot == 0
+        assert rapport.classes_chevauchant_18 == ["[15-20["]
+        assert any("toutes résolues par le pivot" in c for c in rapport.constats)
+
+    def test_pivot_contradictoire_ignore_et_compte(self):
+        df = pl.DataFrame({"id_scenario": ["a", "b"], "cage": ["[18-30[", "[0-1["],
+                           "age": ["lt_18", "ge_18"]})
+        out, rapport = deriver_agean(df)
+        assert 18 <= out["agean"][0] <= 29 and out["agean"][1] == 0
+        assert rapport.n_pivot_contradictoire == 2
+        assert any("contradictoire" in c for c in rapport.constats)
+
+    def test_pivot_numerique_sans_effet_signale(self):
+        df = pl.DataFrame({"id_scenario": ["a", "b"], "cage": ["[18-30["] * 2, "age": ["25", "27"]})
+        out, rapport = deriver_agean(df)
+        assert rapport.n_pivot_inconnu == 2 and rapport.n_pivot_restreint == 0
+        assert any("hors ge_18 / lt_18 sur 2 ligne(s)" in c for c in rapport.constats)
+
+    def test_classe_a_cheval_sans_pivot_consignee_sans_echec(self):
+        df = pl.DataFrame({"id_scenario": [f"c-{i}" for i in range(40)],
+                           "cage": ["[15-20[", "[18-30["] * 20})
+        out, rapport = deriver_agean(df)
+        assert out["agean"].null_count() == 0
+        assert rapport.classes_chevauchant_18 == ["[15-20["]
+        assert rapport.n_chevauchant_18_sans_pivot == 20
+        assert any("peut basculer mineur / majeur" in c for c in rapport.constats)
+
+    def test_classe_nulle_donne_agean_nul(self):
+        df = pl.DataFrame({"id_scenario": ["a", "b"], "cage": ["[18-30[", None]})
+        out, rapport = deriver_agean(df)
+        assert out["agean"][1] is None and rapport.n_sans_classe == 1
+        assert any("sans classe d'âge" in c for c in rapport.constats)
+
+    def test_libelle_inattendu_remonte(self):
+        with pytest.raises(ValueError, match="classe d'âge illisible"):
+            deriver_agean(corpus_cage(3, "80+"))

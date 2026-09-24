@@ -28,7 +28,7 @@ from enrichissement import (
     bloc_contexte,
     enrichir_scenarios,
 )
-from enrichissement.integration_stream import user_fn_enrichi
+from enrichissement.integration_stream import enrichir_candidats, user_fn_enrichi
 
 REPO = Path(__file__).resolve().parents[1]
 
@@ -356,3 +356,19 @@ def test_auto_controles_modules(module):
     proc = subprocess.run([sys.executable, "-m", module], cwd=REPO,
                           capture_output=True, text=True, timeout=300)
     assert proc.returncode == 0, proc.stderr[-800:]
+
+
+def test_enrichir_candidats_sans_collision_cage():
+    """Corpus de campagne : `cage` (classe « [a-b[ ») existe déjà et `age`
+    est le pivot ge_18/lt_18 — le renommage age→cage de l'intégration ne
+    doit ni échouer ni masquer l'âge numérique (agean → age2)."""
+    df = pl.DataFrame({
+        "diag2": ["K358", "I10"], "diagnostic_associes": ["", "E119"],
+        "agean": [45, 12], "sexe": ["1", "2"], "age": ["ge_18", "lt_18"],
+        "cage": ["[40-50[", "[10-15["], "nbda": [0, 1], "id_scenario": ["a", "b"],
+    })
+    out = enrichir_candidats(df, seed=3)
+    assert out["age"].to_list() == ["ge_18", "lt_18"]
+    assert out["cage"].to_list() == ["[40-50[", "[10-15["]
+    assert out["enrichi"].to_list() == [True, False]  # l'adulte enrichi, le mineur exclu
+    assert not any(c.startswith("__") for c in out.columns)

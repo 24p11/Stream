@@ -95,12 +95,46 @@ class TestVerifierSource:
             verifier_source(p)
 
     def test_colonne_manquante_listee(self, tmp_path, capsys):
-        p = parquet_jouet(tmp_path, source_jouet().drop("agean"))
-        with pytest.raises(BenchError, match="colonne manquante : agean \\(obligatoire") as exc:
+        p = parquet_jouet(tmp_path, source_jouet().drop("sexe"))
+        with pytest.raises(BenchError, match="colonne manquante : sexe \\(obligatoire") as exc:
             verifier_source(p)
-        # le rapport reste complet : typologie non calculable est signalée
-        assert "typologie non calculable" in str(exc.value)
         assert "1 ÉCART(S) BLOQUANT(S)" in str(exc.value)
+
+    def test_agean_absente_exige_cage_et_id_scenario(self, tmp_path):
+        # ancien format sans agean : ni cage ni id_scenario → deux écarts, typologie non calculable
+        p = parquet_jouet(tmp_path, source_jouet().drop("agean"))
+        with pytest.raises(BenchError) as exc:
+            verifier_source(p)
+        texte = str(exc.value)
+        assert "colonne manquante : id_scenario (derivation" in texte
+        assert "colonne manquante : cage (derivation" in texte
+        assert "typologie non calculable" in texte
+        assert "2 ÉCART(S) BLOQUANT(S)" in texte
+        assert "agean absente : DÉRIVÉE de cage" in texte
+
+    def test_agean_derivee_quand_absente(self, tmp_path, capsys):
+        # C1-like : pas d'agean, mais cage + id_scenario (+ pivot age) → conforme,
+        # typologie calculée sur l'âge dérivé
+        df = source_jouet().drop("agean").with_columns(
+            pl.Series("cage", ["[50-60[", "[70-80[", "[80-[", "[40-50[", "[30-40[",
+                               "[0-1[", "[18-30[", "[60-70[", "[40-50["]),
+            pl.Series("id_scenario", [f"s-{i}" for i in range(9)]),
+            pl.Series("age", ["ge_18"] * 5 + ["lt_18"] + ["ge_18"] * 3),
+        )
+        rapport = verifier_source(parquet_jouet(tmp_path, df))
+        assert rapport.conforme
+        assert rapport.types == {m: 1 for m in MODALITES_JOUET}
+        assert any(s.startswith("agean absente : DÉRIVÉE de cage") for s in rapport.signalements)
+        assert not any("supplémentaires" in s for s in rapport.signalements)
+        # libellé de classe illisible : écart explicite
+        df.with_columns(pl.lit("80+").alias("cage")).write_parquet(tmp_path / "b.pq")
+        with pytest.raises(BenchError, match="forme illisible : cage"):
+            verifier_source(tmp_path / "b.pq")
+
+    def test_ancien_format_avec_agean_toujours_conforme(self, tmp_path):
+        # agean fournie : cage et id_scenario ne sont pas exigées
+        rapport = verifier_source(parquet_jouet(tmp_path))
+        assert rapport.conforme and not any("agean" in s for s in rapport.signalements)
 
     def test_colonne_typologie_facultative_si_typologie_fournie(self, tmp_path):
         df = source_jouet().drop("ghm2", "racine").with_columns(
@@ -163,8 +197,10 @@ class TestVerifierSource:
 
     def test_schema_documente(self):
         for col, ex in SCHEMA_SOURCE.items():
-            assert ex.statut in ("obligatoire", "typologie", "facultative"), col
+            assert ex.statut in ("obligatoire", "typologie", "derivee", "derivation", "facultative"), col
             assert ex.role, col
+        assert SCHEMA_SOURCE["agean"].statut == "derivee"
+        assert SCHEMA_SOURCE["cage"].statut == SCHEMA_SOURCE["id_scenario"].statut == "derivation"
 
 
 # ---------------------------------------------------------------------------
@@ -190,7 +226,7 @@ class TestPreparerPool:
         # absents ; le jeton « NA » d'un DAS est journalisé lui aussi —
         # comportement de la cellule d'origine, conservé)
         assert "sans fiche à l'index — JOURNAL : ['E119', 'F172', 'I208', 'NA', 'Z640']" in out
-        assert "Pool candidat : 4 séjours — couverture par type :" in out
+        assert "Pool candidat : 4 séjours — agean lu du fichier — couverture par type :" in out
 
     def test_quotas_dict_et_sans_filtre(self, tmp_path):
         p = parquet_jouet(tmp_path)
@@ -243,6 +279,29 @@ class TestPreparerPool:
         assert "sans fiche à l'index — JOURNAL :" in out
         if "codes_ajoutes" in pool.columns and pool["codes_ajoutes"].drop_nulls().len():
             assert "tous émissibles." in out
+
+    def test_agean_derive_dans_le_recap(self, tmp_path, capsys):
+        df = source_jouet().drop("agean").with_columns(
+            pl.Series("cage", ["[50-60[", "[70-80[", "[80-[", "[40-50[", "[30-40[",
+                               "[0-1[", "[18-30[", "[60-70[", "[40-50["]),
+            pl.Series("id_scenario", [f"s-{i}" for i in range(9)]),
+        )
+        pool = preparer_pool(parquet_jouet(tmp_path, df), "couverture", 1, enrichir=False,
+                             filtre_dp_suffixe=None, referentials=bibliotheque_jouet(tmp_path, []))
+        assert "agean" in pool.columns and pool["agean"].null_count() == 0
+        out = capsys.readouterr().out
+        # source_jouet porte la colonne pivot `age` (ge_18 / lt_18)
+        assert "agean : dérivé de cage, pivot age — 9/9 lignes" in out
+        assert "Pool candidat : 9 séjours — agean dérivé de cage, pivot age — couverture par type :" in out
+        # typologie calculée sur l'âge dérivé : une modalité par ligne
+        assert pool["DPEC"].n_unique() == 9
+
+    def test_agean_lu_du_fichier_dans_le_recap(self, tmp_path, capsys):
+        preparer_pool(parquet_jouet(tmp_path), "couverture", 1, enrichir=False,
+                      filtre_dp_suffixe=None, referentials=bibliotheque_jouet(tmp_path, []))
+        out = capsys.readouterr().out
+        assert "agean : lu du fichier (9 lignes) — conservée telle quelle." in out
+        assert "Pool candidat : 9 séjours — agean lu du fichier — couverture par type :" in out
 
     def test_bibliotheque_hors_contrat_refusee(self, tmp_path):
         (tmp_path / "referentials" / "cards_library").mkdir(parents=True)

@@ -17,8 +17,10 @@ Depuis l'amincissement du notebook (septembre 2026), le module porte aussi
 les fonctions de données qui y étaient définies en cellules, à
 l'identique : la typologie des séjours (``with_typologie``, ``DPEC_TO_TPEC``),
 les identifiants de traçabilité (``ensure_source_ids``) et le tirage
-stratifié (``tirage_stratifie``, ``quotas_couverture``). L'orchestration
-(gardes, idempotence, messages) vit dans ``bench/banc.py``.
+stratifié (``tirage_stratifie``, ``quotas_couverture``), et depuis le
+24/09/2026 la dérivation de l'âge numérique (``deriver_agean``) depuis la
+classe d'âge des corpus de campagne. L'orchestration (gardes, idempotence,
+messages) vit dans ``bench/banc.py``.
 
 ``generate_and_select_fictomed_scenarios`` REMPLACE TEMPORAIREMENT le
 fichier ``profiles`` actif du dossier de données AP-HP par les candidats
@@ -32,7 +34,10 @@ sur répertoire scratch en tient lieu.
 
 from __future__ import annotations
 
+import hashlib
+import re
 import shutil
+from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -549,3 +554,198 @@ def tirage_stratifie(
     print(f"Tirage stratifié par {by} : {tirage.height} séjours "
           f"({len(parts)} strate(s), seed={seed}).")
     return tirage
+
+
+# ---------------------------------------------------------------------------
+# Dérivation de l'âge numérique (agean) depuis la classe d'âge (cage)
+#
+# Les corpus de campagne (scenarios_bn_pmsi) ne livrent PAS l'âge exact :
+# il est agrégé en classes (« cage », libellés « [a-b[ ») dès l'extraction —
+# protection assumée. Le contrat historique du producteur (utils.R v7,
+# l. 236/275) fabriquait agean en aval ; reproduit ici côté Python. agean
+# est donc une VARIABLE DÉRIVÉE que le CRH utilise ; elle ne doit jamais
+# être confondue avec une donnée observée.
+# ---------------------------------------------------------------------------
+
+_MOTIF_CAGE = re.compile(r"^\[(\d+)-(\d*)\[$")
+
+# Classe ouverte du haut (« [80-[ ») : borne basse à borne basse + 9. Choix
+# documenté : une largeur de dix ans comme les classes fermées adultes ; les
+# âges réels y dépassent 89 (C1 : jusqu'à 95), l'uniforme d'abord — voir la
+# question consignée sur une distribution intra-classe côté producteur.
+LARGEUR_CLASSE_OUVERTE = 10
+
+# Frontière mineur / majeur : la Politique d'enrichissement exclut les
+# mineurs (age_min = 18) ; un tirage à cheval ferait basculer un même
+# scénario enrichi / exclu selon la graine.
+SEUIL_MAJORITE = 18
+PIVOTS_MAJORITE = {"lt_18": (None, SEUIL_MAJORITE - 1), "ge_18": (SEUIL_MAJORITE, None)}
+
+
+def graine_ligne(cle: object, domaine: str = "agean") -> int:
+    """Graine stable d'une ligne : sha256 de ``"<domaine>|<cle>"``, 8 premiers
+    octets en entier. Même mécanique que ``scripts/substituer_dp_imprecis.py``
+    (JAMAIS ``hash()`` natif, salé par processus) ; le préfixe ``domaine``
+    sépare les tirages (DP substitué, âge) d'une même ligne."""
+    return int.from_bytes(
+        hashlib.sha256(f"{domaine}|{cle}".encode("utf-8")).digest()[:8], "big"
+    )
+
+
+def bornes_cage(libelle: str) -> tuple[int, int]:
+    """Bornes ENTIÈRES INCLUSES d'une classe d'âge « [a-b[ » : ``a`` à
+    ``b - 1`` ; « [0-1[ » → (0, 0) ; classe ouverte « [a-[ » → ``a`` à
+    ``a + LARGEUR_CLASSE_OUVERTE - 1``. Libellé inattendu → ``ValueError``
+    explicite (aucune interprétation silencieuse)."""
+    texte = str(libelle).strip()
+    m = _MOTIF_CAGE.match(texte)
+    if not m:
+        raise ValueError(
+            f"classe d'âge illisible : {libelle!r} — libellé attendu « [a-b[ » "
+            "(bornes entières, haute exclue) ou « [a-[ » (classe ouverte)."
+        )
+    lo = int(m.group(1))
+    hi = int(m.group(2)) - 1 if m.group(2) else lo + LARGEUR_CLASSE_OUVERTE - 1
+    if hi < lo:
+        raise ValueError(f"classe d'âge vide : {libelle!r} (borne haute ≤ borne basse).")
+    return lo, hi
+
+
+@dataclass
+class DerivationAgean:
+    """Ce que :func:`deriver_agean` a fait — à imprimer dans le récap du pool."""
+
+    derive: bool                      # agean dérivée (True) ou lue du fichier
+    source: str                       # "lu du fichier" | "dérivé de cage" | "dérivé de cage, pivot age"
+    n_lignes: int = 0
+    n_derives: int = 0
+    n_pivot_restreint: int = 0        # lignes où le pivot a resserré l'intervalle
+    n_pivot_contradictoire: int = 0   # pivot incompatible avec la classe : pivot ignoré
+    n_pivot_inconnu: int = 0          # pivot hors ge_18 / lt_18 (ex. valeur numérique)
+    n_sans_classe: int = 0            # cage nulle : agean nul
+    classes_chevauchant_18: list[str] = field(default_factory=list)
+    n_chevauchant_18_sans_pivot: int = 0
+    constats: list[str] = field(default_factory=list)
+
+    def texte(self) -> str:
+        if not self.derive:
+            return f"agean : {self.source} ({self.n_lignes} lignes) — conservée telle quelle."
+        lignes = [f"agean : {self.source} — {self.n_derives}/{self.n_lignes} lignes "
+                  "(tirage entier uniforme dans la classe, déterministe par id_scenario ; "
+                  "variable DÉRIVÉE, pas une donnée observée)."]
+        lignes += [f"  - {c}" for c in self.constats]
+        return "\n".join(lignes)
+
+
+def deriver_agean(
+    df: pl.DataFrame,
+    *,
+    colonne_cage: str = "cage",
+    colonne_cle: str = "id_scenario",
+    colonne_pivot: str = "age",
+) -> tuple[pl.DataFrame, DerivationAgean]:
+    """Ajoute ``agean`` (Int32) : tirage ENTIER uniforme dans les bornes de
+    la classe d'âge ``colonne_cage`` (:func:`bornes_cage`), DÉTERMINISTE —
+    graine par ligne :func:`graine_ligne` dérivée de ``colonne_cle`` (deux
+    passes, y compris entre processus, donnent le même résultat ; les
+    lignes partageant la clé — variantes d'un même scénario — reçoivent le
+    même âge). L'entier uniforme est le sha256 tronqué réduit modulo la
+    largeur de la classe (biais < 2⁻⁵⁷, sans objet).
+
+    NE JAMAIS ÉCRASER : si ``df`` porte déjà un ``agean`` numérique (ancien
+    format), il est rendu tel quel (``derive=False``) ; un ``agean`` non
+    numérique est une erreur explicite.
+
+    Cohérence à la frontière des 18 ans : quand la colonne pivot
+    ``colonne_pivot`` vaut ``ge_18`` / ``lt_18`` (branche longue des
+    campagnes), le tirage est restreint au sous-intervalle de la classe
+    compatible ; un pivot contradictoire avec la classe est ignoré et
+    compté ; une autre valeur (ex. âge numérique en chaîne, branche courte
+    de C1) n'est pas un pivot : comptée, sans effet. Sans pivot, une classe
+    qui chevauche 18 ans est CONSIGNÉE dans le rapport (information de
+    campagne, pas un choix silencieux). Une classe nulle donne un ``agean``
+    nul, compté.
+
+    Retourne ``(df, rapport)`` ; ``rapport.texte()`` est la ligne du récap.
+    """
+    if "agean" in df.columns:
+        if not df["agean"].dtype.is_numeric():
+            raise ValueError(
+                f"agean présente mais non numérique ({df['agean'].dtype}) : "
+                "la dérivation ne s'applique qu'à son absence, et un agean "
+                "illisible n'est pas écrasé — corriger le fichier."
+            )
+        return df, DerivationAgean(False, "lu du fichier", n_lignes=df.height)
+    manquantes = [c for c in (colonne_cage, colonne_cle) if c not in df.columns]
+    if manquantes:
+        raise ValueError(
+            f"dérivation d'agean impossible : colonne(s) manquante(s) {manquantes} "
+            f"(classe d'âge {colonne_cage!r}, clé de graine {colonne_cle!r})."
+        )
+
+    classes = df[colonne_cage].cast(pl.String).str.strip_chars()
+    bornes = {lib: bornes_cage(lib) for lib in classes.drop_nulls().unique().to_list()}
+    a_pivot = colonne_pivot in df.columns
+    pivots = df[colonne_pivot].cast(pl.String).to_list() if a_pivot else None
+    cles = df[colonne_cle].to_list()
+
+    rapport = DerivationAgean(
+        True, "dérivé de cage" + (", pivot age" if a_pivot else ""), n_lignes=df.height)
+    rapport.classes_chevauchant_18 = sorted(
+        lib for lib, (lo, hi) in bornes.items() if lo < SEUIL_MAJORITE <= hi)
+
+    graines: dict[object, int] = {}
+    valeurs: list[int | None] = []
+    for i, lib in enumerate(classes.to_list()):
+        if lib is None:
+            rapport.n_sans_classe += 1
+            valeurs.append(None)
+            continue
+        lo, hi = bornes[lib]
+        chevauche = lo < SEUIL_MAJORITE <= hi
+        pivot_valide = False
+        if a_pivot:
+            p = pivots[i]
+            if p in PIVOTS_MAJORITE:
+                pivot_valide = True
+                p_lo, p_hi = PIVOTS_MAJORITE[p]
+                lo2 = lo if p_lo is None else max(lo, p_lo)
+                hi2 = hi if p_hi is None else min(hi, p_hi)
+                if lo2 > hi2:
+                    rapport.n_pivot_contradictoire += 1
+                elif (lo2, hi2) != (lo, hi):
+                    rapport.n_pivot_restreint += 1
+                    lo, hi = lo2, hi2
+            elif p is not None:
+                rapport.n_pivot_inconnu += 1
+        if chevauche and not pivot_valide:
+            rapport.n_chevauchant_18_sans_pivot += 1
+        cle = cles[i]
+        g = graines.get(cle)
+        if g is None:
+            g = graines[cle] = graine_ligne(cle)
+        valeurs.append(lo + g % (hi - lo + 1))
+        rapport.n_derives += 1
+
+    if rapport.n_pivot_restreint:
+        rapport.constats.append(
+            f"pivot {colonne_pivot} (ge_18 / lt_18) : intervalle resserré sur "
+            f"{rapport.n_pivot_restreint} ligne(s) (classe à cheval sur 18 ans).")
+    if rapport.n_pivot_contradictoire:
+        rapport.constats.append(
+            f"pivot {colonne_pivot} contradictoire avec la classe sur "
+            f"{rapport.n_pivot_contradictoire} ligne(s) : pivot ignoré, classe conservée.")
+    if rapport.n_pivot_inconnu:
+        rapport.constats.append(
+            f"pivot {colonne_pivot} hors ge_18 / lt_18 sur {rapport.n_pivot_inconnu} "
+            "ligne(s) (ex. âge numérique en chaîne) : sans effet sur le tirage.")
+    if rapport.classes_chevauchant_18:
+        rapport.constats.append(
+            f"classe(s) chevauchant 18 ans : {rapport.classes_chevauchant_18} — "
+            + (f"{rapport.n_chevauchant_18_sans_pivot} ligne(s) tirée(s) sans pivot : "
+               "peut basculer mineur / majeur selon la graine (enrichissement exclu < 18)."
+               if rapport.n_chevauchant_18_sans_pivot else "toutes résolues par le pivot."))
+    if rapport.n_sans_classe:
+        rapport.constats.append(
+            f"{rapport.n_sans_classe} ligne(s) sans classe d'âge : agean nul.")
+    return df.with_columns(pl.Series("agean", valeurs, dtype=pl.Int32)), rapport

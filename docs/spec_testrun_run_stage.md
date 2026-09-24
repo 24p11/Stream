@@ -26,8 +26,19 @@ d'un corpus de campagne, exemption UHCD, repli hiérarchique, graine stable
 par `id_scenario`, colonnes de traçabilité `dp_origine` / `dp_substitue` /
 `repli_substitution`) ; `SCHEMA_SOURCE` reconnaît ces colonnes et celles des
 campagnes récentes (`id_scenario`, `branche`, `cage`, `type_unite`) comme
-facultatives — `agean` reste obligatoire. Le notebook consomme le corpus
-substitué comme n'importe quelle source (`SOURCE_PROFILES_PATH`).
+facultatives. Le notebook consomme le corpus substitué comme n'importe
+quelle source (`SOURCE_PROFILES_PATH`). Même jour, **dérivation d'`agean`**
+(`bench.scenarios.deriver_agean`, appelée en premier geste de
+`preparer_pool` après `verifier_source`) : les campagnes ne livrent pas
+l'âge exact (agrégé en classes `cage` « [a-b[ » dès l'extraction, protection
+assumée) ; `agean` y est un tirage entier uniforme dans la classe,
+déterministe par `id_scenario` (sha256, jamais `hash()`), borné à 18 ans par
+le pivot `age` (`ge_18` / `lt_18`) quand il existe, jamais écrasé s'il est
+fourni (ancien format). `SCHEMA_SOURCE` : `agean` passe de « obligatoire » à
+« dérivée si absente » (variable dérivée, jamais une donnée observée) ;
+`cage` (libellé « [a-b[ ») et `id_scenario` deviennent requises quand `agean`
+est absente (statut `derivation`), facultatives sinon — l'ancien format avec
+`agean` reste conforme. Le récap du pool dit si `agean` a été dérivée ou lue.
 
 v3.7 → v3.8 (septembre 2026, demande Rémi) : **renommage des répertoires,
 sans changement de code** — `work_prompts/` devient `generation/`, ses

@@ -33,7 +33,6 @@ _VERS_FICTOMED = {
                      # le loader fictomed le renomme cage ; sans ce rename il
                      # masquerait l'âge numérique (age2) pour l'enrichissement
 }
-_DEPUIS_FICTOMED = {v: k for k, v in _VERS_FICTOMED.items()}
 
 
 def enrichir_candidats(candidate_source: pl.DataFrame, seed: int | None,
@@ -48,13 +47,20 @@ def enrichir_candidats(candidate_source: pl.DataFrame, seed: int | None,
     (``build_scenario`` reconstruit ``text_secondary_icd_official`` et les
     fiches depuis le DAS du profil).
     """
-    natif = candidate_source.rename(
-        {k: v for k, v in _VERS_FICTOMED.items() if k in candidate_source.columns}
-    )
+    # Renommage sans collision : un corpus de campagne porte DÉJÀ `cage`
+    # (classe d'âge « [a-b[ ») — `age` (pivot ge_18 / lt_18 ou âge en chaîne)
+    # y est alors garé sous un nom neutre le temps de l'enrichissement, puis
+    # restauré : l'enrichisseur lit `age` puis `age2`, `age` ne doit pas
+    # masquer l'âge numérique.
+    colonnes = set(candidate_source.columns)
+    vers = {
+        k: (v if v not in colonnes else f"__{k}")
+        for k, v in _VERS_FICTOMED.items() if k in colonnes
+    }
+    depuis = {v: k for k, v in vers.items()}
+    natif = candidate_source.rename(vers)
     enrichi = enrichir_scenarios(natif, seed=seed, politique=politique)
-    enrichi = enrichi.rename(
-        {k: v for k, v in _DEPUIS_FICTOMED.items() if k in enrichi.columns}
-    )
+    enrichi = enrichi.rename({k: v for k, v in depuis.items() if k in enrichi.columns})
     if "nbda" in enrichi.columns:
         n_ajoutes = (
             pl.when(pl.col("codes_ajoutes").fill_null("") != "")

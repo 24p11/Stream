@@ -291,10 +291,11 @@ class TestSchemaSourceAval:
     def test_colonnes_de_campagne_et_de_tracabilite_reconnues(self, tmp_path):
         from bench.banc import SCHEMA_SOURCE, verifier_source
         from tests.test_bench_scenarios import source_jouet
-        for c in ("type_unite", "branche", "id_scenario", "cage",
-                  "dp_origine", "dp_substitue", "repli_substitution"):
+        for c in ("type_unite", "branche", "dp_origine", "dp_substitue", "repli_substitution"):
             assert SCHEMA_SOURCE[c].statut == "facultative"
-        assert SCHEMA_SOURCE["agean"].statut == "obligatoire"
+        for c in ("id_scenario", "cage"):  # requises seulement quand agean est absente
+            assert SCHEMA_SOURCE[c].statut == "derivation"
+        assert SCHEMA_SOURCE["agean"].statut == "derivee"
         df = source_jouet().with_columns(
             pl.lit("HC").alias("type_unite"), pl.lit("long").alias("branche"),
             pl.Series("id_scenario", [f"s-{i}" for i in range(9)]),
