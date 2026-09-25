@@ -812,9 +812,11 @@ def seeder(
 
     1. génération fictomed — un scénario par ligne du ``pool`` (skip si le
        test est déjà seedé : l'archive du tirage est affichée) ; garde : le
-       pool arrive DÉJÀ enrichi quand ``enrichir`` est actif ; la colonne
-       ``cage`` est retirée du profil transmis (collision ``age`` → ``cage``
-       du loader fictomed, ``agean`` présente) ;
+       pool arrive DÉJÀ enrichi quand ``enrichir`` est actif ; le profil
+       est transmis tel quel, ``cage`` comprise (le loader fictomed ne
+       renomme plus ``age`` → ``cage`` quand ``cage`` existe — commit
+       fictomed ``60f210b`` ; un contournement ici masquerait une
+       régression du loader) ;
     2. graine : ``prefix.txt`` du jeu (prime sur le prefix fictomed), user
        prompts avec contexte patient, ``test.json`` annoté ;
     3. figement du jeu par famille en ``system_prompt_file`` dans chaque
@@ -871,17 +873,6 @@ def seeder(
             )
         (FICTOMED_DIR / "_backups").mkdir(parents=True, exist_ok=True)
 
-        # Collision du loader fictomed : il renomme `age` → `cage` sans test
-        # d'existence ; un corpus de campagne porte déjà `cage` (classe d'âge)
-        # → DuplicateError. `agean` (→ age2) étant toujours présente ici,
-        # fictomed n'a jamais besoin de `cage` : on la retire du profil
-        # transmis (le pool en mémoire la garde).
-        _profil = candidate_source
-        if "cage" in _profil.columns and "agean" in _profil.columns:
-            _profil = _profil.drop("cage")
-            print("Colonne cage retirée du profil transmis à fictomed (collision age→cage du "
-                  "loader ; agean présente).")
-
         write_fictomed_config(
             config_file=FICTOMED_DIR / "servers.yaml",
             project_root=repo_root,
@@ -889,7 +880,7 @@ def seeder(
         )
 
         _, _, selected_scenarios = generate_and_select_fictomed_scenarios(
-            candidate_source=_profil,
+            candidate_source=candidate_source,
             config_file=FICTOMED_DIR / "servers.yaml",
             aphp_data_dir=Path(repo_root) / "data" / "aphp",
             paths={"backups": FICTOMED_DIR / "_backups"},

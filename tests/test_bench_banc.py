@@ -502,9 +502,10 @@ class TestSeeder:
 
 
 class TestSeederProfilFictomed:
-    def test_cage_retiree_du_profil_transmis(self, tmp_path, monkeypatch, capsys):
-        """fictomed simulé : le profil reçu ne porte plus `cage` (collision
-        age→cage du loader), le pool en mémoire la garde ; graine écrite."""
+    def test_profil_transmis_tel_quel_cage_comprise(self, tmp_path, monkeypatch, capsys):
+        """fictomed simulé : le profil reçu est le pool tel quel, `cage`
+        comprise (la collision age→cage est réglée dans le loader fictomed,
+        commit 60f210b — aucun contournement côté Stream) ; graine écrite."""
         import bench.banc as banc
         recu: dict = {}
 
@@ -529,11 +530,10 @@ class TestSeederProfilFictomed:
             pl.lit("[40-50[").alias("cage"), pl.lit(True).alias("enrichi"),
             pl.Series("id_scenario", [f"s-{i}" for i in range(9)]))
         selected = seeder(td, pool, source_path=tmp_path / "profils.pq", enrichir=True)
-        assert "cage" not in recu["colonnes"] and "agean" in recu["colonnes"]
-        assert "cage" in pool.columns  # le pool en mémoire est intact
+        assert recu["colonnes"] == pool.columns  # tel quel, cage comprise
         assert selected is not None and selected.height == 9
         assert scenario_dirs(td) == [f"{i:04d}" for i in range(9)]
-        assert "Colonne cage retirée du profil transmis à fictomed" in capsys.readouterr().out
+        assert "cage retirée" not in capsys.readouterr().out
 
 
 class TestPromptsVerificateur:

@@ -40,7 +40,7 @@ agrégé en classes dès l'extraction (protection) — la chaîne le dérive
 
 | Fichier | Rôle | Producteur |
 |---|---|---|
-| `ref_substitution_imprecis.parquet` (dans `data/aphp/`, à côté du corpus ; chemin passé en `--ref`) | candidats de remplacement des DP imprécis, pondérés (`nb`) par strate (cat, cage, sexe) | plateforme nationale (export seuillé) |
+| `ref_substitution_imprecis.parquet` (chemin passé en `--ref`) | candidats de remplacement des DP imprécis, pondérés (`nb`) par strate (cat, cage, sexe) | plateforme nationale (export seuillé) |
 | `dictionnaire_spe_racine.parquet` | (racine, `ge_18`/`lt_18`) → spécialités avec `ratio` (somme = 1) | Rémi — 864 lignes, 624 racines, 55 spécialités |
 | `mapping_type_unite.yaml` | type_unite → spécialité (libellé du dictionnaire, ou hors vocabulaire assumé par `hors_vocabulaire: true`) ou `DERIVER` ; seules les entrées `statut: valide` s'appliquent | Rémi |
 | Librairie de fiches (livraison recode-icd) | fiches descriptives des codes, sous contrat (`index.csv` fait foi, `DEPLOIEMENT.txt` = version installée) | recode-icd |
@@ -80,11 +80,26 @@ Ordre impératif — les fonctions de données vivent dans
 3. **`reparer_racine(df)`** — garde-fou : `racine = ghm2[:5]` quand
    `racine` est nulle ; trace `racine_reparee` ; compteur destiné à 0
    après la correction amont.
-4. **Typologie + tirage** — type de prise en charge TPEC/DPEC (fournie
-   par C1 et conservée telle quelle, sinon calculée par
-   `with_typologie` ; → **famille de template**), puis
-   `tirage_stratifie` selon `QUOTAS` (dict, `"couverture"` = 1 par
-   type, ou None).
+4. **Typologie** — type de prise en charge TPEC/DPEC (fournie par C1 et
+   conservée telle quelle, sinon calculée par `with_typologie`) : ce sont
+   les **strates du tirage**, rien d'autre — la **famille de template**
+   (`medical_inpatient`, `surgery_outpatient`, `delivery_…`) est choisie
+   par fictomed au seeding, selon ses propres règles.
+4 bis. **Avant le tirage**, trois gestes sur le corpus entier :
+   - `ensure_source_ids` — identifiants de traçabilité
+     (`source_row_id`, `source_scenario_id`), posés sur le parquet
+     complet pour survivre aux filtres ;
+   - **filtre DP** — `filtre_dp_suffixe="8"` par défaut : **seuls les
+     séjours dont le DP se termine par 8** (sous-catégories « autres
+     formes précisées ») sont tirés — c'est un choix de campagne, pas un
+     détail ; `filtre_dp_suffixe=None` (`FILTRE_DP_SUFFIXE = None` dans
+     les paramètres avancés du notebook) tire sur tout le corpus ;
+   - **exclusion des séjours incomplets pour fictomed** — `agean`,
+     `duree`, `mode_entree` ou `mode_sortie` nuls : fictomed les
+     écarterait en silence et la cible du tirage ne serait plus atteinte ;
+     ils sont écartés ici, comptés au récap.
+   Puis le **tirage** : `tirage_stratifie` selon `QUOTAS` (dict,
+   `"couverture"` = 1 par type, ou None = tirage simple de `TARGET_N`).
 5. **`deriver_specialite(df, dico, mapping)`** — trois étages, **par
    ligne** (la spécialité est une propriété du séjour, pas du cas) :
    - étage 1 : entrée `valide` du YAML pour `type_unite` → source
@@ -105,10 +120,10 @@ Ordre impératif — les fonctions de données vivent dans
 7. **Contrôle du contrat fiches** (`bench/fiches`) — chaque code du pool
    a sa fiche (absences journalisées), codes d'enrichissement émissibles.
 
-Le récap affiche : tirage par type, réparations racine, répartition
-`specialite_source`, paires (type de séjour, spécialité), lignes
-enrichies/exclues ; les paires (famille de template, spécialité) se
-lisent au tableau de contrôle du seeding.
+Le récap affiche : tirage par type, réparations racine, séjours
+incomplets écartés, répartition `specialite_source`, paires (type de
+séjour, spécialité), lignes enrichies/exclues ; les paires (famille de
+template, spécialité) se lisent au tableau de contrôle du seeding.
 
 #### Étape C — au seeding (`seeder()` puis fictomed)
 

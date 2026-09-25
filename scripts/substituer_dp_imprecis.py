@@ -26,7 +26,7 @@
 #     sur toute la branche « court » de C1), la règle par défaut — substituer —
 #     s'applique : un court programmé n'est pas une UHCD ; le constat est
 #     inscrit au rapport.
-#   ref_substitution_imprecis.parquet — agrégat seuillé exporté de la
+#   data/aphp/referentials/ref_substitution_imprecis.parquet — agrégat seuillé exporté de la
 #     plateforme : cat (catégorie CIM 3 caractères), code (chaque code observé
 #     de la catégorie), cage, sexe, nb (effectif réel observé = poids du
 #     tirage), niveau (sévérité CMA — NON utilisé en v1 : les effectifs sont
@@ -89,7 +89,7 @@
 #
 # Usage :
 #   python scripts/substituer_dp_imprecis.py <corpus.parquet>
-#       --ref <ref_substitution_imprecis.parquet> [--out <corpus_dp.parquet>]
+#       --ref data/aphp/referentials/ref_substitution_imprecis.parquet [--out <corpus_dp.parquet>]
 #   (défaut --out : <corpus>_dp.parquet, à côté du corpus)
 
 from __future__ import annotations
@@ -385,7 +385,7 @@ def main() -> int:
         description="Substitue les DP imprécis d'un corpus de scénarios (fichier → fichier).")
     ap.add_argument("corpus", type=Path, help="corpus scenarios_<C>.parquet")
     ap.add_argument("--ref", type=Path, required=True,
-                    help="ref_substitution_imprecis.parquet (agrégat seuillé)")
+                    help="data/aphp/referentials/ref_substitution_imprecis.parquet (agrégat seuillé)")
     ap.add_argument("--out", type=Path, default=None,
                     help="parquet de sortie (défaut : <corpus>_dp.parquet)")
     args = ap.parse_args()
