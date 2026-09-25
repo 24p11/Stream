@@ -185,3 +185,29 @@ reste se fait en mémoire dans `preparer_pool`. Reste fragile : fictomed
 prend comme profils actif le `scenarios_*` le plus récent de `data/aphp/`
 — ici `scenarios_C1_dp.rapport.txt` (écrasé puis restauré à chaque
 seeding). Déplacer le rapport hors de `data/aphp/` règle le point.
+
+## Post-scriptum du 25 septembre (3) — fictomed corrigé par Rémi, chaîne retestée
+
+Deux commits Rémi sur `~/Documents/fictomed`, branche `prompt-work`, poussés
+sur `fork/prompt-work` : **`60f210b`** (`_safe_rename` ignore un renommage
+dont la cible existe déjà — fin de la collision `age` → `cage`) et
+**`4795635`** (motifs de profils `scenarios_*.parquet` / `scenarios_*.pq`,
+plus de motif nu — le rapport `.txt` n'est plus pris pour le fichier de
+profils), avec `tests/test_aphp_loader.py` (8 tests verts).
+
+Retest sans appel payant : `verifier_environnement` vert (éditable, registre
+15 111 / 2 054) ; suite Stream 272 verts + l'échec préexistant ;
+`generate_and_select` direct avec la colonne `cage` **conservée** → OK,
+profil actif résolu `scenarios_C1_dp.parquet`, `department` = `specialty`,
+15/15 prompts avec la ligne Service attendue ; notebook enregistré (test 07,
+source `scenarios_C1_dp.parquet`) rejoué jusqu'au dry-run et au bilan : 0
+erreur. Le retrait de `cage` dans `seeder` (Stream) est conservé : redondant
+avec le correctif fictomed, il garde la chaîne opérante face au fictomed de
+Brest non patché.
+
+Test 07 réel (lancé par Rémi, 15 CRH) : `check_crh` → 13 CRH avec service
+fourni, **1 seul échec `fidelite_service`** (l'instruction « restitué TEL
+QUEL » du jeu 07 est suivie), 2 scénarios en repli sans ligne Service ;
+autres échecs : gras 13, fantômes 83, poids/taille 3. Le test 07 n'est pas
+encore commité (dossiers scénario, `usage.json`, `usage_log.csv`) : « figer
+un jeu = commiter son test » — décision Rémi.
