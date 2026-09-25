@@ -28,9 +28,20 @@ prochaines étapes). En fin de session significative, y déposer une nouvelle en
   (convention : clone frère du repo, `~/Documents/fictomed`, remote CHU-Brest,
   branche `prompt-work` — chemin propre à chaque poste) :
   `uv pip install -e ~/Documents/fictomed`. Attention : `uv sync` **et**
-  `uv run` réinstallent le fictomed PyPI 0.1.2 (cassé) — refaire l'éditable
-  après chaque sync, puis redémarrer le noyau ; la cellule bootstrap du
-  notebook vérifie l'installation.
+  `uv run` réinstallent le paquet PyPI fictomed (wheel sans `regles_atih.yml`,
+  quelle que soit sa version : seul le chemin, site-packages ou clone, fait
+  foi) — refaire l'éditable après chaque sync, puis redémarrer le noyau ; la
+  cellule bootstrap du notebook vérifie l'installation.
+
+## Documentation
+
+- `docs/spec_testrun_run_stage.md` : la spec du banc (API, arborescence d'un test,
+  coûts) — mise à jour à chaque chantier qui change le banc.
+- `docs/pipeline_donnees_aphp.md` : le descriptif du pipeline de données AP-HP
+  (fichiers d'entrée et producteurs, transformations dans l'ordre, contenu du
+  scénario final). Convention : un pipeline = un descriptif dans `docs/`, sur ce
+  gabarit ; un chantier qui change le pipeline met à jour son descriptif — même
+  règle que pour la spec.
 
 ## Conventions
 

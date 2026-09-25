@@ -235,6 +235,26 @@ livrée — ne pas copier le contrat dans ce dépôt).
   se fait en lisant les notes de la livraison (et `CONTRAT.md` si
   `format_version` change), jamais par synchronisation automatique.
 
+## Pipelines de données
+
+La machinerie de génération est **générique** : le package `bench/`
+(préparation du pool, seeding, figement, génération, bilan), fictomed
+(construction des séjours fictifs) et le format des tests
+(`generation/runs/NN/`) ne connaissent aucun site. Chaque **instanciation
+de site** — ses données d'entrée, ses référentiels, ses règles métier — est
+décrite par un descriptif de pipeline dédié, dans `docs/`.
+
+- **Convention** : tout nouveau pipeline (autre site, autre campagne au
+  format différent) reçoit son descriptif, sur le même gabarit en trois
+  sections — fichiers d'entrée et producteurs ; transformations dans
+  l'ordre d'exécution ; contenu du scénario final. Un chantier qui change
+  le pipeline met à jour son descriptif, comme il met à jour la spec.
+- **Premier descriptif** : [docs/pipeline_donnees_aphp.md](docs/pipeline_donnees_aphp.md)
+  — le pipeline AP-HP, de la campagne (`scenarios_C1.parquet`) au prompt
+  utilisateur. Ce qui fait foi reste le code (`bench/scenarios.py`,
+  `bench/banc.py`), les contrats (`SCHEMA_SOURCE`, CONTRAT.md recode-icd)
+  et la spec ; le descriptif les raconte dans l'ordre.
+
 ## Tests
 
 Pour exécuter les tests unitaires, utilisez la commande suivante :
