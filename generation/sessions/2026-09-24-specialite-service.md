@@ -128,3 +128,24 @@ désactive cette jointure (colonne présente) ; une ligne en repli
    surprenantes.
 2. Prérequis fictomed ci-dessus, puis test 07 (`TEST_NUM = "07"`,
    `PREV_TEST = "06"`, source C1).
+
+## Post-scriptum du 25 septembre — décisions Rémi sur le mapping
+
+Les sept entrées passent en `valide` : HC → DERIVER, GERIATRIE → GERIATRIE,
+NEONAT → NEONATOLOGIE (court-circuite le dictionnaire, qui donnerait
+OBSTETRIQUE, le service de la mère), SC → Réanimation (les USC vivent dans
+les services de réanimation), SC-NEONAT → Réanimation néonatale, HP →
+DERIVER, UHCD → Urgences – UHCD. Quatre libellés sont **hors des 55 du
+dictionnaire**, assumés : le chargeur les refusait ; il accepte désormais
+une entrée qui le déclare (`hors_vocabulaire: true`, posé sur ces quatre
+entrées) et refuse toujours un libellé hors vocabulaire non assumé
+(faute de frappe). Le libellé traverse tel quel jusqu'au CR et
+`check_crh` le contrôle tel quel — attention au tiret demi-cadratin de
+« Urgences – UHCD » : un CR qui écrit « Urgences - UHCD » (tiret simple)
+sera en ECHEC `fidelite_service` ; à surveiller en campagne 2, ou
+simplifier le libellé.
+
+Effet : passe couverture C1 → observee 3, unique 12, tirée 0, repli 1
+(les deux nouveau-nés en NEONATOLOGIE, le néonat chir en Réanimation
+néonatale) ; tout C1 → **observee 111 921 (10 %), unique 792 014, tirée
+101 230, repli 82 360**. 5 entrées appliquées à chaque `preparer_pool`.

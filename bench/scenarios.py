@@ -855,7 +855,11 @@ def charger_mapping_type_unite(
     ``proposition`` est ignorée (l'étage 2 prend le relais) — corriger les
     statuts suffit à activer, sans autre geste. Si ``vocabulaire`` est
     donné (les libellés du dictionnaire des spécialités), une entrée
-    valide hors vocabulaire est une erreur explicite.
+    valide hors vocabulaire est une erreur explicite, SAUF si l'entrée
+    l'assume : ``hors_vocabulaire: true`` (décision du producteur du
+    mapping — un service qui n'est pas une unité du dictionnaire, ex.
+    « Réanimation », « Urgences – UHCD ») ; le libellé est alors transmis
+    tel quel jusqu'au CR (contrôle de fidélité tel quel en aval).
     """
     import yaml
 
@@ -874,10 +878,11 @@ def charger_mapping_type_unite(
         specialite = str(entree.get("specialite", "")).strip()
         if not specialite or specialite == DERIVER:
             continue
-        if vocab is not None and specialite not in vocab:
+        if vocab is not None and specialite not in vocab and not bool(entree.get("hors_vocabulaire", False)):
             raise ValueError(
                 f"{chemin} : entrée {type_unite!r} valide avec une spécialité hors "
-                f"vocabulaire du dictionnaire : {specialite!r}.")
+                f"vocabulaire du dictionnaire : {specialite!r} — l'assumer avec "
+                "`hors_vocabulaire: true`, ou choisir un des libellés du dictionnaire.")
         applicables[str(type_unite).strip().upper()] = specialite
     return applicables
 

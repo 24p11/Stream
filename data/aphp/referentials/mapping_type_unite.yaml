@@ -10,7 +10,9 @@
 #   data/aphp/referentials/dictionnaire_spe_racine.parquet (vocabulaire
 #   officiel des unités médicales AP-HP), ou la valeur DERIVER (« pas une
 #   spécialité : l'étage 2 — dictionnaire par racine et groupe d'âge — décide »).
-#   Une entrée `valide` hors vocabulaire est refusée au chargement.
+#   Une entrée `valide` hors vocabulaire est refusée au chargement, sauf si
+#   elle l'assume avec `hors_vocabulaire: true` (le libellé est alors transmis
+#   tel quel jusqu'au CR, et contrôlé tel quel par check_crh).
 # RÈGLE D'APPLICATION : seules les entrées `statut: valide` sont appliquées par
 #   la chaîne ; une entrée `proposition` est IGNORÉE (l'étage 2 prend le
 #   relais). Corriger les statuts suffit à activer — aucun autre geste.
@@ -24,22 +26,28 @@ vocabulaire: data/aphp/referentials/dictionnaire_spe_racine.parquet (lib_spe_uma
 entrees:
   HC:            # 602 822 lignes (long) — hospitalisation complète : un mode, pas une spécialité
     specialite: DERIVER
-    statut: proposition
-  GERIATRIE:     # 70 898 (long) — 69 844 en [80-[ ; pas de « gériatrie » dans le vocabulaire
-    specialite: MEDECINE INTERNE   # candidats : MEDECINE INTERNE ; DERIVER (la racine dirait cardio, pneumo…) ; SOINS PALLIATIFS non
-    statut: proposition
-  NEONAT:        # 20 861 (long) — unité de néonatalogie
-    specialite: NEONATOLOGIE       # candidats : NEONATOLOGIE ; PEDIATRIE GENERALE (le dictionnaire donne surtout OBSTETRIQUE sur ces racines : nouveau-né rattaché à la mère)
-    statut: proposition
-  SC:            # 17 692 (long) — soins continus : médecine 10 309, chirurgie 6 636, brûlés 353 → pas une spécialité
-    specialite: DERIVER
-    statut: proposition
-  SC-NEONAT:     # 2 470 (long) — soins continus de néonatalogie
+    statut: valide
+  GERIATRIE:     # 70 898 (long) — 69 844 en [80-[ ; libellé observé, hors des 55 du dictionnaire (décision Rémi)
+    specialite: GERIATRIE
+    statut: valide
+    hors_vocabulaire: true   # libellé hors des 55 du dictionnaire, assumé
+  NEONAT:        # 20 861 (long) — court-circuite le dictionnaire (qui donnerait OBSTETRIQUE, le service de la mère)
     specialite: NEONATOLOGIE
-    statut: proposition
-  HP:            # 674 (long) — hospitalisation partielle, toutes en « Séances simples » (dialyse, radiothérapie…)
-    specialite: DERIVER            # candidats : DERIVER ; DIALYSE ADULTE / RADIOTHERAPIE selon la racine — l'étage 2 le sait
-    statut: proposition
-  UHCD:          # 0 dans C1 — attendu en campagne 2 (branche courte) ; pas d'« urgences » dans le vocabulaire
-    specialite: DERIVER            # candidats : DERIVER ; MEDECINE INTERNE
-    statut: proposition
+    statut: valide
+  SC:            # 17 692 (long) — soins continus (périmètre USC+réa agrégé) ; en pratique les USC vivent
+                 # dans les services de réanimation : « Réanimation » = nom de service plausible (décision Rémi)
+    specialite: Réanimation
+    statut: valide
+    hors_vocabulaire: true   # libellé hors des 55 du dictionnaire, assumé
+  SC-NEONAT:     # 2 470 (long) — même logique
+    specialite: Réanimation néonatale
+    statut: valide
+    hors_vocabulaire: true   # libellé hors des 55 du dictionnaire, assumé
+  HP:            # 674 (long) — toutes en « Séances simples » : la racine dira (dialyse, radiothérapie…)
+    specialite: DERIVER
+    statut: valide
+  UHCD:          # 0 dans C1 — attendu campagne 2 ; lits porte des urgences (cohérent avec la conservation
+                 # des DP imprécis en UHCD, chantier substitution)
+    specialite: Urgences – UHCD
+    statut: valide
+    hors_vocabulaire: true   # libellé hors des 55 du dictionnaire, assumé

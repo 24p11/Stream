@@ -568,21 +568,31 @@ entrees:
         assert charger_mapping_type_unite(p) == {"NEONAT": "NEONATOLOGIE"}
         assert charger_mapping_type_unite(p, ["NEONATOLOGIE"]) == {"NEONAT": "NEONATOLOGIE"}
 
-    def test_valide_hors_vocabulaire_refuse(self, tmp_path):
+    def test_valide_hors_vocabulaire_refuse_sauf_assume(self, tmp_path):
         p = yaml_mapping(tmp_path, "entrees:\n  X: {specialite: URGENCES, statut: valide}\n")
-        with pytest.raises(ValueError, match="hors vocabulaire"):
+        with pytest.raises(ValueError, match="hors vocabulaire.*hors_vocabulaire: true"):
             charger_mapping_type_unite(p, ["NEONATOLOGIE"])
+        p = yaml_mapping(tmp_path, "entrees:\n  X: {specialite: URGENCES, statut: valide, hors_vocabulaire: true}\n")
+        assert charger_mapping_type_unite(p, ["NEONATOLOGIE"]) == {"X": "URGENCES"}
 
     def test_fichier_vide_ou_illisible(self, tmp_path):
         assert charger_mapping_type_unite(yaml_mapping(tmp_path, "# rien\n")) == {}
         with pytest.raises(ValueError, match="illisible"):
             charger_mapping_type_unite(yaml_mapping(tmp_path, "entrees:\n  X: NEONATOLOGIE\n"))
 
-    def test_yaml_du_depot_toutes_en_proposition(self):
-        p = Path(__file__).resolve().parents[1] / "data" / "aphp" / "referentials" / "mapping_type_unite.yaml"
-        if not p.is_file():
-            pytest.skip("mapping_type_unite.yaml absent de data/ sur ce poste")
-        assert charger_mapping_type_unite(p) == {}  # propositions : rien d'appliqué tant que Rémi n'a pas validé
+    def test_yaml_du_depot_charge_avec_le_vocabulaire_reel(self):
+        # les décisions de Rémi (25/09/2026) : cinq entrées appliquées, dont quatre hors
+        # vocabulaire assumées ; HC et HP en DERIVER (étage 2)
+        racine = Path(__file__).resolve().parents[1]
+        p = racine / "data" / "aphp" / "referentials" / "mapping_type_unite.yaml"
+        dico = racine / "data" / "aphp" / "referentials" / "dictionnaire_spe_racine.parquet"
+        if not (p.is_file() and dico.is_file()):
+            pytest.skip("mapping ou dictionnaire absent de data/ sur ce poste")
+        vocab = pl.read_parquet(dico)["lib_spe_uma"].unique().to_list()
+        applicables = charger_mapping_type_unite(p, vocab)
+        assert "HC" not in applicables and "HP" not in applicables  # DERIVER
+        assert applicables["NEONAT"] == "NEONATOLOGIE"
+        assert set(applicables) >= {"GERIATRIE", "NEONAT", "SC", "SC-NEONAT", "UHCD"}
 
 
 def corpus_specialite(n: int = 1, **colonnes) -> pl.DataFrame:
