@@ -201,7 +201,8 @@ Conventions :
   copies manuelles : nom libre). Sert de `custom_id` batch, de clé de
   jointure du contexte et de valeur pour `only`.
 - **Découverte disque** : sous-dossiers directs de `test_dir`, hors
-  `system/`, `batches/` et dossiers cachés, triés alphabétiquement. Les
+  `system/`, `batches/`, `export_dict/` (nettoyage d'export) et dossiers cachés,
+  triés alphabétiquement. Les
   fichiers à la racine (`prompt_local.py`, `test.json`, ...) sont ignorés.
 - **Nommage** : `prompt_system_<position>.txt` (défaut de
   `copy_system_prompts`) — donc `prompt_system_one_gen.txt` pour la
@@ -625,7 +626,7 @@ Tous sans réseau (client Mistral mocké), sur `tmp_path` :
    présents ; refus si `generation_id` dupliqués/nuls ou `template_name`
    nul ; `test.json` conforme (`seed_path` en `as_posix`, blocs
    `generation_ids` et `templates`).
-2. `scenario_dirs` : exclut `system/`, `batches/` et cachés, ignore les
+2. `scenario_dirs` : exclut `system/`, `batches/`, `export_dict/` et cachés, ignore les
    fichiers à la racine (dont `prompt_local.py`), tri alphabétique ; **un
    dossier copié manuellement apparaît**.
 3. `copy_system_prompts` : deux scénarios de familles différentes reçoivent

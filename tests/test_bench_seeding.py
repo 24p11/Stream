@@ -282,3 +282,14 @@ class TestPortabilite:
         assert "\\" not in payload["seed_path"]
         assert "/" in payload["seed_path"]
         assert payload["seed_path"].endswith("data/aphp/scenarios.parquet")
+
+
+def test_scenario_dirs_ignore_les_noms_reserves(tmp_path: Path):
+    """§2 : system/, batches/, export_dict/ (nettoyage d'export), __pycache__/
+    et les dossiers cachés ne sont pas des scénarios — alignement sur les
+    scripts (RESERVED_DIRS de check_crh)."""
+    test_dir = seeded_test_dir(tmp_path)
+    for nom in ("system", "batches", "export_dict", "__pycache__", ".fictomed"):
+        (test_dir / nom).mkdir(exist_ok=True)
+    (test_dir / "fichier_racine.txt").write_text("x")
+    assert scenario_dirs(test_dir) == ["0000", "0001"]

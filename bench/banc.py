@@ -169,8 +169,10 @@ def verifier_environnement(
             "fictomed n'est pas l'éditable attendu — trouvé : "
             f"{_fictomed_file}. Réparation : uv pip install -e {fictomed_src} "
             "(cloner CHU-Brest/fictomed, branche prompt-work, si absent). "
-            "Rappel : uv sync / uv run réinstallent le PyPI 0.1.2, cassé — "
-            "refaire l'éditable après chaque sync, puis redémarrer le noyau."
+            "Rappel : uv sync / uv run réinstallent le paquet PyPI (wheel sans "
+            "regles_atih.yml, quelle que soit sa version : seul le chemin, "
+            "site-packages ou clone, fait foi) — refaire l'éditable après chaque "
+            "sync, puis redémarrer le noyau."
         )
 
     print("Racine repo  :", REPO_ROOT)
@@ -1146,6 +1148,66 @@ def bilan(
         print("SKIP — script absent (pas encore commité) :", _reancre)
 
 
+# ---------------------------------------------------------------------------
+# Entrées du juge d'équivalence — nettoyage d'export puis JSONL (optionnel)
+# ---------------------------------------------------------------------------
+
+def _module_juge_io():
+    """scripts/juge_io.py chargé comme module (contrat d'E/S du juge dans
+    sa docstring ; il rend lui-même check_crh importable)."""
+    import importlib.util
+
+    _spec = importlib.util.spec_from_file_location("juge_io", SCRIPTS_DIR / "juge_io.py")
+    _mod = importlib.util.module_from_spec(_spec)
+    _spec.loader.exec_module(_mod)
+    return _mod
+
+
+def preparer_entrees_juge(
+    td: Path,
+    *,
+    out_file: str = "crh_generation.txt",
+    seuil: float = 0.75,
+    out_jsonl: Path | None = None,
+    apercu: int = 5,
+) -> list[dict]:
+    """Prépare les entrées du juge d'équivalence pour le test ``td`` :
+
+    1. nettoyage d'export des dictionnaires (``scripts/nettoie_dictionnaire.py``
+       sur ``out_file``, sortie ``<td>/export_dict/`` — lecture seule sur
+       les dossiers scénario) ;
+    2. ``juge_io.ecrire_entrees_juge`` → ``<td>/entrees_juge.jsonl`` (une
+       ligne par code du scénario : code, libellé, fiche, passages propres —
+       contrat dans la docstring de ``scripts/juge_io.py``) ;
+    3. affichage du compte d'entrées et des ``apercu`` premières lignes
+       (scénario, code, libellé, nombre de passages, fiche présente).
+
+    Sans CR nettoyable (aucun run réel), dit pourquoi et rend une liste
+    vide — jamais d'exception. Retourne les lignes écrites.
+    """
+    td = Path(td)
+    export = td / "export_dict"
+    code_retour = _lancer_script(
+        SCRIPTS_DIR / "nettoie_dictionnaire.py", str(td),
+        "--source", out_file, "--seuil", str(seuil), "--out", str(export),
+    )
+    if code_retour != 0:
+        print(f"Pas d'entrées juge : aucun CR nettoyable dans {td} "
+              f"(lancer le run réel de {out_file} d'abord).")
+        return []
+    cible = Path(out_jsonl) if out_jsonl is not None else td / "entrees_juge.jsonl"
+    lignes = _module_juge_io().ecrire_entrees_juge(td, export, cible)
+    scenarios = sorted({l["scenario"] for l in lignes})
+    avec_fiche = sum(1 for l in lignes if l["fiche"])
+    sans_passage = sum(1 for l in lignes if not l["passages"])
+    print(f"Entrées juge : {len(lignes)} code(s) sur {len(scenarios)} scénario(s) — "
+          f"{avec_fiche} avec fiche, {sans_passage} sans passage — écrit : {cible}")
+    for l in lignes[:apercu]:
+        print(f"  {l['scenario']}  {l['code']:8s} {len(l['passages'])} passage(s)  "
+              f"fiche {'oui' if l['fiche'] else 'NON'}  — {l['libelle'][:70]}")
+    return lignes
+
+
 __all__ = [
     "DATA_APHP",
     "Exigence",
@@ -1166,6 +1228,7 @@ __all__ = [
     "etat_test",
     "mistral_client",
     "monter_jeu",
+    "preparer_entrees_juge",
     "preparer_pool",
     "prompts_verificateur",
     "seeder",

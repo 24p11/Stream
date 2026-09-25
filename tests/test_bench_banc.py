@@ -21,6 +21,7 @@ from bench.banc import (
     dossiers_test,
     etat_test,
     monter_jeu,
+    preparer_entrees_juge,
     preparer_pool,
     prompts_verificateur,
     seeder,
@@ -555,6 +556,44 @@ class TestPromptsVerificateur:
         prompts_verificateur(td, "S", "U")
         assert "Pas de dossiers scénario — seeder d'abord (3.1a)." in capsys.readouterr().out
         assert scenario_dirs(td) == []
+
+
+class TestPreparerEntreesJuge:
+    def test_nettoyage_puis_jsonl_et_apercu(self, tmp_path, capsys):
+        from tests.test_scripts_verification import _crh, _fiche, _scenario, _user_generation
+
+        td = tmp_path / "07"
+        fiche = _fiche("N85.8", "Autres affections précisées de l'utérus", ["atrophie utérine"])
+        user = _user_generation(("N858", "Autres affections précisées de l'utérus"),
+                                das=[("I10", "Hypertension essentielle (primitive)")],
+                                fiches=[fiche])
+        cr = "Le patient présente une atrophie utérine confirmée, et une hypertension artérielle connue."
+        _scenario(td, "0000", user, _crh(cr, {
+            "Autres affections précisées de l'utérus (N858)": ["atrophie utérine"],
+            "Hypertension essentielle (primitive) (I10)": ["hypertension artérielle", "formulation orpheline"]}))
+        _scenario(td, "0001", user, None)  # pas de CR : ignoré par le nettoyage
+        lignes = preparer_entrees_juge(td)
+        assert [(l["scenario"], l["code"]) for l in lignes] == [("0000", "N858"), ("0000", "I10")]
+        assert lignes[0]["fiche"] and lignes[0]["passages"] == ["atrophie utérine"]
+        assert lignes[1]["fiche"] is None and lignes[1]["passages"] == ["hypertension artérielle"]
+        assert (td / "export_dict" / "0000.json").is_file() and (td / "entrees_juge.jsonl").is_file()
+        assert len((td / "entrees_juge.jsonl").read_text(encoding="utf-8").splitlines()) == 2
+        out = capsys.readouterr().out
+        assert "[0000]" in out  # sortie du script de nettoyage réimprimée
+        assert "Entrées juge : 2 code(s) sur 1 scénario(s) — 1 avec fiche, 0 sans passage" in out
+        assert "0000  N858     1 passage(s)  fiche oui" in out
+        assert "0000  I10      1 passage(s)  fiche NON" in out
+        # scénario sans user_generation.txt d'export : export_dict n'est pas pris pour un scénario
+        assert scenario_dirs(td) == ["0000", "0001"]
+
+    def test_sans_cr_message_et_liste_vide(self, tmp_path, capsys):
+        from tests.test_scripts_verification import _scenario, _user_generation
+
+        td = tmp_path / "07"
+        _scenario(td, "0000", _user_generation(("N858", "Autres affections précisées de l'utérus")), None)
+        assert preparer_entrees_juge(td) == []
+        assert "Pas d'entrées juge : aucun CR nettoyable" in capsys.readouterr().out
+        assert not (td / "entrees_juge.jsonl").exists()
 
 
 class TestContexteVerificateur:
