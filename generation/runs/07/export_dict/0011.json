@@ -1,0 +1,80 @@
+{
+  "scenario": "0011",
+  "source": "crh_generation.txt",
+  "seuil": 0.75,
+  "formulations": {
+    "diagnostics": {
+      "Autres anémies précisées (D64.8)": [
+        "anémie leuco-érythroblastique",
+        "leuco-érythroblastose"
+      ],
+      "Schizophrénie paranoïde - continue (F20.00)": [
+        "schizophrénie paranoïde évoluant sur un mode continu",
+        "Schizophrénie paranoïde continue,"
+      ],
+      "Cirrhoses du foie, autres et sans précision (K74.6)": [
+        "cirrhose hépatique d’étiologie indéterminée",
+        "Cirrhose hépatique mixte,",
+        "cirrhose hépatique cryptogénique"
+      ],
+      "Obésité due à un excès calorique de l'adulte avec indice de masse corporelle [IMC] égal ou supérieur à 30 kg/m² et inférieur à 35 kg/m² (E66.04)": [
+        "Obésité modérée (IMC à 34,4 kg/m²)."
+      ]
+    },
+    "informations": {
+      "Date entrée": [
+        "22/01/2026"
+      ],
+      "Date de sortie": [
+        "22/01/2026"
+      ],
+      "Service d'hospitalisation": [
+        "Médecine Interne"
+      ],
+      "Nom/Prénom du médecin": [
+        "Dr Stephen Boufedji"
+      ],
+      "Nom/Prénom du patient": [
+        "Clemot ne"
+      ],
+      "Poids": [
+        "87 kg"
+      ],
+      "Âge": [
+        "63 ans"
+      ],
+      "Sexe": [],
+      "État général": [
+        "asthénie marquée",
+        "discrète lenteur psychomotrice"
+      ],
+      "NFS": [
+        "Hémoglobine à 9,1 g/dL (normocytaire, normochrome)",
+        "leucocytes à 5,2 G/L avec présence de myélocytes et métamyélocytes",
+        "plaquettes à 180 G/L"
+      ],
+      "Créatinine": [],
+      "Bilan hépatique": [
+        "ASAT à 45 UI/L",
+        "ALAT à 38 UI/L",
+        "bilirubine totale à 12 µmol/L",
+        "albuminémie à 38 g/L",
+        "TP à 75 %"
+      ],
+      "Traitements": [
+        "antipsychotique atypique",
+        "bêta-bloquant",
+        "supplémentation martiale empirique"
+      ]
+    }
+  },
+  "supprimees": [
+    {
+      "section": "informations",
+      "cle": "Sexe",
+      "formulation": "Féminin",
+      "score": 0.5,
+      "meilleur_candidat": "vingtaine"
+    }
+  ]
+}

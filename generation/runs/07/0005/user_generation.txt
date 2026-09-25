@@ -1,0 +1,585 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 84 ans
+- Sexe du patient : Féminin
+- Taille : 155 cm
+- Poids : 52 kg (IMC 21,6)
+- Tabac : actif, 12 cigarettes/jour, 36 PA
+- Alcool : non
+- Date d'entrée : 30/11/2026
+- Date de sortie : 03/12/2026
+- Date de naissance : 04/03/1942
+- Nom du patient : Parant
+- Prénom du patient : Jeannette
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
+- Codage CIM10 :
+   * Diagnostic principal : Autres formes d'angine de poitrine (I208)
+   * Diagnostics associés :
+      - Hypertension essentielle (primitive) (I10)
+      - Malnutrition protéino-énergétique modérée (E440)
+      - Douleur thoracique, sans précision (R074)
+      - Fibrillation auriculaire paroxystique (I480)
+      - Autres résultats anormaux précisés des examens chimiques du sang (R798)
+      - Hypothyroïdie, sans précision (E039)
+      - Sténose (de la valvule) aortique (non rhumatismale) (I350)
+      - Sinusite maxillaire (chronique) (J320)
+      - Dépendance envers un respirateur : ventilation par masque nasal (Z991+1)
+      - Syndrome de dépendance au tabac, utilisation continue (F1725)
+- Acte CCAM : artériographie coronaire avec ventriculographie gauche, par voie artérielle transcutanée (DDQH012)
+- Nom du médecin / signataire : Fernando Brando
+- Service : CARDIOLOGIE
+- Hôpital : Hôpital Saint-Louis - Assistance Publique Hôpitaux de Paris
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="I20.8">
+
+# I20.8 — Autres formes d'angine de poitrine
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre IX : Maladies de l'appareil circulatoire
+- Bloc I20-I25 : Cardiopathies ischémiques
+
+## Périmètre clinique du code
+
+Inclusions héritées du bloc I20-I25 :
+- avec mention d'hypertension (I10-I15)
+
+Au niveau du code :
+- angine d'effort
+- sténocardie
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IX) :
+
+accidents ischémiques cérébraux transitoires et syndromes apparentés (G45.-)
+affections disséminées du tissu conjonctif (M30-M36)
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Formes spécifiées de la catégorie I20 :
+- Angine de poitrine avec spasme coronaire vérifié [→ I20.1]
+- Angine de poitrine instable [→ I20.0]
+
+## Notes de la CIM-10
+- Pour la morbidité, le laps de temps dont il est fait mention en I21-I22 et I24-I25 est l'intervalle entre le début de l'épisode ischémique et l'admission pour soins. Pour la mortalité, le laps de temps est l'intervalle entre le début de cet épisode et la mort. *(note du bloc I20-I25)*
+
+## Formulations cliniques alternatives
+- angine à l'effort
+- angine effort
+- angine poitrine effort
+- angor effort
+- angor fonctionnel
+- Angor fonctionnel (AGO AS 040912)
+- angor repos
+- angor stable
+- antécédent précordialgie effort
+- bas débit coronarien
+- syndrome bas débit coronarien
+- syndrome coeur brisé
+
+</fiche_code>
+
+<fiche_code code="I10">
+
+# I10 — Hypertension essentielle (primitive)
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre IX : Maladies de l'appareil circulatoire
+- Bloc I10-I15 : Maladies hypertensives
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- hypertension (artérielle) (bénigne) (essentielle) (maligne) (primitive) (systémique)
+- tension artérielle élevée
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IX) :
+
+accidents ischémiques cérébraux transitoires et syndromes apparentés (G45.-)
+affections disséminées du tissu conjonctif (M30-M36)
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité du bloc I10-I15) :
+
+cardiopathies ischémiques (I20-I25)
+compliquant la grossesse, l'accouchement et la puerpéralité (O10-O11)  (O13-O16)
+hypertension :
+ - du nouveau-né (P29.2) 
+ - pulmonaire :
+  - primaire (I27.0) 
+  - secondaire (I27.2)
+
+Affections relevant d'autres codes :
+
+avec :
+ - maladies cérébrovasculaires (I60-I69) 
+ - rétinopathies vasculaires (H35.0)
+
+## Formulations cliniques alternatives
+- antécédent hypertension artérielle
+- HTA essentielle
+- HTA essentielle "maligne" [coder aussi les conséquences]
+- HTA maligne ancienne
+- HTA sévère instable
+- hypertension
+- hypertension artérielle bénigne
+- Hypertension artérielle primitive
+- hypertension artérielle supra-systémique
+- hypertension essentielle
+- hypertension maligne
+- hypertension sévère
+- hypertensive
+- poussée hypertensive
+
+</fiche_code>
+
+<fiche_code code="E44.0">
+
+# E44.0 — Malnutrition protéinoénergétique modérée
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E40-E46 : Malnutrition
+
+## Définition (CIM-10)
+
+Perte de poids chez l'enfant ou chez l'adulte ou absence de gain pondéral chez l'enfant, aboutissant à un poids qui est inférieur de deux écarts types ou plus, mais moins de trois, à la valeur moyenne de la population de référence (ou une perte similaire exprimée selon d'autres méthodes statistiques). Quand on ne dispose que d'une mesure, il existe une forte présomption de malnutrition protéinoénergétique modérée quand le poids observé est inférieur de deux écarts types ou plus, mais moins de trois, à la moyenne de la population de référence.
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité du bloc E40-E46) :
+
+anémies nutritionnelles (D50-D53)
+famine (T73.0)
+malabsorption intestinale (K90.-)
+séquelles de malnutrition protéinoénergétique (E64.0)
+syndrome cachectique dû à infection à VIH (B22.2)
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+- [GM2026-V-DEN-01] Une dénutrition sévère se code E43 Malnutrition protéino-énergétique grave, sans précision ; une dénutrition modérée se code E44.0 Malnutrition protéino-énergétique modérée.
+- [GM2026-V-DEN-02] Une dénutrition sévère se code E43 ; une dénutrition modérée se code E44.0.
+- [GM2026-V-DEN-03] Une dénutrition sévère se code E43 ; une dénutrition modérée se code E44.0.
+- [GM2026-V-DEN-06] Le code est déterminé en fonction des critères correspondant aux définitions HAS retrouvés au dossier, sans que le niveau de sévérité doive nécessairement être mentionné dans le dossier — bien qu'il soit recommandé qu'il le soit.
+- [GM2026-V-DEN-07] Lors de l'observation simultanée d'un seul critère de dénutrition sévère et d'un ou plusieurs critères de dénutrition modérée, il est recommandé de poser un diagnostic de dénutrition sévère.
+- [GM2026-V-DEN-10] Dénutrition modérée avant 18 ans : courbe IOTF 17 < IMC < courbe IOTF 18,5 ; perte de poids ≥ 5 % et ≤ 10 % en 1 mois ou ≥ 10 % et ≤ 15 % en 6 mois par rapport au poids habituel avant le début de la maladie ; stagnation pondérale aboutissant à un poids situé entre 2 et 3 couloirs en dessous du couloir habituel. Un seul critère suffit dès lors que la dénutrition est présente.
+- [GM2026-V-DEN-12] Dénutrition modérée de 18 à 70 ans : 17 < IMC < 18,5 kg/m² ; perte de poids ≥ 5 % en 1 mois ou ≥ 10 % en 6 mois ou ≥ 10 % par rapport au poids habituel ; albuminémie > 30 g/L et < 35 g/L, quel que soit l'état inflammatoire. Un seul critère suffit dès lors que la dénutrition est présente.
+- [GM2026-V-DEN-14] Dénutrition modérée à partir de 70 ans : 20 ≤ IMC < 22 ; perte de poids ≥ 5 % et < 10 % en 1 mois ou ≥ 10 % et < 15 % en 6 mois ou ≥ 10 % et < 15 % par rapport au poids habituel ; albuminémie > 30 g/L. Un seul critère suffit dès lors que la dénutrition est présente.
+- [GM2026-V-DEN-17] Le critère phénotypique de réduction de la masse ou de la fonction musculaires s'apprécie par l'une des six méthodes suivantes, une seule suffisant : force de préhension au dynamomètre (< 26 kg chez l'homme, < 16 kg chez la femme) ; vitesse de marche (< 0,8 m/s dans les deux sexes) ; indice de surface musculaire en L3 au scanner ou en IRM (52,4 chez l'homme, 38,5 chez la femme, en cm²/m²) ; indice de masse musculaire par impédancemétrie (7,0 et 5,7 kg/m²) ; indice de masse non grasse par impédancemétrie (< 17 et < 15 kg/m²) ; masse musculaire appendiculaire au DEXA (7,23 et 5,67 kg/m²).
+- [GM2026-V-DEN-04] L'emploi des codes E40 à E46 doit se fonder sur les critères HAS et nécessite que le dossier comporte la mention de dénutrition. Cette mention peut être indiquée par un clinicien ou par un diététicien.
+- [GM2026-V-DEN-08] La CIM–10 range sous le terme générique de malnutrition un groupe d'affections résultant d'une carence d'apport ou d'une désassimilation protéinoénergétique : on doit donc l'entendre au sens restreint de dénutrition. Le groupe est E40–E46, auquel s'ajoute O25 Malnutrition au cours de la grossesse.
+- [GM2026-V-DEN-16] Le diagnostic de dénutrition nécessite au moins 1 critère phénotypique ET 1 critère étiologique ; il est un préalable obligatoire avant de juger de la sévérité et repose exclusivement sur des critères non biologiques. Les critères étiologiques sont identiques aux trois âges : réduction de la prise alimentaire ≥ 50 % pendant plus d'1 semaine (ou toute réduction pendant plus de 2 semaines) ; absorption réduite (malabsorption, maldigestion) ; situation d'agression (pathologie aiguë, chronique évolutive ou maligne évolutive). Les critères phénotypiques varient avec l'âge — perte de poids, IMC (seuils IOTF avant 18 ans, 18,5 kg/m² de 18 à 70 ans, 22 kg/m² au-delà), réduction de la masse ou de la fonction musculaires, sarcopénie confirmée après 70 ans.
+
+## Notes de la CIM-10
+- Le degré de malnutrition se mesure généralement en termes de poids, exprimé en écarts types par rapport à la moyenne de la population de référence. Lorsqu'on dispose d'une ou plusieurs mesures antérieures, l'absence de gain pondéral chez l'enfant ou la perte de poids chez l'enfant ou chez l'adulte est en général évocateur de malnutrition. Quand on ne dispose que d'une mesure, le diagnostic est basé sur des présomptions et n'est pas certain sans autres signes cliniques ou biologiques. Dans les cas exceptionnels où l'on ne dispose d'aucune mesure de poids, il faut se fier aux signes cliniques. *(note du bloc E40-E46)*
+- Si un poids est inférieur à la valeur moyenne de la population de référence, il existe une forte présomption: – de malnutrition grave si une valeur observée se situe à trois écarts types ou plus en dessous de la valeur moyenne de la population de référence; – de malnutrition modérée pour une valeur observée située entre deux et moins de trois écarts types; – de malnutrition légère pour une valeur située entre un et moins de deux écarts types. *(note du bloc E40-E46)*
+
+## Formulations cliniques alternatives
+- dénutrition modérée
+- malnutrition degré moyen
+- malnutrition modérée
+- malnutrition protéino-énergétique modérée
+- malnutrition protéique modérée
+
+</fiche_code>
+
+<fiche_code code="R07.4">
+
+# R07.4 — Douleur thoracique, sans précision
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XVIII : Symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs
+- Bloc R00-R09 : Symptômes et signes relatifs aux appareils circulatoire et respiratoire
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVIII) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+résultats anormaux constatés au cours de l'examen prénatal systématique de la mère (O28.-)
+
+Affections relevant d'autres codes (hérité de la catégorie R07) :
+
+angine (aigüe) SAI (J02.9)
+douleur du :
+ - cou (M54.2) 
+ - sein (N64.4) 
+dysphagie (R13) 
+myalgie épidémique (B33.0)
+
+## Formulations cliniques alternatives
+- algies thoraciques
+- douleur constrictive poitrine
+- douleur constrictive thoracique
+- douleur médio-thoracique
+- douleur thoracique
+- douleur thoracique chronique
+- douleur thoracique haute
+- douleur thoracique violente
+- douleurs flanc
+- douleurs intrathoraciques
+- opression thoracique
+
+</fiche_code>
+
+<fiche_code code="I48.0">
+
+# I48.0 — Fibrillation auriculaire paroxystique
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre IX : Maladies de l'appareil circulatoire
+- Bloc I30-I52 : Autres formes de cardiopathies
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IX) :
+
+accidents ischémiques cérébraux transitoires et syndromes apparentés (G45.-)
+affections disséminées du tissu conjonctif (M30-M36)
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+> À titre d'exemple dans le guide :
+>
+> - [GM2026-V-AVC-17] L'étiologie ne peut être codée comme diagnostic associé que si elle en respecte la définition. Les étiologies sont classées dans des rubriques diverses de la CIM–10.
+
+## Formulations cliniques alternatives
+- ACFA répétition
+- antécédent FA paroxystique
+- arythmie fibrillation auriculaire paroxystique
+- FA novo
+- FA paroxystique
+- FA récidivante
+- fibrillation atriale paroxystique
+- fibrillation auriculaire paroxystique
+- flutter auriculaire paroxystique
+- TACFA paroxystique
+
+</fiche_code>
+
+<fiche_code code="R79.8">
+
+# R79.8 — Autres résultats anormaux précisés des examens chimiques du sang
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XVIII : Symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs
+- Bloc R70-R79 : Résultats anormaux de l'examen du sang, sans diagnostic
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- taux anormal des gaz du sang
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVIII) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+résultats anormaux constatés au cours de l'examen prénatal systématique de la mère (O28.-)
+
+Affections relevant d'autres codes (hérité du bloc R70-R79) :
+
+affections hémorragiques et hématologiques du fœtus et du nouveau-né (P50-P61)
+anomalies (de) :
+ - coagulation (D65-D68) 
+ - examen prénatal systématique de la mère (O28.-) 
+ - globules blancs, classées ailleurs (D70-D72) 
+ - lipides (E78.-) 
+ - plaquettes et thrombocytes (D69.-) 
+résultats diagnostiques anormaux classés ailleurs – voir Index alphabétique –
+
+Affections relevant d'autres codes (hérité de la catégorie R79) :
+
+anomalie de l'équilibre acidobasique hydrique ou électrolytique (E86-E87)
+hyperglycémie SAI (R73.9)
+hyperuricémie asymptomatique (E79.0)
+ hypoglycémie SAI (E16.2)  - du nouveau-né (P70.3-P70.4) 
+- résultats spécifiques indiquant une anomalie du métabolisme des :
+ - acides aminés (E70-E72) 
+ - hydrates de carbone (E73-E74) 
+ - lipides (E75.-)
+
+Formes spécifiées de la catégorie R79 :
+- Taux anormal de minéraux dans le sang [→ R79.0]
+
+## Formulations cliniques alternatives
+- Acétonémie
+- azotémie
+- intoxication bilirubine
+- marqueurs sériques élevés
+- Mélanémie
+- résultats anormaux gaz du sang
+- taux TSH abaissé
+
+</fiche_code>
+
+<fiche_code code="E03.9">
+
+# E03.9 — Hypothyroïdie, sans précision
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E00-E07 : Affections de la glande thyroïde
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- myxoedème SAI
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes :
+
+hypothyroïdie :
+ - après un acte à visée diagnostique et thérapeutique (E89.0) 
+ - liée à une carence en iode (E00-E02)
+
+## Formulations cliniques alternatives
+- anémie myxoedémateuse
+- cachexie myxoedémateuse
+- Diamond (myxoedème prétibial)
+- hypothyroïdie
+- Hypothyroïdie SAI
+- Hypothyroïdie sans précision
+- myxoedème
+- Myxoedème prétibial (mucinose prétibiale)
+- obésité hypothyroïdienne
+- obésité thyroïdienne
+- syndrome de Hoffmann
+
+</fiche_code>
+
+<fiche_code code="I35.0">
+
+# I35.0 — Sténose (de la valvule) aortique
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre IX : Maladies de l'appareil circulatoire
+- Bloc I30-I52 : Autres formes de cardiopathies
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IX) :
+
+accidents ischémiques cérébraux transitoires et syndromes apparentés (G45.-)
+affections disséminées du tissu conjonctif (M30-M36)
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie I35) :
+
+cause non précisée mais avec mention de lésions de la valvule mitrale (I08.0)
+précisées comme congénitales [Q23.0, Q23.1, Q23.4–Q23.9]
+précisées comme rhumatismales [I06.–]
+sténose subaortique hypertrophique (I42.1)
+
+## Formulations cliniques alternatives
+- RA athéromateux
+- RA serré calcifié
+- RAO serré
+- rétrécissement aortique calcifié serré
+- rétrécissement aortique sévère
+- rétrécissement valve aortique
+- sténose aortique orificielle
+- sténose aortique valvulaire
+- sténose serrée valve aortique
+- sténose serrée valve aortique mécanique
+
+</fiche_code>
+
+<fiche_code code="J32.0">
+
+# J32.0 — Sinusite maxillaire chronique
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre X : Maladies de l'appareil respiratoire
+- Bloc J30-J39 : Autres maladies des voies respiratoires supérieures
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie J32 :
+- abcès (chronique) d'un sinus (de la face)
+- abcès  (chronique) d'un sinus (de la face)
+empyème  (chronique) d'un sinus (de la face)
+infection  (chronique) d'un sinus (de la face)
+suppuration  (chronique) d'un sinus (de la face)
+- empyème (chronique) d'un sinus (de la face)
+- infection (chronique) d'un sinus (de la face)
+- suppuration (chronique) d'un sinus (de la face)
+
+Au niveau du code :
+- antrite de Highmore (chronique)
+- sinusite maxillaire SAI
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre X) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie J32) :
+
+sinusite aigüe (J01.-)
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+> À titre d'exemple dans le guide :
+>
+> - [GM2026-V-B95-01] Les codes B95-B98 ne doivent être utilisés qu'en position de diagnostic associé, conformément à leur intitulé : ils sont réservés aux cas dans lesquels une infection est présente, classée dans un chapitre distinct du chapitre I. La rubrique de l'infection s'accompagne souvent de la note « Utiliser, au besoin, un code supplémentaire (B95-B98) pour identifier l'agent infectieux ».
+
+## Formulations cliniques alternatives
+- abcès antre de highmore
+- fistule maxillaire
+- sinusite chronique maxillaire
+- sinusite maxillaire
+- sinusite maxillaire bilatérale
+- sinusite maxillaire chronique
+- sinusite maxillaire staphylocoque
+
+</fiche_code>
+
+<fiche_code code="Z99.1">
+
+# Z99.1 — Dépendance envers un respirateur
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z80-Z99 : Sujets dont la santé peut être menacée en raison d'antécédents personnels et familiaux et de certaines affections
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- Dépendance envers un ventilateur
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du bloc Z80-Z99) :
+
+dépistage spécial, autre examen ou investigation en raison d'antécédents familiaux ou personnels (Z00-Z13)
+examen de contrôle (Z08-Z09)
+mise en observation ou intervention au cours de la grossesse en raison d'un risque d'atteinte du fœtus (O35.-)
+soins de contrôle médicaux et de convalescence (Z42-Z51)  (Z54.-)
+
+## Formulations cliniques alternatives
+- dépendance vis-à-vis respirateur
+
+</fiche_code>
+
+<fiche_code code="F17.25">
+
+# F17.25 — Troubles mentaux et du comportement liés à l'utilisation de tabac - "Syndrome de dépendance" - "utilisation continue"
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre V : Troubles mentaux et du comportement
+- Bloc F10-F19 : Troubles mentaux et du comportement liés à l'utilisation de substances psychoactives
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre V :
+- troubles du développement psychologique
+
+## Description clinique (OMS)
+
+Ensemble de phénomènes comportementaux, cognitifs et physiologiques survenant à la suite d'une consommation répétée d'une substance psychoactive, typiquement associés à un désir puissant de prendre la drogue, à une difficulté à contrôler la consommation, à une poursuite de la consommation malgré des conséquences nocives, à un désinvestissement progressif des autres activités et obligations au profit de la consommation de cette drogue, à une tolérance accrue et, parfois, à un syndrome de sevrage physique. *(note du bloc F17.2)*
+
+Le syndrome de dépendance peut concerner une substance psychoactive spécifique (par exemple: le tabac, l'alcool ou le diazépam), une catégorie de substances (par exemple: les substances opiacées), ou un ensemble plus vaste de substances psychoactives pharmacologiquement différentes. *(note du bloc F17.2)*
+
+Les subdivisions suivantes peuvent être utilisées comme cinquième et sixième caractères pour spécifier le tableau clinique: 0actuellement abstinent 00actuellement abstinent en rémission récente 01actuellement abstinent en rémission partielle 02actuellement abstinent en rémission complète 1actuellement abstinent mais dans un environnement protégé 2suit actuellement un régime de maintenance ou de substitution, sous surveillance médicale 3actuellement abstinent mais prend des médicaments aversifs ou bloquants 4utilise actuellement la drogue [dépendance active] 40dépendance active sans signe physique 41dépendance active avec signe physique 5utilisation continue 6utilisation épisodique (dipsomanie) *(note du bloc F17.2)*
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre V) :
+
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité du bloc F10-F19) :
+
+abus de substances n'entraînant pas de dépendance [F55.–]
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+- [GM2026-V-VIO-03] Les facteurs favorisants présents au moment de l'accident (effet de l'alcool, de drogue ou de médicament…) sont enregistrés, notamment avec la catégorie R78 (présence de drogues et substances dans le sang) ou le groupe F10-F19 (troubles mentaux et du comportement liés aux substances psychoactives). L'enregistrement des effets secondaires des médicaments impose Y40-Y59 ; Y90-Y91 précisent l'importance d'une intoxication alcoolique.
+
+## Notes de la CIM-10
+- Ce groupe comprend de nombreux troubles variés, de gravité et de symptomatologie diverses, mais qui sont tous liés à l'utilisation d'une ou de plusieurs substances psychoactives prescrites ou non par un médecin. Le troisième caractère du code identifie la substance impliquée alors que le quatrième caractère sert à spécifier les tableaux cliniques; les quatrièmes caractères doivent être utilisés, selon les besoins, pour chacune des substances indiquées; il convient toutefois de noter que les quatrièmes caractères du code ne sont pas tous applicables à chaque substance. *(note du bloc F10-F19)*
+- L'identification de la substance psychoactive doit se faire à partir de toutes les sources d'information possibles. Ces dernières comportent: les informations fournies par le sujet lui-même, les analyses de sang, d'urine etc., les symptômes physiques et psychologiques caractéristiques, les signes et comportements cliniques, les drogues trouvées chez le patient, les renseignements de tierces personnes bien informées. De nombreux sujets consomment plusieurs catégories de substances psychoactives différentes. Le diagnostic principal se fera, si possible, en fonction de la substance toxique (ou de la catégorie de substances toxiques) qui est responsable du tableau clinique ou qui en détermine les caractéristiques essentielles. Des diagnostics supplémentaires doivent être codés quand d'autres substances psychoactives ont été consommées en quantité suffisante pour provoquer une intoxication (quatrième caractère.0), des conséquences nocives (quatrième caractère.1), une dépendance (quatrième caractère.2) ou d'autres troubles (quatrième caractère.3–.9). *(note du bloc F10-F19)*
+- Le diagnostic de troubles liés à l'utilisation de substances multiples (F19) doit être réservé à des cas où le choix des substances psychoactives se fait de façon chaotique et sans discrimination, ou dans lesquels il n'est pas possible de différencier les effets provenant des unes ou des autres. *(note du bloc F10-F19)*
+- Les subdivisions suivantes peuvent être utilisées comme quatrième caractère avec les rubriques F10-F19: *(note du bloc F10-F19)*
+
+</fiche_code>

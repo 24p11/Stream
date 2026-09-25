@@ -1,0 +1,66 @@
+### **VERDICT : NON CONFORME**
+
+#### **Anomalies constatées :**
+
+1. **Incohérence entre le diagnostic principal et le codage proposé :**
+   - Le compte rendu mentionne une **grossesse interstitielle rompue (O00.1 selon la CIM-10)**, mais le codage proposé utilise **"Autres grossesses extra-utérines (O00.8)"**, qui est un code générique.
+   - **Correction nécessaire :** Utiliser **O00.1 (Grossesse interstitielle)** pour refléter précisément le diagnostic.
+
+2. **Absence de codage de l’hémopéritoine :**
+   - L’hémopéritoine est une complication majeure de la grossesse extra-utérine rompue, mais il n’est pas codé.
+   - **Codage manquant :** **R58 (Hémorragie, non classée ailleurs)** ou **K66.1 (Hémopéritoine)**.
+
+3. **Codage de l’anémie post-hémorragique aiguë (D62) :**
+   - Le compte rendu mentionne une **anémie aiguë post-hémorragique (D62)**, mais le codage proposé inclut aussi **"Autres anémies précisées (D64.8)"**, qui est redondant et moins précis.
+   - **Correction nécessaire :** Conserver uniquement **D62 (Anémie post-hémorragique aiguë)**.
+
+4. **Codage de l’hyponatrémie (E87.1) :**
+   - Le code proposé (**E87.18**) est incorrect car trop générique.
+   - **Correction nécessaire :** Utiliser **E87.1 (Hyponatrémie)**.
+
+5. **Codage de la tachycardie (R00.0) :**
+   - Le code proposé (**R00.0**) est correct, mais il est mentionné deux fois dans les formulations.
+   - **Correction nécessaire :** Garder une seule occurrence.
+
+6. **Absence de codage de la transfusion sanguine :**
+   - Le compte rendu mentionne une **transfusion de deux culots globulaires**, mais aucun code n’est proposé.
+   - **Codage manquant :** **30233000 (Transfusion de concentré de globules rouges, par unité)** (CCAM) ou **Z51.3 (Transfusion sanguine sans mention de diagnostic)** (CIM-10).
+
+7. **Absence de codage de l’acte chirurgical (CCAM) :**
+   - La **salpingectomie totale par cœlioscopie** n’est pas codée selon la CCAM.
+   - **Codage manquant :** **JFFA002 (Salpingectomie unilatérale par cœlioscopie)**.
+
+8. **Incohérence dans la chronologie des événements :**
+   - Le compte rendu mentionne une **échographie pelvienne le 21/01/2025**, mais la patiente est admise le même jour en urgence.
+   - **Problème :** Il manque une mention claire de l’heure d’admission et de l’heure de l’échographie pour confirmer la prise en charge en urgence.
+
+9. **Absence de codage du soutien psychologique :**
+   - Le compte rendu mentionne un **soutien psychologique** pour anxiété, mais aucun code n’est proposé.
+   - **Codage manquant :** **Z71.9 (Conseil, sans précision)** ou **F41.9 (Trouble anxieux, sans précision)** si justifié.
+
+10. **Mention de la primigestité/nulliparité sans codage :**
+    - Bien que mentionné, le statut gestationnel (**primigeste, nullipare**) n’est pas codé.
+    - **Codage optionnel :** **Z34.9 (Surveillance d’une grossesse normale, sans précision)** (si pertinent) ou **Z35.8 (Surveillance d’une grossesse à haut risque)**.
+
+---
+### **Recommandations pour mise en conformité :**
+1. **Corriger les codes CIM-10 :**
+   - Remplacer **O00.8** par **O00.1 (Grossesse interstitielle)**.
+   - Remplacer **E87.18** par **E87.1 (Hyponatrémie)**.
+   - Supprimer **D64.8** (redondant avec D62).
+   - Ajouter **R58 ou K66.1 (Hémopéritoine)**.
+
+2. **Ajouter les codes CCAM :**
+   - **JFFA002 (Salpingectomie unilatérale par cœlioscopie)**.
+
+3. **Ajouter les codes liés à la transfusion et au soutien psychologique :**
+   - **30233000 (Transfusion de CGR)** ou **Z51.3**.
+   - **Z71.9 ou F41.9** si pertinent.
+
+4. **Préciser la chronologie des événements** (heures d’admission/échographie).
+
+5. **Vérifier la cohérence entre le diagnostic principal (O00.1) et les complications (hémopéritoine, anémie, etc.)**.
+
+---
+### **Conclusion :**
+Le compte rendu présente des **lacunes majeures en codage** (absence de codes CCAM, codes CIM-10 imprécis ou manquants) et des **incohérences cliniques** (diagnostic principal mal codé, complications non reflétées). Une **révision complète** est nécessaire pour une conformité optimale.

@@ -1,0 +1,62 @@
+{
+  "scenario": "0001",
+  "source": "crh_generation.txt",
+  "seuil": 0.75,
+  "formulations": {
+    "diagnostics": {
+      "Stérilité de la femme d'autres origines (N97.8)": [
+        "infertilité inexpliquée"
+      ]
+    },
+    "informations": {
+      "Intervention": [
+        "Prélèvement d’ovocytes par voie transvaginale sous guidage échographique"
+      ],
+      "Date de l’intervention": [
+        "02/01/2024"
+      ],
+      "Nom/Prénom du chirurgien": [
+        "Dr Zlatan Martin"
+      ],
+      "Nom/Prénom du patient": [],
+      "Âge": [
+        "46 ans"
+      ],
+      "Sexe": [],
+      "État général": [
+        "Aucun antécédent médico-chirurgical notable"
+      ],
+      "Statut gestationnel": [],
+      "Gestité": [
+        "nulligeste"
+      ],
+      "Traitements": [],
+      "NFS": [],
+      "Créatinine": [],
+      "Bilan hépatique": []
+    }
+  },
+  "supprimees": [
+    {
+      "section": "diagnostics",
+      "cle": "Stérilité de la femme d'autres origines (N97.8)",
+      "formulation": "incapacité de mener une grossesse à terme",
+      "score": 0.405,
+      "meilleur_candidat": "folliculaire de 17G, connectée à un système"
+    },
+    {
+      "section": "informations",
+      "cle": "Nom/Prénom du patient",
+      "formulation": "Ingegno Adrienne",
+      "score": 0.711,
+      "meilleur_candidat": "Ingegno **Prénom :** Adrienne"
+    },
+    {
+      "section": "informations",
+      "cle": "Sexe",
+      "formulation": "Féminin",
+      "score": 0.462,
+      "meilleur_candidat": "lésion"
+    }
+  ]
+}

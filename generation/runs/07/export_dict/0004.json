@@ -1,0 +1,89 @@
+{
+  "scenario": "0004",
+  "source": "crh_generation.txt",
+  "seuil": 0.75,
+  "formulations": {
+    "diagnostics": {
+      "Ictère du nouveau-né dû à d'autres causes précisées (P59.8)": [
+        "ictère persistant",
+        "ictère néonatal précoce",
+        "ictère cutanéomuqueux franc",
+        "ictère néonatal persistant"
+      ],
+      "Fœtus et nouveau-né affectés par des maladies infectieuses et parasitaires de la mère (P00.2)": [
+        "séroconversion toxoplasmique anténatale",
+        "séroconversion toxoplasmique"
+      ],
+      "Alimentation au sein difficile chez le nouveau-né (P92.5)": [
+        "difficultés d’alimentation au sein",
+        "succion faible lors des tétées",
+        "succion inefficace"
+      ],
+      "Examen spécial de dépistage des affections des oreilles (Z13.51)": [
+        "test de dépistage de la surdité néonatale par otoémissions acoustiques automatisées (OEAA)"
+      ],
+      "Iso-immunisation ABO du fœtus et du nouveau-né (P55.1)": [
+        "incompatibilité ABO",
+        "Incompatibilité ABO diagnostiquée en période néonatale."
+      ],
+      "Fœtus et nouveau-né affectés par la rupture prématurée des membranes (P01.1)": [
+        "rupture prématurée des membranes"
+      ],
+      "Enfant unique, né à l'hôpital (Z38.0)": []
+    },
+    "informations": {
+      "Date entrée": [
+        "25/11/2026"
+      ],
+      "Date de sortie": [
+        "27/11/2026"
+      ],
+      "Service d'hospitalisation": [
+        "Néonatologie"
+      ],
+      "Nom/Prénom du patient": [
+        "Vanquickenborne Prénom : Julien"
+      ],
+      "Nom/Prénom du médecin": [],
+      "Âge": [
+        "23 jours"
+      ],
+      "Sexe": [],
+      "État général": [
+        "tonus axial et périphérique normal"
+      ],
+      "Poids": [
+        "3 200 grammes"
+      ],
+      "Statut gestationnel": [],
+      "Gestité": [],
+      "NFS": [
+        "hémoglobine à 15 g/dL, réticulocytes à 8 %"
+      ],
+      "Créatinine": [],
+      "Bilan hépatique": [
+        "Bilirubine totale : 180 µmol/L (bilirubine conjuguée : 15 µmol/L)"
+      ],
+      "Traitements": [
+        "photothérapie intensive pendant 48 heures",
+        "soutien à l’allaitement maternel"
+      ]
+    }
+  },
+  "supprimees": [
+    {
+      "section": "informations",
+      "cle": "Nom/Prénom du médecin",
+      "formulation": "Ghislaine Boisson",
+      "score": 0.5,
+      "meilleur_candidat": "clinique À l'admission,"
+    },
+    {
+      "section": "informations",
+      "cle": "Sexe",
+      "formulation": "masculin",
+      "score": 0.571,
+      "meilleur_candidat": "Julien"
+    }
+  ]
+}

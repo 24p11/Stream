@@ -1,0 +1,186 @@
+{"CR": "### Hôpital de la Conception - Assistance Publique – Hôpitaux de Marseille\n**Service de Néphrologie**\n\n**Compte rendu d'hospitalisation**\n\n**Nom :** Sanchez Tebar\n**Prénom :** Ourdia\n**Date de naissance :** 13/10/1943\n**Âge :** 82 ans\n\n---
+
+### Motif d’hospitalisation
+Patiente de 82 ans adressée aux urgences pour altération de l'état général, désorientation temporo-spatiale et insuffisance rénale aiguë. À l'admission, elle présente une confusion marquée, une hypotension modérée et des signes de déshydratation extracellulaire. Une prise en charge diagnostique et thérapeutique en néphrologie a été décidée.
+
+---
+
+### Antécédents
+- **Médicaux :**
+  - Hypertension artérielle essentielle connue depuis plusieurs années.
+  - Hypothyroïdie sous traitement substitutif.
+  - Carence en vitamine D documentée.
+  - Démence sénile sévère, évoluant depuis plusieurs mois, avec épisodes confusionnels répétés.
+  - Antécédent de lucite polymorphe.
+  - Métastases pulmonaires secondaires à un primitif non précisé.
+  - Obésité modérée (IMC à 30,4 kg/m²).
+  - Dénutrition protéino-énergétique modérée.
+
+- **Chirurgicaux :**
+  - Prothèse totale de hanche gauche posée il y a 5 ans.
+  - Appendicectomie dans l’enfance.
+
+- **Familiaux :**
+  - Pas d’antécédent familial notable rapporté.
+
+- **Allergies :**
+  - Aucune allergie médicamenteuse connue.
+
+---
+
+### Mode de vie
+Patiente vivant seule à domicile, sans consommation de tabac ni d’alcool. Elle bénéficie d’une assistance à domicile en raison de l’absence de proche capable d’assurer les soins quotidiens. Aucune activité physique régulière n’est rapportée.
+
+---
+
+### Histoire de la maladie
+Depuis environ trois semaines, la patiente présente une asthénie croissante, une perte d’appétit et des épisodes de désorientation. Son entourage a noté une aggravation récente avec apparition de troubles digestifs à type de constipation opiniâtre et de douleurs abdominales diffuses. Une semaine avant l’hospitalisation, elle a développé une oligurie, motivant une consultation aux urgences. Le bilan biologique initial a révélé une insuffisance rénale aiguë avec créatininémie élevée, une hypovolémie et une obstruction fécale colique. L’examen clinique a également mis en évidence une déshydratation extracellulaire sévère et une tension artérielle limite malgré son traitement antihypertenseur habituel.
+
+---
+
+### Examen clinique
+À l’admission, la patiente est apyrétique, avec une tension artérielle à 105/60 mmHg, une fréquence cardiaque à 90 battements par minute et une saturation en oxygène à 94 % en air ambiant. Elle pèse 72 kg pour 1,54 m (IMC à 30,4 kg/m²). L’examen cutané révèle une sécheresse marquée des muqueuses et des signes de déshydratation périphérique. L’abdomen est météorisé, avec une défense modérée en fosse iliaque gauche et un fécalome palpable au toucher rectal. L’examen neurologique objective une désorientation temporo-spatiale complète, sans signe de focalisation. L’auscultation pulmonaire met en évidence des râles crépitants bilatéraux aux bases, évoquant des lésions secondaires pulmonaires connues.
+
+---
+
+### Examens complémentaires
+- **Biologie :**
+  - Créatininémie : 280 µmol/L (normale : 45-84 µmol/L), urée : 18 mmol/L.
+  - Ionogramme sanguin : natrémie à 132 mmol/L, kaliémie à 5,1 mmol/L.
+  - NFS : hémoglobine à 10,2 g/dL, VGM à 88 fL, leucocytes à 8 500/mm³, plaquettes à 220 000/mm³.
+  - Bilan hépatique : normal.
+  - Albuminémie : 32 g/L.
+  - TSH : 8,2 mUI/L (sous traitement substitutif).
+  - Vitamine D : 12 ng/mL (normale : 30-50 ng/mL).
+
+- **Imagerie :**
+  - Abdomen sans préparation : stercolithe colique avec distension des anses grêles.
+  - Échographie rénale : reins de taille normale, sans dilatation des cavités pyélocalicielles.
+  - Radiographie thoracique : opacités nodulaires bilatérales compatibles avec des lésions secondaires pulmonaires connues.
+
+- **Autres :**
+  - ECG : rythme sinusal, sans trouble de la repolarisation.
+
+---
+
+### Évolution pendant l'hospitalisation
+
+#### Démarche diagnostique
+La prise en charge initiale a confirmé le diagnostic d’insuffisance rénale aiguë sur obstacle fécal compliqué d’hypovolémie et de déshydratation extracellulaire. Une réhydratation intraveineuse a été instaurée en urgence, associée à des lavements évacuateurs pour lever l’obstruction colique. Un bilan étiologique a permis d’écarter une cause obstructive urinaire ou une nécrose tubulaire aiguë. La persistance de la désorientation a motivé une évaluation gériatrique, confirmant une démence sénile sévère sous-jacente.
+
+#### Traitements
+- **Réhydratation :** Sérum physiologique 2 L/jour pendant 48 heures, puis relais par hydratation orale adaptée.
+- **Lavements évacuateurs :** Trois lavements successifs ont permis la levée de l’obstruction fécale.
+- **Traitement de l’hypothyroïdie :** Ajustement de la posologie de lévothyroxine.
+- **Supplémentation :** Vitamine D per os (100 000 UI en dose de charge, puis 800 UI/jour).
+- **Prise en charge nutritionnelle :** Régime hypercalorique et hyperprotéiné, avec complémentation orale.
+- **Surveillance :** Monitorage quotidien de la diurèse, de la tension artérielle et de la créatininémie.
+
+L’évolution a été favorable avec une amélioration progressive de la fonction rénale (créatininémie à 120 µmol/L au 7ᵉ jour) et une reprise du transit. La désorientation a persisté, mais sans aggravation. La patiente a été déclarée apte à regagner son domicile avec un renforcement de l’assistance à domicile et un suivi néphrologique rapproché.
+
+---
+
+### Conclusion
+Patiente de 82 ans hospitalisée pour insuffisance rénale aiguë sur obstruction fécale, compliquée d’hypovolémie et de déshydratation extracellulaire. L’évolution a été favorable sous traitement symptomatique, avec une reprise de la diurèse et une amélioration des paramètres biologiques. La persistance de la désorientation et de la démence sénile sévère justifie un maintien de l’assistance à domicile. Un suivi multidisciplinaire (néphrologie, gériatrie, nutrition) est organisé pour prévenir les récidives.
+
+**Médecin signataire :**
+Dr Claudine Zmouli
+Service de Néphrologie
+Hôpital de la Conception - AP-HM",
+
+"formulations": {
+  "diagnostics": {
+    "Autres insuffisances rénales aiguës (N178)": [
+      "insuffisance rénale aiguë",
+      "insuffisance rénale aiguë sur obstacle fécal"
+    ],
+    "Hypertension essentielle (primitive) (I10)": [
+      "Hypertension artérielle essentielle connue depuis plusieurs années",
+      "tension artérielle limite malgré son traitement antihypertenseur habituel"
+    ],
+    "Hypovolémie (E86)": [
+      "hypovolémie",
+      "déshydratation extracellulaire sévère",
+      "signes de déshydratation extracellulaire",
+      "déshydratation extracellulaire"
+    ],
+    "Autres obstructions de l'intestin (K564)": [
+      "obstruction fécale colique",
+      "stercolithe colique",
+      "fécalome palpable",
+      "obstruction fécale"
+    ],
+    "Tumeur maligne secondaire du poumon (C780)": [
+      "métastases pulmonaires secondaires",
+      "lésions secondaires pulmonaires connues",
+      "opacités nodulaires bilatérales compatibles avec des lésions secondaires pulmonaires"
+    ],
+    "Présence d'implants d'articulations orthopédiques (Z966)": [
+      "prothèse totale de hanche gauche"
+    ],
+    "Désorientation, sans précision (R410)": [
+      "désorientation temporo-spatiale",
+      "désorientation temporo-spatiale complète",
+      "épisodes de désorientation"
+    ],
+    "Obésité due à un excès calorique de l'adulte avec indice de masse corporelle [IMC] égal ou supérieur à 30 kg/m² et inférieur à 35 kg/m², ou obésité due à un excès calorique de l'enfant (E6604)": [
+      "obésité modérée (IMC à 30,4 kg/m²)"
+    ],
+    "Malnutrition protéino-énergétique modérée (E440)": [
+      "dénutrition protéino-énergétique modérée",
+      "dénutrition protéino-énergétique modérée"
+    ],
+    "Besoin d'assistance à domicile, aucun autre membre du foyer n'étant capable d'assurer les soins (Z742)": [
+      "assistance à domicile en raison de l’absence de proche capable d’assurer les soins quotidiens",
+      "renforcement de l’assistance à domicile"
+    ],
+    "Lucite polymorphe (L564)": [
+      "antécédent de lucite polymorphe"
+    ],
+    "Carence en vitamine D, sans précision (E559)": [
+      "carence en vitamine D documentée",
+      "vitamine D : 12 ng/mL"
+    ],
+    "Hypothyroïdie, sans précision (E039)": [
+      "hypothyroïdie sous traitement substitutif",
+      "hypothyroïdie"
+    ],
+    "Démence sévère, sans précision, sans symptôme supplémentaire (F03+02)": [
+      "démence sénile sévère",
+      "démence sénile sévère sous-jacente"
+    ]
+  },
+  "informations": {
+    "Date entrée": ["20/07/2026"],
+    "Date de sortie": ["12/08/2026"],
+    "Service d'hospitalisation": ["Service de Néphrologie"],
+    "Nom/Prénom du patient": ["Sanchez Tebar Ourdia"],
+    "Nom/Prénom du médecin": ["Claudine Zmouli"],
+    "Âge": ["82 ans"],
+    "Sexe": ["Féminin"],
+    "État général": [
+      "altération de l'état général",
+      "asthénie croissante",
+      "perte d’appétit"
+    ],
+    "Poids": ["72 kg", "72 kg pour 1,54 m (IMC à 30,4 kg/m²)"],
+    "Statut gestationnel": [],
+    "Gestité": [],
+    "NFS": [
+      "hémoglobine à 10,2 g/dL, VGM à 88 fL, leucocytes à 8 500/mm³, plaquettes à 220 000/mm³"
+    ],
+    "Créatinine": [
+      "créatininémie élevée",
+      "créatininémie : 280 µmol/L",
+      "créatininémie à 120 µmol/L au 7ᵉ jour"
+    ],
+    "Bilan hépatique": ["normal"],
+    "Traitements": [
+      "réhydratation intraveineuse",
+      "lavements évacuateurs",
+      "ajustement de la posologie de lévothyroxine",
+      "vitamine D per os (100 000 UI en dose de charge, puis 800 UI/jour)",
+      "régime hypercalorique et hyperprotéiné, avec complémentation orale"
+    ]
+  }
+}}

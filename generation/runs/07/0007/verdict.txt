@@ -1,0 +1,60 @@
+### **Verdict : NON CONFORME**
+
+#### **Anomalies constatées :**
+
+1. **Incohérences dans les dates d'hospitalisation :**
+   - Le compte rendu ne mentionne pas explicitement les dates d'entrée et de sortie dans le corps du texte (seulement dans les "formulations" en JSON).
+   - La date de sortie (12/08/2026) est postérieure à la date de vérification (2023), ce qui est impossible. **Erreur de cohérence temporelle.**
+
+2. **Problèmes de codage CIM-10 :**
+   - **N17.8 (Autres insuffisances rénales aiguës)** :
+     - Le diagnostic principal devrait plutôt être **N17.9 (Insuffisance rénale aiguë, sans précision)** ou **N17.0 (Nécrose tubulaire aiguë)** si une cause spécifique avait été identifiée.
+     - L'obstruction fécale (K56.4) est un facteur étiologique, mais le code N17.8 ne reflète pas correctement la cause obstructive.
+   - **F03 + 02 (Démence sévère sans précision)** :
+     - Le code **F03** est réservé aux démences non spécifiées. Si la démence est d'origine sénile, **F00.9 (Démence de la maladie d'Alzheimer, sans précision)** ou **F01.9 (Démence vasculaire, sans précision)** serait plus approprié.
+   - **E86 (Hypovolémie)** :
+     - Ce code est correct, mais il manque le lien avec la déshydratation extracellulaire (E87.1 : Déshydratation).
+   - **Z96.6 (Présence d'implants d'articulations orthopédiques)** :
+     - Ce code est correct, mais il n'est pas un diagnostic principal. Il devrait être en diagnostic associé.
+
+3. **Incohérences cliniques :**
+   - **Hypotension modérée (105/60 mmHg) chez une patiente hypertendue** :
+     - L'hypotension est plausible dans un contexte de déshydratation, mais le compte rendu ne précise pas si le traitement antihypertenseur a été ajusté (risque d'hypotension iatrogène).
+   - **TSH élevée (8,2 mUI/L) sous traitement substitutif** :
+     - Une TSH à 8,2 mUI/L suggère une **hypothyroïdie non équilibrée (E03.1 : Hypothyroïdie iatrogène)** plutôt qu'une hypothyroïdie non spécifiée (E03.9).
+   - **Absence de mention d'une cause primitive des métastases pulmonaires** :
+     - Le code **C78.0 (Tumeur maligne secondaire du poumon)** est correct, mais le primitif devrait être recherché (ex. : C50.9 pour un cancer du sein, C34.9 pour un cancer bronchique).
+
+4. **Omissions dans les diagnostics associés :**
+   - **Anémie modérée (Hb 10,2 g/dL)** :
+     - Non codée (D63.8 : Anémie au cours d'une maladie chronique, ou D50.9 : Anémie par carence martiale si ferritine basse).
+   - **Hyperkaliémie (K+ 5,1 mmol/L)** :
+     - Non codée (E87.5 : Hyperkaliémie).
+   - **Hyponatrémie (Na+ 132 mmol/L)** :
+     - Non codée (E87.1 : Hyponatrémie).
+
+5. **Problèmes de structure du compte rendu :**
+   - **Absence de mention du score de Charlson ou de fragilité gériatrique** :
+     - Important pour évaluer le pronostic et justifier une prise en charge multidisciplinaire.
+   - **Pas de précision sur le devenir post-hospitalisation** :
+     - Le compte rendu mentionne un "suivi néphrologique rapproché", mais sans détails sur les modalités (consultation, hospitalisation à domicile, etc.).
+
+6. **Erreurs mineures :**
+   - **"Appendicectomie"** : Faute de frappe (devrait être "appendicectomie").
+   - **IMC à 30,4 kg/m²** :
+     - Classé en **E66.04 (Obésité modérée, IMC 30-34,9)**, ce qui est correct, mais le compte rendu mentionne aussi une **dénutrition protéino-énergétique modérée (E44.0)**, ce qui est contradictoire (une obésité et une dénutrition ne peuvent coexister sans précision sur la sarcopénie).
+
+---
+
+### **Recommandations pour mise en conformité :**
+1. **Corriger les dates d'hospitalisation** (vérifier la cohérence temporelle).
+2. **Revoir les codes CIM-10** :
+   - Remplacer **N17.8** par **N17.9** ou **N17.0** si cause identifiée.
+   - Préciser le type de démence (**F00.9** ou **F01.9**).
+   - Ajouter les codes manquants (**E87.1, E87.5, D63.8**).
+3. **Clarifier l'étiologie des métastases pulmonaires** (recherche du primitif).
+4. **Ajouter un score de fragilité gériatrique** (ex. : score de Rockwood).
+5. **Préciser le devenir post-hospitalisation** (modalités de suivi).
+
+---
+**Conclusion :** Le compte rendu présente des **lacunes cliniques et des erreurs de codage** nécessitant une révision avant validation.

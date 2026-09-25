@@ -1,0 +1,70 @@
+### **Verdict : NON CONFORME**
+
+#### **Anomalies constatées :**
+
+1. **Incohérence diagnostique et terminologique :**
+   - Le **motif d’hospitalisation** mentionne une **"gastro-entérite éosinophile"**, mais le **diagnostic final retenu** est une **"colite éosinophile"** (confirmée par endoscopie et histologie).
+   - La **CIM-10 proposée (K52.8 : Autres gastro-entérites et colites non infectieuses précisées)** est correcte pour une colite éosinophile, mais le terme "gastro-entérite" dans le motif initial est **impropre** (une gastro-entérite implique une atteinte de l’estomac et de l’intestin grêle, alors que l’endoscopie confirme une atteinte colique exclusive).
+   - **Correction suggérée** : Harmoniser le vocabulaire (remplacer "gastro-entérite éosinophile" par "colite éosinophile" dans le motif et l’histoire de la maladie).
+
+2. **Erreur de codage du diabète (E11.98) :**
+   - Le code **E11.98 (Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication)** est **obsolète** dans la CIM-10 française (utilisée pour le PMSI).
+   - **Code correct** : **E11.9 (Diabète sucré de type 2, sans complication)** ou **E11.65 (Diabète sucré de type 2, avec hyperglycémie)** si la glycémie à jeun à 1,45 g/L est considérée comme un déséquilibre (seuil à 1,26 g/L pour le diabète).
+   - **Problème** : L’HbA1c à 7,2 % (équilibre moyen) et la glycémie à 1,45 g/L suggèrent un **déséquilibre modéré**, ce qui pourrait justifier **E11.65** plutôt que E11.9.
+
+3. **Durée d’hospitalisation manquante ou incohérente :**
+   - Les **dates d’entrée/sortie** ne sont pas clairement indiquées dans le corps du CR (seulement la date de l’endoscopie : 11/06/2024).
+   - Dans les **"formulations"**, la **date de sortie est le 12/06/2024** (soit 1 jour d’hospitalisation), ce qui est **peu plausible** pour :
+     - Une endoscopie digestive haute et basse + histologie (résultats en 24–48h).
+     - Une initiation de corticothérapie avec surveillance de la réponse clinique.
+   - **Risque** : Sous-estimation de la durée réelle (ex. : entrée le 10/06, sortie le 13/06), ce qui impacte le **GHS** (Groupe Homogène de Séjour).
+
+4. **Absence de mention du mode d’entrée/sortie :**
+   - Le CR ne précise pas si l’hospitalisation était **programmée** ou en **urgence**, ni le **mode de sortie** (retour à domicile, transfert, etc.).
+   - **Exigence PMSI** : Ces informations sont obligatoires pour le codage des **UM** (Unités Médicales) et la valorisation du séjour.
+
+5. **Incohérence sur le statut du diabète :**
+   - Le CR indique que le diabète est **"sans complication connue à ce jour"**, mais la **glycémie à jeun à 1,45 g/L** et l’**HbA1c à 7,2 %** suggèrent un **déséquilibre chronique**.
+   - **Problème** : Si le diabète est déséquilibré, il faut coder **E11.65** (avec hyperglycémie) et non E11.9.
+
+6. **IMC et surpoids :**
+   - L’IMC est calculé à **25,7** (surpoids modéré), mais le code **E66.03 (Surpoids dû à un excès calorique)** est **trop précis** et rarement utilisé en pratique.
+   - **Code plus adapté** : **E66.9 (Obésité, sans précision)** ou **Z68.25 (IMC entre 25,0 et 29,9 chez l’adulte)** si l’objectif est de coder le facteur de risque.
+
+7. **Absence de codage des actes (CCAM) :**
+   - Le CR mentionne une **endoscopie digestive haute et basse avec biopsies**, mais aucun **code CCAM** n’est fourni dans les "formulations".
+   - **Actes à coder** :
+     - **HHFA001** (Endoscopie œsogastroduodénale avec biopsies).
+     - **HHFC001** (Coloscopie avec biopsies).
+   - **Impact** : Ces actes sont **obligatoires** pour la valorisation du séjour (surtout si réalisés en ambulatoire avant l’hospitalisation).
+
+8. **Traitement par corticoïdes non détaillé dans les "formulations" :**
+   - La corticothérapie (prednisone 40 mg/jour) est mentionnée dans le CR, mais **absente des "formulations"** sous "Traitements".
+   - **Risque** : Oubli de codage d’un **DP/DR** (Diagnostic Principal/Relatif) lié aux corticoïdes (ex. : **Z79.52** pour corticothérapie prolongée).
+
+9. **Score ECOG non exploité pour le codage :**
+   - Le **score ECOG à 1** (activité physique réduite mais ambulatoire) n’est pas utilisé pour ajuster le codage.
+   - **Suggestion** : Si l’état général impacte la prise en charge, coder **Z76.3** (Surveillance pour personne en bonne santé apparente mais avec facteur de risque).
+
+10. **Allergies non précisées dans les "formulations" :**
+    - Le CR indique **"aucune allergie connue"**, mais cette information est **absente des "formulations"**.
+    - **Exigence PMSI** : Les allergies doivent être tracées (même si négatives) pour éviter des erreurs de prescription.
+
+---
+
+### **Recommandations pour mise en conformité :**
+1. **Corriger le diagnostic principal** :
+   - Remplacer "gastro-entérite éosinophile" par **"colite éosinophile"** (K52.8).
+2. **Mettre à jour le codage du diabète** :
+   - Utiliser **E11.65** (avec hyperglycémie) si la glycémie à jeun > 1,26 g/L ou HbA1c ≥ 7 %.
+3. **Préciser les dates d’hospitalisation** :
+   - Vérifier la durée réelle (ex. : entrée le 10/06, sortie le 13/06).
+4. **Ajouter les codes CCAM des actes** :
+   - HHFA001 et HHFC001 pour les endoscopies avec biopsies.
+5. **Compléter les informations manquantes** :
+   - Mode d’entrée/sortie, allergies, traitements détaillés.
+6. **Revoir le codage du surpoids** :
+   - Remplacer E66.03 par **Z68.25** (IMC 25–29,9) ou E66.9.
+
+---
+**Conclusion** : Le CR présente des **incohérences diagnostiques, des erreurs de codage CIM-10/CCAM, et des omissions PMSI**. Une révision est nécessaire pour garantir la **conformité clinique et administrative**.

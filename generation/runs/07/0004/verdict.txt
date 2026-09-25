@@ -1,0 +1,51 @@
+### **Verdict : NON CONFORME**
+
+#### **Anomalies constatées :**
+
+1. **Incohérence chronologique majeure :**
+   - La **date de naissance (03/06/2026)** et les **dates d’hospitalisation (25-27/11/2026)** impliquent que le patient est né **dans le futur** (2026) alors que le compte rendu semble rédigé en 2023/2024.
+   - **Correction attendue** : Vérifier la date de naissance (ex. 03/06/2023) ou les dates d’hospitalisation (ex. 25-27/11/2023).
+
+2. **Problème de codage CIM-10 :**
+   - **P59.8 ("Ictère du nouveau-né dû à d'autres causes précisées")** est **trop générique** pour un ictère lié à une incompatibilité ABO.
+     - **Code attendu** : **P55.1 ("Iso-immunisation ABO du fœtus et du nouveau-né")** doit être le **diagnostic principal** (déjà présent dans les formulations, mais mal hiérarchisé).
+   - **P00.2 ("Fœtus et nouveau-né affectés par des maladies infectieuses de la mère")** est **inapproprié** car la séroconversion toxoplasmique maternelle n’a pas entraîné d’infection chez l’enfant (sérologies négatives).
+     - **Code à supprimer** ou remplacer par **Z20.8 ("Contact avec et exposition à d'autres maladies infectieuses")** si nécessaire pour le contexte maternel.
+
+3. **Absence de code pour la rupture prématurée des membranes (RPM) :**
+   - **P01.1 ("Fœtus et nouveau-né affectés par la rupture prématurée des membranes")** est bien cité, mais il manque le **code de la RPM maternelle** :
+     - **O42.9 ("Rupture prématurée des membranes, sans précision")** ou **O42.0 ("RPM avant travail, à terme")** selon le contexte.
+
+4. **Codage redondant ou inutile :**
+   - **Z38.0 ("Enfant unique, né à l'hôpital")** est **inutile** dans un compte rendu d’hospitalisation post-natale (réservé aux séjours en maternité pour la naissance).
+   - **Z13.51 ("Examen spécial de dépistage des affections des oreilles")** est **trop spécifique** pour un test de dépistage systématique (OEAA). Un code **Z00.1 ("Examen général et investigation chez l'enfant")** serait plus adapté.
+
+5. **Données manquantes pour le codage :**
+   - **Statut gestationnel** (ex. "né à 36 SA + 2") et **gestité/parité** de la mère sont absents, alors qu’ils sont utiles pour le codage des complications néonatales (ex. **P07.3** pour prématurité modérée si < 37 SA).
+   - **Score d’Apgar** non mentionné (utile pour évaluer l’adaptation à la naissance).
+
+6. **Incohérence clinique mineure :**
+   - Le **poids de naissance (3 200 g)** est stable à 23 jours, ce qui est **peu probable** pour un nouveau-né allaité avec des difficultés d’alimentation (perte de poids physiologique attendue puis reprise progressive).
+     - **Vérification attendue** : Poids de naissance initial et courbe de poids pendant l’hospitalisation.
+
+7. **Formulation des diagnostics :**
+   - Le **diagnostic principal** doit être **P55.1 (incompatibilité ABO)** et non P59.8.
+   - Les **diagnostics associés** doivent inclure :
+     - **P92.5 (difficultés d’alimentation au sein)**.
+     - **P01.1 (RPM)** si pertinent.
+     - **Z91.89 (autres facteurs de risque personnels)** pour l’exposition à la toxoplasmose maternelle (si justifié).
+
+---
+
+### **Recommandations pour mise en conformité :**
+1. **Corriger les dates** (naissance et hospitalisation).
+2. **Hiérarchiser les codes CIM-10** :
+   - **Diagnostic principal** : P55.1 (incompatibilité ABO).
+   - **Diagnostics associés** : P92.5 (alimentation), P01.1 (RPM si pertinent).
+   - **Supprimer** P00.2 et Z38.0.
+3. **Ajouter les codes manquants** (O42.9 pour la RPM maternelle, Z00.1 pour le dépistage auditif).
+4. **Compléter les données cliniques** (statut gestationnel, Apgar, courbe de poids).
+5. **Vérifier la cohérence du poids** (perte puis reprise attendue).
+
+---
+**Note** : Ce compte rendu est **globalement bien structuré**, mais les anomalies chronologiques et de codage le rendent **non conforme** pour une exploitation en DIM (Département d’Information Médicale). Une correction est nécessaire avant validation.

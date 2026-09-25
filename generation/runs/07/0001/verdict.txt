@@ -1,0 +1,53 @@
+### **Verdict : NON CONFORME**
+
+#### **Anomalies constatées :**
+
+1. **Âge de la patiente et indication de la procédure (cohérence clinique) :**
+   - La patiente a **46 ans**, ce qui est en dehors des recommandations standard pour une **ponction ovocytaire** (généralement réalisée avant 43 ans en l'absence de facteurs spécifiques).
+   - **Absence de justification claire** dans le compte rendu sur la décision de réaliser cette procédure à cet âge (ex. : don d'ovocytes, préservation de fertilité pour raison médicale, etc.).
+   - **Risque accru d'échec** (taux de réussite très faible après 44 ans) et **risques potentiels** (hyperstimulation, complications liées à l'âge) non mentionnés.
+
+2. **Codage CIM-10 (N97.8) :**
+   - Le code **N97.8** ("Stérilité de la femme d'autres origines") est **trop générique** pour une infertilité inexpliquée.
+   - **Proposition de correction :**
+     - **N97.9** ("Stérilité féminine, sans précision") si aucune cause n'est identifiée.
+     - **Z31.8** ("Autres procédures de procréation assistée") en diagnostic associé pour justifier la ponction ovocytaire.
+
+3. **Absence de détails sur la stimulation ovarienne :**
+   - Le compte rendu mentionne des **"follicules matures après stimulation ovarienne"**, mais **aucun protocole** (molécules utilisées, durée, dosage) n'est précisé.
+   - **Obligatoire** pour évaluer la cohérence du geste et le codage (ex. : **Z31.8** + **E28.2** si syndrome des ovaires polykystiques associé).
+
+4. **Absence de mention du nombre d'ovocytes prélevés :**
+   - **Critère essentiel** pour évaluer le succès de la procédure et justifier le codage.
+   - Doit figurer dans les **constatations per-opératoires** ou en **résultat**.
+
+5. **Anesthésie générale "légère" :**
+   - Formulation **imprécise** : soit **sédation consciente**, soit **anesthésie générale** (sans qualificatif).
+   - **Risque de rejet** par les organismes payeurs (ex. : assurance maladie) si la terminologie n'est pas standardisée.
+
+6. **Absence de mention des complications potentielles :**
+   - Bien que la procédure se soit déroulée sans complication, le compte rendu doit **mentionner les risques encourus** (ex. : hémorragie, infection, lésion d'organes adjacents) pour être complet sur le plan médico-légal.
+
+7. **IMC calculé mais non interprété :**
+   - L'**IMC (24,3)** est dans la norme, mais son **impact sur la fertilité** (ex. : réserve ovarienne, réponse à la stimulation) devrait être évoqué brièvement.
+
+8. **Absence de référence au consentement éclairé :**
+   - Aucune mention du **consentement de la patiente** pour la procédure, obligatoire en France (loi Kouchner).
+
+9. **Nom du chirurgien :**
+   - Le nom **"Dr Zlatan Martin"** semble **peu probable** en contexte français (risque d'erreur de saisie ou de génération automatique).
+   - Vérifier la **cohérence avec les bases de données hospitalières**.
+
+---
+
+### **Recommandations pour mise en conformité :**
+1. **Préciser l'indication** de la ponction ovocytaire à 46 ans (ex. : don d'ovocytes, préservation de fertilité pour raison médicale).
+2. **Ajouter le nombre d'ovocytes prélevés**.
+3. **Corriger le codage CIM-10** (N97.9 + Z31.8).
+4. **Détailler le protocole de stimulation ovarienne**.
+5. **Clarifier le type d'anesthésie** (sédation ou AG).
+6. **Mentionner le consentement éclairé**.
+7. **Vérifier l'identité du chirurgien**.
+
+---
+**Note :** Ce compte rendu nécessite des **modifications substantielles** pour être conforme aux **exigences cliniques, médico-légales et de codage PMSI**.

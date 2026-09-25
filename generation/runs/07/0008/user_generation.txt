@@ -1,0 +1,121 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 58 ans
+- Sexe du patient : Féminin
+- Taille : 164 cm
+- Poids : 68 kg (IMC 25,3)
+- Tabac : non
+- Alcool : non
+- Date d'entrée : 22/04/2026
+- Date de sortie : 22/04/2026
+- Date de naissance : 22/11/1967
+- Nom du patient : Dischert
+- Prénom du patient : Chantal
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation ambulatoire.
+- Codage CIM10 :
+   * Diagnostic principal : Duodénite (K298)
+   * Diagnostics associés :
+      - Surpoids dû à un excès calorique, de l'adulte ou de l'enfant (E6603)
+- Acte CCAM : dilatation antérograde de l'oesophage, par fibroscopie (HEAE003)
+- Nom du médecin / signataire : Jacqueline Philippy
+- Service : HEPATO-GASTRO-ENTERO
+- Hôpital : Hôpital Roger Salengro - Centre Hospitalier Universitaire de Lille
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="K29.8">
+
+# K29.8 — Duodénite
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XI : Maladies de l'appareil digestif
+- Bloc K20-K31 : Maladies de l'œsophage, de l'estomac et du duodénum
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XI) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité du bloc K20-K31) :
+
+hernie hiatale (K44.-)
+
+Affections relevant d'autres codes (hérité de la catégorie K29) :
+
+gastrite ou gastroentérite à éosinophiles (K52.8)
+syndrome de Zollinger–Ellison (E16.4)
+
+Formes spécifiées de la catégorie K29 :
+- Autres gastrites [→ K29.6]
+- Autres gastrites aigües [→ K29.1]
+- Gastrite alcoolique [→ K29.2]
+- Gastrite chronique atrophique [→ K29.4]
+- Gastrite chronique, sans précision [→ K29.5]
+- Gastrite chronique superficielle [→ K29.3]
+- Gastrite hémorragique aigüe [→ K29.0]
+- Gastrite, sans précision [→ K29.7]
+
+## Formulations cliniques alternatives
+- bulbite
+- bulbite congestive
+- bulbite érosive
+- bulbite nécrotique
+- bulbite pétéchiale
+- collection rétro-duodénale
+- duodénite
+- duodénite hémorragique
+- duodénite inflammatoire
+- duodénite nécrotico-hémorragique
+- duodénite post-bulbaire
+- infection du duodénum
+- inflammation du duodénum
+
+</fiche_code>
+
+<fiche_code code="E66.03">
+
+# E66.03 — Surpoids dû à un excès calorique, de l'adulte ou de l'enfant
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E65-E68 : Obésité et autres excès d'apport
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie E66.0 :
+- Obésité commune
+Obésité primaire
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité de la catégorie E66) :
+
+dystrophie adiposogénitale (E23.6)
+lipomatose :
+ - SAI (E88.2) 
+ - douloureuse [Dercum] (E88.2) 
+syndrome de Prader–Willi (Q87.1)
+
+</fiche_code>

@@ -1,0 +1,195 @@
+# 0005 — crh_generation.txt
+
+### Compte rendu d'hospitalisation
+
+**Hôpital Saint-Louis - Assistance Publique Hôpitaux de Paris**
+**Service de CARDIOLOGIE**
+
+**Nom :** Parant
+**Prénom :** Jeannette
+**Date de naissance :** 04/03/1942
+**Âge :** 84 ans
+
+---
+
+### Motif d’hospitalisation
+Mme Jeannette Parant, 84 ans, a été hospitalisée le 30/11/2026 pour exploration et prise en charge d’une douleur thoracique récurrente, survenant à l’effort et parfois au repos, associée à une sensation d’oppression. Ces symptômes évoquent un angor d’effort, dans un contexte d’hypertension artérielle connue et de fibrillation auriculaire paroxystique.
+
+---
+
+### Antécédents
+- **Médicaux :**
+  - Hypertension artérielle essentielle, suivie depuis plusieurs années.
+  - Fibrillation auriculaire paroxystique, connue depuis 2020.
+  - Sténose aortique calcifiée, non rhumatismale, diagnostiquée en 2022.
+  - Hypothyroïdie, sous traitement substitutif.
+  - Sinusite maxillaire chronique, évoluant depuis plusieurs années.
+  - Dénutrition modérée, objectivée par un IMC à 21,6 kg/m² et une perte de poids récente.
+  - Tabagisme actif (12 cigarettes/jour, 36 paquets-années).
+- **Chirurgicaux :** Aucun antécédent chirurgical notable.
+- **Familiaux :** Pas d’antécédent familial de cardiopathie ischémique ou de mort subite.
+- **Allergies :** Aucune allergie médicamenteuse connue.
+
+---
+
+### Mode de vie
+Mme Parant est retraitée, vivant à domicile de manière autonome. Elle fume activement 12 cigarettes par jour depuis plus de 50 ans (36 paquets-années). Elle ne consomme pas d’alcool. Son alimentation est déséquilibrée, avec des apports protéino-énergétiques insuffisants, contribuant à sa dénutrition modérée.
+
+---
+
+### Histoire de la maladie
+Depuis quelques semaines, Mme Parant présente des épisodes de douleur thoracique constrictive, survenant initialement à l’effort (montée d’escaliers, marche rapide) et plus récemment au repos. Ces symptômes s’accompagnent d’une sensation d’oppression thoracique et de palpitations. Elle a consulté son médecin traitant, qui a suspecté un angor d’effort dans un contexte d’hypertension artérielle mal contrôlée et de fibrillation auriculaire paroxystique. Une hospitalisation a été décidée pour exploration coronarienne et ajustement thérapeutique.
+
+---
+
+### Examen clinique
+À l’admission, Mme Parant est apyrétique, avec une tension artérielle à 160/90 mmHg, une fréquence cardiaque irrégulière à 88 battements/minute, et une saturation en oxygène à 96 % en air ambiant. Son poids est de 52 kg pour une taille de 155 cm (IMC = 21,6 kg/m²). L’auscultation cardiaque révèle un souffle systolique éjectionnel au foyer aortique, irradiant vers les carotides, compatible avec une sténose aortique serrée. Les pouls périphériques sont présents et symétriques. L’examen pulmonaire est sans particularité, en dehors d’une légère diminution du murmure vésiculaire à droite, évoquant une séquelle de sinusite maxillaire chronique. L’abdomen est souple, sans hépatomégalie ni signe d’insuffisance cardiaque droite. Les membres inférieurs ne présentent pas d’œdème.
+
+---
+
+### Examens complémentaires
+- **Biologie :**
+  - NFS : légère anémie normocytaire (Hb = 11,2 g/dL), sans anomalie des leucocytes ni des plaquettes.
+  - Ionogramme sanguin : kaliémie à 4,1 mmol/L, natrémie à 138 mmol/L.
+  - Créatinine : 102 µmol/L (DFG estimé à 45 mL/min/1,73 m²).
+  - Bilan hépatique : normal.
+  - TSH : 6,2 mUI/L (sous traitement substitutif), confirmant un équilibre suboptimal de l’hypothyroïdie.
+  - Gaz du sang artériel : légère hypoxémie (PaO₂ = 72 mmHg) avec normocapnie.
+  - Troponine ultrasensible : négative à deux reprises.
+- **ECG :** Fibrillation auriculaire à réponse ventriculaire rapide (90 battements/minute), sans signe d’ischémie aiguë.
+- **Échocardiographie transthoracique :** Sténose aortique serrée (surface aortique estimée à 0,8 cm²), avec un gradient moyen transvalvulaire à 45 mmHg. Fraction d’éjection ventriculaire gauche conservée (60 %). Légère hypertrophie ventriculaire gauche.
+- **Coronarographie (01/12/2026) :** Réalisée par voie radiale. Mise en évidence d’une sténose serrée de l’artère interventriculaire antérieure proximale (70 %), ainsi que de lésions modérées sur la coronaire droite et la circonflexe. Une ventriculographie gauche a confirmé la bonne fonction systolique globale.
+
+---
+
+### Évolution pendant l'hospitalisation
+#### Démarche diagnostique
+L’exploration coronarienne a permis de confirmer le diagnostic d’angor d’effort, secondaire à une maladie coronarienne athéromateuse. La sténose aortique serrée, déjà connue, a été réévaluée et jugée non chirurgicale à ce stade, en raison de l’âge et des comorbidités. La fibrillation auriculaire paroxystique a été documentée à plusieurs reprises, sans épisode prolongé nécessitant une cardioversion.
+
+#### Traitements
+- **Traitement médicamenteux :**
+  - Introduction d’un bêta-bloquant (bisoprolol 2,5 mg/jour) pour ralentir la fréquence cardiaque et réduire la consommation myocardique en oxygène.
+  - Poursuite du traitement antihypertenseur (inhibiteur calcique et diurétique thiazidique).
+  - Optimisation du traitement de l’hypothyroïdie (augmentation de la lévothyroxine à 75 µg/jour).
+  - Introduction d’un antiagrégant plaquettaire (clopidogrel 75 mg/jour) en prévention secondaire.
+  - Anticoagulation par antivitamine K (warfarine, INR cible 2-3) pour la fibrillation auriculaire.
+  - Supplémentation nutritionnelle (compléments hyperprotéinés) pour corriger la dénutrition modérée.
+- **Prise en charge des comorbidités :**
+  - Consultation ORL pour évaluation de la sinusite maxillaire chronique, avec proposition d’un traitement local (lavages de nez).
+  - Sevrage tabagique initié, avec proposition d’un suivi spécialisé en consultation de tabacologie.
+  - Surveillance régulière de la fonction rénale et de l’équilibre thyroïdien.
+
+Mme Parant a bien toléré les explorations et les ajustements thérapeutiques. Les douleurs thoraciques ont disparu sous traitement médical. Elle a été éduquée sur les signes d’alerte nécessitant une consultation en urgence (douleur thoracique, dyspnée, palpitations).
+
+---
+
+### Conclusion
+Mme Jeannette Parant, 84 ans, a été hospitalisée pour exploration d’un angor d’effort dans un contexte d’hypertension artérielle, de fibrillation auriculaire paroxystique et de sténose aortique serrée. La coronarographie a révélé une sténose significative de l’artère interventriculaire antérieure, justifiant une prise en charge médicamenteuse optimisée. La dénutrition modérée et l’hypothyroïdie ont également été prises en charge. Elle sort ce jour (03/12/2026) avec un traitement adapté et un suivi rapproché en cardiologie.
+
+**Dr Fernando Brando**
+Service de Cardiologie
+Hôpital Saint-Louis - AP-HP
+
+
+---
+
+## Formulations
+
+```json
+{
+  "diagnostics": {
+    "Autres formes d'angine de poitrine (I20.8)": [
+      "angor d’effort",
+      "angor d’effort dans un contexte d’hypertension artérielle mal contrôlée et de fibrillation auriculaire paroxystique",
+      "angor d’effort, secondaire à une maladie coronarienne athéromateuse"
+    ],
+    "Hypertension essentielle (primitive) (I10)": [
+      "hypertension artérielle essentielle",
+      "hypertension artérielle mal contrôlée",
+      "hypertension artérielle"
+    ],
+    "Malnutrition protéino-énergétique modérée (E44.0)": [
+      "dénutrition modérée",
+      "apports protéino-énergétiques insuffisants, contribuant à sa dénutrition modérée"
+    ],
+    "Douleur thoracique, sans précision (R07.4)": [
+      "douleur thoracique récurrente",
+      "douleur thoracique constrictive",
+      "sensation d’oppression thoracique"
+    ],
+    "Fibrillation auriculaire paroxystique (I48.0)": [
+      "fibrillation auriculaire paroxystique",
+      "fibrillation auriculaire paroxystique, connue depuis 2020"
+    ],
+    "Autres résultats anormaux précisés des examens chimiques du sang (R79.8)": [
+      "légère hypoxémie (PaO₂ = 72 mmHg) avec normocapnie",
+      "TSH : 6,2 mUI/L (sous traitement substitutif)"
+    ],
+    "Hypothyroïdie, sans précision (E03.9)": [
+      "hypothyroïdie",
+      "équilibre suboptimal de l’hypothyroïdie"
+    ],
+    "Sténose (de la valvule) aortique (non rhumatismale) (I35.0)": [
+      "sténose aortique calcifiée, non rhumatismale",
+      "sténose aortique serrée",
+      "rétrécissement aortique calcifié serré"
+    ],
+    "Sinusite maxillaire (chronique) (J32.0)": [
+      "sinusite maxillaire chronique",
+      "séquelle de sinusite maxillaire chronique"
+    ],
+    "Dépendance envers un respirateur : ventilation par masque nasal (Z99.1+1)": [],
+    "Syndrome de dépendance au tabac, utilisation continue (F17.25)": [
+      "tabagisme actif (12 cigarettes/jour, 36 paquets-années)"
+    ]
+  },
+  "informations": {
+    "Date entrée": [
+      "30/11/2026"
+    ],
+    "Date de sortie": [
+      "03/12/2026"
+    ],
+    "Service d'hospitalisation": [
+      "CARDIOLOGIE"
+    ],
+    "Nom/Prénom du patient": [
+      "Parant Jeannette"
+    ],
+    "Nom/Prénom du médecin": [
+      "Fernando Brando"
+    ],
+    "Âge": [
+      "84 ans"
+    ],
+    "Sexe": [
+      "Féminin"
+    ],
+    "État général": [
+      "Mme Parant est apyrétique, avec une tension artérielle à 160/90 mmHg, une fréquence cardiaque irrégulière à 88 battements/minute, et une saturation en oxygène à 96 % en air ambiant."
+    ],
+    "Poids": [
+      "52 kg pour une taille de 155 cm (IMC = 21,6 kg/m²)"
+    ],
+    "Statut gestationnel": [],
+    "Gestité": [],
+    "NFS": [
+      "légère anémie normocytaire (Hb = 11,2 g/dL), sans anomalie des leucocytes ni des plaquettes"
+    ],
+    "Créatinine": [
+      "102 µmol/L (DFG estimé à 45 mL/min/1,73 m²)"
+    ],
+    "Bilan hépatique": [
+      "normal"
+    ],
+    "Traitements": [
+      "Introduction d’un bêta-bloquant (bisoprolol 2,5 mg/jour)",
+      "Poursuite du traitement antihypertenseur (inhibiteur calcique et diurétique thiazidique)",
+      "Optimisation du traitement de l’hypothyroïdie (augmentation de la lévothyroxine à 75 µg/jour)",
+      "Introduction d’un antiagrégant plaquettaire (clopidogrel 75 mg/jour)",
+      "Anticoagulation par antivitamine K (warfarine, INR cible 2-3)",
+      "Supplémentation nutritionnelle (compléments hyperprotéinés)"
+    ]
+  }
+}
+```

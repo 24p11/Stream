@@ -1,0 +1,88 @@
+{
+  "scenario": "0010",
+  "source": "crh_generation.txt",
+  "seuil": 0.75,
+  "formulations": {
+    "diagnostics": {
+      "Gelure de la cheville et du pied, avec nécrose des tissus (T348)": [
+        "gelure sévère du pied et de la cheville droite",
+        "lésions nécrotiques des tissus",
+        "nécrose cutanée étendue",
+        "gelure avec nécrose tissulaire"
+      ],
+      "Exposition à un froid naturel excessif, domicile, en pratiquant un sport (X3100)": [
+        "exposition prolongée au froid lors d’une randonnée en montagne",
+        "exposition prolongée à un froid intense"
+      ],
+      "Difficultés liées au fait d'être sans abri (Z590)": [
+        "absence de domicile fixe",
+        "vit actuellement sans domicile fixe",
+        "situation de précarité extrême"
+      ],
+      "Troubles mentaux et du comportement liés à l'utilisation d'alcool : utilisation nocive pour la santé (F101)": [
+        "consommation alcoolique chronique",
+        "consommation alcoolique régulière",
+        "consommation alcoolique"
+      ]
+    },
+    "informations": {
+      "Date entrée": [
+        "25/07/2025"
+      ],
+      "Date de sortie": [
+        "30/07/2025"
+      ],
+      "Service d'hospitalisation": [
+        "Service des Urgences"
+      ],
+      "Nom/Prénom du patient": [],
+      "Nom/Prénom du médecin": [
+        "Warrick Molinier"
+      ],
+      "Âge": [
+        "26 ans"
+      ],
+      "Sexe": [],
+      "État général": [
+        "conscient, orienté, mais présente des signes de détresse physique"
+      ],
+      "Poids": [
+        "79 kg"
+      ],
+      "Statut gestationnel": [],
+      "Gestité": [],
+      "NFS": [
+        "NFS, ionogramme sanguin et bilan hépatique normaux"
+      ],
+      "Créatinine": [
+        "La créatinine est dans les limites de la normale"
+      ],
+      "Bilan hépatique": [
+        "NFS, ionogramme sanguin et bilan hépatique normaux"
+      ],
+      "Traitements": [
+        "Prise en charge de la douleur par antalgiques de palier 2",
+        "Soins locaux des lésions : détersion des zones nécrotiques, application de pansements adaptés",
+        "Antibiothérapie prophylactique par amoxicilline-acide clavulanique",
+        "Réchauffement progressif des membres inférieurs",
+        "proposition d’un sevrage alcoolique progressif"
+      ]
+    }
+  },
+  "supprimees": [
+    {
+      "section": "informations",
+      "cle": "Nom/Prénom du patient",
+      "formulation": "Bauden Sirius",
+      "score": 0.703,
+      "meilleur_candidat": "Bauden - Prénom : Sirius"
+    },
+    {
+      "section": "informations",
+      "cle": "Sexe",
+      "formulation": "Masculin",
+      "score": 0.533,
+      "meilleur_candidat": "associe"
+    }
+  ]
+}

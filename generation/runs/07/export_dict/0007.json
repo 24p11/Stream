@@ -1,0 +1,137 @@
+{
+  "scenario": "0007",
+  "source": "crh_generation.txt",
+  "seuil": 0.75,
+  "formulations": {
+    "diagnostics": {
+      "Autres insuffisances rénales aiguës (N178)": [
+        "insuffisance rénale aiguë",
+        "insuffisance rénale aiguë sur obstacle fécal"
+      ],
+      "Hypertension essentielle (primitive) (I10)": [
+        "Hypertension artérielle essentielle connue depuis plusieurs années",
+        "tension artérielle limite malgré son traitement antihypertenseur habituel"
+      ],
+      "Hypovolémie (E86)": [
+        "hypovolémie",
+        "déshydratation extracellulaire sévère",
+        "signes de déshydratation extracellulaire",
+        "déshydratation extracellulaire"
+      ],
+      "Autres obstructions de l'intestin (K564)": [
+        "obstruction fécale colique",
+        "stercolithe colique",
+        "fécalome palpable",
+        "obstruction fécale"
+      ],
+      "Tumeur maligne secondaire du poumon (C780)": [
+        "Métastases pulmonaires secondaires",
+        "lésions secondaires pulmonaires connues",
+        "opacités nodulaires bilatérales compatibles avec des lésions secondaires pulmonaires"
+      ],
+      "Présence d'implants d'articulations orthopédiques (Z966)": [
+        "Prothèse totale de hanche gauche"
+      ],
+      "Désorientation, sans précision (R410)": [
+        "désorientation temporo-spatiale",
+        "désorientation temporo-spatiale complète",
+        "épisodes de désorientation"
+      ],
+      "Obésité due à un excès calorique de l'adulte avec indice de masse corporelle [IMC] égal ou supérieur à 30 kg/m² et inférieur à 35 kg/m², ou obésité due à un excès calorique de l'enfant (E6604)": [
+        "Obésité modérée (IMC à 30,4 kg/m²)."
+      ],
+      "Malnutrition protéino-énergétique modérée (E440)": [
+        "Dénutrition protéino-énergétique modérée.",
+        "Dénutrition protéino-énergétique modérée."
+      ],
+      "Besoin d'assistance à domicile, aucun autre membre du foyer n'étant capable d'assurer les soins (Z742)": [
+        "assistance à domicile en raison de l’absence de proche capable d’assurer les soins quotidiens",
+        "renforcement de l’assistance à domicile"
+      ],
+      "Lucite polymorphe (L564)": [
+        "Antécédent de lucite polymorphe."
+      ],
+      "Carence en vitamine D, sans précision (E559)": [
+        "Carence en vitamine D documentée.",
+        "Vitamine D : 12 ng/mL"
+      ],
+      "Hypothyroïdie, sans précision (E039)": [
+        "Hypothyroïdie sous traitement substitutif.",
+        "hypothyroïdie"
+      ],
+      "Démence sévère, sans précision, sans symptôme supplémentaire (F03+02)": [
+        "démence sénile sévère",
+        "démence sénile sévère sous-jacente"
+      ]
+    },
+    "informations": {
+      "Date entrée": [],
+      "Date de sortie": [],
+      "Service d'hospitalisation": [
+        "Service de Néphrologie"
+      ],
+      "Nom/Prénom du patient": [
+        "Sanchez Tebar"
+      ],
+      "Nom/Prénom du médecin": [
+        "Claudine Zmouli"
+      ],
+      "Âge": [
+        "82 ans"
+      ],
+      "Sexe": [],
+      "État général": [
+        "altération de l'état général",
+        "asthénie croissante",
+        "perte d’appétit"
+      ],
+      "Poids": [
+        "72 kg",
+        "72 kg pour 1,54 m (IMC à 30,4 kg/m²)"
+      ],
+      "Statut gestationnel": [],
+      "Gestité": [],
+      "NFS": [
+        "hémoglobine à 10,2 g/dL, VGM à 88 fL, leucocytes à 8 500/mm³, plaquettes à 220 000/mm³"
+      ],
+      "Créatinine": [
+        "créatininémie élevée",
+        "Créatininémie : 280 µmol/L",
+        "créatininémie à 120 µmol/L au 7ᵉ jour"
+      ],
+      "Bilan hépatique": [
+        "normal"
+      ],
+      "Traitements": [
+        "réhydratation intraveineuse",
+        "lavements évacuateurs",
+        "Ajustement de la posologie de lévothyroxine.",
+        "Vitamine D per os (100 000 UI en dose de charge, puis 800 UI/jour).",
+        "Régime hypercalorique et hyperprotéiné, avec complémentation orale."
+      ]
+    }
+  },
+  "supprimees": [
+    {
+      "section": "informations",
+      "cle": "Date entrée",
+      "formulation": "20/07/2026",
+      "score": 0.462,
+      "meilleur_candidat": "000"
+    },
+    {
+      "section": "informations",
+      "cle": "Date de sortie",
+      "formulation": "12/08/2026",
+      "score": 0.5,
+      "meilleur_candidat": "105/60"
+    },
+    {
+      "section": "informations",
+      "cle": "Sexe",
+      "formulation": "Féminin",
+      "score": 0.667,
+      "meilleur_candidat": "maintien"
+    }
+  ]
+}

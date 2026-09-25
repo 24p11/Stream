@@ -1,0 +1,62 @@
+### **VERDICT : NON CONFORME**
+
+#### **Anomalies constatées :**
+
+1. **Incohérence clinique majeure :**
+   - **Traitement par chimiothérapie pour une ostéoporose sénile** :
+     - La chimiothérapie n’est **pas un traitement standard de l’ostéoporose sénile** (M81.88). Les traitements habituels incluent les bisphosphonates, le dénosumab, le tériparatide, ou des suppléments en calcium/vitamine D.
+     - **Risque de codage erroné** : Si la chimiothérapie est mentionnée par erreur, cela pourrait conduire à un codage inapproprié (ex. : CIM-10 pour néoplasie au lieu de M81.88).
+     - **Recommandation** : Vérifier si la patiente ne présente pas une **pathologie maligne sous-jacente** (ex. : myélome multiple, métastases osseuses) justifiant une chimiothérapie. Si non, corriger le compte rendu pour refléter un traitement anti-ostéoporotique standard.
+
+2. **Problèmes de codage CIM-10 :**
+   - **Diabète de type 2 insulinotraité (E11.30)** :
+     - Le code **E11.30** (diabète de type 2 avec complications oculaires, sans précision) est correct, mais il manque la **rétinopathie diabétique** (H36.0) dans la liste des diagnostics codés.
+     - **Anémie mixte** :
+       - Le code **D63.8** (anémie au cours d’autres maladies chroniques) est correct pour l’anémie liée à l’insuffisance rénale, mais il manque le code **N18.3** (insuffisance rénale chronique, stade 3) pour l’IRC sous-jacente.
+       - L’anémie ferriprive (D50.9) est correctement codée.
+   - **Ostéoporose sénile (M81.88)** :
+     - Le code est correct, mais il faudrait préciser si des **tassements vertébraux** (M48.5) sont présents (ce qui est le cas ici) pour un codage plus précis.
+
+3. **Incohérences mineures :**
+   - **Date d’hospitalisation (12/08/2026)** :
+     - La date est dans le futur (au moment de la vérification en 2024). Vérifier si c’est une erreur de saisie.
+   - **IMC (26,1 kg/m²)** :
+     - Classé comme "surpoids modéré" (E66.03), ce qui est correct, mais le terme "surcharge pondérale" serait plus précis que "surpoids dû à un excès calorique".
+   - **Cataracte diabétique (H28.0)** :
+     - Le code est correct, mais il faudrait préciser si la cataracte est **bilatérale** (H28.0 + H28.0 pour chaque œil).
+
+4. **Omissions dans les diagnostics codés :**
+   - **Insuffisance rénale chronique (N18.3)** : Non mentionnée dans les codes proposés, alors qu’elle est cliniquement significative.
+   - **Rétinopathie diabétique (H36.0)** : Non codée, alors qu’elle est décrite dans le compte rendu.
+   - **Tassements vertébraux (M48.5)** : Non codés, alors qu’ils sont documentés.
+
+5. **Terminologie médicale :**
+   - **"Diabète insulinodépendant"** :
+     - Le terme "insulinotraité" est plus approprié que "insulinodépendant" pour un diabète de type 2 (le terme "insulinodépendant" est réservé au diabète de type 1).
+   - **"Anémie mixte"** :
+     - Le terme est correct, mais il faudrait préciser "anémie mixte (carence martiale + anémie de l’IRC)".
+
+---
+
+### **Recommandations pour rendre le compte rendu CONFORME :**
+1. **Corriger l’incohérence clinique majeure** :
+   - Soit confirmer que la patiente a bien une **pathologie maligne justifiant une chimiothérapie** (ex. : myélome), et adapter les codes CIM-10 en conséquence.
+   - Soit remplacer "chimiothérapie" par le **traitement anti-ostéoporotique réel** (ex. : perfusion de zolédronate, dénosumab).
+
+2. **Compléter les codes CIM-10 manquants** :
+   - Ajouter :
+     - **N18.3** (Insuffisance rénale chronique, stade 3).
+     - **H36.0** (Rétinopathie diabétique).
+     - **M48.5** (Tassements vertébraux) si pertinent.
+
+3. **Corriger les erreurs mineures** :
+   - Vérifier la date d’hospitalisation.
+   - Préciser "bilatérale" pour la cataracte si nécessaire.
+
+4. **Uniformiser la terminologie** :
+   - Remplacer "insulinodépendant" par "insulinotraité".
+   - Préciser "anémie mixte (carence martiale + IRC)".
+
+---
+### **Conclusion :**
+Le compte rendu présente une **incohérence clinique majeure** (chimiothérapie pour ostéoporose) et des **lacunes de codage** (diagnostics manquants). Une **révision médicale et administrative** est nécessaire avant validation.

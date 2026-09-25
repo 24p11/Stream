@@ -1,0 +1,95 @@
+{
+  "scenario": "0000",
+  "source": "crh_generation.txt",
+  "seuil": 0.75,
+  "formulations": {
+    "diagnostics": {
+      "Autres ostéoporoses - Autres localisations (M81.88)": [
+        "ostéoporose sénile touchant le rachis dorsal et lombaire",
+        "Ostéoporose sénile avec atteinte vertébrale dorsale et lombaire."
+      ],
+      "Cataracte diabétique (H28.0)": [
+        "cataracte bilatérale chez la diabétique"
+      ],
+      "Diabète sucré de type 2 insulinotraité, avec complications oculaires (E11.30)": [
+        "Diabète de type 2 insulinotraité, compliqué d'une rétinopathie diabétique",
+        "diabète de type 2 insulinodépendant"
+      ],
+      "Anémie au cours d'autres maladies chroniques classées ailleurs (D63.8)": [
+        "anémie associée à une insuffisance rénale modérée",
+        "anémie liée à son insuffisance rénale modérée"
+      ],
+      "Anémie par carence en fer, sans précision (D50.9)": [
+        "anémie ferriprive chronique",
+        "carence martiale chronique"
+      ],
+      "Surpoids dû à un excès calorique, de l'adulte ou de l'enfant (E66.03)": [
+        "Surpoids modéré.",
+        "surpoids dû à un excès calorique"
+      ]
+    },
+    "informations": {
+      "Date entrée": [],
+      "Date de sortie": [],
+      "Service d'hospitalisation": [
+        "Hospitalisation ambulatoire"
+      ],
+      "Nom/Prénom du médecin": [
+        "Jean Rimbert"
+      ],
+      "Nom/Prénom du patient": [],
+      "Poids": [
+        "72 kg"
+      ],
+      "Âge": [
+        "63 ans"
+      ],
+      "Sexe": [],
+      "État général": [
+        "légère pâleur cutanéo-muqueuse, sans signe de décompensation cardiaque ni de déficit neurologique"
+      ],
+      "NFS": [
+        "Hémoglobine à 10,2 g/dL, VGM à 78 fL, ferritinémie basse à 12 µg/L"
+      ],
+      "Créatinine": [
+        "créatininémie est à 110 µmol/L (DFG estimé à 50 mL/min)"
+      ],
+      "Bilan hépatique": [
+        "Normal"
+      ],
+      "Traitements": [
+        "poursuite du traitement habituel"
+      ]
+    }
+  },
+  "supprimees": [
+    {
+      "section": "informations",
+      "cle": "Date entrée",
+      "formulation": "12/08/2026",
+      "score": 0.5,
+      "meilleur_candidat": "130/80"
+    },
+    {
+      "section": "informations",
+      "cle": "Date de sortie",
+      "formulation": "12/08/2026",
+      "score": 0.5,
+      "meilleur_candidat": "130/80"
+    },
+    {
+      "section": "informations",
+      "cle": "Nom/Prénom du patient",
+      "formulation": "Schambil Claudia",
+      "score": 0.711,
+      "meilleur_candidat": "Schambil **Prénom :** Claudia"
+    },
+    {
+      "section": "informations",
+      "cle": "Sexe",
+      "formulation": "Féminin",
+      "score": 0.588,
+      "meilleur_candidat": "témoignant"
+    }
+  ]
+}

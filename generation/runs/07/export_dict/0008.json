@@ -1,0 +1,65 @@
+{
+  "scenario": "0008",
+  "source": "crh_generation.txt",
+  "seuil": 0.75,
+  "formulations": {
+    "diagnostics": {
+      "Duodénite (K29.8)": [
+        "duodénite inflammatoire",
+        "muqueuse duodénale congestive et érosive"
+      ],
+      "Surpoids dû à un excès calorique, de l'adulte ou de l'enfant (E66.03)": [
+        "surpoids modéré lié à un excès calorique",
+        "surpoids modéré"
+      ]
+    },
+    "informations": {
+      "Date entrée": [
+        "22/04/2026"
+      ],
+      "Date de sortie": [
+        "22/04/2026"
+      ],
+      "Service d'hospitalisation": [
+        "HEPATO-GASTRO-ENTERO"
+      ],
+      "Nom/Prénom du médecin": [
+        "Jacqueline Philippy"
+      ],
+      "Nom/Prénom du patient": [],
+      "Poids": [
+        "68 kg"
+      ],
+      "Âge": [
+        "58 ans"
+      ],
+      "Sexe": [],
+      "État général": [
+        "la patiente est apyrétique, avec une tension artérielle à 125/75 mmHg et une fréquence cardiaque à 72 battements par minute."
+      ],
+      "NFS": [],
+      "Créatinine": [],
+      "Bilan hépatique": [],
+      "Traitements": [
+        "un traitement par inhibiteurs de la pompe à protons (IPP) pendant 15 jours",
+        "Un traitement par IPP à double dose a été instauré pour une durée de quatre semaines,"
+      ]
+    }
+  },
+  "supprimees": [
+    {
+      "section": "informations",
+      "cle": "Nom/Prénom du patient",
+      "formulation": "Dischert Chantal",
+      "score": 0.744,
+      "meilleur_candidat": "Dischert - Prénom : Chantal"
+    },
+    {
+      "section": "informations",
+      "cle": "Sexe",
+      "formulation": "Féminin",
+      "score": 0.588,
+      "meilleur_candidat": "témoignant"
+    }
+  ]
+}

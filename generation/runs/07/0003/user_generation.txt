@@ -1,0 +1,414 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 32 ans
+- Sexe du patient : Féminin
+- Date d'entrée : 06/06/2024
+- Date de sortie : 10/06/2024
+- Date de naissance : 18/09/1991
+- Nom du patient : Barbeyron
+- Prénom du patient : Noelle
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Prise en charge pour accouchement par voie basse.
+- Codage CIM10 :
+   * Diagnostic principal : Travail et accouchement compliqués d'autres anomalies du cordon ombilical (O698)
+   * Diagnostics associés :
+      - Dermite vésiculaire due au virus de l'herpès (B001)
+      - Naissance unique, enfant vivant (Z370)
+      - Soins et examens de l'allaitement maternel (Z391)
+      - Difficultés liées à une multiparité (Z641)
+      - Conseils et avis généraux concernant la contraception (Z300)
+      - Autres difficultés précisées liées à certaines situations psychosociales (Z658)
+      - Troubles mentaux et maladies du système nerveux compliquant la grossesse, l'accouchement et la puerpéralité (O993)
+      - Autres formes d'inertie utérine (O622)
+      - Hypertension secondaire préexistante compliquant la grossesse, l'accouchement et la puerpéralité (O104)
+- Nom du médecin / signataire : Monique Dulier
+- Service : OBSTETRIQUE
+- Hôpital : Hôpital Saint-Louis - Assistance Publique Hôpitaux de Paris
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="O69.8">
+
+# O69.8 — Travail et accouchement compliqués d'autres anomalies du cordon ombilical
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O60-O75 : Complications du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- Circulaire du cordon sans compression
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Formes spécifiées de la catégorie O69 :
+- Travail et accouchement compliqués d'un prolapsus du cordon [→ O69.0]
+- Travail et accouchement compliqués d'une autre forme d'enchevêtrement du cordon, avec compression [→ O69.2]
+- Travail et accouchement compliqués d'une brièveté du cordon [→ O69.3]
+- Travail et accouchement compliqués d'une circulaire du cordon, avec compression [→ O69.1]
+- Travail et accouchement compliqués de lésions vasculaires du cordon [→ O69.5]
+- Travail et accouchement compliqués par une insertion vélamenteuse du cordon [→ O69.4]
+
+</fiche_code>
+
+<fiche_code code="B00.1">
+
+# B00.1 — Dermite vésiculaire due au virus de l'herpès
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre I : Certaines maladies infectieuses et parasitaires
+- Bloc B00-B09 : Infections virales caractérisées par des lésions cutanéomuqueuses
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre I :
+- les maladies considérées habituellement comme contagieuses ou transmissibles
+
+Au niveau du code :
+- dermite vésiculaire de lèvre due au virus humain type 2 (alpha)
+- dermite vésiculaire de oreille due au virus humain type 2 (alpha)
+- herpes simplex de face
+- herpes simplex de lèvre
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre I) :
+
+certaines infections localisées – voir les chapitres relatifs aux divers systèmes, appareils et organes
+grippe et autres affections aigües des voies respiratoires (J00-J22)
+infections spécifiques de la période périnatale [à l'exception du tétanos du nouveau-né, de la coqueluche, de la syphilis congénitale, des infections périnatales à gonocoques et des maladies périnatales dues au virus de l'immunodéficience humaine [VIH]] (P35-P39)
+maladies infectieuses et parasitaires de la mère compliquant la grossesse, l'accouchement et la puerpéralité [à l'exception du tétanos obstétrical] (O98.-)
+sujet porteur ou suspecté porteur d'une maladie infectieuse (Z22.-)
+
+Affections relevant d'autres codes (hérité de la catégorie B00) :
+
+herpangine (B08.5)
+infection :
+ - anogénitale par le virus de l'herpès (A60.-) 
+ - virale congénitale herpétique (P35.2) 
+mononucléose due à herpès virus gamma (B27.0)
+
+## Formulations cliniques alternatives
+- atteint herpétique buccale
+- dermite vésiculaire due à herpès
+- éruption cutanée herpétiforme
+- folliculite herpétique surinfectée face
+- herpès buccal
+- herpès de l'oreille externe
+- herpès dermite vésiculaire
+- herpès facial
+- herpès fébrile
+- herpès fessier géant
+- herpès jugal
+- herpès labial
+- herpès labial géant
+- herpès labial nécrotique
+- herpès nasal
+- poussée herpétique ulcéro-nécrotique trachéo-orl
+
+</fiche_code>
+
+<fiche_code code="Z37.0">
+
+# Z37.0 — Naissance unique, enfant vivant
+
+Statut MCO (kit ATIH 2025) : codable en MCO, interdit en DP et DR.
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+
+## Notes de la CIM-10
+- Les subdivisions suivantes doivent être utilisées comme cinquième caractère pour préciser les circonstances de la naissance avec les souscatégories appropriées: *(note du bloc Z37)*
+
+</fiche_code>
+
+<fiche_code code="Z39.1">
+
+# Z39.1 — Soins et examens de l'allaitement maternel
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- surveillance de l'allaitement
+
+## À ne pas décrire
+
+Affections relevant d'autres codes :
+
+troubles de la lactation (O92.-)
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+- [GM2026-V-XXI-26] Un code Z39 est toujours requis pour les séjours du postpartum ; il ne doit pas être enregistré d'acte d'accouchement dans le RUM, et un code de la catégorie Z37 doit être saisi en diagnostic associé.
+
+### Règles générales du chapitre XXI
+
+- [GM2026-V-XXI-01] (Emploi général des codes du chapitre XXI) Les codes du chapitre XXI (« codes Z ») peuvent, et souvent doivent, être utilisés dans le RUM comme diagnostic principal, relié ou associé.
+
+## Formulations cliniques alternatives
+- surveillance d'Allaitement
+- surveillance de l'allaitement
+- surveillance de la lactation
+
+</fiche_code>
+
+<fiche_code code="Z64.1">
+
+# Z64.1 — Difficultés liées à une multiparité
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z55-Z65 : Sujets dont la santé peut être menacée par des conditions socioéconomiques et psychosociales
+
+## À ne pas décrire
+
+Affections relevant d'autres codes :
+
+surveillance de grossesse avec multiparité élevée (Z35.4)
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+### Règles générales du chapitre XXI
+
+- [GM2026-V-XXI-01] (Emploi général des codes du chapitre XXI) Les codes du chapitre XXI (« codes Z ») peuvent, et souvent doivent, être utilisés dans le RUM comme diagnostic principal, relié ou associé.
+
+## Formulations cliniques alternatives
+- problème multiparité
+
+</fiche_code>
+
+<fiche_code code="Z30.0">
+
+# Z30.0 — Conseils et avis généraux concernant la contraception
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- planification familiale SAI
+- première prescription de moyens contraceptifs
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+### Règles générales du chapitre XXI
+
+- [GM2026-V-XXI-01] (Emploi général des codes du chapitre XXI) Les codes du chapitre XXI (« codes Z ») peuvent, et souvent doivent, être utilisés dans le RUM comme diagnostic principal, relié ou associé.
+
+## Formulations cliniques alternatives
+- planification familiale
+- prescription de contraceptif
+
+</fiche_code>
+
+<fiche_code code="Z65.8">
+
+# Z65.8 — Autres difficultés précisées liées à des situations psychosociales
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z55-Z65 : Sujets dont la santé peut être menacée par des conditions socioéconomiques et psychosociales
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité de la catégorie Z65) :
+
+lésion traumatique récente – voir Index alphabétique
+
+Formes spécifiées de la catégorie Z65 :
+- Condamnation sans emprisonnement, après procès civil ou pénal [→ Z65.0]
+- Difficultés liées à d'autres situations juridiques [→ Z65.3]
+- Difficultés liées à une libération de prison [→ Z65.2]
+- Emprisonnement et autre incarcération [→ Z65.1]
+- Exposition à une catastrophe, une guerre et autres hostilités [→ Z65.5]
+- Victime d'un crime et d'actes terroristes [→ Z65.4]
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+### Règles générales du chapitre XXI
+
+- [GM2026-V-XXI-01] (Emploi général des codes du chapitre XXI) Les codes du chapitre XXI (« codes Z ») peuvent, et souvent doivent, être utilisés dans le RUM comme diagnostic principal, relié ou associé.
+
+</fiche_code>
+
+<fiche_code code="O99.3">
+
+# O99.3 — Troubles mentaux et maladies du système nerveux compliquant la grossesse, l'accouchement et la puerpéralité
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O94-O99 : Autres problèmes obstétricaux, non classés ailleurs
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- états en (F00-F99), (G00-G99)
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Affections relevant d'autres codes (hérité de la catégorie O99) :
+
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies infectieuses et parasitaires (O98.-)
+quand la raison des soins maternels est que l'affection est considérée comme ayant affecté le fœtus ou présumée l'avoir fait (O35-O36)
+
+Affections relevant d'autres codes :
+
+dépression postnatale (F53.0)
+névrite périphérique liée à la grossesse (O26.8)
+psychose puerpérale (F53.1)
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+- [GM2026-V-ITG-07] L'IMG avant vingt-deux semaines révolues d'aménorrhée se code comme un avortement : DP O04.–1, O04.–2 ou O04.–3 (selon la cause : embryonnaire/fœtale, maternelle, ou association de causes). En DA, le motif de l'IMG : le code ad hoc du chapitre XV s'il y est classé (en particulier la catégorie O35, dont la note d'inclusion ne s'oppose pas à la mention conjointe à un code d'avortement) ou un code des catégories O98 ou O99, précisé si besoin par un code des chapitres I à XVII et XIX. Acte d'interruption de grossesse et date des dernières règles enregistrés.
+- [GM2026-V-ITG-08] L'IMG à partir de vingt-deux semaines révolues d'aménorrhée est un accouchement. Cause fœtale : DP dans la catégorie O35 ; DA par convention un code étendu de la catégorie Z37 (en général Z37.11 Naissance unique, enfant mort-né, à la suite d'une IMG) ; acte d'accouchement ; âge gestationnel et date des dernières règles. Cause maternelle : DP au code ad hoc du chapitre XV ou dans O98/O99, pas de DR ; DA Z37 (en général Z37.11), précision par un code des chapitres I à XVII et XIX si besoin ; acte d'accouchement ; âge gestationnel et date des dernières règles.
+
+## Notes de la CIM-10
+- Pour l'utilisation des catégories O95-O97, se référer aux règles et instructions du volume 2 pour le codage de la mortalité. *(note du bloc O94-O99)*
+
+## Formulations cliniques alternatives
+- alcoolisme au cours de la grossesse
+- comitialité pendant grossesse
+- convulsions maternelles
+- épilepsie pendant grossesse
+- porteuse myopathie Becker
+
+</fiche_code>
+
+<fiche_code code="O62.2">
+
+# O62.2 — Autres formes d'inertie utérine
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O60-O75 : Complications du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- atonie de l'utérus
+- faibles contractions
+- hypotonie utérine SAI
+- inertie utérine SAI
+- travail irrégulier
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Affections relevant d'autres codes :
+
+hémorragie du postpartum par atonie utérine (O72.1)
+
+## Formulations cliniques alternatives
+- atonie utérine
+- inertie utérine
+
+</fiche_code>
+
+<fiche_code code="O10.4">
+
+# O10.4 — Hypertension secondaire préexistante compliquant la grossesse, l'accouchement et la puerpéralité
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O10-O16 : Œdème, protéinurie et hypertension au cours de la grossesse, de l'accouchement et de la puerpéralité
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie O10 :
+- les états mentionnés avec protéinurie préexistante
+
+Au niveau du code :
+- tout état classé en I15.- précisé comme cause de soins obstétricaux au cours de la grossesse, de l'accouchement ou de la puerpéralité
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Affections relevant d'autres codes (hérité de la catégorie O10) :
+
+avec prééclampsie surajoutée (O11)
+
+## Formulations cliniques alternatives
+- HTA liée à d'autres affections, compliquant la grossesse
+- HTA secondaire pré-existante compliquant GAP
+
+</fiche_code>

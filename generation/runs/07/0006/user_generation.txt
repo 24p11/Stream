@@ -1,0 +1,174 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 68 ans
+- Sexe du patient : Féminin
+- Taille : 164 cm
+- Poids : 69 kg (IMC 25,7)
+- Tabac : non
+- Alcool : non
+- Date d'entrée : 11/06/2024
+- Date de sortie : 12/06/2024
+- Date de naissance : 03/07/1955
+- Nom du patient : Berne
+- Prénom du patient : Aprile
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
+- Codage CIM10 :
+   * Diagnostic principal : Autres gastro-entérites et colites non infectieuses précisées (K528)
+   * Diagnostics associés :
+      - Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication (E1198)
+      - Surpoids dû à un excès calorique, de l'adulte ou de l'enfant (E6603)
+- Nom du médecin / signataire : Nikolas Hedon
+- Service : HEPATO-GASTRO-ENTERO
+- Hôpital : Hôpital Larrey - Centre hospitalier universitaire de Toulouse
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="K52.8">
+
+# K52.8 — Autres gastroentérites et colites non infectieuses précisées
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XI : Maladies de l'appareil digestif
+- Bloc K50-K52 : Entérites et colites non infectieuses
+
+## Périmètre clinique du code
+
+Inclusions héritées du bloc K50-K52 :
+- maladies inflammatoires non infectieuses de l'intestin
+
+Au niveau du code :
+- gastrite ou gastro-entérite à éosinophiles
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XI) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité du bloc K50-K52) :
+
+mégacôlon (K59.3)
+syndrome de l'intestin irritable (K58.-)
+
+Formes spécifiées de la catégorie K52 :
+- Colite non infectieuse indéterminée [→ K52.3]
+- Gastroentérite et colite allergiques et alimentaires [→ K52.2]
+- Gastroentérite et colite dues à une irradiation [→ K52.0]
+- Gastroentérite et colite toxiques [→ K52.1]
+
+## Formulations cliniques alternatives
+- colite chronique éosinophile
+- colite éosinophiles
+- colite érosive
+- colite érythémateuse
+- colite hémorragique chronique
+- diarrhée chronique collagène
+- gastrite à éosinophiles
+- gastrite éosinophiles
+- gastro-entérite éosinophiles
+- iléo-colite neutropénique
+- lipomatose valvule de bauhin
+- malakoplakie
+- oedème valvule de bauhin
+- pancolite hémorragique
+
+</fiche_code>
+
+<fiche_code code="E11.98">
+
+# E11.98 — Diabète sucré de type 2 - "Sans complication" - "diabète sucré de type 2 non insulinotraité ou sans précision"
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E10-E14 : Diabète sucré
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie E11 :
+- diabète (sucré) (avec obésité) (sans obésité) (de) adulte
+- diabète (sucré) (avec obésité) (sans obésité) (de) :
+ - adulte
+ - maturité
+ - non cétosique
+ - non insulinodépendant du sujet jeune
+ - stable
+- diabète (sucré) (avec obésité) (sans obésité) (de) maturité
+- diabète (sucré) (avec obésité) (sans obésité) (de) non cétosique
+- diabète (sucré) (avec obésité) (sans obésité) (de) non insulino-dépendant du sujet jeune
+- diabète (sucré) (avec obésité) (sans obésité) (de) stable
+- diabète (sucré) (avec obésité) (sans obésité) (de) type II
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité de la catégorie E11) :
+
+anomalie de l'épreuve de tolérance au glucose (R73.0)
+diabète sucré :
+ - au cours de la grossesse, de l'accouchement et de la puerpéralité (O24.-) 
+ - de malnutrition (E12.-) 
+ - du nouveau-né (P70.2) 
+- glycosurie :
+ - SAI (R81) 
+ - rénale (E74.8) 
+hypo-insulinémie postchirurgicale (E89.1)
+
+## Notes de la CIM-10
+- Les subdivisions suivantes doivent être utilisées comme cinquième caractère pour préciser le traitement du patient: *(note du bloc E11)*
+- Les subdivisions suivantes peuvent être utilisées comme quatrième caractère avec les rubriques E10-E14: *(note du bloc E10-E14)*
+
+</fiche_code>
+
+<fiche_code code="E66.03">
+
+# E66.03 — Surpoids dû à un excès calorique, de l'adulte ou de l'enfant
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E65-E68 : Obésité et autres excès d'apport
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie E66.0 :
+- Obésité commune
+Obésité primaire
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité de la catégorie E66) :
+
+dystrophie adiposogénitale (E23.6)
+lipomatose :
+ - SAI (E88.2) 
+ - douloureuse [Dercum] (E88.2) 
+syndrome de Prader–Willi (Q87.1)
+
+</fiche_code>

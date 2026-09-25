@@ -1,0 +1,243 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 63 ans
+- Sexe du patient : Féminin
+- Taille : 159 cm
+- Poids : 87 kg (IMC 34,4)
+- Tabac : non
+- Alcool : non
+- Date d'entrée : 22/01/2026
+- Date de sortie : 22/01/2026
+- Date de naissance : 10/05/1962
+- Nom du patient : Clemot
+- Prénom du patient : Yolande
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation ambulatoire.
+- Codage CIM10 :
+   * Diagnostic principal : Autres anémies précisées (D648)
+   * Diagnostics associés :
+      - Schizophrénie paranoïde continue (F2000)
+      - Cirrhoses (du foie), autres et sans précision (K746)
+      - Obésité due à un excès calorique de l'adulte avec indice de masse corporelle [IMC] égal ou supérieur à 30 kg/m² et inférieur à 35 kg/m², ou obésité due à un excès calorique de l'enfant (E6604)
+- Nom du médecin / signataire : Stephen Boufedji
+- Service : MEDECINE INTERNE
+- Hôpital : Hôpital Rangueil - Centre hospitalier universitaire de Toulouse
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="D64.8">
+
+# D64.8 — Autres anémies précisées
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre III : Maladies du sang et des organes hématopoïétiques et certains troubles du système immunitaire
+- Bloc D60-D64 : Aplasies médullaires et autres anémies
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- anémie leuco-érythroblastique
+- pseudoleucémie infantile
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre III) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies auto-immunes (systémiques) SAI (M35.9)
+maladies dues au virus de l'immunodéficience humaine [VIH] (B20-B24)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie D64) :
+
+anémie réfractaire:
+ - SAI (D46.4) 
+ - avec excès de blastes (D46.2)   - en transformation (C92.0) 
+ - non sidéroblastique (D46.0) 
+ - sidéroblastique (D46.1)
+
+Formes spécifiées de la catégorie D64 :
+- Anémie dysérythropoïétique congénitale [→ D64.4]
+- Anémie sidéroblastique héréditaire [→ D64.0]
+- Anémie sidéroblastique secondaire, due à des médicaments et des toxines [→ D64.2]
+- Anémie sidéroblastique secondaire, due à une maladie [→ D64.1]
+- Autres anémies sidéroblastiques [→ D64.3]
+
+## Formulations cliniques alternatives
+- anémie aigüe stress
+- anémie cellules-cibles
+- anémie chronique idiopathique
+- anémie de von jaksch-hayem-luzet
+- anémie hypochrome microcytaire non ferriprive
+- anémie iatrogène
+- anémie infectieuse
+- anémie inflammatoire
+- anémie leuco-érythroblastique
+- anémie mixte inflammatoire
+- anémie myélophtisique
+- anémie néphrogénique
+- anémie ostéosclérotique
+- anémie pléiochrome
+- anémie régénérative
+- anémie rénale
+- anémie secondaire traitement hydréa
+- anémie septique
+- anémie splénique
+- Leuco-érythroblastose
+
+</fiche_code>
+
+<fiche_code code="F20.00">
+
+# F20.00 — Schizophrénie paranoïde - " continue "
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre V : Troubles mentaux et du comportement
+- Bloc F20-F29 : Schizophrénie, trouble schizotypique et troubles délirants
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre V :
+- troubles du développement psychologique
+
+Inclusions héritées de la catégorie F20.0 :
+- Schizophrénie paraphrénique
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre V) :
+
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité de la catégorie F20) :
+
+réaction schizophrénique (F23.2)
+schizophrénie :
+ - aigüe (indifférenciée) (F23.2) 
+ - cyclique (F25.2) 
+trouble schizotypique (F21)
+état paranoïaque d'involution (F22.8)
+paranoïa (F22.0)
+
+## Notes de la CIM-10
+- Ce groupe réunit la schizophrénie, catégorie la plus importante de ce groupe de troubles, le trouble schizotypique, les troubles délirants persistants et un groupe assez large de troubles psychotiques aigus et transitoires. Les troubles schizoaffectifs ont été maintenus ici, bien que leur nature reste controversée. *(note du bloc F20-F29)*
+- Les subdivisions suivantes peuvent être utilisées comme cinquième caractère pour spécifier la modalité évolutive: *(note du bloc F20)*
+
+</fiche_code>
+
+<fiche_code code="K74.6">
+
+# K74.6 — Cirrhoses du foie, autres et sans précision
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XI : Maladies de l'appareil digestif
+- Bloc K70-K77 : Maladies du foie
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- cirrhose (du foie) cryptogénique
+- cirrhose (du foie) de type mixte
+- cirrhose (du foie) macronodulaire
+- cirrhose (du foie) micronodulaire
+- cirrhose (du foie) portale
+- cirrhose (du foie) post-nécrotique
+- cirrhose (du foie)  SAI
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XI) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité du bloc K70-K77) :
+
+hémochromatose (E83.1)
+hépatite virale (B15-B19)
+ictère SAI (R17.0)
+maladie de Wilson (E83.0)
+syndrome de Reye (G93.7)
+
+Affections relevant d'autres codes (hérité de la catégorie K74) :
+
+avec maladie toxique du foie (K71.7)
+cirrhose (du foie) :
+ - alcoolique (K70.3) 
+ - congénitale (P78.8) 
+fibrose alcoolique du foie (K70.2) 
+sclérose du foie d'origine cardiaque (K76.1)
+
+## Formulations cliniques alternatives
+- cirrhose
+- cirrhose Child 10
+- cirrhose Child C cryptogénétique
+- cirrhose Child C14 décompensée
+- cirrhose cruveilhier-baumgarten
+- cirrhose décompensée foie
+- cirrhose décompensée stade C
+- cirrhose du foie
+- cirrhose hépatique mixte décompensée
+- cirrhose pseudo-tumorale
+- cirrhose Pugh-C
+- cirrhose septale
+- cirrhose virale B
+- cirrhose virale C
+- décompensation cirrhose ascitique
+- encéphalopathie cirrhotique
+
+</fiche_code>
+
+<fiche_code code="E66.04">
+
+# E66.04 — Obésité due à un excès calorique de l'adulte avec indice de masse corporelle [IMC] égal ou supérieur à 30 kg/m² et inférieur à 35 kg/m², ou obésité due à un excès calorique de l'enfant
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E65-E68 : Obésité et autres excès d'apport
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie E66.0 :
+- Obésité commune
+Obésité primaire
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité de la catégorie E66) :
+
+dystrophie adiposogénitale (E23.6)
+lipomatose :
+ - SAI (E88.2) 
+ - douloureuse [Dercum] (E88.2) 
+syndrome de Prader–Willi (Q87.1)
+
+</fiche_code>

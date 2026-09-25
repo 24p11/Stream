@@ -1,0 +1,268 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 0 ans
+- Sexe du patient : Masculin
+- Date d'entrée : 12/06/2026
+- Date de sortie : 16/06/2026
+- Date de naissance : 29/01/2026
+- Nom du patient : Perrin
+- Prénom du patient : Sohan
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
+- Codage CIM10 :
+   * Diagnostic principal : Autres malformations congénitales des cavités et des orifices cardiaques (Q208)
+   * Diagnostics associés :
+      - Foetus et nouveau-né affectés par un accouchement par extracteur pneumatique [ventouse] (P033)
+      - Autres malformations cardiaques congénitales précisées (Q248)
+      - Examen spécial de dépistage des affections des oreilles (Z1351)
+      - Acidose (E872)
+- Nom du médecin / signataire : Charles-louis Pessard
+- Service : NEONATOLOGIE
+- Hôpital : Hôpital Édouard Herriot - Hospices Civils de Lyon
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="Q20.8">
+
+# Q20.8 — Autres malformations congénitales des cavités et des orifices cardiaques
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XVII : Malformations congénitales et anomalies chromosomiques
+- Bloc Q20-Q28 : Malformations congénitales de l'appareil circulatoire
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVII) :
+
+erreurs innées du métabolisme (E70-E90)
+
+Affections relevant d'autres codes (hérité de la catégorie Q20) :
+
+dextrocardie avec situs inversus (Q89.3)
+disposition auriculaire en miroir avec situs inversus (Q89.3)
+
+Formes spécifiées de la catégorie Q20 :
+- Communication auriculoventriculaire discordante [→ Q20.5]
+- Communication ventriculoauriculaire discordante [→ Q20.3]
+- Isomérisme des auricules cardiaques [→ Q20.6]
+- Tronc artériel commun [→ Q20.0]
+- Ventricule à double issue [→ Q20.4]
+- Ventricule droit à double issue [→ Q20.1]
+- Ventricule gauche à double issue [→ Q20.2]
+
+## Formulations cliniques alternatives
+- agénésie ventricule gauche
+- anomalie auriculaire
+- anomalie de l'auricule
+- anomalie de l'oreillette
+- anomalie implantation coronaire
+- cavités cardiaques déséquilibrées
+- hypoplasie anatomique cavités
+- hypoplasie cavités
+- inversion gros vaisseaux
+- malformation congénitale oreillette
+- malformation oreillette
+- oreillette double
+- petites cavités cardiaques gauches
+
+</fiche_code>
+
+<fiche_code code="P03.3">
+
+# P03.3 — Fœtus et nouveau-né affectés par un accouchement par extracteur pneumatique [ventouse]
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P00-P04 : Fœtus et nouveau-né affectés par des troubles maternels et par des complications de la grossesse, du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+Inclusions héritées du bloc P00-P04 :
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du foetus ou du nouveau-né
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du fœtus ou du nouveau-né
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+- [GM2026-V-P00-01] La note d'inclusion du groupe P00-P04 restreint ces codes aux affections maternelles précisées comme cause de mortalité ou de morbidité du fœtus ou du nouveau-né ; cette contrainte empêchait d'expliquer certaines consommations de ressources. Il faut donc étendre l'utilisation des codes P00-P04 aux circonstances dans lesquelles les états mentionnés ont été cause de soins supplémentaires au nouveau-né, ces soins étant considérés à priori dispensés dès lors que la mère a présenté une des affections répertoriées. Il est ainsi licite de mentionner systématiquement P03.4 dans le dossier de tout nouveau-né extrait par césarienne.
+
+## Formulations cliniques alternatives
+- accouchement par ventouse
+- expulsion par ventouse
+- extraction par ventouse
+- traumatisme obstétrical par ventouse
+
+</fiche_code>
+
+<fiche_code code="Q24.8">
+
+# Q24.8 — Autres malformations cardiaques congénitales précisées
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XVII : Malformations congénitales et anomalies chromosomiques
+- Bloc Q20-Q28 : Malformations congénitales de l'appareil circulatoire
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- diverticule congénital du ventricule gauche
+- malformation congénitale du myocarde
+- malformation congénitale du péricarde
+- malposition du coeur
+- syndrome de Uhl
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVII) :
+
+erreurs innées du métabolisme (E70-E90)
+
+Affections relevant d'autres codes (hérité de la catégorie Q24) :
+
+fibroélastose endocardique (I42.4)
+
+Formes spécifiées de la catégorie Q24 :
+- Bloc congénital du cœur [→ Q24.6]
+- Cœur triatrial [→ Q24.2]
+- Dextrocardie [→ Q24.0]
+- Lévocardie [→ Q24.1]
+- Malformation des vaisseaux coronaires [→ Q24.5]
+- Sténose de l'infundibulum pulmonaire [→ Q24.3]
+- Sténose sousaortique congénitale [→ Q24.4]
+
+## Formulations cliniques alternatives
+- agénésie du coeur
+- anomalie bandelettes du coeur
+- anomalie des cordages tendineux
+- anomalie du péricarde
+- anomalie valvulaire
+- Atélocardie
+- atrésie ventricule droit
+- cardiopathie congénitale cyanogène complexe
+- cardiopathie hypertrophique congénitale
+- déplacement du coeur
+- dilatation ventriculaire gauche
+- dilatation ventricule droit
+- dilatation ventricule gauche
+- diverticule Kommerel
+- ectopie cardiaque
+- Hémicardie
+- hypoplasie du coeur
+- maladie Uhl
+- malformation faisceau His
+- réseau de Chiari
+
+</fiche_code>
+
+<fiche_code code="Z13.51">
+
+# Z13.51 — Examen spécial de dépistage des affections des oreilles
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z00-Z13 : Sujets en contact avec les services de santé pour des examens divers
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du bloc Z00-Z13) :
+
+examens relatifs à la grossesse et à la reproduction (Z30-Z36)  (Z39.-)
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+- [GM2026-V-XXI-15] Z13.51 doit être systématiquement codé en DAS lorsqu'un dépistage de la surdité néonatale permanente (test et éventuel retest) est réalisé par OEAA ou PEAA lors d'un séjour de nouveau-né.
+- [GM2026-V-XXI-14] Les codes Z11 à Z13 ne doivent pas être employés pour des patients présentant un problème de santé personnel. Il est erroné de coder comme un dépistage une situation d'examens motivés par un antécédent personnel ou familial, ou par une symptomatologie quelconque : c'est le motif des explorations qui doit être codé.
+
+### Règles générales du chapitre XXI
+
+- [GM2026-V-XXI-01] (Emploi général des codes du chapitre XXI) Les codes du chapitre XXI (« codes Z ») peuvent, et souvent doivent, être utilisés dans le RUM comme diagnostic principal, relié ou associé.
+
+## Notes de la CIM-10
+- Les résultats anormaux non spécifiques découverts au moment de ces examens sont classés dans les catégories R70-R94. *(note du bloc Z00-Z13)*
+
+</fiche_code>
+
+<fiche_code code="E87.2">
+
+# E87.2 — Acidose
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E70-E90 : Anomalies du métabolisme
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- acidose lactique
+- acidose métabolique
+- acidose respiratoire
+- acidose  SAI
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité du bloc E70-E90) :
+
+anémies hémolytiques dues à des anomalies enzymatiques (D55.-)
+déficit en 5-alpha-réductase (E29.1)
+hyperplasie surrénale congénitale (E25.0)
+syndrome de :
+ - Ehlers–Danlos (Q79.6) 
+ - Marfan (Q87.4) 
+ - résistance aux androgènes (E34.5)
+
+Affections relevant d'autres codes :
+
+acidose diabétique [E10-E14 avec le quatrième caractère .1]
+
+## Formulations cliniques alternatives
+- acidémie
+- acidocétose
+- acidose
+- acidose (autre)
+- Acidose lactique sur biguanides
+- acidose métabolique (diabète exclu) [voir 2312NL]
+- acidose métabolique rebelle
+- acidose métabolique sévère
+- acidose respiratoire chronique
+- cétose
+- cétose jeûne
+- décompensation cétosique
+- déséquilibre acidocétosique
+- état acidocétosique brutal
+- lactacidémie
+- lactacidose
+- poussée acidocétosique
+
+</fiche_code>

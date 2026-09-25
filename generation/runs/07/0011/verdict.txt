@@ -1,0 +1,96 @@
+### **VERDICT : NON CONFORME**
+
+#### **Anomalies constatées :**
+
+1. **Durée d’hospitalisation incohérente (erreur majeure)**
+   - **Problème** : Une hospitalisation ambulatoire pour bilan d’anémie leuco-érythroblastique avec réalisation d’examens complémentaires (échographie, bilan biologique étendu) et initiation d’un traitement (supplémentation martiale) ne peut pas être réalisée en **1 jour** (entrée et sortie le même jour).
+   - **Explication** :
+     - Le compte rendu mentionne une hospitalisation ambulatoire, mais les examens décrits (échographie abdominale, bilan biologique complet, évaluation clinique approfondie) nécessitent généralement **au moins 24 à 48 heures** pour être organisés et interprétés.
+     - Une hospitalisation de jour (HDJ) serait plus plausible, mais le codage en **hospitalisation complète (HC)** ou **HDJ** doit être clarifié.
+     - **Risque de codage** : Une hospitalisation de moins de 24h avec des actes techniques (échographie, myélogramme programmé) pourrait être rejetée par les tutelles (Assurance Maladie) pour non-respect des règles de facturation.
+
+2. **Absence de codage du motif principal de séjour (MPS) et des diagnostics associés (erreur de codage CIM-10)**
+   - **Problème** :
+     - Le **motif principal de séjour (MPS)** n’est pas clairement identifié dans les formulations proposées.
+     - L’anémie leuco-érythroblastique (D64.8) est un diagnostic **secondaire**, mais le **MPS** devrait être :
+       - **Soit** la cirrhose hépatique (K74.6) si l’objectif principal était son évaluation,
+       - **Soit** l’asthénie/dyspnée (R53.8) si l’anémie était le motif dominant.
+     - **Manque** :
+       - **D64.9 (Anémie, sans précision)** pourrait être ajouté en l’absence de certitude diagnostique.
+       - **R53.8 (Asthénie)** ou **R06.0 (Dyspnée)** devraient être codés comme symptômes.
+       - **Z79.899 (Traitement au long cours par antipsychotiques)** pour la schizophrénie.
+
+3. **Incohérence entre le diagnostic de cirrhose et l’absence de complications (erreur clinique)**
+   - **Problème** :
+     - La cirrhose est décrite comme **"stable"**, mais :
+       - Le **TP à 75%** (limite basse) et l’**albuminémie à 38 g/L** (hypoalbuminémie modérée) suggèrent une **insuffisance hépatocellulaire débutante**.
+       - La **splénomégalie modérée (14 cm)** est un signe de **hypertension portale**, ce qui n’est pas compatible avec une cirrhose "stable".
+     - **Risque** :
+       - Sous-estimation de la gravité de la cirrhose (codage possible en **K74.69** pour cirrhose compliquée).
+       - Absence de mention d’un **score Child-Pugh** ou **MELD**, obligatoire pour évaluer la sévérité.
+
+4. **Traitement par bêta-bloquant non justifié dans le compte rendu (erreur de cohérence)**
+   - **Problème** :
+     - Le compte rendu mentionne un **bêta-bloquant en prévention primaire des complications de l’hypertension portale**, mais :
+       - La patiente n’a **pas d’antécédent de varices œsophagiennes** (non mentionné).
+       - La **splénomégalie isolée** ne justifie pas à elle seule un bêta-bloquant (recommandations HAS/ESGE).
+     - **Risque** :
+       - Codage erroné d’un **traitement non conforme aux bonnes pratiques** (pourrait être contesté en audit).
+
+5. **Absence de données obligatoires pour le codage (erreur administrative)**
+   - **Manque** :
+     - **Numéro de séjour** (obligatoire pour le PMSI).
+     - **Mode d’entrée/sortie** (ex. : entrée programmée, sortie contre avis médical ?).
+     - **Actes CCAM** (ex. : échographie abdominale = **QELA001**, myélogramme = **NEQP002**).
+     - **Score de dépendance (AGGIR)** si applicable (la patiente vit seule, mais son autonomie n’est pas précisée).
+
+6. **Incohérence sur la prise en charge de l’anémie (erreur clinique)**
+   - **Problème** :
+     - Une **anémie leuco-érythroblastique** est une urgence hématologique (risque de leucémie, myélofibrose, métastases médullaires).
+     - Or, la patiente est **renvoyée à domicile avec une supplémentation martiale empirique**, sans :
+       - **Bilan de carence vitaminique (B12, folates)** (obligatoire avant supplémentation).
+       - **Recherche de saignement digestif** (FOGD/coloscopie non mentionnées).
+       - **Avis hématologique immédiat** (le myélogramme est programmé en ambulatoire, ce qui peut retarder le diagnostic).
+     - **Risque médico-légal** : Retard diagnostique en cas de pathologie maligne sous-jacente.
+
+7. **Erreurs mineures de codage CIM-10**
+   - **Problèmes identifiés** :
+     - **Obésité (E66.04)** : Correct, mais l’**IMC doit être précisé dans le compte rendu** (ici, 34,4 kg/m²).
+     - **Schizophrénie (F20.00)** : Le code est correct, mais il manque :
+       - **Z79.899 (Traitement au long cours par antipsychotiques)**.
+       - **F19.9 (Troubles mentaux et du comportement liés à l’utilisation de substances psychoactives)** si la patiente prend des médicaments non mentionnés.
+     - **Cirrhose (K74.6)** : Devrait être précisé en **K74.69 (Autres cirrhoses du foie)** si des complications (splénomégalie, TP bas) sont présentes.
+
+---
+
+### **Recommandations pour rendre le compte rendu CONFORME**
+1. **Corriger la durée d’hospitalisation** :
+   - Soit **hospitalisation de jour (HDJ)** avec codage en **Z51.8 (Autres examens et investigations)** si le bilan est simple.
+   - Soit **hospitalisation complète (HC) de 24-48h** si des examens complexes sont réalisés.
+
+2. **Préciser le motif principal de séjour (MPS)** :
+   - Exemple :
+     - **MPS : K74.6 (Cirrhose hépatique)** si l’objectif était son évaluation.
+     - **Diagnostics associés : D64.8 (Anémie leuco-érythroblastique), R53.8 (Asthénie), F20.00 (Schizophrénie).**
+
+3. **Compléter les examens manquants** :
+   - **Bilan vitaminique (B12, folates)**.
+   - **Recherche de saignement digestif (FOGD/coloscopie)**.
+   - **Score Child-Pugh ou MELD** pour la cirrhose.
+
+4. **Justifier le traitement par bêta-bloquant** :
+   - Soit **supprimer la mention** si non indiqué.
+   - Soit **ajouter un antécédent de varices œsophagiennes** pour le justifier.
+
+5. **Ajouter les actes CCAM** :
+   - Exemple :
+     - **QELA001 (Échographie abdominale)**.
+     - **NEQP002 (Myélogramme)**.
+
+6. **Préciser les données administratives** :
+   - Numéro de séjour, mode d’entrée/sortie, score AGGIR si pertinent.
+
+---
+
+### **Conclusion**
+Le compte rendu présente des **incohérences cliniques, des erreurs de codage et des omissions administratives** qui le rendent **NON CONFORME** aux exigences du PMSI et aux bonnes pratiques médicales. Une révision est nécessaire avant transmission au DIM.

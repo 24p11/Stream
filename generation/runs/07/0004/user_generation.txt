@@ -1,0 +1,312 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 0 ans
+- Sexe du patient : Masculin
+- Date d'entrée : 25/11/2026
+- Date de sortie : 27/11/2026
+- Date de naissance : 03/06/2026
+- Nom du patient : Vanquickenborne
+- Prénom du patient : Julien
+- Mode d'entrée' : URGENCES
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
+- Codage CIM10 :
+   * Diagnostic principal : Ictère néonatal dû à d'autres causes précisées (P598)
+   * Diagnostics associés :
+      - Foetus et nouveau-né affectés par des maladies infectieuses et parasitaires de la mère (P002)
+      - Alimentation au sein difficile chez le nouveau-né (P925)
+      - Examen spécial de dépistage des affections des oreilles (Z1351)
+      - Iso-immunisation ABO du foetus et du nouveau-né (P551)
+      - Foetus et nouveau-né affectés par la rupture prématurée des membranes (P011)
+      - Enfant unique, né à l'hôpital (Z380)
+- Nom du médecin / signataire : Ghislaine Boisson
+- Service : NEONATOLOGIE
+- Hôpital : Nouvel Hôpital Civil - Hôpitaux Universitaires de Strasbourg
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="P59.8">
+
+# P59.8 — Ictère du nouveau-né dû à d'autres causes précisées
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P50-P61 : Affections hémorragiques et hématologiques du fœtus et du nouveau-né
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité du bloc P50-P61) :
+
+anémies hémolytiques héréditaires (D55-D58)
+maladie de :
+ - Crigler-Najjar (E80.5) 
+ - Dubin–Johnson (E80.6) 
+sténose et rétrécissement congénitaux des voies biliaires (Q44.3) 
+syndrome de Gilbert (E80.4)
+
+Affections relevant d'autres codes (hérité de la catégorie P59) :
+
+dû à des erreurs innées du métabolisme (E70-E90)
+ictère nucléaire (P57.-)
+
+Formes spécifiées de la catégorie P59 :
+- Ictère du nouveau-né associé à un accouchement avant terme [→ P59.0]
+- Ictère du nouveau-né dû à des inhibiteurs de la lactation [→ P59.3]
+- Ictère du nouveau-né dû à des lésions hépatocellulaires, autres et sans précision [→ P59.2]
+- Syndrome de la « bile épaisse » [→ P59.1]
+
+## Formulations cliniques alternatives
+- cirrhose biliaire
+
+</fiche_code>
+
+<fiche_code code="P00.2">
+
+# P00.2 — Fœtus et nouveau-né affectés par des maladies infectieuses et parasitaires de la mère
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P00-P04 : Fœtus et nouveau-né affectés par des troubles maternels et par des complications de la grossesse, du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+Inclusions héritées du bloc P00-P04 :
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du foetus ou du nouveau-né
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du fœtus ou du nouveau-né
+
+Au niveau du code :
+- foetus ou nouveau-né affecté par les maladies de la mère classées en (A00-B99), J09, J10.-, J11.-, mais ne présentant lui-même aucun signe de ces maladies
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie P00) :
+
+fœtus et nouveau-né affectés par :
+ - anomalies endocriniennes et métaboliques de la mère (P70-P74) 
+ - complications de la grossesse chez la mère (P01.-) 
+ - effets nocifs transmis par le placenta ou par le lait maternel (P04.-)
+
+Affections relevant d'autres codes :
+
+infections (de l') :
+ - appareil génital maternel et autres infections localisées de la mère (P00.8) 
+ - spécifiques de la période périnatale (P35-P39)
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+- [GM2026-V-P00-01] La note d'inclusion du groupe P00-P04 restreint ces codes aux affections maternelles précisées comme cause de mortalité ou de morbidité du fœtus ou du nouveau-né ; cette contrainte empêchait d'expliquer certaines consommations de ressources. Il faut donc étendre l'utilisation des codes P00-P04 aux circonstances dans lesquelles les états mentionnés ont été cause de soins supplémentaires au nouveau-né, ces soins étant considérés à priori dispensés dès lors que la mère a présenté une des affections répertoriées. Il est ainsi licite de mentionner systématiquement P03.4 dans le dossier de tout nouveau-né extrait par césarienne.
+
+## Formulations cliniques alternatives
+- crise paludisme Plasmodium falciparum maternelle
+- embryofoetopathie CMV
+- embryopathie CMV
+- encéphalopathie néo-natale CMV
+- hépatite C maternelle
+- infection maternelle aigüe
+- séroconversion cytomégalovirus
+- séroconversion maternelle toxoplasmique
+- séroconversion toxo-anténatale
+- syndrome infectieux maternel
+
+</fiche_code>
+
+<fiche_code code="P92.5">
+
+# P92.5 — Alimentation au sein difficile chez le nouveau-né
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P90-P96 : Autres affections dont l'origine se situe dans la période périnatale
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+## Formulations cliniques alternatives
+- alimentation au sein difficile chez le nouveau-né
+
+</fiche_code>
+
+<fiche_code code="Z13.51">
+
+# Z13.51 — Examen spécial de dépistage des affections des oreilles
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z00-Z13 : Sujets en contact avec les services de santé pour des examens divers
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du bloc Z00-Z13) :
+
+examens relatifs à la grossesse et à la reproduction (Z30-Z36)  (Z39.-)
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+- [GM2026-V-XXI-15] Z13.51 doit être systématiquement codé en DAS lorsqu'un dépistage de la surdité néonatale permanente (test et éventuel retest) est réalisé par OEAA ou PEAA lors d'un séjour de nouveau-né.
+- [GM2026-V-XXI-14] Les codes Z11 à Z13 ne doivent pas être employés pour des patients présentant un problème de santé personnel. Il est erroné de coder comme un dépistage une situation d'examens motivés par un antécédent personnel ou familial, ou par une symptomatologie quelconque : c'est le motif des explorations qui doit être codé.
+
+### Règles générales du chapitre XXI
+
+- [GM2026-V-XXI-01] (Emploi général des codes du chapitre XXI) Les codes du chapitre XXI (« codes Z ») peuvent, et souvent doivent, être utilisés dans le RUM comme diagnostic principal, relié ou associé.
+
+## Notes de la CIM-10
+- Les résultats anormaux non spécifiques découverts au moment de ces examens sont classés dans les catégories R70-R94. *(note du bloc Z00-Z13)*
+
+</fiche_code>
+
+<fiche_code code="P55.1">
+
+# P55.1 — Iso-immunisation ABO du fœtus et du nouveau-né
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P50-P61 : Affections hémorragiques et hématologiques du fœtus et du nouveau-né
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité du bloc P50-P61) :
+
+anémies hémolytiques héréditaires (D55-D58)
+maladie de :
+ - Crigler-Najjar (E80.5) 
+ - Dubin–Johnson (E80.6) 
+sténose et rétrécissement congénitaux des voies biliaires (Q44.3) 
+syndrome de Gilbert (E80.4)
+
+## Formulations cliniques alternatives
+- incompatibilité ABO
+
+</fiche_code>
+
+<fiche_code code="P01.1">
+
+# P01.1 — Fœtus et nouveau-né affectés par la rupture prématurée des membranes
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P00-P04 : Fœtus et nouveau-né affectés par des troubles maternels et par des complications de la grossesse, du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+Inclusions héritées du bloc P00-P04 :
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du foetus ou du nouveau-né
+- les affections maternelles mentionnées, seulement si elles sont précisées comme étant la cause de mortalité ou de morbidité du fœtus ou du nouveau-né
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+- [GM2026-V-P00-01] La note d'inclusion du groupe P00-P04 restreint ces codes aux affections maternelles précisées comme cause de mortalité ou de morbidité du fœtus ou du nouveau-né ; cette contrainte empêchait d'expliquer certaines consommations de ressources. Il faut donc étendre l'utilisation des codes P00-P04 aux circonstances dans lesquelles les états mentionnés ont été cause de soins supplémentaires au nouveau-né, ces soins étant considérés à priori dispensés dès lors que la mère a présenté une des affections répertoriées. Il est ainsi licite de mentionner systématiquement P03.4 dans le dossier de tout nouveau-né extrait par césarienne.
+
+## Formulations cliniques alternatives
+- anammios sur rupture membranes
+- anamnios sur rupture membranes
+- fissuration membranes
+- fissuration prématurée PDE
+- fissure poche eaux
+- rupture membranes
+- rupture poche eaux prématurée
+- rupture prématurée membranes
+- rupture prématurée poche eaux
+- rupture spontanée membranes
+
+</fiche_code>
+
+<fiche_code code="Z38.0">
+
+# Z38.0 — Enfant unique, né à l'hôpital
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+- [GM2026-V-XXI-25] Z38.0 est le code du DP du RUM du nouveau-né dont le séjour se déroule en maternité auprès de sa mère ; dans cette situation il ne justifie aucun diagnostic relié. Lorsque le DP du séjour d'un nouveau-né est un problème de santé, son code doit être d'abord cherché dans le chapitre XVI.
+
+### Règles générales du chapitre XXI
+
+- [GM2026-V-XXI-01] (Emploi général des codes du chapitre XXI) Les codes du chapitre XXI (« codes Z ») peuvent, et souvent doivent, être utilisés dans le RUM comme diagnostic principal, relié ou associé.
+
+</fiche_code>

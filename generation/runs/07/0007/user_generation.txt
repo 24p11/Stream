@@ -1,0 +1,725 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 82 ans
+- Sexe du patient : Féminin
+- Taille : 154 cm
+- Poids : 72 kg (IMC 30,4)
+- Tabac : non
+- Alcool : non
+- Date d'entrée : 20/07/2026
+- Date de sortie : 12/08/2026
+- Date de naissance : 13/10/1943
+- Nom du patient : Sanchez tebar
+- Prénom du patient : Ourdia
+- Mode d'entrée' : URGENCES
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
+- Codage CIM10 :
+   * Diagnostic principal : Autres insuffisances rénales aiguës (N178)
+   * Diagnostics associés :
+      - Hypertension essentielle (primitive) (I10)
+      - Hypovolémie (E86)
+      - Autres obstructions de l'intestin (K564)
+      - Tumeur maligne secondaire du poumon (C780)
+      - Présence d'implants d'articulations orthopédiques (Z966)
+      - Désorientation, sans précision (R410)
+      - Obésité due à un excès calorique de l'adulte avec indice de masse corporelle [IMC] égal ou supérieur à 30 kg/m² et inférieur à 35 kg/m², ou obésité due à un excès calorique de l'enfant (E6604)
+      - Malnutrition protéino-énergétique modérée (E440)
+      - Besoin d'assistance à domicile, aucun autre membre du foyer n'étant capable d'assurer les soins (Z742)
+      - Lucite polymorphe (L564)
+      - Carence en vitamine D, sans précision (E559)
+      - Hypothyroïdie, sans précision (E039)
+      - Démence sévère, sans précision, sans symptôme supplémentaire (F03+02)
+- Nom du médecin / signataire : Claudine Zmouli
+- Service : NEPHROLOGIE
+- Hôpital : Hôpital de la Conception- Assistance Publique – Hôpitaux de Marseille
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="N17.8">
+
+# N17.8 — Autres insuffisances rénales aigües
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XIV : Maladies de l'appareil génito-urinaire
+- Bloc N17-N19 : Insuffisance rénale
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie N17 :
+- déficience rénale aigüe
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XIV) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité du bloc N17-N19) :
+
+atteintes tubulo-interstitielles et tubulaires dues à des médicaments et des métaux lourds (N14.-)
+insuffisance rénale :
+ - après un acte à visée diagnostique et thérapeutique (N99.0) 
+ - compliquant avortement, grossesse extra-utérine ou molaire (O00-O07)  (O08.4) 
+ - congénitale (P96.0) 
+ - survenant après le travail et l'accouchement (O90.4) 
+- syndrome :
+ - hémolytique et urémique (D59.3) 
+ - hépatorénal (K76.7)   - du postpartum (O90.4) 
+- urémie :
+ - extrarénale (R39.2) 
+ - prérénale (R39.2)
+
+Formes spécifiées de la catégorie N17 :
+- Insuffisance rénale aigüe avec nécrose corticale aigüe [→ N17.1]
+- Insuffisance rénale aigüe avec nécrose médullaire [→ N17.2]
+- Insuffisance rénale aigüe avec nécrose tubulaire [→ N17.0]
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+- [GM2026-V-IRF-01] L'insuffisance rénale fonctionnelle (altération habituellement passagère et curable de la fonction rénale par diminution de la perfusion — hypovolémie, hypotension, cause iatrogène — sans atteinte organique du rein ni obstacle des voies excrétrices, dite prérénale ou extrarénale) se code R39.2 Urémie extrarénale, conformément à la note d'exclusion du groupe N17-N19. L'absence de lésion du parenchyme invalide la consigne antérieure de la coder N17.8. La catégorie N17 est réservée aux insuffisances rénales aigües avec atteinte organique du tissu rénal ; en cas de cause incertaine, on emploie N17.9.
+
+## Formulations cliniques alternatives
+- anoxie rénale
+- hypoxie rénale
+- insuffisance rénale aiguë obstructive
+- insuffisance rénale fonctionnelle Sartans
+- lyse tumorale (insuffisance rénale aiguë liée à une)
+- rein anoxique
+- rein de choc (rein d'hypoperfusion rénale aiguë)
+
+</fiche_code>
+
+<fiche_code code="I10">
+
+# I10 — Hypertension essentielle (primitive)
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre IX : Maladies de l'appareil circulatoire
+- Bloc I10-I15 : Maladies hypertensives
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- hypertension (artérielle) (bénigne) (essentielle) (maligne) (primitive) (systémique)
+- tension artérielle élevée
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IX) :
+
+accidents ischémiques cérébraux transitoires et syndromes apparentés (G45.-)
+affections disséminées du tissu conjonctif (M30-M36)
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité du bloc I10-I15) :
+
+cardiopathies ischémiques (I20-I25)
+compliquant la grossesse, l'accouchement et la puerpéralité (O10-O11)  (O13-O16)
+hypertension :
+ - du nouveau-né (P29.2) 
+ - pulmonaire :
+  - primaire (I27.0) 
+  - secondaire (I27.2)
+
+Affections relevant d'autres codes :
+
+avec :
+ - maladies cérébrovasculaires (I60-I69) 
+ - rétinopathies vasculaires (H35.0)
+
+## Formulations cliniques alternatives
+- antécédent hypertension artérielle
+- HTA essentielle
+- HTA essentielle "maligne" [coder aussi les conséquences]
+- HTA maligne ancienne
+- HTA sévère instable
+- hypertension
+- hypertension artérielle bénigne
+- Hypertension artérielle primitive
+- hypertension artérielle supra-systémique
+- hypertension essentielle
+- hypertension maligne
+- hypertension sévère
+- hypertensive
+- poussée hypertensive
+
+</fiche_code>
+
+<fiche_code code="E86">
+
+# E86 — Hypovolémie
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E70-E90 : Anomalies du métabolisme
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- déplétion du volume du plasma ou du liquide extracellulaire
+- déshydratation
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité du bloc E70-E90) :
+
+anémies hémolytiques dues à des anomalies enzymatiques (D55.-)
+déficit en 5-alpha-réductase (E29.1)
+hyperplasie surrénale congénitale (E25.0)
+syndrome de :
+ - Ehlers–Danlos (Q79.6) 
+ - Marfan (Q87.4) 
+ - résistance aux androgènes (E34.5)
+
+Affections relevant d'autres codes :
+
+choc hypovolémique :
+ - SAI (R57.1) 
+ - postopératoire (T81.1) 
+ - traumatique (T79.4) 
+déshydratation du nouveau-né (P74.1)
+
+## Formulations cliniques alternatives
+- Anhydrémie
+- déplétion du liquide extracellulaire
+- déplétion hydrique
+- déplétion volume du plasma
+- déshydratation aigüe
+- déshydratation cellulaire
+- déshydratation extracellulaire
+- déshydratation extracellulaire aigüe
+- déshydratation globale
+- déshydratation périphérique
+- déshydratation sévère globale
+- diminution de liquide extracellulaire
+- diminution de volume du plasma
+- DSH
+- hydratation précaire
+- hypovolémie
+- hypovolémie sévère réfractaire
+- perte du liquide
+- Sécheresse de la bouche due à une deshydratation
+
+</fiche_code>
+
+<fiche_code code="K56.4">
+
+# K56.4 — Autres obstructions de l'intestin
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XI : Maladies de l'appareil digestif
+- Bloc K55-K64 : Autres maladies de l'intestin
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- entérolithe
+- obstruction (du) côlon
+- obstruction (du) fécale
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XI) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie K56) :
+
+avec hernie (K40-K46)
+étranglement :
+ - congénital ou sténose congénitale de l'intestin (Q41-Q42) 
+ - ischémique de l'intestin (K55.1) 
+iléus méconial (E84.1) 
+- occlusion (du) :
+ - duodénum (K31.5) 
+ - intestinale du nouveau-né (P75-P76) 
+ - intestinale postopératoire (K91.3) 
+sténose de l'anus ou du rectum (K62.4)
+
+## Formulations cliniques alternatives
+- calcul de l'intestin
+- Coprolithe
+- Coprostase
+- empierrement fécaloïde
+- fécalome
+- fécalome colique
+- fécalome iléo-colique
+- obstacle charnière recto-sigmoïdienne
+- obstacle intestinal
+- obstruction colique fonctionnelle
+- obstruction fécale
+- obstruction recto-colique
+- pseudo-obstruction colique
+- stase fécale
+- stase matières fécales
+- stercolithe
+
+</fiche_code>
+
+<fiche_code code="C78.0">
+
+# C78.0 — Tumeur maligne secondaire du poumon
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre II : Tumeurs
+- Bloc C00-C97 : Tumeurs malignes
+- Bloc C76-C80 : Tumeurs malignes de sièges mal définis, secondaires et non précisés
+
+## Formulations cliniques alternatives
+- ADK secondaire poumon
+- cancer secondaire bronchique
+- carcinomatose broncho-pulmonaire
+- envahissement apex
+- envahissement broncho-pulmonaire
+- lésions carcinomateuses pulmonaires multiples
+- localisation secondaire pulmonaire
+- métastase pulmonaire
+- métastases lingula
+- miliaire métastatique pulmonaire bilatérale
+- poumon métastatique
+
+</fiche_code>
+
+<fiche_code code="Z96.6">
+
+# Z96.6 — Présence d'implants d'articulations orthopédiques
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z80-Z99 : Sujets dont la santé peut être menacée en raison d'antécédents personnels et familiaux et de certaines affections
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- remplacement de l'articulation de doigt
+- remplacement de l'articulation de hanche (partielle) (totale)
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du bloc Z80-Z99) :
+
+dépistage spécial, autre examen ou investigation en raison d'antécédents familiaux ou personnels (Z00-Z13)
+examen de contrôle (Z08-Z09)
+mise en observation ou intervention au cours de la grossesse en raison d'un risque d'atteinte du fœtus (O35.-)
+soins de contrôle médicaux et de convalescence (Z42-Z51)  (Z54.-)
+
+Affections relevant d'autres codes (hérité de la catégorie Z96) :
+
+complications de prothèses, implants et greffes internes (T82-T85)
+mise en place et ajustement de prothèses et d'autres appareils (Z44-Z46)
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+- [GM2026-V-XXI-53] Z96 et Z97 permettent le codage de la présence de divers implants, prothèses et appareils. Leur emploi n'est admissible qu'en l'absence de complication.
+- [GM2026-V-XXI-54] Lorsqu'un code des catégories Z93, Z95 ou Z96 correspond à une prise en charge pour laquelle un code d'acte existe dans la CCAM, la saisie du code Z93.–, Z95.– ou Z96.– en diagnostic associé en sus de celui de l'acte est redondante et n'est pas justifiée.
+- [GM2026-V-ANT-02] Les catégories Z80 à Z99 du chapitre XXI sont destinées au codage des antécédents. Les affections qui entraînent habituellement des séquelles font partie de leurs exclusions (ex. : Z86.1 exclut les séquelles de maladies infectieuses et parasitaires ; Z86.7 exclut l'infarctus ancien, les séquelles de maladies cérébrovasculaires et le syndrome postinfarctus).
+- [GM2026-V-ANT-04] Un antécédent est une affection ancienne qui n'existe plus et qui n'est pas cause de troubles résiduels au moment de l'hospitalisation concernée par le recueil d'informations (sinon on parlerait de séquelles, non d'antécédents). Cette définition conditionne l'emploi des catégories d'antécédents.
+
+### Règles générales du chapitre XXI
+
+- [GM2026-V-XXI-01] (Emploi général des codes du chapitre XXI) Les codes du chapitre XXI (« codes Z ») peuvent, et souvent doivent, être utilisés dans le RUM comme diagnostic principal, relié ou associé.
+
+</fiche_code>
+
+<fiche_code code="R41.0">
+
+# R41.0 — Désorientation, sans précision
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XVIII : Symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs
+- Bloc R40-R46 : Symptômes et signes relatifs à la connaissance, la perception, l'humeur et le comportement
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- confusion SAI
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVIII) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+résultats anormaux constatés au cours de l'examen prénatal systématique de la mère (O28.-)
+
+Affections relevant d'autres codes (hérité du bloc R40-R46) :
+
+lorsqu'il s'agit d'un élément d'un trouble mental (F00-F99)
+
+Affections relevant d'autres codes (hérité de la catégorie R41) :
+
+troubles dissociatifs [de conversion] (F44.-)
+
+Affections relevant d'autres codes :
+
+désorientation psychogène (F44.8)
+
+## Formulations cliniques alternatives
+- bouffée confusionnelle
+- confusion
+- confusion latente
+- désorientation
+- désorientation spatio-temporelle
+- désorientation temporo-spatiale ancienne
+- désorientation temporo-spatiale épisodique
+- désorientée
+- DTS complète
+- état confusionnel
+- syndrome confusionnel
+- syndrome confusionnel chronique
+- troubles orientation
+
+</fiche_code>
+
+<fiche_code code="E66.04">
+
+# E66.04 — Obésité due à un excès calorique de l'adulte avec indice de masse corporelle [IMC] égal ou supérieur à 30 kg/m² et inférieur à 35 kg/m², ou obésité due à un excès calorique de l'enfant
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E65-E68 : Obésité et autres excès d'apport
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie E66.0 :
+- Obésité commune
+Obésité primaire
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité de la catégorie E66) :
+
+dystrophie adiposogénitale (E23.6)
+lipomatose :
+ - SAI (E88.2) 
+ - douloureuse [Dercum] (E88.2) 
+syndrome de Prader–Willi (Q87.1)
+
+</fiche_code>
+
+<fiche_code code="E44.0">
+
+# E44.0 — Malnutrition protéinoénergétique modérée
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E40-E46 : Malnutrition
+
+## Définition (CIM-10)
+
+Perte de poids chez l'enfant ou chez l'adulte ou absence de gain pondéral chez l'enfant, aboutissant à un poids qui est inférieur de deux écarts types ou plus, mais moins de trois, à la valeur moyenne de la population de référence (ou une perte similaire exprimée selon d'autres méthodes statistiques). Quand on ne dispose que d'une mesure, il existe une forte présomption de malnutrition protéinoénergétique modérée quand le poids observé est inférieur de deux écarts types ou plus, mais moins de trois, à la moyenne de la population de référence.
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité du bloc E40-E46) :
+
+anémies nutritionnelles (D50-D53)
+famine (T73.0)
+malabsorption intestinale (K90.-)
+séquelles de malnutrition protéinoénergétique (E64.0)
+syndrome cachectique dû à infection à VIH (B22.2)
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+- [GM2026-V-DEN-01] Une dénutrition sévère se code E43 Malnutrition protéino-énergétique grave, sans précision ; une dénutrition modérée se code E44.0 Malnutrition protéino-énergétique modérée.
+- [GM2026-V-DEN-02] Une dénutrition sévère se code E43 ; une dénutrition modérée se code E44.0.
+- [GM2026-V-DEN-03] Une dénutrition sévère se code E43 ; une dénutrition modérée se code E44.0.
+- [GM2026-V-DEN-06] Le code est déterminé en fonction des critères correspondant aux définitions HAS retrouvés au dossier, sans que le niveau de sévérité doive nécessairement être mentionné dans le dossier — bien qu'il soit recommandé qu'il le soit.
+- [GM2026-V-DEN-07] Lors de l'observation simultanée d'un seul critère de dénutrition sévère et d'un ou plusieurs critères de dénutrition modérée, il est recommandé de poser un diagnostic de dénutrition sévère.
+- [GM2026-V-DEN-10] Dénutrition modérée avant 18 ans : courbe IOTF 17 < IMC < courbe IOTF 18,5 ; perte de poids ≥ 5 % et ≤ 10 % en 1 mois ou ≥ 10 % et ≤ 15 % en 6 mois par rapport au poids habituel avant le début de la maladie ; stagnation pondérale aboutissant à un poids situé entre 2 et 3 couloirs en dessous du couloir habituel. Un seul critère suffit dès lors que la dénutrition est présente.
+- [GM2026-V-DEN-12] Dénutrition modérée de 18 à 70 ans : 17 < IMC < 18,5 kg/m² ; perte de poids ≥ 5 % en 1 mois ou ≥ 10 % en 6 mois ou ≥ 10 % par rapport au poids habituel ; albuminémie > 30 g/L et < 35 g/L, quel que soit l'état inflammatoire. Un seul critère suffit dès lors que la dénutrition est présente.
+- [GM2026-V-DEN-14] Dénutrition modérée à partir de 70 ans : 20 ≤ IMC < 22 ; perte de poids ≥ 5 % et < 10 % en 1 mois ou ≥ 10 % et < 15 % en 6 mois ou ≥ 10 % et < 15 % par rapport au poids habituel ; albuminémie > 30 g/L. Un seul critère suffit dès lors que la dénutrition est présente.
+- [GM2026-V-DEN-17] Le critère phénotypique de réduction de la masse ou de la fonction musculaires s'apprécie par l'une des six méthodes suivantes, une seule suffisant : force de préhension au dynamomètre (< 26 kg chez l'homme, < 16 kg chez la femme) ; vitesse de marche (< 0,8 m/s dans les deux sexes) ; indice de surface musculaire en L3 au scanner ou en IRM (52,4 chez l'homme, 38,5 chez la femme, en cm²/m²) ; indice de masse musculaire par impédancemétrie (7,0 et 5,7 kg/m²) ; indice de masse non grasse par impédancemétrie (< 17 et < 15 kg/m²) ; masse musculaire appendiculaire au DEXA (7,23 et 5,67 kg/m²).
+- [GM2026-V-DEN-04] L'emploi des codes E40 à E46 doit se fonder sur les critères HAS et nécessite que le dossier comporte la mention de dénutrition. Cette mention peut être indiquée par un clinicien ou par un diététicien.
+- [GM2026-V-DEN-08] La CIM–10 range sous le terme générique de malnutrition un groupe d'affections résultant d'une carence d'apport ou d'une désassimilation protéinoénergétique : on doit donc l'entendre au sens restreint de dénutrition. Le groupe est E40–E46, auquel s'ajoute O25 Malnutrition au cours de la grossesse.
+- [GM2026-V-DEN-16] Le diagnostic de dénutrition nécessite au moins 1 critère phénotypique ET 1 critère étiologique ; il est un préalable obligatoire avant de juger de la sévérité et repose exclusivement sur des critères non biologiques. Les critères étiologiques sont identiques aux trois âges : réduction de la prise alimentaire ≥ 50 % pendant plus d'1 semaine (ou toute réduction pendant plus de 2 semaines) ; absorption réduite (malabsorption, maldigestion) ; situation d'agression (pathologie aiguë, chronique évolutive ou maligne évolutive). Les critères phénotypiques varient avec l'âge — perte de poids, IMC (seuils IOTF avant 18 ans, 18,5 kg/m² de 18 à 70 ans, 22 kg/m² au-delà), réduction de la masse ou de la fonction musculaires, sarcopénie confirmée après 70 ans.
+
+## Notes de la CIM-10
+- Le degré de malnutrition se mesure généralement en termes de poids, exprimé en écarts types par rapport à la moyenne de la population de référence. Lorsqu'on dispose d'une ou plusieurs mesures antérieures, l'absence de gain pondéral chez l'enfant ou la perte de poids chez l'enfant ou chez l'adulte est en général évocateur de malnutrition. Quand on ne dispose que d'une mesure, le diagnostic est basé sur des présomptions et n'est pas certain sans autres signes cliniques ou biologiques. Dans les cas exceptionnels où l'on ne dispose d'aucune mesure de poids, il faut se fier aux signes cliniques. *(note du bloc E40-E46)*
+- Si un poids est inférieur à la valeur moyenne de la population de référence, il existe une forte présomption: – de malnutrition grave si une valeur observée se situe à trois écarts types ou plus en dessous de la valeur moyenne de la population de référence; – de malnutrition modérée pour une valeur observée située entre deux et moins de trois écarts types; – de malnutrition légère pour une valeur située entre un et moins de deux écarts types. *(note du bloc E40-E46)*
+
+## Formulations cliniques alternatives
+- dénutrition modérée
+- malnutrition degré moyen
+- malnutrition modérée
+- malnutrition protéino-énergétique modérée
+- malnutrition protéique modérée
+
+</fiche_code>
+
+<fiche_code code="Z74.2">
+
+# Z74.2 — Besoin d'assistance à domicile, aucun autre membre du foyer n'étant capable d'assurer les soins
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z70-Z76 : Sujets ayant recours aux services de santé pour d'autres motifs
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité de la catégorie Z74) :
+
+dépendance envers des machines ou des appareils auxiliaires NCA (Z99.-)
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+- [GM2026-V-AVC-16] Le DP est codé Z74.2 Besoin d'assistance à domicile ou Z75.5 Prise en charge pendant les vacances ; un code de séquelle de maladie cérébrovasculaire (I69.–) est saisi en position de DAS.
+- [GM2026-V-XXI-44] Z74.2 est employé lorsqu'une personne qui ne peut vivre à son domicile qu'avec une aide doit être hospitalisée, ou maintenue en hospitalisation, du fait de l'absence ou de la défaillance de celle-ci.
+
+### Règles générales du chapitre XXI
+
+- [GM2026-V-XXI-01] (Emploi général des codes du chapitre XXI) Les codes du chapitre XXI (« codes Z ») peuvent, et souvent doivent, être utilisés dans le RUM comme diagnostic principal, relié ou associé.
+
+## Formulations cliniques alternatives
+- absence temporaire d'un membre de la famille dispensant les soins
+- problème manque ou impossibilité de soins par membre de la famille
+
+</fiche_code>
+
+<fiche_code code="L56.4">
+
+# L56.4 — Lucite polymorphe
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XII : Maladies de la peau et du tissu cellulaire souscutané
+- Bloc L55-L59 : Affections de la peau et du tissu cellulaire souscutané liées à une irradiation
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XII) :
+
+affections disséminées du tissu conjonctif (M30-M36)
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+réticulose lipomélanique (I89.8)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+## Formulations cliniques alternatives
+- Lucite estivale
+- Photodermatose polymorphe
+- prurigo estival
+
+</fiche_code>
+
+<fiche_code code="E55.9">
+
+# E55.9 — Carence en vitamine D, sans précision
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E50-E64 : Autres carences nutritionnelles
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- avitaminose D
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité du bloc E50-E64) :
+
+anémies nutritionnelles (D50-D53)
+
+Affections relevant d'autres codes :
+
+ostéomalacie de l'adulte (M83.-)
+ostéoporose (M80-M81)
+séquelles de rachitisme (E64.3)
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+- [GM2026-V-CAR-01] L'enregistrement dans le RUM-RSS d'un code de carence vitaminique ou d'avitaminose (catégories E50 à E56) nécessite la mention du diagnostic dans le dossier médical, étayée par un dosage biologique témoignant d'une carence, d'un déficit, d'une insuffisance vitaminique ou d'une hypovitaminose.
+- [GM2026-V-CAR-02] La supplémentation systématique du nouveau-né en vitamines A, D, E et K ne doit pas donner lieu à l'enregistrement de codes de carence vitaminique ou d'avitaminose.
+
+## Formulations cliniques alternatives
+- avitaminose d
+- Avitaminose D sans précision
+- carence vitamine D
+- carence vitamine D3
+- carence vitaminique D
+- hypovitaminose D
+- hypovitaminose D3
+
+</fiche_code>
+
+<fiche_code code="E03.9">
+
+# E03.9 — Hypothyroïdie, sans précision
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E00-E07 : Affections de la glande thyroïde
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- myxoedème SAI
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes :
+
+hypothyroïdie :
+ - après un acte à visée diagnostique et thérapeutique (E89.0) 
+ - liée à une carence en iode (E00-E02)
+
+## Formulations cliniques alternatives
+- anémie myxoedémateuse
+- cachexie myxoedémateuse
+- Diamond (myxoedème prétibial)
+- hypothyroïdie
+- Hypothyroïdie SAI
+- Hypothyroïdie sans précision
+- myxoedème
+- Myxoedème prétibial (mucinose prétibiale)
+- obésité hypothyroïdienne
+- obésité thyroïdienne
+- syndrome de Hoffmann
+
+</fiche_code>
+
+<fiche_code code="F03">
+
+# F03 — Démence, sans précision
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre V : Troubles mentaux et du comportement
+- Bloc F00-F09 : Troubles mentaux organiques, y compris les troubles symptomatiques
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre V :
+- troubles du développement psychologique
+
+Au niveau du code :
+- démence dégénérative primaire SAI
+- démence forme dépressive ou délirante
+- démence présénile SAI
+- démence sénile SAI
+- psychose présénile SAI
+- psychose sénile SAI
+
+## Description clinique (OMS)
+
+Ce groupe réunit un ensemble de troubles mentaux ayant en commun une étiologie organique démontrable, à type de maladie ou de lésion cérébrale, ou d’atteinte entraînant un dysfonctionnement du cerveau. Le dysfonctionnement peut être primaire: c’est le cas des maladies, lésions ou atteintes qui touchent le cerveau de manière directe ou sélective; il peut également être secondaire: c’est le cas des maladies et des troubles somatiques qui affectent le cerveau au même titre que les autres organes ou systèmes de l’organisme. *(note du bloc F00-F09)*
+
+La démence (F00-F03) est un syndrome dû à une maladie cérébrale habituellement chronique et progressive, caractérisé par une altération de nombreuses fonctions corticales supérieures telles que la mémoire, l'idéation, l'orientation, la compréhension, le calcul, la capacité d'apprendre, le langage et le jugement. Le syndrome ne s'accompagne pas d'un obscurcissement de la conscience. Les déficiences des fonctions cognitives s'accompagnent habituellement (et sont parfois précédées) d'une détérioration du contrôle émotionnel, du comportement social ou de la motivation. Ce syndrome survient dans la maladie d'Alzheimer, dans les maladies vasculaires cérébrales et dans d'autres affections qui, de manière primaire ou secondaire, affectent le cerveau. *(note du bloc F00-F09)*
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre V) :
+
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes :
+
+sénilité SAI (R54)
+
+## Notes de la CIM-10
+- Les subdivisions suivantes peuvent être utilisées comme cinquième caractère avec les catégories F00–F03 pour préciser la présence de symptômes supplémentaires:
+- Les subdivisions suivantes peuvent être utilisées comme sixième caractère avec les catégories F00–F03 pour préciser la sévérité de la démence:
+
+## Formulations cliniques alternatives
+- aphasie primaire progressive
+- confusion mentale sénile
+- démence
+- démence cognitive
+- démence dégénérative primaire
+- démence dégénérative primitive
+- démence ponto-cérébelleuse
+- démence présénile
+- démence sénile
+- dépression involution
+- dépression sénile
+- involution mentale
+- pathologie démentielle débutante
+- presbyophrénie
+- syndrome démentiel sévère
+
+</fiche_code>

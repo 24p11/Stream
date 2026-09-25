@@ -1,0 +1,104 @@
+{
+  "scenario": "0012",
+  "source": "crh_generation.txt",
+  "seuil": 0.75,
+  "formulations": {
+    "diagnostics": {
+      "Autres affections précisées du sein (N64.8)": [
+        "déformation bilatérale des seins",
+        "déformation bilatérale des seins associée à une complication mécanique de ses implants mammaires anciens",
+        "asymétrie marquée"
+      ],
+      "Sujet attendant d'être admis ailleurs, dans un établissement adéquat (Z751)": [
+        "hospitalisée en attente d’un lit en rééducation pour la période postopératoire, en raison de l’absence de disponibilité immédiate dans l’établissement prévu"
+      ],
+      "Hypothyroïdie après un acte à visée diagnostique et thérapeutique (E890)": [
+        "hypothyroïdie post-thyroïdectomie",
+        "hypothyroïdie post-thyroïdectomie,"
+      ],
+      "Hypothyroïdie, sans précision (E039)": [
+        "hypothyroïdie"
+      ],
+      "Tachycardie, sans précision (R000)": [
+        "Tachycardie sinusale occasionnelle,",
+        "rythme sinusal à 92/min"
+      ],
+      "Complication mécanique d'une prothèse et d'un implant mammaires (T854)": [
+        "complication mécanique de ses implants mammaires anciens",
+        "coque péri-prothétique sur ses implants mammaires anciens",
+        "coque péri-prothétique bilatérale"
+      ]
+    },
+    "informations": {
+      "Date entrée": [],
+      "Date de sortie": [],
+      "Service d'hospitalisation": [],
+      "Intervention": [
+        "Mastoplastie bilatérale d’augmentation avec pose d’implants prothétiques"
+      ],
+      "Date de l’intervention": [
+        "05 janvier 2024"
+      ],
+      "Nom/Prénom du chirurgien": [
+        "Dr Paulette Castanet"
+      ],
+      "Nom/Prénom du patient": [
+        "Veronique Le Diberder"
+      ],
+      "Âge": [
+        "68 ans"
+      ],
+      "Sexe": [],
+      "État général": [
+        "patiente est apyrétique, avec une fréquence cardiaque à 95 battements par minute, une tension artérielle à 130/80 mmHg."
+      ],
+      "Poids": [
+        "59 kg"
+      ],
+      "Statut gestationnel": [],
+      "Gestité": [],
+      "Comorbidités": [
+        "hypothyroïdie post-thyroïdectomie, actuellement sous traitement substitutif",
+        "Tachycardie sinusale occasionnelle,"
+      ],
+      "Médicaments": [
+        "traitement substitutif thyroïdien"
+      ],
+      "NFS": [
+        "dans les limites de la normale."
+      ],
+      "Créatinine": [],
+      "Bilan hépatique": []
+    }
+  },
+  "supprimees": [
+    {
+      "section": "informations",
+      "cle": "Date entrée",
+      "formulation": "04/01/2024",
+      "score": 0.571,
+      "meilleur_candidat": "2024"
+    },
+    {
+      "section": "informations",
+      "cle": "Date de sortie",
+      "formulation": "08/01/2024",
+      "score": 0.571,
+      "meilleur_candidat": "2024"
+    },
+    {
+      "section": "informations",
+      "cle": "Service d'hospitalisation",
+      "formulation": "CHIR.PLAST.RECONSTR.",
+      "score": 0.214,
+      "meilleur_candidat": "mmHg. Le"
+    },
+    {
+      "section": "informations",
+      "cle": "Sexe",
+      "formulation": "Féminin",
+      "score": 0.5,
+      "meilleur_candidat": "Familiaux"
+    }
+  ]
+}

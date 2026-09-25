@@ -1,0 +1,95 @@
+{
+  "scenario": "0014",
+  "source": "crh_generation.txt",
+  "seuil": 0.75,
+  "formulations": {
+    "diagnostics": {
+      "Autres grossesses extra-utérines (O008)": [
+        "grossesse interstitielle rompue",
+        "grossesse interstitielle",
+        "grossesse interstitielle gauche"
+      ],
+      "Autres anémies précisées (D648)": [],
+      "Hypoosmolarités et hyponatrémies, autres et sans précision (E8718)": [
+        "hyponatrémie à 130 mmol/L",
+        "natrémie à 130 mmol/L"
+      ],
+      "Tachycardie, sans précision (R000)": [
+        "tachycardie à 110 battements par minute",
+        "tachycardie à 110"
+      ],
+      "Anémie posthémorragique aiguë (D62)": [
+        "anémie aiguë post-hémorragique",
+        "anémie aiguë",
+        "anémie"
+      ],
+      "Trouble anxieux, sans précision (F419)": [
+        "état d'anxiété marqué",
+        "état anxieux",
+        "anxieuse"
+      ]
+    },
+    "informations": {
+      "Date entrée": [
+        "21 janvier 2025"
+      ],
+      "Date de sortie": [
+        "25 janvier 2025"
+      ],
+      "Service d'hospitalisation": [
+        "GYNECOLOGIE"
+      ],
+      "Intervention": [
+        "Salpingectomie totale par cœlioscopie pour grossesse extra-utérine"
+      ],
+      "Date de l'intervention": [
+        "22 janvier 2025"
+      ],
+      "Nom/Prénom du chirurgien": [
+        "Dr Déva Missier"
+      ],
+      "Nom/Prénom du patient": [
+        "Mireille Fuiret"
+      ],
+      "Âge": [
+        "30 ans"
+      ],
+      "Sexe": [],
+      "État général": [
+        "consciente, orientée, mais anxieuse"
+      ],
+      "Poids": [
+        "60 kg"
+      ],
+      "Statut gestationnel": [
+        "Primigeste, nullipare"
+      ],
+      "Gestité": [
+        "Primigeste"
+      ],
+      "Comorbidités": [],
+      "Médicaments": [],
+      "NFS": [
+        "Hémoglobine à 8,2 g/dL",
+        "hématocrite à 25 %",
+        "VGM à 85 fL",
+        "hémoglobine stable à 9,5 g/dL"
+      ],
+      "Créatinine": [
+        "créatinine à 70 µmol/L"
+      ],
+      "Bilan hepatique": [
+        "Bilan hépatique normal"
+      ]
+    }
+  },
+  "supprimees": [
+    {
+      "section": "informations",
+      "cle": "Sexe",
+      "formulation": "Féminin",
+      "score": 0.588,
+      "meilleur_candidat": "créatinine"
+    }
+  ]
+}

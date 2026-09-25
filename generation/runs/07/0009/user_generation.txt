@@ -1,0 +1,310 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 24 ans
+- Sexe du patient : Féminin
+- Date d'entrée : 21/05/2025
+- Date de sortie : 23/05/2025
+- Date de naissance : 12/11/2000
+- Nom du patient : Moreau
+- Prénom du patient : Megann
+- Mode d'entrée' : URGENCES
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Prise en charge pour accouchement par voie basse.
+- Codage CIM10 :
+   * Diagnostic principal : Travail et accouchement compliqués d'autres anomalies du cordon ombilical (O698)
+   * Diagnostics associés :
+      - Soins maternels pour iso-immunisation anti-Rh (O360)
+      - Naissance unique, enfant vivant (Z370)
+      - Travail et accouchement compliqués de la présence de méconium dans le liquide amniotique (O681)
+      - Soins et examens de l'allaitement maternel (Z391)
+      - Surveillance de contraceptifs (Z304)
+      - Syndrome de dépendance au tabac, personne actuellement abstinente (F1720)
+      - Accouchement (unique) spontané par présentation du sommet (O800)
+- Nom du médecin / signataire : David Ariet
+- Service : OBSTETRIQUE
+- Hôpital : Hôpital de la Timone- Assistance Publique – Hôpitaux de Marseille
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="O69.8">
+
+# O69.8 — Travail et accouchement compliqués d'autres anomalies du cordon ombilical
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O60-O75 : Complications du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- Circulaire du cordon sans compression
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Formes spécifiées de la catégorie O69 :
+- Travail et accouchement compliqués d'un prolapsus du cordon [→ O69.0]
+- Travail et accouchement compliqués d'une autre forme d'enchevêtrement du cordon, avec compression [→ O69.2]
+- Travail et accouchement compliqués d'une brièveté du cordon [→ O69.3]
+- Travail et accouchement compliqués d'une circulaire du cordon, avec compression [→ O69.1]
+- Travail et accouchement compliqués de lésions vasculaires du cordon [→ O69.5]
+- Travail et accouchement compliqués par une insertion vélamenteuse du cordon [→ O69.4]
+
+</fiche_code>
+
+<fiche_code code="O36.0">
+
+# O36.0 — Soins maternels pour iso-immunisation anti-Rh
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O30-O48 : Soins maternels liés au fœtus et à la cavité amniotique, et problèmes possibles posés par l'accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie O36 :
+- lorsqu'il y a mise en observation, hospitalisation ou soins obstétricaux, y compris une interruption de la grossesse
+
+Au niveau du code :
+- anticorps anti­D [Rh]
+- incompatibilité Rh (avec anasarque foeto-placentaire)
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Affections relevant d'autres codes (hérité de la catégorie O36) :
+
+syndromes de transfusion placentaire (O43.0)
+travail et accouchement compliqués d'une détresse fœtale (O68.-)
+
+## Formulations cliniques alternatives
+- immunisation RH
+- iso-immunisation rhésus
+
+</fiche_code>
+
+<fiche_code code="Z37.0">
+
+# Z37.0 — Naissance unique, enfant vivant
+
+Statut MCO (kit ATIH 2025) : codable en MCO, interdit en DP et DR.
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+
+## Notes de la CIM-10
+- Les subdivisions suivantes doivent être utilisées comme cinquième caractère pour préciser les circonstances de la naissance avec les souscatégories appropriées: *(note du bloc Z37)*
+
+</fiche_code>
+
+<fiche_code code="O68.1">
+
+# O68.1 — Travail et accouchement compliqués de la présence de méconium dans le liquide amniotique
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O60-O75 : Complications du travail et de l'accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie O68 :
+- détresse foetale au cours du travail ou de l'accouchement due à l'administration de médicaments
+- détresse fœtale au cours du travail ou de l'accouchement due à l'administration de médicaments
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+Affections relevant d'autres codes :
+
+anomalie du rythme cardiaque du fœtus (O68.2)
+
+</fiche_code>
+
+<fiche_code code="Z39.1">
+
+# Z39.1 — Soins et examens de l'allaitement maternel
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- surveillance de l'allaitement
+
+## À ne pas décrire
+
+Affections relevant d'autres codes :
+
+troubles de la lactation (O92.-)
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+- [GM2026-V-XXI-26] Un code Z39 est toujours requis pour les séjours du postpartum ; il ne doit pas être enregistré d'acte d'accouchement dans le RUM, et un code de la catégorie Z37 doit être saisi en diagnostic associé.
+
+### Règles générales du chapitre XXI
+
+- [GM2026-V-XXI-01] (Emploi général des codes du chapitre XXI) Les codes du chapitre XXI (« codes Z ») peuvent, et souvent doivent, être utilisés dans le RUM comme diagnostic principal, relié ou associé.
+
+## Formulations cliniques alternatives
+- surveillance d'Allaitement
+- surveillance de l'allaitement
+- surveillance de la lactation
+
+</fiche_code>
+
+<fiche_code code="Z30.4">
+
+# Z30.4 — Surveillance de contraceptifs
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z30-Z39 : Sujets ayant recours aux services de santé pour des motifs liés à la reproduction
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- examen de routine pour entretien de la contraception
+- renouvellement d'une prescription de pilules contraceptives ou d'autres contraceptifs
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+### Règles générales du chapitre XXI
+
+- [GM2026-V-XXI-01] (Emploi général des codes du chapitre XXI) Les codes du chapitre XXI (« codes Z ») peuvent, et souvent doivent, être utilisés dans le RUM comme diagnostic principal, relié ou associé.
+
+## Formulations cliniques alternatives
+- prescription de contraceptif renouvellement
+- renouvellement d'ordonnance contraceptif
+- surveillance de la contraception
+
+</fiche_code>
+
+<fiche_code code="F17.20">
+
+# F17.20 — Troubles mentaux et du comportement liés à l'utilisation de tabac - "Syndrome de dépendance" - "actuellement abstinent"
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre V : Troubles mentaux et du comportement
+- Bloc F10-F19 : Troubles mentaux et du comportement liés à l'utilisation de substances psychoactives
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre V :
+- troubles du développement psychologique
+
+## Description clinique (OMS)
+
+Ensemble de phénomènes comportementaux, cognitifs et physiologiques survenant à la suite d'une consommation répétée d'une substance psychoactive, typiquement associés à un désir puissant de prendre la drogue, à une difficulté à contrôler la consommation, à une poursuite de la consommation malgré des conséquences nocives, à un désinvestissement progressif des autres activités et obligations au profit de la consommation de cette drogue, à une tolérance accrue et, parfois, à un syndrome de sevrage physique. *(note du bloc F17.2)*
+
+Le syndrome de dépendance peut concerner une substance psychoactive spécifique (par exemple: le tabac, l'alcool ou le diazépam), une catégorie de substances (par exemple: les substances opiacées), ou un ensemble plus vaste de substances psychoactives pharmacologiquement différentes. *(note du bloc F17.2)*
+
+Les subdivisions suivantes peuvent être utilisées comme cinquième et sixième caractères pour spécifier le tableau clinique: 0actuellement abstinent 00actuellement abstinent en rémission récente 01actuellement abstinent en rémission partielle 02actuellement abstinent en rémission complète 1actuellement abstinent mais dans un environnement protégé 2suit actuellement un régime de maintenance ou de substitution, sous surveillance médicale 3actuellement abstinent mais prend des médicaments aversifs ou bloquants 4utilise actuellement la drogue [dépendance active] 40dépendance active sans signe physique 41dépendance active avec signe physique 5utilisation continue 6utilisation épisodique (dipsomanie) *(note du bloc F17.2)*
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre V) :
+
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité du bloc F10-F19) :
+
+abus de substances n'entraînant pas de dépendance [F55.–]
+
+## Notes de la CIM-10
+- Ce groupe comprend de nombreux troubles variés, de gravité et de symptomatologie diverses, mais qui sont tous liés à l'utilisation d'une ou de plusieurs substances psychoactives prescrites ou non par un médecin. Le troisième caractère du code identifie la substance impliquée alors que le quatrième caractère sert à spécifier les tableaux cliniques; les quatrièmes caractères doivent être utilisés, selon les besoins, pour chacune des substances indiquées; il convient toutefois de noter que les quatrièmes caractères du code ne sont pas tous applicables à chaque substance. *(note du bloc F10-F19)*
+- L'identification de la substance psychoactive doit se faire à partir de toutes les sources d'information possibles. Ces dernières comportent: les informations fournies par le sujet lui-même, les analyses de sang, d'urine etc., les symptômes physiques et psychologiques caractéristiques, les signes et comportements cliniques, les drogues trouvées chez le patient, les renseignements de tierces personnes bien informées. De nombreux sujets consomment plusieurs catégories de substances psychoactives différentes. Le diagnostic principal se fera, si possible, en fonction de la substance toxique (ou de la catégorie de substances toxiques) qui est responsable du tableau clinique ou qui en détermine les caractéristiques essentielles. Des diagnostics supplémentaires doivent être codés quand d'autres substances psychoactives ont été consommées en quantité suffisante pour provoquer une intoxication (quatrième caractère.0), des conséquences nocives (quatrième caractère.1), une dépendance (quatrième caractère.2) ou d'autres troubles (quatrième caractère.3–.9). *(note du bloc F10-F19)*
+- Le diagnostic de troubles liés à l'utilisation de substances multiples (F19) doit être réservé à des cas où le choix des substances psychoactives se fait de façon chaotique et sans discrimination, ou dans lesquels il n'est pas possible de différencier les effets provenant des unes ou des autres. *(note du bloc F10-F19)*
+- Les subdivisions suivantes peuvent être utilisées comme quatrième caractère avec les rubriques F10-F19: *(note du bloc F10-F19)*
+
+</fiche_code>
+
+<fiche_code code="O80.0">
+
+# O80.0 — Accouchement spontané par présentation du sommet
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XV : Grossesse, accouchement et puerpéralité
+- Bloc O80-O84 : Accouchement
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie O80 :
+- accouchement tout à fait normal
+- accouchement tout à fait normal
+cas avec assistance minime ou sans assistance, avec ou sans épisiotomie
+- cas avec assistance minime ou sans assistance, avec ou sans épisiotomie
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XV) :
+
+certaines affections ou lésions traumatiques compliquant la grossesse, l'accouchement ou la puerpéralité classées ailleurs :
+ - causes externes (pour la mortalité) (chapitre XX)
+ - lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T88.1)  (T88.6-T98) 
+ - nécrose pituitaire du postpartum (E23.0) 
+ - ostéomalacie puerpérale (M83.0) 
+ - tétanos obstétrical (A34) 
+ - troubles mentaux et du comportement associés à la puerpéralité [F53.–] 
+- surveillance d'une grossesse :
+ - à haut risque [Z35.–] 
+ - normale [Z34.–]
+
+## Notes de la CIM-10
+- Se référer aux règles et instructions du volume 2 pour le codage de la mortalité et de la morbidité. *(note du bloc O80-O84)*
+
+</fiche_code>

@@ -1,0 +1,90 @@
+### **VERDICT : NON CONFORME**
+
+#### **Anomalies constatées :**
+
+1. **Incohérence dans les diagnostics codés (CIM-10) :**
+   - **Absence du diagnostic principal pertinent :**
+     Le compte rendu mentionne une **"complication mécanique d'implants mammaires"** (coque péri-prothétique), qui doit être codée en **T85.4** (Complication mécanique d'une prothèse et d'un implant mammaires) **en diagnostic principal**, car c'est la raison principale de l'intervention.
+     → **Problème :** Dans les formulations proposées, **T85.4** est listé en diagnostic secondaire, alors qu'il devrait être **prioritaire**.
+     → **Correction :** **T85.4** doit être le **DP (Diagnostic Principal)**.
+
+   - **Diagnostics redondants ou mal hiérarchisés :**
+     - **"Autres affections précisées du sein (N64.8)"** est utilisé pour "déformation bilatérale des seins" et "asymétrie marquée".
+       → **Problème :** Ce code est trop vague et ne reflète pas la **complication mécanique** (coque péri-prothétique), qui est plus spécifique.
+       → **Correction :** **N64.8** peut être conservé en **diagnostic associé (DA)**, mais **T85.4** doit primer.
+     - **"Hypothyroïdie après un acte à visée diagnostique et thérapeutique (E89.0)"** est plus précis que **E03.9** (Hypothyroïdie, sans précision).
+       → **Problème :** Les deux codes sont proposés, mais **E89.0** doit être privilégié (car post-thyroïdectomie).
+       → **Correction :** **Supprimer E03.9** et garder **E89.0**.
+
+   - **Diagnostic non pertinent :**
+     - **"Sujet attendant d'être admis ailleurs (Z75.1)"** est mentionné pour l'attente d'un lit en rééducation.
+       → **Problème :** Ce code est **non facturable** en diagnostic principal ou associé dans ce contexte (il ne justifie pas l'hospitalisation).
+       → **Correction :** **Supprimer Z75.1**.
+
+2. **Incohérences dans les actes codés (CCAM) :**
+   - **Acte principal manquant :**
+     Le compte rendu décrit une **"mastoplastie bilatérale d’augmentation avec changement d’implants"**, ce qui correspond à :
+     - **QEMA004** (Mastoplastie bilatérale d'augmentation par pose d'implants mammaires, par abord sous-mammaire ou aréolaire).
+     → **Problème :** Cet acte **n'est pas mentionné** dans les formulations.
+     → **Correction :** **Ajouter QEMA004 en acte principal**.
+
+   - **Actes associés manquants :**
+     - **Ablation des implants anciens** : Doit être codée en **QELA002** (Ablation d'implant mammaire, unilatérale) **x2** (car bilatérale).
+     - **Dissection des loges rétro-pectorales** : Peut être couverte par **QEMA004**, mais si une capsulectomie est réalisée (mentionnée dans le CR), il faudrait ajouter **QEFA001** (Capsulectomie mammaire, unilatérale) **x2**.
+     → **Problème :** Ces actes **ne sont pas codés**.
+     → **Correction :** **Ajouter QELA002 x2 et QEFA001 x2** (si capsulectomie confirmée).
+
+3. **Incohérences cliniques et administratives :**
+   - **Dates d'hospitalisation :**
+     - L'intervention a lieu le **05/01/2024**, mais la date d'entrée est indiquée comme **04/01/2024** et la sortie le **08/01/2024**.
+       → **Problème :** Une **mastoplastie d'augmentation avec changement d'implants** ne justifie généralement pas **4 jours d'hospitalisation** (sauf complication, non mentionnée).
+       → **Correction :** Vérifier la **durée de séjour** (normalement **1 à 2 jours** pour ce type d'intervention). Si la patiente est restée pour **attente de rééducation**, cela doit être **explicitement justifié** dans le CR.
+
+   - **Absence de mention des complications postopératoires :**
+     - Le CR indique des **suites simples**, mais ne précise pas si des **complications mineures** (hématome, douleur, etc.) ont été observées.
+       → **Problème :** En DIM, toute **anomalie postopératoire** doit être tracée pour justifier la durée de séjour.
+       → **Correction :** Ajouter une mention du type *"Suites postopératoires simples, sans complication hémorragique ni infectieuse"*.
+
+   - **Poids et IMC :**
+     - Poids = **59 kg**, Taille = **159 cm** → IMC = **23,3** (normal).
+       → **Problème :** Aucun **codage lié à la dénutrition ou à l'obésité** n'est pertinent ici, mais l'IMC doit être **calculé et mentionné** pour le **PMSI**.
+
+4. **Erreurs de codage CCAM et CIM-10 :**
+   - **T85.4 (Complication mécanique d'implant mammaire) :**
+     - Doit être **obligatoirement associé à un code de cause externe (Y83.2 : Complication d'un implant chirurgical)** si la complication est liée à la pose initiale.
+     → **Problème :** **Y83.2 est absent**.
+     → **Correction :** **Ajouter Y83.2 en diagnostic associé**.
+
+   - **Tachycardie (R00.0) :**
+     - La patiente a une **tachycardie sinusale occasionnelle**, mais le CR mentionne aussi un **ECG normal (rythme sinusal à 92/min)**.
+       → **Problème :** **R00.0** ne doit pas être codé si la tachycardie est **transitoire et sans gravité**.
+       → **Correction :** **Supprimer R00.0** (sauf si justifié par un épisode peropératoire).
+
+---
+
+### **Résumé des corrections nécessaires :**
+| **Type d'anomalie**       | **Problème identifié**                          | **Correction proposée**                                                                 |
+|---------------------------|-----------------------------------------------|---------------------------------------------------------------------------------------|
+| **Diagnostic principal**  | T85.4 non priorisé                            | **DP = T85.4** (Complication mécanique d'implant mammaire)                            |
+| **Diagnostics associés**  | N64.8, E89.0, Z75.1 mal hiérarchisés          | **DA = N64.8, E89.0** / **Supprimer Z75.1 et E03.9**                                 |
+| **Acte principal**        | QEMA004 manquant                              | **Ajouter QEMA004** (Mastoplastie bilatérale d'augmentation)                          |
+| **Actes associés**        | QELA002 et QEFA001 manquants                   | **Ajouter QELA002 x2** (Ablation implants) + **QEFA001 x2** (si capsulectomie)        |
+| **Cause externe**         | Y83.2 absent                                   | **Ajouter Y83.2** (Complication d'implant chirurgical)                                |
+| **Durée de séjour**       | 4 jours non justifiés                         | **Réduire à 1-2 jours** ou **justifier l'attente de rééducation**                     |
+| **Complications**         | Absence de mention des suites postopératoires | **Ajouter "Suites simples, sans complication"**                                      |
+| **Tachycardie**           | R00.0 non pertinent                           | **Supprimer R00.0**                                                                   |
+
+---
+
+### **Conclusion :**
+Le compte rendu est **NON CONFORME** en raison :
+1. **D'une mauvaise hiérarchisation des diagnostics (T85.4 doit être DP)**.
+2. **D'actes CCAM manquants (QEMA004, QELA002, QEFA001)**.
+3. **D'une durée de séjour non justifiée**.
+4. **D'erreurs de codage (Z75.1, R00.0, absence de Y83.2)**.
+
+**Recommandation :**
+- **Revoir la structure du CR** pour respecter la **hiérarchie diagnostique (DP/DA)**.
+- **Ajouter les actes CCAM manquants**.
+- **Justifier la durée de séjour** ou la réduire.
+- **Supprimer les codes non pertinents (Z75.1, R00.0)**.

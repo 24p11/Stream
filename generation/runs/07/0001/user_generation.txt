@@ -1,0 +1,72 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 46 ans
+- Sexe du patient : Féminin
+- Taille : 171 cm
+- Poids : 71 kg (IMC 24,3)
+- Tabac : non
+- Alcool : non
+- Date d'entrée : 02/01/2024
+- Date de sortie : 02/01/2024
+- Date de naissance : 27/01/1977
+- Nom du patient : Ingegno
+- Prénom du patient : Adrienne
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Prise en charge en hospitalisation ambulatoire pour prélèvements d'ovocytes, en ambulatoire.
+- Codage CIM10 :
+   * Diagnostic principal : Stérilité de la femme d'autres origines (N978)
+   * Diagnostics associés :
+      - aucun
+- Acte CCAM : prélèvement d'ovocytes sur un ou deux ovaires, par voie transvaginale avec guidage échographique (JJFJ001)
+- Nom du médecin / signataire : Zlatan Martin
+- Service : GYNECOLOGIE
+- Hôpital : Hôpital Pellegrin - CHU de Bordeaux
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="N97.8">
+
+# N97.8 — Stérilité de la femme d'autres origines
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XIV : Maladies de l'appareil génito-urinaire
+- Bloc N80-N98 : Affections non inflammatoires de l'appareil génital de la femme
+
+## Périmètre clinique du code
+
+Inclusions héritées de la catégorie N97 :
+- incapacité de mener une grossesse à terme
+- incapacité de mener une grossesse à terme
+stérilité de la femme SAI
+- stérilité de la femme SAI
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XIV) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie N97) :
+
+stérilité relative (N96)
+
+Formes spécifiées de la catégorie N97 :
+- Stérilité associée à une anovulation [→ N97.0]
+- Stérilité d'origine cervicale [→ N97.3]
+- Stérilité d'origine tubaire [→ N97.1]
+- Stérilité d'origine utérine [→ N97.2]
+- Stérilité de la femme associée à des facteurs relevant de l'homme [→ N97.4]
+
+</fiche_code>

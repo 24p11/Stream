@@ -1,0 +1,56 @@
+{
+  "scenario": "0002",
+  "source": "crh_generation.txt",
+  "seuil": 0.75,
+  "formulations": {
+    "diagnostics": {
+      "Autres détresses respiratoires du nouveau-né (P22.8)": [
+        "détresse respiratoire néonatale",
+        "détresse respiratoire multiépisodique",
+        "épisodes répétés de difficultés respiratoires avec polypnée et signes de lutte",
+        "détresse respiratoire néonatale persistante"
+      ]
+    },
+    "informations": {
+      "Date entrée": [
+        "11/12/2025"
+      ],
+      "Date de sortie": [
+        "12/12/2025"
+      ],
+      "Service d'hospitalisation": [
+        "Néonatologie"
+      ],
+      "Nom/Prénom du patient": [
+        "Courteboeuf -"
+      ],
+      "Nom/Prénom du médecin": [
+        "Stéphane Trouniac"
+      ],
+      "Âge": [
+        "10 jours"
+      ],
+      "Sexe": [
+        "Féminin"
+      ],
+      "État général": [
+        "détresse respiratoire modérée avec une fréquence respiratoire à 70 cycles/min, un tirage intercostal et un geignement expiratoire"
+      ],
+      "Poids": [
+        "3 150 g"
+      ],
+      "Statut gestationnel": [],
+      "Gestité": [],
+      "NFS": [
+        "NFS normale (hémoglobine à 16 g/dL, leucocytes à 9 000/mm³, plaquettes à 250 000/mm³)"
+      ],
+      "Créatinine": [],
+      "Bilan hépatique": [],
+      "Traitements": [
+        "oxygénothérapie nasale",
+        "surveillance clinique rapprochée a été mise en place, avec monitorage continu de la fréquence respiratoire et de la"
+      ]
+    }
+  },
+  "supprimees": []
+}

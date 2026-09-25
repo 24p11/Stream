@@ -1,0 +1,76 @@
+### **Verdict : NON CONFORME**
+
+#### **Anomalies constatées :**
+
+1. **Incohérence clinique et codage des diagnostics :**
+   - **Hypertension artérielle secondaire (O10.4)** :
+     - Le compte rendu mentionne une **hypertension artérielle secondaire préexistante**, mais ne précise pas l'étiologie (ex. : rénale, endocrine, etc.). Le code **O10.4** nécessite une cause identifiée.
+     - **Correction suggérée** : Préciser l'étiologie ou utiliser **O10.9** (hypertension préexistante, sans précision) si l'origine n'est pas documentée.
+
+   - **Inertie utérine (O62.2)** :
+     - Le diagnostic est correct, mais il manque une **mention de la durée et de la réponse au traitement** (ex. : "inertie utérine en début de travail, corrigée par ocytocine").
+     - **Correction suggérée** : Ajouter des détails sur la prise en charge.
+
+   - **Herpès labial (B00.1)** :
+     - Le code **B00.1** (dermite vésiculaire herpétique) est correct, mais il n'est pas mentionné si un **traitement antiviral systémique** a été administré (recommandé en cas de lésions actives près de l'accouchement pour prévenir une transmission néonatale).
+     - **Correction suggérée** : Préciser si un traitement a été instauré (ex. : aciclovir).
+
+   - **Circulaire du cordon (O69.8)** :
+     - Le code est correct, mais il manque une **évaluation de l'impact** (ex. : "sans signe de souffrance fœtale").
+     - **Correction suggérée** : Ajouter une mention sur l'absence de conséquence clinique.
+
+   - **Fatigue post-partum (O99.3)** :
+     - Le code **O99.3** (troubles mentaux compliquant la grossesse/puerpéralité) est **trop large** pour une "légère fatigue".
+     - **Correction suggérée** : Utiliser **Z76.3** (personne en bonne santé accompagnant un malade) ou supprimer ce diagnostic si non pertinent.
+
+   - **Difficultés psychosociales (Z65.8)** :
+     - Le code **Z65.8** (autres difficultés psychosociales) est correct, mais il manque une **évaluation formelle** (ex. : échelle de dépression post-partum).
+     - **Correction suggérée** : Préciser si un suivi psychologique a été engagé.
+
+2. **Omissions dans le codage :**
+   - **Allaitement maternel (Z39.1)** :
+     - Le code est correct, mais il manque une mention de **complications éventuelles** (ex. : crevasses, mastite).
+   - **Contraception (Z30.0)** :
+     - Le code est correct, mais il manque le **type de contraception prescrit** (ex. : pilule œstroprogestative, stérilet).
+   - **Multiparité (Z64.1)** :
+     - Ce code est **obsolète** dans la CIM-10 (remplacé par **Z64.0** pour les grossesses multiples). À supprimer ou remplacer par **Z35.4** (surveillance d'une multipare).
+
+3. **Incohérences dans les données :**
+   - **Gestité/Parité (G3P2)** :
+     - La patiente est **G3P2**, mais le compte rendu ne mentionne pas l'issue de la **3ème grossesse** (fausse couche, IVG, etc.).
+     - **Correction suggérée** : Préciser l'antécédent obstétrical complet.
+   - **Poids du nouveau-né (3250 g)** :
+     - Le poids est dans la norme, mais il manque une **courbe de croissance** (ex. : percentile) pour confirmer l'eutrophie.
+   - **Tension artérielle (135/85 mmHg)** :
+     - La TA est **limite** pour une patiente sous traitement antihypertenseur. Il manque une **surveillance renforcée** ou une adaptation thérapeutique.
+
+4. **Problèmes de structure :**
+   - **Absence de DP (Diagnostic Principal)** :
+     - Le compte rendu ne précise pas le **diagnostic principal** (ex. : "Accouchement par voie basse à terme, compliqué d'une inertie utérine").
+     - **Correction suggérée** : Ajouter un DP clair en tête de document.
+   - **Redondances** :
+     - Les antécédents d'herpès labial sont répétés plusieurs fois (à regrouper).
+   - **Manque de traçabilité** :
+     - Pas de mention de **consentement éclairé** pour les actes (ex. : stimulation par ocytocine).
+
+---
+
+### **Recommandations pour mise en conformité :**
+1. **Préciser les diagnostics** :
+   - Étiologie de l'hypertension secondaire.
+   - Impact de la circulaire du cordon.
+   - Traitement de l'herpès labial.
+2. **Corriger les codes inappropriés** :
+   - Remplacer **O99.3** par un code plus spécifique si nécessaire.
+   - Supprimer **Z64.1** (multiparité).
+3. **Compléter les données manquantes** :
+   - Issue de la 3ème grossesse.
+   - Type de contraception prescrit.
+   - Courbe de croissance du nouveau-né.
+4. **Structurer le compte rendu** :
+   - Ajouter un **Diagnostic Principal**.
+   - Regrouper les antécédents redondants.
+   - Mentionner les **consentements**.
+
+---
+**Conclusion** : Le compte rendu présente des **lacunes cliniques et de codage** nécessitant des corrections avant validation. Une révision par le médecin DIM et le clinicien est recommandée.

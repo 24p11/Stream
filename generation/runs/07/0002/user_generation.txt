@@ -1,0 +1,64 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 0 ans
+- Sexe du patient : Féminin
+- Date d'entrée : 11/12/2025
+- Date de sortie : 12/12/2025
+- Date de naissance : 30/01/2025
+- Nom du patient : Courteboeuf
+- Prénom du patient : Asmae
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
+- Codage CIM10 :
+   * Diagnostic principal : Autres détresses respiratoires du nouveau-né (P228)
+   * Diagnostics associés :
+      - aucun
+- Nom du médecin / signataire : Stephane Trouniac
+- Service : NEONATOLOGIE
+- Hôpital : Hôpital de la Timone- Assistance Publique – Hôpitaux de Marseille
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="P22.8">
+
+# P22.8 — Autres détresses respiratoires du nouveau-né
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XVI : Certaines affections dont l'origine se situe dans la période périnatale
+- Bloc P20-P29 : Affections respiratoires et cardiovasculaires spécifiques de la période périnatale
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre XVI :
+- les affections dont l'origine se situe dans la période périnatale, même si la mort ou les manifestations morbides apparaissent plus tard
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVI) :
+
+coqueluche (A37.-)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+tétanos du nouveau-né (A33)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité de la catégorie P22) :
+
+insuffisance respiratoire du nouveau-né (P28.5)
+
+Formes spécifiées de la catégorie P22 :
+- Syndrome de détresse respiratoire [SDR] du nouveau-né [→ P22.0]
+- Tachypnée transitoire du nouveau-né [→ P22.1]
+
+## Formulations cliniques alternatives
+- absence insufflation pulmonaire
+- chylothorax anténatal
+- détresse respiratoire multiépisodique
+
+</fiche_code>

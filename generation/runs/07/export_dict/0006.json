@@ -1,0 +1,67 @@
+{
+  "scenario": "0006",
+  "source": "crh_generation.txt",
+  "seuil": 0.75,
+  "formulations": {
+    "diagnostics": {
+      "Autres gastro-entérites et colites non infectieuses précisées (K52.8)": [
+        "gastro-entérite éosinophile",
+        "colite éosinophile",
+        "muqueuse colique érythémateuse et érosive",
+        "colite éosinophile"
+      ],
+      "Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication (E11.98)": [
+        "Diabète de type 2 non insulinotraité,",
+        "diabète de type 2"
+      ],
+      "Surpoids dû à un excès calorique, de l'adulte ou de l'enfant (E66.03)": [
+        "Surpoids modéré."
+      ]
+    },
+    "informations": {
+      "Date entrée": [
+        "11/06/2024"
+      ],
+      "Date de sortie": [
+        "11/06/2024,"
+      ],
+      "Service d'hospitalisation": [
+        "HEPATO-GASTRO-ENTERO"
+      ],
+      "Nom/Prénom du patient": [
+        "Berne Aprile"
+      ],
+      "Nom/Prénom du médecin": [
+        "Nikolas Hedon"
+      ],
+      "Âge": [
+        "68 ans"
+      ],
+      "Sexe": [
+        "Féminin"
+      ],
+      "État général": [
+        "score ECOG à 1"
+      ],
+      "Poids": [
+        "69 kg"
+      ],
+      "Statut gestationnel": [],
+      "Gestité": [],
+      "NFS": [
+        "légère éosinophilie à 800/mm³"
+      ],
+      "Créatinine": [
+        "normal."
+      ],
+      "Bilan hépatique": [
+        "normal"
+      ],
+      "Traitements": [
+        "corticoïdes per os (prednisone 40 mg/jour)",
+        "metformine 1000 mg/jour"
+      ]
+    }
+  },
+  "supprimees": []
+}

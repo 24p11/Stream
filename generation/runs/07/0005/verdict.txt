@@ -1,0 +1,127 @@
+### **Verdict : NON CONFORME**
+
+#### **Anomalies constatées :**
+
+---
+
+### **1. Problèmes de cohérence clinique et de logique médicale**
+#### **a. Diagnostic principal et hiérarchisation des pathologies**
+- **Absence de diagnostic principal clairement identifié** :
+  - Le compte rendu mentionne plusieurs pathologies graves (angor d’effort, sténose aortique serrée, fibrillation auriculaire paroxystique, hypertension artérielle), mais ne hiérarchise pas clairement le **diagnostic principal** (DP) pour le séjour.
+  - **Recommandation** : Le DP devrait être **l’angor d’effort (I20.8)** ou **la sténose aortique serrée (I35.0)**, en fonction de la raison principale de l’hospitalisation. La coronarographie confirme une sténose significative de l’IVA, ce qui justifie probablement **I20.8** comme DP.
+
+- **Sténose aortique serrée non chirurgicale** :
+  - La sténose aortique serrée (surface aortique = 0,8 cm², gradient moyen = 45 mmHg) est un diagnostic majeur, mais le compte rendu indique qu’elle est "non chirurgicale à ce stade". Cela doit être **explicitement justifié** (ex. : risque opératoire trop élevé en raison de l’âge et des comorbidités).
+  - **Recommandation** : Ajouter une phrase du type : *"Compte tenu de l’âge avancé, des comorbidités et du risque opératoire élevé, une prise en charge médicale a été privilégiée après discussion en réunion pluridisciplinaire."*
+
+#### **b. Fibrillation auriculaire paroxystique et anticoagulation**
+- **Incohérence entre le traitement et le risque thrombo-embolique** :
+  - La patiente a une **fibrillation auriculaire paroxystique (I48.0)** avec un **CHA₂DS₂-VASc = 4** (âge ≥ 75 ans = 2 points, HTA = 1 point, sexe féminin = 1 point), ce qui justifie une anticoagulation.
+  - Cependant, le compte rendu ne mentionne pas **l’évaluation du score CHA₂DS₂-VASc** ni la justification du choix de la warfarine (plutôt qu’un AOD, par exemple).
+  - **Recommandation** : Ajouter une phrase du type : *"Anticoagulation par AVK (warfarine) initiée en raison d’un score CHA₂DS₂-VASc à 4, avec un INR cible entre 2 et 3."*
+
+#### **c. Dénutrition et prise en charge nutritionnelle**
+- **Dénutrition modérée (E44.0) non suffisamment documentée** :
+  - La dénutrition est mentionnée (IMC = 21,6 kg/m², perte de poids récente), mais il n’y a **pas de bilan nutritionnel complet** (albuminémie, préalbuminémie, bilan martial, vitaminiques).
+  - La supplémentation nutritionnelle est évoquée, mais sans **objectifs quantitatifs** (ex. : apports caloriques/protéiques cibles).
+  - **Recommandation** : Ajouter un bilan nutritionnel complet et préciser les objectifs de renutrition.
+
+#### **d. Tabagisme actif et sevrage**
+- **Sevrage tabagique insuffisamment documenté** :
+  - Le tabagisme actif (12 cigarettes/jour, 36 PA) est un facteur de risque majeur, mais le compte rendu se limite à une "proposition de suivi en tabacologie".
+  - **Recommandation** : Préciser si un **traitement de substitution nicotinique** a été initié ou si une ordonnance a été remise.
+
+#### **e. Hypothyroïdie et équilibre thérapeutique**
+- **TSH à 6,2 mUI/L sous lévothyroxine** :
+  - La TSH est élevée, indiquant un **déséquilibre de l’hypothyroïdie**, mais le compte rendu ne précise pas si la posologie de lévothyroxine a été **réévaluée avant la sortie**.
+  - **Recommandation** : Ajouter une phrase du type : *"Contrôle de la TSH prévu à 6 semaines pour ajustement de la posologie de lévothyroxine."*
+
+---
+
+### **2. Problèmes de conformité au codage PMSI**
+#### **a. Diagnostics associés (DA) manquants ou mal codés**
+| **Diagnostic mentionné** | **Code CIM-10 proposé** | **Problème identifié** |
+|--------------------------|------------------------|------------------------|
+| **Sténose aortique serrée** | I35.0 | **Manquant dans les formulations** (présent dans le texte mais non listé dans les diagnostics). |
+| **Insuffisance rénale chronique (DFG = 45 mL/min)** | N18.3 (IRC stade 3a) | **Non codé** alors que la créatinine est élevée. |
+| **Anémie normocytaire (Hb = 11,2 g/dL)** | D64.9 (anémie, sans précision) | **Non codée** alors qu’elle est mentionnée. |
+| **Hypoxémie (PaO₂ = 72 mmHg)** | R09.02 (hypoxémie) | **Mal codé** : R79.8 est trop vague. |
+| **Fibrillation auriculaire paroxystique** | I48.0 | **Conforme**, mais manque le score CHA₂DS₂-VASc. |
+| **Dépendance tabagique** | F17.200 (syndrome de dépendance au tabac, non compliqué) | **Code incorrect** : F17.25 implique une utilisation continue **avec complications** (ex. : BPCO). Ici, F17.200 est plus adapté. |
+
+#### **b. Actes et procédures non codés**
+- **Coronarographie avec ventriculographie** :
+  - **Code CCAM manquant** : DEQP003 (coronarographie par voie artérielle) + DZQM006 (ventriculographie gauche).
+  - **Recommandation** : Ajouter les codes CCAM dans le compte rendu ou dans les données de codage.
+
+- **Échocardiographie transthoracique** :
+  - **Code CCAM manquant** : DZQM001 (échocardiographie transthoracique).
+  - **Recommandation** : Ajouter le code.
+
+#### **c. Incohérences dans les dates**
+- **Date de la coronarographie (01/12/2026) vs date de sortie (03/12/2026)** :
+  - L’hospitalisation dure **4 jours** (30/11 → 03/12), ce qui est cohérent pour une coronarographie programmée.
+  - **Problème** : Le compte rendu ne précise pas si la patiente est restée hospitalisée **pour surveillance post-coronarographie** ou pour d’autres raisons (ex. : ajustement thérapeutique).
+  - **Recommandation** : Clarifier la durée de séjour post-procédure.
+
+---
+
+### **3. Problèmes de structure et de clarté du compte rendu**
+#### **a. Absence de synthèse des problèmes actifs**
+- Le compte rendu ne liste pas clairement les **problèmes médicaux actifs** à la sortie, ce qui est recommandé pour la continuité des soins.
+- **Recommandation** : Ajouter une section **"Problèmes actifs à la sortie"** avec :
+  - Angor d’effort (I20.8) sous traitement médical.
+  - Sténose aortique serrée (I35.0) non chirurgicale.
+  - Fibrillation auriculaire paroxystique (I48.0) sous AVK.
+  - Dénutrition modérée (E44.0) en cours de correction.
+  - Hypothyroïdie (E03.9) en cours d’équilibration.
+
+#### **b. Absence de recommandations pour le suivi**
+- Le compte rendu mentionne un "suivi rapproché en cardiologie", mais ne précise pas :
+  - **Fréquence des consultations** (ex. : contrôle à 1 mois).
+  - **Examens de suivi** (ex. : ECG, échocardiographie, INR, TSH).
+  - **Objectifs thérapeutiques** (ex. : cible de TA, INR, HbA1c si diabète).
+- **Recommandation** : Ajouter une section **"Suivi post-hospitalisation"** avec ces éléments.
+
+---
+
+### **4. Erreurs mineures et suggestions d’amélioration**
+- **"Dépendance envers un respirateur (Z99.1+1)"** :
+  - **Code totalement inapproprié** (la patiente n’est pas sous ventilation mécanique).
+  - **À supprimer** des formulations.
+
+- **"Douleur thoracique, sans précision (R07.4)"** :
+  - **Trop vague** : La douleur est clairement liée à un angor (I20.8), donc R07.4 n’est pas pertinent.
+  - **À remplacer par I20.8**.
+
+- **IMC calculé à 21,6 kg/m²** :
+  - **Erreur de calcul** : 52 kg / (1,55 m)² = **21,6 kg/m²** (correct), mais le compte rendu ne précise pas si la dénutrition est **modérée (E44.0)** ou **légère (E44.1)**.
+  - **Recommandation** : Préciser le grade de dénutrition (ex. : E44.0 si perte de poids > 5 % en 1 mois).
+
+---
+
+### **Synthèse des corrections nécessaires**
+| **Type d’anomalie** | **Problème identifié** | **Correction proposée** |
+|----------------------|------------------------|--------------------------|
+| **Clinique** | Absence de DP clair | Préciser le DP (I20.8 ou I35.0). |
+|  | Sténose aortique non chirurgicale non justifiée | Ajouter une justification (risque opératoire). |
+|  | Fibrillation atriale sans score CHA₂DS₂-VASc | Calculer et mentionner le score. |
+|  | Dénutrition non documentée | Ajouter un bilan nutritionnel complet. |
+|  | Hypothyroïdie non équilibrée | Préciser le suivi de la TSH. |
+| **Codage** | Diagnostics manquants (IRC, anémie) | Ajouter N18.3 et D64.9. |
+|  | Codes CCAM manquants | Ajouter DEQP003, DZQM006, DZQM001. |
+|  | Code Z99.1+1 inapproprié | Supprimer. |
+|  | Code R07.4 trop vague | Remplacer par I20.8. |
+| **Structure** | Absence de synthèse des problèmes actifs | Ajouter une section "Problèmes actifs". |
+|  | Suivi post-hospitalisation flou | Préciser fréquence et examens de suivi. |
+
+---
+
+### **Conclusion**
+Le compte rendu présente des **lacunes majeures** en termes de :
+1. **Cohérence clinique** (diagnostics non hiérarchisés, justifications manquantes).
+2. **Conformité au codage PMSI** (diagnostics et actes manquants, codes erronés).
+3. **Structure et exhaustivité** (suivi post-hospitalisation non détaillé).
+
+**Verdict final : NON CONFORME**
+**Recommandation** : Corriger les anomalies listées avant validation définitive. Une relecture par un médecin DIM ou un codeur PMSI est fortement conseillée.

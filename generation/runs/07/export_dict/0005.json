@@ -1,0 +1,119 @@
+{
+  "scenario": "0005",
+  "source": "crh_generation.txt",
+  "seuil": 0.75,
+  "formulations": {
+    "diagnostics": {
+      "Autres formes d'angine de poitrine (I20.8)": [
+        "angor d’effort",
+        "angor d’effort dans un contexte d’hypertension artérielle mal contrôlée et de fibrillation auriculaire paroxystique",
+        "angor d’effort, secondaire à une maladie coronarienne athéromateuse"
+      ],
+      "Hypertension essentielle (primitive) (I10)": [
+        "Hypertension artérielle essentielle,",
+        "hypertension artérielle mal contrôlée",
+        "hypertension artérielle"
+      ],
+      "Malnutrition protéino-énergétique modérée (E44.0)": [
+        "dénutrition modérée",
+        "apports protéino-énergétiques insuffisants, contribuant à sa dénutrition modérée"
+      ],
+      "Douleur thoracique, sans précision (R07.4)": [
+        "douleur thoracique récurrente",
+        "douleur thoracique constrictive",
+        "sensation d’oppression thoracique"
+      ],
+      "Fibrillation auriculaire paroxystique (I48.0)": [
+        "fibrillation auriculaire paroxystique",
+        "Fibrillation auriculaire paroxystique, connue depuis 2020."
+      ],
+      "Autres résultats anormaux précisés des examens chimiques du sang (R79.8)": [
+        "légère hypoxémie (PaO₂ = 72 mmHg) avec normocapnie",
+        "TSH : 6,2 mUI/L (sous traitement substitutif)"
+      ],
+      "Hypothyroïdie, sans précision (E03.9)": [
+        "hypothyroïdie",
+        "équilibre suboptimal de l’hypothyroïdie"
+      ],
+      "Sténose (de la valvule) aortique (non rhumatismale) (I35.0)": [
+        "Sténose aortique calcifiée, non rhumatismale,",
+        "sténose aortique serrée"
+      ],
+      "Sinusite maxillaire (chronique) (J32.0)": [
+        "sinusite maxillaire chronique",
+        "séquelle de sinusite maxillaire chronique"
+      ],
+      "Dépendance envers un respirateur : ventilation par masque nasal (Z99.1+1)": [],
+      "Syndrome de dépendance au tabac, utilisation continue (F17.25)": [
+        "Tabagisme actif (12 cigarettes/jour, 36 paquets-années)."
+      ]
+    },
+    "informations": {
+      "Date entrée": [
+        "30/11/2026"
+      ],
+      "Date de sortie": [
+        "03/12/2026"
+      ],
+      "Service d'hospitalisation": [
+        "CARDIOLOGIE"
+      ],
+      "Nom/Prénom du patient": [],
+      "Nom/Prénom du médecin": [
+        "Fernando Brando"
+      ],
+      "Âge": [
+        "84 ans"
+      ],
+      "Sexe": [],
+      "État général": [
+        "Mme Parant est apyrétique, avec une tension artérielle à 160/90 mmHg, une fréquence cardiaque irrégulière à 88 battements/minute, et une saturation en oxygène à 96 % en air ambiant."
+      ],
+      "Poids": [
+        "52 kg pour une taille de 155 cm (IMC = 21,6 kg/m²)"
+      ],
+      "Statut gestationnel": [],
+      "Gestité": [],
+      "NFS": [
+        "légère anémie normocytaire (Hb = 11,2 g/dL), sans anomalie des leucocytes ni des plaquettes"
+      ],
+      "Créatinine": [
+        "102 µmol/L (DFG estimé à 45 mL/min/1,73 m²)"
+      ],
+      "Bilan hépatique": [
+        "normal"
+      ],
+      "Traitements": [
+        "Introduction d’un bêta-bloquant (bisoprolol 2,5 mg/jour)",
+        "Poursuite du traitement antihypertenseur (inhibiteur calcique et diurétique thiazidique)",
+        "Optimisation du traitement de l’hypothyroïdie (augmentation de la lévothyroxine à 75 µg/jour)",
+        "Introduction d’un antiagrégant plaquettaire (clopidogrel 75 mg/jour)",
+        "Anticoagulation par antivitamine K (warfarine, INR cible 2-3)",
+        "Supplémentation nutritionnelle (compléments hyperprotéinés)"
+      ]
+    }
+  },
+  "supprimees": [
+    {
+      "section": "diagnostics",
+      "cle": "Sténose (de la valvule) aortique (non rhumatismale) (I35.0)",
+      "formulation": "rétrécissement aortique calcifié serré",
+      "score": 0.708,
+      "meilleur_candidat": "Sténose aortique calcifiée,"
+    },
+    {
+      "section": "informations",
+      "cle": "Nom/Prénom du patient",
+      "formulation": "Parant Jeannette",
+      "score": 0.72,
+      "meilleur_candidat": "Jeannette"
+    },
+    {
+      "section": "informations",
+      "cle": "Sexe",
+      "formulation": "Féminin",
+      "score": 0.588,
+      "meilleur_candidat": "diminution"
+    }
+  ]
+}

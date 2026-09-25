@@ -1,0 +1,95 @@
+{
+  "scenario": "0009",
+  "source": "crh_generation.txt",
+  "seuil": 0.75,
+  "formulations": {
+    "diagnostics": {
+      "Travail et accouchement compliqués d'autres anomalies du cordon ombilical (O698)": [
+        "circulaire du cordon ombilical sans signe de compression",
+        "circulaire du cordon ombilical sans signe de compression vasculaire",
+        "circulaire lâche autour du cou du nouveau-né"
+      ],
+      "Soins maternels pour iso-immunisation anti-Rh (O360)": [
+        "iso-immunisation Rhésus",
+        "iso-immunisation Rhésus connue",
+        "anticorps anti-D",
+        "iso-immunisation"
+      ],
+      "Naissance unique, enfant vivant (Z370)": [
+        "d'un enfant vivant de sexe féminin,",
+        "naissance d'un enfant vivant en bonne santé"
+      ],
+      "Travail et accouchement compliqués de la présence de méconium dans le liquide amniotique (O681)": [
+        "présence de méconium dans le liquide amniotique",
+        "liquide amniotique teinté de méconium"
+      ],
+      "Soins et examens de l'allaitement maternel (Z391)": [
+        "surveillance de l'allaitement maternel",
+        "accompagnement par les sages-femmes pour l'apprentissage des techniques d'allaitement"
+      ],
+      "Surveillance de contraceptifs (Z304)": [
+        "renouvellement de contraceptif oral",
+        "ordonnance de renouvellement de contraceptif"
+      ],
+      "Syndrome de dépendance au tabac, personne actuellement abstinente (F1720)": [
+        "ne fume plus depuis 2 ans"
+      ],
+      "Accouchement (unique) spontané par présentation du sommet (O800)": [
+        "santé par voie basse spontanée en présentation du sommet.",
+        "voie basse spontanée en présentation du sommet"
+      ]
+    },
+    "informations": {
+      "Date entrée": [
+        "21 mai 2025"
+      ],
+      "Date de sortie": [
+        "23 mai 2025"
+      ],
+      "Service d'hospitalisation": [
+        "OBSTETRIQUE"
+      ],
+      "Date de l'intervention": [
+        "22 mai 2025"
+      ],
+      "Nom/Prénom du chirurgien": [
+        "Dr David Ariet"
+      ],
+      "Nom/Prénom du patient": [
+        "Moreau a"
+      ],
+      "Âge": [
+        "24 ans"
+      ],
+      "Sexe": [
+        "féminin,"
+      ],
+      "État général": [
+        "la patiente présentait des contractions utérines irrégulières.",
+        "Les suites de couches ont été simples."
+      ],
+      "Poids": [
+        "Poids fœtal estimé à 3200 grammes.",
+        "une fille pesant 3150 grammes"
+      ],
+      "Statut gestationnel": [
+        "grossesse à terme"
+      ],
+      "Gestité": [
+        "primigeste"
+      ],
+      "Médicaments": [
+        "Supplémentation en fer (Tardyféron) : 1 comprimé par jour.",
+        "Acide folique : 1 comprimé par jour."
+      ],
+      "NFS": [
+        "hémoglobine à 11,2 g/dL, des plaquettes à 220 G/L"
+      ],
+      "Créatinine": [],
+      "Bilan hépatique": [
+        "bilan hépatique normal"
+      ]
+    }
+  },
+  "supprimees": []
+}

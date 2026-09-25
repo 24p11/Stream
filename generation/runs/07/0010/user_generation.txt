@@ -1,0 +1,190 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 26 ans
+- Sexe du patient : Masculin
+- Taille : 189 cm
+- Poids : 79 kg (IMC 22,1)
+- Tabac : non
+- Alcool : environ 5 verres/jour
+- Date d'entrée : 25/07/2025
+- Date de sortie : 30/07/2025
+- Date de naissance : 26/05/1999
+- Nom du patient : Bauden
+- Prénom du patient : Sirius
+- Mode d'entrée' : URGENCES
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Pour prise en charge diagnostique et thérapeutique du diagnotic principal en hospitalisation complète.
+- Codage CIM10 :
+   * Diagnostic principal : Gelure de la cheville et du pied, avec nécrose des tissus (T348)
+   * Diagnostics associés :
+      - Exposition à un froid naturel excessif, domicile, en pratiquant un sport (X3100)
+      - Difficultés liées au fait d'être sans abri (Z590)
+      - Troubles mentaux et du comportement liés à l'utilisation d'alcool : utilisation nocive pour la santé (F101)
+- Nom du médecin / signataire : Warrick Molinier
+- Hôpital : Hôpital Saint-André - CHU de Bordeaux
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="T34.8">
+
+# T34.8 — Gelure de la cheville et du pied, avec nécrose des tissus
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XIX : Lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes
+- Bloc T33-T35 : Gelures
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XIX) :
+
+fracture :
+ - mal consolidée (M84.0) 
+ - non consolidée [pseudarthrose] (M84.1) 
+ - par sollicitation excessive (M84.3) 
+ - pathologique (M84.4)   - avec ostéoporose (M80.-) 
+- traumatisme obstétrical :
+ - fœtus ou nouveau-né (P10-P15) 
+ - mère (O70-O71)
+
+Affections relevant d'autres codes (hérité du bloc T33-T35) :
+
+hypothermie et autres effets d'une baisse de la température (T68-T69)
+
+Affections relevant d'autres codes (hérité de la catégorie T34) :
+
+gelure de parties multiples du corps, avec nécrose des tissus (T35.1)
+
+Formes spécifiées de la catégorie T34 :
+- Gelure de la hanche et de la cuisse, avec nécrose des tissus [→ T34.6]
+- Gelure de la paroi abdominale, des lombes et du bassin, avec nécrose des tissus [→ T34.3]
+- Gelure de la tête, avec nécrose des tissus [→ T34.0]
+- Gelure du bras et de l'avant-bras, avec nécrose des tissus [→ T34.4]
+- Gelure du cou, avec nécrose des tissus [→ T34.1]
+- Gelure du genou et de la jambe, avec nécrose des tissus [→ T34.7]
+- Gelure du poignet et de la main, avec nécrose des tissus [→ T34.5]
+- Gelure du thorax, avec nécrose des tissus [→ T34.2]
+
+</fiche_code>
+
+<fiche_category code="X31">
+
+# X31 — Exposition à un froid naturel excessif
+
+## Position dans la classification
+- Chapitre XX : Causes externes de morbidité et de mortalité
+- Bloc V01-X59 : Accidents
+- Bloc W00-X59 : Autres causes externes de lésion traumatique accidentelle
+- Bloc X30-X39 : Exposition aux forces de la nature
+
+## Périmètre clinique
+
+Au niveau des codes :
+- exposition à conditions météorologiques (X31)
+- exposition à :
+ - conditions météorologiques
+ - froid SAI
+- froid excessif, cause de :
+ - engelures SAI
+ - pied ou main d'immersion
+ (X31)
+- exposition à froid SAI (X31)
+- froid excessif, cause de engelures SAI (X31)
+- froid excessif, cause de pied ou main d'immersion (X31)
+
+## À ne pas décrire
+
+Affections relevant d'autres codes :
+
+- contact avec ou inhalation de :
+ - gaz liquéfié (W93.-) 
+ - neige carbonique (W93.-) 
+froid artificiel excessif (W93.-)
+
+</fiche_category>
+
+<fiche_code code="Z59.0">
+
+# Z59.0 — Sans abri
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z55-Z65 : Sujets dont la santé peut être menacée par des conditions socioéconomiques et psychosociales
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité de la catégorie Z59) :
+
+approvisionnement insuffisant en eau potable (Z58.6)
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+- [GM2026-V-PRE-01] Pour décrire les situations de précarité susceptibles d'avoir un impact sur la prise en charge, des consignes d'emploi de codes existants et des extensions nationales ont été créées en 2015. Ces codes peuvent être utilisés en position de diagnostic associé dès lors qu'ils en respectent la définition, notamment en termes d'accroissement de la charge en soins, ou lorsque les conditions socioéconomiques ont justifié une prise en charge particulière (situations mentionnées au dossier médical, notamment suite à l'intervention d'une assistante sociale).
+- [GM2026-V-PRE-04] Z59.0 Sans abri : Personne vivant dans la rue au moment de l'admission, ou hébergée dans un centre d'hébergement d'urgence ou un centre d'hébergement et de réinsertion sociale (CHRS).
+
+### Règles générales du chapitre XXI
+
+- [GM2026-V-XXI-01] (Emploi général des codes du chapitre XXI) Les codes du chapitre XXI (« codes Z ») peuvent, et souvent doivent, être utilisés dans le RUM comme diagnostic principal, relié ou associé.
+
+## Formulations cliniques alternatives
+- absence du domicile fixe
+- Clochard
+- logement absence
+- Sans-abri
+- sans domicile fixe
+
+</fiche_code>
+
+<fiche_code code="F10.1">
+
+# F10.1 — Troubles mentaux et du comportement liés à l'utilisation d'alcool - " Utilisation nocive pour la santé "
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre V : Troubles mentaux et du comportement
+- Bloc F10-F19 : Troubles mentaux et du comportement liés à l'utilisation de substances psychoactives
+
+## Périmètre clinique du code
+
+Inclusions héritées du chapitre V :
+- troubles du développement psychologique
+
+Au niveau du code :
+- abus d'une substance psycho-active
+
+## Description clinique (OMS)
+
+Mode de consommation d'une substance psychoactive qui est préjudiciable à la santé. Les complications peuvent être physiques (par exemple: hépatite consécutive à des injections de substances psychoactives par le sujet lui-même) ou psychiques (par exemple: épisodes dépressifs secondaires à une forte consommation d'alcool).
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre V) :
+
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité du bloc F10-F19) :
+
+abus de substances n'entraînant pas de dépendance [F55.–]
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+- [GM2026-V-VIO-03] Les facteurs favorisants présents au moment de l'accident (effet de l'alcool, de drogue ou de médicament…) sont enregistrés, notamment avec la catégorie R78 (présence de drogues et substances dans le sang) ou le groupe F10-F19 (troubles mentaux et du comportement liés aux substances psychoactives). L'enregistrement des effets secondaires des médicaments impose Y40-Y59 ; Y90-Y91 précisent l'importance d'une intoxication alcoolique.
+
+## Notes de la CIM-10
+- Ce groupe comprend de nombreux troubles variés, de gravité et de symptomatologie diverses, mais qui sont tous liés à l'utilisation d'une ou de plusieurs substances psychoactives prescrites ou non par un médecin. Le troisième caractère du code identifie la substance impliquée alors que le quatrième caractère sert à spécifier les tableaux cliniques; les quatrièmes caractères doivent être utilisés, selon les besoins, pour chacune des substances indiquées; il convient toutefois de noter que les quatrièmes caractères du code ne sont pas tous applicables à chaque substance. *(note du bloc F10-F19)*
+- L'identification de la substance psychoactive doit se faire à partir de toutes les sources d'information possibles. Ces dernières comportent: les informations fournies par le sujet lui-même, les analyses de sang, d'urine etc., les symptômes physiques et psychologiques caractéristiques, les signes et comportements cliniques, les drogues trouvées chez le patient, les renseignements de tierces personnes bien informées. De nombreux sujets consomment plusieurs catégories de substances psychoactives différentes. Le diagnostic principal se fera, si possible, en fonction de la substance toxique (ou de la catégorie de substances toxiques) qui est responsable du tableau clinique ou qui en détermine les caractéristiques essentielles. Des diagnostics supplémentaires doivent être codés quand d'autres substances psychoactives ont été consommées en quantité suffisante pour provoquer une intoxication (quatrième caractère.0), des conséquences nocives (quatrième caractère.1), une dépendance (quatrième caractère.2) ou d'autres troubles (quatrième caractère.3–.9). *(note du bloc F10-F19)*
+- Le diagnostic de troubles liés à l'utilisation de substances multiples (F19) doit être réservé à des cas où le choix des substances psychoactives se fait de façon chaotique et sans discrimination, ou dans lesquels il n'est pas possible de différencier les effets provenant des unes ou des autres. *(note du bloc F10-F19)*
+- Les subdivisions suivantes peuvent être utilisées comme quatrième caractère avec les rubriques F10-F19: *(note du bloc F10-F19)*
+
+## Formulations cliniques alternatives
+- abus de l'alcool
+- alcoolisme Bêta
+- éthylisme suicidaire
+
+</fiche_code>

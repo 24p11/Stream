@@ -1,0 +1,320 @@
+**SCÉNARIO DE DÉPART :**
+- Âge du patient : 68 ans
+- Sexe du patient : Féminin
+- Taille : 159 cm
+- Poids : 59 kg (IMC 23,3)
+- Tabac : non
+- Alcool : non
+- Date d'entrée : 04/01/2024
+- Date de sortie : 08/01/2024
+- Date de naissance : 27/01/1955
+- Nom du patient : Le diberder
+- Prénom du patient : Veronique
+- Mode d'entrée' : DOMICILE
+- Mode de sortie' : DOMICILE
+- Contexte de l'hospitalisation : Prise en charge en hospitalisation complète pour interventions majeures hors tumeur maligne du sein.
+- Codage CIM10 :
+   * Diagnostic principal : Autres affections précisées du sein (N648)
+   * Diagnostics associés :
+      - Sujet attendant d'être admis ailleurs, dans un établissement adéquat (Z751)
+      - Hypothyroïdie après un acte à visée diagnostique et thérapeutique (E890)
+      - Hypothyroïdie, sans précision (E039)
+      - Tachycardie, sans précision (R000)
+      - Complication mécanique d'une prothèse et d'un implant mammaires (T854)
+- Acte CCAM : mastoplastie bilatérale d'augmentation, avec pose d'implant prothétique (QEMA004)
+- Nom du médecin / signataire : Paulette Castanet
+- Service : CHIR.PLAST.RECONSTR.
+- Hôpital : Hôpital Pitié-Salpêtrière - Assistance Publique Hôpitaux de Paris
+
+**FICHES DESCRIPTIVES DES CODES CIM-10 DU SCÉNARIO :**
+
+Les fiches ci-dessous précisent le périmètre des codes CIM-10 présents dans le scénario.
+Elles doivent être utilisées pour choisir des formulations compatibles avec les codes, sans ajouter de diagnostic non codé.
+
+<fiche_code code="N64.8">
+
+# N64.8 — Autres affections précisées du sein
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XIV : Maladies de l'appareil génito-urinaire
+- Bloc N60-N64 : Affections du sein
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- galactocèle
+- subinvolution du sein (après lactation)
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XIV) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+certaines maladies infectieuses et parasitaires (A00-B99)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes (S00-T98)
+maladies endocriniennes, nutritionnelles et métaboliques (E00-E90)
+malformations congénitales et anomalies chromosomiques (Q00-Q99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+tumeurs (C00-D48)
+
+Affections relevant d'autres codes (hérité du bloc N60-N64) :
+
+associées à l'accouchement (O91-O92)
+
+Formes spécifiées de la catégorie N64 :
+- Atrophie mammaire [→ N64.2]
+- Autres signes et symptômes observés au niveau du sein [→ N64.5]
+- Cytostéatonécrose du sein [→ N64.1]
+- Fissure et fistule du mamelon [→ N64.0]
+- Galactorrhée sans relation avec un accouchement [→ N64.3]
+- Mastodynie [→ N64.4]
+
+## Formulations cliniques alternatives
+- calcification sein
+- calcifications mammaires
+- déformation du mamelon
+- déformation du sein
+- dégénérescence du mamelon
+- dégénérescence du sein
+- galactocèle
+- Hyperplasie canalaire atypique du sein (AGO LD 250512)
+- infarctus du sein
+- mastopathie d'origine ovarienne
+- mastose itérative héréditaire
+- micro-calcification mammaire
+- micro-calcification sein
+- micro-calcifications mammaires
+- neurocalcification sein
+- réduction mammaire
+- subinvolution du sein
+
+</fiche_code>
+
+<fiche_code code="Z75.1">
+
+# Z75.1 — Sujet attendant d'être admis ailleurs, dans un établissement adéquat
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XXI : Facteurs influant sur l'état de santé et motifs de recours aux services de santé
+- Bloc Z70-Z76 : Sujets ayant recours aux services de santé pour d'autres motifs
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+- [GM2026-V-XXI-45] Z75.1 ne doit être employé que si le séjour ou la prolongation de l'hospitalisation est motivé par la seule attente de l'unité ou de l'établissement adéquat, et non par un événement morbide.
+
+### Règles générales du chapitre XXI
+
+- [GM2026-V-XXI-01] (Emploi général des codes du chapitre XXI) Les codes du chapitre XXI (« codes Z ») peuvent, et souvent doivent, être utilisés dans le RUM comme diagnostic principal, relié ou associé.
+
+## Formulations cliniques alternatives
+- lit non disponible
+- personne sur liste d'attente
+
+</fiche_code>
+
+<fiche_code code="E89.0">
+
+# E89.0 — Hypothyroïdie après un acte à visée diagnostique et thérapeutique
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E70-E90 : Anomalies du métabolisme
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- hypothyroïdie après chirurgie
+- hypothyroïdie après irradiation
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes (hérité du bloc E70-E90) :
+
+anémies hémolytiques dues à des anomalies enzymatiques (D55.-)
+déficit en 5-alpha-réductase (E29.1)
+hyperplasie surrénale congénitale (E25.0)
+syndrome de :
+ - Ehlers–Danlos (Q79.6) 
+ - Marfan (Q87.4) 
+ - résistance aux androgènes (E34.5)
+
+## Formulations cliniques alternatives
+- absence du corps thyroïde
+- hémithyroïdectomie
+- Hypothyroïdie après traitement par radiation  (IRA, radiothérapie)
+- Hypothyroïdie après un acte à visée diagnostique ou thérapeutique
+- hypothyroïdie post-ablation goitre
+- Hypothyroïdie post-chirurgicale
+- hypothyroïdie post-irradiation
+- hypothyroïdie post-laryngectomie
+- hypothyroïdie post-opératoire
+- hypothyroïdie post-radiothérapie
+- hypothyroïdie post-radique
+- hypothyroïdie post-thérapeutique
+- hypothyroïdie post-thyroïdectomie
+- hypothyroïdie thyréoprive
+- insuffisance thyroïdienne post-chirurgicale
+- insuffisance thyroïdienne post-radique
+- séquelles thyroïdectomie
+
+</fiche_code>
+
+<fiche_code code="E03.9">
+
+# E03.9 — Hypothyroïdie, sans précision
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre IV : Maladies endocriniennes, nutritionnelles et métaboliques
+- Bloc E00-E07 : Affections de la glande thyroïde
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- myxoedème SAI
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre IV) :
+
+anomalies endocriniennes et métaboliques transitoires spécifiques au fœtus et au nouveau-né (P70-P74)
+complications de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs (R00-R99)
+
+Affections relevant d'autres codes :
+
+hypothyroïdie :
+ - après un acte à visée diagnostique et thérapeutique (E89.0) 
+ - liée à une carence en iode (E00-E02)
+
+## Formulations cliniques alternatives
+- anémie myxoedémateuse
+- cachexie myxoedémateuse
+- Diamond (myxoedème prétibial)
+- hypothyroïdie
+- Hypothyroïdie SAI
+- Hypothyroïdie sans précision
+- myxoedème
+- Myxoedème prétibial (mucinose prétibiale)
+- obésité hypothyroïdienne
+- obésité thyroïdienne
+- syndrome de Hoffmann
+
+</fiche_code>
+
+<fiche_code code="R00.0">
+
+# R00.0 — Tachycardie, sans précision
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XVIII : Symptômes, signes et résultats anormaux d'examens cliniques et de laboratoire, non classés ailleurs
+- Bloc R00-R09 : Symptômes et signes relatifs aux appareils circulatoire et respiratoire
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- rythme cardiaque rapide
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XVIII) :
+
+certaines affections dont l'origine se situe dans la période périnatale (P00-P96)
+résultats anormaux constatés au cours de l'examen prénatal systématique de la mère (O28.-)
+
+Affections relevant d'autres codes (hérité de la catégorie R00) :
+
+anomalies dont l'origine se situe dans la période périnatale (P29.1)
+troubles précisés du rythme cardiaque (I47-I49)
+
+## Formulations cliniques alternatives
+- accès tachycardie
+- antécédent tachycardie
+- antécédent tachycardie régulière
+- crise tachycardie brutale
+- tachycardie
+- tachycardie cardiaque
+- tachycardie complète
+- tachycardie fonctionnelle
+- tachycardie sino-auriculaire
+- tachycardie sinusale
+- tachycardie sporadique
+
+</fiche_code>
+
+<fiche_code code="T85.4">
+
+# T85.4 — Complication mécanique d'une prothèse et d'un implant mammaires
+
+Statut MCO (kit ATIH 2025) : codable en MCO, pas de restriction.
+
+## Position dans la classification
+- Chapitre XIX : Lésions traumatiques, empoisonnements et certaines autres conséquences de causes externes
+- Bloc T80-T88 : Complications de soins chirurgicaux et médicaux, non classées ailleurs
+
+## Périmètre clinique du code
+
+Au niveau du code :
+- états mentionnés en T82.0 dus à une prothèse et un implant mammaires
+
+## À ne pas décrire
+
+Affections relevant d'autres codes (hérité du chapitre XIX) :
+
+fracture :
+ - mal consolidée (M84.0) 
+ - non consolidée [pseudarthrose] (M84.1) 
+ - par sollicitation excessive (M84.3) 
+ - pathologique (M84.4)   - avec ostéoporose (M80.-) 
+- traumatisme obstétrical :
+ - fœtus ou nouveau-né (P10-P15) 
+ - mère (O70-O71)
+
+Affections relevant d'autres codes (hérité du bloc T80-T88) :
+
+brulures et corrosions dues à des applications locales et des irradiations (T20-T32)
+complications chirurgicales au cours de la grossesse, de l'accouchement et de la puerpéralité (O00-O99)
+complications précisées classées ailleurs, telles que :
+ - déséquilibres hydroélectrolytiques (E86-E87) 
+ - dysfonctionnement d'une colostomie (K91.4) 
+ - écoulement du liquide céphalorachidien après rachicentèse (G97.0) 
+ - lymphœdème après mastectomie (I97.2) 
+ - syndrome(s) (de) :
+  - consécutifs à la chirurgie gastrique (K91.1) 
+  - postchirurgical de l'anse borgne (K91.2) 
+  - postlaminectomie NCA (M96.1) 
+ - troubles fonctionnels après chirurgie cardiaque (I97.0-I97.1) 
+effets indésirables d'agent médicinaux (A00-R99)  (T78.-) 
+intoxications et effets toxiques de médicaments et de produits chimiques (T36-T65) 
+- tout recours aux soins médicaux pour des états postopératoires en dehors de toute complication, tel que :
+ - mise en place et ajustement d'appareils de prothèse externe (Z44.-) 
+ - obturation de stomies (Z43.-) 
+ - stomies (Z93.-)
+
+Affections relevant d'autres codes (hérité de la catégorie T85) :
+
+échec et rejet d'organes et de tissus greffés (T86.-)
+
+## Consignes de codage (guide méthodologique 2026-provisoire)
+
+- [GM2026-V-COMP-01] Une complication d'un acte diagnostique ou thérapeutique est codée de la façon la plus précise, la nature de la complication étant prioritaire : (1) avec un code du groupe T80-T88 lorsque le code le plus précis pour la complication appartient à ce groupe ; (2) sinon avec un code d'une catégorie « Atteintes [troubles] [affections] de l'appareil […] après un acte à visée […] » lorsque la nature de la complication figure dans l'intitulé (ce qui exclut les sous-catégories .8 et .9) ; (3) dans les autres cas avec un code « habituel » de la CIM-10. Les codes T80-T88 ne sont employés que lorsqu'ils apportent le plus de précision, c'est-à-dire lorsque la CIM-10 n'offre pas par ailleurs de possibilité de codage plus précis selon la nature de la complication.
+- [GM2026-V-COMP-02] Lorsqu'un codage précis selon la nature de la complication conduit à l'enregistrer avec un code « habituel » (autre code des chapitres I à XIX), il doit être complété par le code du groupe T80-T88 correspondant, enregistré comme diagnostic associé, quelle que soit son imprécision et y compris s'il n'est pas autorisé comme DP. Le code « T » à choisir est celui que l'index alphabétique (volume 3) indique pour la complication. Ce codage complémentaire ne s'applique qu'aux codes « habituels » : il ne concerne ni les codes « T » ni les catégories « Atteintes […] après un acte à visée […] ».
+- [GM2026-V-SEP-03] Une bactériémie isolée — sans infection d'organe ou porte d'entrée précisée, sans critères de sepsis, et hors complication suivant la pose de prothèses, implants et greffes internes ou cardiaques et vasculaires — ne permet pas de coder l'infection ou le sepsis : un code de la catégorie A49 est utilisé en DP. Pour une bactériémie iatrogène, on code d'abord la complication dans T80-T88 lorsqu'elle est précisée.
+
+</fiche_code>

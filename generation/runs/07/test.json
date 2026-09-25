@@ -1,0 +1,41 @@
+{
+  "created_at": "2026-09-25T12:20:50",
+  "seed_path": "data/aphp/scenarios_C1_dp.parquet",
+  "generation_ids": {
+    "0000": "a46e798b-7795-4de7-91ce-427dfbfd4cd0",
+    "0001": "eae727d3-fef3-4917-b358-8779dc67fcc6",
+    "0002": "05b83d30-64a4-4d5b-bf19-38f2e394fc69",
+    "0003": "59136c52-b64b-46e9-9466-4bc40683c989",
+    "0004": "29c3e854-de9f-4930-89a2-c8333c53ffd4",
+    "0005": "e9d985ce-5325-4f42-af7b-b66eb44eaad2",
+    "0006": "a14b56e3-b223-4232-b7c1-322b8d977138",
+    "0007": "9e230925-de98-4658-8d4d-82e92dbd32a9",
+    "0008": "605f20c5-fa2a-43ab-89ca-3852fb5a3b79",
+    "0009": "2169cff1-fea3-4d4e-8465-69c6eacefaed",
+    "0010": "424c1b40-90bc-46b6-a065-4e250f8a7c67",
+    "0011": "7d2fbe77-3550-483e-b4ca-91838dab76f2",
+    "0012": "f223ec6e-1bb6-46a7-88bb-9aea4cfa8db7",
+    "0013": "2223451a-ea80-4984-be6a-8798ebf4a9e1",
+    "0014": "8a0b57d8-6e82-4859-a1d8-6c62532e096e"
+  },
+  "templates": {
+    "0000": "medical_outpatient",
+    "0001": "surgery_outpatient",
+    "0002": "medical_inpatient",
+    "0003": "delivery_inpatient_urg",
+    "0004": "medical_inpatient",
+    "0005": "medical_inpatient",
+    "0006": "medical_inpatient",
+    "0007": "medical_inpatient",
+    "0008": "medical_outpatient",
+    "0009": "delivery_inpatient_hospit",
+    "0010": "medical_inpatient",
+    "0011": "medical_outpatient",
+    "0012": "surgery_inpatient",
+    "0013": "medical_inpatient",
+    "0014": "surgery_inpatient"
+  },
+  "fictomed_version": "0.1.0",
+  "fictomed_commit": "e7e2e75174045fcd853fa4f3b290052f45a2d71c",
+  "notes": "enrichissement: seed=42, décisions=Politique(age_min=18, prefixes_exclusion=('O', 'Z94', 'T86'), p_tabac=0.3, p_alcool=0.1, p_tabac_poly=0.9, p_alcool_poly=0.7, feuilles_seulement=True)"
+}

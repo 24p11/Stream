@@ -1,0 +1,73 @@
+{"CR": "### Hôpital Haut-Lévêque - CHU de Bordeaux\nService d'hospitalisation : Hospitalisation ambulatoire\n\n**Nom :** Schambil\n**Prénom :** Claudia\n**Date de naissance :** 10/06/1963\n**Âge :** 63 ans\n\n---
+
+### Motif d'hospitalisation
+Patiente de 63 ans adressée pour une séance de chimiothérapie dans le cadre de la prise en charge d'une ostéoporose sénile touchant le rachis dorsal et lombaire. Cette hospitalisation en ambulatoire vise à poursuivre le traitement prévu.
+
+---
+
+### Antécédents
+- **Médicaux :**
+  - Diabète de type 2 insulinotraité, compliqué d'une rétinopathie diabétique et d'une cataracte bilatérale chez la diabétique.
+  - Ostéoporose sénile avec atteinte vertébrale dorsale et lombaire.
+  - Anémie mixte : carence martiale chronique et anémie associée à une insuffisance rénale modérée.
+  - Surpoids modéré.
+- **Chirurgicaux :** Appendicectomie dans l’enfance.
+- **Familiaux :** Aucun antécédent notable.
+- **Allergies :** Aucune allergie médicamenteuse connue.
+
+---
+
+### Mode de vie
+Patiente retraitée, vivant à domicile de manière autonome. Elle ne fume pas et ne consomme pas d’alcool. Son activité physique est limitée en raison de douleurs rachidiennes chroniques. Son indice de masse corporelle est à 26,1 kg/m² (taille : 166 cm, poids : 72 kg), en lien avec un surpoids dû à un excès calorique.
+
+---
+
+### Histoire de la maladie
+Claudia Schambil est suivie depuis plusieurs années pour un diabète de type 2 insulinodépendant, compliqué d’une rétinopathie diabétique et d’une cataracte bilatérale, pour laquelle une chirurgie a été réalisée il y a deux ans. Par ailleurs, elle présente une ostéoporose sénile diagnostiquée il y a cinq ans, avec des tassements vertébraux dorsaux et lombaires documentés. Son suivi hématologique a révélé une anémie mixte : une carence martiale chronique, associée à une anémie liée à son insuffisance rénale modérée. Un traitement par chimiothérapie a été initié il y a trois mois pour stabiliser l’évolution de son ostéoporose. La séance d’aujourd’hui s’inscrit dans la continuité de ce protocole.
+
+---
+
+### Examen clinique
+À l’admission, la patiente est apyrétique, avec une tension artérielle à 130/80 mmHg et une fréquence cardiaque régulière à 78 battements par minute. Son poids est stable à 72 kg. L’examen clinique met en évidence une légère pâleur cutanéo-muqueuse, sans signe de décompensation cardiaque ni de déficit neurologique. Les réflexes ostéotendineux sont présents et symétriques. On note une sensibilité à la palpation des vertèbres dorsales et lombaires, sans signe inflammatoire local. L’examen ophtalmologique récent confirme la stabilité de la rétinopathie diabétique et l’absence de complication post-chirurgicale de la cataracte.
+
+---
+
+### Examens complémentaires
+- **Bilan biologique :**
+  - NFS : Hémoglobine à 10,2 g/dL, VGM à 78 fL, ferritinémie basse à 12 µg/L, confirmant une anémie ferriprive chronique. La créatininémie est à 110 µmol/L (DFG estimé à 50 mL/min), en lien avec une insuffisance rénale modérée.
+  - Bilan hépatique : Normal.
+  - HbA1c : 7,8 %, témoignant d’un équilibre glycémique suboptimal.
+- **Imagerie :**
+  - Radiographies du rachis dorsal et lombaire : Tassements vertébraux anciens, sans signe de fracture récente.
+
+---
+
+### Conclusion
+Patiente de 63 ans présentant une ostéoporose sénile avec atteinte vertébrale, un diabète de type 2 insulinotraité compliqué de rétinopathie et de cataracte, ainsi qu’une anémie mixte (carence martiale et insuffisance rénale). La séance de chimiothérapie s’est déroulée sans complication. La sortie est autorisée ce jour, avec poursuite du traitement habituel et suivi régulier en endocrinologie, rhumatologie et hématologie.
+
+**Dr Jean Rimbert**",
+"formulations": {
+    "diagnostics": {
+        "Autres ostéoporoses - Autres localisations (M81.88)": ["ostéoporose sénile touchant le rachis dorsal et lombaire", "ostéoporose sénile avec atteinte vertébrale dorsale et lombaire"],
+        "Cataracte diabétique (H28.0)": ["cataracte bilatérale chez la diabétique"],
+        "Diabète sucré de type 2 insulinotraité, avec complications oculaires (E11.30)": ["diabète de type 2 insulinotraité, compliqué d'une rétinopathie diabétique", "diabète de type 2 insulinodépendant"],
+        "Anémie au cours d'autres maladies chroniques classées ailleurs (D63.8)": ["anémie associée à une insuffisance rénale modérée", "anémie liée à son insuffisance rénale modérée"],
+        "Anémie par carence en fer, sans précision (D50.9)": ["anémie ferriprive chronique", "carence martiale chronique"],
+        "Surpoids dû à un excès calorique, de l'adulte ou de l'enfant (E66.03)": ["surpoids modéré", "surpoids dû à un excès calorique"]
+    },
+    "informations": {
+        "Date entrée": ["12/08/2026"],
+        "Date de sortie": ["12/08/2026"],
+        "Service d'hospitalisation": ["Hospitalisation ambulatoire"],
+        "Nom/Prénom du médecin": ["Jean Rimbert"],
+        "Nom/Prénom du patient": ["Schambil Claudia"],
+        "Poids": ["72 kg"],
+        "Âge": ["63 ans"],
+        "Sexe": ["Féminin"],
+        "État général": ["légère pâleur cutanéo-muqueuse, sans signe de décompensation cardiaque ni de déficit neurologique"],
+        "NFS": ["Hémoglobine à 10,2 g/dL, VGM à 78 fL, ferritinémie basse à 12 µg/L"],
+        "Créatinine": ["créatininémie est à 110 µmol/L (DFG estimé à 50 mL/min)"],
+        "Bilan hépatique": ["Normal"],
+        "Traitements": ["poursuite du traitement habituel"]
+    }
+}}

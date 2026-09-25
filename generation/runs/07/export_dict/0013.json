@@ -1,0 +1,98 @@
+{
+  "scenario": "0013",
+  "source": "crh_generation.txt",
+  "seuil": 0.75,
+  "formulations": {
+    "diagnostics": {
+      "Autres malformations congénitales des cavités et des orifices cardiaques (Q208)": [
+        "malformation des cavités cardiaques gauches",
+        "hypoplasie des cavités cardiaques gauches",
+        "hypoplasie des oreillettes",
+        "anomalie de position des gros vaisseaux"
+      ],
+      "Foetus et nouveau-né affectés par un accouchement par extracteur pneumatique [ventouse] (P033)": [
+        "accouchement par extraction instrumentale (ventouse)"
+      ],
+      "Autres malformations cardiaques congénitales précisées (Q248)": [
+        "diverticule congénital du ventricule gauche",
+        "malposition du cœur"
+      ],
+      "Examen spécial de dépistage des affections des oreilles (Z1351)": [
+        "dépistage auditif néonatal",
+        "Test des otoémissions acoustiques automatisées (OEAA)"
+      ],
+      "Acidose (E872)": [
+        "acidose métabolique persistante",
+        "acidose métabolique modérée",
+        "acidose métabolique"
+      ]
+    },
+    "informations": {
+      "Date entrée": [
+        "12/06/2026"
+      ],
+      "Date de sortie": [
+        "14/06/2026,"
+      ],
+      "Service d'hospitalisation": [],
+      "Nom/Prénom du patient": [],
+      "Nom/Prénom du médecin": [
+        "Charles-Louis Pessard"
+      ],
+      "Âge": [
+        "4 mois et demi"
+      ],
+      "Sexe": [],
+      "État général": [
+        "eutrophique",
+        "stable sur le plan hémodynamique"
+      ],
+      "Poids": [
+        "4,2 kg"
+      ],
+      "NFS": [
+        "hémoglobine à 16,5 g/dL, leucocytes à 9 800/mm³, plaquettes à 320 000/mm³"
+      ],
+      "Créatinine": [
+        "35 µmol/L"
+      ],
+      "Bilan hépatique": [
+        "ASAT à 32 UI/L, ALAT à 28 UI/L"
+      ],
+      "Traitements": [
+        "perfusion de bicarbonates de sodium (4,2 % à la posologie de 2 mEq/kg/jour)",
+        "Alimentation entérale exclusive au lait maternel,"
+      ]
+    }
+  },
+  "supprimees": [
+    {
+      "section": "diagnostics",
+      "cle": "Foetus et nouveau-né affectés par un accouchement par extracteur pneumatique [ventouse] (P033)",
+      "formulation": "extraction par ventouse",
+      "score": 0.724,
+      "meilleur_candidat": "extraction instrumentale (ventouse)"
+    },
+    {
+      "section": "informations",
+      "cle": "Service d'hospitalisation",
+      "formulation": "NEONATOLOGIE",
+      "score": 0.25,
+      "meilleur_candidat": "ALAT"
+    },
+    {
+      "section": "informations",
+      "cle": "Nom/Prénom du patient",
+      "formulation": "Perrin Sohan",
+      "score": 0.727,
+      "meilleur_candidat": "Perrin Prénom : Sohan"
+    },
+    {
+      "section": "informations",
+      "cle": "Sexe",
+      "formulation": "masculin",
+      "score": 0.588,
+      "meilleur_candidat": "associant"
+    }
+  ]
+}

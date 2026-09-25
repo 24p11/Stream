@@ -1,0 +1,108 @@
+{
+  "scenario": "0003",
+  "source": "crh_generation.txt",
+  "seuil": 0.75,
+  "formulations": {
+    "diagnostics": {
+      "Travail et accouchement compliqués d'autres anomalies du cordon ombilical (O69.8)": [
+        "circulaire du cordon ombilical sans compression"
+      ],
+      "Dermite vésiculaire due au virus de l'herpès (B00.1)": [
+        "lésions vésiculaires sur la lèvre inférieure, évocatrices d'une récidive d'herpès labial",
+        "herpès labial récurrent",
+        "récidive d'herpès labial"
+      ],
+      "Naissance unique, enfant vivant (Z37.0)": [
+        "Naissance d'un nouveau-né vivant de sexe féminin,"
+      ],
+      "Soins et examens de l'allaitement maternel (Z39.1)": [
+        "surveillance de l'allaitement maternel",
+        "conseils pour la mise en route de l'allaitement"
+      ],
+      "Difficultés liées à une multiparité (Z64.1)": [
+        "multipare"
+      ],
+      "Conseils et avis généraux concernant la contraception (Z30.0)": [
+        "entretien sur la contraception",
+        "prescription d'une contraception adaptée"
+      ],
+      "Autres difficultés précisées liées à certaines situations psychosociales (Z65.8)": [
+        "difficultés psychosociales récentes liées à un déménagement",
+        "soutien psychologique a été proposé en raison de difficultés psychosociales récentes"
+      ],
+      "Troubles mentaux et maladies du système nerveux compliquant la grossesse, l'accouchement et la puerpéralité (O99.3)": [
+        "légère fatigue en post-partum immédiat"
+      ],
+      "Autres formes d'inertie utérine (O62.2)": [
+        "inertie utérine en début de travail",
+        "phase d'inertie utérine"
+      ],
+      "Hypertension secondaire préexistante compliquant la grossesse, l'accouchement et la puerpéralité (O10.4)": [
+        "hypertension artérielle secondaire préexistante, bien contrôlée sous traitement",
+        "hypertension artérielle secondaire préexistante"
+      ]
+    },
+    "informations": {
+      "Nom du service": [
+        "Service d'OBSTETRIQUE"
+      ],
+      "Date entrée": [
+        "06/06/2024"
+      ],
+      "Date de sortie": [
+        "10/06/2024"
+      ],
+      "Service d'hospitalisation": [
+        "OBSTETRIQUE"
+      ],
+      "Date de l'accouchement": [
+        "06/06/2024"
+      ],
+      "Nom/Prénom de l'obstétricien": [
+        "Dr Monique Dulier"
+      ],
+      "Nom/Prénom de la sage-femme": [
+        "Mme Sophie Lambert"
+      ],
+      "Nom/Prénom du patient": [
+        "Barbeyron Prénom : Noelle"
+      ],
+      "Âge": [
+        "32 ans"
+      ],
+      "Sexe": [
+        "féminin,"
+      ],
+      "État général": [
+        "bon état général",
+        "Patiente consciente, bien orientée"
+      ],
+      "Poids": [],
+      "Gestité": [
+        "G3P2"
+      ],
+      "Médicaments": [
+        "inhibiteur calcique (amlodipine 5 mg/jour)",
+        "Supplémentation en fer et acide folique"
+      ],
+      "NFS": [
+        "dans les limites de la normale"
+      ],
+      "Créatinine": [
+        "dans les limites de la normale"
+      ],
+      "Bilan hépatique": [
+        "dans les limites de la normale"
+      ]
+    }
+  },
+  "supprimees": [
+    {
+      "section": "informations",
+      "cle": "Poids",
+      "formulation": "3250 grammes (nouveau-né)",
+      "score": 0.739,
+      "meilleur_candidat": "3250 grammes, avec un"
+    }
+  ]
+}

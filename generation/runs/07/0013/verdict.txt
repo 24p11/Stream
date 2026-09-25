@@ -1,0 +1,62 @@
+### **Verdict : NON CONFORME**
+
+#### **Anomalies constatées :**
+
+1. **Incohérence temporelle majeure :**
+   - La date de naissance du patient est le **29/01/2026**, et l’hospitalisation a lieu du **12/06/2026 au 16/06/2026**.
+   - **Problème :** À cette date, le patient aurait **4 mois et demi**, ce qui est cliniquement plausible, mais **l’année 2026 est dans le futur** (au moment de cette vérification, nous sommes en 2023/2024). Cela rend le compte rendu **irréaliste** et **non conforme** pour une analyse rétrospective.
+   - **Correction attendue :** Vérifier la date de naissance et les dates d’hospitalisation (ex. : 29/01/2023 et 12/06/2023).
+
+2. **Diagnostics codés incomplets ou redondants :**
+   - **Q208 ("Autres malformations congénitales des cavités et des orifices cardiaques")** et **Q248 ("Autres malformations cardiaques congénitales précisées")** sont utilisés pour décrire des anomalies similaires (hypoplasie des cavités gauches, malposition du cœur, diverticule ventriculaire).
+     - **Problème :** Ces codes se chevauchent partiellement. Une **transposition des gros vaisseaux (Q20.3)** ou un **syndrome d’hypoplasie du cœur gauche (Q23.4)** pourraient être plus précis.
+     - **Correction attendue :** Privilégier un codage plus spécifique si possible (ex. : Q20.3 pour l’inversion des gros vaisseaux + Q24.8 pour le diverticule ventriculaire).
+
+   - **P033 ("Foetus et nouveau-né affectés par un accouchement par extracteur pneumatique")** :
+     - **Problème :** Ce code est correct, mais il n’est **pas un diagnostic principal** (il s’agit d’un antécédent obstétrical). Il ne doit pas figurer en première position dans le codage PMSI.
+     - **Correction attendue :** Le coder en **diagnostic associé** (DA) et non en **diagnostic principal (DP)**.
+
+   - **E87.2 ("Acidose")** :
+     - **Problème :** Le compte rendu mentionne une **acidose métabolique**, mais le code **E87.2** est trop générique. Il faudrait préciser :
+       - **E87.20 (Acidose métabolique)** si non compensée.
+       - **E87.21 (Acidose métabolique compensée)** si corrigée.
+     - **Correction attendue :** Utiliser un code plus précis en fonction de l’évolution (ex. : E87.20 à l’admission, puis suppression du code si normalisation).
+
+3. **Absence de codage pour la cyanose :**
+   - Le compte rendu décrit une **cyanose modérée** (signe clinique important dans les cardiopathies congénitales), mais aucun code n’est proposé.
+   - **Problème :** La cyanose pourrait être codée en **R23.0 (Cyanose)** ou intégrée dans la description de la cardiopathie.
+   - **Correction attendue :** Ajouter **R23.0** si la cyanose est un symptôme marquant.
+
+4. **Incohérence dans la description de la cardiopathie :**
+   - Le compte rendu mentionne :
+     - **"Hypoplasie des cavités cardiaques gauches"** (suggérant un **syndrome d’hypoplasie du cœur gauche, Q23.4**).
+     - **"Inversion des gros vaisseaux"** (suggérant une **transposition des gros vaisseaux, Q20.3**).
+     - **"Malposition du cœur"** (pouvant évoquer un **dextrocardie, Q24.0**).
+   - **Problème :** Ces anomalies sont **mutuellement exclusives** dans leur forme pure. Une **association complexe** (ex. : **isomérisme atrial**) devrait être précisée.
+   - **Correction attendue :** Clarifier le diagnostic anatomique (ex. : **Q20.5 pour une transposition corrigée des gros vaisseaux + Q24.8 pour les autres anomalies**).
+
+5. **Absence de codage pour la surveillance post-hospitalière :**
+   - Le compte rendu mentionne un **suivi en cardiopédiatrie**, mais aucun code **Z** (facteurs influençant l’état de santé) n’est proposé pour le suivi.
+   - **Problème :** Le **Z09.8 (Examen de suivi après traitement pour d’autres affections)** ou **Z76.8 (Suivi médical pour affections spécifiques)** pourrait être ajouté.
+   - **Correction attendue :** Ajouter un code **Z** pour le suivi spécialisé.
+
+6. **Traitement non codé :**
+   - La **perfusion de bicarbonates** n’est pas associée à un acte CCAM.
+   - **Problème :** En PMSI, les actes thérapeutiques doivent être codés (ex. : **GLLD002 – Perfusion intraveineuse de solutés**).
+   - **Correction attendue :** Ajouter le code CCAM correspondant.
+
+---
+
+### **Recommandations pour mise en conformité :**
+1. **Corriger les dates** (année 2026 → 2023/2024).
+2. **Affiner le codage des diagnostics** :
+   - **DP :** Q20.3 (Transposition des gros vaisseaux) ou Q23.4 (Syndrome d’hypoplasie du cœur gauche).
+   - **DA :** Q24.8 (Diverticule ventriculaire), R23.0 (Cyanose), P03.3 (Ventouse), E87.20 (Acidose métabolique initiale).
+3. **Ajouter les codes manquants** :
+   - **Z09.8** (Suivi post-hospitalisation).
+   - **GLLD002** (Perfusion de bicarbonates).
+4. **Clarifier la description de la cardiopathie** pour éviter les contradictions anatomiques.
+
+---
+### **Verdict final après corrections :**
+**NON CONFORME** (en l’état actuel, mais **corrigeable** avec les modifications ci-dessus).
