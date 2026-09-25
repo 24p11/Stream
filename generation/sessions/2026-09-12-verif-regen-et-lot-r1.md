@@ -2,7 +2,8 @@
 
 Reprise sur le poste d'origine (pull `e3b5663`, env resynchronisé). Piège
 constaté en plus de ceux du journal : **`uv run` re-synchronise aussi**
-l'environnement et écrase le fictomed éditable par le PyPI 0.1.2 — utiliser
+l'environnement et écrase le fictomed éditable par le paquet PyPI (wheel
+sans `regles_atih.yml`, quelle que soit sa version) — utiliser
 `.venv/bin/python` directement, ou `uv run --no-sync`.
 
 ## Retouches scripts (commit `c2edc64`)
@@ -69,7 +70,7 @@ sans clé jusqu'au dry-run 3.2 inclus (pilote, SKIP attendus sur 06).
    est libre — le commit de retrait doit rester seul.
 2. **Lot R3** : Rémi met à jour le clone fictomed (`git pull` sur
    `prompt-work`), puis réinstallation éditable, smoke de chaîne scratch
-   (fiches D508/F17x/Z37x attendues), message à Brest (wheel 0.1.2 cassé,
-   promotion enrichissement, doctrine E669x→E660x).
+   (fiches D508/F17x/Z37x attendues), message à Brest (wheel PyPI sans
+   `regles_atih.yml`, promotion enrichissement, doctrine E669x→E660x).
 3. Relecture CRH 06 vs 05 et décisions en attente (statut alcool
    « occasionnel », puce CRO « Rappel clinique ») — inchangées.

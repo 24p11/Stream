@@ -67,7 +67,7 @@ contrat.
 
 ## Prochaines étapes
 
-1. Message à Brest, enrichi : wheel PyPI 0.1.2 cassé ; **patch
+1. Message à Brest, enrichi : wheel PyPI sans `regles_atih.yml` ; **patch
    `4386ad5` à intégrer** (colonne `fichier` du contrat) ; promotion du
    package enrichissement ; doctrine E669x→E660x.
 2. Test 07 sur la chaîne consolidée et conforme.

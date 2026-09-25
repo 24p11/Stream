@@ -5,7 +5,8 @@
 - git : `dev_rf` à jour sur `origin/dev_rf` (origin = fork 24p11/Stream ;
   ni remote `fork` ni remote CHU-Brest sur ce poste — Rémi s'en occupe).
 - venv : `uv sync` inutile (seul écart : il remplacerait l'éditable fictomed
-  par le PyPI 0.1.2 cassé). fictomed éditable depuis `~/Documents/fictomed`,
+  par le paquet PyPI, wheel sans `regles_atih.yml` quelle que soit sa
+  version). fictomed éditable depuis `~/Documents/fictomed`,
   `prompt-work` à `e7e2e75` (contient `4386ad5`), synchronisé avec
   `fork/prompt-work`.
 - pytest avant chantier : 141 verts + l'échec préexistant de `test_pipelines`.
@@ -121,9 +122,9 @@ l'ignorent ; il est journalisé comme « sans fiche », comme avant).
    `verifier_environnement()` et `preparer_pool` : gardes vertes attendues.
 2. Décider du sort de `scenarios_C1.parquet` (`agean`).
 3. Test 07 sous `generation/runs/07` avec le notebook aminci.
-4. Message à Brest (wheel 0.1.2, patch `4386ad5`, promotion enrichissement,
-   doctrine E669x→E660x) ; décisions en attente (alcool « occasionnel »,
-   puce CRO).
+4. Message à Brest (wheel PyPI sans `regles_atih.yml`, patch `4386ad5`,
+   promotion enrichissement, doctrine E669x→E660x) ; décisions en attente
+   (alcool « occasionnel », puce CRO).
 
 ## Post-scriptum du 24 septembre — librairie sous contrat déployée
 

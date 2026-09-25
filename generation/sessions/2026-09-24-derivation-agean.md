@@ -87,5 +87,5 @@ décision ultérieure, l'uniforme d'abord.
 
 1. Décision sur l'âge exact de la branche courte (tirer ou lire).
 2. Patch fictomed `age` / `cage` avant le seeding d'une campagne ; test 07.
-3. Message à Brest (wheel 0.1.2, `4386ad5`, collision `age`/`cage`,
-   promotion enrichissement, doctrine E669x→E660x).
+3. Message à Brest (wheel PyPI sans `regles_atih.yml`, `4386ad5`, collision
+   `age`/`cage`, promotion enrichissement, doctrine E669x→E660x).

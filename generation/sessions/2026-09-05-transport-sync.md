@@ -9,7 +9,8 @@ Document de fin de session, à lire en début de la prochaine session.
   pas de remote CHU-Brest) ; `dev_rf` suit `origin/dev_rf`.
 - Environnement remonté : `uv sync`, clone de `prompt-work` (CHU-Brest/fictomed)
   dans le gitlink `work_modif_prompts/_dependencies/fictomed_prompt_work`, puis
-  `uv pip install -e` dessus (le wheel PyPI 0.1.2 n'a pas `regles_atih.yml`).
+  `uv pip install -e` dessus (le paquet PyPI est un wheel sans
+  `regles_atih.yml`, quelle que soit sa version).
   À refaire après chaque `uv sync`.
 - Clé Mistral : fichier `.env` à la racine (gitignoré), chargé par VS Code dans les
   noyaux et le terminal intégré. Hors VS Code : `set -a; source .env; set +a`.

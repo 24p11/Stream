@@ -110,7 +110,8 @@ ambulatoire, qui n'avaient aucun bloc H).
   famille, part des runs partiels, projection à 100 / 1 000 / 10 000 CRH.
 - Dépendance manquante : **matplotlib**, ajouté au groupe `dev` de
   `pyproject.toml` (`uv add --group dev matplotlib`, `uv.lock` mis à jour).
-  Attention : `uv add`, comme `uv sync`, réinstalle le fictomed PyPI 0.1.2 →
+  Attention : `uv add`, comme `uv sync`, réinstalle le paquet PyPI fictomed
+  (wheel sans `regles_atih.yml`, quelle que soit sa version) →
   réinstallation éditable refaite (`uv pip install -e <clone>` depuis la
   racine, chemin absolu).
 - Vérifié hors interface (pilote, noyau du venv, cwd `work_prompts/`) : les 15

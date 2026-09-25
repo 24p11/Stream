@@ -60,7 +60,7 @@ historiques, avec les notes des docs.
 1. **Lot R3** : Rémi met à jour `~/Documents/fictomed` (git pull sur
    `prompt-work` ou la branche recommandée par Brest) → réinstallation
    éditable, smoke de chaîne scratch (fiches D508/F17x/Z37x attendues),
-   journal, commit. Message à Brest (wheel 0.1.2, promotion
-   enrichissement, doctrine E669x→E660x) — indépendant.
+   journal, commit. Message à Brest (wheel PyPI sans `regles_atih.yml`,
+   promotion enrichissement, doctrine E669x→E660x) — indépendant.
 2. Relecture CRH 06 vs 05 et décisions en attente (statut alcool
    « occasionnel », puce CRO « Rappel clinique ») — inchangées.

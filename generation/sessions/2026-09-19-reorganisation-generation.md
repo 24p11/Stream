@@ -54,7 +54,8 @@ répertoire `banc/` n'existe.
 1. Test 07 (chaîne consolidée et conforme au contrat fiches) — sous
    `generation/runs/07`.
 2. PR CHU-Brest/fictomed#13 en attente de retour Brest ; message
-   d'accompagnement (wheel 0.1.2, promotion enrichissement — le package
-   est maintenant en évidence à la racine —, doctrine E669x→E660x).
+   d'accompagnement (wheel PyPI sans `regles_atih.yml`, promotion
+   enrichissement — le package est maintenant en évidence à la racine —,
+   doctrine E669x→E660x).
 3. Décisions en attente (statut alcool « occasionnel », puce CRO
    « Rappel clinique »).

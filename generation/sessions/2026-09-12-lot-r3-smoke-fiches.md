@@ -26,7 +26,7 @@ versionné) : copie `_index.csv` → `index.csv` dans `cards_library/` et
 `cards_library_categories/` — les colonnes utiles (`code`, `filepath`)
 sont compatibles. **À refaire après chaque resync de la librairie**, tant
 que fictomed ne lit pas `_index.csv` → point ajouté au message à Brest
-(avec le wheel 0.1.2 cassé).
+(avec le wheel PyPI sans `regles_atih.yml`).
 
 ## Smoke de chaîne (point 2) — VERT après le shim
 
@@ -64,8 +64,8 @@ toutes les fiches en exact.
 
 ## Prochaines étapes
 
-1. Message à Brest (Rémi) : wheel PyPI 0.1.2 cassé (`regles_atih.yml`
-   absent), **fictomed doit lire `_index.csv`** (nouveau format de la
+1. Message à Brest (Rémi) : wheel PyPI sans `regles_atih.yml` (quelle que
+   soit sa version), **fictomed doit lire `_index.csv`** (nouveau format de la
    librairie de fiches), promotion du package enrichissement, doctrine
    E669x→E660x.
 2. Test 07 sur la chaîne consolidée (fiches exactes attendues pour les
