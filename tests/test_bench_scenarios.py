@@ -215,8 +215,10 @@ def source_jouet() -> pl.DataFrame:
                    "05K10", "90Z00"],
         "duree": [0.0, 0.0, 1.0, 5.0, 0.0, 3.0, 0.0, 1.0, None],
         "mode_hospit": ["HP", "HP", "HC", "HC", "HP", "HC", "HP", "HC", "HC"],
-        "mode_entree": [None, None, "URGENCES", "DOMICILE", None, None, None,
-                        "DOMICILE", None],
+        # le dernier séjour (« Autre », durée nulle) est aussi sans mode
+        # d'entrée : incomplet pour fictomed, écarté avant le tirage
+        "mode_entree": ["DOMICILE", "DOMICILE", "URGENCES", "DOMICILE", "DOMICILE",
+                        "DOMICILE", "DOMICILE", "DOMICILE", None],
         "mode_sortie": ["DOMICILE"] * 9,
         "mdp": [""] * 9,
         "n": [3, 5, 2, 1, 4, 7, 2, 1, 1],

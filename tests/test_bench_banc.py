@@ -244,7 +244,8 @@ class TestPreparerPool:
         # absents ; le jeton « NA » d'un DAS est journalisé lui aussi —
         # comportement de la cellule d'origine, conservé)
         assert "sans fiche à l'index — JOURNAL : ['E119', 'F172', 'I208', 'NA', 'Z640']" in out
-        assert "Pool candidat : 4 séjours — agean lu du fichier — racine réparée sur 0 ligne(s) — couverture par type :" in out
+        assert ("Pool candidat : 4 séjours — agean lu du fichier — racine réparée sur 0 ligne(s) "
+                "— 0 séjour(s) incomplet(s) écarté(s) avant tirage — couverture par type :") in out
 
     def test_quotas_dict_et_sans_filtre(self, tmp_path):
         p = parquet_jouet(tmp_path)
@@ -289,7 +290,7 @@ class TestPreparerPool:
         ref = bibliotheque_jouet(tmp_path, CODES_ENRICHISSEMENT)
         pool = preparer_pool(p, "couverture", 42, enrichir=True, filtre_dp_suffixe=None,
                              referentials=ref)
-        assert pool.height == 9 and "enrichi" in pool.columns
+        assert pool.height == 8 and "enrichi" in pool.columns  # le séjour incomplet est écarté
         out = capsys.readouterr().out
         assert "Enrichissement : " in out and "ligne(s) enrichie(s)" in out
         # codes ajoutés (s'il y en a) vérifiés émissibles ; codes du pool sans
@@ -310,16 +311,19 @@ class TestPreparerPool:
         out = capsys.readouterr().out
         # source_jouet porte la colonne pivot `age` (ge_18 / lt_18)
         assert "agean : dérivé de cage, pivot age — 9/9 lignes" in out
-        assert "Pool candidat : 9 séjours — agean dérivé de cage, pivot age — racine réparée sur 0 ligne(s) — couverture par type :" in out
+        assert "Séjours incomplets pour fictomed (agean / duree / mode_entree / mode_sortie nuls) : 1 écarté(s) — 9 -> 8 séjours" in out
+        assert ("Pool candidat : 8 séjours — agean dérivé de cage, pivot age — racine réparée sur 0 ligne(s) "
+                "— 1 séjour(s) incomplet(s) écarté(s) avant tirage — couverture par type :") in out
         # typologie calculée sur l'âge dérivé : une modalité par ligne
-        assert pool["DPEC"].n_unique() == 9
+        assert pool["DPEC"].n_unique() == 8 and "Autre" not in pool["DPEC"].to_list()
 
     def test_agean_lu_du_fichier_dans_le_recap(self, tmp_path, capsys):
         preparer_pool(parquet_jouet(tmp_path), "couverture", 1, enrichir=False,
                       filtre_dp_suffixe=None, referentials=bibliotheque_jouet(tmp_path, []))
         out = capsys.readouterr().out
         assert "agean : lu du fichier (9 lignes) — conservée telle quelle." in out
-        assert "Pool candidat : 9 séjours — agean lu du fichier — racine réparée sur 0 ligne(s) — couverture par type :" in out
+        assert ("Pool candidat : 8 séjours — agean lu du fichier — racine réparée sur 0 ligne(s) "
+                "— 1 séjour(s) incomplet(s) écarté(s) avant tirage — couverture par type :") in out
 
     def test_specialite_attribuee_et_recap(self, tmp_path, capsys):
         # racines du jouet : 06C12 / 28Z07 … absentes du dictionnaire jouet → repli ;
@@ -494,6 +498,41 @@ class TestSeeder:
         seed_user_prompts(td, graine())
         with pytest.raises(BenchError, match="Jeu de templates absent"):
             seeder(td, None, source_path=tmp_path / "profils.pq")
+
+
+class TestSeederProfilFictomed:
+    def test_cage_retiree_du_profil_transmis(self, tmp_path, monkeypatch, capsys):
+        """fictomed simulé : le profil reçu ne porte plus `cage` (collision
+        age→cage du loader), le pool en mémoire la garde ; graine écrite."""
+        import bench.banc as banc
+        recu: dict = {}
+
+        def faux_config(**kw):
+            recu["config"] = kw["config_file"]
+
+        def faux_generate(**kw):
+            recu["colonnes"] = kw["candidate_source"].columns
+            n = kw["candidate_source"].height
+            return None, None, pl.DataFrame({
+                "generation_id": [f"id-{i}" for i in range(n)],
+                "template_name": ["medical_outpatient.txt"] * n,
+                "user_prompt": ["- Sexe du patient : Masculin\n- Codage CIM10 :\n"] * n,
+                "prefix": [None] * n,
+            })
+
+        monkeypatch.setattr(banc, "write_fictomed_config", faux_config)
+        monkeypatch.setattr(banc, "generate_and_select_fictomed_scenarios", faux_generate)
+        td = tmp_path / "07"
+        jeu(td)
+        pool = source_jouet().with_columns(
+            pl.lit("[40-50[").alias("cage"), pl.lit(True).alias("enrichi"),
+            pl.Series("id_scenario", [f"s-{i}" for i in range(9)]))
+        selected = seeder(td, pool, source_path=tmp_path / "profils.pq", enrichir=True)
+        assert "cage" not in recu["colonnes"] and "agean" in recu["colonnes"]
+        assert "cage" in pool.columns  # le pool en mémoire est intact
+        assert selected is not None and selected.height == 9
+        assert scenario_dirs(td) == [f"{i:04d}" for i in range(9)]
+        assert "Colonne cage retirée du profil transmis à fictomed" in capsys.readouterr().out
 
 
 class TestPromptsVerificateur:

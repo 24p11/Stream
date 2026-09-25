@@ -149,3 +149,39 @@ Effet : passe couverture C1 → observee 3, unique 12, tirée 0, repli 1
 (les deux nouveau-nés en NEONATOLOGIE, le néonat chir en Réanimation
 néonatale) ; tout C1 → **observee 111 921 (10 %), unique 792 014, tirée
 101 230, repli 82 360**. 5 entrées appliquées à chaque `preparer_pool`.
+
+## Post-scriptum du 25 septembre (2) — déblocage du seeding sur C1 côté Stream
+
+Deux correctifs dans `bench/banc.py`, sans toucher à fictomed :
+
+- **`preparer_pool` écarte les séjours incomplets avant le tirage** —
+  fictomed (`fictive.py`, `required_cols`) élimine silencieusement les
+  profils sans `age2` / `los` / `admission_mode` /
+  `discharge_disposition` (Stream : `agean`, `duree`, `mode_entree`,
+  `mode_sortie`, constante `COLONNES_REQUISES_FICTOMED`) ; un tirage qui
+  les retenait faisait échouer `generate_and_select` (cible non atteinte).
+  Message et compteur au récap. Sur C1 substitué après filtre DP en 8 :
+  13 588 écartés (137 332 → 123 744). Effet de bord assumé : sur l'ancien
+  format (550 nuls `agean` / `duree`), le pool de `preparer_pool` change
+  aussi — les tests 01–06 sont figés, rien ne bouge sur disque.
+- **`seeder` retire `cage` du profil transmis à fictomed** (le pool en
+  mémoire la garde) — collision `age` → `cage` du loader (`_safe_rename`),
+  `agean` toujours présente donc `cage` jamais nécessaire. Le patch
+  fictomed reste souhaitable (message à Brest) mais n'est plus un
+  prérequis.
+
+Vérification : `seeder` réel sur une copie scratch du jeu 07 avec le pool
+« couverture » de `scenarios_C1_dp.parquet` — 15 scénarios générés,
+graine et figement OK, 13 lignes « - Service : » (NEONATOLOGIE ×3,
+GYNECOLOGIE ×2, HEPATO-GASTRO-ENTERO ×2, OBSTETRIQUE ×2, CARDIOLOGIE,
+CHIR.PLAST.RECONSTR., MEDECINE INTERNE, NEPHROLOGIE), 2 en repli sans
+ligne Service, profils actif restauré. Tests : 272 verts + l'échec
+préexistant (fixture jouet : le séjour « Autre » devient le séjour
+incomplet ; `seeder` testé avec fictomed simulé).
+
+Fichier à utiliser pour la génération : **`data/aphp/scenarios_C1_dp.parquet`**
+(seule transformation fichier → fichier : les DP substitués) ; tout le
+reste se fait en mémoire dans `preparer_pool`. Reste fragile : fictomed
+prend comme profils actif le `scenarios_*` le plus récent de `data/aphp/`
+— ici `scenarios_C1_dp.rapport.txt` (écrasé puis restauré à chaque
+seeding). Déplacer le rapport hors de `data/aphp/` règle le point.

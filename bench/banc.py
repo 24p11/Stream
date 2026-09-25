@@ -109,6 +109,11 @@ _COLONNES_CONTROLE = ("TPEC", "DPEC", *RECAP_TIRAGE_COLUMNS,
                       "taille_cm", "poids_kg", "imc", "tabac", "alcool",
                       "codes_ajoutes")
 
+# Colonnes du profil que fictomed exige non nulles (fictive.py, required_cols :
+# age2, los, admission_mode, discharge_disposition — noms Stream ci-dessous) ;
+# les lignes incomplètes sont écartées avant le tirage.
+COLONNES_REQUISES_FICTOMED = ("agean", "duree", "mode_entree", "mode_sortie")
+
 # Référentiels de la spécialité (service d'hospitalisation) — voir
 # bench.scenarios.deriver_specialite : le dictionnaire fait foi pour l'étage 2,
 # le mapping type_unite (statuts valide / proposition) pour l'étage 1.
@@ -556,8 +561,10 @@ def preparer_pool(
     compteur au récap), typologie (conservée si le fichier la fournit,
     sinon ``with_typologie``), identifiants de traçabilité, filtre
     DP (séjours dont le DP se termine par ``filtre_dp_suffixe`` — ``None``
-    pour ne rien filtrer), tirage, enrichissement (lot E1), contrôle du
-    contrat fiches côté pool, récap de la couverture par type.
+    pour ne rien filtrer), exclusion des séjours incomplets pour fictomed
+    (:data:`COLONNES_REQUISES_FICTOMED` nuls, comptés), tirage,
+    enrichissement (lot E1), contrôle du contrat fiches côté pool, récap de
+    la couverture par type.
 
     ``quotas`` : ``{modalité de by: effectif}`` (tirage stratifié),
     ``"couverture"`` (un séjour par modalité présente — le smoke d'un
@@ -613,6 +620,20 @@ def preparer_pool(
         source_df = source_df.filter(pl.col("diag2").str.ends_with(filtre_dp_suffixe))
         print(f"Filtre DP terminant par {filtre_dp_suffixe} : {_avant} -> {source_df.height} séjours")
         _afficher(source_df.group_by("TPEC", "DPEC").len().sort(["TPEC", "DPEC"]))
+
+    # Séjours incomplets pour fictomed : fictive.py écarte silencieusement les
+    # profils sans age2 / los / admission_mode / discharge_disposition — un
+    # tirage qui les retient fait échouer generate_and_select (cible non
+    # atteinte). On les écarte AVANT le tirage, en le disant.
+    _requises = [c for c in COLONNES_REQUISES_FICTOMED if c in source_df.columns]
+    if _requises:
+        _avant = source_df.height
+        source_df = source_df.filter(pl.all_horizontal([pl.col(c).is_not_null() for c in _requises]))
+        _incomplets = _avant - source_df.height
+        print(f"Séjours incomplets pour fictomed ({' / '.join(_requises)} nuls) : "
+              f"{_incomplets} écarté(s) — {_avant} -> {source_df.height} séjours")
+    else:
+        _incomplets = 0
 
     if quotas is None:
         if target_n is None:
@@ -699,7 +720,8 @@ def preparer_pool(
               "tous émissibles.")
 
     print(f"Pool candidat : {candidate_source.height} séjours — agean {_agean.source} — "
-          f"racine réparée sur {_racine.n_reparees} ligne(s) — couverture par type :")
+          f"racine réparée sur {_racine.n_reparees} ligne(s) — {_incomplets} séjour(s) incomplet(s) "
+          "écarté(s) avant tirage — couverture par type :")
     _afficher(candidate_source.group_by("TPEC", "DPEC").len().sort(["TPEC", "DPEC"]))
     return candidate_source
 
@@ -788,7 +810,9 @@ def seeder(
 
     1. génération fictomed — un scénario par ligne du ``pool`` (skip si le
        test est déjà seedé : l'archive du tirage est affichée) ; garde : le
-       pool arrive DÉJÀ enrichi quand ``enrichir`` est actif ;
+       pool arrive DÉJÀ enrichi quand ``enrichir`` est actif ; la colonne
+       ``cage`` est retirée du profil transmis (collision ``age`` → ``cage``
+       du loader fictomed, ``agean`` présente) ;
     2. graine : ``prefix.txt`` du jeu (prime sur le prefix fictomed), user
        prompts avec contexte patient, ``test.json`` annoté ;
     3. figement du jeu par famille en ``system_prompt_file`` dans chaque
@@ -845,6 +869,17 @@ def seeder(
             )
         (FICTOMED_DIR / "_backups").mkdir(parents=True, exist_ok=True)
 
+        # Collision du loader fictomed : il renomme `age` → `cage` sans test
+        # d'existence ; un corpus de campagne porte déjà `cage` (classe d'âge)
+        # → DuplicateError. `agean` (→ age2) étant toujours présente ici,
+        # fictomed n'a jamais besoin de `cage` : on la retire du profil
+        # transmis (le pool en mémoire la garde).
+        _profil = candidate_source
+        if "cage" in _profil.columns and "agean" in _profil.columns:
+            _profil = _profil.drop("cage")
+            print("Colonne cage retirée du profil transmis à fictomed (collision age→cage du "
+                  "loader ; agean présente).")
+
         write_fictomed_config(
             config_file=FICTOMED_DIR / "servers.yaml",
             project_root=repo_root,
@@ -852,7 +887,7 @@ def seeder(
         )
 
         _, _, selected_scenarios = generate_and_select_fictomed_scenarios(
-            candidate_source=candidate_source,
+            candidate_source=_profil,
             config_file=FICTOMED_DIR / "servers.yaml",
             aphp_data_dir=Path(repo_root) / "data" / "aphp",
             paths={"backups": FICTOMED_DIR / "_backups"},
